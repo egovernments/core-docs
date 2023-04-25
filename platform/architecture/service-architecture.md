@@ -1,6 +1,10 @@
+---
+description: Microservice reusable building blocks architecture
+---
+
 # Service Architecture
 
-DIGIT consists of several reusable building blocks on top of which one can develop a citizen service delivery solution.&#x20;
+DIGIT consists of several reusable building blocks on top of which one can develop a citizen service delivery solution. Read on to learn more about the microservice building blocks architecture.
 
 ## Microservice - Building Blocks
 

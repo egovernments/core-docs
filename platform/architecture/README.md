@@ -1,3 +1,7 @@
+---
+description: Platform architecture details
+---
+
 # Architecture
 
 {% content-ref url="service-architecture.md" %}

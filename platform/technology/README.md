@@ -1,3 +1,7 @@
+---
+description: List and details of technologies used to develop and deploy DIGIT
+---
+
 # Technology
 
 DIGIT core services are developed using the following technologies -
@@ -13,9 +17,5 @@ DIGIT core services are developed using the following technologies -
 
 Click the links below to learn more about the open-source tools and API gateways used in DIGIT.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:blue;"><strong>Open Source Tools</strong></mark></td><td>Complete list of tool stack used in DIGIT with licence details</td><td></td><td><a href="open-source-tools.md">open-source-tools.md</a></td></tr><tr><td><mark style="color:blue;"><strong>API Gateway</strong></mark></td><td>Details of the API gateway used in DIGIT</td><td></td><td><a href="api-gateway.md">api-gateway.md</a></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
-
-{% content-ref url="open-source-tools.md" %}
-[open-source-tools.md](open-source-tools.md)
-{% endcontent-ref %}
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:blue;"><strong>Open Source Tools</strong></mark></td><td>Complete list of tool stack used in DIGIT with licence details</td><td></td><td><a href="open-source-tools.md">open-source-tools.md</a></td></tr><tr><td><mark style="color:blue;"><strong>API Gateway</strong></mark></td><td>Details of the API gateway used in DIGIT</td><td></td><td><a href="api-gateway.md">api-gateway.md</a></td></tr></tbody></table>
 
