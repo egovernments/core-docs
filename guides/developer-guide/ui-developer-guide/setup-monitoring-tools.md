@@ -14,7 +14,7 @@ To enable it into local development we need to add the javascript code block of 
 \
 `micro-ui → web → public → index.html`\
 \
-GitHub Link: [https://github.com/egovernments/DIGIT-Dev/blob/master/frontend/micro-ui/web/public/index.html](https://github.com/egovernments/DIGIT-Dev/blob/master/frontend/micro-ui/web/public/index.html)\
+GitHub Link: [https://github.com/egovernments/DIGIT-OSS/blob/master/frontend/micro-ui/web/public/index.html](https://github.com/egovernments/DIGIT-OSS/blob/master/frontend/micro-ui/web/public/index.html)\
 \
 Script:
 
