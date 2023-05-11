@@ -1,6 +1,6 @@
 ---
 description: DIGITx Bootcamp (19 May - 2 June 2023)
-cover: .gitbook/assets/DigitX Bootcamp Mob and Web.jpg
+cover: .gitbook/assets/DigitX Bootcamp Mob and Web (1).jpg
 coverY: 0
 ---
 
@@ -14,9 +14,9 @@ If you have any questions, please feel free to write to [partner@egovernments.or
 
 #### Registration Links
 
-| Schedule                                          | Session                | Registration Link                                                                               |
-| ------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------- |
-| 19th May, 2023;  09:30 AM - 12:30 PM              | Design a DIGIT Service | [Click here](https://us06web.zoom.us/webinar/register/5116835434206/WN\_0393fvO5S5KlIdapZvrs2Q) |
-| <p>26th May, 2023; </p><p>09:30 AM - 04:30 PM</p> | Installing DIGIT       | [Click here](https://us06web.zoom.us/webinar/register/7516835436995/WN\_opWsya-ITneAfi8puDwTiQ) |
-| <p>Jun 2, 2023; </p><p>09:30 AM - 05:30 PM</p>    | Building DIGIT Service | [Click here](https://us06web.zoom.us/webinar/register/8416835438868/WN\_iRRwohdOSQyjYyxY0xppkA) |
+| Schedule                                           | Session                | Registration Link                                                                               |
+| -------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------- |
+| <p>19th May, 2023;  </p><p>10:00 AM - 12:30 PM</p> | Design a DIGIT Service | [Click here](https://us06web.zoom.us/webinar/register/5116835434206/WN\_0393fvO5S5KlIdapZvrs2Q) |
+| <p>26th May, 2023; </p><p>10:00 AM - 04:30 PM</p>  | Installing DIGIT       | [Click here](https://us06web.zoom.us/webinar/register/7516835436995/WN\_opWsya-ITneAfi8puDwTiQ) |
+| <p>Jun 2, 2023; </p><p>10:00 AM - 05:30 PM</p>     | Building DIGIT Service | [Click here](https://us06web.zoom.us/webinar/register/8416835438868/WN\_iRRwohdOSQyjYyxY0xppkA) |
 
