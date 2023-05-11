@@ -1,6 +1,6 @@
 ---
 description: DIGITx Bootcamp (19 May - 2 June 2023)
-cover: .gitbook/assets/DigitX Bootcamp copy-2.jpg
+cover: .gitbook/assets/DigitX Bootcamp Mob and Web.jpg
 coverY: 0
 ---
 
