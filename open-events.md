@@ -1,17 +1,18 @@
 ---
 description: DIGITx Bootcamp (19 May - 2 June 2023)
+cover: .gitbook/assets/DigitX Bootcamp copy-2.jpg
+coverY: 0
 ---
 
 # Open Events
 
-<figure><img src=".gitbook/assets/Gitbook Webinar.jpg" alt=""><figcaption></figcaption></figure>
-
-You are invited to join our upcoming online DIGITx Bootcamp. This bootcamp is designed to provide you with hands-on experience in installing, designing, and building DIGIT services. These sessions will give you the opportunity to learn from experts and interact with them.&#x20;
+You are invited to join our upcoming [online DIGITx Bootcamp](open-events.md#registration-links). This bootcamp is designed to provide you with hands-on experience in installing, designing, and building DIGIT services. These sessions will give you the opportunity to learn from experts and interact with them.&#x20;
 
 Event registration links and session details are provided below.  We look forward to seeing you in the bootcamp. Do invite your team and colleagues to this learning session and unlock the potential of the DIGIT Ecosystem.&#x20;
 
-If you have any questions, please feel free to write to [partner@egovernments.org](mailto:partner@egovernments.org). \
+If you have any questions, please feel free to write to [partner@egovernments.org](mailto:partner@egovernments.org).&#x20;
 
+#### Registration Links
 
 | Schedule                                          | Session                | Registration Link                                                                               |
 | ------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------- |
