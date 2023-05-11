@@ -6,7 +6,7 @@ coverY: 0
 
 # Open Events
 
-You are invited to join our upcoming [online DIGITx Bootcamp](open-events.md#registration-links). This bootcamp is designed to provide you with hands-on experience in installing, designing, and building DIGIT services. These sessions will give you the opportunity to learn from experts and interact with them.&#x20;
+You are invited to join our upcoming [online DIGITx Bootcamp](open-events.md#registration-links). This bootcamp is designed to provide you with hands-on experience in installing, designing, and building DIGIT services. These sessions will provide an opportunity to learn from experts and interact with them.&#x20;
 
 Event registration links and session details are provided below.  We look forward to seeing you in the bootcamp. Do invite your team and colleagues to this learning session and unlock the potential of the DIGIT Ecosystem.&#x20;
 
