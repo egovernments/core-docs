@@ -36,7 +36,11 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 ## Interaction Diagram
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 
 

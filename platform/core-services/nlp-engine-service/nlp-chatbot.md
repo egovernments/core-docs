@@ -113,11 +113,23 @@ Audio transcription is the process of converting an audio file to written text. 
 
 **Complaint classification chatbot working:**
 
-![](../../../.gitbook/assets/7.png)
+<div align="left">
 
-![](../../../.gitbook/assets/8.png)
+<img src="../../../.gitbook/assets/7.png" alt="">
 
-![](../../../.gitbook/assets/9.png)
+</div>
+
+<div align="left">
+
+<img src="../../../.gitbook/assets/8.png" alt="">
+
+</div>
+
+<div align="left">
+
+<img src="../../../.gitbook/assets/9.png" alt="">
+
+</div>
 
 ## **Type & Search API**
 

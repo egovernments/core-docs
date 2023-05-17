@@ -51,7 +51,11 @@ There are two techniques for logging in MSA. Each service will implement the log
 
 1. **Implement Logging in each service**
 
-![Image for post](https://miro.medium.com/max/566/1\*4C-xD6SxmfVbZPABmpDyFA.png)
+<div align="left">
+
+<img src="https://miro.medium.com/max/566/1*4C-xD6SxmfVbZPABmpDyFA.png" alt="Image for post">
+
+</div>
 
 With this approach, we can easily define the logging strategy/library for each service. For example, with service written by java we can use Log4j.
 
@@ -59,7 +63,11 @@ The problem with this approach is that it requires each service to implement its
 
 **2. Implement central Logging service**
 
-![Image for post](https://miro.medium.com/max/572/1\*Gw-vGPXh4dABab1Hi-ZRJQ.png)
+<div align="left">
+
+<img src="https://miro.medium.com/max/572/1*Gw-vGPXh4dABab1Hi-ZRJQ.png" alt="Image for post">
+
+</div>
 
 If you don’t want to implement logging in each service separately. You can consider implementing a central service for logging. This service will help you with processing, formatting and storing log data.
 

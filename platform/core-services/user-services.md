@@ -29,7 +29,11 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 <figure><img src="../../.gitbook/assets/f4b12b30-af64-4407-9c87-a2abb1ca7fb0.png" alt=""><figcaption></figcaption></figure>
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/70851aa5-78c8-4c49-9326-082d03e2c9ac (2).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## Deployment Details
 

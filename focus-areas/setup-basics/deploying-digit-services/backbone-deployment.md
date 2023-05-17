@@ -27,7 +27,11 @@ Eg. For Kafka-v2 If you are using **AWS as cloud provider,** change the respecti
 
 (You will get the volume id’s and zone details from either remote state bucket or from AWS portal)
 
-![](https://gblobscdn.gitbook.com/assets%2F-MERG\_iQW5oN4ukgXP8K%2F-MGrj6BrCyQtBc7G4ijs%2F-MGruyV9kiA\_\_4LV9Lk4%2Fimage.png?alt=media\&token=2cc00446-64c9-4f9f-8ac8-867e064ffc44)
+<div align="left">
+
+<img src="https://gblobscdn.gitbook.com/assets%2F-MERG_iQW5oN4ukgXP8K%2F-MGrj6BrCyQtBc7G4ijs%2F-MGruyV9kiA__4LV9Lk4%2Fimage.png?alt=media&#x26;token=2cc00446-64c9-4f9f-8ac8-867e064ffc44" alt="">
+
+</div>
 
 Eg. Kafka-v2 If you are using **Azure cloud provider,** change the diskName and diskUri
 
@@ -37,7 +41,11 @@ Eg. Kafka-v2 If you are using **Azure cloud provider,** change the diskName and 
 
 Eg. Kafka-v2 If you are using **ISCSI ,** change the targetPortal and iqn.
 
-![](https://gblobscdn.gitbook.com/assets%2F-MERG\_iQW5oN4ukgXP8K%2F-MGrj6BrCyQtBc7G4ijs%2F-MGrv9UA0Up-YonBuNxS%2Fimage.png?alt=media\&token=aabe3f81-21a0-4973-be51-d2648a4f914d)
+<div align="left">
+
+<img src="https://gblobscdn.gitbook.com/assets%2F-MERG_iQW5oN4ukgXP8K%2F-MGrj6BrCyQtBc7G4ijs%2F-MGrv9UA0Up-YonBuNxS%2Fimage.png?alt=media&#x26;token=aabe3f81-21a0-4973-be51-d2648a4f914d" alt="">
+
+</div>
 
 1. Deploy the backbone services using go command
 

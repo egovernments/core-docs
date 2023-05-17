@@ -8,7 +8,11 @@ description: Ensuring privacy through APIs
 
 One of the approaches to keep data secure is to encrypt the data as soon as it enters the system and decrypt it only when necessary.&#x20;
 
-![Security at Gateway](<../../../.gitbook/assets/Privacy Design-Security at Gateway.drawio.png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/Privacy Design-Security at Gateway.drawio.png" alt="Security at Gateway">
+
+</div>
 
 ## Securing Data
 

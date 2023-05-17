@@ -1,6 +1,6 @@
 ---
 description: An open source service delivery and governance platform
-cover: .gitbook/assets/DIGIT Docs New.jpg
+cover: .gitbook/assets/Docs Digit Banner copy.jpg
 coverY: 0
 ---
 
@@ -14,7 +14,11 @@ To enable good citizen service, citizens, employees, vendors, administrators and
 
 **DIGIT** is a service delivery and governance platform. It enables ease of access to services for citizens, ease of coordination for employees & vendors, ease of administration for administrators and ease of policy-making for policymakers & researchers.
 
-![](<.gitbook/assets/image (24).png>)
+<div align="left">
+
+<img src=".gitbook/assets/image (24).png" alt="">
+
+</div>
 
 ## Goals
 
@@ -40,7 +44,11 @@ A digital service must provide the following capabilities to enable effective ci
 
 Each government agency builds applications that provide some or all of the above-mentioned capabilities. However, most of these applications are not built to scale or have the ability to exchange data with other applications. This results in locked data within application siloes that renders it unusable to other services. It is a primary cause for the fragmented experience of the citizens - who find it difficult to discover and use these services. The employees are forced to remember multiple passwords and use several applications at work. Administrators fail to get the integrated information required for monitoring performance and identifying areas of improvement. The result is poor planning and inflated budgets.
 
-![Traditional application oriented approach leads to siloes, wasteful duplication, non-scalable and difficult to integrate](<.gitbook/assets/image (256).png>)
+<div align="left">
+
+<img src=".gitbook/assets/image (256).png" alt="Traditional application oriented approach leads to siloes, wasteful duplication, non-scalable and difficult to integrate">
+
+</div>
 
 DIGIT is built using platform-based principles that enable the seamless sharing of data and functionality through well-defined building blocks. The building blocks can be integrated into higher-level services that can also be recomposed further to deliver unified data and experiences.&#x20;
 

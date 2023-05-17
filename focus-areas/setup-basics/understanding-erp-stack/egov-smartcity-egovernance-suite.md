@@ -20,6 +20,10 @@ The eGov suit is released under version 3.0 of the [GPL](http://www.gnu.org/lice
 
 ### **Powered By**
 
-![](https://badges.gitter.im/Join%20Chat.svg)
+<div align="left">
+
+<img src="https://badges.gitter.im/Join%20Chat.svg" alt="">
+
+</div>
 
 ([https://gitter.im/egovernments/eGov?utm\_source=badge\&utm\_medium=badge\&utm\_campaign=pr-badge\&utm\_content=badge)](https://gitter.im/egovernments/eGov?utm\_source=badge\&utm\_medium=badge\&utm\_campaign=pr-badge\&utm\_content=badge%29)

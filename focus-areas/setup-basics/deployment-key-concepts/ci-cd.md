@@ -74,7 +74,11 @@ The Jenkins CI pipeline is configured and managed 'as code'.
 
 If git repository URL is available build the Job-Builder Job
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/image (196).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 If the git repository URL is not available ask the DevOps team to add it.
 

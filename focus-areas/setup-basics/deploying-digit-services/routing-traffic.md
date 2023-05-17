@@ -6,7 +6,11 @@ In Kubernetes, an Ingress is an object that allows access to your Kubernetes ser
 
 This lets you consolidate your routing rules into a single resource. For example, you might want to send requests to example.com/api/v1/ to an api-v1 service, and requests to example.com/api/v2/ to the api-v2 service. With an Ingress, you can easily set this up without creating a bunch of LoadBalancers or exposing each service on the Node.
 
-![](https://gblobscdn.gitbook.com/assets%2F-MERG\_iQW5oN4ukgXP8K%2F-MGwT6PR0yx4PuOXipeK%2F-MGwTIug-nD-N7q5NFI8%2Fimage.png?alt=media\&token=3b8d76e0-586d-4bdf-a198-48e95f3f5761)
+<div align="left">
+
+<img src="https://gblobscdn.gitbook.com/assets%2F-MERG_iQW5oN4ukgXP8K%2F-MGwT6PR0yx4PuOXipeK%2F-MGwTIug-nD-N7q5NFI8%2Fimage.png?alt=media&#x26;token=3b8d76e0-586d-4bdf-a198-48e95f3f5761" alt="">
+
+</div>
 
 An API object that manages external access to the services in a cluster, typically HTTP.
 

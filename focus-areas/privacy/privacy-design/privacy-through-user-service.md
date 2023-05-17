@@ -8,7 +8,11 @@ description: An alternate approach to implement Privacy with minimal interventio
 
 An alternate approach to secure PII data at the API gateway is to encrypt the PII data by its owner service, i.e., the user service. With this approach, any of the other services will not have to worry about the encrypted nature of the user data. Except for user service, all the other services will get the data either in plain or masked form or an empty string.
 
-![Privacy through User Service](<../../../.gitbook/assets/Privacy Design-Privacy User Service.drawio-2.png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/Privacy Design-Privacy User Service.drawio-2.png" alt="Privacy through User Service">
+
+</div>
 
 ## Points Of Intervention
 

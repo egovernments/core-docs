@@ -4,7 +4,11 @@ This section contains architectural details about DIGIT deployment. It discusses
 
 ### Sample Kubernetes Architecture
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ### DIGIT Deployment Architecture
 

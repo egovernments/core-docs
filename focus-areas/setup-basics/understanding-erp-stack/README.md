@@ -83,7 +83,11 @@ There are two approaches to deployment:
 
 3-Tier Architecture in ERP (refer to the image below).
 
-![Fig.2.0: Release Process Diagram](https://digit-discuss.atlassian.net/wiki/download/thumbnails/8716301/worddav50180a8c1ed02e7def72ed57ac5d09b6.png?version=1\&modificationDate=1553666609164\&cacheVersion=1\&api=v2\&width=624\&height=355)
+<div align="left">
+
+<img src="https://digit-discuss.atlassian.net/wiki/download/thumbnails/8716301/worddav50180a8c1ed02e7def72ed57ac5d09b6.png?version=1&#x26;modificationDate=1553666609164&#x26;cacheVersion=1&#x26;api=v2&#x26;width=624&#x26;height=355" alt="Fig.2.0: Release Process Diagram">
+
+</div>
 
 A typical enterprise application consists of at least three different types of components:
 
@@ -93,4 +97,8 @@ A typical enterprise application consists of at least three different types of c
 
 A three-tier architecture is a client-server architecture in which the functional process logic, data access, computer data storage and user interface are developed and maintained as independent modules on separate platforms. Three-tier architecture is a software design pattern and a well-established software architecture.
 
-![Fig.3.0: AWS 3-Tier Architecture Diagram](https://digit-discuss.atlassian.net/wiki/download/thumbnails/8716301/worddav4faa0e315d2eb20c1297023c7aa65d51.png?version=1\&modificationDate=1553666611915\&cacheVersion=1\&api=v2\&width=649\&height=459)
+<div align="left">
+
+<img src="https://digit-discuss.atlassian.net/wiki/download/thumbnails/8716301/worddav4faa0e315d2eb20c1297023c7aa65d51.png?version=1&#x26;modificationDate=1553666611915&#x26;cacheVersion=1&#x26;api=v2&#x26;width=649&#x26;height=459" alt="Fig.3.0: AWS 3-Tier Architecture Diagram">
+
+</div>

@@ -58,6 +58,10 @@ Download the UI code from the link here [Birth-Registration. ](https://github.co
 
 * [x] After creating the package.json for birth registration, the project structure (as seen in the image below) is created.
 
+<div align="left">
+
 <figure><img src="../../../../.gitbook/assets/f0cde6cc-2d1d-4f76-9e1d-2eeeaf040d48.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

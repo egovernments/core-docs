@@ -27,7 +27,11 @@ Eg. For Kafka-v2 If you are using **AWS as a cloud provider,** change the respec
 
 (You will get the volume ids and zone details from either a remote state bucket or from the AWS portal).
 
-![](https://gblobscdn.gitbook.com/assets%2F-MERG\_iQW5oN4ukgXP8K%2F-MGrj6BrCyQtBc7G4ijs%2F-MGruyV9kiA\_\_4LV9Lk4%2Fimage.png?alt=media\&token=2cc00446-64c9-4f9f-8ac8-867e064ffc44)
+<div align="left">
+
+<img src="https://gblobscdn.gitbook.com/assets%2F-MERG_iQW5oN4ukgXP8K%2F-MGrj6BrCyQtBc7G4ijs%2F-MGruyV9kiA__4LV9Lk4%2Fimage.png?alt=media&#x26;token=2cc00446-64c9-4f9f-8ac8-867e064ffc44" alt="">
+
+</div>
 
 Eg. Kafka-v2 If you are using **Azure cloud provider,** change the diskName and diskUri
 

@@ -133,7 +133,11 @@ Each item in the above dropdown is displayed by adding an object in the link bel
 
 {% embed url="https://github.com/egovernments/egov-mdms-data/blob/master/data/pb/ACCESSCONTROL-ACTIONS-TEST/actions-test.json" %}
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 For example:
 

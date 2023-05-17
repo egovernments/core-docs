@@ -28,7 +28,11 @@ All the probes have the following parameters:
 
 Readiness probes are used to let Kubelet know when the application is ready to accept new traffic. If the application needs some time to initialize the state after the process has started, configure the readiness probe to tell Kubernetes to wait before sending new traffic. A primary use case for readiness probes is directing traffic to deployments behind a service.
 
-![Kubernetes Readiness Probe](https://miro.medium.com/max/60/0\*AvaYbgMkeHJ0Pis8.GIF?q=20)
+<div align="left">
+
+<img src="https://miro.medium.com/max/60/0*AvaYbgMkeHJ0Pis8.GIF?q=20" alt="Kubernetes Readiness Probe">
+
+</div>
 
 One important thing to note with readiness probes is that it **runs during the pod’s entire lifecycle**. This means that readiness probes will run not only at startup but repeatedly throughout as long as the pod is running. This is to deal with situations where the application is temporarily unavailable (i.e. loading large data, waiting on external connections). In this case, we don’t want to necessarily kill the application but wait for it to recover. Readiness probes are used to detect this scenario and not send traffic to these pods until it passes the readiness check again.
 
