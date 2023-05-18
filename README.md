@@ -1,7 +1,5 @@
 ---
 description: An open source service delivery and governance platform
-cover: .gitbook/assets/Docs Digit Banner copy.jpg
-coverY: 0
 ---
 
 # Introducing DIGIT Platform
