@@ -17,6 +17,6 @@ If you have any questions, please feel free to write to [partner@egovernments.or
 | Schedule                                           | Session                | Registration Link                                                                               |
 | -------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------- |
 | <p>19th May, 2023;  </p><p>10:00 AM - 12:30 PM</p> | Design a DIGIT Service | [Click here](https://us06web.zoom.us/webinar/register/5116835434206/WN\_0393fvO5S5KlIdapZvrs2Q) |
-| <p>26th May, 2023; </p><p>10:00 AM - 04:30 PM</p>  | Installing DIGIT       | [Click here](https://us06web.zoom.us/webinar/register/7516835436995/WN\_opWsya-ITneAfi8puDwTiQ) |
+| <p>26th May, 2023; </p><p>10:00 AM - 01:00 PM</p>  | Installing DIGIT       | [Click here](https://us06web.zoom.us/webinar/register/7516835436995/WN\_opWsya-ITneAfi8puDwTiQ) |
 | <p>Jun 2, 2023; </p><p>10:00 AM - 05:30 PM</p>     | Building DIGIT Service | [Click here](https://us06web.zoom.us/webinar/register/8416835438868/WN\_iRRwohdOSQyjYyxY0xppkA) |
 
