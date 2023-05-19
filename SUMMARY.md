@@ -110,6 +110,7 @@
     * [Audit Service](platform/core-services/audit-service/README.md)
       * [Signed Audit Performance Testing Results](platform/core-services/audit-service/signed-audit-performance-testing-results.md)
     * [Security Guidelines Handbook](platform/core-services/security-guidelines-handbook.md)
+    * [Service Request](platform/core-services/service-request.md)
   * [Checklists](platform/checklists/README.md)
     * [API Checklist](platform/checklists/api-checklist.md)
     * [Security Checklist](platform/checklists/security-checklist/README.md)
