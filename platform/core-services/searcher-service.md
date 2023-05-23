@@ -40,11 +40,11 @@ JSONQueries are similar to SQL queries with certain functions to internally map 
 
 Some of the functions extensively used are:\
 _1) row\_to\_json_:  This function takes a query as a parameter and converts the result into JSON. However, the query must return only one row in the response. Note that, JSONQuery functions operate on aliases, So, the query must be mapped to an alias and the alias is passed to the function as a parameter.\
-For example: {"name": "egov", "age": "20"}\
+<mark style="background-color:blue;">For example: {"name": "egov", "age": "20"}</mark>\
 2\) _array\_agg_: This functions takes the output of _row\_to\_json_ and aggregates it into an array of JSON. This is required when the query is returning multiple rows in the response. The query will be passed to _row\_to\_json_ through an alias, this is further wrapped within _array\_agg_ to ensure all the rows returned by the query as converted to a JSONArray.\
-For example: \[{"name": "egov", "age": "20"},{"name": "egov", "age": "20"},{"name": "egov", "age": "20"}]\
+<mark style="background-color:blue;">For example: \[{"name": "egov", "age": "20"},{"name": "egov", "age": "20"},{"name": "egov", "age": "20"}]</mark>\
 3\) _array\_to\_json_: This transforms the result of _array\_agg_ into a single JSON and returns it. This way, the response of a JSONQuery will always be a single JSON with the JSONArray of results attached to a key. This function is more for the final transformation of the result. The result so obtained can be easily cast to any other format or operated on using the PGObject instance exposed by Postgres.\
-For example: {"alias": \[{"name": "egov", "age": "20"},{"name": "egov", "age": "20"},{"name": "egov", "age": "20"}]}
+<mark style="background-color:blue;">For example: {"alias": \[{"name": "egov", "age": "20"},{"name": "egov", "age": "20"},{"name": "egov", "age": "20"}]}</mark>
 
 For more details about JSONQuery, please check: [JSON Functions and Operators](https://www.postgresql.org/docs/9.4/functions-json.html)
 
@@ -61,7 +61,7 @@ For more details about JSONQuery, please check: [JSON Functions and Operators](h
 
 1. Add configs for different modules required for Searcher Service.
 2. Deploy the latest version of Searcher Service.
-3. Add Role-Action mapping for APIs.
+3. Add role-action mapping for APIs.
 
 ## Integration Details <a href="#integration" id="integration"></a>
 
@@ -85,12 +85,12 @@ The searcher service is used to search for data present in databases by running 
 
 Every search call is identified by a combination of moduleName and searchName. Here, 'moduleName' is the name of the module as mentioned in the configuration file and 'searchName' is the name of the definition within the same module that needs to be used for our search requirement.
 
-For instance, If I want to search all complaints of PGR I will use the URI -  \
+For instance, If I want to search all complaints on PGR I will use the URI -  \
 /egov-searcher/rainmaker-pgr-V2/serviceSearchWithDetails/\_get
 
 **Body**: The body consists of 2 parts: RequestInfo and searchCriteria. searchCriteria is where the search params are provided as key-value pairs. The keys given here are the ones to be mentioned in the 'jsonPath' configuration within the 'searchParams' key of the config file.
 
-For instance, If I want to search complaints of PGR where serviceRequestId is 'ABC1234' and tenantId is 'pb.amritsar' the API body will be:
+For instance, If I want to search complaints on PGR where serviceRequestId is 'ABC1234' and tenantId is 'pb.amritsar' the API body will be:
 
 ```
 // {"RequestInfo":{"apiId":"emp","ver":"1.0","ts":1234,"action":"create","did":"1","key":"abcdkey","msgId":"20170310130900","authToken":"57e2c455-934b-45f6-b85d-413fe0950870","correlationId":"fdc1523d-9d9c-4b89-b1c0-6a58345ab26d"},"searchCriteria":{"serviceRequestId":"ABC1234","tenantId":"pb.amritsar"}}

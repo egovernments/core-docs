@@ -1,10 +1,10 @@
 # User OTP Service
 
-### Overview <a href="#overview" id="overview"></a>
+## Overview <a href="#overview" id="overview"></a>
 
-User-OTP service handles the OTP for user registration, user login and password reset for a particular user.
+User-OTP service handles the OTP for user registration, user log in and password reset for a particular user.
 
-### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
+## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
@@ -13,41 +13,41 @@ Before you proceed with the documentation, make sure the following pre-requisite
 * egov-localization service is running
 * egov-otp service is running
 
-### Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
+## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
-The user-otp service send the OTP to user on login request, on password change request and during new user registration.
+The user-otp service sends the OTP to the user on login request, on password change request and during new user registration.
 
-### Deployment Details <a href="#deployment-details" id="deployment-details"></a>
+## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
 1. Deploy the latest version of user-otp.
 2. Make sure egov-otp is running.
-3. Add Role-Action mapping for API’s.
+3. Add Role-Action mapping for APIs.
 
-### Integration <a href="#integration" id="integration"></a>
+## Integration Details <a href="#integration" id="integration"></a>
 
-#### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
+### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
 
 User-OTP service handles the OTP for user registration, user login and password reset for a particular user.
 
-#### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
+### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
 
-* Can perform user registration, login, password reset.
-* In the future, if we want to expose the application to citizen then it can be done easily.
+* Can perform user registration, login, and password reset.
+* In the future, if we want to expose the application to citizens then it can be done easily.
 
-#### Steps to Integration <a href="#steps-to-integration" id="steps-to-integration"></a>
+### Integration Steps <a href="#steps-to-integration" id="steps-to-integration"></a>
 
-1. To integrate, host of user-otp module should be overwritten in helm chart.
+1. To integrate, the host of user-otp module should be overwritten in the helm chart.
 2. `/user-otp/v1/_send` should be added as the endpoint for sending OTP to the user via sms or email
 
-### Reference Docs <a href="#reference-docs" id="reference-docs"></a>
+## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
-#### Doc Links  <a href="#doc-links" id="doc-links"></a>
+#### Doc Links <a href="#doc-links" id="doc-links"></a>
 
 | Title                  | Link                                                                              |
 | ---------------------- | --------------------------------------------------------------------------------- |
 | API Postman Collection | [Postman Collection](https://www.getpostman.com/collections/5a7475c3ec5ad9b06927) |
 
-### &#x20;API Details
+### API Details
 
 `BasePath` /user-otp/v1/\[API endpoint]
 
@@ -55,9 +55,7 @@ User-OTP service handles the OTP for user registration, user login and password 
 
 a) `POST /_send`
 
-This method send the OTP to user via sms or email based on the below parameter
-
-
+This method sends the OTP to a user via sms or email based on the below parameters -
 
 | Input Field    | Description                                | Mandatory | Data Type |
 | -------------- | ------------------------------------------ | --------- | --------- |
