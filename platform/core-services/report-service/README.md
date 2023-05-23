@@ -299,13 +299,13 @@ This request-to-report service is used to get data for the report. Inputs given 
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
-1. Write configuration as per your requirement. The structure of the config file is explained under the Configuration Details section
+1. Write configuration as per your requirement. The structure of the config file is explained in the [configuration details ](./#configuration-details)section.
 2. Check-in the config file to a remote location preferably GitHub, currently we check the files into the [folder here](https://github.com/egovernments/configs/tree/DEV/reports/config). [_Can't find links_](https://github.com/egovernments/configs/tree/DEV/reports/config) _for the dev and QA environment._
 3. Add the module name and corresponding report path in the same format as [used here](https://github.com/egovernments/configs/blob/DEV/reports/reportFileLocationsv1.txt).
 4. Provide the absolute path of the file mentioned in Point 3  to DevOps, to add it to the file-read path of the report service. The file will be added to the environment manifest file for it to be read at the start-up of the application.
 5. Deploy the latest version of the report service app.
-6. Add Role-Action mapping for APIs.
-7. Use the module-name as a path parameter in the URL of the requests for report service with the required request body.
+6. Add role-action mapping for APIs.
+7. Use the module name as a path parameter in the URL of the requests for report service with the required request body.
 
 ## Integration Details <a href="#integration" id="integration"></a>
 
@@ -327,7 +327,7 @@ The report service provides a common framework to generate reports and show the 
 
 1. To integrate, the host of echallan-services module should be overwritten in the helm chart.
 2. The API should be mentioned in ACCESSCONTROL-ACTIONS-TEST. Refer below example
-3. Add Role-Action mapping for APIs.
+3. Add role-action mapping for APIs.
 
 ```
 //This entry is for to decide the location of report on UI screen
@@ -375,7 +375,7 @@ The report service provides a common framework to generate reports and show the 
 ```
 
 {% hint style="info" %}
-Note: Refer to the document Guidelines for supporting User Privacy in a module, for the changes required in report config to support the encryption/decryption process.
+**Note:** Refer to the [guidelines](../encryption-service/guidelines-for-supporting-user-privacy-in-a-module.md#demand-generation-changes) for supporting user privacy in a module, for the changes required in the report config to support the encryption/decryption process.
 {% endhint %}
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
