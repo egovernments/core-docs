@@ -11,20 +11,20 @@ Before beginning development on top of DIGIT make sure:&#x20;
 
 We recommend pointing the following services to the dev environment -&#x20;
 
-* User
-* MDMS
-* Localization
-* Id-Gen
-* URL-shortener
-* Workflow
+* [User](../../../../platform/core-services/user-services.md)
+* [MDMS](../../../../platform/core-services/mdms-master-data-management-service/)
+* [Localization](../../../../platform/core-services/location-services.md)
+* [Id-Gen](../../../../platform/core-services/id-generation-service.md)
+* [URL-shortener](../../../../platform/core-services/url-shortening-service.md)
+* [Workflow](../../../../platform/core-services/workflow-service/)
 
 Some of the above services can also be port forwarded using Kubernetes to bypass user auth.
 
 The following DIGIT services should be running locally:
 
-* Persister
-* Indexer (optional)
-* PDF Service
+* [Persister](../../../../platform/core-services/persister-service/)
+* [Indexer ](../../../../platform/core-services/indexer-service/)(optional)
+* [PDF Service](../../../../platform/core-services/pdf-generation-service.md)
 
 <!---->
 
@@ -35,7 +35,7 @@ The following DIGIT services should be running locally:
 <!---->
 
 * Java/J2EE
-* Spring Boot.
+* Spring Boot
 * REST APIs and related concepts like path parameters, headers, JSON etc.
 * Git
 * PostgreSQL
