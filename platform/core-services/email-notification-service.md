@@ -21,24 +21,24 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 ## Configuration Details <a href="#configuration-details" id="configuration-details"></a>
 
-The egov-notification-mail is a consumer which listens to the egov.core.notification.email topic, reads the message and generates email using SMTP Protocol. The services need the senders' email configured. On the other hand, if the senders' email is not configured, the services get the email id by internally calling egov-user service to fetch the email id. Once the email is generated, the content is localized by egov-localization service after which it is notified to the email id.&#x20;
+The egov-notification-mail is a consumer which listens to the egov.core.notification.email topic reads the message and generates email using SMTP Protocol. The services need the senders' email configured. On the other hand, if the senders' email is not configured, the services get the email id by internally calling egov-user service to fetch the email id. Once the email is generated, the content is localized by egov-localization service after which it is notified to the email id.&#x20;
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
 1. Deploy the latest version of the notification email service.
 2. Make sure the consumer topic name for email service is added in deployment configs
 
-## Integration <a href="#integration" id="integration"></a>
+## Integration Details <a href="#integration" id="integration"></a>
 
-#### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
+### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
 
-The email notification service is used to send out email notifications for all miscellaneous / adhoc services which citizens avail from ULBs.
+The email notification service is used to send out email notifications for all miscellaneous/ad-hoc services which citizens avail from ULBs.
 
-#### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
+### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
 
 * Can perform service-specific business logic without impacting the other module.
-* In the future, if we want to expose the application to citizen then it can be done easily.
+* In the future, if we want to expose the application to citizens then it can be done easily.
 
-#### Steps to Integration <a href="#steps-to-integration" id="steps-to-integration"></a>
+### Integration Steps <a href="#steps-to-integration" id="steps-to-integration"></a>
 
-1. To integrate, the client service should send email requests to email notification consumer topic.
+To integrate, the client service should send email requests to email notification consumer topics.
