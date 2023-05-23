@@ -180,7 +180,6 @@
   * [Design User Interface](guides/design-guide/design-user-interface.md)
   * [Checklists](guides/design-guide/checklists.md)
 * [Developer Guide](guides/developer-guide/README.md)
-  * [Pre-requisites For DIGIT](guides/developer-guide/pre-requisites-for-digit.md)
   * [Backend Developer Guide](guides/developer-guide/backend-developer-guide/README.md)
     * [Section 0: Prep](guides/developer-guide/backend-developer-guide/section-0-prep/README.md)
       * [Development Pre-requisites](guides/developer-guide/backend-developer-guide/section-0-prep/development-pre-requisites.md)
