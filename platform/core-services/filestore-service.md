@@ -87,10 +87,6 @@ fixed.bucketname=egov-rainmaker(S3 bucket name)
 
 minio.source=minio
 
-\
-\
-
-
 **AZURE:**
 
 **isAzureStorageEnabled** - informing the application whether Azure is available or not
@@ -100,8 +96,6 @@ minio.source=minio
 **azure.accountName -** name of the user account&#x20;
 
 **azure.accountKey -** secret key of the user account
-
-&#x20;
 
 **NFS :**
 
@@ -113,45 +107,44 @@ minio.source=minio
 
 **disk.storage.host.url**=\<Main Domain URL>
 
-\
-**Allowed formats to be uploaded:**&#x20;
+**Allowed formats to be uploaded**\
+The default format of the files is the use of set brackets with strings inside it - {"jpg", "png"}. Make sure to follow the same.
 
-\
-\# the default format of the allowed file formats goes in a set bracket with string inside it - {"jpg","png"} - please follow the same.
-
-_**allowed.formats.map**_={jpg:{'image/jpg','image/jpeg'},jpeg:{'image/jpeg','image/jpg'},png:{'image/png'},pdf:{'application/pdf'},odt:{'application/vnd.oasis.opendocument.text'},ods:{'application/vnd.oasis.opendocument.spreadsheet'},docx:{'application/x-tika-msoffice','application/x-tika-ooxml','application/vnd.oasis.opendocument.text'},doc:{'application/x-tika-msoffice','application/x-tika-ooxml','application/vnd.oasis.opendocument.text'},dxf:{'text/plain'},csv:{'text/plain'},txt:{'text/plain'},xlsx:{'application/x-tika-ooxml','application/x-tika-msoffice'},xls:{'application/x-tika-ooxml','application/x-tika-msoffice'\}}
+{% hint style="info" %}
+_**allowed.formats.map:**_ {jpg:{'image/jpg','image/jpeg'},jpeg:{'image/jpeg','image/jpg'},png:{'image/png'},pdf:{'application/pdf'},odt:{'application/vnd.oasis.opendocument.text'},ods:{'application/vnd.oasis.opendocument.spreadsheet'},docx:{'application/x-tika-msoffice','application/x-tika-ooxml','application/vnd.oasis.opendocument.text'},doc:{'application/x-tika-msoffice','application/x-tika-ooxml','application/vnd.oasis.opendocument.text'},dxf:{'text/plain'},csv:{'text/plain'},txt:{'text/plain'},xlsx:{'application/x-tika-ooxml','application/x-tika-msoffice'},xls:{'application/x-tika-ooxml','application/x-tika-msoffice'\}}
+{% endhint %}
 
 The key in the map is the visible extension of the file types, the values on the right in curly braces are the respective tika types of the file. these values can be found in tika website or by passing the file through tika functions.
 
-### Available features <a href="#available-features" id="available-features"></a>
+## Features <a href="#available-features" id="available-features"></a>
 
 1. **Upload**\
    POST API to save the files in the server
 2. **Search Files**\
-   GET API to retrieve file based only on id and tenantid
+   GET API to retrieve files based only on id and tenantid
 3. **Search URLs** \
-   GET API  to retrieve pre-signed urls for given array of ids
+   GET API  to retrieve pre-signed URLs for a given array of ids
 
-### Deployment Details <a href="#deployment-details" id="deployment-details"></a>
+## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
 1. Deploy the latest version of Filestore Service.
-2. Add Role-Action mapping for API’s.
+2. Add role-action mapping for APIs.
 
-### Integration <a href="#integration" id="integration"></a>
+## Integration Details <a href="#integration" id="integration"></a>
 
-#### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
+### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
 
-The filestore service is used to upload and store documents which citizens add while availing services from ULBs.
+The filestore service is used to upload and store documents which citizens add while availing of services from ULBs.
 
-#### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
+### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
 
-* Can perform file upload independently without having to add fileupload specific logic in each module..
+Can perform file upload independently without having to add fileupload specific logic in each module.
 
-#### Steps to Integration <a href="#steps-to-integration" id="steps-to-integration"></a>
+### Integration Steps <a href="#steps-to-integration" id="steps-to-integration"></a>
 
-1. To integrate, host of filestore module should be overwritten in helm chart.
-2. `/filestore/v1/files` should be added as the endpoint for uploading file in the system
-3. `/filestore/v1/files/url` should be added as the search endpoint .This method handles all requests to search existing files depending on different search criteria
+1. To integrate, the host of the filestore module should be overwritten in the helm chart.
+2. `/filestore/v1/files` should be added as the endpoint for uploading files in the system
+3. `/filestore/v1/files/url` should be added as the search endpoint. This method handles all requests to search existing files depending on different search criteria
 
 ### Postman Collection <a href="#postman-collection" id="postman-collection"></a>
 

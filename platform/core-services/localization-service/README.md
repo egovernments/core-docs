@@ -1,10 +1,10 @@
 # Localization Service
 
-### Overview <a href="#overview" id="overview"></a>
+## Overview <a href="#overview" id="overview"></a>
 
 An eGov core application which provides locale-specific components and translating text for the eGov group of applications.
 
-### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
+## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
 1. Prior knowledge of Java/J2EE.
 2. Prior knowledge of Spring Boot.
