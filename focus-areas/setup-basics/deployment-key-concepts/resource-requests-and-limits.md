@@ -113,7 +113,7 @@ We make a request to increase the load on my non-guaranteed pod.
 
 And if we look at the container's resources you can see that even though my container wants to use a 2000m CPU, it’s only actually using a 1000m CPU. The reason for this is that the guaranteed pod is guaranteed a 1000m CPU, whether it is actively using that CPU or not.
 
-<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (108) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Summary
 

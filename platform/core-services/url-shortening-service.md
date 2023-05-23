@@ -17,10 +17,10 @@ Before you proceed with the configuration, make sure the following pre-requisite
 1. Compress long URLs
 2. Converted short URLs contain id, which is used by this service to identify and get longer URLs.
 
-| Environment Variable   | Description                                                                   |
-| ---------------------- | ----------------------------------------------------------------------------- |
-| host.name              | Host name to append in short URL                                              |
-| db.persistance.enabled | The boolean flag to store the short URL in database when flag is set as TRUE. |
+| Environment Variable   | Description                                                                         |
+| ---------------------- | ----------------------------------------------------------------------------------- |
+| host.name              | Host name to append in short URL                                                    |
+| db.persistance.enabled | The boolean flag stores the short URL in the database when the flag is set as TRUE. |
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 

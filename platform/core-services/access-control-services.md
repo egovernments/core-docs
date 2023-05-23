@@ -79,7 +79,7 @@ Add the role action mapping
 {% endcode %}
 
 {% hint style="info" %}
-The details about the fields in the configuration can be found in the swagger contract
+The details about the fields in the configuration can be found in the [Swagger contract](https://raw.githubusercontent.com/egovernments/egov-services/master/docs/egov-accesscontrol/contracts/v1-0-1.yml)
 {% endhint %}
 
 ## Integration Details

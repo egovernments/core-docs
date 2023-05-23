@@ -68,7 +68,7 @@ The following refinements are carried out on the text before sending it through 
 
 1. Remove all the punctuations in the sentence, or convert them into a string if possible. For example, convert n’t to not. Other punctuations such as , . / ? ; etc can be removed safely from the string.
 2. Remove _**stop-words**_ from the sentence. Stop-words in nltk are a list of trivial words like ‘I’, ‘me’, ‘myself’, ‘and’, ‘or’, ‘not’ etc. However, the words ‘are’, ‘to’, ‘be’ and ‘not’ are not removed from the sentence as they are useful in n-gram analysis.
-3. If any character in the sentence appears consecutively for more than two times, then remove the extra occurrences and limit the consecutive characters to two. For example, if there is ‘iiii’ present in the string, then remove the extra i’s and convert it to ‘ii’. This is done based on the fact that there are hardly any words in the English vocabulary where there are more than two consecutive repeating characters. Moreover, this also helps to remove the extra spaces in the input.
+3. If any character in the sentence appears consecutively more than two times, then remove the extra occurrences and limit the consecutive characters to two. For example, if there is ‘iiii’ present in the string, then remove the extra i’s and convert it to ‘ii’. This is done based on the fact that there are hardly any words in the English vocabulary where there are more than two consecutive repeating characters. Moreover, this also helps to remove the extra spaces in the input.
 4. Convert the entire sentence to lowercase. As we know, Python is case-sensitive and so are the functions in many of the libraries.
 
 The latter half of the text pre-processing comprises _**Fuzzy String Matching.**_
@@ -109,7 +109,11 @@ Audio transcription is the process of converting an audio file to written text. 
 
 ![](../../../.gitbook/assets/5.png)
 
-![](<../../../.gitbook/assets/6 (1).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/6 (1).png" alt="" width="180">
+
+</div>
 
 **Complaint classification chatbot working:**
 
@@ -135,19 +139,39 @@ Audio transcription is the process of converting an audio file to written text. 
 
 In the existing version of the chatbot, the user has to select his/her city from a drop-down menu by visiting the mSeva website. This significantly reduces user convenience as the user is required to constantly switch pages. Thus, we have implemented an algorithm which uses _**fuzzy matching**_ and _**pattern recognition**_ to recognize the city input by the user. A list comprising all the city names in English, Punjabi and Hindi was used as a reference tool for this project. Based on the user input, the cities having the highest match ratio with the input are being returned as the output list to select from. The user should then enter the option number of his /her desired city. If the user does not find their city in the list, he/she can go back to the main menu and start all over again. This API works in Hindi and Punjabi as well. A one-time integration was done with WhatsApp using the GupShup platform. Here are some snapshots of the type and search API.
 
-![](<../../../.gitbook/assets/10 (1).png>)
+<div align="left">
 
-![](../../../.gitbook/assets/11.png)
+<img src="../../../.gitbook/assets/10 (1).png" alt="" width="375">
 
-![](../../../.gitbook/assets/12.png)
+</div>
 
-![](../../../.gitbook/assets/13.png)
+<div align="left">
 
-![](../../../.gitbook/assets/14.png)
+<img src="../../../.gitbook/assets/11.png" alt="" width="375">
+
+</div>
+
+<div align="left">
+
+<img src="../../../.gitbook/assets/12.png" alt="" width="375">
+
+</div>
+
+<div align="left">
+
+<img src="../../../.gitbook/assets/13.png" alt="" width="375">
+
+</div>
+
+<div align="left">
+
+<img src="../../../.gitbook/assets/14.png" alt="" width="375">
+
+</div>
 
 ## **Scope & Limitations**
 
-As evident from the above discussions, we see that we are now able to:
+As evident from the above discussions, we are now able to:
 
 1. Classify user intent and recognize entities for facilitating bill payments/ receipt retrievals in multiple languages.
 2. Categorize user complaints into appropriate categories based on the keywords present in the user input.

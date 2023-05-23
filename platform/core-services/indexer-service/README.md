@@ -41,7 +41,7 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ## Configuration Details <a href="#configuration-details" id="configuration-details"></a>
 
-For Indexer Configuration, please refer to the document in the [reference docs](./#reference-docs) table given below.
+Click here to access the [indexer configuration ](indexer-configuration.md)details.
 
 ## API Details <a href="#api-details" id="api-details"></a>
 

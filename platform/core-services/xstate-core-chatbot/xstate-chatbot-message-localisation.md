@@ -20,8 +20,8 @@ _(According to the standard pattern followed in the project, all the localizatio
 
 Developers will be the ones first filling up the sheet with codes (and the English version of the messages). Below are the guidelines to be followed when writing the codes in the sheet:
 
-1. The standard separator to be used is .(dot)
-2. The first part is the filename—Eg: “pgr.”, when the filename is pgr.js.
+1. The standard separator to be used is . (dot)
+2. The first part is the filename—Eg: “pgr.” when the filename is pgr.js.
 3. Use “service.” as a prefix when the file is present inside the /service directory.
    * In the /service directory, filenames are like egov-pgr.js
    * For localization messages contained in those files, instead of writing “egov-pgr” just write “pgr”

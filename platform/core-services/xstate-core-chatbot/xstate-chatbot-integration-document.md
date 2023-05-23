@@ -2,8 +2,7 @@
 
 ## Overview <a href="#overview" id="overview"></a>
 
-The [XState-Chatbot](https://github.com/egovernments/core-services/tree/xstate-chatbot/xstate-chatbot) is a revamped version of the [chatbot](https://github.com/egovernments/core-services/tree/master/chatbot), which provides functionality to the user to access PGR module services like filing complaints, tracking complaints, notifications from whats app,\
-It allows the user to view receipts and pay bills for Property, Trade Licence, Fire NOC, Water and Sewerage and BPA service module.
+The [XState-Chatbot](https://github.com/egovernments/core-services/tree/xstate-chatbot/xstate-chatbot) is a revamped version of the [chatbot](https://github.com/egovernments/core-services/tree/master/chatbot), which provides functionality to the user to access PGR module services like filing complaints, tracking complaints and notifications from WhatsApp. It allows the user to view receipts and pay bills for Property, Trade Licence, Fire NOC, Water and Sewerage and BPA service module.
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
@@ -13,8 +12,8 @@ It allows the user to view receipts and pay bills for Property, Trade Licence, F
 * Notifications to citizens when an employee performs any action on the complaint
 * Allow users to search and pay bills of different modules.
 * Allow users to search and view receipts of different modules.
-* Allow user to change the language of their choice to have a better experience.
-* Put user interactions on an elastic search for Telemetry.
+* Allow users to change the language of their choice to have a better experience.
+* Put user interactions on an elastic search for telemetry.
 
 ## Integration Details <a href="#integration" id="integration"></a>
 
@@ -63,7 +62,7 @@ To configure PGR v2 in XState chatbot then pgrVersion should be ‘v2' and pgrUp
 To configure the filestoreid for an informational image follow the steps mentioned below
 
 1. Download the images from the section _**Information Images for PGR and Open Search**_
-2. Upload the image into the filestore server. Use the upload file API from the postman collection [here](https://www.getpostman.com/collections/bdb059c5af698f0d81d6).&#x20;
+2. Upload the image into the filestore server. Use the upload file API from the Postman collection [here](https://www.getpostman.com/collections/bdb059c5af698f0d81d6).&#x20;
 3. For the PGR information image mention the filestore id [here](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L219) in the environment file.
 4. For open search, the information image mentions the filestore id [here](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L220) in the environment file.
 
@@ -99,7 +98,7 @@ The integration of the Bill payment and receipt search feature with the chatbot 
 To configure the list of modules to appear as an option for payment and receipt, Add the module business service code to the list present in the [environment](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L216) file.
 
 **For example:**\
-If the applicable modules are defined in the variable - `bill-supported-modules: "WS, PT, TL" -`the defined modules appear in the bill payment and receipt search. In the given example,  the modules Water and Sewerage, Property Tax, and Trade license appear for bill payment and receipt search.
+If the application modules are defined in the variable - `bill-supported-modules: "WS, PT, TL" -`the defined modules appear in the bill payment and receipt search. In the given example,  the modules Water and Sewerage, Property Tax, and Trade License appear for bill payment and receipt search.
 
 Add the message bundle, validation and service code for the locality searcher in [egov-bill](https://github.com/egovernments/core-services/blob/develop/xstate-chatbot/nodejs/src/machine/service/egov-bill.js) and [egov-receipt](https://github.com/egovernments/core-services/blob/develop/xstate-chatbot/nodejs/src/machine/service/egov-receipts.js) files.
 
