@@ -1,50 +1,15 @@
-# Development Pre-requisites
+---
+description: List of tutorials for the tools required to build on DIGIT platform
+---
 
-## Developer Checklist
+# Pre-requisites Training Resources
 
-Before starting development on top of DIGIT make sure:&#x20;
+On this page:
 
-* [x] DIGIT code from DIGIT-OSS, egov-mdms-data, configs etc.. has been forked from GitHub under your organization’s umbrella account.&#x20;
-* [x] You have access to the forked repositories from your GitHub user account. Note that the user account is different from the organization's account.&#x20;
-* [x] Access to a DIGIT environment - FQDN, Access keys etc..The DIGIT environment can be a single VM setup for a development environment. Please refer to these docs for the installation of DIGIT.&#x20;
-* [x] Install DIGIT in a development environment (Single VM setup) by following the [quick setup guide](https://core.digit.org/guides/installation-guide/quick-setup).&#x20;
-* [x] It is recommended to deploy the following services in the dev environment -&#x20;
+* [Backend pre-requisites training resources](pre-requisites-training-resources.md#backend-pre-requisites-tutorials)
+* [Frontend/UI pre-requisites training resources](pre-requisites-training-resources.md#prerequisite-reference-study-materials-hardbreak-hardbreak-development-team-hardbreak)
 
-<!---->
-
-* [User](../../platform/core-services/user-services.md)
-* [MDMS](../../platform/core-services/mdms-master-data-management-service/)
-* [Localization](../../platform/core-services/location-services.md)
-* [Id-Gen](../../platform/core-services/id-generation-service.md)
-* [URL-shortener](../../platform/core-services/url-shortening-service.md)
-* [Workflow](../../platform/core-services/workflow-service/)
-
-Some of the above services can also be port-forwarded using Kubernetes to bypass user authentication.
-
-* [x] Make sure the following DIGIT services are running in the local environment:
-
-<!---->
-
-* [Persister](../../platform/core-services/persister-service/)
-* [Indexer ](../../platform/core-services/indexer-service/)(optional)
-* [PDF Service](../../platform/core-services/pdf-generation-service.md)
-
-<!---->
-
-* [x] [CD/CI](../../focus-areas/setup-basics/deployment-key-concepts/ci-cd.md) has been set up for DIGIT. This is a pre-requisite to deploying new DIGIT modules. CD/CI processes will be used to build and deploy the new module that will be developed.&#x20;
-* [x] [Design phase artefacts](backend-developer-guide/section-0-prep/design-inputs/)
-* [x] In addition, knowledge of the following technologies is required for developing on DIGIT: (Refer to the [DIGIT Pre-requisites tutorials](development-pre-requisites.md#digit-pre-requisites-tutorials) for help with installing and deploying these tools)
-
-<!---->
-
-* Java/J2EE
-* Spring Boot
-* REST APIs and related concepts like path parameters, headers, JSON etc.
-* Git
-* PostgreSQL
-* Kafka
-
-### DIGIT Pre-requisites Tutorials
+## Backend Pre-requisites Tutorials
 
 | Tools Required                                              | Tutorials Resource Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,3 +23,20 @@ Some of the above services can also be port-forwarded using Kubernetes to bypass
 | <ol start="8"><li>Kubernetes</li></ol>                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | <ol start="9"><li>Helm</li></ol>                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
+## Frontend/UI Pre-requisites Tutorials <a href="#prerequisite-reference-study-materials-hardbreak-hardbreak-development-team-hardbreak" id="prerequisite-reference-study-materials-hardbreak-hardbreak-development-team-hardbreak"></a>
+
+| Topics                                | Study Materials / Youtube links                                                                                                                                                                                                                                                                                                     | Official links/documentation                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| React-hook-form                       | [React-hook-form Tutorial - ](https://www.youtube.com/watch?v=U-iz8b4RExA)[<img src="https://www.youtube.com/s/desktop/1805f790/img/favicon_32x32.png" alt="" data-size="line">THE ULTIMATE REACT-HOOK-FORM CHALLENGE - ALL THE FEATURES IN ONE FORM](https://www.youtube.com/watch?v=U-iz8b4RExA)                                  | [Home](https://react-hook-form.com/)                                                                                                                                                                                                                                                                                                                                                                                           |
+| <p> </p><p>React Query</p>            | [React Query Tutorial - ](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpi7Ptjl5b50p9gLjOFani)[<img src="https://www.youtube.com/s/desktop/1805f790/img/favicon_32x32.png" alt="" data-size="line">React Query Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpi7Ptjl5b50p9gLjOFani)                             | [![](https://tanstack.com/favicons/favicon-16x16.png)TanStack Query \| React Query, Solid Query, Svelte Query, Vue Query](https://react-query.tanstack.com/)                                                                                                                                                                                                                                                                   |
+| Routing , Lazy Loading , Custom Hooks | [<img src="https://www.youtube.com/s/desktop/1805f790/img/favicon_32x32.png" alt="" data-size="line">React Lazy Loading & Code splitting](https://www.youtube.com/watch?v=tV9gvls8IP8)                                                                                                                                              | [<img src="https://legacy.reactjs.org/favicon.ico" alt="" data-size="line">Code-Splitting – React](https://reactjs.org/docs/code-splitting.html) [<img src="https://legacy.reactjs.org/favicon.ico" alt="" data-size="line">Building Your Own Hooks – React](https://reactjs.org/docs/hooks-custom.html) [<img src="https://reactrouter.com/favicon-light.png" alt="" data-size="line">Home v6.11.1](https://reactrouter.com/) |
+| Tailwind css                          | Tailwind CSS Tutorial - [![](https://www.youtube.com/s/desktop/1805f790/img/favicon\_32x32.png)Tailwind CSS Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw)                                                                                                                                     | [![](https://tailwindcss.com/favicons/favicon-16x16.png?v=3)Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.](https://tailwindcss.com/)                                                                                                                                                                                                                                                            |
+| Axios                                 | [Axios Crash Course \| HTTP Library - ](https://www.youtube.com/watch?v=6LyagkoRWYA)[<img src="https://www.youtube.com/s/desktop/1805f790/img/favicon_32x32.png" alt="" data-size="line">Axios Crash Course \| HTTP Library](https://www.youtube.com/watch?v=6LyagkoRWYA)                                                           | [<img src="https://axios-http.com/assets/favicon.ico" alt="" data-size="line">Axios](https://axios-http.com/)                                                                                                                                                                                                                                                                                                                  |
+| i18Next                               | [Multi-language Translate React JS APP with React Hook & i18next - ](https://www.youtube.com/watch?v=cHqxgLhOl5Y)[<img src="https://www.youtube.com/s/desktop/1805f790/img/favicon_32x32.png" alt="" data-size="line">Multi-language Translate React JS APP with React Hook & I18NEXT](https://www.youtube.com/watch?v=cHqxgLhOl5Y) | [<img src="https://1143667985-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/spaces%2F-L9iS6Wm2hynS5H9Gj7j%2Favatar.png?generation=1523462254548780&#x26;alt=media" alt="" data-size="line">Introduction](https://www.i18next.com/)                                                                                                                                                                                      |
+| Yarn                                  | [Yarn Workspaces Tutorial - ](https://www.youtube.com/watch?v=G8KXFWftCg0)[<img src="https://www.youtube.com/s/desktop/1805f790/img/favicon_32x32.png" alt="" data-size="line">Yarn Workspaces Tutorial](https://www.youtube.com/watch?v=G8KXFWftCg0)                                                                               | [<img src="https://yarnpkg.com/favicon-32x32.png?v=775b53071ebde4f6d738805a2d9fcb72" alt="" data-size="line">Home](https://yarnpkg.com/)                                                                                                                                                                                                                                                                                       |
+| React Storybook                       | [React Storybook Tutorial - ](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk)[<img src="https://www.youtube.com/s/desktop/1805f790/img/favicon_32x32.png" alt="" data-size="line">React Storybook Tutorial](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk)                     | [<img src="https://storybook.js.org/favicon-32x32.png?v=eac3ed5255c5d69cad47bb7ed6ce3dbf" alt="" data-size="line">Storybook: Frontend workshop for UI development](https://storybook.js.org/)                                                                                                                                                                                                                                  |
+| Flutter                               | [Click here](pre-requisites-training-resources.md#further-reads) to learn about Flutter                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                |
+
+### Additional Reads
+
+{% file src="../../.gitbook/assets/Flutter-Coding.pdf" %}
