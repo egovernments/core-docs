@@ -219,6 +219,7 @@
     * [Section 7: Build and deploy instructions](guides/developer-guide/backend-developer-guide/section-7-build-and-deploy-instructions.md)
     * [Troubleshooting FAQs](guides/developer-guide/backend-developer-guide/troubleshooting-faqs.md)
   * [UI Developer Guide](guides/developer-guide/ui-developer-guide/README.md)
+    * [UI Development Pre-requisites](guides/developer-guide/ui-developer-guide/ui-development-pre-requisites.md)
     * [Local Development Setup](guides/developer-guide/ui-developer-guide/local-development-setup.md)
     * [Citizen Module Setup](guides/developer-guide/ui-developer-guide/citizen-module-setup/README.md)
       * [Sample screenshots](guides/developer-guide/ui-developer-guide/citizen-module-setup/sample-screenshots.md)
