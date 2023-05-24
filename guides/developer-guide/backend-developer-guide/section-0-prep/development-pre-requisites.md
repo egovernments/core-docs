@@ -4,7 +4,7 @@
 
 Before starting development on top of DIGIT make sure:&#x20;
 
-* [x] Check out the [Development Pre-requisites Training Resources ](../../pre-requisites-training-resources.md#backend-pre-requisites-tutorials)page to learn how to deploy the required tools
+* [x] Check out the [Development Pre-requisites Training Resources ](../../development-pre-requisites.md#backend-pre-requisites-tutorials)page to learn how to deploy the required tools
 * [x] DIGIT code from DIGIT-OSS, egov-mdms-data, configs etc.. has been forked from GitHub under your organization’s umbrella account.&#x20;
 * [x] You have access to the forked repositories from your GitHub user account. Note that the user account is different from the organization's account.&#x20;
 * [x] Access to a DIGIT environment - FQDN, Access keys etc..The DIGIT environment can be a single VM setup for a development environment. Please refer to these docs for the installation of DIGIT.&#x20;

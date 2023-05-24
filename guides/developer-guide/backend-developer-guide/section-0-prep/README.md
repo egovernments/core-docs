@@ -4,8 +4,8 @@ This section provides the complete details of the system pre-requisites, preppin
 
 Follow the steps in the docs resources below:
 
-{% content-ref url="../../pre-requisites-training-resources.md" %}
-[pre-requisites-training-resources.md](../../pre-requisites-training-resources.md)
+{% content-ref url="development-pre-requisites.md" %}
+[development-pre-requisites.md](development-pre-requisites.md)
 {% endcontent-ref %}
 
 {% content-ref url="design-inputs/" %}
