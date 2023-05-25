@@ -1,45 +1,41 @@
 # Deployment of Airflow DAG
 
-### Deployment of Airflow <a href="#deployment-of-airflow" id="deployment-of-airflow"></a>
+## Overview <a href="#deployment-of-airflow" id="deployment-of-airflow"></a>
 
-For deployment of Airflow we need the Kubernetes Environment.
+This page provides steps to deploy Airflow DAG.
 
-**Step 1**: clone the git repo for [airflow](https://github.com/airflow-helm/charts.git) , and update the[ values.yaml ](https://github.com/airflow-helm/charts/blob/main/charts/airflow/values.yaml) as per the requirement.
+## Deployment of Airflow <a href="#deployment-of-airflow" id="deployment-of-airflow"></a>
 
-**Step 2**: update the git repository url and subpath for the directory in values.yaml
+The Kubernetes environment is required for the deployment of Airflow.
 
-Here we have updated  as&#x20;
+**Step 1**: Clone the git repo for [airflow](https://github.com/airflow-helm/charts.git), and update the[ values.yaml ](https://github.com/airflow-helm/charts/blob/main/charts/airflow/values.yaml)as per the requirement.
 
-repo: "[GitHub - pmidc-digit/utilities](https://github.com/pmidc-digit/utilities.git) ”
+**Step 2**: Update the git repository URL and subpath for the directory in values.yaml
 
-repoSubPath: "egov-national-dashboard-accelerator/dag
+Example: the following params are updated as given below:&#x20;
 
-branch: "develop
+* repo: "[GitHub - pmidc-digit/utilities](https://github.com/pmidc-digit/utilities.git) ”
+* repoSubPath: "egov-national-dashboard-accelerator/dag
+* branch: "develop
 
-**Step 3**: change the directory to airflow and update the helm .update the helm repo on local and add the airflow repo to Helm using below command
+**Step 3**: Change the directory to airflow and update the helm. Update the helm repo locally and add the airflow repo to Helm using the command below:
 
-helm repo add apache-airflow [https://airflow.apache.org](https://airflow.apache.org/)
+* helm repo add apache-airflow [https://airflow.apache.org](https://airflow.apache.org/)
 
-The above command will pull airflow repo and it will be added to your local helm repository.
+The above command pulls the airflow repo and it is added to the local helm repository.
 
-**Step 4**: Installing apache airflow after updating helm repositories
+**Step 4**: Installing Apache airflow after updating the helm repositories
 
-&#x20;helm install airflow apache-airflow/airflow --namespace egov
+* helm install airflow apache-airflow/airflow --namespace egov
 
-The above command will take the updated
+The above command will take the updated repo details.
 
-**Step 5**: to upgrade the changes we made to values.yaml use below command.
+**Step 5**: Upgrade the changes made to values.yaml using the command below.
 
-helm upgrade --install airflow apache-airflow/airflow -n airflow -f values.yaml
+* helm upgrade --install airflow apache-airflow/airflow -n airflow -f values.yaml
 
-The above command will update the git repo, subpath and branch while deployment.
+The above command updates the git repo, subpath and branch while deployment.
 
 **Step 6**: Deployment is done pods service will start running with updated values.yaml
 
-&#x20;
-
-Latest files for the deployment:
-
-Attached is the final "values.yaml" file. It syncs both the plugins and dags from repo.
-
-[Airflow Deployment](https://github.com/pmidc-digit/utilities/tree/dataphi/egov-national-dashboard-accelerator/docs/deployment)
+* Latest files for the deployment: Attached below is the final "values.yaml" file. It syncs both the plugins and dags from the repo. [Airflow Deployment](https://github.com/pmidc-digit/utilities/tree/dataphi/egov-national-dashboard-accelerator/docs/deployment)

@@ -1,19 +1,19 @@
 # National Dashboard: Steps for Index Creation
 
-### Overview <a href="#overview" id="overview"></a>
+## Overview <a href="#overview" id="overview"></a>
 
-_This document aims to list out the steps needed to be followed to create national dashboard indexes._
+This document lists the steps required to follow to create national dashboard indexes.
 
-### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
+## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
-1. Prior Knowledge of ElasticSearch
+Prior Knowledge of ElasticSearch
 
-### Steps for index creation <a href="#steps-for-index-creation" id="steps-for-index-creation"></a>
+## Index Creation Steps <a href="#steps-for-index-creation" id="steps-for-index-creation"></a>
 
-For understanding purposes we are listing out the steps needed to be followed to create **property tax** index for national dashboard.
+For understanding purposes, we are listing out the steps needed to be followed to create a **property tax** index for the national dashboard.
 
 1. Open Kibana
-2. Create index using the following query -
+2. Create an index using the following query -
 
 {% code lineNumbers="true" %}
 ```

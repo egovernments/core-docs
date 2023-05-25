@@ -98,7 +98,7 @@
       * [National Dashboard: Steps for Index Creation](platform/core-services/national-dashboard-ingest/national-dashboard-steps-for-index-creation.md)
       * [National Dashboard Adaptor Service](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/README.md)
         * [Deployment of Airflow DAG](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/deployment-of-airflow-dag.md)
-        * [How to trigger Airflow DAG](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/how-to-trigger-airflow-dag.md)
+        * [Trigger Airflow DAG](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/trigger-airflow-dag.md)
         * [Configure Airflow](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/configure-airflow.md)
         * [Steps to insert and delete data](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/steps-to-insert-and-delete-data.md)
         * [Important Links and Credentials](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/important-links-and-credentials.md)

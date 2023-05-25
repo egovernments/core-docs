@@ -32,12 +32,6 @@ Each of the widgets corresponds to one service and that displays basic performan
 
 The performance metrics and dimensions identified of the service can be mapped to different available visualizations in DSS.
 
-| Metric                               | Dimension   | Comparison    | Visualisation |
-| ------------------------------------ | ----------- | ------------- | ------------- |
-| Total Birth Certificate Applications | None        | Previous Year | Metric        |
-| Average Time                         | None        | Previous Year | Metric        |
-| Total Applications                   | By Location |               | Pie Chart     |
-| Total Applications                   | By Status   |               | Pie Chart     |
-| Total Applications                   | By Week     |               | Line Chart    |
+<table><thead><tr><th>Metric</th><th width="150">Dimension</th><th width="150">Comparison</th><th>Visualisation</th></tr></thead><tbody><tr><td>Total Birth Certificate Applications</td><td>None</td><td>Previous Year</td><td>Metric</td></tr><tr><td>Average Time</td><td>None</td><td>Previous Year</td><td>Metric</td></tr><tr><td>Total Applications </td><td>By Location</td><td></td><td>Pie Chart</td></tr><tr><td>Total Applications</td><td>By Status</td><td></td><td>Pie Chart</td></tr><tr><td>Total Applications</td><td>By Week</td><td></td><td>Line Chart</td></tr></tbody></table>
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

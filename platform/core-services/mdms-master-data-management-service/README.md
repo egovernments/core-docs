@@ -21,10 +21,7 @@ The MDMS service aims to reduce the time spent by developers on writing codes to
 * Adds master data for usage without the need to create master data APIs in every module.
 * Reads data from GIT directly with no dependency on any database services.
 
-| Environment Variables | Description                                                           |
-| --------------------- | --------------------------------------------------------------------- |
-| egov.mdms.conf.path   | The default value of folder where master data files are stored        |
-| masters.config.url    | The default value of the file URL which contains master-config values |
+<table><thead><tr><th width="266">Environment Variables</th><th>Description</th></tr></thead><tbody><tr><td>egov.mdms.conf.path</td><td>The default value of folder where master data files are stored</td></tr><tr><td>masters.config.url</td><td>The default value of the file URL which contains master-config values</td></tr></tbody></table>
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 

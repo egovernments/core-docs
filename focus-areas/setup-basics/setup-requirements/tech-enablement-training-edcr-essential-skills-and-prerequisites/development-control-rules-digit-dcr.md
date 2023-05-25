@@ -47,12 +47,7 @@ So when data is required at Plan Level, Block Level, Floor Level, or Height it i
 
 At the Plan level, the layer names are used without any prefixes. The list of  such layer names are&#x20;
 
-| 1 | PLOT\_BOUNDARY     |
-| - | ------------------ |
-| 2 | VERT\_CLEAR\_OHEL  |
-| 3 | HORIZ\_CLEAR\_OHEL |
-| 4 | WASTE\_DISPOSAL    |
-| 5 | PLAN\_INFO         |
+<table data-header-hidden><thead><tr><th width="105"></th><th></th></tr></thead><tbody><tr><td>1</td><td>PLOT_BOUNDARY</td></tr><tr><td>2</td><td>VERT_CLEAR_OHEL</td></tr><tr><td>3</td><td>HORIZ_CLEAR_OHEL</td></tr><tr><td>4</td><td>WASTE_DISPOSAL</td></tr><tr><td>5</td><td>PLAN_INFO</td></tr></tbody></table>
 
 ### Block Level
 

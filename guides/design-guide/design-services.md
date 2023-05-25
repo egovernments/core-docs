@@ -12,26 +12,11 @@ This document provides the steps to identify the registries and other services. 
 
 List the activities in a table and separate the nouns and the verbs as illustrated in the table below. The activities are generalized e.g. in verify application the word application refers to "Birth Certificate Application" hence generalize this to Verify Birth Certificate (we have dropped the term Application for brevity). Knowing the list of services available in DIGIT also helps - as you may call the activity "Pay Charges" instead of "Make Payment". This process may require a few iterations.&#x20;
 
-| Activity                    | Generalized Activity       | Verb     | Noun              |
-| --------------------------- | -------------------------- | -------- | ----------------- |
-| Apply for Birth Certificate | Create Birth Certificate   | Create   | Birth Certificate |
-| Make Payment                | Make Payment               | Make     | Payment           |
-| Verify Application          | Verify Birth Certificate   | Verify   | Birth Certificate |
-| Approve Application         | Approve Birth Certificate  | Approve  | Birth Certificate |
-| Send Notification           | Send Notification          | Send     | Notification      |
-| Update Application          | Update Birth Certificate   | Update   | Birth Certificate |
-| Download Certificate        | Download Birth Certificate | Download | Birth Certificate |
+<table><thead><tr><th width="188">Activity</th><th width="167">Generalized Activity</th><th width="167.1914893617021">Verb</th><th>Noun</th></tr></thead><tbody><tr><td>Apply for Birth Certificate</td><td>Create Birth Certificate </td><td>Create</td><td>Birth Certificate</td></tr><tr><td>Make Payment</td><td>Make Payment</td><td>Make</td><td>Payment</td></tr><tr><td>Verify Application</td><td>Verify Birth Certificate</td><td>Verify</td><td>Birth Certificate</td></tr><tr><td>Approve Application</td><td>Approve Birth Certificate</td><td>Approve</td><td>Birth Certificate</td></tr><tr><td>Send Notification</td><td>Send Notification</td><td>Send</td><td>Notification</td></tr><tr><td>Update Application</td><td>Update Birth Certificate</td><td>Update</td><td>Birth Certificate</td></tr><tr><td>Download Certificate</td><td>Download Birth Certificate</td><td>Download</td><td>Birth Certificate</td></tr></tbody></table>
 
 Now transform the above verb and noun columns to the table below to identify the first set of services and their operations.
 
-| Service           | Operation |
-| ----------------- | --------- |
-| Birth Certificate | Create    |
-|                   | Update    |
-|                   | Verify    |
-|                   | Approve   |
-|                   | Download  |
-| Notification      | Send      |
+<table><thead><tr><th width="240">Service</th><th>Operation</th></tr></thead><tbody><tr><td>Birth Certificate</td><td>Create</td></tr><tr><td></td><td>Update</td></tr><tr><td></td><td>Verify</td></tr><tr><td></td><td>Approve</td></tr><tr><td></td><td>Download</td></tr><tr><td>Notification</td><td>Send</td></tr></tbody></table>
 
 So we have now identified 2 services Birth Certificate and Notification. When we get into detailing the sequence diagrams, it is quite possible that a few more services may emerge e.g. Birth Certificate Charge Calculator - assume charge calculation logic varies between different cities hence it makes sense to externalize this outside Birth Certificate Service. &#x20;
 
@@ -49,15 +34,7 @@ The workflow configuration can be used by any module which performs a sequence o
 
 The below table illustrates the process:
 
-| What is the state of the application? | Which role can act? | What actions can the role take?               |
-| ------------------------------------- | ------------------- | --------------------------------------------- |
-| Null                                  | Applicant           | Apply                                         |
-| Awaiting Verification                 | Verifier            | <p>Mark Verified<br>Ask for Clarification</p> |
-| Awaiting Clarification                | Applicant           | Save/Update                                   |
-| Verified                              | Verifier            | Assign Approver                               |
-| Awaiting Approval                     | Approver            | <p>Approve<br>Reject</p>                      |
-| Approved                              | -                   | -                                             |
-| Rejected                              | -                   | -                                             |
+<table><thead><tr><th width="267.73825503355704">What is the state of the application?</th><th width="204">Which role can act?</th><th>What actions can the role take?</th></tr></thead><tbody><tr><td>Null</td><td>Applicant</td><td>Apply</td></tr><tr><td>Awaiting Verification</td><td>Verifier</td><td>Mark Verified<br>Ask for Clarification</td></tr><tr><td>Awaiting Clarification</td><td>Applicant</td><td>Save/Update</td></tr><tr><td>Verified</td><td>Verifier</td><td>Assign Approver</td></tr><tr><td>Awaiting Approval</td><td>Approver</td><td>Approve<br>Reject</td></tr><tr><td>Approved</td><td>-</td><td>-</td></tr><tr><td>Rejected</td><td>-</td><td>-</td></tr></tbody></table>
 
 &#x20;                                                                               **Workflow Table1**
 

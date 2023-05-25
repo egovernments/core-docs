@@ -1,20 +1,22 @@
-# How to trigger Airflow DAG
+# Trigger Airflow DAG
 
-In Airflow, a `DAG` –Directed Acyclic Graph – is a collection of all the tasks you want to run, organized in a way that reflects their relationships and dependencies.
+## Overview
+
+In Airflow, a `DAG` –Directed Acyclic Graph – is a collection of the tasks you want to run, organized in a way that reflects their relationships and dependencies.
 
 A DAG is defined in a Python script, which represents the DAGs structure (tasks and their dependencies) as code.
 
-### How to run DAG in Airflow? <a href="#how-to-run-dag-in-airflow" id="how-to-run-dag-in-airflow"></a>
+### Run DAG Airflow <a href="#how-to-run-dag-in-airflow" id="how-to-run-dag-in-airflow"></a>
 
 **Manual Trigger**
 
 1.Log onto the Punjab Prod server using the credentials:
 
-URL:[![](https://airflow.mseva-qa.lgpunjab.gov.in/static/pin\_32.png)Sign In - Airflow](https://airflow.mseva-qa.lgpunjab.gov.in/login/?next=http%3A%2F%2Fairflow.mseva-qa.lgpunjab.gov.in%2Fhome)
+URL: [Sign In - Airflow](https://airflow.mseva-qa.lgpunjab.gov.in/login/?next=http%3A%2F%2Fairflow.mseva-qa.lgpunjab.gov.in%2Fhome)
 
-&#x20;   username : admin
+&#x20;   username: admin
 
-&#x20;   password :  admin
+&#x20;   password:  admin
 
 <figure><img src="../../../../.gitbook/assets/image-20220812-045435.png" alt=""><figcaption></figcaption></figure>
 
