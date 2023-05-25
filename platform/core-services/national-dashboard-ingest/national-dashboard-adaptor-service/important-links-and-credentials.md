@@ -1,6 +1,6 @@
 # Important Links and Credentials
 
-#### Credentials <a href="#credentials" id="credentials"></a>
+### Credentials <a href="#credentials" id="credentials"></a>
 
 |                                                          | URL                                                                                                                                                         | UserID                          | Password                                               | City                       |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------ | -------------------------- |
@@ -23,12 +23,12 @@ QA Test Cases - [Test Cases Link](https://docs.google.com/spreadsheets/d/15ZnLQS
 
 Elastic Search Queries **-** [Elastic Search Queries](https://docs.google.com/document/d/1xiOQ5LTnSiL6bb2Y9RKPP\_BsStKpAHd0QHbZ-A9wvyI/edit)
 
-List of index in Punjab - [List Of Index in Punjab](https://docs.google.com/spreadsheets/d/1HkP4M\_G9SemoWbi\_HQmi1TWs5bpUU4dWA\_Vnw\_XAcvg/edit#gid=0)
+List of Index in Punjab - [List Of Index in Punjab](https://docs.google.com/spreadsheets/d/1HkP4M\_G9SemoWbi\_HQmi1TWs5bpUU4dWA\_Vnw\_XAcvg/edit#gid=0)
 
 Code Checkin path **-** [Code Checkin Repo](https://github.com/pmidc-digit/utilities/tree/dataphi/egov-national-dashboard-accelerator)
 
 JIRA link for the issue tracking **-** [Dashboard for Issue Tracking](https://digit-discuss.atlassian.net/jira/software/c/projects/UM/boards/171/backlog?quickFilter=254)
 
-Postman collection for the INGEST API **-** [Postman Collection for Ingest API](https://github.com/pmidc-digit/utilities/blob/dataphi/egov-national-dashboard-accelerator/docs/eGov.postman\_collection.json)
+Postman Collection for the INGEST API **-** [Postman Collection for Ingest API](https://github.com/pmidc-digit/utilities/blob/dataphi/egov-national-dashboard-accelerator/docs/eGov.postman\_collection.json)
 
 National Dashboard KPI + Definitions**-** [KPI+Definitions](https://docs.google.com/spreadsheets/d/1MbUUMTVFMwd-mmJFmuj1EgljRdoo52fT\_hKTx48f\_iA/edit?pli=1#gid=2129575914)

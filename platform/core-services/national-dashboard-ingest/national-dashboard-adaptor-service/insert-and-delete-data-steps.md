@@ -1,8 +1,8 @@
-# Steps to insert and delete data
+# Insert & Delete Data - Steps
 
 ### Steps to delete the records: <a href="#steps-to-delete-the-records" id="steps-to-delete-the-records"></a>
 
-Sample to delete date for July month module wise in the postgres database:
+Refer to the sample below to delete the data for the month of July module-wise in the Postgres database:
 
 delete from nss\_ingest\_data where dataKey like '%-07-2022:FIRE%';
 
@@ -16,15 +16,15 @@ delete from nss\_ingest\_data where dataKey like '%-07-2022:PT%';
 
 delete from nss\_ingest\_data where dataKey like '%-07-2022:MCOLLECT%';
 
-&#x20;
-
 ### Steps to delete the records from ES: <a href="#steps-to-delete-the-records-from-es" id="steps-to-delete-the-records-from-es"></a>
 
-Adjust the module and the date range accordingly
+Adjust the module and the date range accordingly.
 
-First check the records and then delete.
+Check the records before deleting.
 
-Note:Deleting data from both ES and postgres is mandate to avoid duplication of data.
+{% hint style="info" %}
+**Note:** Deleting data from both ES and Postgres is mandated to avoid duplication of data.
+{% endhint %}
 
 {% code lineNumbers="true" %}
 ```

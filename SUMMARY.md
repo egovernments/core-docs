@@ -100,7 +100,7 @@
         * [Deployment of Airflow DAG](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/deployment-of-airflow-dag.md)
         * [Trigger Airflow DAG](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/how-to-trigger-airflow-dag.md)
         * [Configure Airflow](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/configure-airflow.md)
-        * [Steps to insert and delete data](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/steps-to-insert-and-delete-data.md)
+        * [Insert & Delete Data - Steps](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/insert-and-delete-data-steps.md)
         * [Important Links and Credentials](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/important-links-and-credentials.md)
         * [Code structure](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/code-structure.md)
         * [KT sessions](platform/core-services/national-dashboard-ingest/national-dashboard-adaptor-service/kt-sessions.md)
