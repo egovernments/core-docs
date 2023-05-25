@@ -6,6 +6,17 @@ description: >-
 
 # Readiness & Liveness
 
+On this page:
+
+* [Probes overview](readiness-and-liveness.md#probes-overview)
+* [Kubernetes probes](readiness-and-liveness.md#readiness-probes)
+* [Readiness probes](readiness-and-liveness.md#readiness-probes)
+* [Liveness probes](readiness-and-liveness.md#29ef)
+* [Startup probes](readiness-and-liveness.md#1b53)
+* [Configuring probes actions](readiness-and-liveness.md#configuring-probe-actions)
+* [Best practices](readiness-and-liveness.md#best-practices)
+* [Tools](readiness-and-liveness.md#tools)
+
 ## Probes Overview
 
 Determining the state of a service based on readiness, liveness, and startup to detect and deal with unhealthy situations. It may happen that the application needs to initialize some state, make database connections, or load data before handling application logic. This gap in time between when the application is actually ready versus when Kubernetes thinks is ready becomes an issue when the deployment begins to scale and unready applications receive traffic and send back 500 errors.
@@ -52,7 +63,7 @@ Startup probes are similar to readiness probes but only executed at startup. The
 
 Now that we understand the different types of probes, we can examine the three different ways to configure each probe.
 
-## **HTTP**
+### **HTTP**
 
 The Kubelet sends an HTTP GET request to an endpoint and checks for a 2xx or 3xx response. You can reuse an existing HTTP endpoint or set up a lightweight HTTP server for probing purposes (e.g. an Express server with `/healthz` endpoint).
 
@@ -71,7 +82,7 @@ livenessProbe:
      port: 8080
 ```
 
-## TCP <a href="#ed8f" id="ed8f"></a>
+### TCP <a href="#ed8f" id="ed8f"></a>
 
 If you just need to check whether or not a TCP connection can be made, you can specify a TCP probe. The pod is marked healthy if can establish a TCP connection. Using a TCP probe may be useful for a gRPC or FTP server where HTTP calls may not be suitable.
 
@@ -81,7 +92,7 @@ readinessProbe:
      port: 21
 ```
 
-## Command <a href="#0a7d" id="0a7d"></a>
+### Command <a href="#0a7d" id="0a7d"></a>
 
 Finally, a probe can be configured to run a shell command. The check passes if the command returns with exit code 0; otherwise, the pod is marked as unhealthy. This type of probe may be useful if it is not desirable to expose an HTTP server/port or if it is easier to check initialization steps via command (e.g. check if a configuration file has been created, run a CLI command).
 
@@ -95,7 +106,7 @@ readinessProbe:
 
 The exact parameters for the probes depend on your application, but here are some general best practices to get started:
 
-* For older (≤ 1.15) Kubernetes clusters, use a readiness probe with an initial delay to deal with the container startup phase (use p99 times for this). But make this check lightweight, since the readiness probe will execute throughout the entire lifecycle of the pod. We don’t want the probe to timeout because the readiness check takes a long time to compute.
+* For older (≤ 1.15) Kubernetes clusters, use a readiness probe with an initial delay to deal with the container startup phase (use p99 times for this). But make this check lightweight since the readiness probe will execute throughout the entire lifecycle of the pod. We don’t want the probe to time out because the readiness check takes a long time to compute.
 * For newer (≥ 1.16) Kubernetes clusters, use a startup probe for applications with unpredictable or variable startup times. The startup probe may share the same endpoint (e.g. `/healthz` ) as the readiness and liveness probes, but set the `failureThreshold` higher than the other probes to account for longer start times, but more reasonable time to failure for liveness and readiness checks.
 * Readiness and liveness probes may share the same endpoint if the readiness probes aren’t used for other signalling purposes. If there’s only one pod (i.e. using a Vertical Pod Autoscaler), set the readiness probe to address the startup behaviour and use the liveness probe to determine health. In this case, marking the pod unhealthy means downtime.
 * Readiness checks can be used in various ways to signal system degradation. For example, if the application loses connection to the database, readiness probes may be used to temporarily block new requests and allow the system to reconnect. It can also be used to load balance work to other pods by marking busy pods as not ready.

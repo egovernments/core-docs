@@ -6,6 +6,11 @@ description: >-
 
 # Security Practices
 
+On this page:
+
+* [Security overview](security-practices.md#introduction)
+* [Infra security](security-practices.md#infra-security)
+
 ## Introduction
 
 Security is always a difficult subject to approach either by lack of experience; or by the fact you should know when the level of security is right for what you have to secure.
