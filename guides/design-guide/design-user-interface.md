@@ -4,15 +4,7 @@
 
 To identify the points different roles interact with the system from the process model.
 
-| Activity                    | User Interface Required                                           |
-| --------------------------- | ----------------------------------------------------------------- |
-| Apply for Birth Certificate | <p>New Application UI<br>Applicated Submitted UI</p>              |
-| Make Payment                | <p>Payment UI<br>Payment Successful UI</p>                        |
-| Verify Application          | <p>Verify Application UI<br>Application Verified UI</p>           |
-| Send Notification           | Notification UI                                                   |
-| Update Application          | <p>Edit Application UI <br>Update Successful UI</p>               |
-| Approve Application         | <p>Approve Application UI<br>Application Approved/Rejected UI</p> |
-| Download Certificate        | <p>Download Birth Certificate UI<br>Birth Certificate UI</p>      |
+<table><thead><tr><th width="247">Activity</th><th>User Interface Required</th></tr></thead><tbody><tr><td>Apply for Birth Certificate</td><td>New Application UI<br>Applicated Submitted UI</td></tr><tr><td>Make Payment</td><td>Payment UI<br>Payment Successful UI</td></tr><tr><td>Verify Application</td><td>Verify Application UI<br>Application Verified UI</td></tr><tr><td>Send Notification</td><td>Notification UI</td></tr><tr><td>Update Application</td><td>Edit Application UI <br>Update Successful UI</td></tr><tr><td>Approve Application</td><td>Approve Application UI<br>Application Approved/Rejected UI</td></tr><tr><td>Download Certificate</td><td>Download Birth Certificate UI<br>Birth Certificate UI</td></tr></tbody></table>
 
 DIGIT UI Design Guidelines are available here - [https://egovernments.github.io/ui-docs/](https://egovernments.github.io/ui-docs/)&#x20;
 
@@ -33,5 +25,3 @@ Each of the widgets corresponds to one service and that displays basic performan
 The performance metrics and dimensions identified of the service can be mapped to different available visualizations in DSS.
 
 <table><thead><tr><th>Metric</th><th width="150">Dimension</th><th width="150">Comparison</th><th>Visualisation</th></tr></thead><tbody><tr><td>Total Birth Certificate Applications</td><td>None</td><td>Previous Year</td><td>Metric</td></tr><tr><td>Average Time</td><td>None</td><td>Previous Year</td><td>Metric</td></tr><tr><td>Total Applications </td><td>By Location</td><td></td><td>Pie Chart</td></tr><tr><td>Total Applications</td><td>By Status</td><td></td><td>Pie Chart</td></tr><tr><td>Total Applications</td><td>By Week</td><td></td><td>Line Chart</td></tr></tbody></table>
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
