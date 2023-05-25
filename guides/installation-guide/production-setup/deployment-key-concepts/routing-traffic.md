@@ -1,16 +1,27 @@
 # Routing Traffic
 
+On this page:
+
+* [Overview ](routing-traffic.md#overview)
+* [Terminologies used](routing-traffic.md#terminology)
+* [Ingress](routing-traffic.md#ingress-overview)
+* [Pre-requisites](routing-traffic.md#pre-requisites)
+* [Ingress resource](routing-traffic.md#ingress-resource)
+* [Ingress rules](routing-traffic.md#ingress-rules)
+
 ## Overview
 
 In Kubernetes, an Ingress is an object that allows access to your Kubernetes services from outside the Kubernetes cluster. You configure access by creating a collection of rules that define which inbound connections reach which services.
 
 This lets you consolidate your routing rules into a single resource. For example, you might want to send requests to example.com/api/v1/ to an api-v1 service, and requests to example.com/api/v2/ to the api-v2 service. With an Ingress, you can easily set this up without creating a bunch of LoadBalancers or exposing each service on the Node.
 
-![](https://gblobscdn.gitbook.com/assets%2F-MERG\_iQW5oN4ukgXP8K%2F-MGwT6PR0yx4PuOXipeK%2F-MGwTIug-nD-N7q5NFI8%2Fimage.png?alt=media\&token=3b8d76e0-586d-4bdf-a198-48e95f3f5761)
+<div align="left">
 
-An API object that manages external access to the services in a cluster, typically HTTP.
+<img src="https://gblobscdn.gitbook.com/assets%2F-MERG_iQW5oN4ukgXP8K%2F-MGwT6PR0yx4PuOXipeK%2F-MGwTIug-nD-N7q5NFI8%2Fimage.png?alt=media&#x26;token=3b8d76e0-586d-4bdf-a198-48e95f3f5761" alt="" width="375">
 
-Ingress may provide load balancing, SSL termination and name-based virtual hosting.
+</div>
+
+An API object that manages external access to the services in a cluster, typically HTTP. Ingress may provide load balancing, SSL termination and name-based virtual hosting.
 
 ## Terminology
 
@@ -68,5 +79,3 @@ A default backend is often configured in an Ingress controller to service any re
 * Learn about [Cert-manager](https://cert-manager.io/docs/)
 
 ​
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)​](http://creativecommons.org/licenses/by/4.0/)All content on this page by [eGov Foundation](https://egov.org.in/) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
