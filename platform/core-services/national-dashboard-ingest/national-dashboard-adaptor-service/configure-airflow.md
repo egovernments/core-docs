@@ -1,11 +1,8 @@
 # Configure Airflow
 
-### Configure the Airflow variables <a href="#configure-the-airflow-variables" id="configure-the-airflow-variables"></a>
+## Configure Airflow Variables <a href="#configure-the-airflow-variables" id="configure-the-airflow-variables"></a>
 
 <figure><img src="../../../../.gitbook/assets/image-20220818-102218.png" alt=""><figcaption></figcaption></figure>
-
-\
-
 
 | Key             | Value                                                                                                                                                                                                    | Remark                          |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
@@ -17,12 +14,9 @@
 | usertype        | SYSYTEM                                                                                                                                                                                                  |                                 |
 | totalulb\_url   | [https://raw.githubusercontent.com/egovernments/punjab-mdms-data/master/data/pb/tenant/tenants.json](https://raw.githubusercontent.com/egovernments/punjab-mdms-data/master/data/pb/tenant/tenants.json) | for reading the ulb’s of punjab |
 
-### Configure the connections <a href="#configure-the-connections" id="configure-the-connections"></a>
+## Configure Connections <a href="#configure-the-connections" id="configure-the-connections"></a>
 
 <figure><img src="../../../../.gitbook/assets/image-20220818-102252.png" alt=""><figcaption></figcaption></figure>
-
-\
-
 
 | ConnectionId      | Connection Type     | Host                                                                               |      |                      |                                                      |
 | ----------------- | ------------------- | ---------------------------------------------------------------------------------- | ---- | -------------------- | ---------------------------------------------------- |

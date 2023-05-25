@@ -2,17 +2,15 @@
 
 ## Overview
 
-Design and develop an adaptor service which will extract data from the state DIGIT installations and push it onto the National Dashboard instance periodically.&#x20;
+Design and develop an adaptor service which extracts data from the state DIGIT installations and pushes it onto the National Dashboard instance periodically.&#x20;
 
-A list of tasks for this has been tracked for the adaptor -
-
-[Jira - Dashboard](https://digit-discuss.atlassian.net/jira/software/projects/NDA/boards/120)
+A list of tasks for this is tracked for the adaptor - [Jira - Dashboard](https://digit-discuss.atlassian.net/jira/software/projects/NDA/boards/120)
 
 ## Scope
 
 * Adaptor to be deployed on state DIGIT installations
-* Periodically, the adaptor extracts data and aggregates it from the different DIGIT modules.&#x20;
-* Posts the data to the National Dashboard for the state.
+* Periodically, the adaptor extracts data and aggregates it from the different DIGIT modules
+* Posts the data to the National Dashboard for the state
 * Bookkeeping is done for every adaptor data extract and pushes for audit and debugging
 * Out of scope: extraction from non-DIGIT sources
 
