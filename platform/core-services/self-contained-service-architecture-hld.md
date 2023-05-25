@@ -102,7 +102,11 @@ Will increase the development time and efforts.
 * This requires a cluster-aware caching implementation and this can be done using the Redis instance that is already deployed. Move the configuration to Redis - even if one pod refreshes the cache it reflects in all the pods for that service.
 * For services like indexer and persister which load consumers from configuration, cache burst does not work. For this we need to use configuration versioning. In the cache, we store the configuration along with the hash associated with that version. Services like indexer and persister maintain a variable called localOperatingConfigHash in its heap memory. Whenever it fetches data from the Redis cache it compares the localOperatingConfigHash with the current hash(version) of the configuration. If it matches it goes ahead and performs the process. In case it is not the same, it reloads the consumers from the new configuration and updates the localOperatingConfigHash to the value it got from the Redis cache.
 
-<figure><img src="../../.gitbook/assets/Persister local hash.png" alt=""><figcaption></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/Persister local hash.png" alt="" width="545"><figcaption></figcaption></figure>
+
+</div>
 
 * Another optimised approach is that the persister service fetches the configs when \_refresh API is called. After fetching the config the service gets all the topics present in the configs and get a hash of that list of topics. This hash service is set in its local variable and adds it in the Redis along with the configs. When another pod fetches the config and hash from Redis it compares the hash with its local hash and based on that it restarts consumers. In this way, consumers are restarted only when topics are added or removed.
 

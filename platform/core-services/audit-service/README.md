@@ -2,24 +2,24 @@
 
 ### Overview <a href="#overview" id="overview"></a>
 
-_The objective of audit service is listed as below -_
+The objective of the audit service is listed below -
 
 1. To provide a one-stop framework for signing data i.e. creating an immutable data entry to track activities of an entity. Whenever an entity is created/updated/deleted the operation is captured in the data logs and is digitally signed to protect it from tampering.
 
 ### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
-1. Prior Knowledge of Java/J2EE.
-2. Prior Knowledge of SpringBoot.
-3. Prior Knowledge of PostgresSQL.
-4. Prior Knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
+1. Prior knowledge of Java/J2EE
+2. Prior knowledge of SpringBoot
+3. Prior knowledge of PostgreSQL
+4. Prior knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
 
-### Setup And Key Functionalities <a href="#setup-and-key-functionalities" id="setup-and-key-functionalities"></a>
+## Setup & Key Functionalities <a href="#setup-and-key-functionalities" id="setup-and-key-functionalities"></a>
 
-Audit service will be parsing all the persister configs so that it can process data received by the persister and create audit logs out of it.
+The audit service will be parsing all the persister configs so that it can process data received by the persister and create audit logs out of it.
 
-**Setup:**
+### **Setup**
 
-1. Step 1: Add the following metrics to the existing persister configs -
+**Step 1:** Add the following metrics to the existing persister configs -
 
 {% code lineNumbers="true" %}
 ```
@@ -32,7 +32,7 @@ auditAttributeBasePath: $.service
 ```
 {% endcode %}
 
-2\. Step 2: If a custom implementation of `ConfigurableSignAndVerify` interface is present, provide the signing algorithm implementation name as a part of `audit.log.signing.algorithm` property. For example, if the signing algorithm is HMAC, the property will be set as follows -
+**Step 2:** If a custom implementation of `ConfigurableSignAndVerify` interface is present, provide the signing algorithm implementation name as a part of `audit.log.signing.algorithm` property. For example, if the signing algorithm is HMAC, the property will be set as follows -
 
 {% code lineNumbers="true" %}
 ```
@@ -40,50 +40,50 @@ audit.log.signing.algorithm=HMAC
 ```
 {% endcode %}
 
-3\. Step 3: Set `egov.persist.yml.repo.path` this property to the location of persister configs.
+**Step 3:** Set `egov.persist.yml.repo.path` this property to the location of persister configs.
 
-4\. Step 4: Run the audit-service application along with persister service.
+**Step 4:** Run the audit-service application along with the persister service.
 
-**Definitions:**
+**Definitions**
 
 1. Config file - A YAML (xyz.yml) file which contains persister configuration for running audit service.
 2. API - A REST endpoint to post audit logs data.
 
-**Functionality:**
+### **Functionalities**
 
 1. When audit-service create API is hit, it will validate request size, keyValueMap and operationType.
 2. Upon successful validation, it will choose the configured signer and sign entity data.
 3. Once audit logs are signed and ready, it will send it to `audit-create` topic.
 4. Persister will listen on this topic and persist the audit logs.
 
-### Deployment Details <a href="#deployment-details" id="deployment-details"></a>
+## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
 1. Add the required keys for enabling audit service in persister configs.
-2. Deploy the latest version of Audit service and Persister service.
-3. Add Role-Action mapping for API’s.
+2. Deploy the latest version of the Audit service and Persister service.
+3. Add Role-Action mapping for APIs.
 
-### Integration <a href="#integration" id="integration"></a>
+## Integration Details <a href="#integration" id="integration"></a>
 
-#### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
+### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
 
 The audit service is used to push signed data for tracking each and every create/modify/delete operation done on database entities.
 
-#### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
+### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
 
-* Can be used to have tamper proof audit logs for all database transactions.
-* Replaying events in chronological order will lead to current state of entity in the database.
+* Can be used to have tamper-proof audit logs for all database transactions.
+* Replaying events in chronological order will lead to the current state of the entity in the database.
 
-#### Steps to Integration <a href="#steps-to-integration" id="steps-to-integration"></a>
+### Integration Steps <a href="#steps-to-integration" id="steps-to-integration"></a>
 
-1. To integrate, host of audit-service module should be overwritten in helm chart.
+1. To integrate, the host of the audit-service module should be overwritten in the helm chart.
 2. `audit-service/log/v1/_create` should be added as the create endpoint for the config added.
 3. `audit-service/log/v1/_search` should be added as the search endpoint for the config added.
 
-### API Details <a href="#api-details" id="api-details"></a>
+## API Details <a href="#api-details" id="api-details"></a>
 
-**1. URI**: The format of the API to be used to create audit logs using audit-service is as follows:  `audit-service/log/v1/_create`
+**1. URI**: The format of the API to be used to create audit logs using the audit service is as follows:  `audit-service/log/v1/_create`
 
-**Body**: Body consists of 2 parts: RequestInfo and AuditLogs.
+**Body**: The body consists of 2 parts: RequestInfo and AuditLogs.
 
 Sample Request Body -
 
@@ -162,7 +162,7 @@ Sample Request Body -
 
 **2.** **URI**: The format of the API to be used to search audit logs using audit-service is as follows:  `audit-service/log/v1/_search`
 
-**Body**: Body consists RequestInfo and search criteria is passed as query params.
+**Body**: The body consists RequestInfo and search criteria is passed as query params.
 
 Sample curl for search -
 
@@ -183,8 +183,4 @@ curl --location --request POST 'https://dev.digit.org/audit-service/log/v1/_sear
 }'
 ```
 
-
-
-&#x20;
-
-### Postman Collection - [Audit Service Postman Collection](https://www.getpostman.com/collections/27d92894fa32f72b83f5) <a href="#postman-collection-audit-service-postman-collection" id="postman-collection-audit-service-postman-collection"></a>
+#### Postman Collection - [Audit Service Postman Collection](https://www.getpostman.com/collections/27d92894fa32f72b83f5) <a href="#postman-collection-audit-service-postman-collection" id="postman-collection-audit-service-postman-collection"></a>

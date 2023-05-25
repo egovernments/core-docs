@@ -1,10 +1,10 @@
 # Revenue Maximisation
 
-**Druid digit**
+**Druid DIGIT**
 
 [Apache Druid](https://druid-qa.ifix.org.in/unified-console.html#load-data)
 
-**Metabase digit**
+**Metabase DIGIT**
 
 [https://metabase-qa.ifix.org.in/](https://metabase-qa.ifix.org.in/)
 
@@ -12,9 +12,7 @@
 
 eGov@4321
 
-**Code base:**
-
-[utilities/egov-revenue-maximization at develop · pmidc-digit/utilities](https://github.com/pmidc-digit/utilities/tree/develop/egov-revenue-maximization)
+**Code base:** [utilities/egov-revenue-maximization at develop · pmidc-digit/utilities](https://github.com/pmidc-digit/utilities/tree/develop/egov-revenue-maximization)
 
 The command for executing the DAG:
 

@@ -4,7 +4,7 @@
 
 [Application Security Checklist](security-checklist/)
 
-[Security Guidelines ](security-checklist/security-guidelines.md)
+[Security Guidelines ](security-checklist/security-guidelines-handbook.md)
 
 [Performance Checklist](performance-checklist.md)
 
