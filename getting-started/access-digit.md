@@ -4,7 +4,7 @@ description: DIGIT demo environment
 
 # Access DIGIT
 
-Access DIGIT tool is an Open Demo Instance designed to provide you with first-hand experience of the DIGIT platform. Navigate the DIGIT platform, explore its various features, workflows and applications.
+Access DIGIT tool is an open demo instance designed to provide you with first-hand experience of the DIGIT platform. Navigate the DIGIT platform and explore its various features, workflows and applications.
 
 <details>
 
