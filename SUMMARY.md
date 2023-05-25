@@ -311,7 +311,7 @@
   * [OAuth2-Proxy Setup](guides/operations-guide/oauth2-proxy-setup.md)
   * [Jira Ticket Creation](guides/operations-guide/jira-ticket-creation.md)
 
-## Focus Areas
+## Reference  <a href="#focus-areas" id="focus-areas"></a>
 
 * [Setup Basics](focus-areas/setup-basics/README.md)
   * [Setup Requirements](focus-areas/setup-basics/setup-requirements/README.md)
@@ -369,6 +369,22 @@
     * [Privacy through API Gateway](focus-areas/privacy/privacy-design/privacy-through-api-gateway.md)
     * [Privacy through User Service](focus-areas/privacy/privacy-design/privacy-through-user-service.md)
   * [Consent Based Architecture](focus-areas/privacy/consent-based-architecture.md)
+* [DevOps](focus-areas/devops/README.md)
+  * [1. How DNS works](focus-areas/devops/1.-how-dns-works.md)
+  * [2. Load Balancer](focus-areas/devops/2.-load-balancer.md)
+  * [3. SSL/Cert-manager](focus-areas/devops/3.-ssl-cert-manager.md)
+  * [4.Ingress,WAF](focus-areas/devops/4.ingress-waf.md)
+  * [5.VPC](focus-areas/devops/5.vpc.md)
+  * [6.Subnets](focus-areas/devops/6.subnets.md)
+  * [7.EKS](focus-areas/devops/7.eks.md)
+  * [8.Worker Node Group](focus-areas/devops/8.worker-node-group.md)
+  * [9.RDS](focus-areas/devops/9.rds.md)
+  * [10.NAT](focus-areas/devops/10.nat.md)
+  * [11.Internet Gateway](focus-areas/devops/11.internet-gateway.md)
+  * [12.Block Storage (EBS Volumes)](focus-areas/devops/12.block-storage-ebs-volumes.md)
+  * [13.Object Storage (S3)](focus-areas/devops/13.object-storage-s3.md)
+  * [14. Telemetry](focus-areas/devops/14.-telemetry.md)
+* [Platform Orientation - Overview](focus-areas/platform-orientation-overview.md)
 
 ## Viewpoints
 
@@ -378,22 +394,3 @@
 ***
 
 * [Microservices and Low Code No Code](microservices-and-low-code-no-code.md)
-
-## Knowledge Base
-
-* [DevOps](knowledge-base/devops/README.md)
-  * [1. How DNS works](knowledge-base/devops/1.-how-dns-works.md)
-  * [2. Load Balancer](knowledge-base/devops/2.-load-balancer.md)
-  * [3. SSL/Cert-manager](knowledge-base/devops/3.-ssl-cert-manager.md)
-  * [4.Ingress,WAF](knowledge-base/devops/4.ingress-waf.md)
-  * [5.VPC](knowledge-base/devops/5.vpc.md)
-  * [6.Subnets](knowledge-base/devops/6.subnets.md)
-  * [7.EKS](knowledge-base/devops/7.eks.md)
-  * [8.Worker Node Group](knowledge-base/devops/8.worker-node-group.md)
-  * [9.RDS](knowledge-base/devops/9.rds.md)
-  * [10.NAT](knowledge-base/devops/10.nat.md)
-  * [11.Internet Gateway](knowledge-base/devops/11.internet-gateway.md)
-  * [12.Block Storage (EBS Volumes)](knowledge-base/devops/12.block-storage-ebs-volumes.md)
-  * [13.Object Storage (S3)](knowledge-base/devops/13.object-storage-s3.md)
-  * [14. Telemetry](knowledge-base/devops/14.-telemetry.md)
-* [Platform Orientation - Overview](knowledge-base/platform-orientation-overview.md)
