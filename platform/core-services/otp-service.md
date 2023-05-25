@@ -47,15 +47,15 @@ The egov-otp service is used to authenticate the user in the platform.
 3. `/otp/v1/_validate` should be added as the validate endpoint. The OTP configuration end point validates the OTP with respect to the mobile number.
 4. `/otp/v1/_search` should be added as the search endpoint. This API searches the mobile number and OTP using uuid - mapping uuid to OTP reference number.
 
-### Reference Docs <a href="#reference-docs" id="reference-docs"></a>
+## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
-#### Doc Links <a href="#doc-links" id="doc-links"></a>
+### Doc Links <a href="#doc-links" id="doc-links"></a>
 
 | Title                     | Link                                                                                                                                                                  |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | API Swagger Documentation | [Swagger Documentation](https://editor.swagger.io/?url=https://raw.githubusercontent.com/egovernments/DIGIT-OSS/doc-patch/core-services/docs/egov-otp-contract.yml#!) |
 
-## API Details <a href="#api-details" id="api-details"></a>
+### API Details <a href="#api-details" id="api-details"></a>
 
 `BasePath` /egov-otp/v1
 

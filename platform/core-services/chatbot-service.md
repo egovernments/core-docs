@@ -133,12 +133,12 @@ Receive the user-sent message and forward it to the chatbot core logic for furth
 
 * If the `media_type` parameter value is `text` then user input would be sent in the parameter `text`, in other cases where `media_type` have some other value ex:- image, location etc, the user input would be sent in a parameter `media_data`
 
-### Kafka Consumers <a href="#kafka-consumers" id="kafka-consumers"></a>
+#### Kafka Consumers <a href="#kafka-consumers" id="kafka-consumers"></a>
 
 * `update-pgr-service` : used in `update.pgr.service.topic` application property, the chatbot listens on this topic to listen for updates on PGR records and then to send notifications to users.
 * The service uses consumers for internal processing also between different stages.
 
-### Kafka Producers <a href="#kafka-producers" id="kafka-producers"></a>
+#### Kafka Producers <a href="#kafka-producers" id="kafka-producers"></a>
 
 * `send-message-localized` : chatbot sends data to this topic for telemetry indexing and for internal processing.
 * The service uses producers for internal processing also between different stages.

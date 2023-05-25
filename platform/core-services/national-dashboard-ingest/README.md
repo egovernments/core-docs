@@ -1,32 +1,30 @@
 # National Dashboard Ingest
 
-### &#x20;Overview <a href="#overview" id="overview"></a>
+## &#x20;Overview <a href="#overview" id="overview"></a>
 
-_The objective of national-dashboard-ingest service is listed as below._
+The objectives of the national dashboard-ingest service are listed below.
 
-1. To provide a one-stop framework for ingesting data regardless of data-source based on configuration.
-2. To create provision for ingest based on module-wise requirement which directly or indirectly require aggregated data ingestion functionality.
+1. To provide a one-stop framework for ingesting data regardless of a data source based on configuration.
+2. To create provision for ingest based on module-wise requirements which directly or indirectly require aggregated data ingestion functionality.
 
-### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
+## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
-1. Prior Knowledge of Java/J2EE.
-2. Prior Knowledge of SpringBoot.
-3. Prior Knowledge of PostgresSQL.
-4. Prior Knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
-5. Prior Knowledge of ElasticSearch.
+1. Prior knowledge of Java/J2EE.
+2. Prior knowledge of SpringBoot.
+3. Prior knowledge of PostgreSQL.
+4. Prior knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
+5. Prior knowledge of ElasticSearch.
 
-&#x20;
+## Setup & Key Functionalities <a href="#setup-and-key-functionalities" id="setup-and-key-functionalities"></a>
 
-### Setup And Key Functionalities <a href="#setup-and-key-functionalities" id="setup-and-key-functionalities"></a>
+### **Setup**
 
-**Setup:**
-
-1. Step 1: Define the index name for the module as per your requirement in `module.index.mapping` key present in the configuration here - [DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L364) .
-2. Step 2: Define the allowed metrics for the module as per your requirement in `module.fields.mapping` key present in the configuration here - [DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L366)
-3. Step 3: Define the allowed group-by fields for the module as per your requirement in `module.allowed.groupby.fields.mapping` key present in the configuration here - [DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L368)
-4. Step 4: Define the master data index name as per your requirement in `master.data.index` key present in the configuration here - [DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L365)
-5. Step 5: Define the allowed metrics for master data index as per your requirement in `master.module.fields.mapping` key present in the configuration here - [https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L367](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L367)
-6. Step 6: Create kafka connectors for all the modules that have been configured. A sample request for creating trade license national dashboard kafka connector is as follows -
+1. **Step 1:** Define the index name for the module as per your requirement in `module.index.mapping` key present in the configuration here - [DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L364) .
+2. **Step 2:** Define the allowed metrics for the module as per your requirement in `module.fields.mapping` key present in the configuration here - [DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L366)
+3. **Step 3:** Define the allowed group-by fields for the module as per your requirement in `module.allowed.groupby.fields.mapping` key present in the configuration here - [DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L368)
+4. **Step 4:** Define the master data index name as per your requirement in `master.data.index` key present in the configuration here - [DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L365)
+5. **Step 5:** Define the allowed metrics for the master data index as per your requirement in `master.module.fields.mapping` key present in the configuration here - [https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L367](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L367)
+6. **Step 6:** Create Kafka connectors for all the modules that have been configured. A sample request for creating a trade license national dashboard Kafka connector is as follows -
 
 {% code lineNumbers="true" %}
 ```
@@ -60,52 +58,50 @@ curl --location --request POST 'http://kafka-connect.kafka-cluster:8083/connecto
 ```
 {% endcode %}
 
-7\. Step 7: Run the national-dashboard-ingest application along with national-dashboard-ingest-kafka-pipeline.
+7\. **Step 7:** Run the national-dashboard-ingest application along with the national-dashboard-ingest-kafka-pipeline.
 
-
-
-**Definitions:**
+### **Definitions**
 
 1. Config file - A YAML (xyz.yml) file which contains configuration for running national dashboard ingest.
 2. API - A REST endpoint to post data based on the configuration.
 
-**Functionality:**
+### **Functionalities**
 
-1. When national dashboard ingest metrics API is hit, all the data payload lookup keys are first checked against the db to determine whether they already exist or not. The db table currently being used for storing lookup keys is `nss-ingest-data`.
+1. When the national dashboard ingests metrics API is hit, all the data payload lookup keys are first checked against the db to determine whether they already exist or not. The db table currently being used for storing lookup keys is `nss-ingest-data`.
 2. If the record for a given date and area details is not present, the payload is then flattened and pushed to `nss-ingest-keydata` topic.
-3. National dashboard ingest kafka pipeline consumer listens on `nss-ingest-keydata` topic and according to the module to which the data belongs to, pushes it to the respective topic defined in the `module.index.mapping` key.
-4. Once the national dashboard ingest kafka pipeline pushes data to the respective topic, a kafka-connector then takes the flattened records from that topic and ingests to ElasticSearch.
+3. National dashboard ingest Kafka pipeline consumer listens on `nss-ingest-keydata` topic and according to the module to which the data belongs, pushes it to the respective topic defined in the `module.index.mapping` key.
+4. Once the national dashboard ingests the Kafka pipeline and pushes data to the respective topic, a Kafka connector then takes the flattened records from that topic and ingests into ElasticSearch.
 
-### Deployment Details <a href="#deployment-details" id="deployment-details"></a>
+## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
 1. Add configs for different modules required for National Dashboard Ingest Service and National Dashboard Kafka Pipeline service.
-2. Deploy the latest version of National Dashboard Ingest and National dashboard kafka pipeline service.
-3. Add Role-Action mapping for API’s.
+2. Deploy the latest version of National Dashboard Ingest and National dashboard Kafka pipeline service.
+3. Add role-action mapping for APIs.
 
-### Integration <a href="#integration" id="integration"></a>
+## Integration Details <a href="#integration" id="integration"></a>
 
-#### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
+### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
 
 The national dashboard service is used to push aggregated data present in systems and persisting them onto elasticsearch on top of which dashboards can be built for visualizing and analyzing data.
 
-#### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
+### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
 
 * Can perform service-specific business logic without impacting the other module.
-* In the future, if we want to expose the application to citizen then it can be done easily.
+* In the future, if we want to expose the application to citizens then it can be done easily.
 
-#### Steps to Integration <a href="#steps-to-integration" id="steps-to-integration"></a>
+### Integration Steps <a href="#steps-to-integration" id="steps-to-integration"></a>
 
-1. To integrate, host of national-dashboard-ingest-service module should be overwritten in helm chart.
+1. To integrate, the host of the national-dashboard-ingest-service module should be overwritten in the helm chart.
 2. `national-dashboard/metric/_ingest` should be added as the search endpoint for the config added.
 3. `national-dashboard/masterdata/_ingest` should be added as the search endpoint for the config added.
 
-### API Details <a href="#api-details" id="api-details"></a>
+## API Details <a href="#api-details" id="api-details"></a>
 
 **URI**: The format of the ingest API to be used to ingest data using national-dashboard-ingest is as follows:  `national-dashboard/metric/_ingest`
 
-**Body**: Body consists of 2 parts: RequestInfo and Data. Data is where the aggregated data to be ingested resides. The keys given under metrics object here are metrics provided in `module.fields.mapping` present in the configuration here - [<img src="https://github.com/fluidicon.png" alt="" data-size="line">DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L366)
+**Body**: The body consists of 2 parts: RequestInfo and Data. Data is where the aggregated data to be ingested resides. The keys given under the metrics object here are metrics provided in `module.fields.mapping` present in the configuration here - [<img src="https://github.com/fluidicon.png" alt="" data-size="line">DIGIT-DevOps/qa.yaml at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/qa.yaml#L366)
 
-Example Ingest Request Body -
+Example ingest request body -
 
 {% code lineNumbers="true" %}
 ```
@@ -341,11 +337,11 @@ Example Ingest Request Body -
 ```
 {% endcode %}
 
-### Module-wise Index Properties and Ingest Curls <a href="#module-wise-index-properties-and-ingest-curls" id="module-wise-index-properties-and-ingest-curls"></a>
+## Module-wise Index Properties & Ingest Curls <a href="#module-wise-index-properties-and-ingest-curls" id="module-wise-index-properties-and-ingest-curls"></a>
 
-The steps required for creation of index and adding the index mapping for the same can be found here - [National Dashboard: Steps for Index Creation](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2089680915) .
+The steps required for the creation of the index and adding the index mapping for the same can be found here - [National Dashboard: Steps for Index Creation](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2089680915).
 
-The following section contains module-wise index name, index mapping and ingest curls for ingesting data to national dashboard indexes.
+The following section contains module-wise index names, index mapping and ingest curls for ingesting data to national dashboard indexes.
 
 ### 1. Property Tax -  <a href="#1.-property-tax" id="1.-property-tax"></a>
 

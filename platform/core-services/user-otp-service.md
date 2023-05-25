@@ -41,11 +41,9 @@ User-OTP service handles the OTP for user registration, user login and password 
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
-#### Doc Links <a href="#doc-links" id="doc-links"></a>
+### Doc Links <a href="#doc-links" id="doc-links"></a>
 
-| Title                  | Link                                                                              |
-| ---------------------- | --------------------------------------------------------------------------------- |
-| API Postman Collection | [Postman Collection](https://www.getpostman.com/collections/5a7475c3ec5ad9b06927) |
+<table><thead><tr><th width="256">Title </th><th>Link</th></tr></thead><tbody><tr><td>API Postman Collection</td><td><a href="https://www.getpostman.com/collections/5a7475c3ec5ad9b06927">Postman Collection</a></td></tr></tbody></table>
 
 ### API Details
 
@@ -57,14 +55,9 @@ a) `POST /_send`
 
 This method sends the OTP to a user via sms or email based on the below parameters -
 
-| Input Field    | Description                                | Mandatory | Data Type |
-| -------------- | ------------------------------------------ | --------- | --------- |
-| `tenantId`     | Unique id for a tenant.                    | Yes       | String    |
-| `mobileNumber` | Mobile number of the user                  | Yes       | String    |
-| `type`         | OTP type ex: login/register/password reset | Yes       | String    |
-| `userType`     | Type of user ex: Citizen/Employee          | No        | String    |
+<table><thead><tr><th width="172">Input Field</th><th width="184">Description</th><th width="158">Mandatory</th><th width="227">Data Type</th></tr></thead><tbody><tr><td><code>tenantId</code></td><td>Unique id for a tenant.</td><td>Yes</td><td>String</td></tr><tr><td><code>mobileNumber</code></td><td>Mobile number of the user</td><td>Yes</td><td>String</td></tr><tr><td><code>type</code></td><td>OTP type ex: login/register/password reset</td><td>Yes</td><td>String</td></tr><tr><td><code>userType</code></td><td>Type of user ex: Citizen/Employee</td><td>No</td><td>String</td></tr></tbody></table>
 
-### Producers <a href="#producers" id="producers"></a>
+#### Producers <a href="#producers" id="producers"></a>
 
 * Following are the Producer topic.
   * `egov.core.notification.sms.otp` :- This topic is used to send OTP to user mobile number.
