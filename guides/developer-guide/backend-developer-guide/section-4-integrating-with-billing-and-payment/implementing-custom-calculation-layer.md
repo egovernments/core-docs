@@ -2,9 +2,9 @@
 description: Calculating costs for a service and raising demand for bill generation
 ---
 
-# Implementing custom calculation layer
+# Implementing Custom Calculation Layer
 
-#### **Calculation**&#x20;
+## **Calculation**&#x20;
 
 The calculation class will contain the calculation logic for given service delivery.  This is very domain specific and cannot be generalised. Based on the application submitted, the calculator class will calculate the tax/charges and call billing service to generate demand.&#x20;
 
@@ -29,5 +29,3 @@ public class CalculationService {
 }
 
 ```
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

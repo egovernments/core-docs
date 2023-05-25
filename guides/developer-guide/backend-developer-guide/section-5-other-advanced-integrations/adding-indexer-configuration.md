@@ -1,6 +1,8 @@
 # Adding Indexer Configuration
 
-Indexer is designed to perform all the indexing tasks of the digit platform. The service reads records posted on specific Kafka topics and picks the corresponding index configuration from the yaml file provided by the respective module configuration. Configurations are yaml based. Detailed guide to create indexer configs are mentioned in the following document - [Indexer Configuration Guide](../../../../platform/api-specifications/indexer.md) .
+## Overview
+
+The indexer is designed to perform all the indexing tasks of the DIGIT platform. The service reads records posted on specific Kafka topics and picks the corresponding index configuration from the yaml file provided by the respective module configuration. Configurations are yaml based. A detailed guide to creating indexer configs is mentioned in the following document - [Indexer Configuration Guide](../../../../platform/api-specifications/indexer.md).
 
 For our guide, we will create a new file under `egov-indexer` in `configs` repo by the name of `digit-developer-guide.yml` and put the following content into it -
 
@@ -54,13 +56,13 @@ ServiceMaps:
                     outJsonPath: $.Data.history
 ```
 
-**Note: Below steps are for when you deploy your code to the DIGIT env, not for local development. You may choose to do his when you build and deploy.**&#x20;
+<mark style="color:orange;">**Note: Follow the steps below when the code is deployed to the DIGIT environment. These steps are not applicable for deployment in the local environment. You may choose to follow these when you build and deploy.**</mark>&#x20;
 
-#### Deployment of indexer configuration
+### &#x20;Indexer Configuration Deployment
 
 Go to your fork of the DIGIT-DevOps repository. Under the `deploy-as-code/helm/environments` directory, find the deployment helm chart that was used to deploy DIGIT. &#x20;
 
-In the deployment helm chart (which was used to setup the DIGIT environment), find "egov-indexer". Find the "egov-indexer-yaml-repo-path" property and add the path to your new indexer file here. The code block is shown below for reference:
+In the deployment helm chart (which was used to set up the DIGIT environment), find "egov-indexer". Find the "egov-indexer-yaml-repo-path" property and add the path to your new indexer file here. The code block is shown below for reference:
 
 ```
 egov-indexer:
@@ -77,5 +79,3 @@ egov-indexer:
 ```
 
 Raise a PR to the DevOps branch which was forked/used to create the deployment. Once that is merged, restart the indexer service and make sure the cluster configs are propagated.
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

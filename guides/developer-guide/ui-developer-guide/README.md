@@ -18,7 +18,7 @@ This guide offers a systematic view of how to create the application screens on 
 
 [Run Sample Module ](https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration)- Once you are done with the setup, run the sample module provided in this guide. Test run the module and deploy it using CI/CD to your development environment.
 
-[![](https://github.githubassets.com/favicon.ico)https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration - Connect to preview](https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration)
+[<img src="https://github.githubassets.com/favicon.ico" alt="" data-size="line">https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration - Connect to preview](https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration)
 
 
 

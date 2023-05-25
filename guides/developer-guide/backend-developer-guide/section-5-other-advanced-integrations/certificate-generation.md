@@ -1053,13 +1053,13 @@ curl --location --request POST 'http://localhost:8081/pdf-service/v1/_createnosa
 }'
 ```
 
-**Note: Below steps are for when you deploy your code to the DIGIT env, not for local development. You may choose to do his when you build and deploy.**&#x20;
+<mark style="color:orange;">**Note: Follow the steps below when the code is deployed to the DIGIT environment. These steps are not applicable for deployment in the local environment. You may choose to follow these when you build and deploy.**</mark>&#x20;
 
-#### Deployment of PDF service
+### Deploy PDF Service
 
 Go to your fork of the DIGIT-DevOps repository. Under the `deploy-as-code/helm/environments` directory, find the deployment helm chart that was used to deploy DIGIT. &#x20;
 
-In the deployment helm chart (which was used to setup the DIGIT environment), find "pdf-service". Find the `"data-config-urls"` property and add the path to your new PDF config file here. For this module, we have added `file:///work-dir/configs/pdf-service/data-config/digit-developer-guide.json` to the end of the `data-config-urls`. The code block is shown below for reference:
+In the deployment helm chart (which was used to set up the DIGIT environment), find "pdf-service". Find the `"data-config-urls"` property and add the path to your new PDF config file here. For this module, we have added `file:///work-dir/configs/pdf-service/data-config/digit-developer-guide.json` to the end of the `data-config-urls`. The code block is shown below for reference:
 
 ```yaml
 pdf-service:
@@ -1074,5 +1074,3 @@ pdf-service:
 Raise a PR for this to the appropriate branch of DevOps which was forked/used to create the deployment.
 
 Once that is merged, restart the PDF service in the k8s cluster. It will pick up the latest config from this file above.
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

@@ -2,7 +2,7 @@
 
 **Overview:** Methods in the service layer, upon performing all the business logic, call methods in the repository layer to persist or lookup data i.e. it interacts with the configured data store. For executing the queries, JdbcTemplate class is used. JdbcTemplate takes care of the creation and release of resources such as creating and closing the connection etc. All database operations namely insert, update, search and delete can be performed on the database using methods of JdbcTemplate class.
 
-**Process Flow:** On DIGITthe create and update operations are handled asynchronously.&#x20;
+**Process Flow:** On DIGIT the create and update operations are handled asynchronously.&#x20;
 
 The persister service listens on the topic to which service applications are pushed for insertion and updation. Persister then takes care of executing insert and update operations on the database without clogging the application’s threads.
 

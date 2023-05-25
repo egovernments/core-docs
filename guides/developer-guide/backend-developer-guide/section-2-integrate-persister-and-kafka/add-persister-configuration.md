@@ -188,7 +188,7 @@ In the deployment helm chart (which was used to set up the DIGIT environment), f
 
 In the snippet below, `file:///work-dir/configs/egov-persister/birth-module-developer-guide.yml`
 
-{% code overflow="wrap" %}
+{% code overflow="wrap" lineNumbers="true" %}
 ```yaml
 egov-persister:
   replicas: 6

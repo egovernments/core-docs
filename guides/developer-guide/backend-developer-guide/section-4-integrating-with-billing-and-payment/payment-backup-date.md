@@ -1,4 +1,4 @@
-# Payment Backupdate
+# Payment Backup Date
 
 Once payment is done the application status has to be updated. Since we have a microservice architecture the two services can communicate with each other either through API calls or using message queues(kafka in our case). To avoid any service specific code in collection service we use the second approach to notify the service of payment for its application. Whenever a payment is done the collection service will publish the payment details on a kafka topic. Any microservice which wants to get notified when payments are done can subscribe to this topic. Once the service consumes the payment message it will check if the payment is done for its service by checking the businessService code. If it is done for the given service it will update the application status to PAID or will trigger workflow action PAY depending on the use case.
 
@@ -670,5 +670,3 @@ public class BillAccountDetail {
 }
 
 ```
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
