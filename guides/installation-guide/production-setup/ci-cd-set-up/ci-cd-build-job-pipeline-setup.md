@@ -61,15 +61,15 @@ config:
     image-name: egov-test-db
 ```
 
-**Note -** **If a new repository is created then the build-config.yml is created under the build folder and the config values are added to it.**
+<mark style="color:red;">**Note -**</mark> <mark style="color:red;">**If a new repository is created then the build-config.yml is created under the build folder and the config values are added to it.**</mark>
 
-**The git repository URL is then added to the Job Builder parameters**
+<mark style="color:red;">**The git repository URL is then added to the Job Builder parameters**</mark>
 
 When the Jenkins Job => job builder is executed, the CI Pipeline gets created automatically based on the above details in build-config.yml. Eg: **egov-test** job is created in the **builds/DIGIT-OSS/core-services** folder in Jenkins since the “build-config is edited under core-services” And it should be the “master” branch. Once the pipeline job is created, it can be executed for any feature branch with build parameters - specifying the branch to be built (master or feature branch).
 
 As a result of the pipeline execution, the respective app/service docker image is built and pushed to the Docker repository.
 
-**On repo provide read-only access to GitHub users (created while ci/cd deployment )**
+<mark style="color:red;">**On repo provide read-only access to GitHub users (created while ci/cd deployment)**</mark>
 
 ## **Continuous Integration (CI)** <a href="#continuous-integration-ci" id="continuous-integration-ci"></a>
 

@@ -69,11 +69,11 @@ The following is the resource graph that we are going to provision using terrafo
 * VPCs (Private networks)
 * Users to access, deploy and read-only
 
-### **Resource Graph In** Terraform Script <a href="#set-up-and-initialize-your-terraform-workspace" id="set-up-and-initialize-your-terraform-workspace"></a>
+### Terraform Script **Resource Graph** <a href="#set-up-and-initialize-your-terraform-workspace" id="set-up-and-initialize-your-terraform-workspace"></a>
 
-* Ideally, one would write the terraform script from the scratch using this [doc](https://learn.hashicorp.com/collections/terraform/modules).
+* Ideally, one would write the terraform script from scratch using this [doc](https://learn.hashicorp.com/collections/terraform/modules).
 * Here we have already written the terraform script that provisions the production-grade DIGIT Infra and can be customized with the specified configuration.
-* Clone the [DIGIT-DevOps GitHub repo](https://github.com/egovernments/DIGIT-DevOps/tree/release). The terraform script to provision EKS cluster is available in this repo. The structure of the files is given below.
+* Clone the [DIGIT-DevOps GitHub repo](https://github.com/egovernments/DIGIT-DevOps/tree/release). The terraform script to provision the EKS cluster is available in this repo. The structure of the files is given below.
 
 ```
 git clone --branch release https://github.com/egovernments/DIGIT-DevOps.git
@@ -106,31 +106,31 @@ Here, you will find the **main.tf** under each of the modules that have the prov
 
 **Example:**
 
-* **VPC Resources:**
-  * VPC
-  * Subnets
-  * Internet Gateway
-  * Route Table
-* **EKS Cluster Resources:**
-  * IAM Role to allow EKS service to manage other AWS services
-  * EC2 Security Group to allow networking traffic with the EKS cluster
-  * EKS Cluster
-* **EKS Worker Nodes Resources:**
-  * IAM role allowing Kubernetes actions to access other AWS services
-  * EC2 Security Group to allow networking traffic
-  * Data source to fetch the latest EKS worker AMI
-  * AutoScaling launch configuration to configure worker instances
-  * AutoScaling group to launch worker instances
-* **Storage Module**
-  * Configuration in this directory creates EBS volume and attaches it together.
+1. **VPC Resources -**&#x20;
+   * VPC
+   * Subnets
+   * Internet Gateway
+   * Route Table
+2. **EKS Cluster Resources -**
+   * IAM Role to allow EKS service to manage other AWS services
+   * EC2 Security Group to allow networking traffic with the EKS cluster
+   * EKS Cluster
+3. **EKS Worker Nodes Resources -**
+   * IAM role allowing Kubernetes actions to access other AWS services
+   * EC2 Security Group to allow networking traffic
+   * Data source to fetch the latest EKS worker AMI
+   * AutoScaling launch configuration to configure worker instances
+   * AutoScaling group to launch worker instances
+4. **Storage Module -**
+   * Configuration in this directory creates EBS volume and attaches it together.
 
 The following main.tf with create s3 bucket to store all the states of the execution to keep track.
 
-* ```
-  DIGIT-DevOps/Infra-as-code/terraform/egov-cicd/remote-state
+```
+//DIGIT-DevOps/Infra-as-code/terraform/egov-cicd/remote-state
 
-  [**main.tf**](https://github.com/egovernments/DIGIT-DevOps/blob/release/infra-as-code/terraform/egov-cicd/remote-state/main.tf)\*\*\*\*
-  ```
+[**main.tf**](https://github.com/egovernments/DIGIT-DevOps/blob/release/infra-as-code/terraform/egov-cicd/remote-state/main.tf)\*\*\*\*
+```
 
 ```
 provider "aws" {
@@ -338,7 +338,7 @@ After successful execution, the following resources get created and can be verif
 
 Use the URL [https://keybase.io/](https://keybase.io/) to [create your own PGP key](https://pgpkeygen.com/). This creates both public and private keys on the machine, upload the public key into the [keybase](https://keybase.io/) account that you have just created, give a name to it and ensure that you mention that in your terraform. This allows you to encrypt sensitive information.
 
-* Example: Create user keybase. This is "_egovterraform_" in the case of eGov. Upload the public key here - [https://keybase.io/egovterraform/pgp\_keys.asc](https://keybase.io/egovterraform/pgp\_keys.asc)
+* Example: Create a user keybase. This is "_egovterraform_" in the case of eGov. Upload the public key here - [https://keybase.io/egovterraform/pgp\_keys.asc](https://keybase.io/egovterraform/pgp\_keys.asc)
 * Use this [portal](https://8gwifi.org/pgpencdec.jsp) to Decrypt the secret key. To decrypt the PGP message, upload the PGP Message, PGP Private Key and Passphrase.
 * **EKS cluster:** with master(s) & worker node(s).
 * **Storage(s):** for es-master, es-data-v1, es-master-infra, es-data-infra-v1, zookeeper, kafka, kafka-infra.
@@ -363,7 +363,7 @@ NAME                                             STATUS AGE   VERSION           
 ip-192-168-xx-1.ap-south-1.compute.internal   Ready  45d   v1.18.10-eks-bac369   Amazon Linux 2   
 ```
 
-Whola! All set and now you can **Deploy Jenkins**...
+Whola! All set and now you can **Deploy Jenkins**
 
 ## Jenkins Deployment
 

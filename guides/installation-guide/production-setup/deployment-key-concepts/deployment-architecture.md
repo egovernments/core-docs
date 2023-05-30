@@ -1,5 +1,14 @@
 # Deployment Architecture
 
+On this page:
+
+* [Sample Kubernetes architecture](deployment-architecture.md#sample-kubernetes-architecture)
+* [DIGIT deployment architecture](deployment-architecture.md#digit-deployment-architecture)
+* [CI/CD flow](deployment-architecture.md#ci-cd-flow)
+* [Deployment scripts](deployment-architecture.md#deployment-scripts)
+
+## Overview
+
 This section contains architectural details about DIGIT deployment. It discusses the various activities in a sequence of steps to provision required infra and deploy DIGIT.
 
 ## Sample Kubernetes Architecture

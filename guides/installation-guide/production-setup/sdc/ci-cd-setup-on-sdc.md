@@ -29,8 +29,8 @@ Kubespray is a composition of [Ansible](https://docs.ansible.com/) playbooks, [i
 4. [SOPS](https://github.com/mozilla/sops#updatekeys-command)
 5. [GitHub user](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 6. [Docker Hub account](https://hub.docker.com/signup)
-7. Install [**kubectl**](https://kubernetes.io/docs/tasks/tools/) on your local machine to interact with the Kubernetes cluster.
-8. Install [**Helm**](https://helm.sh/docs/intro/install/) to help package the services along with the configurations, environment, secrets, etc into a [**Kubernetes manifests**](https://devspace.cloud/docs/cli/deployment/kubernetes-manifests/what-are-manifests)**.**
+7. Install [kubectl](https://kubernetes.io/docs/tasks/tools/) on your local machine to interact with the Kubernetes cluster.
+8. Install [Helm](https://helm.sh/docs/intro/install/) to help package the services along with the configurations, environment, secrets, etc into [Kubernetes manifests](https://devspace.cloud/docs/cli/deployment/kubernetes-manifests/what-are-manifests).
 
 ### Hardware <a href="#hardware" id="hardware"></a>
 
@@ -40,7 +40,7 @@ Kubespray is a composition of [Ansible](https://docs.ansible.com/) playbooks, [i
 * one machine which acts as a worker node. (CPU: 8Core , Memory: 16Gb)
 * ISCSI volumes for persistence volume. (number of quantity: 2 )
   * kaniko-cache-claim:- 10Gb
-  * jenkins home:- 100Gb
+  * Jenkins home:- 100Gb
 
 ### **Software**&#x20;
 
@@ -60,7 +60,7 @@ Run and follow instructions on all nodes.
 
 ### Install Python <a href="#install-python" id="install-python"></a>
 
-Ansible needs python to be installed on all the machines**.**
+Ansible needs Python to be installed on all the machines**.**
 
 `apt-get update && apt-get install python3-pip -y`
 
@@ -163,10 +163,9 @@ loadbalancer_apiserver:
   port: 443
 ```
 
-* Deploy Kubespray with Ansible Playbook - run the playbook as ubuntu
-  * The option `--become` is required, for example writing SSL keys in /etc/,
-  * installing packages and interacting with various system daemons.
-  * **Note**: Without --become the playbook will fail to run!
+* Deploy Kubespray with Ansible Playbook - run the playbook as Ubuntu
+  * The option `--become` is required, for example writing SSL keys in /etc/, installing packages and interacting with various system daemons.
+  * <mark style="color:red;">**Note: Without**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**`--become`**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**- the playbook will fail to run!**</mark>
 
 ```
 ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=ubuntu cluster.yml
@@ -174,7 +173,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=ubunt
 
 Kubernetes cluster will be created with three masters and four nodes with the above process.
 
-Kube config will be generated in a .Kubefolder. The Cluster can be accessible via kubeconfig.
+Kube config will be generated in a .Kubefolder. The cluster can be accessible via kubeconfig.
 
 #### **HA-Proxy**
 
