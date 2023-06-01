@@ -20,7 +20,7 @@ Drawing manual maps list of layers used in marking for a feature. [Here](https:/
 
 Drawing details provide additional details required for marking or drawing a part or full feature.
 
-Drawing details can be understood and prepared using the column “Parameters /Additional details to be addressed in drawings “ column from this [sheet](https://docs.google.com/spreadsheets/d/1PyVulry1\_A\_\_XPo0ZBqGcySmqDjpUOHrfx-wYKq6lsY/edit#gid=1060099246).&#x20;
+Drawing details can be understood and prepared using the column “Parameters /Additional details to be addressed in drawings “ column from this [sheet](https://docs.google.com/spreadsheets/d/1dloyJRCYfEBfed-Nowx-d9t2pKnOeuTm6Vdl4OGy-II/edit#gid=484175232).&#x20;
 
 ### Data Collection Template <a href="#data-collection-template" id="data-collection-template"></a>
 
