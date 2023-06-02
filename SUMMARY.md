@@ -221,6 +221,7 @@
   * [UI Developer Guide](guides/developer-guide/ui-developer-guide/README.md)
     * [UI Development Pre-requisites](guides/developer-guide/ui-developer-guide/ui-development-pre-requisites.md)
     * [Local Development Setup](guides/developer-guide/ui-developer-guide/local-development-setup.md)
+    * [UI Configuration](guides/developer-guide/ui-developer-guide/ui-configuration.md)
     * [Citizen Module Setup](guides/developer-guide/ui-developer-guide/citizen-module-setup/README.md)
       * [Sample screenshots](guides/developer-guide/ui-developer-guide/citizen-module-setup/sample-screenshots.md)
       * [Project Structure](guides/developer-guide/ui-developer-guide/citizen-module-setup/project-structure.md)
