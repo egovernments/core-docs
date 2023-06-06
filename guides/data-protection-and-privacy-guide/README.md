@@ -83,7 +83,7 @@ DIGIT is designed to enable compliance with requirements under Indian law, as we
 * The requirement of a legitimate purpose is also met by the mandate of the local government or other government agency to provide that particular service.
 * The requirement of proportionality is generally met by only collecting or accessing such data as is necessary for providing that particular service. This is also in line with the global best practice of data minimisation.
 * The requirement for safeguards is generally met by the security and privacy measures, such as encryption and masking, described above; it is further met by implementing role-based access controls, which are aligned with the global best practice of differentiated access.&#x20;
-* The requirement for safeguards is further served by providing itemised notice, and by enabling any person to view what data of theirs has been collected/processed/shared (including the purpose for such collection/processing/sharing). Such provision of notice and visibility is further in line with global best practices of notice & user control. Such notice can only be provided in the context of a DIGIT implementation, and eGov provides a draft [privacy policy](https://docs.google.com/document/d/1TlGUZg5stbJPU5ZXUEiLM9LcBCkjmKjsjmEEPxsYCs4/edit?usp=sharing) to implementing entities.
+* The requirement for safeguards is further served by providing itemised notice, and by enabling any person to view what data of theirs has been collected/processed/shared (including the purpose for such collection/processing/sharing). Such provision of notice and visibility is further in line with global best practices of notice & user control. Such notice can only be provided in the context of a DIGIT implementation, and eGov provides a draft [privacy policy](privacy-policy-details.md) to implementing entities.
 * With respect to employees and pensioners, the requirements for legal basis, legitimate purpose, and proportionality are generally met by collecting, storing, processing, using, and sharing only such information as is relevant for assigning roles and administrative responsibilities, processing salaries or pensions, and completing any mandatory tax-related reporting.
 
 ## C. Who Handles Data In The DIGIT Lifecycle?
@@ -190,14 +190,14 @@ A program can be a delivery of any government service/s which the AA is mandated
 
 #### D.2.2 Stage 1 - Program kickoff&#x20;
 
-#### D.2.2.1 What happens at Stage 1-&#x20;
+#### D.2.2.1 What happens at Stage 1
 
 * &#x20;Publishing of the program charter and implementation plan.
 * &#x20;Master data collection kickoff in Pilot ULBs
 * Cloud Infrastructure is procured
 * Program branding is done (name, logo, tagline etc.)&#x20;
 
-#### D.2.2.2 Platform Owner’s Role at Stage 1 -
+#### D.2.2.2 Platform Owner’s Role at Stage 1&#x20;
 
 * Guide and review manpower, infra, and program governance structure. Provide a stable platform version.
 
@@ -223,7 +223,7 @@ A program can be a delivery of any government service/s which the AA is mandated
 
 ### D.2.3 Stage 2 - Solution Design
 
-#### D.2.3.1 What happens at Stage 2 -
+#### D.2.3.1 What happens at Stage 2&#x20;
 
 * Standardized ontologies (uniform terminology for easier understanding), processes and workflows are created.
 * Master data collected in the desired format.
