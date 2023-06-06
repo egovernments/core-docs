@@ -314,7 +314,7 @@
   * [Deployment Job Pipeline Setup](guides/operations-guide/deployment-job-pipeline-setup.md)
   * [OAuth2-Proxy Setup](guides/operations-guide/oauth2-proxy-setup.md)
   * [Jira Ticket Creation](guides/operations-guide/jira-ticket-creation.md)
-* [Data Protection & Privacy Guidelines](guides/data-protection-and-privacy-guidelines.md)
+* [Data Protection & Privacy Guide](guides/data-protection-and-privacy-guide.md)
 
 ## Reference  <a href="#focus-areas" id="focus-areas"></a>
 
