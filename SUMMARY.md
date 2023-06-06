@@ -125,9 +125,10 @@
     * [Training Resources](getting-started/training-and-certification/training-resources.md)
 * [Open Events](open-events.md)
 * [Roadmap](roadmap.md)
+* [Source Code](https://github.com/egovernments/DIGIT-OSS)
 * [Project Plan](https://github.com/orgs/egovernments/projects/2)
-* [Contribute](contribute.md)
 * [Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
+* [Contribute](contribute.md)
 
 ## Guides
 
@@ -391,12 +392,6 @@
   * [13.Object Storage (S3)](focus-areas/devops/13.object-storage-s3.md)
   * [14. Telemetry](focus-areas/devops/14.-telemetry.md)
 * [Platform Orientation - Overview](focus-areas/platform-orientation-overview.md)
-
-## Viewpoints
-
-* [Beneficiary Eligibility](viewpoints/beneficiary-eligibility.md)
-* [Government and Open Digital Platforms](viewpoints/government-and-open-digital-platforms.md)
-
-***
-
-* [Microservices and Low Code No Code](microservices-and-low-code-no-code.md)
+* [Beneficiary Eligibility](focus-areas/beneficiary-eligibility.md)
+* [Government and Open Digital Platforms](focus-areas/government-and-open-digital-platforms.md)
+* [Microservices and Low Code No Code](focus-areas/microservices-and-low-code-no-code.md)
