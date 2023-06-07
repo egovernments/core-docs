@@ -62,11 +62,11 @@ To enable the capabilities required to develop a good service, DIGIT provides a 
 
 ## Useful Links
 
-To install and start developing using DIGIT, visit the [Get Started](getting-started/) page.
+To install and start developing using DIGIT, visit the [Get Started](get-started/) page.
 
 The list of developer [Checklists/Guidelines](platform/checklists/) ensures that the services built using DIGIT are robust and easy to use.&#x20;
 
-Check out the platform [training resources](getting-started/training-and-certification/training-resources.md) page and access our multiple walk-through videos.
+Check out the platform [training resources](get-started/training-and-certification/training-resources.md) page and access our multiple walk-through videos.
 
 ## Contact Us
 
