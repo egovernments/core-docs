@@ -128,6 +128,9 @@
 * [Source Code](https://github.com/egovernments/DIGIT-OSS)
 * [Project Plan](https://github.com/orgs/egovernments/projects/2)
 * [Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
+* [Data Protection & Privacy Guide](data-protection-and-privacy-guide/README.md)
+  * [Privacy Policy - Details](data-protection-and-privacy-guide/privacy-policy-details.md)
+  * [Global Best Practices for Data Protection and Privacy](data-protection-and-privacy-guide/global-best-practices-for-data-protection-and-privacy.md)
 * [Contribute](contribute.md)
 
 ## Guides
@@ -315,8 +318,6 @@
   * [Deployment Job Pipeline Setup](guides/operations-guide/deployment-job-pipeline-setup.md)
   * [OAuth2-Proxy Setup](guides/operations-guide/oauth2-proxy-setup.md)
   * [Jira Ticket Creation](guides/operations-guide/jira-ticket-creation.md)
-* [Data Protection & Privacy Guide](guides/data-protection-and-privacy-guide/README.md)
-  * [Privacy Policy - Details](guides/data-protection-and-privacy-guide/privacy-policy-details.md)
 
 ## Reference  <a href="#focus-areas" id="focus-areas"></a>
 

@@ -186,7 +186,7 @@ A program can be a delivery of any government service/s which the AA is mandated
 
 **Technical**
 
-* Do not offer any service module unless it is not compliant with relevant data privacy and protection  (DPP) checks/standards and systems  (the reader may check the checklist in Appendix B of this [memo](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit) to refer for DPP compliance)
+* Do not offer any service module unless it is not compliant with relevant data privacy and protection  (DPP) checks/standards and systems  (the reader may check the checklist in Appendix B of this [memo](global-best-practices-for-data-protection-and-privacy.md) to refer for DPP compliance)
 
 #### D.2.2 Stage 1 - Program kickoff&#x20;
 
@@ -207,7 +207,7 @@ A program can be a delivery of any government service/s which the AA is mandated
 
 * Assist and encourage the AA team in setting a standardised data collection framework ( with DPP practices like minimum personal data collected, masked data to be maintained, collecting citizen consent before collecting data, create awareness on the legitimacy and requirement for data collected from citizens..)
 * Assist the AA and SI team in placing DPP principles and practices as a priority in the program charter
-* Onboarded implementation partner or SI  must comply with data principle practices enlisted [here](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit)
+* Onboarded implementation partner or SI  must comply with data principle practices enlisted [here](global-best-practices-for-data-protection-and-privacy.md)
 * Implementation kick-off workshop must include training in DPP practices ( minimum data collection, masking at field level, etc)
 * Encourage field-level ULB data collection team to collect the consent of citizens while collecting data and informing them on the purpose of their data being collected.
 
@@ -280,14 +280,14 @@ While standardizing processes and workflows, encourage the AA and SI teams to:
 
 **Operational**
 
-* Create user guides to maintain privacy as default ( For eg - the [checklist in this document ](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit)can be used as a user guide to understand compliance with privacy principles)
+* Create user guides to maintain privacy as default ( For eg - the [checklist in this document ](global-best-practices-for-data-protection-and-privacy.md)can be used as a user guide to understand compliance with privacy principles)
 
 **Advisory**
 
 * Ensure and advise for DPP-related privacy by default features to be installed in the software.
 * Guide in the protection of hardware from security threats
 * Ensure and assist the AA in making sure that all the security access and logins have been set up&#x20;
-* Advice the state to include data privacy and protection [checklist questions](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit) in the UAT phase&#x20;
+* Advice the state to include data privacy and protection [checklist questions](global-best-practices-for-data-protection-and-privacy.md) in the UAT phase&#x20;
 * Guide and assist the AA and SIs in creating anonymised testing data&#x20;
 * Guide the AA in setting up privacy-friendly UX such as creating options for citizens to provide active opt-ins, clearly separating between terms and conditions that are compulsory and those that are voluntary, and formulating or displaying meaningful privacy notices.
 
