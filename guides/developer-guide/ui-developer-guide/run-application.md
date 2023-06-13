@@ -1,50 +1,51 @@
 # Run Application
 
-Now that the application is built and deployed, it is time to run and test it in the local environment.
+## Overview
 
-### Configure Environment File - Citizen
+Once the Local setup is completed, we have to run the application locally, This document says how to run the digit-ui in a local machine
 
-To run the application in the local environment, add the `.env` file in the `example` folder -&#x20;
+### Step 1: Configure Environment File&#x20;
+
+To run the application in the local environment, add the `.env` file in the `example` folder -
+
+```
+frontend/micro-ui/web/micro-ui-internals/example
+```
+
+copy the below content and add to the .env file
 
 If the user is a citizen then we will configure the .env file as follows:-
 
-```properties
-SKIP_PREFLIGHT_CHECK=true
-REACT_APP_USER_TYPE=CITIZEN
-REACT_APP_EMPLOYEE_TOKEN=c835932f-2ad4-4d05-83d6-49e0b8c59f8a
-REACT_APP_CITIZEN_TOKEN=7cd58aae-30b3-41ed-a1b3-3417107a993c
-REACT_APP_PROXY_API=https://dev.companyname.org
-REACT_APP_PROXY_ASSETS=https://dev.companyname.org
-REACT_APP_GLOBAL=https://path/to/public/s3/bucket/globalConfigs.js
-REACT_APP_CENTRAL_GLOBAL=https://path/to/public/s3/bucket/statebglobalConfigs.js
-REACT_APP_QA_GLOBAL=https://path/to/public/s3/bucket/egov-dev-assets/globalConfigs.js
-REACT_APP_UAT_GLOBAL=https://path/to/public/s3/bucket/egov-uat-assets/globalConfigs.js
-REACT_APP_STATEB_GLOBAL=https://path/to/public/s3/bucket/statebglobalConfigs.js
-staging=https://staging.companyname.org
-```
-
-### Configure Environment File - Employee
-
-If the user is an employee then we configure the .env file as follows:-
-
-```properties
+```js-templates
 SKIP_PREFLIGHT_CHECK=true
 REACT_APP_USER_TYPE=EMPLOYEE
 REACT_APP_EMPLOYEE_TOKEN=c835932f-2ad4-4d05-83d6-49e0b8c59f8a
 REACT_APP_CITIZEN_TOKEN=7cd58aae-30b3-41ed-a1b3-3417107a993c
-REACT_APP_PROXY_API=https://dev.companyname.org
-REACT_APP_PROXY_ASSETS=https://dev.companyname.org
-REACT_APP_GLOBAL=https://path/to/public/s3/bucket/globalConfigs.js
-REACT_APP_CENTRAL_GLOBAL=https://path/to/public/s3/bucket/statebglobalConfigs.js
-REACT_APP_QA_GLOBAL=https://path/to/public/s3/bucket/egov-dev-assets/globalConfigs.js
-REACT_APP_UAT_GLOBAL=https://path/to/public/s3/bucket/egov-uat-assets/globalConfigs.js
-REACT_APP_STATEB_GLOBAL=https://path/to/public/s3/bucket/statebglobalConfigs.js
-staging=https://staging.companyname.org
-open Terminal in micro-UI-internals and run the following command.
+REACT_APP_PROXY_API=https://works-dev.digit.org
+REACT_APP_PROXY_ASSETS=https://works-dev.digit.org
+REACT_APP_GLOBAL=https://s3.ap-south-1.amazonaws.com/works-dev-asset/globalConfigsWorks.js
 ```
 
+To run the Application as citizen, then update the value of `REACT_APP_USER_TYPE=CITIZEN`
+
+To point the frontend to different environment Change the `REACT_APP_GLOBAL` ,add the GlobalConfig environment file of that environment
+
+To know more about global config visit [How to configure globalconfig](https://core.digit.org/guides/developer-guide/ui-developer-guide/ui-configuration#globalconfig).
+
+and update both `REACT_APP_PROXY_API` and `REACT_APP_PROXY_ASSETS` to that environment URL.
+
+### Step 2: Initialise and Run the Application
+
+To do a Yarn Initialisation, execute
+
 ```
-yarn start
+sudo yarn install
+```
+
+once the yarn initialization is successfully performed then execute,
+
+```
+sudo yarn run start
 ```
 
 Once you run the command, your application will start.

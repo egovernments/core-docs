@@ -10,7 +10,7 @@ This guide offers a systematic view of how to create the application screens on 
 
 **Developer code:** Download the UI code from the link here [Birth-Registration. ](https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration)
 
-[**List of Pre-requisites**](ui-development-pre-requisites.md) - Before starting with the UI development, know the list of technical requirements for frontend development on DIGIT UI.
+[**List of Pre-requisites**](digit-ui-development-pre-requisites.md) - Before starting with the UI development, know the list of technical requirements for frontend development on DIGIT UI.
 
 **Steps to follow:** The docs and resources below offer a step-by-step guide to UI development.
 

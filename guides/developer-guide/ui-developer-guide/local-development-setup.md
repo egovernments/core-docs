@@ -8,7 +8,14 @@
   * [Tailwind CSS](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 * [x] Install NodeJS **14.20.0**
 * [x] [Install Yarn ](https://code.visualstudio.com/download)version **1.22.19**
-* [x] Clone the [DIGIT-OSS](https://github.com/egovernments/DIGIT-OSS) repository locally from your organization's umbrella. This contains the frontend code under the frontend folder.
+* [x] **Install Python version** 2.7
+* [x] Clone the [DIGIT-OSS](https://github.com/egovernments/DIGIT-OSS/tree/digit-ui-impl) repository locally from your organization's umbrella. This contains the frontend code under the frontend folder.
+
+
+
+```
+cd frontend/micro-ui/web/micro-ui-internals
+```
 
 To learn how to install yarn on Linux, please follow [this guide](https://linuxhint.com/install\_yarn\_ubuntu/).&#x20;
 
