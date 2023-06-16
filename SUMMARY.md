@@ -223,6 +223,7 @@
     * [Section 7: Build & Deploy Instructions](guides/developer-guide/backend-developer-guide/section-7-build-and-deploy-instructions.md)
     * [Troubleshooting FAQs](guides/developer-guide/backend-developer-guide/troubleshooting-faqs.md)
   * [UI Developer Guide](guides/developer-guide/ui-developer-guide/README.md)
+    * [DIGIT-UI](guides/developer-guide/ui-developer-guide/digit-ui.md)
     * [DIGIT UI Development Pre-requisites](guides/developer-guide/ui-developer-guide/digit-ui-development-pre-requisites.md)
     * [UI Configuration (DevOps)](guides/developer-guide/ui-developer-guide/ui-configuration-devops.md)
     * [Local Development Setup](guides/developer-guide/ui-developer-guide/local-development-setup.md)

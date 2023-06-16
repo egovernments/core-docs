@@ -58,7 +58,7 @@ Refer to the [platform design principles ](platform/principles.md)that define DI
 
 To enable the capabilities required to develop a good service, DIGIT provides a set of reusable building blocks (microservices) listed below that adhere to the above principles. A developer can build any service or registry by reusing the DIGIT services. DIGIT also provides accelerators like DIGIT Web Dashboard that can be extended to develop citizen, employee and administrator dashboards. More details on each of the services are available on the [Platform Architecture](platform/architecture/service-architecture.md) page.&#x20;
 
-![DIGIT Services](<.gitbook/assets/image (99).png>)
+![DIGIT Services](<.gitbook/assets/image (99) (1).png>)
 
 ## Useful Links
 
