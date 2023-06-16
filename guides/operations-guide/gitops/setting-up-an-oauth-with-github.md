@@ -13,7 +13,7 @@ You can create and register an OAuth App under your personal account or under an
 * In the left sidebar, click **Developer settings**.
 * In the left sidebar, click **OAuth Apps**.
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (29) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Click **New OAuth App**.
 

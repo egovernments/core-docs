@@ -120,6 +120,8 @@
   * [Data Protection & Privacy Guide](platform/data-protection-and-privacy-guide/README.md)
     * [Privacy Policy - Details](platform/data-protection-and-privacy-guide/privacy-policy-details.md)
     * [Global Best Practices for Data Protection and Privacy](platform/data-protection-and-privacy-guide/global-best-practices-for-data-protection-and-privacy.md)
+* [UI Frameworks](ui-frameworks/README.md)
+  * [React UI Framework](ui-frameworks/react-ui-framework.md)
 * [Get Started](get-started/README.md)
   * [Install DIGIT](get-started/install-digit.md)
   * [Access DIGIT](get-started/access-digit.md)
