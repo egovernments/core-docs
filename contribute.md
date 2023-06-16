@@ -42,3 +42,5 @@ Listing down the list of challenges you can help solve -&#x20;
      * [x] Documentation is available here - [https://core.digit.org/platform/core-services/workflow-service](https://core.digit.org/platform/core-services/workflow-service)
 
 We will keep adding more items here. If you are interested or have any questions post them on our Discussion Board - [https://github.com/egovernments/Digit-Core/discussions](https://github.com/egovernments/Digit-Core/discussions).&#x20;
+
+Here's the link: [https://discord.gg/CA8BYFA6](https://discord.gg/CA8BYFA6) to our discord channel which has the latest updates and discussions on everything DIGIT - projects, events, new ideas etc.
