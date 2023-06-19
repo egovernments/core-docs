@@ -22,7 +22,7 @@ PII stands for personally identifiable information or is also interchangeably us
 
 #### What is a  personal data breach?
 
-A personal data breach means a breach of security leading to the accidental or unlawful destruction, loss, alteration, or unauthorised disclosure of, or access to, personal data. This includes breaches that are the result of both accidental and deliberate causes. It also means that a breach is more than just about losing personal data.&#x20;
+A personal data breach means a breach of security leading to the accidental or unlawful destruction, loss, alteration, or unauthorised disclosure of, or access to, personal data. This includes breaches that are the result of both accidental and deliberate causes. It also means that a breach is more than just about [losing personal data](#user-content-fn-1)[^1].&#x20;
 
 Example:
 
@@ -93,3 +93,7 @@ In any given implementation of DIGIT, the administering authority (local or stat
 
 The primary responsibility for ensuring compliance with legal obligations and best practices with respect to data security, data protection, and privacy is thus that of the administering authority. To the extent that any other party (including eGov Foundation) serves as an agent of the administering authority,  they are similarly considered responsible for ensuring such compliance, to the extent relevant to the tasks that they are performing. \
 \
+
+
+[^1]: We don’t have a per se law defining personal data breach yet, hence we can understand what it means in other jurisdictions like that of the UK or EU [Personal data breaches | ICO](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/personal-data-breaches/)
+

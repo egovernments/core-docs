@@ -1,6 +1,6 @@
 # Global Best Practices for Data Protection and Privacy
 
-## 1. **Introduction** <a href="#_146i834len05" id="_146i834len05"></a>
+## **Introduction** <a href="#_146i834len05" id="_146i834len05"></a>
 
 ### _**A. Why is this document needed?**_ <a href="#_h8nxdqmj4wa0" id="_h8nxdqmj4wa0"></a>
 
