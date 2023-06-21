@@ -12,7 +12,7 @@ Broadly, the frontend components can be categorized as followings:
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (23).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure>
 
 </div>
 
@@ -22,7 +22,7 @@ The first line contains the Architecture Component name or info, the second line
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (22).png" alt="" width="543"><figcaption><p>module naming convention</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="543"><figcaption><p>module naming convention</p></figcaption></figure>
 
 </div>
 
@@ -104,7 +104,7 @@ Component Library will have a set of all the required components defined in them
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-16 at 12.06.23 PM (2).png" alt="" width="540"><figcaption><p>react-components</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-16 at 12.06.23 PM.png" alt="" width="540"><figcaption><p>react-components</p></figcaption></figure>
 
 </div>
 
@@ -118,7 +118,7 @@ This will have the followings:
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-16 at 12.07.18 PM (2).png" alt="" width="534"><figcaption><p>libraries</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-16 at 12.07.18 PM.png" alt="" width="534"><figcaption><p>libraries</p></figcaption></figure>
 
 </div>
 
