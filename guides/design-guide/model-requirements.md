@@ -12,7 +12,7 @@ This document provides details on how to model the requirements for workflows, u
 
 Given the requirements document from your business analyst, create a process model that looks as follows. It captures who (role) does what (activity) in what sequence to accomplish the outcome.&#x20;
 
-![Workflow diagram for  birth certificate registration](<../../.gitbook/assets/image (21).png>)
+![Workflow diagram for  birth certificate registration](<../../.gitbook/assets/image (21) (1).png>)
 
 Start by identifying the users. The users could be citizens, vendors or employees. It is important to identify the roles the users are playing e.g. in the above the citizen is the "Applicant", Vendor is the "Verifier" and the Head of Department is the "Approver".&#x20;
 

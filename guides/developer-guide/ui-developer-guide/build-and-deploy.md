@@ -21,7 +21,7 @@ Go to the Jenkins build page. Click on digit-ui under the folder path mentioned 
 
 Click on `Build with parameter`. Select the feature branch name by searching for it in the search box on the right side of the screen. Click on Build.
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23) (1).png>)
 
 Once the build is successful, open the console output and find the docker image that has been built. Copy the docker image ID.
 

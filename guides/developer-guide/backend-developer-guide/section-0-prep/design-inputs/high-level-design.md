@@ -12,7 +12,7 @@ The following Open API specs have been defined for this guide:
 
 ## Process Workflow Diagram
 
-![Basic workflow/swimlane diagram](<../../../../../.gitbook/assets/image (21).png>)
+![Basic workflow/swimlane diagram](<../../../../../.gitbook/assets/image (21) (1).png>)
 
 ## Registries
 

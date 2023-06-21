@@ -146,6 +146,7 @@
     * [1. Choose Infra](guides/installation-guide/quick-setup/1.-choose-infra.md)
     * [2. Deployment](guides/installation-guide/quick-setup/2.-deployment.md)
     * [FAQ](guides/installation-guide/quick-setup/faq.md)
+    * [DIGIT Installation on AWS](guides/installation-guide/quick-setup/digit-installation-on-aws.md)
   * [Production Setup](guides/installation-guide/production-setup/README.md)
     * [AWS](guides/installation-guide/production-setup/aws/README.md)
       * [1. Pre-requisites](guides/installation-guide/production-setup/aws/1.-pre-requisites.md)

@@ -4,7 +4,7 @@ Workflow configuration should be created based on the business requirements. Mor
 
 For our guide, we will be configuring the following workflow which was the output of the design phase:
 
-![Workflow states, actions and actors](<../../../../.gitbook/assets/image (21).png>)
+![Workflow states, actions and actors](<../../../../.gitbook/assets/image (21) (1).png>)
 
 We will re-use the workflow service which is deployed in the dev/sandbox environment.&#x20;
 
