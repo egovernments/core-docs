@@ -12,19 +12,19 @@ This page is meant to be an online guide, providing guidelines for platform owne
 
 References made to DIGIT are also applicable to other platforms similar to DIGIT. Not all parts of the guidelines or featured content may match the reader's platform, hence this document is open to be referred to in parts as needed.&#x20;
 
-## D. Guidelines&#x20;
+## Guidelines&#x20;
 
 These guidelines are to be read through the eyes of specific roles in the journey of adopting a DIGIT-based system or platforms similar to DIGIT in a government entity/ies. For each such ‘role’ , a reader can follow its tasks in a given stage of implementation of DIGIT or such platform, and the guidelines associated with that task and stage.&#x20;
 
 It is to be noted that similar guidelines can be found for ‘data controllers’ under the General data protection regulation of Europe. There are a few basic and minimum requirements that data controllers (bodies that decide the purpose for processing data and the means used to process the data) have to comply with to ensure data protection by default (DbD and PbD) and design (data minimization, implementing safeguards for protection of data, controlled access to data, limited purposeful storage, etc). In Europe, entities are legally obligated to maintain DbD and PbD or else they are heavily penalised.
 
-### D.1 Guidelines for all roles&#x20;
+### Guidelines for all roles&#x20;
 
 There are a few common guidelines that all roles in the platform implementation process must follow. Data security measures and practices stand out as the core/foundational guideline to follow for all roles. DPP is only possible when the systems and computer resources receiving and storing data are secure (safe from any harm).&#x20;
 
 Some key data security measures include:
 
-* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a legitimate purpose to access the data.
+* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a [legitimate purpose to access the data](#user-content-fn-1)[^1].
 * Encryption: Encrypt PII data both in transit and at rest to protect it from unauthorized access and theft.
 * Data backup and disaster recovery: Regularly backing up PII data - including auditing the need for PII - if not required then deleting the PII, and implementing disaster recovery plans to ensure that important data can be recovered in the event of a data loss or breach.
 * Network security: Implement firewalls, intrusion detection and prevention systems, and other network security measures to protect against cyber threats.
@@ -35,7 +35,7 @@ Some key data security measures include:
 * Incident response: Develop and test incident response plans to ensure that the organization can quickly and effectively respond to a security breach.
 * Compliance: Adhere to relevant security and privacy regulations, such as the IT Act, of 2000, and its subsequent amendments and Rules. Conforming with standards such as ISO 27001 is also a good practice.
 
-### D.2 Detailed Guidelines for Platform Owners&#x20;
+### Detailed Guidelines for Platform Owners&#x20;
 
 The roles we cover under these guidelines are that of:
 
@@ -49,13 +49,13 @@ The next document in this series covers the following stakeholders -:&#x20;
 
 To understand what each role should do to safeguard DPP, it is important to understand what these roles do at each phase of the implementation of DIGIT.
 
-#### D.2.1. Stage 0 -Program set-up&#x20;
+#### Stage 0 -Program set-up&#x20;
 
 #### What is a program?
 
 A program can be a delivery of any government service/s which the AA is mandated to provide to citizens for which it requires a platform. Defining the scope of the program is within the power of an AA.
 
-#### D.2.1.1 What happens at this stage?&#x20;
+#### What happens at this stage?&#x20;
 
 * A Memorandum of Understanding is signed between the AA and the platform owners
 * State Program Head/Nodal Officer Appointed by the AA
@@ -63,13 +63,13 @@ A program can be a delivery of any government service/s which the AA is mandated
 * The AA-specific procurement process is defined.
 * SI team onboarding initiated.
 
-#### D.2.1.2 Platform Owner at Stage 0&#x20;
+#### Platform Owner at Stage 0&#x20;
 
 * Share specifications for man-power and infrastructure&#x20;
 * Program setup best practices are shared
 * Enablement for product, configuration, infra
 
-#### D.2.1.3. To-Dos
+#### To-Dos
 
 **Operational**
 
@@ -91,16 +91,16 @@ A program can be a delivery of any government service/s which the AA is mandated
 
 * Do not offer any service module unless it is not compliant with relevant data privacy and protection  (DPP) checks/standards and systems  (the reader may check the checklist in Appendix B of this [memo](global-best-practices-for-data-protection-and-privacy.md) to refer for DPP compliance)
 
-#### D.2.2 Stage 1 - Program kickoff&#x20;
+#### Stage 1 - Program kickoff&#x20;
 
-#### D.2.2.1 What happens at Stage 1
+#### What happens at Stage 1
 
 * &#x20;Publishing of the program charter and implementation plan.
 * &#x20;Master data collection kickoff in Pilot ULBs
 * Cloud Infrastructure is procured
 * Program branding is done (name, logo, tagline etc.)&#x20;
 
-#### D.2.2.2 Platform Owner’s Role at Stage 1&#x20;
+#### Platform Owner’s Role at Stage 1&#x20;
 
 * Guide and review manpower, infra, and program governance structure. Provide a stable platform version.
 
@@ -124,20 +124,20 @@ A program can be a delivery of any government service/s which the AA is mandated
 
 * Procured cloud infrastructure providers must be given training for DPP practices (especially to understand their data storage/ retention period, nature of retention and purposes)
 
-### D.2.3 Stage 2 - Solution Design
+### Stage 2 - Solution Design
 
-#### D.2.3.1 What happens at Stage 2&#x20;
+#### What happens at Stage 2&#x20;
 
 * Standardized ontologies (uniform terminology for easier understanding), processes and workflows are created.
 * Master data collected in the desired format.
-* Agreement on AA - specific product customisations are required.&#x20;
+* Agreement on AA - specific product customisations is required.&#x20;
 * A detailed program plan is made and the tracking mechanism is finalised.&#x20;
 
-#### D.2.3.2 Platform Owner’s Role at Stage 2
+#### Platform Owner’s Role at Stage 2
 
 * Guide and review the platform's extension/customisation, data collection/migration, and accepted best practices.
 
-#### D.2.3.2 To-Dos
+#### To-Dos
 
 **Operational**
 
@@ -165,21 +165,21 @@ While standardizing processes and workflows, encourage the AA and SI teams to:
 
 * Implement privacy-enhancing technologies (PeTs), such as encryption, anonymization, and access control systems, to protect personal data. These technologies should be integrated into the workflows of the module to ensure that personal data is protected throughout its lifecycle.
 
-#### D.2.4 Stage 3 - Customisations and Configuration
+#### Stage 3 - Customisations and Configuration
 
-#### D.2.4.1 What happens at this stage?
+#### What happens at this stage?
 
 * Configured/Customized product is created that is ready for UAT ( User acceptance testing).
 * Monitoring Reports and Dashboards are ready ( to understand the rollout of the modules)
 * Product artefacts like user guides are created.
 * Identification of participants for the UAT session
 
-#### D.2.4.2 Role of Platform Owner at Stage 3
+#### Role of Platform Owner at Stage 3
 
 * Guide and review architecture, solutions and UX.&#x20;
 * Support in the configuration/customisation processes
 
-#### D.2.4.3 To-Dos
+#### To-Dos
 
 **Operational**
 
@@ -194,18 +194,18 @@ While standardizing processes and workflows, encourage the AA and SI teams to:
 * Guide and assist the AA and SIs in creating anonymised testing data&#x20;
 * Guide the AA in setting up privacy-friendly UX such as creating options for citizens to provide active opt-ins, clearly separating between terms and conditions that are compulsory and those that are voluntary, and formulating or displaying meaningful privacy notices.
 
-#### D.2.5 Stage 4 - UAT and Go-Live
+#### Stage 4 - UAT and Go-Live
 
-#### D.2.5.1 What happens at Stage 4?
+#### What happens at Stage 4?
 
 * UAT Sign-off & Go Live permitted for Pilot ULBs or other mandated govt bodies for delivery of services
 * Setup of review & monitoring cadence.
 
-#### D.2.5.2 Owner’s Role at Stage 4
+#### Owner’s Role at Stage 4
 
 * Guide and review solution implementation, communication/branding, training/adoption.
 
-#### D.2.5.2. To-Dos
+#### To-Dos
 
 **Operational**
 
@@ -224,9 +224,9 @@ While standardizing processes and workflows, encourage the AA and SI teams to:
 * Set up a review process / add a DPP checklist within the already existing review process&#x20;
 * Assist the AA and SI team in working on any issues or problems that arose from the UAT testing on DPP
 
-#### D.2.6 Stage 5 - Statewide / ULB wide Rollout
+#### Stage 5 - Statewide / ULB wide Rollout
 
-#### D.2.6.1 What happens at Stage 5?
+#### What happens at Stage 5?
 
 \-Statewide Rollout in batches
 
@@ -236,11 +236,11 @@ While standardizing processes and workflows, encourage the AA and SI teams to:
 
 \- Program success metrics tracking kick-started&#x20;
 
-#### D.2.6.2 What does the platform owner do at stage 5?
+#### What does the platform owner do at stage 5?
 
 * Guide and review in change management, incident management, adoption and awareness plans
 
-#### D.2.6.2 To-Dos
+#### To-Dos
 
 **Operational**
 
@@ -264,3 +264,7 @@ While standardizing processes and workflows, encourage the AA and SI teams to:
   \- Make citizens aware of the data policy and display it on the UX\
   \- Retain data with a documented purpose\
   \- Ensure all DPP design features are working and used correctly ( encryption, audit login records)\
+
+
+[^1]: Read this [document ](https://core.digit.org/focus-areas/data-security/signed-data-audit)for additional technical info on access controls
+
