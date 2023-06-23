@@ -16,7 +16,7 @@ References made to DIGIT are also applicable to other platforms similar to DIGIT
 
 These guidelines are to be read through the eyes of specific roles in the journey of adopting a DIGIT-based system or platforms similar to DIGIT in a government entity/ies. For each such ‘role’ , a reader can follow its tasks in a given stage of implementation of DIGIT or such platform, and the guidelines associated with that task and stage.&#x20;
 
-It is to be noted that similar guidelines can be found for ‘data controllers’ under the General data protection regulation of Europe. There are a few basic and minimum requirements that data controllers (bodies that decide the purpose for processing data and the means used to process the data) have to comply with to ensure data protection by default (DbD and PbD) and design (data minimization, implementing safeguards for protection of data, controlled access to data, limited purposeful storage, etc). In Europe, entities are legally obligated to maintain DbD and PbD or else they are heavily penalised.
+It is to be noted that similar guidelines can be found for ‘data controllers’ under the General data protection regulation of Europe. There are a few basic and minimum requirements that data controllers (bodies that decide the purpose for processing data and the means used to process the data) have to comply with to ensure data protection by default (DbD and PbD) and design (data minimization, implementing safeguards for protection of data, controlled access to data, [limited purposeful storage, etc](#user-content-fn-1)[^1]). In Europe, entities are legally obligated to maintain DbD and PbD or else they are heavily penalised.
 
 ### Guidelines for all roles&#x20;
 
@@ -24,7 +24,7 @@ There are a few common guidelines that all roles in the platform implementation 
 
 Some key data security measures include:
 
-* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a [legitimate purpose to access the data](#user-content-fn-1)[^1].
+* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a [legitimate purpose to access the data](#user-content-fn-2)[^2].
 * Encryption: Encrypt PII data both in transit and at rest to protect it from unauthorized access and theft.
 * Data backup and disaster recovery: Regularly backing up PII data - including auditing the need for PII - if not required then deleting the PII, and implementing disaster recovery plans to ensure that important data can be recovered in the event of a data loss or breach.
 * Network security: Implement firewalls, intrusion detection and prevention systems, and other network security measures to protect against cyber threats.
@@ -188,7 +188,7 @@ While standardizing processes and workflows, encourage the AA and SI teams to:
 **Advisory**
 
 * Ensure and advise for DPP-related privacy by default features to be installed in the software.
-* Guide in the protection of hardware from security threats
+* Guide in the protection of hardware from [security threats](#user-content-fn-3)[^3]
 * Ensure and assist the AA in making sure that all the security access and logins have been set up&#x20;
 * Advice the state to include data privacy and protection [checklist questions](global-best-practices-for-data-protection-and-privacy.md) in the UAT phase&#x20;
 * Guide and assist the AA and SIs in creating anonymised testing data&#x20;
@@ -266,5 +266,13 @@ While standardizing processes and workflows, encourage the AA and SI teams to:
   \- Ensure all DPP design features are working and used correctly ( encryption, audit login records)\
 
 
-[^1]: Read this [document ](https://core.digit.org/focus-areas/data-security/signed-data-audit)for additional technical info on access controls
+[^1]: Article 25 and 32 of the GDPR
 
+[^2]: Read this [document ](https://core.digit.org/focus-areas/data-security/signed-data-audit)for additional technical info on access controls
+
+
+
+[^3]: &#x20;Can refer to this document released by the Ministry of Home Affairs on Information Security best practices : [Information Security Best Practices (mha.gov.in)](https://www.mha.gov.in/sites/default/files/Documents\_InformationSecurity\_25062019.pdf)
+
+    \
+    \
