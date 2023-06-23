@@ -43,7 +43,7 @@ DIGIT handles a combination of non-personal data and PII. Personal data may furt
 
 Specific data recorded in various applications that may be implemented on DIGIT include name, parent/spouse’s name, mobile number, city, email id, date of birth, door no/address, and pin code. Data from administrative record systems, such as revenue survey number or other property identifier, connection number, meter number etc. may also be recorded. In the event a person makes payments to the local government, information related to the payment, such as transaction number may also be recorded.
 
-Any personal data collected and stored in DIGIT is encrypted, both in storage and transmission. When displayed, this data is to be masked by default. Users can request to unmask data; if they have the appropriate authorisation, they will be able to view the unmasked data, and this request to unmask will be recorded in an audit log. &#x20;
+Any personal data collected and stored in DIGIT is encrypted, both in storage and transmission. When displayed, this data is to be [masked by default](../../focus-areas/privacy/). Users can request to unmask data; if they have the appropriate authorisation, they will be able to view the unmasked data, and this request to unmask will be [recorded in an audit log](#user-content-fn-2)[^2]. &#x20;
 
 DIGIT is used to provide government services to residents of a given city, town, village etc. The data collected, as described above, are necessary for the delivery of such services. When a resident approaches their local government for a particular service, they can be required to share, or allow access to, the information necessary to provide that service.
 
@@ -97,3 +97,6 @@ The primary responsibility for ensuring compliance with legal obligations and be
 
 [^1]: We don’t have a per se law defining personal data breach yet, hence we can understand what it means in other jurisdictions like that of the UK or EU [Personal data breaches | ICO](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/personal-data-breaches/)
 
+
+
+[^2]: This capability is present in the DIGIT platform. Implementing agencies should work with respective Administering Authorities to suitably implement this. This is currently implemented in a few modules. We are moving towards making this a universal feature across all features.&#x20;
