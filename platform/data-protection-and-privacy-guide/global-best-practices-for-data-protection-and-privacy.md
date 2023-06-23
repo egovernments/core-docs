@@ -6,14 +6,14 @@
 
 * Create a succinct evidentiary-based research depository of globally adopted principles, requirements and practices for data privacy and protection (DPP) in e-government services
 * It is a base to advise state governments and local bodies to adopt principles and practices for DPP.
-* Requirement for [DPG Certification](https://digitalpublicgoods.net/standard/) \[1]
+* Requirement for [DPG Certification](https://digitalpublicgoods.net/standard/) (standards 7,8,9)
 * Assess eGov’s readiness for adopting such principles, requirements and practices ( checklist questions in Table 2 can be used as a readiness/ assessment checklist as well)
 
 ### **How is privacy perceived globally?** <a href="#_gy7ja17j14s" id="_gy7ja17j14s"></a>
 
-Privacy, like the freedom of speech, is a fundamental human right that is recognized in the United Nations Declaration of Human Rights\[2] (Gritzalis, 2004). Historically in Europe and North America, and based on the Fourth Amendment of the US Constitution, the right to privacy is seen as a defence against any “unreasonable” physical intrusion upon one’s private home, private papers, personal belongings and one’s body. Over the years, the legal and societal definition of the concept has broadened to encompass various types of information that could be available about an individual. These types of information include behavioural, financial, medical, biometric, consumer, and biographical. Additionally, privacy also constitutes information that is derived from the analysis. This means that privacy interests are also linked to the gathering, control, protection, and use of information about individuals and the deliberate invasion of those privacy interests by the state\[3].
+Privacy, like the freedom of speech, is a fundamental human right that is recognized in the [United Nations Declaration of Human Rights](#user-content-fn-1)[^1] (Gritzalis, 2004). Historically in Europe and North America, and based on the Fourth Amendment of the US Constitution, the right to privacy is seen as a defence against any “unreasonable” physical intrusion upon one’s private home, private papers, personal belongings and one’s body. Over the years, the legal and societal definition of the concept has broadened to encompass various types of information that could be available about an individual. These types of information include behavioural, financial, medical, biometric, consumer, and biographical. Additionally, privacy also constitutes information that is derived from the analysis. This means that privacy interests are also linked to the gathering, control, protection, and use of information about individuals and the deliberate invasion of those [privacy interests by the state](#user-content-fn-2)[^2].
 
-In the absence of a single globally-accepted definition of privacy, principles play an important role. A principle is a shared value upon which regulations, rules, and standards can be built for the protection and advancement of the stated objective. \[4] In many jurisdictions, laws have been shaped around such privacy principles.\[5] .
+In the absence of a single globally-accepted definition of privacy, principles play an important role. A principle is a shared value upon which regulations, rules, and standards can be built for the protection and advancement of the [stated objective](#user-content-fn-3)[^3]. In many jurisdictions, laws have been shaped around such [privacy principles](https://iapp.org/resources/article/the-general-data-protection-regulation-matchup-series/).
 
 ### **How does India perceive privacy?** <a href="#_5yu91iobm7qj" id="_5yu91iobm7qj"></a>
 
@@ -25,23 +25,27 @@ The legal-making body of India is in the process of bringing the data protection
 
 _Judiciary:_
 
-The Supreme Court through the J.Puttaswamy v. Union Of India\[7] declared the right to privacy as a fundamental right for the citizens of India. The popular judgement serves as a detailed guideline for the executive and legislature to create a data protection regime in India on the basis of legality, legitimate state aim and proportionality.
+The Supreme Court through the [J.Puttaswamy vs. Union Of India](#user-content-fn-4)[^4] declared the right to privacy as a fundamental right for the citizens of India. The popular judgement serves as a detailed guideline for the executive and legislature to create a data protection regime in India on the basis of legality, legitimate state aim and proportionality.
 
 _Executive:_
 
 The Central government along with the State governments through various executive orders/circulars issued under the power given by the Constitution read with the IT Act, Aadhaar Act, TRAI Act, and Credit Information Companies Regulation Act (among others) have provided for data protection, security and the right to privacy for citizens.
 
+{% hint style="info" %}
+Reference doc for more details - Click [here](https://docs.google.com/document/d/1-al2o6uj60EsSkfQdo3Y01zVpzcIe9eCIs977VmFCWM/edit).
+{% endhint %}
+
 ### _**What is E-Government & why is DPP needed in e-government services?**_ <a href="#_jlx9j2nxii7p" id="_jlx9j2nxii7p"></a>
 
-E‐government is defined as the use of information technology (IT), especially the Internet, to deliver government services and information to citizens, businesses, and other government bodies\[8]. One of the benefits of internet use for service delivery is the possibility to easily collect, store, process, and disseminate citizens' personal information\[9] accurately and in real-time. Personal information is information making specific individuals identifiable\[10] .
+E‐government is [defined as the](#user-content-fn-5)[^5] use of information technology (IT), especially the Internet, to deliver government services and information to citizens, businesses, and other government bodies. One of the benefits of internet use for service delivery is the possibility to easily collect, store, process, and [disseminate citizens' personal information](#user-content-fn-6)[^6] accurately and in real-time. Personal information is information making specific [individuals identifiable](#user-content-fn-7)[^7].
 
-Government organizations rely on such information to increase the efficiency and effectiveness of government decision‐making\[11], enhance transparency and accountability in service delivery, and empower innovation\[12]. Although government organizations gain benefits from extended collection, storage, and dissemination of personal information, these activities often rise users' concerns about possible violations of their privacy\[13]. As information technology advances, e‐government users' privacy concerns are getting bigger as more data are collected and used for various purposes including more in‐depth analyses and to make services more efficient\[14] .
+Government organizations rely on such information to increase the efficiency and effectiveness of [government decision‐making](#user-content-fn-8)[^8], enhance transparency and accountability in service delivery, and [empower innovation](#user-content-fn-9)[^9]. Although government organizations gain benefits from extended collection, storage, and dissemination of personal information, these activities often rise users' concerns about possible [violations of their privacy](#user-content-fn-10)[^10]. As information technology advances, e‐government users' privacy concerns are getting bigger as more data are collected and used for various purposes including more [in‐depth analyses](#user-content-fn-11)[^11] and to make services more efficient.
 
-The literature shows that ensuring the privacy of citizens' information and addressing their privacy concerns are crucial for the adoption of e‐government, as it influences users' trust and willingness to use e‐government services\[15]. To fully unleash the potential and benefits of e‐government, government organizations and third parties participating in the e-governments ecosystem (such as eGov Foundation) need to adopt information privacy protection (IPP) practices to ensure citizens that their personal information is protected. In developed countries, IPP practices are reflected in national and international regulations\[16] and are commonly used to protect users' privacy\[17].
+The literature shows that ensuring the privacy of citizens' information and addressing their privacy concerns are crucial for the adoption of e‐government, as it influences users' trust and willingness to [use e‐government services](#user-content-fn-12)[^12]. To fully unleash the potential and benefits of e‐government, government organizations and third parties participating in the e-governments ecosystem (such as eGov Foundation) need to adopt information privacy protection (IPP) practices to ensure citizens that their personal information is protected. In developed countries, IPP practices are reflected in national and [international regulations](#user-content-fn-13)[^13] and are commonly used to [protect users' privacy](#user-content-fn-14)[^14].
 
 ## **Informational Privacy Principles** <a href="#_1exnderxnpej" id="_1exnderxnpej"></a>
 
-Information privacy principles concern conditions and/or guidelines for developing information privacy practices\[18] and have been identified as an essential baseline for assessing such practices. There exist numerous sets of such principles with different scopes. On a review of several previous studies assessing IPP practices in different countries and regions \[19] we found that the most commonly used sets of principles are:
+Information privacy principles concern conditions and/or guidelines for developing [information privacy practices](#user-content-fn-15)[^15] and have been identified as an essential baseline for assessing such practices. There exist numerous sets of such principles with different scopes. On a review of several previous studies assessing IPP practices in different countries and regions \[19] we found that the most commonly used sets of principles are:
 
 (1) the Organization for Economic Co‐operation and Development **(OECD)** principles,
 
@@ -332,3 +336,61 @@ _-Grey boxes are not eGov relevant but stand relevant to local government bodies
 38. OECD. (2013). The OECD Privacy Guidelines. The OECD Privacy Framework. http://doi.org/10.1787/5kgf09z90c31‐en ↑
 39. 3 Cpa, & Ca. (2009). Generally Accepted Privacy Principles, (August), 1–84. Retrieved from http://www.aicpa.org/InterestAreas/InformationTechnology/Resources/Privacy/GenerallyAcceptedPrivacyPrinciples/DownloadableDocuments/GAPP\_PRAC\_ 0909 ↑
 40. Wright, D. and Raab, C. (2014). Privacy principles, risks and harms. International Review of Law, Computers & Technology, 28(3), 277–298. http://doi.org/10.1080/ 13600869.2014.913874 ↑
+
+[^1]: Enhancing web privacy and anonymity in the digital era, found in the Information Management & Computer Security, 12(3), (p. 255-287), authored by Gritzalis, S. (2004); and UDHR proclaims that “ no one shall be subjected to arbitrary interference with his privacy, family, home or correspondence .... Everyone has the right to the protection of the law against such interference or attacks.” - Global conventions and resolutions and regional frameworks consider the right to privacy and data protection of utmost importance to human life.&#x20;
+
+    \
+    \
+
+
+[^2]: Cate, F. (2002) Principles for Protecting Privacy. Cato Journal Spring/Summer 22 (p. 33–57); and Bannister, F. (2005). The panoptic state: Privacy, surveillance and the balance of risk. Information Polity, 10(1, 2), (p. 65-78).
+
+[^3]: Principles “...form the basis for the formulation of questions that organizations can use to determine whether their new technology, system, project or policy might pose risks to one or more types of privacy.” D. Wright and C. Raab, "Privacy principles, risks and harms," International Review of Law, Computers & Technology, vol. 28, no. 3, pp. 277- 298, 2014
+
+    \
+    \
+
+
+[^4]: &#x20;Justice K.S Puttaswamy & Anr. v. Union Of India & Ors.  \[W.P No 494 of 2012]\
+    [https://main.sci.gov.in/supremecourt/2012/35071/35071\_2012\_Judgement\_24-Aug-2017.pdf](https://main.sci.gov.in/supremecourt/2012/35071/35071\_2012\_Judgement\_24-Aug-2017.pdf)
+
+[^5]: Electronic government at the grass roots: Contemporary evidence and future trends by  Holden, S. H., Norris, D. F., & Fletcher, P. D. (2003) from the proceedings of the 36th Hawaii International Conference on System Sciences (HICSS‐36). Island of Hawaii (Big Island): Computer Societry Press. Retrieved from http://csdl2.computer.org/persagen/DLAbsToc.jsp?resourcePath=/dl/proceedings/hicss/\&toc=comp/proceedings/hicss/2003/1874/05/1874toc.xml\&DOI= 10.1109/HICSS.2003.1174305&#x20;
+
+    \
+    \
+
+
+[^6]: Understanding antecedents to perceived information risks: An empirical study of the Korean telecommunications market. Information Development, 32(1), 91–106. [https://doi.org/10.1177/0266666913516884](https://doi.org/10.1177/0266666913516884).
+
+[^7]: Privacy Maturity Model - AICPA, & CICA. (2011).
+
+[^8]: Big‐data applications in the government sector - Kim, G.‐H., Trimi, S., & Chung, J.‐H. (2014) Communications of the ACM, 57(3), 78–85. https://doi.org/ 10.1145/2500873&#x20;
+
+    \
+    \
+
+
+[^9]: Big data for digital government: Opportunities, challenges, and strategies. Chen, Y.‐C., & Hsieh, T.‐C. (2014) in the International Journal of Public Administration in the Digital Age, 1(1), 1–14. [https://doi.org/10.4018/ijpada.2014010101](https://doi.org/10.4018/ijpada.2014010101)&#x20;
+
+    \
+    \
+
+
+[^10]: E‐government in Australia: The challenge to privacy of personal information. International Journal of Law and Information Technology, McDonagh, M. (2002). 10(3), 327–343. Retrieved from [http://proquest.umi.com/pqdweb?did=954870581\&Fmt=7\&clientId=8991\&RQT=309\&VName=PQD](http://proquest.umi.com/pqdweb?did=954870581\&Fmt=7\&clientId=8991\&RQT=309\&VName=PQD) https://doi.org/ 10.1093/ijlit/10.3.327 ; AND Information privacy: Measuring individuals' concerns about organizational practices. Smith, H. J., Milberg, S. J., & Burke, S. J. (1996). Management Information Systems Quarterly, 20(2), 167–196. [https://doi.org/10.2307/249477](https://doi.org/10.2307/249477) ; AND Taxonomy of privacy. Solove, D. J. (2006). University of Pennsylvania Law Review, 335, 335–409.
+
+[^11]: CIGI‐Ipsos global survey on internet security and trust - CIGI & Ipsos. (2018). Retrieved from [https://www.cigionline.org/internet‐survey‐2018](https://www.cigionline.org/internet%E2%80%90survey%E2%80%902018)
+
+[^12]: Antecedents of trust in e‐government services: An empirical test in Jordan by Abu‐Shanab, E. (2014). From transforming government: People, Process and Policy, 8(2), 283–308. [https://doi.org/10.1108/TG‐08‐2013‐0026](https://doi.org/10.1108/TG%E2%80%9008%E2%80%902013%E2%80%900026) ; AND Factors influencing citizen adoption of e‐government services: A cross‐cultural comparison (research in progress) by Akkaya, C., Wolf, P., & Krcmar, H. (2012) from proceedings of the 45th Hawaii International Conference on System Sciences (HICSS‐45). Maui, HI, USA: IEEE. Retrieved from  -: [http://www.computer.org/csdl/proceedings/hicss/2012/4525/00/4525c531‐abs.html](http://www.computer.org/csdl/proceedings/hicss/2012/4525/00/4525c531%E2%80%90abs.html) ; AND Privacy in the digital age: A review of information privacy research in information system by Bélanger, F., & Crossler, R. E. (2011) from MIS Quarterly, 35(4), 1–36.; Verkijika, S. F., & De Wet, L. (2018) ; AND  A usability assessment of e‐government websites in Sub‐Saharan Africa. International Journal of Information Management, 39, 20–29. [http://doi.org/10.1016/j.ijinfomgt.2017.11.003](http://doi.org/10.1016/j.ijinfomgt.2017.11.003)
+
+[^13]: Privacy principles, risks and harms. International Review of Law, Computers & Technology, 28(3), 277–298 by Wright, D., & Raab, C. (2014).  https://doi.org/ 10.1080/13600869.2014.913874&#x20;
+
+    \
+    \
+
+
+[^14]: Compliance to personal data protection principles: A study of how organizations frame privacy policy notices from Telematics and Informatics, 34(4), 157–170 by Chua, H. N., Herbland, A., Wong, S. F., & Chang, Y. (2017). [http://doi.org/10.1016/j.tele.2017.01.008](http://doi.org/10.1016/j.tele.2017.01.008)
+
+[^15]: Privacy policy of e‐government websites: An itemized checklist proposed and tested. Management Research and Practice, 7(3), 80–95 by  Al‐Jamal, M., & Abu‐Shanab, E. (2015) ; AND Privacy principles, risks and harms. International Review of Law, Computers & Technology, 28(3), 277–298 by Wright, D., & Raab, C. (2014).  https://doi.org/ 10.1080/13600869.2014.913874&#x20;
+
+    \
+    \
