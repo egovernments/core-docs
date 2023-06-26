@@ -42,9 +42,7 @@ the service where the config mentioned is detailed in
 
 ### Inbox Screen
 
-For creating any inbox screen we have this **InboxComposer** to which the following configurations must be added.
-
-\
+For creating any inbox screen we have this **InboxComposer** to which the following configurations must be added.\
 Main file: [EdcrInbox](https://github.com/egovernments/DIGIT-OSS/blob/master/frontend/micro-ui/web/micro-ui-internals/packages/modules/obps/src/pages/citizen/EdcrInbox/index.js)
 
 Check the following [folder](https://github.com/egovernments/DIGIT-OSS/tree/master/frontend/micro-ui/web/micro-ui-internals/packages/modules/obps/src/pages/citizen/EdcrInbox) which contains other configs like filter, table, search, and mobile responsiveness,
@@ -53,11 +51,12 @@ The hook for the same is defined in [useEDCRInbox.js](https://github.com/egovern
 
 
 
-Using Latest InboxSearchComposer,
+Using the Latest [InboxSearchComposer](inbox-search-screen.md) (InboxV2),
 
-Both Inbox and Search screen can be shown based on the input config passed to that component\
+Both Inbox and Search screens can be shown based on the input config passed to that component\
 \
 [BillInbox.js](https://github.com/egovernments/DIGIT-Works/blob/master/frontend/micro-ui/web/micro-ui-internals/packages/modules/Expenditure/src/pages/employee/Bills/BillInbox.js)\
 Config is mentioned in [InboxConfig](https://github.com/egovernments/DIGIT-Works/blob/master/frontend/micro-ui/web/micro-ui-internals/packages/modules/Expenditure/src/configs/InboxBillConfig.js) for local reference and it will be fetched from the mdms [BillInboxConfig](https://github.com/egovernments/works-mdms-data/blob/DEV/data/pg/commonMuktaUiConfig/InboxBillConfig.json)
 
-Example for Search screen would be [SearchConfig](https://github.com/egovernments/works-mdms-data/blob/DEV/data/pg/commonMuktaUiConfig/SearchBillWMSConfig.json)\
+An example for Search screen would be [SearchConfig](https://github.com/egovernments/works-mdms-data/blob/DEV/data/pg/commonMuktaUiConfig/SearchBillWMSConfig.json)\
+\

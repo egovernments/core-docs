@@ -16,5 +16,5 @@ Continuous Integration/Continuous Deployment (CI/CD) software is the backbone of
 
 ## Deployment Diagram
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 

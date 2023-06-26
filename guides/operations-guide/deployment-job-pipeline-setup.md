@@ -113,7 +113,7 @@ go run main.go -c -e ci 'jenkins'
 
 * [x] Like this deployment jobs can be created in jenkins. Go to **deployments** and switch to any deployment job where you want to deploy in jenkins
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 * [x] Paste the **image id** which you have copied from the builds and click on **build**.
 
