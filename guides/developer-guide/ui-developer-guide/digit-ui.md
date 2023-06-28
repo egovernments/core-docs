@@ -12,7 +12,7 @@ Broadly, the frontend components can be categorized as followings:
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (2).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure>
 
 </div>
 
