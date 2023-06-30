@@ -8,7 +8,7 @@ Once we are done with the backend development and deployment of DIGIT detailed i
 
 This guide offers a systematic view of how to create the application screens on DIGIT.
 
-**Developer code:** Download the UI code from the link here [Birth-Registration. ](https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration)
+**Developer code:** Download the UI code from the link here [Birth-Registration. ](https://github.com/egovernments/DIGIT-OSS/tree/master)
 
 [**List of Pre-requisites**](digit-ui-development-pre-requisites.md) - Before starting with the UI development, know the list of technical requirements for frontend development on DIGIT UI.
 
@@ -18,7 +18,7 @@ This guide offers a systematic view of how to create the application screens on 
 
 [Run Sample Module ](https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration)- Once you are done with the setup, run the sample module provided in this guide. Test run the module and deploy it using CI/CD to your development environment.
 
-[<img src="https://github.githubassets.com/favicon.ico" alt="" data-size="line">https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration - Connect to preview](https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration)
+[https://github.com/egovernments/DIGIT-OSS/tree/master](https://github.com/egovernments/DIGIT-OSS/tree/master)
 
 
 

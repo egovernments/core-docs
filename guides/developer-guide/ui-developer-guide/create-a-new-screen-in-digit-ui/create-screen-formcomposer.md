@@ -31,7 +31,7 @@ This can be done by setting the `showMultipleCards` prop to the FormComposer as 
 
 config Link → [DIGIT-Works/frontend/micro-ui/web/micro-ui-internals/packages/modules/works/src/pages/employee/Checklist/configTest1.js at develop · egovernments/DIGIT-Works](https://github.com/egovernments/DIGIT-Works/blob/develop/frontend/micro-ui/web/micro-ui-internals/packages/modules/works/src/pages/employee/Checklist/configTest1.js)
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 ### Cards With Navigation Menu <a href="#cards-with-navigation-menu" id="cards-with-navigation-menu"></a>
 
@@ -47,4 +47,4 @@ This use case is the same as above. The only difference will be the `navLink` pr
 
 Multiple options can be selected.
 
-<figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
