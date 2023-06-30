@@ -5,7 +5,7 @@ description: Front-end module project structure
 # Project Structure
 
 {% hint style="info" %}
-Download the UI code from the link here [Birth-Registration. ](https://github.com/egovernments/DIGIT-Dev/tree/Birth\_registration)Follow the steps detailed in this doc.
+Download the UI code from the link here [Birth-Registration. ](https://github.com/egovernments/DIGIT-OSS/tree/master)Follow the steps detailed in this doc.
 {% endhint %}
 
 ## **Create Project Structure**
