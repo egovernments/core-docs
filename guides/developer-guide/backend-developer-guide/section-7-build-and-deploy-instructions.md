@@ -1,11 +1,11 @@
-# Section 7: Build and deploy instructions
+# Section 7: Build & Deploy Instructions
 
 {% hint style="info" %}
-eGov recommends [CD/CI be set up](https://urban.digit.org/installation/jenkins-setup) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Please run the [CI installer to setup DIGIT CD/CI](https://urban.digit.org/installation/jenkins-setup) prior to developing on DIGIT.&#x20;
+eGov recommends [CD/CI be set up](../../../focus-areas/setup-basics/deployment-key-concepts/ci-cd.md) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Please run the [CI installer to setup DIGIT CD/CI](../../../focus-areas/setup-basics/deployment-key-concepts/ci-cd.md) prior to developing on DIGIT.&#x20;
 {% endhint %}
 
 **Step 1:** Add entry in build-config.yaml file in the **master** branch of the forked MDMS repository. This will set up the job pipeline in Jenkins. Make sure to also add the same config to the feature branch you are working on.\
-Refer to this example - [https://github.com/egovernments/DIGIT-Dev/commit/cf6b4ad981810e5df24315cb64c67d8609ba480a](https://github.com/egovernments/DIGIT-Dev/commit/cf6b4ad981810e5df24315cb64c67d8609ba480a)
+Refer to this example - [https://github.com/egovernments/DIGIT-OSS/blob/6faf040bfecdc9b023e5578adf1e8c3480c8458b/build/build-config.yml#L255](https://github.com/egovernments/DIGIT-OSS/blob/6faf040bfecdc9b023e5578adf1e8c3480c8458b/build/build-config.yml#L255)
 
 **Step 2**: Make sure you followed the instructions for the [persister](section-2-integrate-persister-and-kafka/add-persister-configuration.md#deployment-of-persister-configuration), [indexer](section-5-other-advanced-integrations/adding-indexer-configuration.md#deployment-of-indexer-configuration) and [PDF service ](section-5-other-advanced-integrations/certificate-generation.md#deployment-of-pdf-service)configuration.&#x20;
 
