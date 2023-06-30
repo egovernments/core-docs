@@ -8,7 +8,7 @@ description: Available design artifacts
 
 The following Open API specs have been defined for this guide:
 
-[Birth Registration](https://github.com/egovernments/DIGIT-Dev/blob/birth-registration-service/municipal-services/birth-registration/birth-registration-api-spec.yaml)
+[Birth Registration](https://github.com/egovernments/DIGIT-OSS/blob/master/tutorials/backend-developer-guide/btr-services/birth-registration-api-spec.yaml)
 
 ## Process Workflow Diagram
 
