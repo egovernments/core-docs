@@ -8,7 +8,7 @@ A separate class should be created for integrating with each dependent microserv
 
 In this guide, we will be showcasing how we can integrate our microservices with other microservices like MDMS, IdGen, User and Workflow.
 
-Code for developer guide till this stage is available [here.](https://github.com/egovernments/DIGIT-Dev/pull/4804/commits/343ff2d31216ba38faff4b2d6e21c4885ba849eb)\
+Code for developer guide till this stage is available [here.](https://github.com/egovernments/DIGIT-Dev/blob/birth-registration-service/municipal-services/birth-registration/birth-registration-api-spec.yaml)\
 Postman collection corresponding to this stage is available [here.](https://github.com/egovernments/DIGIT-Dev/blob/343ff2d31216ba38faff4b2d6e21c4885ba849eb/tutorials/backend-developer-guide/btr-services/birth-registration-stage-2-postman-collection.json)
 
 For interacting with other microservices, we can create and implement the following `ServiceRequestRepository` class under `repository` package -
