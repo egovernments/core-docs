@@ -2,8 +2,8 @@
 
 This section contains information on steps for integrating with the Persister service and Kafka.
 
-Code of developer guide till this stage is available [here](https://github.com/egovernments/DIGIT-Dev/pull/4804/commits/71498287aa29df0446f023694b9f9da78ab26104).\
-Postman collection corresponding to this stage is available [here](https://github.com/egovernments/DIGIT-Dev/blob/71498287aa29df0446f023694b9f9da78ab26104/tutorials/backend-developer-guide/btr-services/birth-registration-stage-1-postman-collection.json).
+Code of developer guide till this stage is available [here](https://github.com/egovernments/DIGIT-Dev/blob/birth-registration-service/municipal-services/birth-registration/birth-registration-api-spec.yaml).\
+Postman collection corresponding to this stage is available [here](https://github.com/egovernments/DIGIT-OSS/blob/master/tutorials/backend-developer-guide/btr-services/birth-registration-service-stage-4-postman-collection.json).
 
 Steps to integrate Persister service and Kafka:
 
