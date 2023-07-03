@@ -9,5 +9,4 @@ Supported Cloud List:
 * [AWS](aws.md)
 * [VSphere](vsphere.md)
 * [SDC](sdc.md)
-* [NIC](nic.md)
 

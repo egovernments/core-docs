@@ -4,7 +4,7 @@ description: State Data Centres with On-Premise Kubernetes Clusters
 
 # SDC
 
-### What to know when deploying Kubernetes on SDC
+## Things To Know When Deploying Kubernetes On SDC
 
 Running Kubernetes on-premise gives a cloud-native experience or SDC becomes cloud-agnostic when it comes to the experience of Deploying DIGIT.
 
@@ -21,20 +21,20 @@ To successfully deploy a bespoke Kubernetes cluster and achieve a cloud-like exp
 
 Let us look at each of these challenges individually, and we’ll try to provide enough of an overview to aid you in getting started.
 
-### Automating the deployment process
+## Automating The Deployment Process
 
-Using a tool like ansible can make deploying Kubernetes clusters on-premise trivial.
+Using a tool like Ansible can make deploying Kubernetes clusters on-premise trivial.
 
 When deciding to manage your own Kubernetes clusters, we need to set up a few proofs-of-concept (PoC) clusters to learn how everything works, perform performance and conformance tests, and try out different configuration options.
 
 After this phase, automating the deployment process is an important if not necessary step to ensure consistency across any clusters you build. For this, you have a few options, but the most popular are:
 
 * [**kubeadm**](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/): a low-level tool that helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices
-* [**kubespray**](https://github.com/kubernetes-sigs/kubespray): an ansible playbook that helps deploy production-ready clusters
+* [**kubespray**](https://github.com/kubernetes-sigs/kubespray): an Ansible playbook that helps deploy production-ready clusters
 
-If you already using ansible, kubespray is a great option otherwise we recommend writing automation around kubeadm using your preferred playbook tool after using it a few times. This will also increase your confidence and knowledge in the tooling surrounding Kubernetes.
+If you already using Ansible, Kubespray is a great option otherwise we recommend writing automation around Kubeadm using your preferred playbook tool after using it a few times. This will also increase your confidence and knowledge of the tooling surrounding Kubernetes.
 
-### Choosing a network solution
+## Choosing A Network Solution
 
 When designing clusters, choosing the right container networking interface (CNI) plugin can be the hardest part. This is because choosing a CNI that will work well with an existing network topology can be tough. Do you need BGP peering capabilities? Do you want an overlay network using vxlan? How close to bare-metal performance are you trying to get?
 
@@ -42,7 +42,7 @@ There are a lot of articles that compare the various CNI provider solutions (cal
 
 For ingress traffic, you’ll need to pick a load-balancer solution. For a simple configuration, you can use MetalLB, but if you’re lucky enough to have F5 hardware load-balancers available we recommend checking out the [K8s F5 BIG-IP Controller](https://clouddocs.f5.com/containers/v2/kubernetes/). The controller supports connecting your network plugin to the F5 either through either vxlan or BGP peering. This gives the controller full visibility into pod health and provides the best performance.
 
-### Choosing a storage solution
+## Choosing A Storage Solution
 
 Kubernetes provides a number of [included storage volume plugins](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner). If you’re going on-premise you’ll probably want to use the network-attached storage (NAS) option to avoid forcing pods to be pinned to specific nodes.
 
@@ -50,7 +50,7 @@ For a cloud-like experience, you’ll need to add a plugin to dynamically create
 
 Pure Storage has a great example helm chart, the [_Pure Service Orchestrator_ (PSO)](https://github.com/purestorage/helm-charts), that provides smart provisioning although it only works for Pure Storage products.
 
-### Handle security and authentication
+### Handle Security And Authentication
 
 As anyone familiar with security knows, this is a rabbit hole. You can always make your infrastructure more secure and should be investing in continual improvements.
 

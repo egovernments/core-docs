@@ -350,7 +350,6 @@
     * [AWS](focus-areas/setup-basics/supported-clouds/aws.md)
     * [VSphere](focus-areas/setup-basics/supported-clouds/vsphere.md)
     * [SDC](focus-areas/setup-basics/supported-clouds/sdc.md)
-    * [NIC](focus-areas/setup-basics/supported-clouds/nic.md)
   * [Deployment - Key Concepts](focus-areas/setup-basics/deployment-key-concepts/README.md)
     * [Security Practices](focus-areas/setup-basics/deployment-key-concepts/security-practices.md)
     * [CI/CD](focus-areas/setup-basics/deployment-key-concepts/ci-cd.md)
