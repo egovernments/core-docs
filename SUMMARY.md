@@ -166,8 +166,6 @@
       * [1. SDC Pre-requisites](guides/installation-guide/production-setup/sdc/1.-sdc-pre-requisites.md)
       * [2. Infra-as-code (Kubespray)](guides/installation-guide/production-setup/sdc/2.-infra-as-code-kubespray.md)
       * [CI/CD Setup On SDC](guides/installation-guide/production-setup/sdc/ci-cd-setup-on-sdc.md)
-    * [GCP](guides/installation-guide/production-setup/gcp.md)
-    * [NIC](guides/installation-guide/production-setup/nic.md)
     * [CI/CD Set Up](guides/installation-guide/production-setup/ci-cd-set-up/README.md)
       * [CI/CD Build Job Pipeline Setup](guides/installation-guide/production-setup/ci-cd-set-up/ci-cd-build-job-pipeline-setup.md)
     * [Prepare Helm Release Chart](guides/installation-guide/production-setup/prepare-helm-release-chart.md)
