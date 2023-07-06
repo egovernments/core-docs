@@ -47,4 +47,4 @@ This use case is the same as above. The only difference will be the `navLink` pr
 
 Multiple options can be selected.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>

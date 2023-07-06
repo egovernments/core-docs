@@ -3,7 +3,7 @@
 ## **Technical Pre-requisites**
 
 * Prior knowledge of  Flutter
-* Prior knowledge of Dart Language
+* Prior knowledge of Dart language
 * Prior knowledge of State management
 * Prior knowledge of pub dev packages
 * Prior knowledge of Git

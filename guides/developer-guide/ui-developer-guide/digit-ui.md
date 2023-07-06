@@ -22,7 +22,7 @@ The first line contains the Architecture Component name or info, the second line
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (2).png" alt="" width="543"><figcaption><p>module naming convention</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt="" width="543"><figcaption><p>module naming convention</p></figcaption></figure>
 
 </div>
 

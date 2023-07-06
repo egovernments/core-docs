@@ -1,8 +1,8 @@
 ---
-description: Setting up device emulators/simulators for testing.
+description: Setting up device emulators/simulators for testing
 ---
 
-# Setting up device emulators/simulators
+# Setup Device Emulators/Simulators
 
 **For Android Studio IDE:**&#x20;
 

@@ -11,7 +11,7 @@ description: >-
 
 * Go to the repository and click on **new branch.**
 
-<figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Here I have created a branch named **DIGIT**
 * After, go to that branch in the same repository.

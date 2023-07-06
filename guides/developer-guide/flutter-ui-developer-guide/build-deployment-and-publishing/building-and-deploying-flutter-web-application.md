@@ -22,7 +22,7 @@ Instructions here are provided assuming CD/CI has been set up using the DIGIT ci
 
 Before setting up the job pipeline, Every project need to have a docker folder in the root folder of the project. The cirrusci flutter docker tag need to be mentioned for building the application through Jenkins. Check the below image for reference.
 
-![](<../../../../.gitbook/assets/image (11).png>)
+![](<../../../../.gitbook/assets/image (8).png>)
 
 The global assets inside the .env file need to be loaded from the environment assets.&#x20;
 
@@ -53,15 +53,15 @@ Go to the Jenkins [build](https://builds.digit.org/job/builds/) page. Click on y
 For reference, if works\_shg\_app need to be build, Go to path\
 [digit-works/job/frontend/job/works-shg-app/](https://builds.digit.org/job/builds/job/digit-works/job/frontend/job/works-shg-app/)
 
-![](<../../../../.gitbook/assets/image (13).png>)
+![](<../../../../.gitbook/assets/image (17).png>)
 
 Click on `Build with parameter`. Select the feature branch name by searching for it in the search box on the right side of the screen. Click on Build.
 
-![](<../../../../.gitbook/assets/image (14).png>)
+![](<../../../../.gitbook/assets/image (13).png>)
 
 Once the build is successful, open the console output and find the docker image that has been built. Copy the docker image ID.
 
-![](../../../../.gitbook/assets/image.png)
+![](<../../../../.gitbook/assets/image (16).png>)
 
 
 
@@ -77,11 +77,11 @@ For reference, Let's deploy the works-shg-app build that was created to works-de
 
 Path ref: [https://builds.digit.org/job/deployments/job/deploy-to-works-dev/](https://builds.digit.org/job/deployments/job/deploy-to-works-dev/)
 
-![](<../../../../.gitbook/assets/image (5).png>)
+![](<../../../../.gitbook/assets/image (14).png>)
 
 Copy the docker image IDs from the previous step and paste in the above box. Click on "Build". Once the image is deployed, you will see a message as shown below:
 
-![](<../../../../.gitbook/assets/image (3).png>)
+![](<../../../../.gitbook/assets/image (7).png>)
 
 
 

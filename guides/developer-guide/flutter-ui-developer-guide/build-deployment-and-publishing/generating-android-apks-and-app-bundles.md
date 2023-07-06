@@ -6,7 +6,7 @@ description: Overview of generating APKs and App bundles for Android application
 
 ### Generating APK for testing
 
-1. Follow the [Flutter Installation and setup Guide](../setting-up-the-development-environment/flutter-installation-and-setup-guide.md) and [Run the Application](../setting-up-the-development-environment/run-the-application.md) till flutter pub get step.
+1. Follow the [Flutter Installation and setup Guide](../setup-development-environment/flutter-installation-and-setup-guide.md) and [Run the Application](../setup-development-environment/run-application.md) till flutter pub get step.
 2.  Run the below command in your terminal from root of the project to generate the APK&#x20;
 
     **`flutter build apk --release`**
@@ -26,7 +26,7 @@ description: Overview of generating APKs and App bundles for Android application
 {% hint style="info" %}
 Note: The generated key store file need to be added to the android/app folder of your project. This is needed for publishing next version of your application.&#x20;
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (10).png>)
 {% endhint %}
 
 1. After the above steps add a key.properties file inside your android folder which is a reference to your key store file, Below is the sample key.properties file&#x20;
@@ -42,4 +42,4 @@ storeFile=muktasoft.jks
 
 **`flutter build app bundle`**
 
-<figure><img src="../../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
