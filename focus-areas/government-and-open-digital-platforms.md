@@ -22,7 +22,7 @@ Many of these ministries, departments, sub-departments interact (exchange inform
 
 In the digital age, the interactions at the government level are undergoing rapid transformation. Applications are helping digitize the interactions, automate tasks and coordinate the flow of information too. While this does deliver the benefits of automation, it also ends up hard coding these interactions into software, locking the associated data in closed databases that are run on non-scalable hardware architecture. As each department builds these applications, the complex interactions within the ecosystem get encoded into various applications resulting in fragmented and siloed data. Data updates and access to real-time data becomes a challenge for the end-users of the services/programs. Consequently, citizens and vendors have to run from pillar to post to update or make changes in the data. Administrators, on the other hand, struggle to get an integrated view of the data on time, resulting in delayed or incorrect decisions.
 
-![](<../.gitbook/assets/image (28).png>)
+![](<../.gitbook/assets/image (28) (1).png>)
 
 It becomes the citizen's and the vendor's responsibility to keep data updated in these departmental applications - who have to run from pillar to post filling forms, attaching proofs and standing in long lines to submit these applications. At the same time, administrators struggle to get integrate view of the data at the right time, thus forced to either delay decisions or make decisions based on gut.&#x20;
 

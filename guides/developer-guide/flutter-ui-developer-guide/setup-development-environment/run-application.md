@@ -20,7 +20,7 @@ Once the development environment setup is completed, we have to run the applicat
 
 `ENV_NAME="DEV"`
 
-![](<../../../../.gitbook/assets/image (5).png>)\
+![](<../../../../.gitbook/assets/image (9).png>)\
 
 
 3. Run the below commands  in your terminal from the root of the project (frontend/works\_shg\_app)

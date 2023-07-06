@@ -18,7 +18,7 @@ Build a form using the [digit\_components: ^latest\_version](https://pub.dev/pac
 
 * In pubspec.yaml add the digit\_components and reactive\_forms under dependencies
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 * Follow the [example file](https://pub.dev/packages/digit\_components/example) to start with the Reactive forms
 
