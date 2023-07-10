@@ -118,12 +118,12 @@ export const newConfig =[
 
 Components that we are using in `newConfig.js`:-\
 \
-[BrSelectName](https://github.com/egovernments/DIGIT-Dev/blob/Birth\_registration/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectName.js)\
-[BrSelectGender](https://github.com/egovernments/DIGIT-Dev/blob/Birth\_registration/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BRSelectGender.js)\
-[BrSelectPhoneNumber](https://github.com/egovernments/DIGIT-Dev/blob/Birth\_registration/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectPhoneNumber.js)\
-[BrSelectEmailId](https://github.com/egovernments/DIGIT-Dev/blob/Birth\_registration/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectEmailId.js)\
-[BrSelectAddress](https://github.com/egovernments/DIGIT-Dev/blob/Birth\_registration/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectAddress.js)\
-[SelectCorrespondenceAddress](https://github.com/egovernments/DIGIT-Dev/blob/Birth\_registration/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectCorrespondenceAddress.js)
+[BrSelectName](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectName.js)\
+[BrSelectGender](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BRSelectGender.js)\
+[BrSelectPhoneNumber](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectPhoneNumber.js)\
+[BrSelectEmailId](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectEmailId.js)\
+[BrSelectAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectAddress.js)\
+[SelectCorrespondenceAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectCorrespondenceAddress.js)
 
 
 
