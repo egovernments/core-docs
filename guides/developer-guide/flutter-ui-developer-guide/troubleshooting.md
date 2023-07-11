@@ -1,4 +1,8 @@
-# Troubleshooting common issues and error handling.
+---
+description: Handling common issues and errors
+---
+
+# Troubleshooting
 
 * **Dependency Conflicts**: Check for conflicting versions of dependencies in your `pubspec.yaml` file and resolve them by specifying compatible versions.
 * **Missing or Incorrect Imports**: Verify that all necessary packages are imported correctly. Check for typos or missing package names.

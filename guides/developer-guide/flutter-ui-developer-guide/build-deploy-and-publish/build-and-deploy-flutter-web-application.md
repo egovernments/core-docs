@@ -14,23 +14,23 @@ layout:
 
 # Build & Deploy Flutter Web Application
 
-Follow the instructions [here](../../backend-developer-guide/section-7-build-and-deploy-instructions.md) to set up the job pipeline. Ignore the steps not applicable to the frontend.
+Follow the instructions [here](../../backend-developer-guide/section-7-build-and-deploy-instructions.md) to set up the job pipeline. Ignore the steps not applicable to the front end.
 
 {% hint style="info" %}
 Instructions here are provided assuming CD/CI has been set up using the DIGIT ci-as-code module.
 {% endhint %}
 
-Before setting up the job pipeline, Every project need to have a docker folder in the root folder of the project. The cirrusci flutter docker tag need to be mentioned for building the application through Jenkins. Check the below image for reference.
+Before setting up the job pipeline, make sure each project has a docker folder in the root folder of the project. The cirrusci flutter docker tag must be mentioned for building the application through Jenkins. Check the image below for reference.
 
 ![](../../../../.gitbook/assets/image.png)
 
-The global assets inside the .env file need to be loaded from the environment assets.&#x20;
+The global assets inside the .env file should be loaded from the environment assets.&#x20;
 
 {% hint style="info" %}
-Note: The global assets file need to be in json format for flutter
+**Note:** The global assets file needs to be in JSON format for Flutter
 {% endhint %}
 
-Follow the sample config added in yaml files of respective environment for loading the global assets of works\_shg\_app
+Follow the sample config added in yaml files of the respective environment to load the global assets of works\_shg\_app.
 
 dev yaml file : [works-dev.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/digit-works/deploy-as-code/helm/environments/works-dev.yaml)
 
@@ -42,7 +42,7 @@ works-shg-app:
       <script src=https://works-dev.digit.org/works-dev-asset/worksGlobalConfig.json type=text/javascript></script>';"
 ```
 
-Congrats!!! , Now we are ready to build and deploy the application in web.
+Congrats!!! We are now ready to build and deploy the application on the web.
 
 <details>
 
@@ -87,10 +87,3 @@ Copy the docker image IDs from the previous step and paste in the above box. Cli
 
 </details>
 
-
-
-
-
-&#x20;
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

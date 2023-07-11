@@ -1,5 +1,5 @@
 ---
-description: 'Provider: A Simplified State Management Solution'
+description: 'Provider: a simplified state management solution'
 ---
 
 # Provider State Management

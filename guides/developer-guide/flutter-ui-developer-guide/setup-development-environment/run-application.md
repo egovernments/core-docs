@@ -33,11 +33,11 @@ Once the development environment setup is completed, we have to run the applicat
 
 <figure><img src="https://lh3.googleusercontent.com/dhkc5EZMRB6vrTv4AWh6hoi_23ucWOKDTMke3yPBhf_IxX0LegcejIcHxFD6x85LrNB94dj3VkkA6tsHUFT8uCYI8EZce9zfFESUXp5NJ4zhQLcqGPIQFflSYEQiuSmVHS2ceRbW8SXdLvxU-WO2zqw" alt=""><figcaption></figcaption></figure>
 
-4. Enable the desired device or browser  to run the application using the below command\
+4. Enable the desired device or browser  to run the application using the command -\
    **flutter run**: To start the application
 
 <figure><img src="https://lh5.googleusercontent.com/l37Ter4BROECfKSXZ2-GMf6PeAolByl-JddJRvcvxFSIGDB0oPaPbpPlaSrKnUIhavpaGgrafHTU3PWKTcsAUPF4z95y1IG4v_OkakNt8MdJre1Rsl8qOlQLUJkft7Vup_HsTB33ArFzjST_Qqqqqks" alt=""><figcaption></figcaption></figure>
 
-You can access Flutter dev tools for debugging purposes from the link in the terminal
+5. Access the Flutter development tools for debugging purposes from the link in the terminal.
 
 <figure><img src="https://lh6.googleusercontent.com/qGIR_8duLahPvljlOBLJF9LVyZjSDreye6QganNQGMAQigP4m8K2GbnPfCmCRrFeIakfgywAJ1vTHlutpZN24ElseB3V9yelV9wQE5015gaYK9l9SygvJuh-9RmqlS5d9ioUiRZE5Th5FmoC_5L6k74" alt=""><figcaption></figcaption></figure>

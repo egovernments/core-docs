@@ -20,5 +20,5 @@ Build a form using the [digit\_components: ^latest\_version](https://pub.dev/pac
 
 <figure><img src="../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
-* Follow the [example file](https://pub.dev/packages/digit\_components/example) to start with the Reactive forms
+* Follow the [example file](https://pub.dev/packages/digit\_components/example) to start with the Reactive forms.
 
