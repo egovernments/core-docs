@@ -257,6 +257,7 @@
       * [Inbox/Search Screen](guides/developer-guide/ui-developer-guide/create-a-new-screen-in-digit-ui/inbox-search-screen.md)
       * [Workflow Component](guides/developer-guide/ui-developer-guide/create-a-new-screen-in-digit-ui/workflow-component.md)
     * [Customisation](guides/developer-guide/ui-developer-guide/customisation/README.md)
+      * [Integrate External Web Application/UI With DIGIT UI](guides/developer-guide/ui-developer-guide/customisation/integrate-external-web-application-ui-with-digit-ui.md)
       * [Utility - Pre-Process MDMS Config](guides/developer-guide/ui-developer-guide/customisation/utility-pre-process-mdms-config.md)
       * [CSS Customisation](guides/developer-guide/ui-developer-guide/customisation/css-customisation.md)
     * [Citizen Module Setup](guides/developer-guide/ui-developer-guide/citizen-module-setup/README.md)
