@@ -1,8 +1,12 @@
+---
+description: Contribute to DIGIT platform - Check out this space for frequent updates
+---
+
 # Contribute
 
 ## **Why Contribute To DIGIT?**
 
-DIGIT is an open-source citizen service and governance platform. It is designed to streamline interactions between citizens, government employees, service providers, administrators and policymakers. The low capacity national and sub-national government agencies do not have the ability to develop systems that can deliver services in a scalable and reliable manner. Additionally, they end up building systems that are closed and which lock data into departmental silos. This makes it difficult for citizens to access data, market players to deliver services and administrators or policymakers to make decisions. Each system builds and deploys multiple common functionalities for authentication, authorisation, location, notification, demand, payment etc. The issues, highlighted above, have severe impacts on the ability of government agencies to deliver coordinated services to citizens. &#x20;
+DIGIT is an open-source citizen service and governance platform. It is designed to streamline interactions between citizens, government employees, service providers, administrators and policymakers. The low-capacity national and sub-national government agencies do not have the ability to develop systems that can deliver services in a scalable and reliable manner. Additionally, they end up building systems that are closed and which lock data into departmental silos. This makes it difficult for citizens to access data, market players to deliver services and administrators or policymakers to make decisions. Each system builds and deploys multiple common functionalities for authentication, authorisation, location, notification, demand, payment etc. The issues, highlighted above, have severe impacts on the ability of government agencies to deliver coordinated services to citizens. &#x20;
 
 The DIGIT platform is the architect of Digital Public Infrastructure that offers three layers of reusable microservices that help address these issues effectively.
 
@@ -41,6 +45,9 @@ Listing down the list of challenges you can help solve -&#x20;
      * [x] Code is available here -[https://github.com/egovernments/DIGIT-OSS/tree/master/core-services/egov-workflow-v2](https://github.com/egovernments/DIGIT-OSS/tree/master/core-services/egov-workflow-v2)
      * [x] Documentation is available here - [https://core.digit.org/platform/core-services/workflow-service](https://core.digit.org/platform/core-services/workflow-service)
 
-We will keep adding more items here. If you are interested or have any questions post them on our Discussion Board - [https://github.com/egovernments/Digit-Core/discussions](https://github.com/egovernments/Digit-Core/discussions).&#x20;
+{% hint style="success" %}
+Check out this space for updates. If you are interested or have any questions post them on our Discussion Board - [https://github.com/egovernments/Digit-Core/discussions](https://github.com/egovernments/Digit-Core/discussions).&#x20;
 
-Here's the link: [https://discord.gg/CA8BYFA6](https://discord.gg/CA8BYFA6) to our discord channel which has the latest updates and discussions on everything DIGIT - projects, events, new ideas etc.
+Join our Discord channel ([click here for the invite link](https://discord.gg/X7QAjmvjBp)) to get the latest updates and participate in discussions on everything DIGIT - projects, events, new ideas etc.
+{% endhint %}
+
