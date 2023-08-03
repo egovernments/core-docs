@@ -2,9 +2,11 @@
 
 ## Yearly Roadmap&#x20;
 
-Commitment and transparency are deeply ingrained values defining our platform development approach. Take a glimpse into our DIGIT Core Platform Roadmap to learn more about the planned capabilities and upgrades.
+Commitment and transparency are deeply ingrained values defining our platform development approach. Take a glimpse into our DIGIT Core Platform Roadmap to explore the planned capabilities and upgrades.
 
 Explore our platform roadmap detailed view below.
+
+
 
 <figure><img src=".gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
 
