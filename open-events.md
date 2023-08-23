@@ -10,22 +10,21 @@ _September 5, 2023 \~ 3 PM to 4 PM_&#x20;
 
 {% embed url="https://us06web.zoom.us/webinar/register/WN_pqBqef1bQTm0H0OLsiqfCA#/registration" %}
 
-You are invited to join our upcoming online webinar Transforming Public Works Management - Overview & Approach. Managing Public Works is one of the biggest challenges in the country. Problems vary from quality to finance & from timeline to scope. In this session, we will discuss some of the key challenges that were encountered and how these are being solved using the DIGIT Works Management platform, along with discussing a very interesting case study from Odisha State.&#x20;
+You are invited to join our upcoming online webinar Transforming Public Works Management - Overview & Approach. Managing Public Works is one of the biggest challenges in the country. Problems vary from quality to finance & from timeline to scope. During this session, we will discuss some of the key challenges that were encountered and how these are being solved using the DIGIT Works Management platform, along with discussing a very interesting case study from the state of Odisha.&#x20;
 
-Event links and session details are provided below. We look forward to seeing you in this webinar. Do invite your team and colleagues to this learning session and unlock the potential of the DIGIT Ecosystem.\
-
+Event registration links and session details are given below. We look forward to seeing you in this webinar. Do invite your team and colleagues to this learning session and unlock the potential of the DIGIT Ecosystem.
 
 In case of any queries, please feel free to write to [partner@egovernments.org](mailto:partner@egovernments.org).                                                                                                                                                                                                                                                                         &#x20;
 
 ### What to expect from this webinar?
 
 1. What is Works Management?
-2. Different Challenges
-3. Existing Process flows
-4. How DIGIT Works Management is solving it?
-5. High-level Architecture
-6. Odisha exemplar of works (Mukta)
-7. Product Demo/ Recording Walkthrough
+2. Different challenges
+3. Existing process flows
+4. How is DIGIT Works Management solving it?
+5. High-level architecture
+6. Odisha exemplar of Works (Mukta)
+7. Product demo/recording walkthrough
 
 _Speakers: Chandra Kiran and Subhasini Srinivasan_
 
