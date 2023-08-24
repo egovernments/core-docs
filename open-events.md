@@ -1,16 +1,16 @@
 ---
-description: Transforming Public Works Management - September 5, 2023 ~ 3 PM to 4 PM
+description: Unveiling the DIGIT Works Platform - September 5, 2023 ~ 3 PM to 4 PM
 ---
 
 # Open Events
 
-### Transforming Public Works Management - Overview & Approach
+### Transforming Public Works Management - Unveiling the DIGIT Works Platform
 
 _September 5, 2023 \~ 3 PM to 4 PM_&#x20;
 
 {% embed url="https://us06web.zoom.us/webinar/register/WN_pqBqef1bQTm0H0OLsiqfCA#/registration" %}
 
-You are invited to join our upcoming online webinar Transforming Public Works Management - Overview & Approach. Managing Public Works is one of the biggest challenges in the country. Problems vary from quality to finance & from timeline to scope. During this session, we will discuss some of the key challenges that were encountered and how these are being solved using the DIGIT Works Management platform, along with discussing a very interesting case study from the state of Odisha.&#x20;
+You are invited to join our upcoming online webinar Transforming Public Works Management - Overview & Approach. Managing Public Works is one of the biggest challenges in the country. Problems vary from quality to finance & from timeline to scope. During this session, we will discuss some of the key challenges that were encountered and how these are being solved using the DIGIT Works Management platform, along with a very interesting case study from the state of Odisha.&#x20;
 
 Event registration links and session details are given below. We look forward to seeing you in this webinar. Do invite your team and colleagues to this learning session and unlock the potential of the DIGIT Ecosystem.
 
