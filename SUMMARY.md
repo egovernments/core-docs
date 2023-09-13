@@ -14,6 +14,7 @@
   * [Data Protection & Privacy](platform/data-protection-and-privacy/README.md)
     * [Data Protection & Privacy Definitions](platform/data-protection-and-privacy/data-protection-and-privacy-definitions.md)
     * [Legal Obligations For Privacy - eGov](platform/data-protection-and-privacy/legal-obligations-for-privacy-egov.md)
+    * [Data Protection & Privacy - Global Best Practices](platform/data-protection-and-privacy/data-protection-and-privacy-global-best-practices.md)
   * [API Specifications](platform/api-specifications/README.md)
     * [User](platform/api-specifications/user.md)
     * [Access Control](platform/api-specifications/access-control.md)
