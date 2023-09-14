@@ -4,7 +4,9 @@ description: 'Privacy Law in India: What does it mean for eGov?'
 
 # Legal Obligations For Privacy - eGov
 
-## **A1. Provisions In The Constitution Of India** <a href="#_k0bhf3xa51ta" id="_k0bhf3xa51ta"></a>
+## **Privacy Law**  <a href="#_k0bhf3xa51ta" id="_k0bhf3xa51ta"></a>
+
+### **A1. Provisions In The Constitution Of India** <a href="#_k0bhf3xa51ta" id="_k0bhf3xa51ta"></a>
 
 The Constitution of India does not explicitly provide for the right to privacy.
 
@@ -100,7 +102,7 @@ If eGov does interact with citizen data (provides any service with respect to el
 
 The new changes in the IT law have now removed the 2011 rules and replaced them with the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. These rules obligate intermediaries to -:
 
-**Publish,** in English language or any [<mark style="color:blue;">other language suitable to the user</mark>](#user-content-fn-7)[^7], their privacy policy, user agreement for access and use of our products and services as well as the rules and regulations that apply to anyone using our products and services.
+**Publish -** in English language or any [<mark style="color:blue;">other language suitable to the user</mark>](#user-content-fn-7)[^7], their privacy policy, user agreement for access and use of our products and services as well as the rules and regulations that apply to anyone using our products and services.
 
 The rules eGov sets for the usage of its products and services must be designed on the following principles -:
 
@@ -123,7 +125,7 @@ No one is allowed to host, display, upload, modify, publish, transmit, store, up
 
 Presently, the **‘Act’** enters into force as a stand-alone legislation to protect digital personal data i.e. all personal data available in a digital form.
 
-Definitions -:
+**Definitions -:**
 
 * [<mark style="color:blue;">Personal data</mark> ](#user-content-fn-8)[^8]means any data about an individual who is identifiable by or in relation to such data.
 * [<mark style="color:blue;">The new Act</mark>](#user-content-fn-9)[^9] defines bodies such as the data fiduciary, data processor and significant data fiduciary.
@@ -145,9 +147,9 @@ eGov may decide to take up the role of a [Supporting agency](data-protection-and
 
 As with any of the above two roles, eGov would be a data processor i.e. it would [<mark style="color:blue;">process personal data</mark>](#user-content-fn-11)[^11] on behalf of or on the instructions of the [<mark style="color:blue;">administering authorities</mark>](#user-content-fn-12)[^12] or [program owners](data-protection-and-privacy-definitions.md#\_90h2197sguap).
 
-As an Implementation agency (IA): Where eGov is contracted to deploy and configure its platform into the administrative authority or program owner's systems, functioning as an implementing agency, eGov would be involved in setting up the hardware necessary for the program; OR customise, extend, configure, and install/set up the software (platform) as per the needs of the program owner; OR train staff or contractors of the program owner on how to use the platform; OR perform other such functions to ensure program readiness as may be agreed upon between the implementing agency and the program owner and/or administrative authority responsible for such platform implementation. As an IA, eGov would have access to data (the extent of such access to data may be defined in the agreement between the administering authority and eGov as an IA). Till the time eGov does not decide the purposes and the means of processing, it will remain a processor and not become a data fiduciary.
+**As an Implementation agency (IA):** Where eGov is contracted to deploy and configure its platform into the administrative authority or program owner's systems, functioning as an implementing agency, eGov would be involved in setting up the hardware necessary for the program; OR customise, extend, configure, and install/set up the software (platform) as per the needs of the program owner; OR train staff or contractors of the program owner on how to use the platform; OR perform other such functions to ensure program readiness as may be agreed upon between the implementing agency and the program owner and/or administrative authority responsible for such platform implementation. As an IA, eGov would have access to data (the extent of such access to data may be defined in the agreement between the administering authority and eGov as an IA). Till the time eGov does not decide the purposes and the means of processing, it will remain a processor and not become a data fiduciary.
 
-As a Supporting agency (SA): As an SA, eGov would provide support in any functional aspect required by the program owner with respect to that platform implementation (e.g. assistance in the maintenance of the platform, technical or operational problem-solving, bug/error resolution). SA will have access to such data as is necessary to perform their functions, and this shall normally be specified in the agreement/contract between the supporting agency and the program owner / administrative authority.
+**As a Supporting agency (SA):** As an SA, eGov would provide support in any functional aspect required by the program owner with respect to that platform implementation (e.g. assistance in the maintenance of the platform, technical or operational problem-solving, bug/error resolution). SA will have access to such data as is necessary to perform their functions, and this shall normally be specified in the agreement/contract between the supporting agency and the program owner / administrative authority.
 
 Being an IA and a SA would make eGov a processor of data under the Act. (Refer to the definition of a data processor above).
 
@@ -167,7 +169,7 @@ eGov may be instructed or mandated to do the below by the data fiduciary -:
 * Implement appropriate technical and organizational measures to implement the Act \[Sec 8(4)]
 * Intimate the data fiduciary on any personal data breach \[so that the data fiduciary can inform the Board and data principal about such a breach - Sec 8(6)]
 
-_C.1.3.2 Direct obligations/ Must do’s for eGov as a data processor_
+_C.1.3.2 Direct obligations/Must do’s for eGov as a data processor_
 
 Below are a few specific obligations the law provides for to be followed by the data processors ( therefore to eGov as a processor)
 
@@ -176,6 +178,8 @@ Below are a few specific obligations the law provides for to be followed by the 
 * Follow the instructions given by the data fiduciary on data deletion
 * Follow processing standards issued through Central government policies ( as issued under Sec 7(b)(ii) - yet to be issued)
 * Maintain a record of data processed ( to assist the data fiduciary i.e. the relevant administering authority with obligation Sec 11 of the Act).
+
+
 
 [^1]: “(i) The action must be sanctioned by law; (ii) The proposed action must be necessary in a democratic society for a legitimate aim; (iii) The extent of such interference must be proportionate to the need for such interference; (iv) There must be procedural guarantees against abuse of such interference.”&#x20;
 
