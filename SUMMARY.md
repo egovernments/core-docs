@@ -19,7 +19,7 @@
       * [GIU Platform Owner Guidelines](platform/data-protection-and-privacy/guidelines/giu-platform-owner-guidelines.md)
       * [GIU Implementing Agencies Guidelines](platform/data-protection-and-privacy/guidelines/giu-implementing-agencies-guidelines.md)
       * [GIU Admin Guidelines](platform/data-protection-and-privacy/guidelines/giu-admin-guidelines.md)
-      * [GIU\_Program Owner guidelines \_DPP\_V1\_20\_07](platform/data-protection-and-privacy/guidelines/giu\_program-owner-guidelines-\_dpp\_v1\_20\_07.md)
+      * [GIU Program Owner Guidelines](platform/data-protection-and-privacy/guidelines/giu-program-owner-guidelines.md)
   * [API Specifications](platform/api-specifications/README.md)
     * [User](platform/api-specifications/user.md)
     * [Access Control](platform/api-specifications/access-control.md)
