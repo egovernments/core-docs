@@ -20,6 +20,7 @@
       * [Implementing Agencies Guidelines](platform/data-protection-and-privacy/guidelines/implementing-agencies-guidelines.md)
       * [Admin Guidelines](platform/data-protection-and-privacy/guidelines/admin-guidelines.md)
       * [Program Owner Guidelines](platform/data-protection-and-privacy/guidelines/program-owner-guidelines.md)
+      * [Data Security and Data Privacy](platform/data-protection-and-privacy/guidelines/data-security-and-data-privacy.md)
     * [Data Privacy Policy](platform/data-protection-and-privacy/data-privacy-policy/README.md)
       * [eGov Data Privacy Policy](platform/data-protection-and-privacy/data-privacy-policy/egov-data-privacy-policy.md)
       * [Implementing Agency Privacy Policy](platform/data-protection-and-privacy/data-privacy-policy/implementing-agency-privacy-policy.md)
