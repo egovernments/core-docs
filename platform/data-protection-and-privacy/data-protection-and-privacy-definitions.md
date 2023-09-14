@@ -6,11 +6,11 @@ For the purposes of this document, data is any information shared by citizens or
 
 Under Indian law, The current Digital Personal Data Act of 2023 defines data as:
 
-Sec 2(h) “data” means a representation of information, facts, concepts, opinions or instructions in a manner suitable for communication, interpretation or processing by human beings or by automated means.
+Sec 2(h) - “Data” means a representation of information, facts, concepts, opinions or instructions in a manner suitable for communication, interpretation or processing by human beings or by automated means.
 
 Very similar to what is defined as ‘data’ in the Information Technology Act of 2000 as:
 
-_Data means a representation of information, knowledge, facts, concepts or instructions which are being prepared or have been prepared in a formalized manner and are intended to be processed, is being processed or has been processed in a computer system or computer network, and may be in any form (including computer printouts magnetic or optical storage media, punched cards, punched tapes) or stored internally in the memory of the computer\[1]._
+[_Data means_](https://www.indiacode.nic.in/bitstream/123456789/13116/1/it\_act\_2000\_updated.pdf) _a representation of information, knowledge, facts, concepts or instructions which are being prepared or have been prepared in a formalized manner and are intended to be processed, is being processed or has been processed in a computer system or computer network, and may be in any form (including computer printouts magnetic or optical storage media, punched cards, punched tapes) or stored internally in the memory of the computer._
 
 ### 1a) Personal Data or Personally Identifiable Information (PII) <a href="#_1lca5d9c5mtd" id="_1lca5d9c5mtd"></a>
 
@@ -18,13 +18,13 @@ For the purposes of this document, PII and personal data are to mean the same.
 
 Personal data is defined under the Digital Personal Data Act,2023 as:
 
-Sec 2 (t) “personal data” means any data about an individual who is identifiable by or in relation to such data;
+Sec 2 (t) - “Personal data” means any data about an individual who is identifiable by or in relation to such data;
 
 To add, a breach of personal data is also defined in Section 2 (u) as -:
 
 “Personal data breach” means any unauthorised processing of personal data or accidental disclosure, acquisition, sharing, use, alteration, destruction or loss of access to personal data, that compromises the confidentiality, integrity or availability of personal data;
 
-Another definition of personal data is “_any data that allows one to be recognised either directly or indirectly. It is defined as any information that relates to a natural person, which, either directly or indirectly, in combination with other information available or likely to be available with a body corporate, is capable of identifying such a person\[2]_.”
+[Another definition of personal data](https://www.meity.gov.in/writereaddata/files/GSR313E\_10511\(1\)\_0.pdf) is “_any data that allows one to be recognised either directly or indirectly. It is defined as any information that relates to a natural person, which, either directly or indirectly, in combination with other information available or likely to be available with a body corporate, is capable of identifying such a person_.”
 
 Both the above definitions of personal data are to be read together until the government fixates on maintaining one.
 
@@ -41,13 +41,13 @@ Sensitive Personal data of a person means _“...such personal information which
 * _any detail relating to the above clauses as provided to the body corporate for providing service;_
 * _and any of the information received under the above clauses by the body corporate for processing, stored or processed under lawful contract or otherwise_
 
-_Provided that, any information that is freely available or accessible in the public domain or furnished under the Right to Information Act, 2005 or any other law for the time being in force shall not be regarded as sensitive personal data or information\[...].\[3]”_
+_Provided that, any information that is freely available or accessible in the public domain or furnished under the_ [_Right to Information Act, 200_](#user-content-fn-1)[^1]_5 or any other law for the time being in force shall not be regarded as sensitive personal data or information\[...].”_
 
 ## 2. Platform Implementation Cycle <a href="#_rx6mnijpauvk" id="_rx6mnijpauvk"></a>
 
 ### 2a) Platform <a href="#_1bcv75quqnpc" id="_1bcv75quqnpc"></a>
 
-For the purposes of this document, ‘platform’ refers to any software system\[4] that can be used by a government entity, or by a contractor performing any tasks on behalf of that government entity. The term ‘platform’ refers to the software (code) itself, and NOT to any implementation of that code. Therefore, a platform does not collect, store, process, use, or share data.
+For the purposes of this document, ‘platform’ [<mark style="color:blue;">refers to any software system</mark>](#user-content-fn-2)[^2] that can be used by a government entity, or by a contractor performing any tasks on behalf of that government entity. The term ‘platform’ refers to the software (code) itself, and NOT to any implementation of that code. Therefore, a platform does not collect, store, process, use, or share data.
 
 For example, [DIGIT](https://github.com/egovernments/DIGIT-OSS) is a platform.
 
@@ -57,7 +57,7 @@ For the purposes of this document, a ‘Platform Implementation’ refers to eac
 
 * During the implementation of a platform, the implementing agency may collect, store, process, use, and share such data as is necessary for implementing the platform. This will normally be specified in the contract or agreement between the implementing agency and the administrative authority responsible for that implementation.
 * After the implementation of a platform is complete, the implementing agency should cease to have access to data from the platform implementation, except to such extent as may be agreed between the implementing agency and the administrative authority responsible for that implementation.
-* In cases where the implementing agency performs the role of a support agency with respect to any platform implementation, the implementing agency may have access to data as specified for that role (see below).
+* In cases where the implementing agency performs the role of a support agency with respect to any platform implementation, the implementing agency may have access to data as specified for [<mark style="color:blue;">that role</mark>](data-protection-and-privacy-definitions.md#\_3qi4g54kifg).
 * The activity of platform implementation involves roles having access to datasets flowing through the platform.
 
 For example, MSeva (in Punjab), NagarSewa (in Uttarakhand), eChhawani (in Cantonment Boards), and SUJOG (in Odisha) are platform implementations – they are implementations of the DIGIT platform.
@@ -70,7 +70,7 @@ Any ongoing or to-be-executed delivery of government service or defined governme
 
 For example, when ULBs in Punjab use the MSeva platform to collect revenues, deliver ULB services, and redress grievances, this is a program.
 
-### 2d) Summary & Comparison Of Platform, Platform Implementation, and Program <a href="#_sej66iapdlja" id="_sej66iapdlja"></a>
+### 2d) Summary & Comparison Of Platform, Platform Implementation & Program <a href="#_sej66iapdlja" id="_sej66iapdlja"></a>
 
 <table><thead><tr><th width="125"></th><th>Platform</th><th>Platform Implementation</th><th>Program</th></tr></thead><tbody><tr><td><strong>Definition</strong></td><td>Refers to a software system that can be used by govt entities or contractors. The term ‘platform’ refers to the software (code) itself, and NOT to any implementation of that code.</td><td>Refers to each instance of a platform / software system that has been implemented.</td><td>Any delivery of govt services or other govt operations or reforms can be a program. In the context of this document, a program deploys and/or leverages a platform implementation.</td></tr><tr><td><strong>Does it process data?</strong></td><td>No</td><td>Yes</td><td>Yes</td></tr><tr><td><strong>Example</strong></td><td>DIGIT</td><td>MSeva, SUJOG, eChhawani</td><td>ULBs in Punjab / Odisha / Cantonment Boards delivering services using MSeva / SUJOG / eChhawani respectively.</td></tr></tbody></table>
 
@@ -78,9 +78,9 @@ For example, when ULBs in Punjab use the MSeva platform to collect revenues, del
 
 We describe a platform implementation as progressing across 7 stages.
 
-<table><thead><tr><th width="110">#</th><th width="127">Stage name</th><th width="371">What happens at this stage</th><th>Who handles data at this stage</th></tr></thead><tbody><tr><td>Stage 0</td><td>Program Set-up</td><td>Resources, budgets, procurement and infrastructure is identified and an implementation partner is onboarded.</td><td>None</td></tr><tr><td>Stage 1</td><td>Program Kickoff</td><td>Implementation starts and data is collected from a few identified jurisdictions for testing</td><td><p>Yes.</p><p>IA, Prog</p></td></tr><tr><td>Stage 2</td><td>Solution design</td><td>State-specific configurations are made with processes and workflows being designed. Policy decisions are made at this stage.</td><td><p>Yes.</p><p>IA , Prog</p></td></tr><tr><td>Stage 3</td><td>Customisations and Configurations</td><td>Adoption and performance of the program is measured. UAT (Use acceptance testing) is conducted here.</td><td><p>Yes</p><p>IA,Prog</p></td></tr><tr><td>Stage 4</td><td>UAT and Go live</td><td>The UAT testing is completed, feedback is received and final platform deployment is carried out at all identified jurisdictions.</td><td><p>Yes</p><p>IA, Prog</p></td></tr><tr><td>Stage 5</td><td>Statewide rollout</td><td>Phase-wise implementation of the platform begins. Troubleshooting, support with errors and critical bugs are fixed.</td><td><p>Yes</p><p>IA, Prog, SA</p></td></tr><tr><td>Stage 6</td><td>Sustenance and Ongoing Improvement</td><td>Sustenance and Ongoing Improvement - platform adoption teams are set, adoption is tracked and awareness and reviews on adoption are conducted.</td><td><p>Yes</p><p>Prog, SA</p></td></tr></tbody></table>
+<table><thead><tr><th width="110">#</th><th width="147">Stage name</th><th width="371">What happens at this stage</th><th>Who handles data at this stage</th></tr></thead><tbody><tr><td>Stage 0</td><td>Program Set-up</td><td>Resources, budgets, procurement and infrastructure is identified and an implementation partner is onboarded.</td><td>None</td></tr><tr><td>Stage 1</td><td>Program Kickoff</td><td>Implementation starts and data is collected from a few identified jurisdictions for testing</td><td><p>Yes.</p><p>IA, Prog</p></td></tr><tr><td>Stage 2</td><td>Solution design</td><td>State-specific configurations are made with processes and workflows being designed. Policy decisions are made at this stage.</td><td><p>Yes.</p><p>IA , Prog</p></td></tr><tr><td>Stage 3</td><td>Customisations and Configurations</td><td>Adoption and performance of the program is measured. UAT (Use acceptance testing) is conducted here.</td><td><p>Yes</p><p>IA,Prog</p></td></tr><tr><td>Stage 4</td><td>UAT and Go live</td><td>The UAT testing is completed, feedback is received and final platform deployment is carried out at all identified jurisdictions.</td><td><p>Yes</p><p>IA, Prog</p></td></tr><tr><td>Stage 5</td><td>Statewide rollout</td><td>Phase-wise implementation of the platform begins. Troubleshooting, support with errors and critical bugs are fixed.</td><td><p>Yes</p><p>IA, Prog, SA</p></td></tr><tr><td>Stage 6</td><td>Sustenance and Ongoing Improvement</td><td>Sustenance and Ongoing Improvement - platform adoption teams are set, adoption is tracked and awareness and reviews on adoption are conducted.</td><td><p>Yes</p><p>Prog, SA</p></td></tr></tbody></table>
 
-## 3. ROLES <a href="#_3qi4g54kifg" id="_3qi4g54kifg"></a>
+## 3. Roles <a href="#_3qi4g54kifg" id="_3qi4g54kifg"></a>
 
 ### 3a) Platform Owner (PO) <a href="#_q84w3j6nk7ca" id="_q84w3j6nk7ca"></a>
 
@@ -155,10 +155,6 @@ For example, when a given state government decides to implement the DIGIT platfo
 
 <table><thead><tr><th width="128"></th><th>Platform Owner (PO)</th><th>Implementing Agency (IA)</th><th>Program Owner (Prog)</th><th>Support Agency (SA)</th></tr></thead><tbody><tr><td><strong>Definition</strong></td><td>The entity that owns, governs, or controls the platform's codebase.</td><td>The entity that deploys and configures a platform for the AA / Prog</td><td>The entity that is responsible for delivery of specific public goods, services, social welfare</td><td>The entity that provides support in any technical / functional aspect required by the Prog, with respect to that platform implementation</td></tr><tr><td><strong>Access to Data</strong></td><td>No, except to extent agreed with Prog / AA</td><td>Yes, during implementation only</td><td>Yes</td><td>Yes, to the extent needed for support</td></tr><tr><td><strong>Example</strong></td><td>eGovernments Foundation</td><td>Systems integrators (e.g. PwC, Transerve)</td><td>State HUDD, each ULB in the state</td><td>Any third party contracted for IT/program support</td></tr></tbody></table>
 
-***
+[^1]: Cl. 3 of the Information Technology (Reasonable security practices and procedures and sensitive personal data or information) Rules, 2011.&#x20;
 
-1. Sec 2(o) of the Information Technology Act, 2000. Access the law [here](https://www.indiacode.nic.in/bitstream/123456789/13116/1/it\_act\_2000\_updated.pdf) ↑
-2. Cl. 2(i) Information Technology (Reasonable security practices and procedures and sensitive personal data or information) Rules, 2011. Access the rules [here ](https://www.meity.gov.in/writereaddata/files/GSR313E\_10511\(1\)\_0.pdf)↑
-3. Cl. 3 of the Information Technology (Reasonable security practices and procedures and sensitive personal data or information) Rules, 2011. ↑
-4. For a more precise technical definition of ‘platform’, as distinct from other types of software, see: … ↑
-5. See section 3, below, for definitions of these roles ↑
+[^2]: For a more precise technical definition of ‘platform’, as distinct from other types of software, see:&#x20;
