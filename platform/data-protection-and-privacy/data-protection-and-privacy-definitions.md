@@ -1,7 +1,3 @@
----
-description: Definitions V1-04-07
----
-
 # Data Protection & Privacy Definitions
 
 ## 1. Data <a href="#_yentqjvvd4su" id="_yentqjvvd4su"></a>
