@@ -6,7 +6,7 @@
 2. Present recommendations for eGov and eGov partners (including state governments) to adopt in order to better align with global best practices
 3. Audience: Internal - ExCo, especially CTO, COO, and Head of Product/External - data policy & privacy researchers, senior bureaucrats.
 
-## **1. Introduction** <a href="#_146i834len05" id="_146i834len05"></a>
+## **Introduction** <a href="#_146i834len05" id="_146i834len05"></a>
 
 ### **A. Why is this document needed?** <a href="#_h8nxdqmj4wa0" id="_h8nxdqmj4wa0"></a>
 
@@ -201,7 +201,7 @@ In 2016, the European Parliament and the European Council adopted the EU data pr
 
 7\) Accountability: The controller shall be responsible for and be able to demonstrate compliance with the GDPR.
 
-### **Appendix B** <a href="#_lc8kqbdz1bgv" id="_lc8kqbdz1bgv"></a>
+## **Appendix B** <a href="#_lc8kqbdz1bgv" id="_lc8kqbdz1bgv"></a>
 
 **Table 2**
 
@@ -209,13 +209,13 @@ In 2016, the European Parliament and the European Council adopted the EU data pr
 
 Common requirements for the IPPs and questions to assess whether an organization meets these requirements are represented in **Table 2** below.
 
-_To note :_
+{% hint style="info" %}
+**Note**
 
-_-The term ‘organization’ here can be interchanged for eGov Foundation ( any third-party service provider to the local government bodies for providing e-government services) or the local government_
+\-The term ‘organization’ here can be interchanged for eGov Foundation ( any third-party service provider to the local government bodies for providing e-government services) or the local government body/municipal body itself.
 
-_body/municipal body itself._
-
-_-Grey boxes are not eGov relevant but stand relevant to local government bodies using e-government systems_
+\-Grey boxes are not eGov relevant but stand relevant to local government bodies using e-government systems.
+{% endhint %}
 
 **Table 2 (Requirement/ Practices for Principle implementation)**
 
