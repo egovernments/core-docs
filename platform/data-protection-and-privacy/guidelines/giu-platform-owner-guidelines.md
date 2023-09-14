@@ -1,76 +1,12 @@
-# GIU\_Platform Owner guidelines for DIGIT website\_DPP\_V1\_05\_06&#x20;
+---
+description: >-
+  Data Protection and Privacy Guidelines for DIGIT Implementations for Platform
+  Owners
+---
 
-**Data Protection and Privacy Guidelines for DIGIT Implementations**
+# GIU Platform Owner Guidelines
 
-**( Platform Owners)**
-
-_eGovernments Foundation, June 2023_
-
-### DOCUMENT METADATA <a href="#_58vqdh9ic1z7" id="_58vqdh9ic1z7"></a>
-
-1. Jira project #: GIU-811
-2. Title: Data Protection and Privacy Guidelines for DIGIT Implementations
-3. Version #: 1
-4. Version date: 059/06/23
-5. Objective: Publish these guidelines on the DIGIT website
-6. Audience: External
-7. Author: BL , AN
-8. Reviewer(s):
-   1. V1:
-   2. V2: [Anjoo Narayan](mailto:anjoo.narayan@egovernments.org)
-9. Review date:
-10. Notes / Comments:
-11. Works referred: [GIU\_Guidelines\_ DPP\_V1\_23\_02.docx - Google Docs](https://docs.google.com/document/d/1\_XJmWRqWUq83rKv\_MHWqChM-s8LulVQe/edit)
-
-**DOCUMENT METADATA 1**
-
-**Scope of these guidelines - 3**
-
-**A. Basic terms and definitions: 4**
-
-What is data? 4
-
-What is data security? 4
-
-What is data privacy? 4
-
-What is personally identifiable information (PII)? 4
-
-What is a personal data breach? 5
-
-**B. What kind of data does DIGIT handle? 6**
-
-B1. Personal Data / PII of Residents/citizens 6
-
-B2. Personal Data / PII of Employees 7
-
-B3. Non-Personal Data 7
-
-B4. General Compliance with Legal Obligations and Global Best Practices 8
-
-**C. Who handles data in the DIGIT lifecycle? 9**
-
-**D. Guidelines 11**
-
-D.1 Guidelines for all roles 12
-
-D.2 Detailed Guidelines for Platform Owners 14
-
-D.2.1. Stage 0 -Program set-up 15
-
-D.2.2 Stage 1 - Program kickoff 17
-
-D.2.3 Stage 2 - Solution Design 19
-
-D.2.4 Stage 3 - Customisations and Configuration 21
-
-D.2.5 Stage 4 - UAT and Go-Live 23
-
-D.2.6 Stage 5 - Statewide / ULB-wide Rollout 24
-
-D.2.7 Stage 6 - Sustenance and Maintenance 25
-
-### Scope of these guidelines - <a href="#_vj7zzjs0bsw1" id="_vj7zzjs0bsw1"></a>
+## Scope  <a href="#_vj7zzjs0bsw1" id="_vj7zzjs0bsw1"></a>
 
 DIGIT, an open-source platform, provides a citizen-facing service delivery system in the fields of urban governance, sanitation, health, and public finance management.
 
@@ -84,7 +20,7 @@ This document is created to be an online guide, providing guidelines for platfor
 
 References made to DIGIT are also applicable to other platforms similar to DIGIT. Not all parts of the guidelines or featured content may match the reader's platform, hence this document is open to be referred to in parts as needed.
 
-### **Basic terms and definitions:** <a href="#_3znysh7" id="_3znysh7"></a>
+## **Basic Terms & Definitions** <a href="#_3znysh7" id="_3znysh7"></a>
 
 ### **What is data?** <a href="#_1o66mexb72h4" id="_1o66mexb72h4"></a>
 
@@ -131,7 +67,7 @@ Both the above definitions can be read together, but the definition given in the
 
 The DIGIT platform does not handle data unless and until it is implemented in a particular context. Each implementation of DIGIT handles a combination of non-personal data and PII; the latter may further be classified into data which, in itself, identifies the individual to whom it pertains (“identified”) and data which, if combined with other data, can identify the individual to whom it pertains (“identifiable”)\[3].
 
-### **B1. Personal Data / PII of Residents/citizens** <a href="#_pa9xsk8yd4hi" id="_pa9xsk8yd4hi"></a>
+## **B1. Personal Data / PII Of Residents/Citizens** <a href="#_pa9xsk8yd4hi" id="_pa9xsk8yd4hi"></a>
 
 Specific data recorded in various applications that may be implemented on DIGIT include name, parent/spouse’s name, mobile number, city, email id, date of birth, door no/address, and pin code. Data from administrative record systems, such as revenue survey number or other property identifier, connection number, meter number etc. may also be recorded. In the event a person makes payments to the local government, information related to the payment, such as transaction number may also be recorded.
 
@@ -139,7 +75,7 @@ Any personal data collected and stored in DIGIT is encrypted, both in storage an
 
 DIGIT implementations are used to provide government services to residents of a given city, town, village etc. The data collected, as described above, are necessary for delivery of such services. When a resident approaches their local government for a particular service, they can be required to share, or allow access to, the information necessary to provide that service.
 
-### **B2. Personal Data / PII of Employees** <a href="#_jnpmymlfya7u" id="_jnpmymlfya7u"></a>
+### **B2. Personal Data / PII Of Employees** <a href="#_jnpmymlfya7u" id="_jnpmymlfya7u"></a>
 
 DIGIT implementations also collect, store, process, and share information pertaining to employees of local government or other government agencies. Specific information can include name, age, gender, details of spouse or dependents, address, administrative details such as employee ID or other reference number, as well as information on bank accounts (used for processing salaries or pensions).
 
@@ -153,7 +89,7 @@ DIGIT implementations may derive, store, process, and share aggregated data. The
 
 DIGIT implementations may collect, store, process, and share telemetry data, which studies how much time is spent on a given screen or field in a workflow / user interface (UI). Such data is normally processed and shared in aggregate, and not used to identify specific individuals. In the event that specific individuals are sought to be identified, such as for user research, their consent will be sought for the further processing or sharing of their data.
 
-### B4. General Compliance with Legal Obligations and Global Best Practices <a href="#_et8374bgapwn" id="_et8374bgapwn"></a>
+### B4. General Compliance With Legal Obligations & Global Best Practices <a href="#_et8374bgapwn" id="_et8374bgapwn"></a>
 
 DIGIT is designed to enable compliance with requirements under Indian law, as well as global best practices, as follows:
 
@@ -164,7 +100,7 @@ DIGIT is designed to enable compliance with requirements under Indian law, as we
 * The requirement for safeguards is further served by providing itemised notice, and by enabling any person to view what data of theirs has been collected / processed / shared (including the purpose for such collection / processing / sharing). Such provision of notice and visibility is further in line with global best practices of notice & user control. Such notice can only be provided in the context of a DIGIT implementation, and eGov provides a draft [privacy policy](https://docs.google.com/document/d/1TlGUZg5stbJPU5ZXUEiLM9LcBCkjmKjsjmEEPxsYCs4/edit?usp=sharing) to implementing entities.
 * With respect to employees and pensioners, the requirements for legal basis, legitimate purpose, and proportionality are generally met by collecting, storing, processing, using, and sharing only such information as is relevant for assigning roles and administrative responsibilities, processing salaries or pensions, and completing any mandatory tax-related reporting.
 
-### **Who handles data in the DIGIT lifecycle?** <a href="#_tyjcwt" id="_tyjcwt"></a>
+### **Who Handles Data In The DIGIT Lifecycle?** <a href="#_tyjcwt" id="_tyjcwt"></a>
 
 The datasets flow from a point of service (POS) device to the integrator system, and from the backend of the integrator system to the DIGIT platform.
 
@@ -187,15 +123,11 @@ In any given implementation of DIGIT, the administering authority (local or stat
 
 The primary responsibility for ensuring compliance with legal obligations and best practices with respect to data security, data protection, and privacy is thus that of the administering authority. To the extent that any other party (including eGov Foundation) serves as an agent of the administering authority, they are similarly considered responsible for ensuring such compliance, to the extent relevant to the tasks that they are performing.
 
-### **Guidelines** <a href="#_rnray17wkmt3" id="_rnray17wkmt3"></a>
+## **Guidelines** <a href="#_rnray17wkmt3" id="_rnray17wkmt3"></a>
 
 These guidelines are to be read through the eyes of specific roles in the journey of adopting a DIGIT-based system or platforms similar to DIGIT in a government entity/ies. For each such ‘role’ , a reader can follow its tasks in a given stage of implementation of DIGIT or such platform, and the guidelines associated with that task and stage.
 
 It is to be noted that similar guidelines can be found for ‘data controllers’ under the General data protection regulation of Europe. There are a few basic and minimum requirements that data controllers (bodies that decide the purpose for processing data and the means used to process the data) have to comply with to ensure data protection by default (DbD and PbD) and design (data minimization,implementing safeguards for protection of data, controlled access to data, limited purposeful storage , etc)\[6]. In Europe, entities are legally obligated to maintain DbD and PbD or else they are heavily penalised.
-
-### &#x20;<a href="#_l4vkx6mcxto8" id="_l4vkx6mcxto8"></a>
-
-### &#x20;<a href="#_vdsd02ubwhc7" id="_vdsd02ubwhc7"></a>
 
 ### **D.1 Guidelines for all roles** <a href="#_1t3h5sf" id="_1t3h5sf"></a>
 

@@ -15,6 +15,8 @@
     * [Data Protection & Privacy Definitions](platform/data-protection-and-privacy/data-protection-and-privacy-definitions.md)
     * [Legal Obligations For Privacy - eGov](platform/data-protection-and-privacy/legal-obligations-for-privacy-egov.md)
     * [Data Protection & Privacy - Global Best Practices](platform/data-protection-and-privacy/data-protection-and-privacy-global-best-practices.md)
+    * [Guidelines](platform/data-protection-and-privacy/guidelines/README.md)
+      * [GIU Platform Owner Guidelines](platform/data-protection-and-privacy/guidelines/giu-platform-owner-guidelines.md)
   * [API Specifications](platform/api-specifications/README.md)
     * [User](platform/api-specifications/user.md)
     * [Access Control](platform/api-specifications/access-control.md)
@@ -427,5 +429,4 @@
 
 ***
 
-* [Import](import/README.md)
-  * [GIU\_Platform Owner guidelines for DIGIT website\_DPP\_V1\_05\_06 ](import/giu\_platform-owner-guidelines-for-digit-website\_dpp\_v1\_05\_06.md)
+* [Import](import.md)
