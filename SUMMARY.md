@@ -25,6 +25,7 @@
       * [GIU Implementing Agency Privacy Policy](platform/data-protection-and-privacy/data-privacy-policy/giu-implementing-agency-privacy-policy.md)
       * [GIU Admin & Program Owner Privacy Policy](platform/data-protection-and-privacy/data-privacy-policy/giu-admin-and-program-owner-privacy-policy.md)
       * [GIU Supporting Agency Privacy Policy](platform/data-protection-and-privacy/data-privacy-policy/giu-supporting-agency-privacy-policy.md)
+    * [GIU Global Standards For All](platform/data-protection-and-privacy/giu-global-standards-for-all.md)
   * [API Specifications](platform/api-specifications/README.md)
     * [User](platform/api-specifications/user.md)
     * [Access Control](platform/api-specifications/access-control.md)
