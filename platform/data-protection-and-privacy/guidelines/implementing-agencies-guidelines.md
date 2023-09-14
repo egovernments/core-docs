@@ -4,7 +4,7 @@ description: >-
   implementing agencies
 ---
 
-# GIU Implementing Agencies Guidelines
+# Implementing Agencies Guidelines
 
 ## **Scope**  <a href="#_finvglukkilj" id="_finvglukkilj"></a>
 
@@ -22,7 +22,7 @@ References made to DIGIT are also applicable to other platforms similar to DIGIT
 
 These guidelines are to be read through the eyes of roles that are part of the Implementation Agencies **(IA)** offices in the journey of adopting a DIGIT-based system or platforms similar to DIGIT in a government entity/ies.
 
-As per the Digital Personal Data Protection Act, 2023 (DPDP Act) an IA would be a data processor\[1]. If the IA gets involved in deciding the purpose and means of the data processing, then it would become a data fiduciary\[2]. The guidelines below cover measures to be in compliance with the DPDP Act.
+As per the [<mark style="color:blue;">Digital Personal Data Protection Act, 2023</mark> ](#user-content-fn-1)[^1]\(DPDP Act) an IA would be a data processor. If the IA gets involved in deciding the purpose and means of the data processing, then it would become a [<mark style="color:blue;">data fiduciary</mark>](#user-content-fn-2)[^2]. The guidelines below cover measures to be in compliance with the DPDP Act.
 
 If a government authority adopts DIGIT as a citizen service platform, then these guidelines are apt. Some points in the guidelines may not be relevant to platforms other than DIGIT in the governance ecosystem. Hence these guidelines have to be read as advisory.
 
@@ -57,7 +57,7 @@ A program can be a delivery of any government service/s which the AA is mandated
 
 **Must-haves:**
 
-* IA must ensure there is an authorization document/proof/contract (MoU) - validating and authorizing the IA’s access to future data and its related compliances ( in compliance with Sec 8 of the Digital Personal Data Protection Act,2023\[3])
+* IA must ensure there is an authorization document/proof/contract (MoU) - validating and authorizing the IA’s access to future data and its related compliances ( in compliance with Sec 8 of the [Digital Personal Data Protection Act,2023](https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf))
 * IA presents its own data management and privacy policy to the AA or Prog. This would make the IA’s stand on DPP very clear and easier for the AA or Prog to design a data sharing/access agreement with the IA
 * The clauses and language in the MoU/ data access/sharing agreement with the AA or Prog must include:
 * Data will always be controlled by the AA or the Prog, and IA will never have data-controlling power (IA must not decide the purpose and means of the processing of the data)
@@ -98,7 +98,7 @@ A program can be a delivery of any government service/s which the AA is mandated
 **Must-haves**
 
 * The IA restricts or disallows any direct PII from being sent to it. The IA intimates the AA/Prog representatives to mask or encrypt the data in the manner
-* IA trains AA and its own employees in data best practices like purpose-based data access, strict password controls and data sharing hygiene and makes all aware of the legal consequences of breach of data and confidentiality\[4].
+* IA trains AA and its own employees in data best practices like purpose-based data access, strict password controls and data sharing hygiene and makes all aware of the legal consequences of [<mark style="color:blue;">breach of data and confidentiality</mark>](#user-content-fn-3)[^3].
 * To follow the DPDP Act :
   * the IA maintains an audit log of the data ( to provide a summary of personal data processed to the data fiduciary)
 * Maintain the completeness, accuracy, and consistency of personal data \[ Section 8(3)]
@@ -108,7 +108,7 @@ A program can be a delivery of any government service/s which the AA is mandated
 **Preferable/Good practices**
 
 * IA encourages AA or Prog to:
-* Collect data only if it is needed for a specific legitimate reason and defined purpose (data minimisation\[5], legitimate purpose\[6]).
+* Collect data only if it is needed for a specific legitimate reason and defined purpose ([<mark style="color:blue;">data minimisation</mark>](#user-content-fn-4)[^4], [<mark style="color:blue;">legitimate purpose</mark>](#user-content-fn-5)[^5]).
 * Proactively inform the citizens about the legal basis and reason/purpose for their data being collected (when collected directly from the resident)
 * Data is encrypted or masked when data is being migrated from paper to digital or old or new digital systems
 * Strategies for safe storage of data (on paper or digitally) are set.
@@ -144,7 +144,7 @@ In workflows and processes-
 
 **Preferable/Good practices**
 
-* IA conducts a risk assessment of the customizations asked for by the AA or Prog checking (proportionality test\[7]) risks and harms that may cause a breach of data privacy and confidentiality. Assessment will take into consideration the impact that data use may have on an individual(s) and/or group(s) of individuals, whether known or unknown at the time of data use\[8].
+* IA conducts a risk assessment of the customizations asked for by the AA or Prog checking ([<mark style="color:blue;">proportionality test</mark>](#user-content-fn-6)[^6]) risks and harms that may cause a breach of data privacy and confidentiality. [<mark style="color:blue;">Assessment</mark> ](#user-content-fn-7)[^7]will take into consideration the impact that data use may have on an individual(s) and/or group(s) of individuals, whether known or unknown at the time of data use\[8].
 * Include security checks at each level of implementation of the platform for data to be kept secure and safe.
 
 ### **B.4 Stage 3 - Customization & Configuration** <a href="#_bdthvay7dk5r" id="_bdthvay7dk5r"></a>
@@ -268,19 +268,20 @@ A data security checklist should include-
 
 IA documents how it enables privacy-preserving implementation modules and makes them available for other players in the implementation ecosystem to pick from.
 
-
-
-***
-
-1.  Sec 2(k) “Data Processor” means any person who processes personal data on behalf of a Data Fiduciary;
+[^1]: Sec 2(k) “Data Processor” means any person who processes personal data on behalf of a Data Fiduciary;
 
     Sec 2(t) “personal data” means any data about an individual who is identifiable by or in relation to such data;
 
-    Sec 2 (x) “processing” in relation to personal data, means a wholly or partly automated operation or set of operations performed on digital personal data and includes operations such as collection, recording, organisation, structuring, storage, adaptation, retrieval, use, alignment or combination, indexing, sharing, disclosure by transmission, dissemination or otherwise making available, restriction, erasure or destruction ↑
-2. Sec 2 (i) “Data Fiduciary” means any person who alone or in conjunction with other persons determines the purpose and means of processing personal data ↑
-3. [Digital Personal Data Protection Act 2023.pdf (meity.gov.in)](https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf) ↑
-4. The Information Technology Act, 2000 prescribe monetary fines and imprisonment for breaches of data and confidentiality of citizens. ↑
-5. Refer to the principle of data minimisation and storage limitation [here](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit) ↑
-6. For each item of data collected, stored, processed, or shared, there should be a clear purpose identified; this purpose must flow from a legitimate task that the entity collecting it (i.e. a ULB) is mandated & authorized to perform (hence, legitimate), and this purpose must be communicated to the citizen. This is closely related to the concepts of data minimisation, purpose limitation, and role-based access. ↑
-7. The proportionality test was prescribed for in the J.Puttaswamy judgement. This test is for data processing bodies to analyse how much of a risk the use of the data puts the person to whom the data belongs versus the benefits it brings to that person simultaneously. A balance between the benefits and the risks must be found. ↑
-8. An assessment of harms should consider such key factors as - (i) the likelihood of occurrence of harms, (ii) the potential magnitude of harms and (iii) the potential severity of harms. Additionally, the assessment should take into account the digital literacy of both potential users of data and those individuals whose data is being used. ↑
+    Sec 2 (x) “processing” in relation to personal data, means a wholly or partly automated operation or set of operations performed on digital personal data and includes operations such as collection, recording, organisation, structuring, storage, adaptation, retrieval, use, alignment or combination, indexing, sharing, disclosure by transmission, dissemination or otherwise making available, restriction, erasure or destruction
+
+[^2]: Sec 2 (i) “Data Fiduciary” means any person who alone or in conjunction with other persons determines the purpose and means of processing personal data&#x20;
+
+[^3]: The Information Technology Act, 2000 prescribe monetary fines and imprisonment for breaches of data and confidentiality of citizens.&#x20;
+
+[^4]: Refer to the principle of data minimisation and storage limitation [here](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit)&#x20;
+
+[^5]: For each item of data collected, stored, processed, or shared, there should be a clear purpose identified; this purpose must flow from a legitimate task that the entity collecting it (i.e. a ULB) is mandated & authorized to perform (hence, legitimate), and this purpose must be communicated to the citizen. This is closely related to the concepts of data minimisation, purpose limitation, and role-based access.&#x20;
+
+[^6]: The proportionality test was prescribed for in the J.Puttaswamy judgement. This test is for data processing bodies to analyse how much of a risk the use of the data puts the person to whom the data belongs versus the benefits it brings to that person simultaneously. A balance between the benefits and the risks must be found.&#x20;
+
+[^7]: An assessment of harms should consider such key factors as - (i) the likelihood of occurrence of harms, (ii) the potential magnitude of harms and (iii) the potential severity of harms. Additionally, the assessment should take into account the digital literacy of both potential users of data and those individuals whose data is being used.&#x20;
