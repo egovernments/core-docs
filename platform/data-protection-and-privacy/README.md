@@ -10,7 +10,14 @@ Most of these functions can be efficiently carried on through digital tools. eGo
 
 When implementing and using digital tools such as DIGIT, government entities and their contractors are likely to collect, store, process, use, and share data, including personally identifiable information (PII) of individuals.&#x20;
 
-This section provides an understanding of the rules and good practices for data protection and privacy, guidelines for implementing these rules and good practices, and templates/draft documents that can be used as part of such data privacy and protection processes.
+This section provides an understanding of the rules and good practices for data protection and privacy, guidelines for implementing these rules and good practices, and templates/draft documents that can be used as part of such data privacy and protection processes. Click on the links below to browse through the details:
+
+* [Data protection & privacy definitions](data-protection-and-privacy-definitions.md)
+* [Legal obligations for privacy - eGov](legal-obligations-for-privacy-egov.md)
+* [Data protection & privacy - global best practices](data-protection-and-privacy-global-best-practices.md)
+* [Guidelines](guidelines/)
+* [Data privacy policy templates](data-privacy-policy/)
+* [Global standards for all](global-standards-for-all.md)
 
 With the recent introduction of the Digital Personal Data Protection Act of 2023, it has become a legal mandate for governments to protect the personal data of citizens and provide them with a right to privacy.&#x20;
 
