@@ -1,62 +1,12 @@
-# GIU\_Supporting agency\_ privacy policy\_V1\_12\_07
+---
+description: Draft data privacy policy for supporting agencies
+---
 
-Draft Data Privacy Policy for Supporting Agencies
+# GIU Supporting Agency Privacy Policy
 
-_eGovernments Foundation, July 2023_
+## **Scope** <a href="#_rabzu5fms5j8" id="_rabzu5fms5j8"></a>
 
-### DOCUMENT METADATA <a href="#_58vqdh9ic1z7" id="_58vqdh9ic1z7"></a>
-
-1. Jira project #: GIU-
-2. Title: Data Privacy Policy for SA
-3. Version #: 1
-4. Version date: 12/07/23
-5. Objective: Publish this policy on the eGov website
-6. Audience: External
-7. Author: BL , AN
-8. Reviewer(s):
-   1. V1: AN
-   2. V2:
-9. Review date:
-10. Notes / Comments:
-11. Works referred: [Detailed Privacy policy - Google Docs](https://docs.google.com/document/d/1TlGUZg5stbJPU5ZXUEiLM9LcBCkjmKjsjmEEPxsYCs4/edit#heading=h.rabzu5fms5j8)
-
-### &#x20;<a href="#_c4p4zqg7bc1i" id="_c4p4zqg7bc1i"></a>
-
-Table of Contents
-
-DOCUMENT METADATA 1
-
-Scope of this document: 3
-
-DATA PRIVACY POLICY FOR IMPLEMENTATION PARTNERS TO USE 4
-
-1\. OBJECTIVE OF THE POLICY 4
-
-2\. ADHERENCE TO DATA PRIVACY PRINCIPLES 4
-
-3\. WHAT DATA DO WE COLLECT? OR WHAT IS ‘DATA’ UNDER THIS ‘PROGRAM’? 5
-
-4\. HOW DO WE COLLECT THIS DATA? 6
-
-5\. HOW DO WE STORE THIS DATA? 6
-
-Data Security Measures : 7
-
-6\. WHY AND HOW DO WE PROCESS, DISCLOSE, AND/OR SHARE THIS DATA? 7
-
-7\. HOW DO WE PROTECT PERSONALLY IDENTIFIABLE INFORMATION (PII)? 8
-
-8.CAN THIS POLICY BE CHANGED? 8
-
-9\. YOUR CONSENT TO DATA COLLECTION, PROCESSING, DISCLOSURE, AND/OR SHARING. 8
-
-10\. GRIEVANCES 9
-
-ANNEXURE A: Common Definitions 10
-
-### **Scope of this document:** <a href="#_rabzu5fms5j8" id="_rabzu5fms5j8"></a>
-
-This document is a sample data privacy and protection policy for support agencies\[1] to pick up and replicate on their user-facing webpages. Entities using this document may make modifications as relevant to the context in which they are using this document.
+This document is a sample data privacy and protection policy for support agencies\[1] to pick up and replicate on their user-facing web pages. Entities using this document may make modifications as relevant to the context in which they are using this document.
 
 This document is a draft for reference and does not have any legal effect in and of itself.
 
@@ -72,11 +22,9 @@ This document is a draft for reference and does not have any legal effect in and
 * By using the draft policy, you agree to release and discharge us from any claims, demands, liabilities, actions, or causes of action arising out of or in connection with the use of the draft policy."
 * It is crucial to seek legal advice to ensure that this policy meets your specific requirements and is enforceable in your jurisdiction.
 
-### &#x20;<a href="#_h04y4rs5use5" id="_h04y4rs5use5"></a>
+### Draft Data Privacy Policy For Support Agencies <a href="#_1ecswlfkrkru" id="_1ecswlfkrkru"></a>
 
-### DRAFT DATA PRIVACY POLICY FOR SUPPORT AGENCIES <a href="#_1ecswlfkrkru" id="_1ecswlfkrkru"></a>
-
-_\<SUPPORT AGENCY NAME> as a SUPPORT AGENCY **(SA)**\[2]_ (**“we” or “us” or “our”**) _for \<PROGRAM NAME>_ respects the privacy of the users (“**user” or “you” also referred to as ‘your**’). Hence, we maintain the highest standards for secure activities , user information/data privacy and security.
+_\<SUPPORT AGENCY NAME> as a SUPPORT AGENCY **(SA)**\[2]_ (**“we” or “us” or “our”**) _for \<PROGRAM NAME>_ respects the privacy of the users (“**user” or “you” also referred to as ‘your**’). Hence, we maintain the highest standards for secure activities, user information/data privacy and security.
 
 \<PROGRAM NAME> is implemented through a collaboration between the \<ADMINISTERING AUTHORITY NAME>, and/or \<IMPLEMENTATION AGENCY NAME>> and eGovernments Foundation. It is powered by DIGIT, which is an open-source software platform developed by eGovernments Foundation.
 
@@ -90,13 +38,13 @@ You can use \<PROGRAM NAME> website/application/services in different ways such 
 
 ### **1. OBJECTIVE OF THE POLICY** <a href="#_6hxaq7bvh6" id="_6hxaq7bvh6"></a>
 
-The purpose of this policy is to maintain the privacy of and protect the personal information of users, employees, contractors, vendors, interns, associates, and partners of \<PROGRAM NAME>. The \<PROGRAM NAME> ensure compliance with laws and regulations applicable (partner to insert a list of laws they have to comply with ) to \<PROGRAM NAME>.
+The purpose of this policy is to maintain the privacy of and protect the personal information of users, employees, contractors, vendors, interns, associates, and partners of \<PROGRAM NAME>. The \<PROGRAM NAME> ensures compliance with laws and regulations applicable (partner to insert a list of laws they have to comply with ) to \<PROGRAM NAME>.
 
 ### **2. ADHERENCE TO DATA PRIVACY PRINCIPLES** <a href="#_iwi6yfgj0jwc" id="_iwi6yfgj0jwc"></a>
 
 We adhere to the principles of accountability, transparency, purposeful and proportional collection, usage, storage and disclosure of personal data (“PD”)\[3].
 
-### **3. WHAT DATA DO WE COLLECT, ACCESS?** <a href="#_gjdgxs" id="_gjdgxs"></a>
+### **3. WHAT DATA DO WE COLLECT AND ACCESS?** <a href="#_gjdgxs" id="_gjdgxs"></a>
 
 We only access, store, process, use, or share any information/data (“data”) to assist the program owner/implementation agency. None of the above takes place without a written authorization agreement with the program owner/administering authority.
 
@@ -108,13 +56,13 @@ We access data that is required to provide for the functional working, upkeep, t
 
 We process data as a byproduct of the work we undertake for the program owner or administering authority.
 
-We may store and share data that is required to execute the responsibilities given to us. Such storage will be temporary till the period of our work ends. Such sharing shall be restricted to internal teams, for third-party sharing of data , we would have authorizations in place by administering authorities or the program owners.
+We may store and share data that is required to execute the responsibilities given to us. Such storage will be temporary till the period of our work ends. Such sharing shall be restricted to internal teams, for third-party sharing of data, we would have authorizations in place by administering authorities or the program owners.
 
 We also access, store, process, and share information pertaining to employees of our own as well as local government or other government agencies. Specific information can include name, age, gender, details of spouse or dependents, address, administrative details such as employee ID or other reference number, as well as information on bank accounts (used for processing salaries or pensions).
 
 We also access, store, process, and share transactional data, which describes the progress of any ongoing task (e.g. any service requested by a resident) through the systems of the local government or other government agency. This can include information about the specific role to whom a given task is assigned (or with whom it is pending), the amount of time elapsed on processing / completing a given request (or task / sub-part thereof), and whether this task has been completed within the benchmark or designated amount of time. It can also include details about the channel through which a particular request was received, such as the ULB counter, service centre, website, helpline, mobile app, chatbot, etc.
 
-We derive, store, process, and share aggregated data. These aggregates are derived from the transactional data. This includes data such as aggregate or cumulative revenue collection, aggregate or cumulative number of service requests, percentage of requests resolved within the benchmark time period, etc. The above data may be further analysed and presented in terms of type of collection, request, or complaint, the channel through which it was received, etc.
+We derive, store, process, and share aggregated data. These aggregates are derived from the transactional data. This includes data such as aggregate or cumulative revenue collection, aggregate or cumulative number of service requests, percentage of requests resolved within the benchmark time period, etc. The above data may be further analysed and presented in terms of the type of collection, request, or complaint, the channel through which it was received, etc.
 
 We may collect, store, process, and share telemetry data, which studies how much time is spent on a given screen or field in a workflow/user interface (UI). Such data is normally processed and shared in aggregate, and will not be used to identify specific individuals. In the event that specific individuals are sought to be identified, such as for user research, their consent will be sought for the further processing or sharing of their data.
 
@@ -124,35 +72,35 @@ We are either handed over such data by the Service providers or are given author
 
 We do not collect any PD directly from you. We are given authorized access logins by the Program Owners or the Service providers.
 
-We stop accessing, processing, using and storing any PD from the time our role or functions cease i.e either end of the agreed period or till final handover.
+We stop accessing, processing, using and storing any PD from the time our role or functions cease i.e. either end of the agreed period or till the final handover.
 
 ### **5. HOW DO WE STORE THIS DATA?** <a href="#_vrm87gyognlw" id="_vrm87gyognlw"></a>
 
-We do not directly store any data in our systems.We are given limited time access to the storage of the service providers. Such access is required for our functional purposes. Once our purpose is served, our access to such storage ceases to exist.
+We do not directly store any data in our systems. We are given limited-time access to the storage of the service providers. Such access is required for our functional purposes. Once our purpose is served, our access to such storage ceases to exist.
 
-### **Data Security Measures :** <a href="#_jlsxwfltrv40" id="_jlsxwfltrv40"></a>
+## **Data Security Measures** <a href="#_jlsxwfltrv40" id="_jlsxwfltrv40"></a>
 
-With respect to data that we access, we adopt the following safeguards:
+With respect to the data that we access, we adopt the following safeguards:
 
 * Define roles for our employees, and only grant access to such data as is needed for them to perform their roles
 * Maintain logs of access to the program’s systems by these roles, and enable the program owner / administrative agency or other authorised agencies to audit these access logs periodically
-* We do not store data from the platform implementation / program in our own systems; the employees who have access to this data work on the devices and / or systems of the program owner
-* We do not share data from the platform implementation / program with any third party, except as specified in our contract with the program owner / administrative authority.
+* We do not store data from the platform implementation/program in our own systems; the employees who have access to this data work on the devices and/or systems of the program owner
+* We do not share data from the platform implementation/program with any third party, except as specified in our contract with the program owner / administrative authority.
 
-### **6. WHY AND HOW DO WE ACCESS,PROCESS, AND/OR SHARE THIS DATA?** <a href="#_ntnfp4zclsjx" id="_ntnfp4zclsjx"></a>
+### **6. WHY AND HOW DO WE ACCESS, PROCESS, AND/OR SHARE THIS DATA?** <a href="#_ntnfp4zclsjx" id="_ntnfp4zclsjx"></a>
 
-We use this data to enable the service providers with the requirements they appoint us for, such as setting up hardware, customising , extending, configuring and installing the software, assisting in implementation, training etc. Specifically:
+We use this data to enable the service providers with the requirements they appoint us for, such as setting up hardware, customising, extending, configuring and installing the software, assisting in implementation, training etc. Specifically:
 
 * _**We access data (either anonymised/metadata) for:**_
 * Studying the feasibility of the requirements asked for by the Service providers
-* Creating an implementation plan for the administering authority ( the plan would have no PD, but to design the implementation plan , a study of PD would be undertaken)
+* Creating an implementation plan for the administering authority ( the plan would have no PD, but to design the implementation plan, a study of PD would be undertaken)
 * Measuring the performance and adoption metrics
-* Training and awareness building activities
+* Training and awareness-building activities
 * We may access and process data for conducting research or analysing user preferences and demographics if asked to by the service providers ( statistical data and not any individual data)
 * _**We access PII for:**_
 * Testing for to be deployed or integrated hardware and software at identified urban local bodies or jurisdictions - as instructed to us by the service providers.
 * Master data cleaning and validation before deployment and integration
-* For resolving any disputes, troubleshooting any problems, solving for critical bugs that may arise with respect to the use of the platform.
+* For resolving any disputes, troubleshooting any problems, and solving for critical bugs that may arise with respect to the use of the platform.
 * Sharing data in order to comply with the law or any legal process, including when required in judicial, arbitral, or administrative proceedings.
 
 _We will not process, disclose, or share your data except as described in this policy or as otherwise authorized by the Service Providers.._
@@ -161,7 +109,7 @@ _We will not process, disclose, or share your data except as described in this p
 
 By default, we do not display, or store any PD. Only persons with the appropriate authorisation can access PII. We log each such request, thus creating a non-repudiable and auditable trail of each such access to PD\[4]. We do not share any PD unless asked to do as under a contractual understanding with the Service provider.
 
-### **8.CAN THIS POLICY BE CHANGED?** <a href="#_6g23la1mv7t2" id="_6g23la1mv7t2"></a>
+### **8. CAN THIS POLICY BE CHANGED?** <a href="#_6g23la1mv7t2" id="_6g23la1mv7t2"></a>
 
 Yes, this policy is subject to change at any time and without notice. This page will be updated with any such modified policy, and such changes will not be deemed to take effect until and unless they are shown on this page. You are reading the current version of the policy.
 
@@ -171,9 +119,13 @@ By using this service, you confirm that you have read, understood, and accepted 
 
 ### **10. GRIEVANCES** <a href="#_d7h7kmuz114i" id="_d7h7kmuz114i"></a>
 
-In case of any grievances, you may send your complaints for redressal over Grievance Portal available at \<LINK TO GRIEVANCE PORTAL / MECHANISM>.
+In case of any grievances, you may send your complaints for redressal over the Grievance Portal available at \<LINK TO GRIEVANCE PORTAL / MECHANISM>.
 
-1. A ‘Supporting agency’ is one that provides support in any functional aspect required by the program owner with respect to that platform implementation (e.g. assistance in maintenance of platform, technical or operational problem-solving, bug/error resolution). ↑
+
+
+***
+
+1. A ‘Supporting agency’ is one that provides support in any functional aspect required by the program owner with respect to that platform implementation (e.g. assistance in maintenance of the platform, technical or operational problem-solving, bug/error resolution). ↑
 2. An IA is an agency that deploys and configures a platform for the program owner ↑
-3. Once the PDP Bill is introduced, a formal / detailed Privacy Policy can be drafted and linked here. ↑
+3. Once the PDP Bill is introduced, a formal/detailed Privacy Policy can be drafted and linked here. ↑
 4. As above, this can be detailed in the Full Privacy Policy. ↑
