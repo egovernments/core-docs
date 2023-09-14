@@ -18,7 +18,7 @@
     * [Guidelines](platform/data-protection-and-privacy/guidelines/README.md)
       * [GIU Platform Owner Guidelines](platform/data-protection-and-privacy/guidelines/giu-platform-owner-guidelines.md)
       * [GIU Implementing Agencies Guidelines](platform/data-protection-and-privacy/guidelines/giu-implementing-agencies-guidelines.md)
-      * [GIU\_AA guidelines for DIGIT website\_DPP\_V1\_06\_06 ](platform/data-protection-and-privacy/guidelines/giu\_aa-guidelines-for-digit-website\_dpp\_v1\_06\_06.md)
+      * [GIU Admin Guidelines](platform/data-protection-and-privacy/guidelines/giu-admin-guidelines.md)
       * [GIU\_Program Owner guidelines \_DPP\_V1\_20\_07](platform/data-protection-and-privacy/guidelines/giu\_program-owner-guidelines-\_dpp\_v1\_20\_07.md)
   * [API Specifications](platform/api-specifications/README.md)
     * [User](platform/api-specifications/user.md)
