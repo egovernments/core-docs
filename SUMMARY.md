@@ -424,3 +424,8 @@
 * [Beneficiary Eligibility](focus-areas/beneficiary-eligibility.md)
 * [Government and Open Digital Platforms](focus-areas/government-and-open-digital-platforms.md)
 * [Microservices and Low Code No Code](focus-areas/microservices-and-low-code-no-code.md)
+
+***
+
+* [Import](import/README.md)
+  * [GIU\_Platform Owner guidelines for DIGIT website\_DPP\_V1\_05\_06 ](import/giu\_platform-owner-guidelines-for-digit-website\_dpp\_v1\_05\_06.md)
