@@ -6,7 +6,7 @@ description: Generate Project Stub
 
 **Steps:** The first step in developing a microservice starts with preparing [Swagger ](https://swagger.io/docs/specification/2-0/what-is-swagger/)contracts that detail all the APIs that the service is going to expose for external consumption.
 
-Use the Swagger Codegen tool and SwaggerHub to generate server stubs and client SDKs using these Swagger contracts.
+eGov uses a customised [Swagger Codegen ](https://github.com/egovernments/Digit-Core/blob/codegen-openapi-3.0/accelerators/codegen/codegen-RELEASE-1.0.jar)tool. Please download the jar file and make sure it is available in the class path. Use the [Swagger Codegen tool](https://github.com/egovernments/Digit-Core/blob/codegen-openapi-3.0/accelerators/codegen/codegen-RELEASE-1.0.jar) to generate client SDKs using these Swagger contracts.&#x20;
 
 {% hint style="info" %}
 The following tutorial can be used for the creation of Swagger contracts -&#x20;
@@ -14,7 +14,7 @@ The following tutorial can be used for the creation of Swagger contracts -&#x20;
 [OpenAPI 3.0 Tutorial| Swagger Tutorial For Beginners | Design REST API Using Swagger Editor](https://youtu.be/mViFmjcDOoA)&#x20;
 {% endhint %}
 
-Download the customized Codegen jar from [here](https://github.com/egovernments/DIGIT-OSS/blob/DIGIT\_DEVELOPER\_GUIDE/utilities/codegen-1.0-SNAPSHOT-jar-with-dependencies.jar) and make sure it is available in the class path.&#x20;
+
 
 Following is the generic command to create an API skeleton for any swagger contract:
 
@@ -44,14 +44,24 @@ java -jar codegen-1.0-SNAPSHOT-jar-with-dependencies.jar -l -t -u file:///{ABSOL
 
 1. Rename the `output` folder to birth-registration. Import it in Eclipse or VS Code.
 2. Update the spring-boot-starter-parent to 2.2.6-RELEASE in pom.xml. After updating the spring boot version do a maven update.
-3. Put a slash in front of server.contextPath and add this property to application.properties file which helps requests handlers to serve requests -
+3. Make sure the following dependency is present in the pom.xml. If the version is different, make sure to update it to this version shown below:&#x20;
+
+```xml
+<dependency>
+	<groupId>org.egov.services</groupId>
+	<artifactId>services-common</artifactId>
+	<version>2.0.0-SNAPSHOT</version>
+</dependency>
+```
+
+4. Put a slash in front of server.contextPath and add this property to application.properties file which helps requests handlers to serve requests -
 
 ```
 server.contextPath=/birth-registration
 server.servlet.context-path=/birth-registration
 ```
 
-&#x20;4\. Add these external dependencies to pom.xml:
+&#x20;5\. Add these external dependencies to pom.xml:
 
 {% code lineNumbers="true" %}
 ```xml
