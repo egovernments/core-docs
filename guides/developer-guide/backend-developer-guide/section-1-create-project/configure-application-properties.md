@@ -1,24 +1,28 @@
 # Configure Application Properties
 
-**Overview:** The application.properties file is already populated with default values. Please read on to customise and add extra values for your application (if required).&#x20;
+## **Overview**
 
-**Process Flow:** Kafka topics for the module that needs to be added are detailed [here](configure-application-properties.md#kafka-topics-for-module).&#x20;
+The application.properties file is already populated with default values. Please read on to customise and add extra values for your application (if required).&#x20;
+
+## **Process Flow**
+
+Kafka topics for the module that need to be added are detailed [here](configure-application-properties.md#kafka-topics-for-module).&#x20;
 
 {% hint style="info" %}
 There are three ways of accessing services:
 
-a. Run the code locally
+a. Run the code locally.
 
-b. Access the service in a DIGIT environment
+b. Access the service in a DIGIT environment.
 
 c. Access the service locally via port forwarding. This bypasses Zuul's authentication and authorization.&#x20;
 
-Wherever localhost is in the URL, Kubernetes port forwarding has been set up from the dev environment to the specified port. In your setup, modify the URLs for the various services depending on whether you are using them from an environment or running it locally or accessing them via port-forwarding.&#x20;
+Wherever the localhost is in the URL, the Kubernetes port forwarding has been set up from the development environment to the specified port. In your setup, modify the URLs for the various services depending on whether you are using them from an environment or running them locally or accessing them via port-forwarding.&#x20;
 
-For example, if no port forwarding has been done, you will have to provide the FQDN of your digit install instead of localhost. Also, without port forwarding, you will have to update the auth tokens in your .aws profile file periodically.&#x20;
+For example, if no port forwarding has been done, you will have to provide the FQDN of your DIGIT install instead of localhost. Also, without port forwarding, you will have to update the auth tokens in your .aws profile file periodically.&#x20;
 {% endhint %}
 
-All dependent service host URLs and API endpoints should be added in application.properties. This guide uses the User, Localisation, HRMS, IDGen, MDMS & workflow services running in a DIGIT dev environment.&#x20;
+Include all the necessary service host URLs and API endpoints in the "application.properties" file. This guide specifically references the User, Localisation, HRMS, IDGen, MDMS, and Workflow services that are operational within the DIGIT development environment.
 
 **Steps:** Add the following properties to the `application.properties` file.
 
@@ -58,9 +62,9 @@ egov.workflow.businessservice.search.path=/egov-workflow-v2/egov-wf/businessserv
 egov.workflow.processinstance.search.path=/egov-workflow-v2/egov-wf/process/_search
 ```
 
-The following properties must be added for configuring the database and Kafka server (Use the default values, in case you want to tune the Kafka server that can be overwritten during deployment).
+The following properties must be added for configuring the database and Kafka server (Use the default values, in case you want to tune in the Kafka server that can be overwritten during deployment).
 
-Once all the external dependencies have been added to pom.xml and these maven changes have been reloaded, the following properties should be added to application.properties file to configure the database and Kafka for development -
+After adding the external dependencies to the "pom.xml" file and reloading the Maven changes, proceed by including the following properties in the "application.properties" file to configure the database and Kafka for development purposes.
 
 ```properties
 #DATABASE CONFIGURATION
@@ -70,7 +74,7 @@ spring.datasource.username=birth
 spring.datasource.password=birth
 ```
 
-### Kafka Configuration
+## Kafka Configuration
 
 ```properties
 # KAFKA SERVER CONFIGURATIONS
@@ -98,7 +102,7 @@ kafka.producer.config.buffer_memory_config=33554432
 
 ### Kafka Topics For Module
 
-Append Kafka to create and update topics for the module. DIGIT services use different to create and update topics per module:
+To create and update Kafka topics for the module, append Kafka configurations as per the specific requirements of the DIGIT services. Each module may use different configurations to manage its topics.
 
 ```properties
 # Birth registration Kafka config

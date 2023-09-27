@@ -1,8 +1,12 @@
 # Import Core Models
 
-**Overview:** The pom.xml has most of the below dependencies added at project generation time. Check and update in case any of the following are missing.
+## **Overview**
 
-**Process Flow:** Models/POJOs of the dependent service can be imported from the digit-core-models library (work on creating the library is ongoing). These models will be used in integration with the dependent services.
+The pom.xml has most of the below dependencies added at project generation time. Check and update in case any of the following are missing.
+
+## **Process Flow**
+
+Models/POJOs of the dependent service can be imported from the digit-core-models library (work on creating the library is ongoing). These models will be used in integration with the dependent services.
 
 ```xml
 <dependency>
@@ -34,9 +38,9 @@
 </repositories>
 ```
 
-These are pre-written libraries which contain tracer support, common models like MDMS, Auth and Auth and capability to raise custom exceptions.
+These are pre-written libraries which contain tracer support, common models like MDMS, Auth and Auth and the capability to raise custom exceptions.
 
-Once these core models are imported, it is safe to delete the RequestInfo, ResponseInfo classes from the models folder and use the ones present in the common contract that is imported.
+Once these core models are imported, it is safe to delete the RequestInfo, and ResponseInfo classes from the models folder and use the ones present in the common contract that is imported.
 
 **Steps:** Before starting development, create/update the following classes as given below.
 

@@ -1,8 +1,12 @@
 # Create Database
 
-**Overview:** Once PostgreSQL (v10) has been installed and the basic setup is done, we use Flyway to create the tables.&#x20;
+## **Overview**
 
-**Steps:** The following properties should be configured in application.properties file to enable flyway migration:
+Once PostgreSQL (v10) has been installed and the basic setup is done, we use Flyway to create the tables.&#x20;
+
+## **Steps**
+
+The following properties should be configured in the application.properties file to enable flyway migration:
 
 ```properties
 spring.flyway.url=jdbc:postgresql://localhost:5432/birthregn
