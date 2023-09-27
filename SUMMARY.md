@@ -142,13 +142,13 @@
   * [Training and Certification](get-started/training-and-certification/README.md)
     * [Training Resources](get-started/training-and-certification/training-resources.md)
 * [🛣 Roadmap](roadmap.md)
-* [🕚 Open Events](open-events.md)
+* [🎬 Open Events](open-events.md)
 * [👩💻 Source Code](https://github.com/egovernments/DIGIT-OSS)
-* [Project Plan](https://github.com/orgs/egovernments/projects/2)
-* [Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
-* [Contribute](contribute.md)
+* [👁 Project Plan](https://github.com/orgs/egovernments/projects/2)
+* [📋 Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
+* [🤝 Contribute](contribute.md)
 
-## Guides
+## 📘 Guides
 
 * [Installation Guide](guides/installation-guide/README.md)
   * [DIGIT Deployment](guides/installation-guide/digit-deployment.md)
@@ -360,7 +360,7 @@
   * [OAuth2-Proxy Setup](guides/operations-guide/oauth2-proxy-setup.md)
   * [Jira Ticket Creation](guides/operations-guide/jira-ticket-creation.md)
 
-## Reference  <a href="#focus-areas" id="focus-areas"></a>
+## 🔗 Reference  <a href="#focus-areas" id="focus-areas"></a>
 
 * [Setup Basics](focus-areas/setup-basics/README.md)
   * [Setup Requirements](focus-areas/setup-basics/setup-requirements/README.md)
