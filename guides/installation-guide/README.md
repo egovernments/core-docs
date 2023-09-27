@@ -2,7 +2,7 @@
 description: Work in Progress
 ---
 
-# Installation Guide
+# 📓 Installation Guide
 
 DIGIT Core consists of 25+ services that use Postgres, Apache Kafka, Elastic Search etc. It is recommended to deploy DIGIT on a server-grade machine. Installing DIGIT on laptops is not recommended as the free memory requirements might not be met.
 

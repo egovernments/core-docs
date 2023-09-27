@@ -2,7 +2,7 @@
 description: Seeding data in DIGIT post installation
 ---
 
-# Data Setup Guide
+# 💽 Data Setup Guide
 
 Post the installation of DIGIT, follow the guides below to set up data.
 

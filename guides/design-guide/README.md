@@ -2,7 +2,7 @@
 description: For designers and architects
 ---
 
-# Design Guide
+# 🚥 Design Guide
 
 This section provides step by step guide on how to design services on DIGIT. Design is a process of identifying the various layers of abstractions and also unbundling each layer into reusable components. We will start by modelling the requirements into high-level process workflow. This helps us identify the actors and sequence of activities. From this, we can extract the roles, services and workflows. Roles and workflows are configured into DIGIT. DIGIT also comes with many services that can be reused.&#x20;
 
