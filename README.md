@@ -54,19 +54,19 @@ DIGIT is built using platform-based principles that enable the seamless sharing 
 
 Core services and core data registries are grouped together to define the "Foundation" or "Core Platform". These services and registries are reused by services that are part of Urban, Sanitation, Health Platforms etc. All services and registries are exposed through well-defined APIs which can be used to build applications that deliver a unified experience to citizens, employees, vendors, administrators and policymakers.
 
-Refer to the [platform design principles ](platform/principles.md)that define DIGIT capabilities.
+Refer to the [platform design principles ](platform/overview/principles.md)that define DIGIT capabilities.
 
-To enable the capabilities required to develop a good service, DIGIT provides a set of reusable building blocks (microservices) listed below that adhere to the above principles. A developer can build any service or registry by reusing the DIGIT services. DIGIT also provides accelerators like DIGIT Web Dashboard that can be extended to develop citizen, employee and administrator dashboards. More details on each of the services are available on the [Platform Architecture](platform/architecture/service-architecture.md) page.&#x20;
+To enable the capabilities required to develop a good service, DIGIT provides a set of reusable building blocks (microservices) listed below that adhere to the above principles. A developer can build any service or registry by reusing the DIGIT services. DIGIT also provides accelerators like DIGIT Web Dashboard that can be extended to develop citizen, employee and administrator dashboards. More details on each of the services are available on the [Platform Architecture](platform/overview/architecture/service-architecture.md) page.&#x20;
 
 ![DIGIT Services](<.gitbook/assets/image (99) (1).png>)
 
 ## Useful Links
 
-To install and start developing using DIGIT, visit the [Get Started](get-started/) page.
+To install and start developing using DIGIT, visit the [Get Started](platform/get-started/) page.
 
-The list of developer [Checklists/Guidelines](platform/checklists/) ensures that the services built using DIGIT are robust and easy to use.&#x20;
+The list of developer [Checklists/Guidelines](platform/overview/checklists/) ensures that the services built using DIGIT are robust and easy to use.&#x20;
 
-Check out the platform [training resources](get-started/training-and-certification/training-resources.md) page and access our multiple walk-through videos.
+Check out the platform [training resources](platform/get-started/training-and-certification/training-resources.md) page and access our multiple walk-through videos.
 
 ## Contact Us
 
