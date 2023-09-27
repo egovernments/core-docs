@@ -2,7 +2,7 @@
 description: Platform features, architecture, technology and principles explained
 ---
 
-# Platform
+# ⚓ Platform
 
 Explore the different aspects of the DIGIT platform details:
 

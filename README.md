@@ -2,7 +2,7 @@
 description: An open source service delivery and governance platform
 ---
 
-# Introducing DIGIT Platform
+# ☑ Introducing DIGIT Platform
 
 ## Vision
 
