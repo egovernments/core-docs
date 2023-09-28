@@ -4,7 +4,7 @@ description: >-
   (administrative authorities)
 ---
 
-# GIU Admin Guidelines
+# Admin Guidelines
 
 ## **Scope**  <a href="#_finvglukkilj" id="_finvglukkilj"></a>
 
@@ -43,11 +43,11 @@ There may in the future be more roles involved from a government entity while us
 
 _Guidelines to be read with the Digital Personal Data Protection Act, 2023_
 
-As the AA adopts platforms like DIGIT, it gets access to digital personal data and therefore comes into the ambit of the Digital Personal Data Protection Act, 2023 (DPDP Act)\[1]. The roles a Prog plays as per the DPDP Act, can be of a data fiduciary\[2] and/or of a data processor\[3]. The AA decides the purposes and means of processing the digital personal data-making it a data fiduciary under the Acr. Therefore obligations for data fiduciaries have to be considered for an AA to remain compliant with the DPDP Act,2023.
+As the AA adopts platforms like DIGIT, it gets access to digital personal data and therefore comes into the ambit of the [Digital Personal Data Protection Act, 2023](https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf) (DPDP Act). The roles a Prog plays as per the DPDP Act, can be of a [<mark style="color:blue;">data fiduciary</mark>](#user-content-fn-1)[^1] and/or of a [<mark style="color:blue;">data processor</mark>](#user-content-fn-2)[^2]. The AA decides the purposes and means of processing the digital personal data-making it a data fiduciary under the Acr. Therefore obligations for data fiduciaries have to be considered for an AA to remain compliant with the DPDP Act,2023.
 
 For these guidelines, we assume that the AA processes or directs the processing of digital personal data to provide for certain benefits, services, certificates, licenses or permits ( these cover most of the functions that DIGIT provides and are mandates of Urban Local Bodies )
 
-It is to be noted that similar guidelines can be found for ‘data controllers’ under the European General Data Protection Regulation (GDPR). There are a few basic and minimum requirements that data controllers (bodies that decide the purpose for processing data and the means used to process the data) have to comply with to ensure data protection by default (DbD and PbD) and design (data minimization, implementing safeguards for protection of data, controlled access to data, limited purposeful storage, etc)\[4]. In Europe, government entities are legally obligated to maintain DbD and PbD or else they are heavily penalised.
+It is to be noted that similar guidelines can be found for ‘data controllers’ under the European General Data Protection Regulation (GDPR). There are a few basic and minimum requirements that data controllers (bodies that decide the purpose for processing data and the means used to process the data) have to comply with to ensure [<mark style="color:blue;">data protection by default</mark> ](#user-content-fn-3)[^3]\(DbD and PbD) and design (data minimization, implementing safeguards for protection of data, controlled access to data, limited purposeful storage, etc). In Europe, government entities are legally obligated to maintain DbD and PbD or else they are heavily penalised.
 
 ### **B.1 Guidelines For All Roles** <a href="#_1t3h5sf" id="_1t3h5sf"></a>
 
@@ -57,7 +57,7 @@ _Data security measures and practices stand out as the core / foundational guide
 
 Data Privacy and Protection **(DPP)** is only possible when the systems and computer resources receiving and storing data are secure (safe from any harm). Some key data security measures include:
 
-* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a legitimate purpose to access the data.\[5]
+* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a [legitimate purpose](../../../focus-areas/data-security/signed-data-audit.md) to access the data.
 * Encryption: Encrypt PII data both in transit and at rest to protect it from unauthorized access and theft.
 * Data backup and disaster recovery: Regularly backing up PII data - including auditing the need for PII - if not required then deleting the PII, and implementing disaster recovery plans to ensure that important data can be recovered in the event of a data loss or breach.
 * Network security: Implement firewalls, intrusion detection and prevention systems, and other network security measures to protect against cyber threats.
@@ -125,11 +125,13 @@ At this stage the AA -
 
 * Defines how the IA must ensure that DPP practices are maintained
 * Draft a working agreement which commits the IA to safeguard the data and the right of citizens to data protection and privacy
-* A few clauses which the AA could ask the IA to contractual perform are:
-* Maintain transparency in data practices (API-based data received, shared or used should be visible to the AA)
-* Report any data security breach to the AA
-* Audit and create safeguards against non-authorized third-party access to data
-* Implement appropriate security controls like encryption at source, masking of data, ABAC logins, and conducting regular security audits and checks.
+*   A few clauses which the AA could ask the IA to contractual perform are:
+
+    * Maintain transparency in data practices (API-based data received, shared or used should be visible to the AA)
+    * Report any data security breach to the AA
+    * Audit and create safeguards against non-authorized third-party access to data
+
+    Implement appropriate security controls like encryption at source, masking of data, ABAC logins, and conducting regular security audits and checks.
 * Regularly educate its employees on data privacy, data ethics and data privacy.
 
 The IA can preferably:
@@ -142,7 +144,7 @@ At stage zero, the AA begins to consider which infrastructural systems they woul
 
 A few must-haves the AAs must keep in mind before selecting a cloud infrastructure provider are:
 
-* The Cloud provider has to be compliant with the data processor's obligations\[6] under the Digital Personal Data Protection Act, 2023 \[DPDP **(ACT)**]
+* The Cloud provider has to be compliant with the [<mark style="color:blue;">data processor's obligations</mark>](#user-content-fn-4)[^4] under the Digital Personal Data Protection Act, 2023 \[DPDP **(ACT)**]
 * Maintains and implements data protection policies.
 * Encrypts PII with private keys,
 * Conduct regular security checks and audits on data security and privacy
@@ -174,30 +176,32 @@ A few must-haves the AAs must keep in mind before selecting a cloud infrastructu
 
 **Musts**
 
-* At this stage, a best practice model of master data collection ( steps listed below) is designed - for it to be implemented when actual data is collected at the next stage. - Here master data is the primary data needed for module functionality.
+* At this stage, a best practice model of master data collection (steps listed below) is designed - for it to be implemented when actual data is collected at the next stage. - Here master data is the primary data needed for module functionality.
 * The master data collection model design includes:
 * AA collects minimum personal data - they can do so by collecting personal data only once, using federated databases and interoperable systems to avoid re-collection of personal data.
 * The categories of datasets the AA entity would most necessarily require to provide a service are defined and fixed. This is done so as to adopt the practice of collecting only data that is necessary for the provision of a service at the next stage.
-* Data without any defined use or need is not collected ( data minimisation\[7], legitimate purpose\[8] ).
+* Data without any defined use or need is not collected ([data minimisation](../global-standards-for-all.md#global-standards-for-all), [<mark style="color:blue;">legitimate purpose</mark>](#user-content-fn-5)[^5]).
 * Citizens of the ULBs are informed of the purpose of their data being collected.
 * Data collected at the next stage is stored safely ( on paper or digitally). If collected on paper then once transmitted into a digital system, it is destroyed from the paper or source device.
 * Dashboards displaying the nature of data to be collected and their corresponding purposes and uses are built; (for transparency and awareness of citizens).
 * Specific roles are created for building accountability for safe, limited and purposeful data collection.
 * The program charter clearly states that the data provider i.e. the citizen is the owner of the data.
 * The implementation plan has DPP practices embedded in it. For example in the processes of data migration and data processing, the system does not permit sensitive data to be visible to unauthorized roles, strict logins are maintained, and the implementing partners' employees are trained in safe data handling.
-* Proof of consented collection of personal data (past and future)- either maintained by the AA ( as a data fiduciary ) or maintained by a separate data processor ( any entity that processes personal data for the AA) and given to the AA as and when necessary.
-* Proof of source of personal data -( past and presently held data) which is to be processed is sourced from a database, register or book that is maintained by the administering authority
+* Proof of consented collection of personal data (past and future)- either maintained by the AA (as a data fiduciary) or maintained by a separate data processor ( any entity that processes personal data for the AA) and given to the AA as and when necessary.
+* Proof of source of personal data -(past and presently held data) which is to be processed is sourced from a database, register or book that is maintained by the administering authority
 
-The DPDP Act permits the AA to process or has processed through a processor any personal digital data of citizens for providing a benefit, subsidy, service, certificate, license or permit ( in this case any urban local body function such as birth or death certificate, property license, building plan permit etc) **subject to the below conditions** :
+The DPDP Act permits the AA to process or has processed through a processor any personal digital data of citizens for providing a benefit, subsidy, service, certificate, license or permit (in this case any urban local body function such as birth or death certificate, property license, building plan permit etc) **subject to the below conditions** :
 
-(i) she has previously consented to the processing of her personal data by the Administering authority or any of its instrumentalities for any subsidy, benefit, service, certificate, licence or permit; or (ii) such personal data is available in digital form in, or in non-digital form and digitised subsequently from any database, register, book or other document which is maintained by the administering authority or any of its instrumentalities and is notified by the Central Government. All of the above must follow standards that the Central Government may set as policies to follow for processing.
+(i) she has previously consented to the processing of her personal data by the Administering authority or any of its instrumentalities for any subsidy, benefit, service, certificate, licence or permit; or&#x20;
+
+(ii) such personal data is available in digital form in, or in non-digital form and digitised subsequently from any database, register, book or other document which is maintained by the administering authority or any of its instrumentalities and is notified by the Central Government. All of the above must follow standards that the Central Government may set as policies to follow for processing.
 
 Such previously consented evidence for personal data collection must be maintained for compliance.
 
 * Before master data collection (which partly begins in this stage but is majorly conducted at the next stage), AA arranges for staff/employee training in regard to information privacy protection and awareness of relevant policies regarding citizen's privacy protection
 * The AA begins to draft a privacy policy, envisioning its data governance model.
 * AA ensures that the IA is onboarding a team with appropriate skill sets through reviews and initial expectation-setting
-* The implementation kickoff workshops with representatives of the AAs includes training on purposeful master data collection (for the next stage) in an informed and transparent manner ( letting the citizen know why they are collecting the data).
+* The implementation kickoff workshops with representatives of the AAs includes training on purposeful master data collection (for the next stage) in an informed and transparent manner (letting the citizen know why they are collecting the data).
 * As suggested in the above stage, a secure cloud infrastructure provider is appointed.
 
 ### **B.2.3 Stage 2 - Solution Design** <a href="#_rxglyh1if8ij" id="_rxglyh1if8ij"></a>
@@ -430,3 +434,27 @@ _Stage 2: Solution design_
 10. The proportionality test was prescribed for in the J.Puttaswamy judgement. This test is for data processing bodies to analyse how much of a risk the use of the data puts the person to whom the data belongs versus the benefits it brings to that person simultaneously. A balance between the benefits and the risks must be found. ↑
 11. An assessment of harms should consider such key factors as - (i) the likelihood of occurrence of harms, (ii) the potential magnitude of harms and (iii) the potential severity of harms. Additionally, the assessment should take into account the digital literacy of both potential users of data and those individuals whose data is being used. ↑
 12. Refer to the principle of notice, awareness and user control [here ](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit)↑
+
+[^1]: Sec 2 (i) “Data Fiduciary” means any person who alone or in conjunction with other persons determines the purpose and means of processing personal data&#x20;
+
+[^2]: Sec 2 (k) “Data Processor” means any person who processes personal data on behalf of a Data Fiduciary&#x20;
+
+[^3]: Articles 25 and 32 of the GDPR&#x20;
+
+[^4]: \- Process any data only if there is a valid contract between the administering authority and eGov ( data fiduciary & processor) \[Sec 8(2)]
+
+    \-Maintain security safeguards to prevent personal data breaches \[Sec 8(5)]
+
+    \-Follow the instructions given by the data fiduciary on data deletion
+
+    \-Follow processing standards issued through Central government policies ( as issued under Sec 7(b)(ii) - yet to be issued)
+
+    \-Maintain a record of data processed ( to assist the data fiduciary i.e. the relevant administering authority with obligation Sec 11 of the Act)
+
+    \-Maintain the completeness, accuracy, and consistency of personal data \[ Section 8(3)]
+
+    \-Implement appropriate technical and organizational measures to implement the Act \[Sec 8(4)]
+
+    \-Intimate the data fiduciary on any personal data breach \[so that the data fiduciary can inform the Board and data principal about such a breach - Sec 8(6)]
+
+[^5]: For each item of data collected, stored, processed, or shared, there should be a clear purpose identified; this purpose must flow from a legitimate task that the entity collecting it (i.e. a ULB) is mandated & authorized to perform (hence, legitimate), and this purpose must be communicated to the citizen. This is closely related to the concepts of data minimisation, purpose limitation, and role-based access.
