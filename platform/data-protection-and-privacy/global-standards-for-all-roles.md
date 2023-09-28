@@ -1,4 +1,4 @@
-# GIU Global Standards For All
+# Global Standards For All Roles
 
 ## Introduction
 
@@ -31,7 +31,7 @@ The advantages of NIST are:
 * It enhances trust as it encourages proactive privacy measures to be taken from the design stage itself
 * It streamlines operations by embedding privacy into the functional and design practices, avoiding costly retroactive changes
 
-### **Implementing Agencies**
+### **Implementing Agencies/Program Owners**
 
 An IA’s core responsibility is to deploy the platform. Its functions require hands-on functions of customisation, configuration, training and support. The IA ideally has complete access to the data of citizens.
 

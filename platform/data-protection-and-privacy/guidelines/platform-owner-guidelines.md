@@ -69,7 +69,7 @@ The DIGIT platform does not handle data unless and until it is implemented in a 
 
 Specific data recorded in various applications that may be implemented on DIGIT include name, parent/spouse’s name, mobile number, city, email id, date of birth, door no/address, and pin code. Data from administrative record systems, such as revenue survey number or other property identifier, connection number, meter number etc. may also be recorded. In the event a person makes payments to the local government, information related to the payment, such as transaction number may also be recorded.
 
-Any personal data collected and stored in DIGIT is encrypted, both in storage and transmission. When displayed, this [data is to be masked by default](../../../../focus-areas/privacy/). Users can request to unmask data; if they have the appropriate authorisation, they will be able to view the unmasked data, and this request to unmask will be [<mark style="color:blue;">recorded in an audit log</mark>](#user-content-fn-2)[^2].
+Any personal data collected and stored in DIGIT is encrypted, both in storage and transmission. When displayed, this [data is to be masked by default](../../../focus-areas/privacy/). Users can request to unmask data; if they have the appropriate authorisation, they will be able to view the unmasked data, and this request to unmask will be [<mark style="color:blue;">recorded in an audit log</mark>](#user-content-fn-2)[^2].
 
 DIGIT implementations are used to provide government services to residents of a given city, town, village etc. The data collected, as described above, are necessary for the delivery of such services. When a resident approaches their local government for a particular service, they can be required to share, or allow access to, the information necessary to provide that service.
 
@@ -135,7 +135,7 @@ _Data security measures and practices stand out as the core / foundational guide
 
 DPP is only possible when the systems and computer resources receiving and storing data are secure (safe from any harm). Some key data security measures include:
 
-* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a [legitimate purpose to access the data](../../../../focus-areas/data-security/signed-data-audit.md).
+* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a [legitimate purpose to access the data](../../../focus-areas/data-security/signed-data-audit.md).
 * Encryption: Encrypt PII data both in transit and at rest to protect it from unauthorized access and theft.
 * Data backup and disaster recovery: Regularly backing up PII data - including auditing the need for PII - if not required then deleting the PII, and implementing disaster recovery plans to ensure that important data can be recovered in the event of a data loss or breach.
 * Network security: Implement firewalls, intrusion detection and prevention systems, and other network security measures to protect against cyber threats.
@@ -229,7 +229,7 @@ _**D.2.2.2**_** Platform Owner’s Role in Stage 1**
 * Encourage the AA team to keep DPP as a priority in the implementation plan
 * Advise the AA teams to collect as minimal data as possible to comply with the data minimisation principle ( at the master data collection level)
 * Encourage within the AA employees, the behaviour of adopting privacy enhancing technology (PET). Highlight the increase of trust and reputation through the adoption of PETs’.
-* Encourage IA to comply with data principle practices enlisted [here](../global-standards-for-all.md).
+* Encourage IA to comply with data principle practices enlisted [here](../global-standards-for-all-roles.md).
 
 **Technical:**
 

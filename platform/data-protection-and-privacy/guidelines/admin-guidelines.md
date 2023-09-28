@@ -180,7 +180,7 @@ A few must-haves the AAs must keep in mind before selecting a cloud infrastructu
 * The master data collection model design includes:
 * AA collects minimum personal data - they can do so by collecting personal data only once, using federated databases and interoperable systems to avoid re-collection of personal data.
 * The categories of datasets the AA entity would most necessarily require to provide a service are defined and fixed. This is done so as to adopt the practice of collecting only data that is necessary for the provision of a service at the next stage.
-* Data without any defined use or need is not collected ([data minimisation](../global-standards-for-all.md#global-standards-for-all), [<mark style="color:blue;">legitimate purpose</mark>](#user-content-fn-5)[^5]).
+* Data without any defined use or need is not collected ([data minimisation](../global-standards-for-all-roles.md#global-standards-for-all), [<mark style="color:blue;">legitimate purpose</mark>](#user-content-fn-5)[^5]).
 * Citizens of the ULBs are informed of the purpose of their data being collected.
 * Data collected at the next stage is stored safely ( on paper or digitally). If collected on paper then once transmitted into a digital system, it is destroyed from the paper or source device.
 * Dashboards displaying the nature of data to be collected and their corresponding purposes and uses are built; (for transparency and awareness of citizens).
@@ -393,7 +393,7 @@ _Stage 1: Program Kick-off_
 
 **Preferable:**
 
-* The data collection model is designed to collect the consent of the citizen before collecting the data. Such consent is recorded in a log registry and maintained with each [AA department](../global-standards-for-all.md).
+* The data collection model is designed to collect the consent of the citizen before collecting the data. Such consent is recorded in a log registry and maintained with each [AA department](../global-standards-for-all-roles.md).
 * There are privacy-specific KPIs or OKRs (objectives and key results) embedded. For example - setting privacy benchmark deliverables like privacy audits and security gap assessments. This would help the AA and IA monitor privacy issues and provide early warning of problems.
 * AA provides procedures for citizens to complain or inquire about their data
 

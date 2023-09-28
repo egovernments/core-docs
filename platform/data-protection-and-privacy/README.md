@@ -20,8 +20,8 @@ Click on the links below to browse through the details:
 * [Legal obligations for privacy - eGov](legal-obligations-for-privacy-egov.md)
 * [Data protection & privacy - global best practices](data-protection-and-privacy-global-best-practices.md)
 * [Guidelines](guidelines/)
-* [Data privacy policy templates](data-privacy-policy/)
-* [Global standards for all](global-standards-for-all.md)
+* [Data privacy policy templates](data-privacy-policy-templates/)
+* [Global standards for all](global-standards-for-all-roles.md)
 
 
 

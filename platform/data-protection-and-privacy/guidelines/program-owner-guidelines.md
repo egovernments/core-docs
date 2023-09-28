@@ -137,7 +137,7 @@ At this stage, a best practice model of master data collection (steps listed bel
 
 The master data collection model design includes:
 
-* Collecting data only if it is needed for a specific legitimate reason and defined purpose ([data minimisation](../global-standards-for-all.md), [<mark style="color:blue;">legitimate purpose</mark>](#user-content-fn-3)[^3]).
+* Collecting data only if it is needed for a specific legitimate reason and defined purpose ([data minimisation](../global-standards-for-all-roles.md), [<mark style="color:blue;">legitimate purpose</mark>](#user-content-fn-3)[^3]).
 * Informing residents about the legal basis and reason/purpose for their data being collected (when collected directly from the resident).
 * Data encryption and masking when data is being migrated from paper to digital or old or new digital systems.
 * Strategies for safe storage of data ( on paper or digitally).
