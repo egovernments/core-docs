@@ -2,15 +2,15 @@
 description: Data privacy policy for eGov
 ---
 
-# GIU eGov Data Privacy Policy
+# eGov Data Privacy Policy
 
 ## **1. About eGov** <a href="#_6h8j6em6wnmt" id="_6h8j6em6wnmt"></a>
 
-eGov Foundation is a philanthropic mission that cares deeply about making the lives of ordinary citizens better, including health, sanitation, public finance management systems, and access and delivery of services from the government, by creating open digital infrastructure and ecosystems\[1].
+eGov Foundation is a philanthropic mission that cares deeply about making the lives of ordinary citizens better, including health, sanitation, public finance management systems, and access and delivery of services from the government, by creating [open digital infrastructure and ecosystems](https://egov.org.in).
 
 ## **2. About DIGIT** <a href="#_gcg1rj311n9a" id="_gcg1rj311n9a"></a>
 
-Digital Infrastructure for Governance, Impact & Transformation (DIGIT) is an open-source platform created by eGov **(platform owner\[2])**. It helps governments collect revenues, deliver services, and manage operations and workflows in an efficient, reliable, and transparent manner.
+Digital Infrastructure for Governance, Impact & Transformation (DIGIT) is an open-source platform created by eGov **(**[<mark style="color:blue;">**platform owner**</mark>](#user-content-fn-1)[^1]**)**. It helps governments collect revenues, deliver services, and manage operations and workflows in an efficient, reliable, and transparent manner.
 
 The DIGIT platform is built and designed to:
 
@@ -18,7 +18,7 @@ The DIGIT platform is built and designed to:
 * Simplify the work of frontline workers, through streamlined workflows and easy-to-use interfaces
 * Enable government employees to transition daily routine and repeatable work items from manual to digital systems, driving efficiency in public service delivery
 * Provide tools to improve local government revenue mobilisation, through dashboards, systemized demand generation, and collection of taxes, user charges, fees, licences etc.
-* Empower government administrators / **administering agencies\[3]** to access relevant data for timely decision-making and action.
+* Empower government administrators / [<mark style="color:blue;">**administering agencies**</mark>](#user-content-fn-2)[^2] to access relevant data for timely decision-making and action.
 
 For a full list of products/services available on DIGIT, see [here](https://urban.digit.org/products/modules).
 
@@ -140,3 +140,7 @@ Date:
 4. [eGov & legal obligations for privacy V2](https://docs.google.com/document/d/1-al2o6uj60EsSkfQdo3Y01zVpzcIe9eCIs977VmFCWM/edit) ↑
 5. For definitions of key terms – data, PII, platform, platform implementation, program, platform owner, implementing agency, support agency, program owner, administrative authority – please see [GIU\_DPP\_DEFINITIONS\_V1\_04\_07](https://docs.google.com/document/d/1UICJbHB8P2\_0XdFWSslsdhJ9JaVWWjZ4QAlQ78hfbfg/edit?usp=sharing) ↑
 6. As defined in the Digital Personal Data Act, 2023 - Sec 2 (t) “personal data” means any data about an individual who is identifiable by or in relation to such data ↑
+
+[^1]: This entity creates the infrastructural design of the platform (architects of the platform). They are responsible for the design of the platform&#x20;
+
+[^2]: Government bodies mandated to provide a government service usually an agency or department of the State government agencies have the power to decide who has access and control of the DIGIT systems
