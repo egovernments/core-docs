@@ -23,8 +23,8 @@ In order to enable the above in a scalable, secure and reliable manner, the DIGI
 \
 
 
-![Proposed Analytics Framework](<../.gitbook/assets/image (210).png>)
+![Proposed Analytics Framework](<../../.gitbook/assets/image (210).png>)
 
-![](<../.gitbook/assets/image (143).png>)
+![](<../../.gitbook/assets/image (143).png>)
 
 Sunbird cQube [https://cqube.sunbird.org/](https://cqube.sunbird.org/) is something we should look at see how this fits into our requirements.&#x20;

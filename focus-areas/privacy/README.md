@@ -2,7 +2,7 @@
 description: User data privacy design and principles
 ---
 
-# Privacy
+# ❕ Privacy
 
 1. Secure by default
    * Data must be stored and transmitted securely.

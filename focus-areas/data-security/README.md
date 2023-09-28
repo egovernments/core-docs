@@ -1,4 +1,4 @@
-# Data Security
+# 🔏 Data Security
 
 We can ensure users' privacy by first securing the user's data and only providing consented access to the plain data.&#x20;
 
