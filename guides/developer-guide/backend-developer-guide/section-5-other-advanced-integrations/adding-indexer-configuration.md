@@ -2,7 +2,7 @@
 
 ## Overview
 
-The indexer is designed to perform all the indexing tasks of the DIGIT platform. The service reads records posted on specific Kafka topics and picks the corresponding index configuration from the yaml file provided by the respective module configuration. Configurations are yaml based. A detailed guide to creating indexer configs is mentioned in the following document - [Indexer Configuration Guide](../../../../platform/overview/api-specifications/indexer.md).
+The indexer is designed to perform all the indexing tasks of the DIGIT platform. The service reads records posted on specific Kafka topics and picks the corresponding index configuration from the yaml file provided by the respective module configuration. Configurations are yaml based. A detailed guide to creating indexer configs is mentioned in the following document - [Indexer Configuration Guide](../../../../platform/api-specifications/indexer.md).
 
 For our guide, we will create a new file under `egov-indexer` in `configs` repo by the name of `digit-developer-guide.yml` and put the following content into it -
 

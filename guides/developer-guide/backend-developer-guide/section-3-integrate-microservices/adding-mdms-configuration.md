@@ -7,7 +7,7 @@ If you already have a DIGIT environment configured with a tenant and CITIZEN/EMP
 MDMS data is the master data used by the application. New modules with master data need to be configured inside the `/data/<tenant>/` folder of the MDMS repo. Each tenant should have a unique ID and sub-tenants can be configured in the format state.cityA, state.cityB etc..Further hierarchies are also possible with tenancy.&#x20;
 
 {% hint style="info" %}
-For more information on [MDMS](../../../../platform/overview/core-services/mdms-master-data-management-service/) see here. To read about how to design for MDMS, please see the [design guide](../../../design-guide/design-services.md#identify-reference-data).
+For more information on [MDMS](../../../../platform/core-services/mdms-master-data-management-service/) see here. To read about how to design for MDMS, please see the [design guide](../../../design-guide/design-services.md#identify-reference-data).
 {% endhint %}
 
 In the birth registration use case, we will use the following master data:

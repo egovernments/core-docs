@@ -13,12 +13,12 @@ Before starting development on top of DIGIT make sure:&#x20;
 
 <!---->
 
-* [User](../../../../platform/overview/core-services/user-services.md)
-* [MDMS](../../../../platform/overview/core-services/mdms-master-data-management-service/)
-* [Localization](../../../../platform/overview/core-services/location-services.md)
-* [Id-Gen](../../../../platform/overview/core-services/id-generation-service.md)
-* [URL-shortener](../../../../platform/overview/core-services/url-shortening-service.md)
-* [Workflow](../../../../platform/overview/core-services/workflow-service/)
+* [User](../../../../platform/core-services/user-services.md)
+* [MDMS](../../../../platform/core-services/mdms-master-data-management-service/)
+* [Localization](../../../../platform/core-services/location-services.md)
+* [Id-Gen](../../../../platform/core-services/id-generation-service.md)
+* [URL-shortener](../../../../platform/core-services/url-shortening-service.md)
+* [Workflow](../../../../platform/core-services/workflow-service/)
 
 Some of the above services can also be port-forwarded using Kubernetes to bypass user authentication.
 
@@ -26,9 +26,9 @@ Some of the above services can also be port-forwarded using Kubernetes to bypass
 
 <!---->
 
-* [Persister](../../../../platform/overview/core-services/persister-service/)
-* [Indexer ](../../../../platform/overview/core-services/indexer-service/)(optional)
-* [PDF Service](../../../../platform/overview/core-services/pdf-generation-service.md)
+* [Persister](../../../../platform/core-services/persister-service/)
+* [Indexer ](../../../../platform/core-services/indexer-service/)(optional)
+* [PDF Service](../../../../platform/core-services/pdf-generation-service.md)
 
 <!---->
 

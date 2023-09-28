@@ -4,7 +4,7 @@ description: Describes how to integrate with DIGIT's ID Gen service
 
 # Integration with IDGen Service
 
-Each application needs to have a unique ID. The [IDGen service](../../../../platform/overview/core-services/id-generation-service.md) generates these unique IDs. ID format can be customised via configuration in MDMS.&#x20;
+Each application needs to have a unique ID. The [IDGen service](../../../../platform/core-services/id-generation-service.md) generates these unique IDs. ID format can be customised via configuration in MDMS.&#x20;
 
 i) Add the ID format that needs to be generated in this file - [Id Format Mdms File](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/common-masters/IdFormat.json). The following config has been added for this module:
 

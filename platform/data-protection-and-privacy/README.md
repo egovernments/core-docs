@@ -1,4 +1,4 @@
-# Data Protection & Privacy
+# 🔐 Data Protection & Privacy
 
 ## Objectives
 
