@@ -4,7 +4,7 @@ description: >-
   owners)
 ---
 
-# GIU Program Owner Guidelines
+# Program Owner Guidelines
 
 ## **Scope**  <a href="#_finvglukkilj" id="_finvglukkilj"></a>
 
@@ -32,7 +32,7 @@ For this document to understand what each program owner should do to safeguard d
 
 _Guidelines to be read with the Digital Personal Data Protection Act, 2023_
 
-As the Prog adopts DIGIT, it gets access to digital personal data and therefore comes into the ambit of the Digital Personal Data Protection Act, 2023 (DPDP Act)\[1]. The roles a Prog plays as per the DPDP Act, can be of a data fiduciary\[2] and/or of a data processor\[3]. Depending on the nature of control the Prog has over deciding the purpose and means of data processing shall make it either a data fiduciary or no such control shall make it a data processor. Therefore obligations for both the roles have to be considered for a Prog to remain compliant with the DPDP Act,2023.
+As the Prog adopts DIGIT, it gets access to digital personal data and therefore comes into the ambit of the [Digital Personal Data Protection Act, 2023](https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf) (DPDP Act). The roles a Prog plays as per the DPDP Act, can be of a [<mark style="color:blue;">data fiduciary</mark>](#user-content-fn-1)[^1] and/or of a [<mark style="color:blue;">data processor</mark>](#user-content-fn-2)[^2]. Depending on the nature of control the Prog has over deciding the purpose and means of data processing shall make it either a data fiduciary or no such control shall make it a data processor. Therefore obligations for both the roles have to be considered for a Prog to remain compliant with the DPDP Act,2023.
 
 For these guidelines, we assume that the Prog processes digital personal data to provide for certain benefits, services, certificates, licenses or permits ( these cover most of the functions that DIGIT provides and are mandates of Urban Local Bodies).
 
@@ -46,7 +46,7 @@ A program can be a delivery of any government service/s which the AA is mandated
 
 #### **B.1.1 What happens in this stage** <a href="#_i4ysv1i2ktpu" id="_i4ysv1i2ktpu"></a>
 
-* A Memorandum of Understanding is signed between the AA and the platform owners. A Prog can also be a party to the MoU or may be an equal power holding or subordinate entity of the AA (which signs the MOU).
+* A Memorandum of Understanding is signed between the AA and the platform owners. A Prog can also be a party to the MoU or maybe an equal power holding or subordinate entity of the AA (which signs the MOU).
 * The Prog appoints a State Program Head/Nodal Officer.
 * Resources and funding for the program are identified.
 * The Prog-specific procurement process is defined.
@@ -116,7 +116,7 @@ Actions which the Prog should ensure are required of the IA (i.e. included as re
 
 The DPDP Act permits the Prog to process any personal digital data of citizens for providing a benefit, subsidy, service, certificate, license or permit ( in this case any urban local body function such as birth or death certificate, property license, building plan permit etc) **subject to the below conditions** :
 
-(i) she has previously consented to the processing of her personal data by the Administering authority or any of its instrumentalities for any subsidy, benefit, service, certificate, licence or permit; or (ii) such personal data is available in digital form in, or in non-digital form and digitised subsequently from, any database, register, book or other document which is maintained by the administering authority or any of its instrumentalities and is notified by the Central Government. All of the above must follow standards that the Central Government may set as policies to follow for processing.
+(i) she has previously consented to the processing of her personal data by the Administering authority or any of its instrumentalities for any subsidy, benefit, service, certificate, licence or permit; or (ii) such personal data is available in digital form in, or in non-digital form and digitised subsequently from any database, register, book or other document which is maintained by the administering authority or any of its instrumentalities and is notified by the Central Government. All of the above must follow standards that the Central Government may set as policies to follow for processing.
 
 Such previously consented evidence for personal data collection must be maintained for compliance.
 
@@ -137,16 +137,16 @@ At this stage, a best practice model of master data collection (steps listed bel
 
 The master data collection model design includes:
 
-* Collecting data only if it is needed for a specific legitimate reason and defined purpose ( data minimisation\[4], legitimate purpose\[5]).
-* Informing residents about the legal basis and reason/purpose for their data being collected ( when collected directly from the resident)
-* Data encryption and masking when data is being migrated from paper to digital or old or new digital systems
+* Collecting data only if it is needed for a specific legitimate reason and defined purpose ([data minimisation](../global-standards-for-all.md), [<mark style="color:blue;">legitimate purpose</mark>](#user-content-fn-3)[^3]).
+* Informing residents about the legal basis and reason/purpose for their data being collected (when collected directly from the resident).
+* Data encryption and masking when data is being migrated from paper to digital or old or new digital systems.
 * Strategies for safe storage of data ( on paper or digitally).
 * Destroying paper-based data after a defined migration period (AA or Prog to define a data deletion period post-migration).
 * Maintaining dashboards that display the nature of data to be collected and their corresponding purposes and uses (for transparency and awareness of citizens).
 * Embedding DPP practices in the implementation plan. For example, in the processes of data migration and data processing, the system does not permit sensitive data to be visible to unauthorized roles, strict logins are maintained, and IA employees are trained in safe data handling.
-* Draft / adopt a data privacy policy.
+* Draft/adopt a data privacy policy.
 * Ensure, through scope setting and reviews, that the IA is onboarding a team with appropriate Data privacy and protection safeguarding skill sets
-* The implementation kickoff workshops include training on purposeful master data collection (for the next stage) in an informed and transparent manner ( letting the resident know why they are collecting the data).
+* The implementation kickoff workshops include training on purposeful master data collection (for the next stage) in an informed and transparent manner (letting the residents know why they are collecting the data).
 
 ### **B.3 Stage 2 - Solution Design** <a href="#_rxglyh1if8ij" id="_rxglyh1if8ij"></a>
 
@@ -175,7 +175,7 @@ Check for factors like:
 * Data policy is created to ensure compliance with the law for data protection against breaches of confidentiality and privacy.
 * Avoid customisation, workflows, processing etc. that will cause unauthorized access to PII.
 
-As per the DPDP Act, citizens would have a right to access\[6] on request -
+As per the DPDP Act, citizens would have a [<mark style="color:blue;">right to access</mark>](#user-content-fn-4)[^4] on request -
 
 (a) a summary of personal data that is being processed by the AA or the Prog and the processing activities undertaken by that Prog with respect to such personal data; (b) the identities of all other Data Fiduciaries and Data Processors with whom the personal data has been shared by the Prog, along with a description of the personal data so shared; and (c) any other information related to the personal data of such Data Principal and its processing, as may be prescribed.
 
@@ -187,7 +187,7 @@ As per the above, the AA has to create processes to undertake such correction, c
 
 **Preferable/Good practices:**
 
-* Conduct a risk assessment of the customizations checking for risks and harms leading to breach of confidentiality or data privacy. The assessment will take into consideration the impact that data use may have on an individual(s) and/or group(s) of individuals, whether known or unknown at the time of data use\[7].
+* Conduct a risk assessment of the customizations checking for risks and harms leading to breach of confidentiality or data privacy. [<mark style="color:blue;">The assessment</mark> ](#user-content-fn-5)[^5]will take into consideration the impact that data use may have on an individual(s) and/or group(s) of individuals, whether known or unknown at the time of data use.
 * Push for configurations to include the feature of asking for feedback from citizens when the platform proceeds for a UAT. Citizens are asked for feedback on how data is being handled and whether they are aware of why their data is being used.
 * Ensure that service level agreements include security checks at each level of implementation of the platform for data to be kept secure and safe.
 * Define a data retention period, keeping in mind purpose and legal requirements.
@@ -267,7 +267,7 @@ A data security checklist should include-
 
 **Preferable practices:**
 
-* The help desks provide simple material to explain to citizens or employees the concepts of DPP. These help desks serve as one-stop spots for citizens and employees to understand DPP concepts like data privacy methods, masking, limited and purposeful data sharing. Therefore the help-desk representative is trained well in DPP concepts and use cases before the platform goes live. They also become the first stop for any incident to be reported on data privacy breach.
+* The help desks provide simple material to explain to citizens or employees the concepts of DPP. These help desks serve as one-stop spots for citizens and employees to understand DPP concepts like data privacy methods, masking, and limited and purposeful data sharing. Therefore the help-desk representative is trained well in DPP concepts and use cases before the platform goes live. They also become the first stop for any incident to be reported on data privacy breach.
 
 ### **B.6 Stage 5 - Statewide / ULB-wide Rollout** <a href="#_io252m2fjut6" id="_io252m2fjut6"></a>
 
@@ -295,7 +295,7 @@ A data security checklist should include-
 
 * Maintain transparent practices for data governance
 * Work with employees to apply their DPP training in their functions.
-* Receive reports on Privacy Impact assessments (including gap assessments) and data security audits to check whether the program is safeguarding DPP. Can refer to Appendix B in this [memo](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit?usp=sharing) to understand if the Prog has considered global practices and principles of data protection and privacy for adoption.
+* Receive reports on Privacy Impact assessments (including gap assessments) and data security audits to check whether the program is safeguarding DPP. Refer to Appendix B in this [memo](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit?usp=sharing) to understand if the Prog has considered global practices and principles of data protection and privacy for adoption.
 * Maintain active feedback loops to provide solutions for any anticipated privacy or data protection issues that may arise
 * Manage data migration processes (while transitioning from old/existing systems to new platform-based systems) to maintain data safety and privacy best practices, i.e. data masking, encryption, data deletion, strict access controls, etc.
 
@@ -327,12 +327,12 @@ A data security checklist should include-
 
 
 
-***
+[^1]: Sec 2 (i) “Data Fiduciary” means any person who alone or in conjunction with other persons determines the purpose and means of processing personal data&#x20;
 
-1. [Digital Personal Data Protection Act 2023.pdf (meity.gov.in)](https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf) ↑
-2. Sec 2 (i) “Data Fiduciary” means any person who alone or in conjunction with other persons determines the purpose and means of processing personal data ↑
-3. Sec 2 (k) “Data Processor” means any person who processes personal data on behalf of a Data Fiduciary ↑
-4. Refer to the principle of data minimisation and storage limitation [here](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit) ↑
-5. For each item of data collected, stored, processed, or shared, there should be a clear purpose identified; this purpose must flow from a legitimate task that the entity collecting it (i.e. a ULB) is mandated & authorized to perform (hence, legitimate), and this purpose must be communicated to the citizen. This is closely related to the concepts of data minimisation, purpose limitation, and role-based access. ↑
-6. Sec 11 of the DPDP Act, 2023 ↑
-7. An assessment of harms should consider such key factors as (i) the likelihood of occurrence of harms, (ii) the potential magnitude of harms and (iii) the potential severity of harms. Additionally, the assessment should take into account the digital literacy of both potential users of data and those individuals whose data is being used. ↑
+[^2]: Sec 2 (k) “Data Processor” means any person who processes personal data on behalf of a Data Fiduciary&#x20;
+
+[^3]: For each item of data collected, stored, processed, or shared, there should be a clear purpose identified; this purpose must flow from a legitimate task that the entity collecting it (i.e. a ULB) is mandated & authorized to perform (hence, legitimate), and this purpose must be communicated to the citizen. This is closely related to the concepts of data minimisation, purpose limitation, and role-based access.&#x20;
+
+[^4]: Sec 11 of the DPDP Act, 2023&#x20;
+
+[^5]: An assessment of harms should consider such key factors as (i) the likelihood of occurrence of harms, (ii) the potential magnitude of harms and (iii) the potential severity of harms. Additionally, the assessment should take into account the digital literacy of both potential users of data and those individuals whose data is being used.&#x20;

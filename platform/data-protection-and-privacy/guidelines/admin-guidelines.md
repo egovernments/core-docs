@@ -231,7 +231,7 @@ Such previously consented evidence for personal data collection must be maintain
 * Personally identifying information **(PII)** to be used in an encrypted/ masked manner through the workflows.
 * Processing of data takes place only if the benefits from the use of the processed data would be proportional to the risks that such processing produces.
 * Data that flows in the processes and workflows have strict access requirements
-* As per the DPDP Act, citizens would have a right to access\[9] on request -
+* As per the DPDP Act, citizens would have a [<mark style="color:blue;">right to access</mark>](#user-content-fn-6)[^6] on request -
 
 (a) a summary of personal data that is being processed by the AA and the processing activities undertaken by that AA with respect to such personal data; (b) the identities of all other Data Fiduciaries and Data Processors with whom the personal data has been shared by the AA, along with a description of the personal data so shared; and (c) any other information related to the personal data of such Data Principal and its processing, as may be prescribed.
 
@@ -242,14 +242,14 @@ As per this right, the AA must maintain a record of the personal datasets it has
 As per the above, the AA has to create processes to undertake such correction, completion, erasure or updation of data - for which keeping an audit log of what data is collected, why, for how long and where is crucial.
 
 * At this stage, the AA initiates the introduction of a state-level data policy for clear, legitimate and informed data governance practices it plans on adopting.
-* Product customization requested by the AA keeps in mind the breach of data and confidentiality and the rights of citizens to data privacy. The AA studies the risks and harms that customisation would cost to the safety of the citizen through the use of his/her data (proportionality test\[10]). The risks, harms and benefits assessment will take into consideration the impact that data use may have on an individual(s) and/or group(s) of individuals, whether legally visible or not and whether known or unknown at the time of data use\[11].
+* Product customization requested by the AA keeps in mind the breach of data and confidentiality and the rights of citizens to data privacy. The AA studies the risks and harms that customisation would cost to the safety of the citizen through the use of his/her data ([<mark style="color:blue;">proportionality test</mark>](#user-content-fn-7)[^7]). The [<mark style="color:blue;">risks, harms and benefits assessment</mark>](#user-content-fn-8)[^8] will take into consideration the impact that data use may have on an individual(s) and/or group(s) of individuals, whether legally visible or not and whether known or unknown at the time of data use.
 * Configurations include the feature of asking for feedback from citizens when the platform proceeds for a UAT. Citizens are asked for feedback on how data is being handled and whether they are aware of why their data is being used.
 * Service Level Agreements include security checks at each level of implementation of the platform for data to be kept secure and safe.
 
 **Technical**
 
-* AA implements privacy-enhancing technologies (PeT’s), such as encryption, anonymization, and access control systems, to protect the personal data that is part of the master data.
-* The existence, nature, and anticipated period of retention of data and the purpose of data used through the workflows and processes are publicly disclosed and described in a clear and non-technical language suitable for a general audience
+* AA implements privacy-enhancing technologies (PeTs), such as encryption, anonymization, and access control systems, to protect the personal data that is part of the master data.
+* The existence, nature, and anticipated period of retention of data and the purpose of data used through the workflows and processes are publicly disclosed and described in clear and non-technical language suitable for a general audience
 
 ### **B.2.4 Stage 3 - Customisations & Configuration** <a href="#_bdthvay7dk5r" id="_bdthvay7dk5r"></a>
 
@@ -291,10 +291,10 @@ As per the above, the AA has to create processes to undertake such correction, c
 
 * Conduct user acceptance testing and provide sign-off.
 * Organise ULB employee training workshops.
-* Setup help desks and support mechanisms for ULB.
+* Set up help desks and support mechanisms for ULB.
 * Lead the UAT / pilot / Go-live as required along with training key client personnel.
 
-#### **B.2.5.3. To- Dos** <a href="#_22qg94blmhiy" id="_22qg94blmhiy"></a>
+#### **B.2.5.3. To-Dos** <a href="#_22qg94blmhiy" id="_22qg94blmhiy"></a>
 
 **Operational**
 
@@ -307,7 +307,7 @@ As per the above, the AA has to create processes to undertake such correction, c
 * Do limited roles have access to PII?
 * Are employees aware of incident reporting?
 * Is there a data protection and privacy policy for hardware protection and external media devices? (Wherever there is a use of removable physical media document the use of such removable physical media and maintain an accurate, up-to-date record of the user profiles created for users who have been authorised access to the information system and the personal data contained therein).
-* As part of the review and monitoring cadence the AA creates a DPP checklist ( A DPP checklist can have items like -
+* As part of the review and monitoring cadence the AA creates a DPP checklist (A DPP checklist can have items like -
 * A privacy policy has been established and approved by the AA
 * PIAs, or privacy risk assessments, are planned to be regularly performed
 * Data processing agreements have been established with all third parties that will process personal data
@@ -319,7 +319,7 @@ As per the above, the AA has to create processes to undertake such correction, c
 * Any sharing of personal data to third parties has been clearly specified
 * The retention date is no longer than necessary to fulfil the purpose of data collection (or to comply with existing legislation)
 * The privacy policy clearly states who are responsible for the personal data and how they can be contacted
-* The privacy policy is clearly written, to make it easy to understand by the intended end-users
+* The privacy policy is clearly written, to make it easy to understand the intended end-users
 * The length of the privacy policy is not excessive
 * The privacy policy can easily be retrieved by citizens at all times
 * The helpdesks provide simple material to explain to citizens or employees the concepts of DPP. These help desks serve as one-stop spots for citizens and employees to understand DPP concepts like data privacy methods, masking and limited and purposeful data sharing. Therefore the help-desk representatives are trained well in DPP concepts and use cases before the platform goes live. They also become the first stop for any incident to be reported on data privacy breach
@@ -347,7 +347,7 @@ As per the above, the AA has to create processes to undertake such correction, c
 
 * There is transparency on measures taken for protecting citizens' data privacy and protection ( dashboards showing steps taken, open display of categories of data the AA can see and use, grievance redressal officer appointed)
 * Awareness has been built amongst AA team/departments and ULB employees on DPP practices listed above and now employees are held accountable for displaying their training in their functions.
-* Regular Privacy Impact assessments (including gap assessments) and data security audits are conducted to check whether the state-wide platform is safeguarding DPP. Can refer to [Table 2](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit) to understand if the AA has considered global practices and principles of data protection and privacy for adoption.
+* Regular Privacy Impact assessments (including gap assessments) and data security audits are conducted to check whether the state-wide platform is safeguarding DPP. Refer to [Table 2](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit) to understand if the AA has considered global practices and principles of data protection and privacy for adoption.
 * Feedback loops must remain active and are speedy at providing solutions for any anticipated or addressed privacy or data protection issue that comes up
 * While transitioning from old/existing systems to new platform-based systems, the data migration process has taken into consideration data masking, encryption, data deletion, purposeful data retention, etc.
 
@@ -366,7 +366,7 @@ As per the above, the AA has to create processes to undertake such correction, c
 
 **B.2.7.3 Role of Supporting Agency**
 
-* At this stage, a ’ Supporting agency’ **(SA)** gets involved. An SA is one that provides support in any functional aspect required by the Prog with respect to that platform implementation (e.g. assistance in maintenance of the platform, technical or operational problem-solving, bug/error resolution).
+* At this stage, a Supporting agency’ **(SA)** gets involved. An SA is one that provides support in any functional aspect required by the Prog with respect to that platform implementation (e.g. assistance in maintenance of the platform, technical or operational problem-solving, bug/error resolution).
 * An SA can be contracted at Stage 5 or at this stage.
 * It primarily assists, guides, firefights and resolves difficult problems for the AA while the platform is implemented/ getting implemented.
 * An SA can be given a specific role of overseeing and helping in the DPP practices adoption.
@@ -393,7 +393,7 @@ _Stage 1: Program Kick-off_
 
 **Preferable:**
 
-* The data collection model is designed to collect the consent of the citizen before collecting the data. Such consent is recorded in a log registry and maintained with each AA department.\[12]
+* The data collection model is designed to collect the consent of the citizen before collecting the data. Such consent is recorded in a log registry and maintained with each [AA department](../global-standards-for-all.md).
 * There are privacy-specific KPIs or OKRs (objectives and key results) embedded. For example - setting privacy benchmark deliverables like privacy audits and security gap assessments. This would help the AA and IA monitor privacy issues and provide early warning of problems.
 * AA provides procedures for citizens to complain or inquire about their data
 
@@ -403,37 +403,6 @@ _Stage 2: Solution design_
 
 * AA and IA use privacy concepts as a prompt for generating ideas, such as a ‘[crazy eights](https://www.iamnotmypixels.com/how-to-use-crazy-8s-to-generate-design-ideas/)’ sketching exercise that explores how the platform might work if it processes no personal information (to reduce the amount of PII collected)
 * AA establishes an internal system for constant data updation and deletion of obsolete data, wherever appropriate and practically possible ( to maintain data accuracy and quality).
-
-
-
-***
-
-1. [Digital Personal Data Protection Act 2023.pdf (meity.gov.in)](https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf) ↑
-2. Sec 2 (i) “Data Fiduciary” means any person who alone or in conjunction with other persons determines the purpose and means of processing personal data ↑
-3. Sec 2 (k) “Data Processor” means any person who processes personal data on behalf of a Data Fiduciary ↑
-4. Articles 25 and 32 of the GDPR ↑
-5. For more technical info on access controls, you may read this [document ](https://core.digit.org/focus-areas/data-security/signed-data-audit)↑
-6.  \- Process any data only if there is a valid contract between the administering authority and eGov ( data fiduciary & processor) \[Sec 8(2)]
-
-    \-Maintain security safeguards to prevent personal data breaches \[Sec 8(5)]
-
-    \-Follow the instructions given by the data fiduciary on data deletion
-
-    \-Follow processing standards issued through Central government policies ( as issued under Sec 7(b)(ii) - yet to be issued)
-
-    \-Maintain a record of data processed ( to assist the data fiduciary i.e. the relevant administering authority with obligation Sec 11 of the Act)
-
-    \-Maintain the completeness, accuracy, and consistency of personal data \[ Section 8(3)]
-
-    \-Implement appropriate technical and organizational measures to implement the Act \[Sec 8(4)]
-
-    \-Intimate the data fiduciary on any personal data breach \[so that the data fiduciary can inform the Board and data principal about such a breach - Sec 8(6)] ↑
-7. Refer to the principle of data minimisation and storage limitation [here](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit) ↑
-8. For each item of data collected, stored, processed, or shared, there should be a clear purpose identified; this purpose must flow from a legitimate task that the entity collecting it (i.e. a ULB) is mandated & authorized to perform (hence, legitimate), and this purpose must be communicated to the citizen. This is closely related to the concepts of data minimisation, purpose limitation, and role-based access. ↑
-9. Sec 11 of the DPDP Act, 2023 ↑
-10. The proportionality test was prescribed for in the J.Puttaswamy judgement. This test is for data processing bodies to analyse how much of a risk the use of the data puts the person to whom the data belongs versus the benefits it brings to that person simultaneously. A balance between the benefits and the risks must be found. ↑
-11. An assessment of harms should consider such key factors as - (i) the likelihood of occurrence of harms, (ii) the potential magnitude of harms and (iii) the potential severity of harms. Additionally, the assessment should take into account the digital literacy of both potential users of data and those individuals whose data is being used. ↑
-12. Refer to the principle of notice, awareness and user control [here ](https://docs.google.com/document/d/10bsSWEmf2ebjNpGBs-BLXAVyL-sVFQ901GzuKpbNNyY/edit)↑
 
 [^1]: Sec 2 (i) “Data Fiduciary” means any person who alone or in conjunction with other persons determines the purpose and means of processing personal data&#x20;
 
@@ -458,3 +427,9 @@ _Stage 2: Solution design_
     \-Intimate the data fiduciary on any personal data breach \[so that the data fiduciary can inform the Board and data principal about such a breach - Sec 8(6)]
 
 [^5]: For each item of data collected, stored, processed, or shared, there should be a clear purpose identified; this purpose must flow from a legitimate task that the entity collecting it (i.e. a ULB) is mandated & authorized to perform (hence, legitimate), and this purpose must be communicated to the citizen. This is closely related to the concepts of data minimisation, purpose limitation, and role-based access.
+
+[^6]: Sec 11 of the DPDP Act, 2023
+
+[^7]: The proportionality test was prescribed for in the J.Puttaswamy judgement. This test is for data processing bodies to analyse how much of a risk the use of the data puts the person to whom the data belongs versus the benefits it brings to that person simultaneously. A balance between the benefits and the risks must be found.
+
+[^8]: An assessment of harms should consider such key factors as - (i) the likelihood of occurrence of harms, (ii) the potential magnitude of harms and (iii) the potential severity of harms. Additionally, the assessment should take into account the digital literacy of both potential users of data and those individuals whose data is being used.
