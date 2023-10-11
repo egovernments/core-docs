@@ -232,7 +232,7 @@
       * [Integration with URL Shortener Service](guides/developer-guide/backend-developer-guide/section-3-integrate-microservices/integration-with-url-shortener-service.md)
     * [Section 4: Integrating With Billing & Payment](guides/developer-guide/backend-developer-guide/section-4-integrating-with-billing-and-payment/README.md)
       * [Implementing Custom Calculation Layer](guides/developer-guide/backend-developer-guide/section-4-integrating-with-billing-and-payment/implementing-custom-calculation-layer.md)
-      * [Payment Backup Date](guides/developer-guide/backend-developer-guide/section-4-integrating-with-billing-and-payment/payment-backupdate.md)
+      * [Payment Back Update](guides/developer-guide/backend-developer-guide/section-4-integrating-with-billing-and-payment/payment-back-update.md)
     * [Section 5: Other Advanced Integrations](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/README.md)
       * [Adding Indexer Configuration](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/adding-indexer-configuration.md)
       * [Certificate Generation](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/certificate-generation.md)
