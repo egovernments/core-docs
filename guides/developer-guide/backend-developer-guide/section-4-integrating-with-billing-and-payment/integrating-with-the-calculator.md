@@ -2,13 +2,19 @@
 description: Calculating costs for a service and raising demand for bill generation
 ---
 
-# Implementing Custom Calculation Layer
+# Integrating with the calculator
 
 ## **Calculation**&#x20;
 
-The calculation class will contain the calculation logic for given service delivery.  This is very domain specific and cannot be generalised. Based on the application submitted, the calculator class will calculate the tax/charges and call billing service to generate the demand.&#x20;
+The calculation class will contain the calculation logic for the birth certificate registration charges.  This can vary from city to city. Based on the application submitted, the calculator class will calculate the tax/charges and call the billing service to generate the demand.&#x20;
 
-For our guide, we are going to create a sample calculation class with some dummy logic. Demand generation,  billing and payment will be covered in the future. For this, we are going to perform the following steps -
+{% hint style="info" %}
+**What is a demand?**&#x20;
+
+A demand is the official communication sent by a government authority to a citizen requesting them to pay for a service. A demand leads to a bill. When a bill is paid, a receipt is generated. A demand can be modified prior to bill generation.
+{% endhint %}
+
+For our guide, we are going to create a CalculationService that will call the calculator to generate a demand. For this, we are going to perform the following steps -
 
 i) Create a class under `service` folder by the name of `CalculationService`
 

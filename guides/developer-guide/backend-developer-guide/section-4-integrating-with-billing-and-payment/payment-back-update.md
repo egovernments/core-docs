@@ -1,8 +1,14 @@
-# Payment Backup Date
+---
+description: Status of payment
+---
 
-Once payment is done the application status has to be updated. Since we have a microservice architecture the two services can communicate with each other either through API calls or using message queues(kafka in our case). To avoid any service specific code in collection service we use the second approach to notify the service of payment for its application. Whenever a payment is done the collection service will publish the payment details on a kafka topic. Any microservice which wants to get notified when payments are done can subscribe to this topic. Once the service consumes the payment message it will check if the payment is done for its service by checking the businessService code. If it is done for the given service it will update the application status to PAID or will trigger workflow action PAY depending on the use case.
+# Payment Back Update
 
-For our guide, we will follow the following steps to create payment backupdate consumer -
+A demand leads to a bill which then leads to payment by a citizen. Once payment is done, the application status has to be updated. Since we have a microservices architecture, the two services can communicate with each other either through API calls or using events.&#x20;
+
+The collection service publishes an event on a Kafka topic when payment is collected for an application.  Any microservice that wants to get notified when payments are done can subscribe to this topic. Once the service consumes the payment message, it will check if the payment is done for its service by checking the businessService code. The application status changes to PAID or triggers a workflow transition.&#x20;
+
+For our guide, we will follow the following steps to create payment back update consumer -
 
 i) Create a consumer class by the name of PaymentBackUpdateConsumer. Annotate it with @Component annotation and add the following content to it -
 

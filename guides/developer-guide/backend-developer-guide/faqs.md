@@ -1,4 +1,8 @@
-# Troubleshooting FAQs
+---
+description: A list of FAQs for developers by developers
+---
+
+# FAQs
 
 <details>
 
@@ -79,11 +83,48 @@ You can disconnect the forwarded port and start port forwarding again with reche
 
 </details>
 
+<details>
+
+<summary>I deployed the service in a DIGIT environment. But I am getting a 400 or 500 from Zuul.</summary>
+
+Check whether the service is up. Insert appropriate namespace in the commands below.
+
+```sh
+kubectl describe service -n <namespace>
+```
+
+Check whether the pod is up.&#x20;
+
+<mark style="color:blue;">`kubectl describe pod -n egov`</mark>
+
+Check the ingress and make sure the context path is right.
+
+<mark style="color:blue;">`kubectl describe ingress <service name> -n egov`</mark>
+
+</details>
+
+<details>
+
+<summary>My service, pod, ingress are all looking good. But I am still getting a ZuulRuntimeException. What do I do?</summary>
+
+This could be a forwarding issue from Zuul to services. Restart Zuul and restart your service.&#x20;
+
+</details>
+
+<details>
+
+<summary>I made a change to the role action mapping in MDMS. But I am unable to access the APIs. Getting a 403 unauthorized error.</summary>
+
+Restart MDMS so it picks up the role action mapping. Also restart the access control service. Access control caches the role action mappings for 15 minutes. Hence a hard restart will force the cache to reset.&#x20;
+
+</details>
+
+<details>
+
+<summary>My pod is in CrashLoopBackOff. What do I do?</summary>
 
 
-\
 
-
-
+</details>
 
 \
