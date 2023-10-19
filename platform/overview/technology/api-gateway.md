@@ -8,7 +8,7 @@ description: API interface details
 
 API Gateway provides a unified interface for a set of microservices so that clients do not need to know about all the details of microservices internals.&#x20;
 
-**DIGIT** uses [**Netflix** **ZUUL**](../core-services/zuul-service.md) as API Gateway. It serves as an edge service that proxies requests to multiple back-end services. It provides a unified “front door” to our ecosystem. This allows any browser, mobile app or any other user interface to consume underlying services.
+**DIGIT** uses [**Netflix** **ZUUL**](../../core-services/zuul-service.md) as API Gateway. It serves as an edge service that proxies requests to multiple back-end services. It provides a unified “front door” to our ecosystem. This allows any browser, mobile app or any other user interface to consume underlying services.
 
 ## Reasons For Using Zuul
 

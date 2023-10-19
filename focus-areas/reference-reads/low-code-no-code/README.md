@@ -27,7 +27,7 @@ Typically a low code no code platforms have the following components
 \
 
 
-![](<../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 Users are able to use the designers to specify user interface, flow and reports. This results in a well defined specification which are stored in the files system or database. These specifications are used by the runtimes to display the UI, orchestrate the flow and generate the reports. \
 
@@ -44,4 +44,4 @@ The creation, updation and deletion of these entities generates events that can 
 As entities are modified the modified information is pushed into a message queue and then into an analytical datastore. The reports specified by the reports designer executes against this datastore (which is typically read fast e.g. ElasticSearch)\
 
 
-![](<../../.gitbook/assets/image (51).png>)
+![](<../../../.gitbook/assets/image (51).png>)

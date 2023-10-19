@@ -2,7 +2,7 @@
 description: Unveiling the DIGIT Works Platform - September 5, 2023 ~ 3 PM to 4 PM
 ---
 
-# Open Events
+# 🎬 Open Events
 
 ## Event 1: Transforming Public Works Management - Unveiling the DIGIT Works Platform
 

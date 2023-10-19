@@ -2,7 +2,7 @@
 description: Contribute to DIGIT platform - Check out this space for frequent updates
 ---
 
-# Contribute
+# 🤝 Contribute
 
 ## **Why Contribute To DIGIT?**
 
