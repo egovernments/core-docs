@@ -12,7 +12,7 @@ DIGIT is designed to ensure it addresses all the issues linked to traditional ap
 
 The foundational capabilities of the platform adhere to the following principles illustrated in the diagram below:
 
-![](<../../.gitbook/assets/image (74).png>)
+![](<../.gitbook/assets/image (74).png>)
 
 A brief explanation of each tenet is given below:
 

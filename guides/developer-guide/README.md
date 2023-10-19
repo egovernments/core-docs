@@ -2,7 +2,7 @@
 description: Follow our developer guides to start building on DIGIT
 ---
 
-# ⚒ Developer Guide
+# Developer Guide
 
 Welcome to DIGIT developer guides!
 

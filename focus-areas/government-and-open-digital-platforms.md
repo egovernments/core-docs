@@ -8,13 +8,13 @@ description: Draft - Work in Progress
 
 Governments provide multiple services to their citizens in areas such as education, health, food, law and order, and energy, among others. To do so, revenue is collected via taxes on income, property, and sales, as well as through payment on services such as water and electricity. In addition, various targeted welfare programs or schemes such as direct benefit transfers to weaker sections of the society, or food distribution at lower prices are launched by governments. To deliver these services and schemes, the government has to interact with vendors from different industries.&#x20;
 
-![](<../../.gitbook/assets/image (79).png>)
+![](<../.gitbook/assets/image (79).png>)
 
 Most countries also have a federal structure, where responsibilities are distributed between national, sub-national, and local governments - which are further bifurcated into departments and sub-departments - to deliver services and collect revenue. The departments, in turn, are categorised by geographical locations into zones, districts, blocks, and villages, to facilitate smooth delivery of services/programs across the country.
 
 In India, for example, the national government has 40-plus ministries and 20-plus independent bodies. Every ministry has three to five departments, and each consists of five sub-departments. There are 36 sub-national governments: 28 states and 8 union territories. Each has its own departments and sub-departments. The snapshot from the local government directory website (https://lgdirectory.gov.in) below gives the numbers of districts, sub-districts, blocks, villages and local bodies.
 
-![Snapshot from Local Government Directory (https://lgdirectory.gov.in) ](<../../.gitbook/assets/image (133).png>)
+![Snapshot from Local Government Directory (https://lgdirectory.gov.in) ](<../.gitbook/assets/image (133).png>)
 
 Many of these ministries, departments, sub-departments interact (exchange information) and transact (exchange money) to facilitate the delivery of services and programs run by the government. One can only try to understand how complex these interactions might get. &#x20;
 
@@ -22,7 +22,7 @@ Many of these ministries, departments, sub-departments interact (exchange inform
 
 In the digital age, the interactions at the government level are undergoing rapid transformation. Applications are helping digitize the interactions, automate tasks and coordinate the flow of information too. While this does deliver the benefits of automation, it also ends up hard coding these interactions into software, locking the associated data in closed databases that are run on non-scalable hardware architecture. As each department builds these applications, the complex interactions within the ecosystem get encoded into various applications resulting in fragmented and siloed data. Data updates and access to real-time data becomes a challenge for the end-users of the services/programs. Consequently, citizens and vendors have to run from pillar to post to update or make changes in the data. Administrators, on the other hand, struggle to get an integrated view of the data on time, resulting in delayed or incorrect decisions.
 
-![](<../../.gitbook/assets/image (28) (1).png>)
+![](<../.gitbook/assets/image (28) (1).png>)
 
 It becomes the citizen's and the vendor's responsibility to keep data updated in these departmental applications - who have to run from pillar to post filling forms, attaching proofs and standing in long lines to submit these applications. At the same time, administrators struggle to get integrate view of the data at the right time, thus forced to either delay decisions or make decisions based on gut.&#x20;
 
@@ -65,7 +65,7 @@ Protocols and Data Exchange Formats like SMTP enables seamless exchange of infor
 
 The illustration below graphically summarizes all the above points about digital platforms and demonstrates how platforms can unlock new possibilities.
 
-![](<../../.gitbook/assets/image (132).png>)
+![](<../.gitbook/assets/image (132).png>)
 
 ### Key Principles for Building Digital Platforms for Government
 

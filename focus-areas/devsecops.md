@@ -8,15 +8,15 @@ description: >-
 
 As we scale DIGIT to a core platform and leverage the same across multiple product streams, concerns about platform security, services and the underlying Kubernetes infrastructure have increased. How do we adapt security practices for a containerized hybrid cloud environment? Security needs to be declarative, built-in, and automated. Apps need to be natively more secure. Security needs to shift left in the application life cycle. Whereas standard security practices start after the application deployment.
 
-![Current State](<../../.gitbook/assets/image (199).png>)
+![Current State](<../.gitbook/assets/image (199).png>)
 
 
 
-![Wayforward](<../../.gitbook/assets/image (93).png>)
+![Wayforward](<../.gitbook/assets/image (93).png>)
 
 ## **DevSecOps - Principles Into Practice**
 
-![](<../../.gitbook/assets/image (253).png>)
+![](<../.gitbook/assets/image (253).png>)
 
 By developing security as code, we strive to create awesome products and services, provide insights directly to developers, and generally favour iteration over trying to always come up with the best answer before every release and deployment.&#x20;
 
@@ -90,7 +90,7 @@ We will not wait for our organizations to fall victim to mistakes and attackers.
 
 ## Integrating Security Into CI/CD Workflow
 
-![Where to introduce security in CI/CD flow](<../../.gitbook/assets/image (33).png>)
+![Where to introduce security in CI/CD flow](<../.gitbook/assets/image (33).png>)
 
 ### 1. Pre-commit
 
@@ -137,7 +137,7 @@ We will not wait for our organizations to fall victim to mistakes and attackers.
 
 ## Tools That Can Help The DevSecOps Way
 
-![Open source and DevSecOps tools](<../../.gitbook/assets/image (119).png>)
+![Open source and DevSecOps tools](<../.gitbook/assets/image (119).png>)
 
 1. **IDE Plugins** — IDE extensions that can work like spellcheck and help to avoid basic mistakes at the earliest stage of coding (IDE is a place/program where devs write their code for those who don’t know). The most popular ones are probably [DevSkim](https://github.com/microsoft/DevSkim), [JFrog Eclipse](https://jfrog.com/blog/shift-left-with-xray-plugins/), and [Snyk](https://plugins.jetbrains.com/plugin/10972-snyk-vulnerability-scanner).
 2. **Pre-Commit Hooks** — Tools from this category prevent us from committing sensitive information like credentials into the code management platform. There are some open-source options available, like [git-hound](https://github.com/ezekg/git-hound), [git-secrets](https://github.com/awslabs/git-secrets), and [repo-supervisor](https://github.com/auth0/repo-supervisor).
