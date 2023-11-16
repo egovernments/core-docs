@@ -373,7 +373,7 @@ Post infra setup (Kubernetes Cluster), we start with deploying the Jenkins and k
 
 * Sub domain to expose CI/CD URL
 * GitHub [Oauth App](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) (this provides you with the [clientId](https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/environments/ci-demo-secrets.yaml#L4), [clientSecret](https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/environments/ci-demo-secrets.yaml#L5))
-  * Under `Authorization callback URL` enter the below url ie (Replace \<domain\_name> with your domain) https://\<domain\_name>/securityRealm/finishLogin
+  * Under `Authorization callback URL` enter the below url ie (Replace \<domain\_name> with your domain) [https://\<domain\_name>/securityRealm/finishLogin](broken-reference)
 * [Github User ](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 * [Generate a new ssh key for the above user](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (this provides the ssh public and private keys)
 * Add the earlier created ssh public key to GitHub user [account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
