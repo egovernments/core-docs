@@ -2,7 +2,9 @@
 
 ## Overview
 
-Notification integration enables the capability to trigger SMS, emails, or alerts for event updates or activities. The objective is to enhance user engagement, provide real-time updates, improve overall user experience.
+Notification integration enables the capability to trigger SMS, emails, or alerts for event updates or activities. The objective is to enhance user engagement, provide real-time updates, and improve overall user experience.
+
+DIGIT integration with CDAC and NIC SMS gateways, carried out by our implementation partners PMIDC and the governing bodies in Uttarakhand, Odisha, Chandigarh, and Punjab, guarantees the prompt triggering of SMS notifications to users for every significant event. This means that users will receive timely alerts for actions such as trade license renewal, property tax payments, or updates on their applications, ensuring that they stay informed and can take the necessary actions promptly.
 
 ## Integration Details
 
