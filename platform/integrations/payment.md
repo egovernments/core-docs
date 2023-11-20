@@ -4,6 +4,10 @@
 
 Payment integrations enable application users to pay the charges or fees online, thus providing an end-to-end solution. The objective is to facilitate seamless and secure transactions while ensuring convenience for users.
 
+The incorporation of DIGIT with payment gateways such as Axis, ICICI, CCAvenue, Razorpay, PayGov, and BBPS has eased the process of paying various taxes/charges for citizens. Paying for trade licence renewal or registration fees, property taxes, building plan approval fees, municipal service bills, or miscellaneous charges such as taxes or parking fees can happen online in a seamless process.
+
+Additionally, our integrations have facilitated UPI payments.&#x20;
+
 ## Integration Details
 
 Refer to the table below to find the list of successful third-party integration with DIGIT platform details:
