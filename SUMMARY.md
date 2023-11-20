@@ -98,6 +98,8 @@
     * [Signed Audit Performance Testing Results](platform/core-services/audit-service/signed-audit-performance-testing-results.md)
   * [Service Request](platform/core-services/service-request.md)
   * [Self Contained Service Architecture (HLD)](platform/core-services/self-contained-service-architecture-hld.md)
+  * [Accelerators](platform/core-services/accelerators/README.md)
+    * [Inbox Service](platform/core-services/accelerators/inbox-service.md)
 * [✏ API Specifications](platform/api-specifications/README.md)
   * [User](platform/api-specifications/user.md)
   * [Access Control](platform/api-specifications/access-control.md)
