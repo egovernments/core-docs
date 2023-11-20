@@ -20,7 +20,7 @@ In case of any queries, please feel free to write to [partner@egovernments.org](
 
 * [Audit Service Documentation](https://core.digit.org/platform/core-services/audit-service)
 * [Indexer Service Documentation](https://core.digit.org/platform/core-services/indexer-service)
-* [Inbox Service Documentation](https://core.digit.org/platform/core-services/audit-service)
+* [Inbox Service Documentation](https://urban.digit.org/platform/configure-digit/services-overview/municipal-services/inbox-service)
 
 We encourage you to explore the related video recordings available on YouTube:
 
