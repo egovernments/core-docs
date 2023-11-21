@@ -4,6 +4,8 @@
 
 Verification integrations extend the scope for setting up seamless processes for identity verification or authentication requirements.&#x20;
 
+Integration with UIDAI's Aadhaar or eMudhra and License processing system by Interlace exemplify the ease with which the DIGIT platform allows integration with third-party apps. Such integrations extend the functional scope of the modules enabling user verification, compliance with licensing requirements, and facilitating digital signatures.
+
 ## Integration Details
 
 Refer to the table below to find the list of successful third-party integration with DIGIT platform details:
