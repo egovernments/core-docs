@@ -4,7 +4,7 @@
 
 View integrations facilitate view access to relevant data or details for further processing.&#x20;
 
-DIGIT has successfully integrated with third-party apps hosted by Chandigarh Smart City Limited (CSCL), Punjab State Power Corporation Limited (PSCPL) or NIC and Odisha Government portal SUGAM. These integrations help provide users with visibility on relevant data and information. For instance, integration with NIC's hospital OPD system provides users with the option to view the details of the services. Similarly, integration with the PSPCL billing system allows users to access the slab rates for electricity.
+DIGIT has successfully integrated with third-party apps hosted by Chandigarh Smart City Limited (CSCL), Punjab State Power Corporation Limited (PSCPL) or NIC and Odisha Government portal SUGAM. These integrations help provide users with visibility on relevant data and information. For instance, integration with NIC's hospital OPD system provides users with the option to view the details of the services. Similarly, integration with the PSPCL billing system allows users to access the electricity charges for Rural Water Supply schemes.
 
 ## Integration Details
 

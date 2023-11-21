@@ -4,7 +4,7 @@
 
 Transaction integration capabilities extend the scope and possibilities for apps. Extended functionalities help in improving overall efficiency while ensuring compliance requirements as per business requirements.
 
-The DIGIT platform has facilitated seamless integrations with diverse third-party applications, including Digi Locker, Odisha government portals, the Airport Authority, the State Fire Department and the Building Plan NOC department. These integrations have extended the platform's capabilities and users can store documents, register public grievances through multiple channels, and apply for Fire NOC or NOC from the Airport Authority.
+The DIGIT platform has facilitated seamless integrations with diverse third-party applications, including Digi Locker and various government departments (spanning the National Monument Authority, Airport Authority, Odisha State Fire Department etc). These integrations extend the platform's capabilities and allow users to obtain and store clearances and certifications through a single window process.
 
 ## Integration Details
 
