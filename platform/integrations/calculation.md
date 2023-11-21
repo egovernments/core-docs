@@ -4,7 +4,7 @@
 
 Calculation integrations help in automated calculations of fees or charges.&#x20;
 
-The benefit of this integration type is exemplified by the DIGIT platform integration with the GIS system hosted by BISAG. It enables the Water and Sewerage module to calculate the road-cutting charges.&#x20;
+The benefit of this integration type is exemplified by the DIGIT platform seamless connection with the GIS system hosted by BISAG. It enables the Water and Sewerage module to calculate the road-cutting charges.&#x20;
 
 ## Integration Details
 
