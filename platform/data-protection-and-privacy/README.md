@@ -2,17 +2,19 @@
 
 ## Objectives
 
-Governments have to raise revenues, create and manage public goods, deliver public services, and provide social welfare. Each function requires multiple offices and officials, working at multiple levels (national, subnational, and local), that must follow multiple processes and coordinate with each other, as well as with private entities and individuals.
+Governments raise revenues, create and manage public goods, deliver public services, and provide social welfare. Each function involves multiple offices and officials operating at various levels, national, subnational, and local. The entities have to follow multiple processes while coordinating with each other and with other stakeholders and individuals.
 
-Local government bodies are mandated to provide for functions such as urban planning, regulation of land use and construction of buildings, roads, and bridges; the provision of water; public health; and sanitation and solid waste management. Municipal government operations include over two dozen areas, ranging from grievances, local taxes and fees, water and sewage connections, and records keeping (births, deaths, marriages, etc.).&#x20;
+Local government bodies are obligated to fulfil crucial responsibilities, including urban planning, regulation of land use, and overseeing the construction of buildings, roads, and bridges. Additionally, they are tasked with providing essential services such as water supply, public health, sanitation, and solid waste management. Municipal government operations encompass a broad spectrum of functions, spanning more than two dozen areas. These include handling grievances, managing local taxes and fees, facilitating water and sewage connections, and maintaining records related to vital events such as births, deaths, marriages, and more.
 
-Most of these functions can be efficiently carried on through digital tools. eGov’s DIGIT platform enables government entities to build their capacity, reduce administrative burdens, and improve governance through faster, more reliable, and more efficient delivery of services to citizens.
+Many of these functions can be optimally carried out using digital tools. eGov's DIGIT platform empowers government entities to enhance their capabilities, alleviate administrative burdens, and elevate governance by providing faster, more reliable, and efficient services to citizens.
 
-When implementing and using digital tools such as DIGIT, government entities and their contractors are likely to collect, store, process, use, and share data, including personally identifiable information (PII) of individuals.&#x20;
+In the process of implementing and utilizing digital tools like DIGIT, government entities and their contractors are prone to collecting, storing, processing, utilizing, and sharing data. This may include personally identifiable information (PII) of individuals.
 
-This section provides an understanding of the rules and good practices for data protection and privacy, guidelines for implementing these rules and good practices, and templates/draft documents that can be used as part of such data privacy and protection processes.&#x20;
+## Scope
 
-With the recent introduction of the Digital Personal Data Protection Act of 2023, it has become a legal mandate for governments to protect the personal data of citizens and provide them with a right to privacy.&#x20;
+This section offers insights into the regulations and best practices governing data protection and privacy. It includes guidelines for implementing these rules and practices, along with templates and draft documents that can be incorporated into data privacy and protection processes.
+
+With the recent enactment of the Digital Personal Data Protection Act of 2023, it is now a legal obligation for governments to safeguard the personal data of citizens and uphold their right to privacy. This legislation underscores the imperative for robust measures and practices in managing and protecting individuals' personal information.
 
 Click on the links below to browse through the details:
 
@@ -22,7 +24,3 @@ Click on the links below to browse through the details:
 * [Guidelines](guidelines/)
 * [Data privacy policy templates](data-privacy-policy-templates/)
 * [Global standards for all](global-standards-for-all-roles.md)
-
-
-
-\
