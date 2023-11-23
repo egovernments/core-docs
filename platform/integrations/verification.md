@@ -10,6 +10,6 @@ Integration with UIDAI's Aadhaar or eMudhra and License processing system by Int
 
 Refer to the table below to find the list of successful third-party integration with DIGIT platform details:
 
-<table><thead><tr><th width="100">S.No.</th><th width="196">Implementing Agency</th><th width="120">Modules</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>Odisha HUDD</td><td>multiple</td><td>Integration with eMudhra for digital signatures</td></tr><tr><td>2</td><td>DGDE</td><td>multiple</td><td>Integration with UIDAI's Aadhaar for verification</td></tr><tr><td>3</td><td>Tamil Nadu Single Window Portal for Planning Permissions</td><td>eDCR</td><td>Integration of DIGIT eDCR with Interlace's license processing system</td></tr></tbody></table>
+<table><thead><tr><th width="72">S.No.</th><th width="134">DIGIT Modules</th><th width="120">Integrated With</th><th width="265">Description</th><th>Implementing Agency</th></tr></thead><tbody><tr><td>1</td><td>Multiple modules</td><td>eMudhra</td><td>Integration with eMudhra for digital signatures</td><td>Odisha HUDD</td></tr><tr><td>2</td><td>Multiple modules</td><td>UIDAI</td><td>Integration with UIDAI's Aadhaar for verification</td><td>DGDE</td></tr><tr><td>3</td><td>eDCR</td><td>Licence Processing System - Interlace</td><td>Integration of DIGIT eDCR with Interlace's license processing system</td><td>Tamil Nadu Single Window Portal for Planning Permissions</td></tr></tbody></table>
 
 ## Related Links
