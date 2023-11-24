@@ -155,7 +155,7 @@
   * [Calculation](platform/integrations/calculation.md)
 * [🛣 Roadmap](platform/roadmap.md)
 * [🎬 Open Events](platform/open-events.md)
-* [👩💻 Source Code](https://github.com/egovernments/DIGIT-OSS)
+* [👩💻 Source Code](https://github.com/egovernments/Digit-Core/tree/master/)
 * [👁 Project Plan](https://github.com/orgs/egovernments/projects/2)
 * [📋 Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
 * [🤝 Contribute](platform/contribute.md)
