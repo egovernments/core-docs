@@ -8,7 +8,7 @@ DIGIT integration with CDAC and NIC SMS gateways, carried out by our implementat
 
 ## Integration Details
 
-Refer to the table below to find the list of successful third-party integration with DIGIT platform details:
+Refer to the table below to find the details of successful third-party integrations with the DIGIT platform:
 
 <table><thead><tr><th width="79">Sr. No.</th><th width="137">DIGIT Modules</th><th width="137">Integrated With</th><th width="300">Description</th><th>Implementing Agency</th></tr></thead><tbody><tr><td>1</td><td>All modules</td><td>CDAC SMS Gateway</td><td>Integration with CDAC SMS gateway enabled the automated triggering of SMS notifications to user's registered mobile numbers for events and updates.</td><td>PMIDC</td></tr><tr><td>2</td><td>All modules</td><td>NIC SMS Gateway</td><td>Integration with NIC SMS Gateway for sending SMS notifications</td><td>Uttarakhand UDD</td></tr><tr><td>3</td><td>All modules</td><td>CDAC SMS Gateway</td><td>Integration with CDAC SMS gateway for sending SMS notifications</td><td>Chandigarh Smart City</td></tr><tr><td>4</td><td>All modules</td><td>CDAC SMS Gateway</td><td>Integration with CDAC SMS gateway for sending SMS notifications</td><td>Odisha HUDD</td></tr><tr><td>5</td><td>Multiple modules</td><td>NIC SMS Gateway</td><td>Integration with NIC SMS Gateway for SMS notifications</td><td>DGDE</td></tr><tr><td>6</td><td>mGramSeva</td><td>CDAC SMS Gateway</td><td>Integration with CDAC SMS gateway for sending SMS notifications</td><td>DWSS Punjab</td></tr></tbody></table>
 
