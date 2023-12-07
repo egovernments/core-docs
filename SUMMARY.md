@@ -298,7 +298,7 @@
     * [Setup Monitoring Tools](guides/developer-guide/ui-developer-guide/setup-monitoring-tools.md)
     * [FAQs](guides/developer-guide/ui-developer-guide/faqs.md)
 * [🔄 Operations Guide](guides/operations-guide/README.md)
-  * [DIGIT - Infra overview, Operational Guidelines & Security Standards](guides/operations-guide/digit-infra-overview-operational-guidelines-and-security-standards.md)
+  * [DIGIT - Infra Overview](guides/operations-guide/digit-infra-overview.md)
   * [Setup Central Instance Infra](guides/operations-guide/setup-central-instance-infra.md)
   * [Central  Monitoring Dashboard Setup](guides/operations-guide/central-monitoring-dashboard-setup.md)
   * [Kubernetes](guides/operations-guide/kubernetes/README.md)
