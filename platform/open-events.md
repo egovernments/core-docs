@@ -4,32 +4,29 @@ description: 'Bootcamp 2.0 - DIGIT: Advanced Integrations - November 24, 2023 ~ 
 
 # 🎬 Open Events
 
-## Bootcamp 2.0 - DIGIT: Advanced Integrations
+## Ask me Anything on DIGIT DEPLOYMENT
 
-_November 24, 2023, \~ 2 PM to 4 PM_&#x20;
+_December 8, 2023 | 2-3 PM_
 
-{% embed url="https://us06web.zoom.us/webinar/register/WN_eFtzUrhlTReZNPO7AnGOwQ#/registration" %}
+{% embed url="https://us06web.zoom.us/webinar/register/WN_2yl7YILcQ0C02fplnR45gg#/registration" %}
 
-You are invited to join our upcoming DIGIT Bootcamp 2.0 Webinar - Developing on DIGIT: Advanced Integrations. If you are a developer building on DIGIT and you want to explore how to leverage DIGIT's built-in analytics service and signed audit logs, this session is for you. Join in for a briefer on how to do some advanced integrations with DIGIT services.
+In Continuation to virtual Bootcamp 2.0 that started in September, We are now back with the fourth session in the series:
 
-Event registration links and session details are given below. We look forward to seeing you in this webinar. Do invite your team and colleagues to this learning session and unlock the potential of the DIGIT Ecosystem.
+#### Ask Me Anything On DIGIT Deployment
 
-In case of any queries, please feel free to write to [partner@egovernments.org](mailto:partner@egovernments.org).                                                                                                                                                                                                                                                                         &#x20;
+You are invited to join our 4th session of virtual DIGIT Bootcamp 2.0 Webinars. In this session, join us for any questions or discussions about deploying on AWS or Azure! We're here to help with any Q\&A regarding digital deployment across these platforms.\
 
-**Pre-reads:**
 
-* [Audit Service Documentation](https://core.digit.org/platform/core-services/audit-service)
-* [Indexer Service Documentation](https://core.digit.org/platform/core-services/indexer-service)
-* [Inbox Service Documentation](https://urban.digit.org/platform/configure-digit/services-overview/municipal-services/inbox-service)
+We look forward to seeing you in this webinar. Do invite your team and colleagues to this learning session and unlock the potential of the DIGIT Ecosystem.
 
-We encourage you to explore the related video recordings available on YouTube:
+[Session Registration Link](https://us06web.zoom.us/webinar/register/WN\_2yl7YILcQ0C02fplnR45gg). Timings: 2-3 pm&#x20;
 
-* Designing a DIGIT Service - [Part 1](https://www.youtube.com/watch?v=Zoixo3UXgso\&list=PLyQ2-xBpWNe5FAXPuSz\_RcQi\_0e8F\_X4N\&index=1\&pp=iAQB)
-* Designing a DIGIT Service - [Part 2](https://www.youtube.com/watch?v=6r8s96nujqo\&list=PLyQ2-xBpWNe62xg\_TO0AJ4kONKXIYQ2wo\&index=1\&pp=iAQB)
-* [Building a DIGIT Service](https://www.youtube.com/watch?v=Xut7-Sa1BDg\&list=PLyQ2-xBpWNe5FAXPuSz\_RcQi\_0e8F\_X4N\&index=3\&pp=iAQB)
+### **Pre-Reads**
 
-Additionally, a [DIGIT Certificate course ](https://academy.digit.org/courses/develop-with-digit/)is available on the DIGIT Academy portal.
+{% embed url="https://core.digit.org/guides/installation-guide/production-setup/aws" %}
 
-_Speakers: Subhasini Srinivasan_
+{% embed url="https://core.digit.org/guides/installation-guide/production-setup/azure" %}
 
-[**Registration Link - Click here to register for the webinar**](https://us06web.zoom.us/webinar/register/WN\_eFtzUrhlTReZNPO7AnGOwQ#/registration)**.**
+Do reach out to [partner@egovernments.org](mailto:partner@egovernments.org) with any queries, feedback or information requests.
+
+[**Registration Link - Click here to register for the webinar**](https://us06web.zoom.us/webinar/register/WN\_2yl7YILcQ0C02fplnR45gg)**.**
