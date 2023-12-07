@@ -333,6 +333,7 @@
     * [Backbone services](guides/operations-guide/availability/backbone-services/README.md)
       * [Database](guides/operations-guide/availability/backbone-services/database.md)
       * [Kafka](guides/operations-guide/availability/backbone-services/kafka.md)
+      * [Kafka Connect](guides/operations-guide/availability/backbone-services/kafka-connect.md)
       * [Elastic search](guides/operations-guide/availability/backbone-services/elastic-search.md)
     * [Core services](guides/operations-guide/availability/core-services.md)
     * [DIGIT apps](guides/operations-guide/availability/digit-apps.md)
