@@ -1,5 +1,5 @@
 ---
-description: 'Bootcamp 2.0 - DIGIT: Advanced Integrations - November 24, 2023 ~ 2 PM to 4 PM'
+description: Ask Me Anything On DIGIT Deployment - December 8, 2023 ~ 2 PM to 3 PM
 ---
 
 # 🎬 Open Events
