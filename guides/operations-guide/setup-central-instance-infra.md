@@ -1,10 +1,8 @@
----
-description: >-
-  In this tutorial, we will go through the step by step process of setup
-  central-instance infra
----
-
 # Setup Central Instance Infra
+
+## Overview <a href="#pre-reads" id="pre-reads"></a>
+
+This page provides the step-by-step process for setting up the central-instance infra.
 
 ## Pre-reads <a href="#pre-reads" id="pre-reads"></a>
 
@@ -16,13 +14,13 @@ description: >-
 
 ## Pre-requisites <a href="#prerequisites" id="prerequisites"></a>
 
-1. ​[**AWS account**](https://portal.aws.amazon.com/billing/signup?nc2=h\_ct\&src=default\&redirect\_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) with admin access to provision EKS Service, you can always subscribe to free AWS account to learn the basics and try, but there is a limit to [**what is offered as free**](https://aws.amazon.com/free/), for this demo you need to have a commercial subscription to the EKS service.
-2. Install [**terraform**](https://releases.hashicorp.com/terraform/0.14.10/) version (0.14.10) for the Infra-as-code (IaC) to provision cloud resources as code and with desired resource graph and also it helps to destroy the cluster at one go.&#x20;
-3. Install [**kubectl**](https://kubernetes.io/docs/tasks/tools/) on your local machine that helps you interact with the kubernetes cluster
-4. Install [**Helm**](https://helm.sh/docs/intro/install/) that helps you package the services along with the configurations, envs, secrets, etc into a [**kubernetes manifests**](https://devspace.cloud/docs/cli/deployment/kubernetes-manifests/what-are-manifests)
-5. **​**[**Install AWS CLI**](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) on your local machine so that you can use aws cli commands to provision and manage the cloud resources on your account.
-6. Install [**AWS IAM Authenticator**](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) that helps you authenticate your connection from your local machine so that you should be able to deploy DIGIT services.
-7. ​Use the [**AWS IAM User**](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_users\_create.html) **credentials provided** for the Terraform ([**Infra-as-code**](https://devops.digit.org/devops-general/infra-as-code)) to connect with your AWS account and provision the cloud resources.
+1. ​[**AWS account**](https://portal.aws.amazon.com/billing/signup?nc2=h\_ct\&src=default\&redirect\_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) with admin access to provision EKS Service, you can always subscribe to a free AWS account to learn the basics and try, but there is a limit to [**what is offered as free**](https://aws.amazon.com/free/), for this demo you need to have a commercial subscription to the EKS service.
+2. Install [**terraform**](https://releases.hashicorp.com/terraform/0.14.10/) version (0.14.10) for the Infra-as-code (IaC) to provision cloud resources as code and with desired resource graph and also it helps to destroy the cluster in one go.&#x20;
+3. Install [**kubectl**](https://kubernetes.io/docs/tasks/tools/) on your local machine which helps you interact with the Kubernetes cluster
+4. Install [**Helm**](https://helm.sh/docs/intro/install/) that helps you package the services along with the configurations, environments, secrets, etc into a [**kubernetes manifests**](https://devspace.cloud/docs/cli/deployment/kubernetes-manifests/what-are-manifests)
+5. **​**[**Install AWS CLI**](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) on your local machine so that you can use AWS CLI commands to provision and manage the cloud resources on your account.
+6. Install [**AWS IAM Authenticator**](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) which helps you authenticate your connection from your local machine so that you should be able to deploy DIGIT services.
+7. ​Use the [**AWS IAM User**](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_users\_create.html) **credentials provided** for the Terraform ([**Infra-as-code**](https://devops.digit.org/devops-general/infra-as-code)) to connect to your AWS account and provision the cloud resources.
    * You'll get a **Secret Access Key** and **Access Key ID**. **Save them safely.**
    *   Open the terminal and run the following command. The AWS CLI is already installed and the credentials are saved. (Provide the credentials and you can leave the region and output format blank).
 
@@ -43,21 +41,21 @@ description: >-
        aws_secret_access_key=****************************
        ```
 
-Before we provision the cloud resources, we need to understand and be sure about what resources need to be provisioned by terraform to deploy DIGIT. The following picture shows the various key components. (EKS, Worker Nodes, Postgress DB, EBS Volumes, Load Balancer)
+Before we provision the cloud resources, we need to understand and be sure about what resources need to be provisioned by Terraform to deploy DIGIT. The following picture shows the various key components. (EKS, Worker Nodes, Postgres DB, EBS Volumes, Load Balancer).
 
-&#x20;the following is the resources that we are going to provision using terraform in a standard way so that every time and for every environment, it'll have the same infra.
+&#x20;The following are the resources that we are going to provision using Terraform in a standard way so that every time and for every environment, it'll have the same infra.
 
 * EKS Control Plane (Kubernetes Master)
-* Work node group (VMs with the estimated number of vCPUs, Memory)
+* Work node group (VMs with the estimated number of vCPUs and memory)
 * Node-Groups&#x20;
 * EBS Volumes (persistent volumes)
 * RDS (Postgresql)
 * VPCs (private network)
-* Users to access, deploy and read-only
+* Users to access, deploy and read only
 
-## Provisioning of central Instance Infra Using Terraform
+## Provisioning Central Instance Infra Using Terraform
 
-1. Fork the DIGIT-DevOps repository into your organization account using the GitHub web portal. Make sure to add the right users to the repository. Clone the forked DIGIT-DevOps repository. Navigate to the `sample-central-instance` directory which contains the sample AWS infra provisioning script.&#x20;
+Fork the DIGIT-DevOps repository into your organization account using the GitHub web portal. Make sure to add the right users to the repository. Clone the forked DIGIT-DevOps repository. Navigate to the `sample-central-instance` directory which contains the sample AWS infra provisioning script.&#x20;
 
 ```
 git clone --branch release https://github.com/egovernments/DIGIT-DevOps.git
