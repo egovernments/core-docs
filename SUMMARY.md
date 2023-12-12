@@ -303,7 +303,7 @@
   * [Central  Monitoring Dashboard Setup](guides/operations-guide/central-monitoring-dashboard-setup.md)
   * [Kubernetes](guides/operations-guide/kubernetes/README.md)
     * [RBAC Management](guides/operations-guide/kubernetes/rbac-management.md)
-    * [DB Dump - playground](guides/operations-guide/kubernetes/db-dump-playground.md)
+    * [DB Dump - Playground](guides/operations-guide/kubernetes/db-dump-playground.md)
   * [Setup Jenkins - Docker way](guides/operations-guide/setup-jenkins-docker-way.md)
   * [GitOps](guides/operations-guide/gitops/README.md)
     * [Git Client installation](guides/operations-guide/gitops/git-client-installation.md)
