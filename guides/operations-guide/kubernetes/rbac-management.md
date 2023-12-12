@@ -4,17 +4,21 @@ description: Role-based access control
 
 # RBAC Management
 
-Role-based access control (RBAC) is a method of regulating access to a computer or network resources based on the roles of individual users within your organization.
+## Overview
 
-RBAC authorization uses the rbac.authorization.k8s.io API group to drive authorization decisions, allowing you to dynamically configure policies through the Kubernetes API.
+Role-based access control (RBAC) regulates access to a computer or network resources based on the roles of individual users within your organization.
+
+RBAC authorization uses the rbac.authorization.k8s.io API group to drive authorization decisions, allowing you to configure policies through the Kubernetes API dynamically.
 
 ### API objects[ ](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#api-overview) <a href="#api-overview" id="api-overview"></a>
 
-The RBAC API declares four kinds of Kubernetes object: _Role_, _ClusterRole_, _RoleBinding_ and _ClusterRoleBinding_. You can [describe objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#understanding-kubernetes-objects), or amend them, using tools such as `kubectl`, just like any other Kubernetes object.
+The RBAC API declares four Kubernetes objects: _Role_, _ClusterRole_, _RoleBinding_ and _ClusterRoleBinding_. You can [describe objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#understanding-kubernetes-objects), or amend them, using tools such as `kubectl`, just like any other Kubernetes object.
 
-**Caution:** These objects, by design, impose access restrictions. If you are making changes to a cluster as you learn, see [privilege escalation prevention and bootstrapping](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#privilege-escalation-prevention-and-bootstrapping) to understand how those restrictions can prevent you making some changes.
+{% hint style="warning" %}
+**Caution:** These objects, by design, impose access restrictions. If you are making changes to a cluster as you learn, see [privilege escalation prevention and bootstrapping](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#privilege-escalation-prevention-and-bootstrapping) to understand how those restrictions can prevent you from making some changes.
+{% endhint %}
 
-### Role and ClusterRole <a href="#role-and-clusterrole" id="role-and-clusterrole"></a>
+### Role & ClusterRole <a href="#role-and-clusterrole" id="role-and-clusterrole"></a>
 
 An RBAC _Role_ or _ClusterRole_ contains rules that represent a set of permissions. Permissions are purely additive (there are no "deny" rules).
 
@@ -42,6 +46,7 @@ A ClusterRole can be used to grant the same permissions as a Role. Because Clust
 
 Here is the Digit [ClusterRole](https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/helm/charts/cluster-configs/templates/rbac/clusterroles.yaml) that can be used to grant read access and restricted admin access
 
+{% code lineNumbers="true" %}
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -97,8 +102,9 @@ rules:
   - list
   - update    
 ```
+{% endcode %}
 
-### RoleBinding and ClusterRoleBinding
+### RoleBinding & ClusterRoleBinding
 
 A role binding grants the permissions defined in a role to a user or set of users. It holds a list of _subjects_ (users, groups, or service accounts), and a reference to the role being granted. A RoleBinding grants permissions within a specific namespace whereas a ClusterRoleBinding grants that access cluster-wide.
 
@@ -108,6 +114,7 @@ A RoleBinding may reference any Role in the same namespace. Alternatively, a Rol
 
 Here is the Digit [rolebinading](https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/helm/charts/cluster-configs/templates/rbac/rolebindings.yaml) that we are using to grant access to group
 
+{% code lineNumbers="true" %}
 ```
 {{- with index .Values "cluster-configs" "rbac" }}
 {{- range $idx, $v := . }}                 // These iteration values are defined in the environment file
@@ -130,15 +137,17 @@ subjects:
 {{- end }}
 {{- end }}
 ```
+{% endcode %}
 
-A RoleBinding can also reference a ClusterRole to grant the permissions defined in that ClusterRole to resources inside the RoleBinding's namespace. This kind of reference lets you define a set of common roles across your cluster, then reuse them within multiple namespaces.
+A RoleBinding can also reference a ClusterRole to grant the permissions defined in that ClusterRole to resources inside the RoleBinding's namespace. This kind of reference lets you define a set of common roles across your cluster, and then reuse them within multiple namespaces.
 
 For instance, even though the following RoleBinding refers to a ClusterRole, "dave" (the subject, case sensitive) will only be able to read Secrets in the "development" namespace, because the RoleBinding's namespace (in its metadata) is "development".
 
-#### Define the RBAC config in Environment file
+#### Define the RBAC config in the Environment file
 
 You must add a namespace to a role section to grant access to a group of a namespace.
 
+{% code lineNumbers="true" %}
 ```
 cluster-configs:
   rbac:
@@ -147,4 +156,5 @@ cluster-configs:
     - role: admin
       namespaces: [playground,egov]  // digit-admin ClusterRole would be granted to the playground and egov namespace. 
 ```
+{% endcode %}
 
