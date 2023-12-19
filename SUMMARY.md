@@ -273,6 +273,7 @@
     * [Troubleshooting](guides/developer-guide/flutter-ui-developer-guide/troubleshooting.md)
   * [UI Developer Guide](guides/developer-guide/ui-developer-guide/README.md)
     * [DIGIT-UI](guides/developer-guide/ui-developer-guide/digit-ui.md)
+    * [Android Web View & How To Generate APK](guides/developer-guide/ui-developer-guide/android-web-view-and-how-to-generate-apk.md)
     * [DIGIT UI Development Pre-requisites](guides/developer-guide/ui-developer-guide/digit-ui-development-pre-requisites.md)
     * [UI Configuration (DevOps)](guides/developer-guide/ui-developer-guide/ui-configuration-devops.md)
     * [Local Development Setup](guides/developer-guide/ui-developer-guide/local-development-setup.md)
