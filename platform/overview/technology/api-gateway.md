@@ -12,19 +12,16 @@ API Gateway provides a unified interface for a set of microservices so that clie
 
 ## Reasons For Using Zuul
 
-* Provides easier API interface to clients
-* Can be used to prevent exposing the internal micro-services structure to the outside world.
-* Allows to refactor microservices without forcing the clients to refactor consuming logic
-* Can centralize cross-cutting concerns like security, monitoring, rate limiting etc
+1. Easier API interface for clients: Zuul provides a simplified and standardized interface for clients to interact with microservices, streamlining the process of accessing various functionalities.
+2. Protection of internal microservices structure: Zuul acts as a gateway, preventing the exposure of the internal microservices architecture to external clients, enhancing security and maintaining system integrity.
+3. Facilitates microservices refactoring: Zuul allows for seamless refactoring of microservices without requiring clients to modify their consuming logic, ensuring flexibility and minimizing disruptions during updates or changes.
+4. Centralization of cross-cutting concerns: Zuul enables the centralization of common functionalities such as security, monitoring, and rate limiting, simplifying management and ensuring consistent implementation across microservices.
 
 ## Zuul Components
 
 Zuul has mainly four types of filters that enable us to intercept the traffic in different timelines of the request processing for any particular transaction. We can add any number of filters for a particular URL pattern.
 
-* **pre-filters** – are invoked before the request is routed.
-* **post filters** – are invoked after the request has been routed.
-* **route filters** – are used to route the request.
-* **error filters** – are invoked when an error occurs while handling the request.
+<img src="../../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
 
 ## Zuul Features
 
