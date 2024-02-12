@@ -22,22 +22,22 @@ Zuul has mainly four types of filters that enable us to intercept the traffic in
 
 ## Zuul Features
 
-* Microservice authentication and security
-* Authorization
-* API Routing
-* Open APIs using Whitelisting
-* RBAC filter
-* Logout filter for the finance module
-* Property module tax calculation filter for firecess
-* Request enrichment filter:
-  * Addition of co-relation id
-  * Addition of authenticated user’s userinfo to requestInfo.
-* Error filter:
-  * Error response formatting
+1. Microservice authentication and security
+2. Authorization
+3. API Routing
+4. Open APIs using Whitelisting
+5. RBAC filter
+6. Logout filter for the finance module
+7. Property module tax calculation filter for firecess
+8. Request enrichment filter:
+   * Addition of co-relation id
+   * Addition of authenticated user’s userinfo to requestInfo.
+9. Error filter:
+   * Error response formatting
 
-Following are the feature enhancements in the latest version.
+Feature enhancements in the latest version -
 
-* Validation filter to check if a tenant of a particular module is enabled or not.
-* Multitenancy Validation Filter. Take the tenant id from the Req body or Query Param and validate against the additional tenant role or primary tenant role.
-* DevOps efficiency: API response time logging and sending notifications if it is taking more time.
+1. **Validation filter:** to check if a tenant of a particular module is enabled or not.
+2. **Multi-tenancy validation filter:** Take the tenant id from the Req body or Query Param and validate against the additional tenant role or primary tenant role.
+3. **DevOps efficiency:** API response time logging and sending notifications if it is taking more time.
 

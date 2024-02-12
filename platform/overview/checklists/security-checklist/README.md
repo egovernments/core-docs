@@ -6,7 +6,14 @@ description: Application security checklist by various functions
 
 Application security is a critical topic. Being a good engineer requires being aware of Application security best practices. We should practice defensive programming and ensure run security checks much earlier and more frequently during every phase of the software development. The earlier we catch vulnerabilities, the less dramatic and expensive those violations are to resolve. Waiting until release will just leave us nervous and unprepared. Delivering security alongside the continuous delivery of software, we'll identify security problems before they become hopelessly entangled in the application and therefore more difficult, and costly, to resolve.&#x20;
 
-Below are the various checks that each team should ensure to deliver security.&#x20;
+Teams should ensure the following checks to deliver security.
+
+1. [Design considerations](./#id-1.-design-considerations)
+2. [Development considerations](./#id-2.-development-considerations)
+3. [CI/CD considerations](./#id-3.-ci-cd-considerations)
+4. [Testing considerations](./#id-4.-testing-considerations)
+5. [Infra-security considerations](./#id-5.-infra-security-considerations)
+6. [Deployment considerations](./#id-6.-deployment-considerations)
 
 ## 1. Design Considerations
 
@@ -149,8 +156,6 @@ Injecting Security within the Design phase means addressing design decisions tha
 Logging
 
 * [x] Do not forget to turn the DEBUG mode OFF in production builds.
-
-
 
 ## 3. CI/CD Considerations
 
@@ -423,10 +428,3 @@ Cryptography ensures the secure exchange of information by using algorithms that
   * Alert on remarkable or suspicious auditing events like user login, new user creation, permission change, etc
   * Alert on irregular amount of login failures (or equivalent actions like forgot password)
   * Include the time and username that initiated the update in each DB record
-
-
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
-
-
-
