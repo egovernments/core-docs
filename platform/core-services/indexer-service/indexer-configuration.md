@@ -8,6 +8,7 @@ Indexer uses a config file per module to store all the configurations pertaining
 
 Below is the sample configuration for indexing TL application creation data into elastic search.
 
+{% code lineNumbers="true" %}
 ```
 ServiceMaps:
   serviceName: Trade License
@@ -53,6 +54,7 @@ ServiceMaps:
           - inJsonPath: $.MdmsRes.tenant.tenants
             outJsonPath: $.Data.tenantData
 ```
+{% endcode %}
 
 ## **Variable List** <a href="#hardbreak-the-configuration-file-contains-following-keys" id="hardbreak-the-configuration-file-contains-following-keys"></a>
 
