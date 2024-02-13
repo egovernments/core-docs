@@ -10,20 +10,20 @@ The objective of the PDF generation service is to bulk generate pdf as per requi
 
 ## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
-Before you proceed with the documentation, make sure the following pre-requisites are met -
+Before proceeding with the documentation, ensure the following prerequisites are met:
 
-* Install _npm._
-* The Kafka server is up and running.
-* The egov-persister service is running and has a pdf generation persister config path added to it.
-* PSQL server is running and the database is created to store the filestore id and job id of generated pdf.
+1. Install npm
+2. Ensure the Kafka server is operational
+3. Confirm that the egov-persister service is running and configured with a pdf generation persister path
+4. Verify that the PostgreSQL (PSQL) server is running, and a database is created to store filestore IDs and job IDs of generated PDFs
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
-* Provide a common framework to generate PDFs.
-* Provide flexibility to customise the PDF as per the requirement.
-* Provide functionality to add an image or QR code in a PDF.
-* Provide functionality to generate PDFs in bulk.
-* Provide functionality to specify the maximum number of records to be written in one PDF.
+* Provide a common framework to generate PDFs
+* Provide flexibility to customise the PDF as per the requirement
+* Provide functionality to add an image or QR code in a PDF
+* Provide functionality to generate PDFs in bulk
+* Provide functionality to specify the maximum number of records to be written in one PDF
 
 | Environment Variables         | Description                                                                          |
 | ----------------------------- | ------------------------------------------------------------------------------------ |
@@ -41,7 +41,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 ## Interaction Diagram <a href="#interaction-diagram" id="interaction-diagram"></a>
 
-<figure><img src="../../../.gitbook/assets/APdf.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/APdf.jpeg" alt=""><figcaption></figcaption></figure>
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
@@ -91,6 +91,5 @@ To download and print the required PDF \_create API has to be called with the re
 | [_`pdf-service/v1/_search`_](https://www.getpostman.com/collections/5a9bfd6fd03f9f2a6fad)       |
 
 {% hint style="info" %}
-**Note:** All the APIs are in the same Postman collection, therefore, the same link is added in each row
+**Note:** All the APIs are in the same Postman collection, therefore, the same link is added in each row.
 {% endhint %}
-

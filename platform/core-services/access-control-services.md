@@ -25,7 +25,7 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 * Serve the applicable actions for a user based on user roles (To print menu three).
 * On each action performed by a user, access control looks at the roles for the user and validates actions mapping with the role.
-* Support tenant-level role action. For instance, an employee from Amritsar can have the role of APPROVER for other ULBs like Jalandhar and hence will be authorised to act as APPROVER in Jalandhar.
+* Support tenant-level role action - For instance, an employee from Amritsar can have the role of APPROVER for other ULBs like Jalandhar and hence will be authorised to act as APPROVER in Jalandhar.
 
 ## Deployment Details
 
@@ -46,7 +46,7 @@ Define the roles:
 ```
 {% endcode %}
 
-Add the Actions (URL)
+Add the actions (URL)
 
 {% code lineNumbers="true" %}
 ```json
@@ -99,7 +99,7 @@ Any new microservice that is to be added to the platform will not have to worry 
 
 ## Interaction Diagram
 
-<figure><img src="../../../.gitbook/assets/acccessControl.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/acccessControl.png" alt=""><figcaption></figcaption></figure>
 
 ## Reference Docs
 
