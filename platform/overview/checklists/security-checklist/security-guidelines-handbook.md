@@ -2,44 +2,9 @@
 
 ## Best Practices
 
-**POJO**
+Below are some simplified best practices to ensure security:
 
-* Size validations on strings
-* Regex validations wherever applicable
-* @SafeHtml or custom annotation to block any html code in string fields
-
-**File Upload**
-
-* Rename files before storing
-* The file should not be stored in the application folder
-* Only required file extensions should be whitelisted
-* Magic number should be checked for the file using a library like Apache Tika
-
-**API**
-
-* \_create API should have some sort of rate throttling on it.
-* \_search API should return results in a paginated manner.
-* Before whitelisting any API all use cases must be properly thought through(check if it can lead to any security loophole)
-* Some sort of IP based throttling should be applied on whitelisted API to prevent DDoS attack
-* Role action mapping should be thoroughly checked especially in the case of the CITIZEN role, only API required from Citizen UI should be mapped to the CITIZEN role.
-* Sensitive information should not be sent in URL (as a query param) instead should be sent in request body or in headers.
-
-**Coding Practices**
-
-* Error handling should be proper. Custom Exception should be thrown instead of returning the complete stack trace.
-* For generating hash use a strong hashing algorithm like SHA-2
-* Avoid capturing Java.Lang Security Exception
-* Don’t throw exceptions in finally block
-* Always close Input and Output resources in finally block
-* Avoid using external input directly to create pathname that is intended to identify file or directory
-* Scan for potential infinite loops. Avoid executing loops using user input directly.
-* Check for SQL injection. Always use prepared statements instead of directly creating query as string from input parameters.
-* Instead of standard pseudo-random generators use cryptographic PRNG.
-* Sensitive and Environment dependent properties like DB host and password should not be hardcoded and should be overwritten during deployment.
-* Avoid logging sensitive information or its exposure through error messages.
-* Do not compare class objects with getName() or getSimpleName() methods.
-* The setter method for an identifier property (id or composite-id) should be private.
-* Do not allow external input to control resource identifiers.
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>POJO</strong></td><td><p></p><ul><li>Validate string sizes.</li><li>Use regex validations when applicable.</li><li>Apply @SafeHtml or custom annotations to prevent HTML code in string fields.</li></ul></td><td></td></tr><tr><td><strong>File Upload</strong></td><td><p></p><ul><li>Rename files before storage.</li><li>Avoid storing files in the application folder.</li><li>Whitelist only required file extensions.</li><li>Check the file's magic number using a library like Apache Tika.</li></ul></td><td></td></tr><tr><td><strong>API</strong></td><td><p></p><ul><li>Implement rate throttling on _create API.</li><li>Return results in a paginated manner for _search API.</li><li>Carefully whitelist APIs to avoid security loopholes.</li><li>Apply IP-based throttling on whitelisted APIs to prevent DDoS attacks.</li><li>Verify role-action mapping, especially for the CITIZEN role, to ensure only necessary APIs are accessible.</li><li>Avoid sending sensitive information in URLs; use request bodies or headers instead.</li></ul></td><td></td></tr><tr><td><strong>Coding Practices</strong></td><td><p></p><ul><li>Proper error handling, avoid returning complete stack traces.</li><li>Use strong hashing algorithms like SHA-2 for generating hashes.</li><li>Avoid capturing Java.Lang Security Exception.</li><li>Do not throw exceptions in finally blocks.</li><li>Always close input and output resources in finally blocks.</li><li>Avoid creating pathnames directly from external input.</li><li>Check for potential infinite loops and avoid executing loops directly with user input.</li><li>Prevent SQL injection by using prepared statements instead of string queries.</li><li>Use cryptographic PRNG instead of standard pseudo-random generators.</li><li>Avoid hardcoding sensitive or environment-dependent properties like DB host and password.</li><li>Refrain from logging sensitive information or exposing it through error messages.</li><li>Do not compare class objects using getName() or getSimpleName() methods.</li><li>Ensure the setter method for identifier properties (id or composite-id) is private.</li><li>Do not allow external input to control resource identifiers.</li></ul></td><td></td></tr></tbody></table>
 
 ## Detailed Guidelines
 
@@ -49,7 +14,7 @@ Role Action mapping should be in accordance with the business requirements. No r
 
 There is a possibility of horizontal/vertical escalation in the case of workflows. We have fixed this issue by validating the logged in user and the workflow item's owner. Allowing access if the logged-in user and the workflow owner are the same.
 
-#### Failure to restrict URL Access <a href="#failure-to-restrict-url-access" id="failure-to-restrict-url-access"></a>
+#### Failure To Restrict URL Access <a href="#failure-to-restrict-url-access" id="failure-to-restrict-url-access"></a>
 
 We use pre-signed URLs, so we cannot restrict access to the file if someone gets the URL. As a security measure, we should restrict the value of the URL validity to as minimum as possible. The value is configurable and can be overwritten in helm charts using the following property:
 
@@ -57,11 +22,11 @@ We use pre-signed URLs, so we cannot restrict access to the file if someone gets
 filestore-url-validity
 ```
 
-#### Insecure direct object references (IDOR) <a href="#insecure-direct-object-references-idor" id="insecure-direct-object-references-idor"></a>
+#### Insecure Direct Object References (IDOR) <a href="#insecure-direct-object-references-idor" id="insecure-direct-object-references-idor"></a>
 
 API’s like /user/\_search which exposes the personal data of users shouldn’t be directly exposed. We have removed access to the API from UI, the user information of logged in user can be instead fetched from /user/oauth/token which is now enhanced to return the required info.
 
-#### Malicious file upload leads to Cross-Site scripting <a href="#malicious-file-upload-leads-to-cross-site-scripting" id="malicious-file-upload-leads-to-cross-site-scripting"></a>
+#### Malicious File Upload Leads To Cross-Site Scripting <a href="#malicious-file-upload-leads-to-cross-site-scripting" id="malicious-file-upload-leads-to-cross-site-scripting"></a>
 
 Unrestricted file upload is a serious security risk. To tackle this problem we have a bunch of security validations. The file extension, content and content type in the header are all validated. We define the allowed extensions and their corresponding content type as a map and is configurable using the following property:
 
@@ -93,7 +58,7 @@ zuul.ratelimit.policy-list.tl-services[0].type[1]=user
 
 Client secrets shouldn’t be sent in Base64 encoded format from UI, only for the server to server call the secret can be sent in Authorization header in Base64 format. We have removed client secret from the Authorization header in Digit Platform
 
-#### Sensitive Information in URL <a href="#sensitive-information-in-url" id="sensitive-information-in-url"></a>
+#### Sensitive Information In URL <a href="#sensitive-information-in-url" id="sensitive-information-in-url"></a>
 
 Avoid sending sensitive information in URL as a query param. Instead, it can be sent either in the request body or in headers. For example in the previous Digit version in \_logout API, authToken was sent in query param as below:
 
@@ -119,7 +84,7 @@ The API is now enhanced to accept the authToken in Request Body as below :
 }
 ```
 
-#### Lack of Automatic Session Expiration <a href="#lack-of-automatic-session-expiration" id="lack-of-automatic-session-expiration"></a>
+#### Lack Of Automatic Session Expiration <a href="#lack-of-automatic-session-expiration" id="lack-of-automatic-session-expiration"></a>
 
 Proper expiry time should be set for authToken validity. In case the authToken get’s stolen, it can be exploited only till the time the token is valid. The validity can be configured from the following two property in helm charts:
 
@@ -130,7 +95,7 @@ Proper expiry time should be set for authToken validity. In case the authToken g
 
 #### Concurrent Session <a href="#concurrent-session" id="concurrent-session"></a>
 
-Multiple logins using the same user name and password should be avoided. Due to business requirement, we currently have not implemented the feature in Digit
+Multiple logins using the same user name and password should be avoided. Due to business requirement, we currently have not implemented this feature in DIGIT.
 
 #### Improper Error Handling <a href="#improper-error-handling" id="improper-error-handling"></a>
 
@@ -172,7 +137,7 @@ private String tenantId
 Validate any user input that is used to create an email subject line from user input. And encode special characters after proper canonicalization, and in particular, any line break (CR / LF) characters\
 in the input, that attackers may use to inject unexpected headers in the mail message sent to the server.
 
-#### Use of hardcoded credentials <a href="#use-of-hardcoded-credentials" id="use-of-hardcoded-credentials"></a>
+#### Use Of Hardcoded Credentials <a href="#use-of-hardcoded-credentials" id="use-of-hardcoded-credentials"></a>
 
 Always overwrite sensitive values in application.properties during deployment. Never use hardcoded credentials. Generally, the sensitive values in application.properties will be like the DB user name and password, secrets etc. In Digit all the sensitive values are overwritten using kubernetes ConfigMaps. Following is examples of properties that we overwrite:
 
