@@ -135,7 +135,7 @@ Each item in the above dropdown is displayed by adding an object in the link bel
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -195,9 +195,9 @@ Accordingly, add the role-actions:
 
 ### **SLA Configuration**
 
-<figure><img src="../../../../.gitbook/assets/image (189).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (189).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (195).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (195).png" alt=""><figcaption></figcaption></figure>
 
 SLA slots and the background colour of the SLA days remaining on the Inbox page are defined in the MDMS configuration as shown above.
 
@@ -215,5 +215,4 @@ The colours are also configured in the MDMS.
   The field assignee of type User in ProcessInstance object is changed to a list of 'User' called assignees.\
   User assignee --> List\<User> assignees
 * For Citizen Sendback:\
-  When the action SENDBACKTOCITIZEN is called on the entity the module has to enrich the assignees with the UUIDs of the owners and creator of the entity.\
-  \
+  When the action SENDBACKTOCITIZEN is called on the entity the module has to enrich the assignees with the UUIDs of the owners and creator of the entity.

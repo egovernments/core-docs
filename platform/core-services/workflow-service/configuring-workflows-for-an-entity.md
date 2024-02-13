@@ -32,14 +32,15 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ## Configuration Details
 
-The Workflow configuration has 3 levels of hierarchy:\
-a. BusinessService\
-b. State\
-c. Action\
+The Workflow configuration has 3 levels of hierarchy:
 
+* BusinessService
+* State
+* Action
 
 The top-level object is BusinessService which contains fields describing the workflow and a list of States that are part of the workflow. The businessService can be defined at the tenant level like pb.amritsar or at the state level like pb. All objects maintain an audit sub-object which keeps track of who is creating and updating and the time of it.
 
+{% code lineNumbers="true" %}
 ```
 {
         "tenantId": "pb.amritsar",
@@ -49,9 +50,11 @@ The top-level object is BusinessService which contains fields describing the wor
         "states": [...]
     }
 ```
+{% endcode %}
 
 Each state object is a valid status for the application. The State object contains information about the state and what actions can be performed on it.
 
+{% code lineNumbers="true" %}
 ```
 {
         "sla": 36000000,
@@ -64,9 +67,11 @@ Each state object is a valid status for the application. The State object contai
         "actions": [...]
     }
 ```
+{% endcode %}
 
 The action object is the last object in the hierarchy, it defines the name of the action and the roles that can perform the action.
 
+{% code lineNumbers="true" %}
 ```
       {
           "action": "ASSIGN",
@@ -77,9 +82,11 @@ The action object is the last object in the hierarchy, it defines the name of th
           "nextState": "PENDINGATLME",
       }
 ```
+{% endcode %}
 
 The workflow should always start from the null state as the service treats new applications as having null as the initial state. eg:
 
+{% code lineNumbers="true" %}
 ```
 {
                     "sla": null,
@@ -101,6 +108,7 @@ The workflow should always start from the null state as the service treats new a
                     ]
                 }
 ```
+{% endcode %}
 
 In the action object whatever nextState is defined, the application will be sent to that state. It can be to another forward state or even some backward state from where the application has already passed\
 _(generally, such actions are named SENDBACK)_
@@ -109,7 +117,7 @@ SENDBACKTOCITIZEN is a special keyword for an action name. This action sends bac
 
 ## Integration Details
 
-For integration-related steps please refer to the document [**Setting Up Workflows**](setting-up-workflows.md).
+For integration-related steps, refer to the document [**Setting Up Workflows**](setting-up-workflows.md).
 
 ## Reference Docs
 
@@ -129,6 +137,5 @@ For integration-related steps please refer to the document [**Setting Up Workflo
 | [_`_search`_](https://www.getpostman.com/collections/8552e3de40c819e34190) |
 
 {% hint style="info" %}
-**Note:** All the APIs are in the same Postman collection therefore the same link is added in each row
+**Note:** All the APIs are in the same Postman collection therefore the same link is added in each row.
 {% endhint %}
-

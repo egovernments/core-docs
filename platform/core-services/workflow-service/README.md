@@ -26,23 +26,15 @@ Before you proceed with the documentation, make sure the following pre-requisite
 * **Overall SLA:** SLA for the complete processing of the application/Entity
 * **State-level SLA:** SLA for a particular state in the workflow
 
-| **Environment Variables**  | **Description**                                                                                                                                                                                                                                                                                                                                      |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| egov.wf.default.offset     | The default value of offset in search                                                                                                                                                                                                                                                                                                                |
-| egov.wf.default.limit      | The default value of limit in search                                                                                                                                                                                                                                                                                                                 |
-| egov.wf.max.limit          | The maximum number of records that are returned in search response                                                                                                                                                                                                                                                                                   |
-| egov.wf.inbox.assignedonly | Boolean flag if set to _true_ default search will return records assigned to the user only, if _false_ it will return all the records based on the user’s role. _(default search is the search call when no query params are sent and based on the RequestInfo of the call, records are returned, it’s used to show applications in employee inbox)_ |
-| egov.wf.statelevel         | Boolean flag set to _true_ if a state-level workflow is required                                                                                                                                                                                                                                                                                     |
+<table><thead><tr><th width="255">Environment Variables</th><th>Description</th></tr></thead><tbody><tr><td>egov.wf.default.offset</td><td>The default value of offset in search</td></tr><tr><td>egov.wf.default.limit</td><td>The default value of limit in search</td></tr><tr><td>egov.wf.max.limit</td><td>The maximum number of records that are returned in search response</td></tr><tr><td>egov.wf.inbox.assignedonly</td><td>Boolean flag if set to <em>true</em> default search will return records assigned to the user only, if <em>false</em> it will return all the records based on the user’s role. <em>(default search is the search call when no query params are sent and based on the RequestInfo of the call, records are returned, it’s used to show applications in employee inbox)</em></td></tr><tr><td>egov.wf.statelevel</td><td>Boolean flag set to <em>true</em> if a state-level workflow is required</td></tr></tbody></table>
 
 ## Interaction Diagram
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
 
 </div>
-
-
 
 ## Deployment Details
 
@@ -56,7 +48,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 ## Configuration Details
 
-For configuration details please refer to the links in Reference Docs.
+For configuration details, refer to the links in [Reference Docs](./#reference-docs).
 
 ## Integration Details
 
@@ -70,7 +62,7 @@ The workflow configuration can be used by any module which performs a sequence o
 * An easy way of writing rule
 * File movement within workflow roles
 
-### Steps to Integration
+### Integration Steps
 
 1. To integrate, the host of egov-workflow-v2 should be overwritten in the helm chart.
 2. /process/\_search should be added as the search endpoint for searching workflow process Instance objects.
@@ -99,6 +91,5 @@ The workflow configuration can be used by any module which performs a sequence o
 | [_/process/\_search_](https://www.getpostman.com/collections/8552e3de40c819e34190)         |
 
 {% hint style="info" %}
-**Note:** All the APIs are in the same Postman collection therefore the same link is added in each row
+**Note:** All the APIs are in the same Postman collection therefore the same link is added in each row.
 {% endhint %}
-

@@ -33,6 +33,7 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 Create the businessService JSON based on product requirements. Following is a sample json of a simple 2-step workflow where an application can be applied by a citizen or counter employee and then can be either rejected or approved by the approver.
 
+{% code lineNumbers="true" %}
 ```json
 {
       "tenantId": "pb",
@@ -105,6 +106,7 @@ Create the businessService JSON based on product requirements. Following is a sa
       ]
     }
 ```
+{% endcode %}
 
 Once the businessService json is created add it in the request body of _\_create_ API of workflow and call the API to create the workflow.
 
@@ -146,6 +148,5 @@ Integrating with workflow service provides a way to have a dynamic workflow conf
 | [_`_search`_](https://www.getpostman.com/collections/8552e3de40c819e34190) |
 
 {% hint style="info" %}
-**Note:** All the APIs are in the same Postman collection therefore the same link is added in each row
+**Note:** All the APIs are in the same Postman collection therefore the same link is added in each row.
 {% endhint %}
-
