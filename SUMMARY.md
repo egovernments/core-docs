@@ -18,7 +18,7 @@
     * [API Checklist](platform/overview/checklists/api-checklist.md)
     * [Security Checklist](platform/overview/checklists/security-checklist/README.md)
       * [Security Guidelines Handbook](platform/overview/checklists/security-checklist/security-guidelines-handbook.md)
-      * [Security Flow - exemplar](platform/overview/checklists/security-checklist/security-flow-exemplar.md)
+      * [Security Flow - Exemplar](platform/overview/checklists/security-checklist/security-flow-exemplar.md)
     * [Performance Checklist](platform/overview/checklists/performance-checklist.md)
     * [Deployment Checklist](platform/overview/checklists/deployment-checklist.md)
   * [UI Frameworks](platform/overview/ui-frameworks/README.md)

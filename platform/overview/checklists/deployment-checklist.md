@@ -1,35 +1,33 @@
 # Deployment Checklist
 
-In order to make sure that everything goes well you need to check, check and double-check. The aim is to make your deploys as controllable as possible, so we can limit the number of things that could go wrong. That’s exactly why we’ll be going over this checklist that you could use when it comes to deploying code to production.
+To ensure smooth deployments and minimize potential issues, it's crucial to follow a thorough checklist. Here's a high-level overview:
 
-The checklist on a high-level looks like this:
-
-1. Know _what_ is going to get deployed
-2. Excessive testing; preferably using a pipeline with automated tests
-3. Know _when_ is going to get deployed
-4. Create backups
-5. Deploy to production
+1. Know what is going to get deployed&#x20;
+2. Excessive testing; preferably using a pipeline with automated tests&#x20;
+3. Know when is going to get deployed&#x20;
+4. Create backups&#x20;
+5. Deploy to production&#x20;
 6. Test on the live server
 
-## Know what is put in version control <a href="#6ef3" id="6ef3"></a>
+By adhering to this checklist, you can enhance control over deployments and reduce the likelihood of complications.
 
-* [ ] It is extremely important to know exactly what you put in version control. Make sure you mask passwords, or better put them in your file with environment variables, like a _.env_ file that contains all environments variables.
-* [ ] What’s less impactful, but definitely not what we want in .env, is to put in config files and version control.
+### Know what is put in version control <a href="#id-6ef3" id="id-6ef3"></a>
 
-## Testing <a href="#0433" id="0433"></a>
+* [x] It is extremely important to know exactly what you put in version control. Make sure you mask passwords, or better put them in your file with environment variables, like a _.env_ file that contains all environments variables.
+* [x] What’s less impactful, but definitely not what we want in .env, is to put in config files and version control.
 
-* [ ] Before any piece of code gets deployed it should be tested thoroughly. Testing the code comes in different degrees.&#x20;
-* [ ] Code reviews should be part of the routine of every team just to have an extra pair of eyes look at what is being deployed.&#x20;
-* [ ] In the best-case scenario writing code should go hand-in-hand with writing automated tests for that same piece of code.&#x20;
+## Testing <a href="#id-0433" id="id-0433"></a>
 
-## Pipelines <a href="#505d" id="505d"></a>
+* [x] Before any piece of code gets deployed it should be tested thoroughly. Testing the code comes in different degrees.&#x20;
+* [x] Code reviews should be part of the routine of every team just to have an extra pair of eyes look at what is being deployed.&#x20;
+* [x] In the best-case scenario writing code should go hand-in-hand with writing automated tests for that same piece of code.&#x20;
 
-* [ ] Pipelines are flexible in a way that you could configure them however the most common components of a pipeline are build automation, test automation, and deployment automation.
-* [ ] Ensure that every change to the code is releasable and as easy pushing a button.
+## Pipelines <a href="#id-505d" id="id-505d"></a>
 
+* [x] Pipelines are flexible in a way that you could configure them however the most common components of a pipeline are build automation, test automation, and deployment automation.
+* [x] Ensure that every change to the code is releasable and as easy pushing a button.
 
-
-### 1. Application development <a href="#application-development" id="application-development"></a>
+### 1. Application Development <a href="#application-development" id="application-development"></a>
 
 Health checks
 
@@ -120,13 +118,9 @@ Custom policies
 * #### Enforce uniqueness in Ingress hostnames <a href="#enforce-uniqueness-in-ingress-hostnames" id="enforce-uniqueness-in-ingress-hostnames"></a>
 * #### Only use approved domain names in the Ingress hostnames <a href="#only-use-approved-domain-names-in-the-ingress-hostnames" id="only-use-approved-domain-names-in-the-ingress-hostnames"></a>
 
-### 3. Cluster configuration <a href="#cluster-configuration" id="cluster-configuration"></a>
+### 3. Cluster Configuration <a href="#cluster-configuration" id="cluster-configuration"></a>
 
 Approved Kubernetes configuration
 
 * #### The cluster passes the CIS benchmark <a href="#the-cluster-passes-the-cis-benchmark" id="the-cluster-passes-the-cis-benchmark"></a>
-*   #### Disable metadata cloud providers metada API <a href="#disable-metadata-cloud-providers-metada-api" id="disable-metadata-cloud-providers-metada-api"></a>
-
-
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
+* #### Disable metadata cloud providers metada API <a href="#disable-metadata-cloud-providers-metada-api" id="disable-metadata-cloud-providers-metada-api"></a>
