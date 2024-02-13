@@ -80,7 +80,7 @@ To download and print the required PDF \_create API has to be called with the re
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Customizing PDF Receipts & Certificates](https://urban.digit.org/platform/configure-digit/configuring-digit-services/customizing-pdf-notices-and-certificates/customizing-pdf-receipts-and-certificates)                                 |
 | [Steps for Integration of PDF in UI for download and print PDF](https://urban.digit.org/platform/configure-digit/configuring-digit-services/customizing-pdf-notices-and-certificates/integration-of-pdf-in-ui-for-download-and-print-pdf) |
-| [API Swagger Documentation](https://app.swaggerhub.com/apis/eGovernment/pdf-service\_ap\_is/1.1.0)                                                                                                                                        |
+| [API Swagger Documentation](https://raw.githubusercontent.com/egovernments/DIGIT-OSS/master/core-services/pdf-service/pdf-swagger-contract.yml)                                                                                           |
 
 ### API List <a href="#api-list" id="api-list"></a>
 
