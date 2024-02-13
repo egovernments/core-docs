@@ -17,11 +17,11 @@ Teams should ensure the following checks to deliver security.
 
 ## 1. Design Considerations
 
-Injecting Security within the Design phase means addressing design decisions that take into account the perspective of an attacker that is trying to breach weaknesses and compromise the confidentiality, integrity and other important security aspects of your software.&#x20;
+Injecting Security in the design phase means addressing design decisions that take into account the perspective of an attacker that is trying to breach weaknesses and compromise the confidentiality, integrity and other important security aspects of your software.&#x20;
 
 * [x] Protect Personally Identifiable Information (PII Data)
   * Personally identifiable information (PII) is any data that can be used to identify a specific individual
-  * Protect Personally Identifiable Information in the Applications by encrypting them
+  * Protect Personally Identifiable Information in the applications by encrypting them
   * Follow the data privacy laws of the land
 * [x] Secure File uploads
   * Whitelist-allowed extensions. Only allow safe and critical extensions for business functionality
@@ -35,7 +35,7 @@ Injecting Security within the Design phase means addressing design decisions tha
 * [x] Where possible, always log in and handle the exception
   * Input validation failures e.g. protocol violations, unacceptable encodings, invalid parameter names and values
   * Output validation failures e.g. database recordset mismatch, invalid data encoding
-  * Authentication successes and failures, Authorization (access control) failures
+  * Authentication successes and failures, authorization (access control) failures
   * Session management failures e.g. cookie session identification value modification
   * Application errors and system events e.g. syntax and runtime errors, connectivity problems, performance issues, third-party service error messages, file system errors, file upload virus detection, configuration changes
   * Application and related systems startups and shutdowns, and logging initialization (starting, stopping or pausing)
@@ -64,27 +64,27 @@ Injecting Security within the Design phase means addressing design decisions tha
   * Applying context-sensitive encoding when modifying the browser document on the client-side acts against DOM XSS
   * Enabling a Content-Security Policy (CSP) as a defence-in-depth mitigating control against XSS
 * [x] DB Security
-  * [ ] Data Encryption  - Encrypt database storage files and on-site/offsite backups.&#x20;
-    * Identify the specific data sets on which encryption should be enabled. Which databases? Which Rows? Which Columns?&#x20;
-    * Use different encryption keys to encrypt different datasets, Perhaps data that belongs to different clients sharing a single database?
-  * [ ] AUDITING -  Monitor internal and external access to data that is considered sensitive.
-    * Identify the specific data assets that require auditing: databases, tables, columns.&#x20;
-    * Track the username, originating from which server, accessing which specific dataset and when.&#x20;
-    * Special auditing is needed if applications users are separate from database users.
-  * [x] DATA GOVERNANCE - Track and monitor data including as it moves across different data silos.
-    * Make sure to tag, track and catalog datasets as they travel from one database to another. Establish policies and workflows with checks along the way.&#x20;
-    * Implement complete data lifecycle management policies across all databases including data provisioning, data cleansing and periodic dataset compliance checks.
-  * [x] CLIENT SEGREGATION - In Multi-Tenant environments, multiple “clients” can share the same database server. These types of databases require special treatment across all security domains: encryption, auditing, authorization, etc…&#x20;
-    * Encrypt individual client data using different keys. implement strong authorization and authentication, using different users for each client and restricting access to subsets of the entire database.&#x20;
-    * Identify specific customers that cannot co-exist on the same database server.
-  * [x] AUTHORIZATION - Enable polices on who can access which datasets, enable strict permissions.&#x20;
-    * Different users should only be allowed access to specific datasets within a database: down to the specific row and column levels. Never grant excessive permissions.&#x20;
-    * If application users and database users do not correlate, more sophisticated authorization needs to be configured to create a strong chain of identity.&#x20;
-    * Set requirements for sophisticated authorization that goes beyond simple users: filter origin of access to data – server IP, time/date, application, etc…
-    * Do you have “super” / system” users that can access all data? Are they required? These types of users require special attention.&#x20;
-  * [x] AUTHENTICATION - Setup secure means by which users authenticate with the database.
-    * Ensure strong authentication mechanisms such as single-sign on and restricting databases to only authenticate users from Directory Services and not using username/password combinations.&#x20;
-    * If “web users” authenticate with your application and the application authenticates with the database using different users or using username/password combinations, special attention must be placed on creating strong authentication chains
+  1. Data Encryption  - Encrypt database storage files and on-site/offsite backups.&#x20;
+     * Identify the specific data sets on which encryption should be enabled. Which databases? Which Rows? Which Columns?&#x20;
+     * Use different encryption keys to encrypt different datasets, Perhaps data that belongs to different clients sharing a single database?
+  2. AUDITING -  Monitor internal and external access to data that is considered sensitive.
+     * Identify the specific data assets that require auditing: databases, tables, columns.&#x20;
+     * Track the username, originating from which server, accessing which specific dataset and when.&#x20;
+     * Special auditing is needed if applications users are separate from database users.
+  3. DATA GOVERNANCE - Track and monitor data including as it moves across different data silos.
+     * Make sure to tag, track and catalog datasets as they travel from one database to another. Establish policies and workflows with checks along the way.&#x20;
+     * Implement complete data lifecycle management policies across all databases including data provisioning, data cleansing and periodic dataset compliance checks.
+  4. CLIENT SEGREGATION - In Multi-Tenant environments, multiple “clients” can share the same database server. These types of databases require special treatment across all security domains: encryption, auditing, authorization, etc…&#x20;
+     * Encrypt individual client data using different keys. implement strong authorization and authentication, using different users for each client and restricting access to subsets of the entire database.&#x20;
+     * Identify specific customers that cannot co-exist on the same database server.
+  5. AUTHORIZATION - Enable polices on who can access which datasets, enable strict permissions.&#x20;
+     * Different users should only be allowed access to specific datasets within a database: down to the specific row and column levels. Never grant excessive permissions.&#x20;
+     * If application users and database users do not correlate, more sophisticated authorization needs to be configured to create a strong chain of identity.&#x20;
+     * Set requirements for sophisticated authorization that goes beyond simple users: filter origin of access to data – server IP, time/date, application, etc…
+     * Do you have “super” / system” users that can access all data? Are they required? These types of users require special attention.&#x20;
+  6. AUTHENTICATION - Setup secure means by which users authenticate with the database.
+     * Ensure strong authentication mechanisms such as single-sign on and restricting databases to only authenticate users from Directory Services and not using username/password combinations.&#x20;
+     * If “web users” authenticate with your application and the application authenticates with the database using different users or using username/password combinations, special attention must be placed on creating strong authentication chains
 
 ## 2. Development Considerations
 
@@ -176,14 +176,14 @@ A successful web application security strategy fundamentally begins with an unde
 
 Some key application security information-gathering activities include:
 
-* [ ] &#x20;Identify technologies used
-* [ ] &#x20;Identify user roles
-* [ ] &#x20;Identify application entry points
-* [ ] &#x20;Identify client-side code
-* [ ] &#x20;Identify multiple versions/channels (e.g. web, mobile web, mobile app, web services)
-* [ ] &#x20;Identify co-hosted and related applications
-* [ ] &#x20;Identify all hostnames and ports
-* [ ] &#x20;Identify third-party hosted content
+* Identify technologies used
+* Identify user roles
+* Identify application entry points
+* Identify client-side code
+* Identify multiple versions/channels (e.g. web, mobile web, mobile app, web services)
+* Identify co-hosted and related applications
+* Identify all hostnames and ports
+* Identify third-party hosted content
 
 #### Configuration Management
 
@@ -191,161 +191,161 @@ A web server ecosystem is intrinsically complex with highly connected, heterogen
 
 Securing various configuration items of an application involves:
 
-* [ ] &#x20;Check for commonly used application and administrative URLs
-* [ ] &#x20;Check for old, backup and unreferenced files
-* [ ] &#x20;Check HTTP methods supported and Cross Site Tracing (XST)
-* [ ] &#x20;Test file extensions handling
-* [ ] &#x20;Test for security HTTP headers (e.g. CSP, X-Frame-Options, HSTS)
-* [ ] &#x20;Test for policies (e.g. Flash, Silverlight, robots)
-* [ ] &#x20;Test for non-production data in live environment, and vice-versa
-* [ ] &#x20;Check for sensitive data in client-side code (e.g. API keys, credentials)
+* Check for commonly used application and administrative URLs
+* Check for old, backup and unreferenced files
+* Check HTTP methods supported and Cross Site Tracing (XST)
+* Test file extensions handling
+* Test for security HTTP headers (e.g. CSP, X-Frame-Options, HSTS)
+* Test for policies (e.g. Flash, Silverlight, robots)
+* Test for non-production data in live environment, and vice-versa
+* Check for sensitive data in client-side code (e.g. API keys, credentials)
 
 #### Secure Transmission
 
-* [ ] &#x20;Check SSL Version, Algorithms, Key length
-* [ ] &#x20;Check for Digital Certificate Validity (Duration, Signature and CN)
-* [ ] &#x20;Check credentials only delivered over HTTPS
-* [ ] &#x20;Check that the login form is delivered over HTTPS
-* [ ] &#x20;Check session tokens only delivered over HTTPS
-* [ ] &#x20;Check if HTTP Strict Transport Security (HSTS) in use
+* Check SSL Version, Algorithms, Key length
+* Check for Digital Certificate Validity (Duration, Signature and CN)
+* Check credentials only delivered over HTTPS
+* Check that the login form is delivered over HTTPS
+* Check session tokens only delivered over HTTPS
+* Check if HTTP Strict Transport Security (HSTS) in use
 
 #### Authentication
 
-* [ ] &#x20;Test for user enumeration
-* [ ] &#x20;Test for authentication bypass
-* [ ] &#x20;Test for bruteforce protection
-* [ ] &#x20;Test password quality rules
-* [ ] &#x20;Test remember me functionality
-* [ ] &#x20;Test for autocomplete on password forms/input
-* [ ] &#x20;Test password reset and/or recovery
-* [ ] &#x20;Test password change process
-* [ ] &#x20;Test CAPTCHA
-* [ ] &#x20;Test multi-factor authentication
-* [ ] &#x20;Test for logout functionality presence
-* [ ] &#x20;Test for cache management on HTTP (eg Pragma, Expires, Max-age)
-* [ ] &#x20;Test for default logins
-* [ ] &#x20;Test for user-accessible authentication history
-* [ ] &#x20;Test for out-of-channel notification of account lockouts and successful password changes
-* [ ] &#x20;Test for consistent authentication across applications with shared authentication schema / SSO
+* Test for user enumeration
+* Test for authentication bypass
+* Test for bruteforce protection
+* Test password quality rules
+* Test remember me functionality
+* Test for autocomplete on password forms/input
+* Test password reset and/or recovery
+* Test password change process
+* Test CAPTCHA
+* Test multi-factor authentication
+* Test for logout functionality presence
+* Test for cache management on HTTP (eg Pragma, Expires, Max-age)
+* Test for default logins
+* Test for user-accessible authentication history
+* Test for out-of-channel notification of account lockouts and successful password changes
+* Test for consistent authentication across applications with shared authentication schema / SSO
 
 #### Session Management
 
 Once a user is authenticated, their interaction with the server is managed within a **session**. Improperly managed sessions open doors for attackers to compromise access mechanisms by assuming those to be identities of legitimate users. More so, such compromised accesses are often taken advantage of by attack vectors that escalate privileges and penetrate deeper into the system. To avoid vulnerabilities within a session, the following processes are recommended to be tested as a best practice:
 
-* [ ] &#x20;Establish how session management is handled in the application (eg, tokens in cookies, token in URL)
-* [ ] &#x20;Check session tokens for cookie flags (httpOnly and secure)
-* [ ] &#x20;Check session cookie scope (path and domain)
-* [ ] &#x20;Check session cookie duration (expires and max-age)
-* [ ] &#x20;Check session termination after a maximum lifetime
-* [ ] &#x20;Check session termination after a relative timeout
-* [ ] &#x20;Check session termination after logout
-* [ ] &#x20;Test to see if users can have multiple simultaneous sessions
-* [ ] &#x20;Test session cookies for randomness
-* [ ] &#x20;Confirm that new session tokens are issued on login, role change and logout
-* [ ] &#x20;Test for consistent session management across applications with shared session management
-* [ ] &#x20;Test for session puzzling
-* [ ] &#x20;Test for CSRF and clickjacking
+* Establish how session management is handled in the application (eg, tokens in cookies, token in URL)
+* Check session tokens for cookie flags (httpOnly and secure)
+* Check session cookie scope (path and domain)
+* Check session cookie duration (expires and max-age)
+* Check session termination after a maximum lifetime
+* Check session termination after a relative timeout
+* Check session termination after logout
+* Test to see if users can have multiple simultaneous sessions
+* Test session cookies for randomness
+* Confirm that new session tokens are issued on login, role change and logout
+* Test for consistent session management across applications with shared session management
+* Test for session puzzling
+* Test for CSRF and clickjacking
 
 #### Authorization
 
-* [ ] &#x20;Test for path traversal
-* [ ] &#x20;Test for bypassing authorization schema
-* [ ] &#x20;Test for vertical Access control problems (a.k.a. Privilege Escalation)
-* [ ] &#x20;Test for horizontal Access control problems (between two users at the same privilege level)
-* [ ] &#x20;Test for missing authorization
+* Test for path traversal
+* Test for bypassing authorization schema
+* Test for vertical Access control problems (a.k.a. Privilege Escalation)
+* Test for horizontal Access control problems (between two users at the same privilege level)
+* Test for missing authorization
 
 #### Data Validation
 
-* [ ] &#x20;Test for Reflected Cross Site Scripting
-* [ ] &#x20;Test for Stored Cross Site Scripting
-* [ ] &#x20;Test for DOM based Cross Site Scripting
-* [ ] &#x20;Test for Cross Site Flashing
-* [ ] &#x20;Test for HTML Injection
-* [ ] &#x20;Test for SQL Injection
-* [ ] &#x20;Test for LDAP Injection
-* [ ] &#x20;Test for ORM Injection
-* [ ] &#x20;Test for XML Injection
-* [ ] &#x20;Test for XXE Injection
-* [ ] &#x20;Test for SSI Injection
-* [ ] &#x20;Test for XPath Injection
-* [ ] &#x20;Test for XQuery Injection
-* [ ] &#x20;Test for IMAP/SMTP Injection
-* [ ] &#x20;Test for Code Injection
-* [ ] &#x20;Test for Expression Language Injection
-* [ ] &#x20;Test for Command Injection
-* [ ] &#x20;Test for Overflow (Stack, Heap and Integer)
-* [ ] &#x20;Test for Format String
-* [ ] &#x20;Test for incubated vulnerabilities
-* [ ] &#x20;Test for HTTP Splitting/Smuggling
-* [ ] &#x20;Test for HTTP Verb Tampering
-* [ ] &#x20;Test for Open Redirection
-* [ ] &#x20;Test for Local File Inclusion
-* [ ] &#x20;Test for Remote File Inclusion
-* [ ] &#x20;Compare client-side and server-side validation rules
-* [ ] &#x20;Test for NoSQL injection
-* [ ] &#x20;Test for HTTP parameter pollution
-* [ ] &#x20;Test for auto-binding
-* [ ] &#x20;Test for Mass Assignment
-* [ ] &#x20;Test for NULL/Invalid Session Cookie
+* Test for Reflected Cross Site Scripting
+* Test for Stored Cross Site Scripting
+* Test for DOM based Cross Site Scripting
+* Test for Cross Site Flashing
+* Test for HTML Injection
+* Test for SQL Injection
+* Test for LDAP Injection
+* Test for ORM Injection
+* Test for XML Injection
+* Test for XXE Injection
+* Test for SSI Injection
+* Test for XPath Injection
+* Test for XQuery Injection
+* Test for IMAP/SMTP Injection
+* Test for Code Injection
+* Test for Expression Language Injection
+* Test for Command Injection
+* Test for Overflow (Stack, Heap and Integer)
+* Test for Format String
+* Test for incubated vulnerabilities
+* Test for HTTP Splitting/Smuggling
+* Test for HTTP Verb Tampering
+* Test for Open Redirection
+* Test for Local File Inclusion
+* Test for Remote File Inclusion
+* Compare client-side and server-side validation rules
+* Test for NoSQL injection
+* Test for HTTP parameter pollution
+* Test for auto-binding
+* Test for Mass Assignment
+* Test for NULL/Invalid Session Cookie
 
 #### Denial of Service
 
-* [ ] &#x20;Test for anti-automation
-* [ ] &#x20;Test for account lockout
-* [ ] &#x20;Test for HTTP protocol DoS
-* [ ] &#x20;Test for SQL wildcard DoS
+* Test for anti-automation
+* Test for account lockout
+* Test for HTTP protocol DoS
+* Test for SQL wildcard DoS
 
 #### Business Logic
 
 Hackers mostly leverage an application’s original programmed flow to orchestrate breaches and penetration attacks. As a result, it is recommended to assess the business and application’s configuration to identify vulnerabilities in code or business logic that could be used for potential exploits.
 
-* [ ] &#x20;Test for feature misuse
-* [ ] &#x20;Test for lack of non-repudiation
-* [ ] &#x20;Test for trust relationships
-* [ ] &#x20;Test for integrity of data
-* [ ] &#x20;Test segregation of duties
+* Test for feature misuse
+* Test for lack of non-repudiation
+* Test for trust relationships
+* Test for integrity of data
+* Test segregation of duties
 
 #### Cryptography
 
 Cryptography ensures the secure exchange of information by using algorithms that transform human-readable data into a **ciphertext-encrypted** output. While doing so, the process establishes trust between the web server and network entities using security keys, making it an important mechanism for maintaining application security. Testing cryptography for maintaining application security involves:
 
-* [ ] &#x20;Check if the data which should be encrypted is not
-* [ ] &#x20;Check for wrong algorithms usage depending on the context
-* [ ] &#x20;Check for weak algorithms usage
-* [ ] &#x20;Check for proper use of salting
-* [ ] &#x20;Check for randomness functions
+* Check if the data which should be encrypted is not
+* Check for wrong algorithms usage depending on the context
+* Check for weak algorithms usage
+* Check for proper use of salting
+* Check for randomness functions
 
 #### Risky Functionality - File Uploads
 
-* [ ] &#x20;Test that acceptable file types are whitelisted
-* [ ] &#x20;Test that file size limits, upload frequency and total file counts are defined and are enforced
-* [ ] &#x20;Test that file contents match the defined file type
-* [ ] &#x20;Test that all file uploads have Anti-Virus scanning in-place.
-* [ ] &#x20;Test that unsafe filenames are sanitised
-* [ ] &#x20;Test that uploaded files are not directly accessible within the web root
-* [ ] &#x20;Test that uploaded files are not served on the same hostname/port
-* [ ] &#x20;Test that files and other media are integrated with the authentication and authorisation schemas
+* Test that acceptable file types are whitelisted
+* Test that file size limits, upload frequency and total file counts are defined and are enforced
+* Test that file contents match the defined file type
+* Test that all file uploads have Anti-Virus scanning in-place.
+* Test that unsafe filenames are sanitised
+* Test that uploaded files are not directly accessible within the web root
+* Test that uploaded files are not served on the same hostname/port
+* Test that files and other media are integrated with the authentication and authorisation schemas
 
 #### Risky Functionality - Card Payment
 
-* [ ] &#x20;Test for known vulnerabilities and configuration issues on the Web Server and Web Application
-* [ ] &#x20;Test for default or guessable password
-* [ ] &#x20;Test for non-production data in a live environment, and vice-versa
-* [ ] &#x20;Test for Injection vulnerabilities
-* [ ] &#x20;Test for Buffer Overflows
-* [ ] &#x20;Test for Insecure Cryptographic Storage
-* [ ] &#x20;Test for Insufficient Transport Layer Protection
-* [ ] &#x20;Test for Improper Error Handling
-* [ ] &#x20;Test for all vulnerabilities with a CVSS v2 score > 4.0
-* [ ] &#x20;Test for Authentication and Authorization issues
-* [ ] &#x20;Test for CSRF
+* Test for known vulnerabilities and configuration issues on the Web Server and Web Application
+* Test for default or guessable password
+* Test for non-production data in a live environment, and vice-versa
+* Test for Injection vulnerabilities
+* Test for Buffer Overflows
+* Test for Insecure Cryptographic Storage
+* Test for Insufficient Transport Layer Protection
+* Test for Improper Error Handling
+* Test for all vulnerabilities with a CVSS v2 score > 4.0
+* Test for Authentication and Authorization issues
+* Test for CSRF
 
 #### HTML 5
 
-* [ ] &#x20;Test Web Messaging
-* [ ] &#x20;Test for Web Storage SQL injection
-* [ ] &#x20;Check CORS implementation
-* [ ] &#x20;Check Offline Web Application
+* Test Web Messaging
+* Test for Web Storage SQL injection
+* Check CORS implementation
+* Check Offline Web Application
 
 ## 5. Infra-Security Considerations
 
