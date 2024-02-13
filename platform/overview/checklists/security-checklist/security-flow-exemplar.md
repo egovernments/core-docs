@@ -35,7 +35,7 @@ The **Verification** phase is where applications go through a thorough testing c
 * Automated execution of application unit tests that verify the correctness of the underlying application
 * Automated deployment tools that dynamically swap in application secrets to be used in a production environment
 
-## **PHASE 5: MAINTENANCE AND EVOLUTION**
+## **PHASE 5: MAINTENANCE & EVOLUTION**
 
 The story doesn’t end once the application is released. In fact, vulnerabilities that slipped through the cracks may be found in the application long after it’s been released. These vulnerabilities may be in the code developers wrote but are increasingly found in the underlying open-source components that comprise an application. This leads to an increase in the number of “zero-days”—previously unknown vulnerabilities that are discovered in production by the application’s maintainers.
 
