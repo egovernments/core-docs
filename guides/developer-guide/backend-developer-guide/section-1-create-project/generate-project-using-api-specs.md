@@ -8,11 +8,12 @@ description: Generate Project Stub
 
 This page provides detailed steps for generating projects using the given API specifications.
 
-## **Steps**&#x20;
+## **Steps**
 
-The first step in developing a microservice starts with preparing [Swagger ](https://swagger.io/docs/specification/2-0/what-is-swagger/)contracts that detail all the APIs that the service is going to expose for external consumption.
+#### **Steps to develop a microservice**
 
-eGov uses a customised [Swagger Codegen ](https://github.com/egovernments/Digit-Core/blob/codegen-openapi-3.0/accelerators/codegen/codegen-RELEASE-1.0.jar)tool. Download the jar file and make sure it is available in the classpath. Use the [Swagger Codegen tool](https://github.com/egovernments/Digit-Core/blob/codegen-openapi-3.0/accelerators/codegen/codegen-RELEASE-1.0.jar) to generate client SDKs using these Swagger contracts.&#x20;
+1. Prepare [Swagger ](https://swagger.io/docs/specification/2-0/what-is-swagger/)contracts that detail all the APIs that the service is going to expose for external consumption. eGov uses a customised [Swagger Codegen ](https://github.com/egovernments/Digit-Core/blob/codegen-openapi-3.0/accelerators/codegen/codegen-RELEASE-1.0.jar)tool.&#x20;
+2. Download the jar file and make sure it is available in the classpath. Use the [Swagger Codegen tool](https://github.com/egovernments/Digit-Core/blob/codegen-openapi-3.0/accelerators/codegen/codegen-RELEASE-1.0.jar) to generate client SDKs using these Swagger contracts.&#x20;
 
 {% hint style="info" %}
 Refer to the following tutorials to understand the creation of Swagger contracts -&#x20;
@@ -20,7 +21,9 @@ Refer to the following tutorials to understand the creation of Swagger contracts
 [OpenAPI 3.0 Tutorial| Swagger Tutorial For Beginners | Design REST API Using Swagger Editor](https://youtu.be/mViFmjcDOoA)&#x20;
 {% endhint %}
 
-Following is the generic command to create an API skeleton for any swagger contract:
+#### Generate API Skeleton
+
+Below is the generic command to create an API skeleton for any swagger contract:
 
 {% hint style="info" %}
 ```
@@ -29,9 +32,9 @@ java -jar codegen-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 {% endhint %}
 
-For this guide, the following should be the sequence to generate the API skeleton using codegen jar:
+The following sequence is used to generate the API skeleton using codegen jar:
 
-1. Go to the folder where you have downloaded the codegen jar.
+1. Navigate to the folder where you have downloaded the codegen jar.
 2. Execute the following command:
 
 ```

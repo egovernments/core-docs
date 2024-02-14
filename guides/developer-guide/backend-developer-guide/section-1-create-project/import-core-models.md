@@ -6,8 +6,9 @@ The pom.xml has most of the below dependencies added at project generation time.
 
 ## **Process Flow**
 
-Models/POJOs of the dependent service can be imported from the digit-core-models library (work on creating the library is ongoing). These models will be used in integration with the dependent services.
+Models/POJOs of the dependent service can be imported from the digit-core-models library (work on creating the library is ongoing). These models are used to integrate with the dependent services.
 
+{% code lineNumbers="true" %}
 ```xml
 <dependency>
   <groupId>org.egov.services</groupId>
@@ -37,15 +38,19 @@ Models/POJOs of the dependent service can be imported from the digit-core-models
   </repository>
 </repositories>
 ```
+{% endcode %}
 
 These are pre-written libraries which contain tracer support, common models like MDMS, Auth and Auth and the capability to raise custom exceptions.
 
 Once these core models are imported, it is safe to delete the RequestInfo, and ResponseInfo classes from the models folder and use the ones present in the common contract that is imported.
 
-**Steps:** Before starting development, create/update the following classes as given below.
+#### **Steps to import core models**
 
-a)  Create RequestInfoWrapper POJO within the Models package -
+Before starting development, create/update the following classes as given below.
 
+1. Create RequestInfoWrapper POJO within the Models package -
+
+{% code lineNumbers="true" %}
 ```java
 package digit.web.models;
 
@@ -66,8 +71,9 @@ public class RequestInfoWrapper {
 }
 
 ```
+{% endcode %}
 
-Update the Applicant POJO with the following content -
+2. Update the Applicant POJO with the following content -
 
 ```java
 package digit.web.models;
@@ -222,7 +228,7 @@ public class javaApplicant   {
 }
 ```
 
-b) Create the BTRConfiguration class within the config package. The MainConfiguration class should already exist inside the config package.
+3. Create the BTRConfiguration class within the config package. The MainConfiguration class should already exist inside the config package.
 
 ```java
 package digit.config;

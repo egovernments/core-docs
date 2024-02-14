@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-The application.properties file is already populated with default values. Please read on to customise and add extra values for your application (if required).&#x20;
+The application.properties file is already populated with default values. Read on to learn how to customise and add extra values for your application (if required).&#x20;
 
 ## **Process Flow**
 
@@ -24,8 +24,11 @@ For example, if no port forwarding has been done, you will have to provide the F
 
 Include all the necessary service host URLs and API endpoints in the "application.properties" file. This guide specifically references the User, Localisation, HRMS, IDGen, MDMS, and Workflow services that are operational within the DIGIT development environment.
 
-**Steps:** Add the following properties to the `application.properties` file.
+**Steps to configure application properties**
 
+1. Add the following properties to the `application.properties` file.
+
+{% code lineNumbers="true" %}
 ```properties
 #Localization config
 egov.localization.host=https://dev.digit.org
@@ -61,11 +64,13 @@ egov.workflow.transition.path=/egov-workflow-v2/egov-wf/process/_transition
 egov.workflow.businessservice.search.path=/egov-workflow-v2/egov-wf/businessservice/_search
 egov.workflow.processinstance.search.path=/egov-workflow-v2/egov-wf/process/_search
 ```
+{% endcode %}
 
-The following properties must be added for configuring the database and Kafka server (Use the default values, in case you want to tune in the Kafka server that can be overwritten during deployment).
+The following properties must be added for configuring the database and Kafka server. Make sure to use the default values to tune in the Kafka server that can be overwritten during deployment.
 
-After adding the external dependencies to the "pom.xml" file and reloading the Maven changes, proceed by including the following properties in the "application.properties" file to configure the database and Kafka for development purposes.
+2. Include the following properties in the "application.properties" file to configure the database and Kafka for development purposes once you have completed adding the external dependencies to the "pom.xml" file and reloading the Maven changes.
 
+{% code lineNumbers="true" %}
 ```properties
 #DATABASE CONFIGURATION
 spring.datasource.driver-class-name=org.postgresql.Driver
@@ -73,9 +78,11 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/birthregn
 spring.datasource.username=birth
 spring.datasource.password=birth
 ```
+{% endcode %}
 
 ## Kafka Configuration
 
+{% code lineNumbers="true" %}
 ```properties
 # KAFKA SERVER CONFIGURATIONS
 kafka.config.bootstrap_server_config=localhost:9092
@@ -99,11 +106,15 @@ kafka.producer.config.batch_size_config=16384
 kafka.producer.config.linger_ms_config=1
 kafka.producer.config.buffer_memory_config=33554432
 ```
+{% endcode %}
 
 ### Kafka Topics For Module
 
-To create and update Kafka topics for the module, append Kafka configurations as per the specific requirements of the DIGIT services. Each module may use different configurations to manage its topics.
+#### Steps to create and update Kafka topics for the module
 
+1. Append Kafka configurations as per the specific requirements of the DIGIT services. Each module may use different configurations to manage its topics.
+
+{% code lineNumbers="true" %}
 ```properties
 # Birth registration Kafka config
 btr.kafka.create.topic=save-bt-application
@@ -112,4 +123,5 @@ btr.default.offset=0
 btr.default.limit=10
 btr.search.max.limit=50
 ```
+{% endcode %}
 

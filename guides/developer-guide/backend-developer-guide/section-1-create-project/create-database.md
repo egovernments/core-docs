@@ -6,7 +6,9 @@ Once PostgreSQL (v10) has been installed and the basic setup is done, we use Fly
 
 ## **Steps**
 
-The following properties should be configured in the application.properties file to enable flyway migration:
+#### **Steps to enable flyway migration**
+
+1. Configure the following properties in the application.properties file to enable flyway migration:
 
 ```properties
 spring.flyway.url=jdbc:postgresql://localhost:5432/birthregn
@@ -19,11 +21,11 @@ spring.flyway.locations=classpath:/db/migration/main
 spring.flyway.enabled=true
 ```
 
-Add the Flyway SQL scripts in the following structure under `resources/db/migration/main`:
+2. Add the Flyway SQL scripts in the following structure under `resources/db/migration/main`:
 
 ![](<../../../../.gitbook/assets/image (53).png>)
 
-Add the migration files to the _main_ folder. Specific nomenclature should be followed while naming the file. The file name should be in the following format:
+3. Add the migration files to the _main_ folder. Follow the specified nomenclature while naming the file. The file name should be in the following format:
 
 ```
 V[YEAR][MONTH][DAY][HR][MIN][SEC]__modulecode_ …_ddl.sql
@@ -32,8 +34,9 @@ V[YEAR][MONTH][DAY][HR][MIN][SEC]__modulecode_ …_ddl.sql
 
 Example: **V20180920110535\_\_tl\_tradelicense\_ddl.sql**
 
-For this sample service, we will be using the following SQL script to create the required tables.
+For this sample service, use the following SQL script to create the required tables.
 
+{% code lineNumbers="true" %}
 ```plsql
 CREATE TABLE eg_bt_registration(
   id character varying(64),
@@ -82,4 +85,5 @@ CREATE TABLE eg_bt_address(
      ON DELETE CASCADE
 );
 ```
+{% endcode %}
 

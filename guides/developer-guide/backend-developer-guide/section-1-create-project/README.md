@@ -1,6 +1,6 @@
 # Section 1: Create Project
 
-This section showcases how to create a basic Spring Boot project using an API spec and configure using a database.
+This section showcases how to create a basic Spring Boot project using an API spec and configure the database.
 
 Follow the steps detailed as detailed below:
 
