@@ -4,9 +4,13 @@ description: Describes how to integrate with DIGIT's ID Gen service
 
 # Integration with IDGen Service
 
-Each application needs to have a unique ID. The [IDGen service](../../../../platform/core-services/id-generation-service.md) generates these unique IDs. ID format can be customised via configuration in MDMS.&#x20;
+## Overview
 
-i) Add the ID format that needs to be generated in this file - [Id Format Mdms File](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/common-masters/IdFormat.json). The following config has been added for this module:
+This page provides the steps to integrate with the IDGen Service. Each application needs to have a unique ID. The [IDGen service](../../../../platform/core-services/id-generation-service.md) generates these unique IDs. ID format can be customised via configuration in MDMS.&#x20;
+
+## Steps
+
+1. Add the ID format that needs to be generated in this file - [Id Format Mdms File](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/common-masters/IdFormat.json). The following config has been added for this module:
 
 ```
 {
@@ -15,7 +19,7 @@ i) Add the ID format that needs to be generated in this file - [Id Format Mdms F
 }
 ```
 
-ii) Now, restart IDGen service and MDMS service and port-forward IDGen service to port 8285:
+2. Restart the IDGen service and MDMS service and port-forward IDGen service to port 8285:
 
 ```
 kubectl port-forward <IDGEN_SERVICE_POD_NAME> 8285:8080
@@ -25,7 +29,7 @@ kubectl port-forward <IDGEN_SERVICE_POD_NAME> 8285:8080
 Note that you can set the ID format  in the application.properties file of IDGen service and run the service locally if you don't have access to a DIGIT environment.&#x20;
 {% endhint %}
 
-iv) Hit the following curl to verify that the format is added properly. The "ID" name needs to match exactly with what was added in MDMS.
+3. Hit the following curl to verify that the format is added properly. The "ID" name needs to match exactly with what was added in MDMS.
 
 ```bash
 curl --location --request POST 'http://localhost:8285/egov-idgen/id/_generate' \
@@ -66,11 +70,10 @@ curl --location --request POST 'http://localhost:8285/egov-idgen/id/_generate' \
 }'
 ```
 
-v) Once verified, we can call the ID generation service from within our application and generate the registrationId.&#x20;
+4. Once verified, we can call the ID generation service from within our application and generate the registrationId.&#x20;
+5.  Add the following model POJOs under `models` folder:&#x20;
 
-Add the following model POJOs under `models` folder:
-
-IdGenerationRequest.java
+    IdGenerationRequest.java
 
 ```java
 package digit.web.models;
@@ -182,7 +185,7 @@ public class IdResponse {
 }
 ```
 
-In the BirthApplicationEnrichment class, update the enrichBirthApplication method as shown below:
+5. In the BirthApplicationEnrichment class, update the enrichBirthApplication method as shown below:
 
 ```java
 public void enrichBirthApplication(BirthRegistrationRequest birthRegistrationRequest) {
@@ -209,12 +212,10 @@ public void enrichBirthApplication(BirthRegistrationRequest birthRegistrationReq
     }
 ```
 
-Make sure below ID generation host configuration is present in the application.properties file. Make sure to fill in the correct values for the host.
+6. Make sure below ID generation host configuration is present in the application.properties file. Make sure to fill in the correct values for the host.
 
 ```properties
 #Idgen Config
 egov.idgen.host=http://localhost:8285/ #REPLACE
 egov.idgen.path=egov-idgen/id/_generate
 ```
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

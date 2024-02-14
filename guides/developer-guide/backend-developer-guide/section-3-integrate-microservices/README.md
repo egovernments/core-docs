@@ -4,9 +4,19 @@ description: Integration with other DIGIT services
 
 # Section 3: Integrate Microservices
 
+## Overview
+
 A separate class should be created for integrating with each dependent microservice. Only one method from that class should be called from the main service class for integration.
 
-In this guide, we will be showcasing how we can integrate our microservices with other microservices like MDMS, IdGen, User and Workflow.
+This guide showcases the steps to integrate our microservices with other microservices like
+
+1. [IdGen Service](integration-with-idgen-service.md)
+2. [User Service](integration-with-user-service.md)
+3. [MDMS Service](integration-with-mdms-service.md)
+4. [Workflow Service](integration-with-workflow-service.md)
+5. [URL Shortening Service](integration-with-url-shortener-service.md)
+
+## Common Resources
 
 Code for developer guide till this stage is available [here.](https://github.com/egovernments/DIGIT-Dev/blob/birth-registration-service/municipal-services/birth-registration/birth-registration-api-spec.yaml)\
 Postman collection corresponding to this stage is available [here.](https://github.com/egovernments/DIGIT-Dev/blob/343ff2d31216ba38faff4b2d6e21c4885ba849eb/tutorials/backend-developer-guide/btr-services/birth-registration-stage-2-postman-collection.json)
