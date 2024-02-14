@@ -1,9 +1,14 @@
 # Add Persister Configuration
 
+## Overview
+
+This page provides the steps on how to add persister configuration.
+
 The persister configuration is written in a YAML format. The INSERT and UPDATE queries for each table are added in prepared statement format, followed by the jsonPaths of values that have to be inserted/updated.
 
 For example, for a table named studentinfo with id, name, age, and marks fields, the following configuration will get the persister ready to insert data into studentinfo table -
 
+{% code lineNumbers="true" %}
 ```yaml
 serviceMaps:
  serviceName: student-management-service
@@ -24,20 +29,22 @@ serviceMaps:
 
           - jsonPath: $.Students.*.marks
 ```
+{% endcode %}
 
-\
-For our guide, for adding persister config, the following steps need to be followed -
+## Steps
 
-**Steps:** i) Fork the [configs repo](https://github.com/egovernments/configs). Ignore if done already. Clone configs repo in the local environment.
+**Steps for adding persister configuration**&#x20;
+
+1. Fork the [configs repo](https://github.com/egovernments/configs). Ignore if done already. Clone configs repo in the local environment.
 
 ```git
 git clone -o upstream https://github.com/<your_configs_repo>/configs
 ```
 
-ii) Persister configurations for all modules are present under the `egov-persister` folder. Create a file by the name of `btr-persister.yml` (or any other name) under the `egov-persister` folder.
+2. Persister configurations for all modules are present under the `egov-persister` folder. Create a file by the name of `btr-persister.yml` (or any other name) under the `egov-persister` folder.
+3. Add the following content to it -
 
-iii) Add the following content to it -
-
+{% code lineNumbers="true" %}
 ```yaml
 serviceMaps:
   serviceName: btr-services
@@ -144,12 +151,12 @@ serviceMaps:
 
             - jsonPath: $.BirthRegistrationApplications.*.id
 ```
+{% endcode %}
 
-### **Run Persister Locally**
+## **Run Persister Locally**
 
-Import all the core-services projects as Maven projects into your IDE. It is assumed that you have already cloned the DIGIT code locally.&#x20;
-
-Modify the application.properties file in the egov-persister project and set the following property:
+1. Import all the core-services projects as Maven projects into your IDE. It is assumed that you have already cloned the DIGIT code locally.&#x20;
+2. Modify the application.properties file in the egov-persister project and set the following property:
 
 {% code overflow="wrap" %}
 ```properties
@@ -161,7 +168,7 @@ egov.persist.yml.repo.path=file:///Users/subha/Code/configs/egov-persister/btr-p
 Note: You can set a comma-separated list of files as the value of the above property. If you are running multiple services locally, then this has to be a comma-separated list of persister config files. Make sure you always give the absolute path.
 {% endhint %}
 
-Make sure the Spring DB configurations and Flyway config reflect the same database as what has been set in the module itself. Otherwise, we will see failures in the persister code.&#x20;
+3. Make sure the Spring DB configurations and Flyway config reflect the same database as what has been set in the module itself. Otherwise, we will see failures in the persister code.&#x20;
 
 ```properties
 spring.datasource.driver-class-name=org.postgresql.Driver
@@ -170,23 +177,21 @@ spring.datasource.username=yourusername
 spring.datasource.password=yourpassword
 ```
 
-Make sure the Kafka is running locally. Now, go ahead and run the EgovPersistApplication from the IDE. Check the console to make sure it is listening to the right topics as configured in your module's application.properties file.
+4. Make sure the Kafka is running locally. Now, go ahead and run the EgovPersistApplication from the IDE. Check the console to make sure it is listening to the right topics as configured in your module's application.properties file.
 
 The persister is now ready for use.
 
-### **Deploy Persister Configuration**
+## **Deploy Persister Configuration**
 
 {% hint style="info" %}
 **Note:** Below steps are for when you deploy your code to the DIGIT env, not for local development. You may choose to do this when you build and deploy.&#x20;
 {% endhint %}
 
-Push the code to the appropriate branch from which your environment will read it.&#x20;
+1. Push the code to the appropriate branch from which your environment will read it.&#x20;
+2. Navigate to your fork of the DIGIT-DevOps repository. Under the `deploy-as-code/helm/environments` directory, find the deployment helm chart that was used to deploy DIGIT. &#x20;
+3.  In the deployment helm chart (which was used to set up the DIGIT environment), find "egov-persister". Find the "persist-yml-path" property and add the path to your new persister file here.&#x20;
 
-v) Go to your fork of the DIGIT-DevOps repository. Under the `deploy-as-code/helm/environments` directory, find the deployment helm chart that was used to deploy DIGIT. &#x20;
-
-In the deployment helm chart (which was used to set up the DIGIT environment), find "egov-persister". Find the "persist-yml-path" property and add the path to your new persister file here.&#x20;
-
-In the snippet below, `file:///work-dir/configs/egov-persister/birth-module-developer-guide.yml`
+    In the snippet below, `file:///work-dir/configs/egov-persister/birth-module-developer-guide.yml`
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```yaml
@@ -197,5 +202,5 @@ egov-persister:
 ```
 {% endcode %}
 
-vi) Raise a PR to the appropriate branch of the DevOps repo (master, in egov case) which was forked/used to create the deployment. Once that is merged, restart the indexer service in your environment so it will pick up this new config for the module.&#x20;
+4. Raise a PR to the appropriate branch of the DevOps repo (master, in egov case) which was forked/used to create the deployment. Once that is merged, restart the indexer service in your environment so it will pick up this new config for the module.&#x20;
 
