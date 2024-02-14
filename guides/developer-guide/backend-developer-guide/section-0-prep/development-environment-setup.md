@@ -1,63 +1,53 @@
 # Development Environment Setup
 
-Run the Kafka and PostgreSQL on the development machine and re-use other services from the DIGIT dev environment.&#x20;
+To setup the DIGIT development environment -
+
+Run the Kafka and PostgreSQL on the development machine and re-use other services from the DIGIT development environment.&#x20;
 
 The following tools are required for development:
 
-i) **Install Git**&#x20;
+1.  **Install Git**&#x20;
 
-[Git for windows](https://git-scm.com/download/win)
+    [Git for windows](https://git-scm.com/download/win)
 
-[Git for linux](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04-quickstart)
+    [Git for linux](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04-quickstart)
+2.  **Install JDK8**
 
-ii) **Install JDK8**
+    [JDK8 for windows](https://www.java.com/download/ie\_manual.jsp)
 
-[JDK8 for windows](https://www.java.com/download/ie\_manual.jsp)
+    [JDK8 for linux](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/)
+3.  **Install IDE** - For creating SpringBoot/Java applications we recommend using IntelliJ IDE. IntelliJ can be downloaded from the following links -
 
-[JDK8 for linux](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/)
+    [IntelliJ for windows](https://www.jetbrains.com/idea/download/#section=windows)
 
-iii) **Install IDE** - For creating SpringBoot/Java applications we recommend using IntelliJ IDE. IntelliJ can be downloaded from the following links -
+    [IntelliJ for linux](https://www.jetbrains.com/idea/download/#section=linux)
+4. Install the Lombok plugins for IntelliJ as we use Lombok annotations in this module.
+5.  **Install Kafka** (version 3.2.0 which is the latest version) - To install and run Kafka locally, follow the following links -
 
-[IntelliJ for windows](https://www.jetbrains.com/idea/download/#section=windows)
+    [Kafka for windows](https://dzone.com/articles/running-apache-kafka-on-windows-os)
 
-[IntelliJ for linux](https://www.jetbrains.com/idea/download/#section=linux)
+    [Kafka for linux](https://tecadmin.net/install-apache-kafka-ubuntu/)
+6.  **Install Postman** - To install postman, follow the following links -
 
-Install the Lombok plugins for IntelliJ as we use Lombok annotations in this module.
+    [Postman for windows](https://www.postman.com/downloads/)
 
-iv) **Install Kafka** (version 3.2.0 which is the latest version) - To install and run Kafka locally, follow the following links -
+    [Postman for linux](https://dl.pstmn.io/download/latest/linux64)
+7.  **Install Kubectl** - Kubectl is the tool that we use to interact with services deployed on our sandbox environment -
 
-[Kafka for windows](https://dzone.com/articles/running-apache-kafka-on-windows-os)
+    [https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)[https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+8. **Install aws-iam-authenticator** - (if the DIGIT development environment is in AWS) - [https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
+9. **Install PostgreSQL v10 locally**
+10. **Add configuration** - Post installation of kubectl, you need to add the following configuration in the  Kubernetes config file to allow access to resources present in our sandbox environment.  Kubernetes config file is usually present in the user's home directory (which varies from OS to OS).&#x20;
 
-[Kafka for linux](https://tecadmin.net/install-apache-kafka-ubuntu/)
+    For example, on a Mac, it is present at:`/Users/xyz/.kube/config`&#x20;
 
-v) **Install Postman** - To install postman, follow the following links -
+    Once the config file is created, add the following content to it.
 
-[Postman for windows](https://www.postman.com/downloads/)
-
-[Postman for linux](https://dl.pstmn.io/download/latest/linux64)
-
-vi) **Install Kubectl** - Kubectl is the tool that we use to interact with services deployed on our sandbox environment.
-
-[https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
-
-[https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
-
-vii) **Install aws-iam-authenticator** - (if the DIGIT development environment is in AWS) - [https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
-
-viii) **Install PostgreSQL v10 locally**
-
-ix) **Add configuration** - Post installation of kubectl, you need to add the following configuration in the  Kubernetes config file to allow access to resources present in our sandbox environment.  Kubernetes config file is usually present in the user's home directory (which varies from OS to OS).&#x20;
-
-For example, on a Mac, it is present at:
-
-&#x20;`/Users/xyz/.kube/config`&#x20;
-
-Once the config file is created, add the following content to it.
-
-{% hint style="info" %}
+{% hint style="warning" %}
 Note that you will have to replace the placeholder keys and tokens in the below snippet with your AWS-specific keys. Please contact your system administrator for help with this.
 {% endhint %}
 
+{% code lineNumbers="true" %}
 ```
 apiVersion: v1
 clusters:
@@ -92,14 +82,15 @@ users:
       - name: AWS_REGION
         value: {AWS_REGION_PLACEHOLDER}
 ```
+{% endcode %}
 
-Once the config file is created, access the pods running in the environment by typing:
+Once the configuration file is created, access the pods running in the environment by typing:
 
 `kubectl get pods`
 
-This will list all the pods in the dev environment.&#x20;
+This lists all the pods in the development environment.&#x20;
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **In case you run into an error stating “Error: You must be logged in to the server (Unauthorized)”, add sudo before the command. For example, “sudo kubectl get pods”. That should resolve the error.**
 {% endhint %}
 

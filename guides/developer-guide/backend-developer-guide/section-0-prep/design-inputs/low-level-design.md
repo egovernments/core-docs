@@ -10,9 +10,6 @@ description: >-
 
 The DB tables provide the registry maps as given below:
 
-| **Table name**       | **Description**                                                                 |
-| -------------------- | ------------------------------------------------------------------------------- |
-| eg\_bt\_registration | This table holds the baby's information                                         |
-| eg\_bt\_address      | This table holds the applicant address who applied for the birth registration.  |
+<table><thead><tr><th width="298">Table Name</th><th>Description</th></tr></thead><tbody><tr><td>eg_bt_registration</td><td>This table holds the baby's information</td></tr><tr><td>eg_bt_address</td><td>This table holds the applicant address who applied for the birth registration. </td></tr></tbody></table>
 
 ###
