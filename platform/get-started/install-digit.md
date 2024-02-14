@@ -8,8 +8,8 @@ description: Setting up the DIGIT on your Infrastructure
 
 Browse through the setup guides to -
 
-1. Install DIGIT with a sample module (Public Grievance Redressal) running, refer to [Quick Setup](../../guides/installation-guide/quick-setup/). Quick setup is good for developer and QA environments.&#x20;
-2. Deploy DIGIT in a production environment, customise DIGIT and explore all features, refer to [Production Setup](../../guides/installation-guide/production-setup/).
+1. Refer to [Quick Setup](../../guides/installation-guide/quick-setup/) to install DIGIT and run a sample module (Public Grievance Redressal). Quick setup is ideal for developers and QA environments.&#x20;
+2. Refer to [Production Setup](../../guides/installation-guide/production-setup/) to deploy DIGIT in the production environment, customise DIGIT and explore all features.
 
 Check out the other guides in our [Guides](broken-reference) section.
 
