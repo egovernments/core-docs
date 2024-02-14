@@ -1,6 +1,6 @@
 # Integration with User Service
 
-#### **Integration with User service**&#x20;
+## **Overview**&#x20;
 
 The user service provides the capabilities of creating a user, searching for a user and retrieving the details of a user. This module will search for a user and if not found, create that user with the user service.
 
@@ -8,7 +8,9 @@ The user service provides the capabilities of creating a user, searching for a u
 DIGIT's user service masks PII that gets stored in the database using the encryption service.
 {% endhint %}
 
-Create the following POJOs under the `model` directory:
+## Steps
+
+1. Create the following POJOs under the `model` directory:
 
 <details>
 
@@ -147,7 +149,7 @@ public class UserDetailResponse {
 
 </details>
 
-Create a class by the name of UserService under service folder and add the following content to it:
+2. Create a class by the name of UserService under service folder and add the following content to it:
 
 <details>
 
@@ -507,7 +509,7 @@ public List<BirthRegistrationApplication> registerBtRequest(BirthRegistrationReq
 
 </details>
 
-Add the following properties in application.properties file:
+3. Add the following properties in application.properties file:
 
 {% hint style="info" %}
 Note that if you are port-forwarding using k8s, you will use localhost. Else, if you have a valid auth token, please provide the name of the host here.&#x20;
@@ -522,4 +524,3 @@ egov.user.search.path=/user/_search
 egov.user.update.path=/_updatenovalidate
 ```
 
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

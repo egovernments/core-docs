@@ -29,8 +29,9 @@ kubectl port-forward <IDGEN_SERVICE_POD_NAME> 8285:8080
 Note that you can set the ID format  in the application.properties file of IDGen service and run the service locally if you don't have access to a DIGIT environment.&#x20;
 {% endhint %}
 
-3. Hit the following curl to verify that the format is added properly. The "ID" name needs to match exactly with what was added in MDMS.
+3. Hit the below curl to verify that the format is added properly. The "ID" name needs to match exactly with what was added in MDMS.
 
+{% code lineNumbers="true" %}
 ```bash
 curl --location --request POST 'http://localhost:8285/egov-idgen/id/_generate' \
 --header 'Content-Type: application/json' \
@@ -69,6 +70,7 @@ curl --location --request POST 'http://localhost:8285/egov-idgen/id/_generate' \
     ]
 }'
 ```
+{% endcode %}
 
 4. Once verified, we can call the ID generation service from within our application and generate the registrationId.&#x20;
 5.  Add the following model POJOs under `models` folder:&#x20;
@@ -214,8 +216,10 @@ public void enrichBirthApplication(BirthRegistrationRequest birthRegistrationReq
 
 6. Make sure below ID generation host configuration is present in the application.properties file. Make sure to fill in the correct values for the host.
 
+{% code lineNumbers="true" %}
 ```properties
 #Idgen Config
 egov.idgen.host=http://localhost:8285/ #REPLACE
 egov.idgen.path=egov-idgen/id/_generate
 ```
+{% endcode %}
