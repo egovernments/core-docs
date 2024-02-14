@@ -14,13 +14,10 @@ For more information on [MDMS](../../../../platform/core-services/mdms-master-da
 
 In the birth registration use case, we use the following master data:
 
-1\. tenantId = "pb"
-
-2\. User roles - CITIZEN and EMPLOYEE roles configured in roles.json (see below section for more info)
-
-3\. Actions - URIs to be exposed via Zuul (see below section for more info)
-
-4\. Role-action mapping - for access control (see below section for more info)
+1. tenantId = "pb"
+2. User roles - CITIZEN and EMPLOYEE roles configured in roles.json (see below section for more info)
+3. Actions - URIs to be exposed via Zuul (see below section for more info)
+4. Role-action mapping - for access control (see below section for more info)
 
 {% hint style="info" %}
 Make sure to add data to the **correct branch** of the MDMS repository. i.e. if you have setup CD CI to deploy the **DEV** branch of the repository to the dev environment (default), then make sure to add the information in the DEV branch. If you are testing in staging or some other environment, make sure to add the master data to the corresponding branch of MDMS.&#x20;

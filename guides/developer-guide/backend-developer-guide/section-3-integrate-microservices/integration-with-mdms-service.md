@@ -1,14 +1,16 @@
 # Integration with MDMS Service
 
-#### **Integration with MDMS**&#x20;
+## **Overview**
 
-We will call into MDMS deployed in the sandbox environment. All MDMS config data needs to be uploaded into the MDMS repository (DEV branch if you are deploying/testing in your dev environment). Integration with MDMS requires the following steps to be followed:
+We will call into MDMS deployed in the sandbox environment. All MDMS config data needs to be uploaded into the MDMS repository (DEV branch if you are deploying/testing in your dev environment).&#x20;
 
-i) Add a new MDMS file in MDMS repo. For this guide, a sample MDMS file has already been added which can be found here - [https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/DIGIT-DEVELOPER-TUTORIAL/BtrCharges.json](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/DIGIT-DEVELOPER-TUTORIAL/BtrCharges.json). Copy this file into your repository.&#x20;
+## Steps
 
-ii) Restart MDMS service after adding the new file via Jenkins build UI.&#x20;
+Integration with MDMS requires the following steps to be followed:
 
-iii) Once restarted, hit the curl mentioned below to verify that the new file has been properly added .
+1. Add a new MDMS file in MDMS repo. For this guide, a sample MDMS file has already been added [available here](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/DIGIT-DEVELOPER-TUTORIAL/BtrCharges.json). Copy this file into your repository.&#x20;
+2. Restart MDMS service after adding the new file via Jenkins build UI.&#x20;
+3. Once restarted, hit the curl mentioned below to verify that the new file has been properly added .
 
 ```bash
 curl --location --request POST 'https://yourserver.digit.org/egov-mdms-service/v1/_search' \
@@ -40,7 +42,7 @@ curl --location --request POST 'https://yourserver.digit.org/egov-mdms-service/v
 }' 
 ```
 
-iv) Once verified, we can call MDMS service from within our application and fetch the required master data. For this, create a Java class by the name of MdmsUtil under utils folder. Annotate this class with @Component and put the following content in the class -
+4. Call the MDMS service post verification from within our application and fetch the required master data. For this, create a Java class by the name of MdmsUtil under utils folder. Annotate this class with @Component and put the following content in the class -
 
 ```java
 package digit.utils;
@@ -116,12 +118,10 @@ public class MdmsUtil {
 
 ```
 
-v) Add the following properties in application.properties file -
+5. Add the following properties in application.properties file -
 
 ```properties
 #mdms urls
 egov.mdms.host=https://dev.digit.org # REPLACE with your environment name
 egov.mdms.search.endpoint=/egov-mdms-service/v1/_search
 ```
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
