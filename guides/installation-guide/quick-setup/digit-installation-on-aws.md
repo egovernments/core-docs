@@ -4,7 +4,7 @@ description: DIGIT Automation on AWS
 
 # DIGIT Installation on AWS
 
-## **Pre-requisites** <a href="#1.-pre-requisites" id="1.-pre-requisites"></a>
+## **Pre-requisites** <a href="#id-1.-pre-requisites" id="id-1.-pre-requisites"></a>
 
 1. Install [golang](https://golang.org/doc/install#download)  Use these links to install- [Linux](https://golang.org/dl/go1.13.3.linux-amd64.tar.gz) or [Windows](https://golang.org/dl/go1.13.3.windows-amd64.msi) or [Mac](https://golang.org/dl/go1.13.3.darwin-amd64.pkg)​
 2. All DIGIT services are packaged using helm charts, Install helm using the link[<img src="https://helm.sh/img/favicon-152.png" alt="" data-size="line">Installing Helm](https://helm.sh/docs/intro/install/)​
@@ -29,11 +29,10 @@ To provision infra and setup DIGIT, follow the below mentioned steps:
 
     `aws configure list`
 
-    Please make sure that the above command shows the proper AWS credentials which you have set. Please proceed only after confirming it.\
+    Make sure that the above command shows the proper AWS credentials which you have set. Proceed only after confirming it.\
     _(Refer to this AWS document in case of any doubts on how to set the credentials:_ [<img src="https://docs.aws.amazon.com/assets/images/favicon.ico" alt="" data-size="line">Configuring the AWS CLI - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) _)_
 3.  Generate ssh key pairs (Use either method (a) or method (b)).\
-    a. Using online website (not recommended in prod setup. To be only used for demo setups):\
-    &#x20; [https://8gwifi.org/sshfunctions.jsp](https://8gwifi.org/sshfunctions.jsp)
+    a. Using online website (not recommended in production setup. To be only used for demo setups): [https://8gwifi.org/sshfunctions.jsp](https://8gwifi.org/sshfunctions.jsp)
 
     b. Using openssl :
 

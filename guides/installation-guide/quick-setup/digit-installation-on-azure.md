@@ -4,11 +4,11 @@ description: DIGIT services deployment in azure cloud platform
 
 # DIGIT Installation on Azure
 
-## **Pre-requisites** <a href="#1.-pre-requisites" id="1.-pre-requisites"></a>
+## **Pre-requisites** <a href="#id-1.-pre-requisites" id="id-1.-pre-requisites"></a>
 
 * Make sure you have your Azure account with the necessary credentials.
 * Install [Golang](https://golang.org/doc/install#download) - Use these links to install- [Linux](https://golang.org/dl/go1.13.3.linux-amd64.tar.gz) or [Windows](https://golang.org/dl/go1.13.3.windows-amd64.msi) or [Mac](https://golang.org/dl/go1.13.3.darwin-amd64.pkg)
-* ​All DIGIT services are packaged using helm charts, Install helm using the link [![](https://helm.sh/img/favicon-152.png)Installing Helm](https://helm.sh/docs/intro/install/)
+* ​All DIGIT services are packaged using helm charts, Install helm using the link [<img src="https://helm.sh/img/favicon-152.png" alt="" data-size="line">Installing Helm](https://helm.sh/docs/intro/install/)
 * ​[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) is a CLI to connect to the Kubernetes cluster on your machine
 * Install [CURL](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux) for making API calls
 * ​[Install VisualStudio](https://code.visualstudio.com/download) IDE Code for better code visualization/editing capabilities
@@ -29,19 +29,19 @@ code
 ```
 {% endcode %}
 
-* go to the remote state in the sample-azure directory
+* Change to the remote state in the sample-azure directory
 
 ```
 cd infra-as-code/terraform/sample-azure/remote-state
 ```
 
-* login to Azure using the below command in the terminal
+* Login to Azure using the below command in the terminal
 
 ```
 az login
 ```
 
-* In variables.tf file update the variables
+* Update the variables in variables.tf file
 * Run the below commands to create resource-group, storage-account and container
 
 {% code lineNumbers="true" %}
@@ -52,7 +52,7 @@ terraform apply
 ```
 {% endcode %}
 
-* Copy the storage account name and go to the sample-azure directory
+* Copy the storage account name and change to the sample-azure directory
 
 ```
 cd ..
@@ -75,7 +75,7 @@ terraform {
 ````
 {% endcode %}
 
-* To create client-id and client-secret with necessary permissions
+* Create client-id and client-secret with necessary permissions&#x20;
 
 {% code lineNumbers="true" %}
 ```
@@ -95,8 +95,8 @@ terraform apply
 ```
 {% endcode %}
 
-* Make a note of db\_name and server\_name
-* Use the below command to get kubeconfig. It will automatically store your kubeconfig in .kube folder
+* Note the db\_name and server\_name
+* Fetch the kubeconfig using the below command. This will automatically store your kubeconfig in .kube folder
 
 ```
 az aks get-credentials --resource-group <resource_group_name> --name <cluster_name>
@@ -114,7 +114,7 @@ kubectl get pods -A
 
 ## Deployment
 
-* Go to the environments directory and open egov-demo.yaml
+* Change to the environments directory and open egov-demo.yaml
 
 {% code lineNumbers="true" %}
 ```
@@ -145,7 +145,7 @@ cluster-configs:
 ```
 {% endcode %}
 
-* Now, open egov-demo-secrets.yaml file and update db details and private key
+* Open the egov-demo-secrets.yaml file and update db details and private key
 
 <pre data-line-numbers><code>cluster-configs:
     secrets:
@@ -185,9 +185,9 @@ cluster-configs:
                 -----END RSA PRIVATE KEY-----
 </code></pre>
 
-Generate SSH key pairs (Use either method (a) or method (b)) to update the private key.\
-a. Using the online website (not recommended in prod setup. To be only used for demo setups):\
-&#x20; [https://8gwifi.org/sshfunctions.jsp](https://8gwifi.org/sshfunctions.jsp)
+Generate SSH key pairs (Use either method (a) or method (b)) to update the private key.
+
+a. Using the online website (not recommended for production setup. To be only used for demo setups): [https://8gwifi.org/sshfunctions.jsp](https://8gwifi.org/sshfunctions.jsp)
 
 b. Using OpenSSL :
 
@@ -195,7 +195,7 @@ b. Using OpenSSL :
 
 Add the public key to your GitHub account (reference: [https://www.youtube.com/watch?v=9C7\_jBn9XJ0\&ab\_channel=AOSNote](https://www.youtube.com/watch?v=9C7\_jBn9XJ0\&ab\_channel=AOSNote) )
 
-* Now, go to deployer directory&#x20;
+* Change to the deployer directory&#x20;
 
 {% code lineNumbers="true" %}
 ```
@@ -205,19 +205,19 @@ go run standalone_installer.go
 ```
 {% endcode %}
 
-* To deploy nginx-ingress run the below command
+* Run the below command to deploy nginx-ingress
 
 ```
 kubectl apply -f ../../config-as-code/helm/charts/backbone-services/azure-nginx/ingress.yaml
 ```
 
-* After successfully deploying all the services. Check the pods
+* Check the pods once all services are deployed successfully
 
 ```
 kubectl get pods -A
 ```
 
-* To get the load balancer id - run the below command
+* Run the below command to get the load balancer id&#x20;
 
 ```
 kubectl get svc -A | grep ingress
