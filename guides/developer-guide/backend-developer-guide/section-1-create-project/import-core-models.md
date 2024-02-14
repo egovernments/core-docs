@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-The pom.xml has most of the below dependencies added at project generation time. Check and update in case any of the following are missing.
+The pom.xml typically includes most of the dependencies listed below at project generation time. Review and ensure that all of these dependencies are present. Update the pom.xml in case any are missing.
 
 ## **Process Flow**
 
@@ -75,6 +75,7 @@ public class RequestInfoWrapper {
 
 2. Update the Applicant POJO with the following content -
 
+{% code lineNumbers="true" %}
 ```java
 package digit.web.models;
 
@@ -227,9 +228,11 @@ public class javaApplicant   {
 
 }
 ```
+{% endcode %}
 
-3. Create the BTRConfiguration class within the config package. The MainConfiguration class should already exist inside the config package.
+3. Create the BTRConfiguration class within the configuration package. The MainConfiguration class should already exist inside the config package.
 
+{% code lineNumbers="true" %}
 ```java
 package digit.config;
 
@@ -353,6 +356,6 @@ public class BTRConfiguration {
 }
 
 ```
+{% endcode %}
 
 The core models are imported.
-

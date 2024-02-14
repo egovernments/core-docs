@@ -1,26 +1,31 @@
 # Implement Repository Layer
 
-**Overview:** Methods in the service layer, upon performing all the business logic, call methods in the repository layer to persist or lookup data i.e. it interacts with the configured data store. For executing the queries, JdbcTemplate class is used. JdbcTemplate takes care of the creation and release of resources such as creating and closing the connection etc. All database operations namely insert, update, search and delete can be performed on the database using methods of JdbcTemplate class.
+## **Overview**
 
-**Process Flow:** On DIGIT the create and update operations are handled asynchronously.&#x20;
+Methods in the service layer, upon performing all the business logic, call methods in the repository layer to persist or lookup data i.e. it interacts with the configured data store. For executing the queries, JdbcTemplate class is used. JdbcTemplate takes care of the creation and release of resources such as creating and closing the connection etc. All database operations namely insert, update, search and delete can be performed on the database using methods of JdbcTemplate class.
+
+## **Process Flow**
+
+On DIGIT the create and update operations are handled asynchronously.&#x20;
 
 The persister service listens on the topic to which service applications are pushed for insertion and updation. Persister then takes care of executing insert and update operations on the database without clogging the application’s threads.
 
 The execution of search queries on the database returns applications as per the search parameters provided by the user.
 
-**Steps:** Follow the steps below to implement the repository layer -
+#### **Steps to implement the repository layer**
 
-**i) Define POJOs -** The Address object is defined in the common contract (refer to the API spec). Link it to the birth registration table via the registrationId as defined in the DB schema.&#x20;
+1.  **Define POJOs -** The Address object is defined in the common contract (refer to the API spec). Link it to the birth registration table via the registrationId as defined in the DB schema.&#x20;
 
-Update the Address POJO using the following lines:&#x20;
+    Update the Address POJO using the following lines:&#x20;
 
 ```java
 @JsonProperty("registrationId")
 private String registrationId = null;
 ```
 
-Define a BirthApplicationSearchCriteria POJO to take care of search requests in the DB.&#x20;
+2. Define a BirthApplicationSearchCriteria POJO to take care of search requests in the DB.&#x20;
 
+{% code lineNumbers="true" %}
 ```java
 package digit.web.models;
 
@@ -52,13 +57,14 @@ public class BirthApplicationSearchCriteria {
 
 }
 ```
+{% endcode %}
 
-&#x20;**ii) Create packages -** Add the`querybuilder` and `rowmapper` packages within the repository folder.
+3. **Create packages -** Add the`querybuilder` and `rowmapper` packages within the repository folder.
+4.  **Create a class -** by the name of BirthApplicationQueryBuilder in `querybuilder` folder and annotate it with `@Component` annotation.&#x20;
 
-**iii) Create a class -** by the name of BirthApplicationQueryBuilder in `querybuilder` folder and annotate it with `@Component` annotation.&#x20;
+    Insert the following content in BirthApplicationQueryBuilder class -
 
-Insert the following content in BirthApplicationQueryBuilder class -
-
+{% code lineNumbers="true" %}
 ```java
 package digit.repository.querybuilder;
 
@@ -138,11 +144,13 @@ public class BirthApplicationQueryBuilder {
     }
 }
 ```
+{% endcode %}
 
-**iv) Create a class -** by the name of BirthApplicationRowMapper within the rowmapper package and annotate it with @Component.&#x20;
+5.  **Create a class -** by the name of BirthApplicationRowMapper within the rowmapper package and annotate it with @Component.&#x20;
 
-Add the following content to the class.
+    Add the following content to the class.
 
+{% code lineNumbers="true" %}
 ```java
 package digit.repository.rowmapper;
 
@@ -239,11 +247,13 @@ public class BirthApplicationRowMapper implements ResultSetExtractor<List<BirthR
 }
 
 ```
+{% endcode %}
 
-**iv) Create a class -** by the name of BirthRegistrationRepository within the repository folder and annotate it with @Repository annotation.&#x20;
+6.  **Create a class -** by the name of BirthRegistrationRepository within the repository folder and annotate it with @Repository annotation.&#x20;
 
-Add the following content to the class.
+    Add the following content to the class.
 
+{% code lineNumbers="true" %}
 ```java
 package digit.repository;
 
@@ -282,5 +292,6 @@ public class BirthRegistrationRepository {
     }
 }
 ```
+{% endcode %}
 
 The repository layer is implemented.
