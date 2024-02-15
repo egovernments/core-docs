@@ -246,7 +246,7 @@
       * [Integrate Calculator Service](guides/developer-guide/backend-developer-guide/section-4-integrate-billing-and-payment/integrate-calculator-service.md)
       * [Payment Back Update](guides/developer-guide/backend-developer-guide/section-4-integrate-billing-and-payment/payment-back-update.md)
     * [Section 5: Other Advanced Integrations](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/README.md)
-      * [Adding Indexer Configuration](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/adding-indexer-configuration.md)
+      * [Add Indexer Configuration](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/add-indexer-configuration.md)
       * [Certificate Generation](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/certificate-generation.md)
     * [Section 6: Running the final application locally](guides/developer-guide/backend-developer-guide/section-6-running-the-final-application-locally.md)
     * [Section 7: Build & Deploy Instructions](guides/developer-guide/backend-developer-guide/section-7-build-and-deploy-instructions.md)

@@ -1,10 +1,12 @@
-# Adding Indexer Configuration
+# Add Indexer Configuration
 
 ## Overview
 
 The indexer is designed to perform all the indexing tasks of the DIGIT platform. The service reads records posted on specific Kafka topics and picks the corresponding index configuration from the yaml file provided by the respective module configuration. Configurations are yaml based. A detailed guide to creating indexer configs is mentioned in the following document - [Indexer Configuration Guide](../../../../platform/api-specifications/indexer.md).
 
-For our guide, we will create a new file under `egov-indexer` in `configs` repo by the name of `digit-developer-guide.yml` and put the following content into it -
+## Steps
+
+1. Create a new file under `egov-indexer` in `configs` repo by the name of `digit-developer-guide.yml` and put the following content into it -
 
 ```yaml
 ServiceMaps:
@@ -58,11 +60,10 @@ ServiceMaps:
 
 <mark style="color:orange;">**Note: Follow the steps below when the code is deployed to the DIGIT environment. These steps are not applicable for deployment in the local environment. You may choose to follow these when you build and deploy.**</mark>&#x20;
 
-### &#x20;Indexer Configuration Deployment
+### Indexer Configuration Deployment
 
-Go to your fork of the DIGIT-DevOps repository. Under the `deploy-as-code/helm/environments` directory, find the deployment helm chart that was used to deploy DIGIT. &#x20;
-
-In the deployment helm chart (which was used to set up the DIGIT environment), find "egov-indexer". Find the "egov-indexer-yaml-repo-path" property and add the path to your new indexer file here. The code block is shown below for reference:
+2. Navigate to the forked DIGIT-DevOps repository. Under the `deploy-as-code/helm/environments` directory, find the deployment helm chart that was used to deploy DIGIT. &#x20;
+3. In the deployment helm chart (which was used to set up the DIGIT environment), find "egov-indexer". Find the "egov-indexer-yaml-repo-path" property and add the path to your new indexer file here. The code block is shown below for reference:
 
 ```
 egov-indexer:
@@ -78,4 +79,4 @@ egov-indexer:
 
 ```
 
-Raise a PR to the DevOps branch which was forked/used to create the deployment. Once that is merged, restart the indexer service and make sure the cluster configs are propagated.
+4. Raise a PR to the DevOps branch which was forked/used to create the deployment. Once that is merged, restart the indexer service and make sure the cluster configs are propagated.

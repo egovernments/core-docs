@@ -7,7 +7,7 @@ eGov recommends [CD/CI be set up](../../../focus-areas/setup-basics/deployment-k
 **Step 1:** Add entry in build-config.yaml file in the **master** branch of the forked MDMS repository. This will set up the job pipeline in Jenkins. Make sure to also add the same config to the feature branch you are working on.\
 Refer to this example - [https://github.com/egovernments/DIGIT-OSS/blob/6faf040bfecdc9b023e5578adf1e8c3480c8458b/build/build-config.yml#L255](https://github.com/egovernments/DIGIT-OSS/blob/6faf040bfecdc9b023e5578adf1e8c3480c8458b/build/build-config.yml#L255)
 
-**Step 2**: Make sure you followed the instructions for the [persister](section-2-integrate-persister-and-kafka/add-persister-configuration.md#deployment-of-persister-configuration), [indexer](section-5-other-advanced-integrations/adding-indexer-configuration.md#deployment-of-indexer-configuration) and [PDF service ](section-5-other-advanced-integrations/certificate-generation.md#deployment-of-pdf-service)configuration.&#x20;
+**Step 2**: Make sure you followed the instructions for the [persister](section-2-integrate-persister-and-kafka/add-persister-configuration.md#deployment-of-persister-configuration), [indexer](section-5-other-advanced-integrations/add-indexer-configuration.md#deployment-of-indexer-configuration) and [PDF service ](section-5-other-advanced-integrations/certificate-generation.md#deployment-of-pdf-service)configuration.&#x20;
 
 **Step 3:** Go to the Jenkins build page, select "Job Builder" and click on "Build now". This will pull config from build\_config.yaml and identify all modules that need to be built.&#x20;
 

@@ -1,36 +1,40 @@
 # Certificate Generation
 
+## Overview
+
 The final step in this process is the creation of configs to create a voter registration PDF for the citizens to download. For this, we will make use of DIGIT’s PDF service which uses PDFMake and Mustache libraries to generate PDF. A detailed documentation on PDF service and generating PDFs using PDF service can be found here - [https://docs.digit.org/urban/platform/configure-digit/services-overview/core-services/pdf-generation-services](https://docs.digit.org/urban/platform/configure-digit/services-overview/core-services/pdf-generation-services)
+
+## Steps
 
 For our guide, we will follow the following steps to set up PDF service locally and generate PDF for our voter registration service -
 
-i) Clone [DIGIT Services](https://github.com/egovernments/DIGIT-OSS) repo.
+1. Clone [DIGIT Services](https://github.com/egovernments/DIGIT-OSS) repo.
 
 ```
 > git clone -o upstream https://github.com/egovernments/DIGIT-OSS
 ```
 
-ii) Clone [Configs](https://github.com/egovernments/configs) repo.
+2. Clone [Configs](https://github.com/egovernments/configs) repo.
 
 ```
 > git clone -o upstream https://github.com/egovernments/configs
 ```
 
-iii) Now, go into the DIGIT-Dev repo and open up a terminal. Checkout DIGIT\_DEVELOPER\_GUIDE branch.
+3. Navigate to the DIGIT-Dev repo and open up a terminal. Checkout DIGIT\_DEVELOPER\_GUIDE branch.
 
 ```
 > cd DIGIT-Dev
 > git checkout DIGIT_DEVELOPER_GUIDE
 ```
 
-iv) Now, go inside configs folder and under pdf-service data config and format config folders, create file by the name of digit-developer-guide.json
+4. Navigate to the configs folder and under pdf-service data config and format config folders, create file by the name of digit-developer-guide.json
 
 ```
 > cd configs/pdf-service/data-config
 > touch digit-developer-guide.json
 ```
 
-Add the following content in this newly created data config file -
+5. Add the following content in this newly created data config file -
 
 ```json
 {
@@ -381,7 +385,7 @@ Add the following content in this newly created data config file -
 }
 ```
 
-v) Now, under `format-config` folder, again create a file by the name of `digit-developer-guide.json` and put the following content into it -
+6. Now, under `format-config` folder, again create a file by the name of `digit-developer-guide.json` and put the following content into it -
 
 ```json
 {
@@ -746,31 +750,26 @@ v) Now, under `format-config` folder, again create a file by the name of `digit-
 }
 ```
 
-vi) Now, open PDF service (under core-services repository of DIGIT-Dev) on your IDE. Open `Environment.js` file and change the following properties to point to the local config files that have been created. For example, in my local setup I have pointed these to the local files that I created -
+7. Now, open PDF service (under core-services repository of DIGIT-Dev) on your IDE. Open `Environment.js` file and change the following properties to point to the local config files that have been created. For example, in my local setup I have pointed these to the local files that I created -
 
 ```
 DATA_CONFIG_URLS: "file:///eGov/configs/pdf-service/data-config/digit-developer-guide.json",
 FORMAT_CONFIG_URLS: "file:///eGov/configs/pdf-service/format-config/digit-developer-guide.json"
 ```
 
-vii) Now, make sure that Kafka and Workflow services are running locally and port-forward the following services -
-
-egov-user to port 8284
-
-egov-localization to port 8286
-
-egov-filestore to 8288
-
-egov-mdms to 8082
-
-viii) PDF service is now ready to be started up. Execute the following commands to start it up -
+8. Now, make sure that Kafka and Workflow services are running locally and port-forward the following services -
+   * egov-user to port 8284
+   * egov-localization to port 8286
+   * egov-filestore to 8288
+   * egov-mdms to 8082
+9. PDF service is now ready to be started up. Execute the following commands to start it up&#x20;
 
 ```
 > npm install
 > npm run dev
 ```
 
-ix) Once PDF service is up hit the following cURL to look at the created PDF -
+10. Once PDF service is up hit the following cURL to look at the created PDF -
 
 ```bash
 curl --location --request POST 'http://localhost:8081/pdf-service/v1/_createnosave?key=vtcertificate&tenantId=pb' \
