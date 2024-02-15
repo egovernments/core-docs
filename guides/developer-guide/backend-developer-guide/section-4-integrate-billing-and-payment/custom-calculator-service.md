@@ -2,11 +2,15 @@
 description: Information on creating a custom calculator service
 ---
 
-# Custom calculator service
+# Custom Calculator Service
 
-Code for the custom calculator service is [here](https://github.com/egovernments/DIGIT-OSS/tree/master/tutorials/backend-developer-guide/btr-calculator). This calculator service integrates with the core platform's billing service & generates a demand. A bill can be fetched based on the demand and presented to the user.&#x20;
+## Overview
 
-A separate API spec is written for the calculator service.
+This calculator service integrates with the core platform's billing service & generates a demand. A bill can be fetched based on the demand and presented to the user. This page provides details about creating a custom calculator service.
+
+## Details
+
+Code for the custom calculator service is [here](https://github.com/egovernments/DIGIT-OSS/tree/master/tutorials/backend-developer-guide/btr-calculator). A separate API spec is written for the calculator service.
 
 A calculator service typically has three APIs:
 

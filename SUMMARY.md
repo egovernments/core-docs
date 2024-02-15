@@ -243,7 +243,7 @@
       * [Integrate URL Shortener Service](guides/developer-guide/backend-developer-guide/section-3-integrate-microservices/integrate-url-shortener-service.md)
     * [Section 4: Integrate Billing & Payment](guides/developer-guide/backend-developer-guide/section-4-integrate-billing-and-payment/README.md)
       * [Custom Calculator Service](guides/developer-guide/backend-developer-guide/section-4-integrate-billing-and-payment/custom-calculator-service.md)
-      * [Integrating with the calculator](guides/developer-guide/backend-developer-guide/section-4-integrate-billing-and-payment/integrating-with-the-calculator.md)
+      * [Integrate Calculator Service](guides/developer-guide/backend-developer-guide/section-4-integrate-billing-and-payment/integrate-calculator-service.md)
       * [Payment Back Update](guides/developer-guide/backend-developer-guide/section-4-integrate-billing-and-payment/payment-back-update.md)
     * [Section 5: Other Advanced Integrations](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/README.md)
       * [Adding Indexer Configuration](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/adding-indexer-configuration.md)

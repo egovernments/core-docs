@@ -2,9 +2,11 @@
 description: Calculating costs for a service and raising demand for bill generation
 ---
 
-# Integrating with the calculator
+# Integrate Calculator Service
 
-## **Calculation**&#x20;
+## **Overview**
+
+#### **Calculation**&#x20;
 
 The calculation class will contain the calculation logic for the birth certificate registration charges.  This can vary from city to city. Based on the application submitted, the calculator class will calculate the tax/charges and call the billing service to generate the demand.&#x20;
 
@@ -14,11 +16,12 @@ The calculation class will contain the calculation logic for the birth certifica
 A demand is the official communication sent by a government authority to a citizen requesting them to pay for a service. A demand leads to a bill. When a bill is paid, a receipt is generated. A demand can be modified prior to bill generation.
 {% endhint %}
 
-For our guide, we are going to create a CalculationService that will call the calculator to generate a demand. For this, we are going to perform the following steps -
+## Steps
 
-i) Create a class under `service` folder by the name of `CalculationService`
+For our guide, we are going to create a Calculation Service that will call the calculator to generate a demand. Follow the steps below -
 
-ii) Now, annotate this class with @Service annotation and add the following logic within it -
+1. Create a class under `service` folder by the name of `CalculationService`
+2. Annotate this class with @Service annotation and add the following logic within it -
 
 ```java
 package digit.service;

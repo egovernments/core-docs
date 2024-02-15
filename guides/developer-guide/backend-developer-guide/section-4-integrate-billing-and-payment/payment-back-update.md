@@ -4,13 +4,17 @@ description: Status of payment
 
 # Payment Back Update
 
+## Overview
+
 A demand leads to a bill which then leads to payment by a citizen. Once payment is done, the application status has to be updated. Since we have a microservices architecture, the two services can communicate with each other either through API calls or using events.&#x20;
 
 The collection service publishes an event on a Kafka topic when payment is collected for an application.  Any microservice that wants to get notified when payments are done can subscribe to this topic. Once the service consumes the payment message, it will check if the payment is done for its service by checking the businessService code. The application status changes to PAID or triggers a workflow transition.&#x20;
 
+## Steps
+
 For our guide, we will follow the following steps to create payment back update consumer -
 
-i) Create a consumer class by the name of PaymentBackUpdateConsumer. Annotate it with @Component annotation and add the following content to it -
+1. Create a consumer class by the name of PaymentBackUpdateConsumer. Annotate it with @Component annotation and add the following content to it -
 
 ```java
 package digit.kafka;
@@ -38,7 +42,7 @@ public class PaymentBackUpdateConsumer {
 
 ```
 
-ii) Next, under service folder create a new class by the name of PaymentUpdateService and annotate it with @Service. Put the following content in this class -
+2. Create a new class by the name of PaymentUpdateService in the service folder and annotate it with @Service. Put the following content in this class -
 
 ```java
 package digit.service;
@@ -124,7 +128,7 @@ public class PaymentUpdateService {
 
 ```
 
-iii) Create the following POJOs under models folder:
+3. Create the following POJOs under models folder:
 
 PaymentRequest.java
 
