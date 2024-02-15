@@ -1,15 +1,21 @@
-# Adding Workflow Configuration
+# Add Workflow Configuration
+
+## Overview
 
 Workflow configuration should be created based on the business requirements. More details on [extracting workflow in the design guide](../../../design-guide/model-requirements.md).
 
-For our guide, we will be configuring the following workflow which was the output of the design phase:
+## Steps
+
+For our guide, we will configure the following workflow which was the output of the design phase:
 
 ![Workflow states, actions and actors](<../../../../.gitbook/assets/image (21) (1).png>)
 
-We will re-use the workflow service which is deployed in the dev/sandbox environment.&#x20;
+We will re-use the workflow service which is deployed in the development/sandbox environment.&#x20;
 
 {% hint style="info" %}
-This guide assumes you can call the dev environment workflow service directly with a **valid auth token**.  A sample curl is posted below. Please make sure to replace the server hostname and the username and password in the below statement:
+This guide assumes you can call the development environment workflow service directly with a **valid auth token**. &#x20;
+
+A sample curl is posted below. Make sure to replace the server hostname and the username and password in the below statement:
 
 ```bash
 curl --location --request POST 'https://yourserver.digit.org/user/oauth/token' \
@@ -24,7 +30,7 @@ curl --location --request POST 'https://yourserver.digit.org/user/oauth/token' \
 ```
 {% endhint %}
 
-In POSTMan, create a new POST request and paste the below content in the body. The URI for the request is `http://yourserver.digit.org/egov-workflow-v2/egov-wf/businessservice/_create` to create the workflow.
+1. In POSTMan, create a new POST request and paste the below content in the body. The URI for the request is `http://yourserver.digit.org/egov-workflow-v2/egov-wf/businessservice/_create` to create the workflow.
 
 {% hint style="info" %}
 Make sure to replace the authToken field in the body with appropriate auth token in your environment. Login to the server as a CITIZEN or EMPLOYEE user (depending on which one you've created) and obtain the authToken from the response body.
@@ -49,10 +55,10 @@ In DIGIT, the API Gateway (Zuul) enriches user information based on the auth tok
 
 }
 
-**Note that uuid and roles can be dummy, place-holder entities in this case for local testing.**
+**Note that UUID and roles can be dummy place-holder entities in this case for local testing.**
 {% endhint %}
 
-Below is the URI and POST body for the business service creation request.&#x20;
+2. Below is the URI and POST body for the business service creation request.&#x20;
 
 ```
 http://yourserver.digit.org/egov-workflow-v2/egov-wf/businessservice/_create
@@ -167,5 +173,3 @@ http://yourserver.digit.org/egov-workflow-v2/egov-wf/businessservice/_create
    ]
 }
 ```
-
-_All content on this page by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

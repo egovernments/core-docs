@@ -60,7 +60,7 @@ The actions in the third column of the table go into an `actions` JSON array ins
 * `"nextState"` - the state this action leads to
 * `"roles"` -  The roles that can take action on the state. These roles should be a subset of the roles in the second column of the table and need to map to the [roles.json config in MDMS](design-services.md#extract-mdms-configuration).
 
-The workflow service needs to be configured with this JSON through a REST API call. See here for a [hands-on example](../developer-guide/backend-developer-guide/section-3-integrate-microservices/adding-workflow-configuration.md) of how this is done. A sample workflow JSON with placeholders is defined in the file below. This can be used as a customisable template.
+The workflow service needs to be configured with this JSON through a REST API call. See here for a [hands-on example](../developer-guide/backend-developer-guide/section-3-integrate-microservices/add-workflow-configuration.md) of how this is done. A sample workflow JSON with placeholders is defined in the file below. This can be used as a customisable template.
 
 ### Identify Reference Data
 

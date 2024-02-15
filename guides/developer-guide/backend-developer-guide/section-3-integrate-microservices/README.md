@@ -10,11 +10,11 @@ A separate class should be created for integrating with each dependent microserv
 
 This guide showcases the steps to integrate our microservices with other microservices like
 
-1. [IdGen Service](integration-with-idgen-service.md)
-2. [User Service](integration-with-user-service.md)
-3. [MDMS Service](integration-with-mdms-service.md)
-4. [Workflow Service](integration-with-workflow-service.md)
-5. [URL Shortening Service](integration-with-url-shortener-service.md)
+1. [IdGen Service](integrate-idgen-service.md)
+2. [User Service](integrate-user-service.md)
+3. [MDMS Service](integrate-mdms-service.md)
+4. [Workflow Service](integrate-workflow-service.md)
+5. [URL Shortening Service](integrate-url-shortener-service.md)
 
 ## Common Resources
 
