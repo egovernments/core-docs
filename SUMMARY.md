@@ -248,7 +248,7 @@
     * [Section 5: Other Advanced Integrations](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/README.md)
       * [Add Indexer Configuration](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/add-indexer-configuration.md)
       * [Certificate Generation](guides/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/certificate-generation.md)
-    * [Section 6: Running the final application locally](guides/developer-guide/backend-developer-guide/section-6-running-the-final-application-locally.md)
+    * [Section 6: Run Final Application](guides/developer-guide/backend-developer-guide/section-6-run-final-application.md)
     * [Section 7: Build & Deploy Instructions](guides/developer-guide/backend-developer-guide/section-7-build-and-deploy-instructions.md)
     * [FAQs](guides/developer-guide/backend-developer-guide/faqs.md)
   * [Flutter UI Developer Guide](guides/developer-guide/flutter-ui-developer-guide/README.md)
