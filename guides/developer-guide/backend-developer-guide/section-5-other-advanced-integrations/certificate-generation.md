@@ -2,11 +2,11 @@
 
 ## Overview
 
-The final step in this process is the creation of configs to create a voter registration PDF for the citizens to download. For this, we will make use of DIGIT’s PDF service which uses PDFMake and Mustache libraries to generate PDF. A detailed documentation on PDF service and generating PDFs using PDF service can be found here - [https://docs.digit.org/urban/platform/configure-digit/services-overview/core-services/pdf-generation-services](https://docs.digit.org/urban/platform/configure-digit/services-overview/core-services/pdf-generation-services)
+The final step in this process is the creation of configurations to create a voter registration PDF for the citizens to download. For this, we will make use of DIGIT’s PDF service which uses PDFMake and Mustache libraries to generate PDF. Detailed documentation on generating PDFs using PDF service is [available here.](../../../../platform/core-services/pdf-generation-service.md)
 
 ## Steps
 
-For our guide, we will follow the following steps to set up PDF service locally and generate PDF for our voter registration service -
+Follow the below steps to set up PDF service locally and generate PDF for our voter registration service -
 
 1. Clone [DIGIT Services](https://github.com/egovernments/DIGIT-OSS) repo.
 
@@ -36,6 +36,7 @@ For our guide, we will follow the following steps to set up PDF service locally 
 
 5. Add the following content in this newly created data config file -
 
+{% code lineNumbers="true" %}
 ```json
 {
   "key": "btcertificate",
@@ -384,9 +385,11 @@ For our guide, we will follow the following steps to set up PDF service locally 
   }
 }
 ```
+{% endcode %}
 
-6. Now, under `format-config` folder, again create a file by the name of `digit-developer-guide.json` and put the following content into it -
+6. Create a file by the name of `digit-developer-guide.json` `format-config` folder and place the following content in it -
 
+{% code lineNumbers="true" %}
 ```json
 {
   "key": "vtcertificate",
@@ -749,15 +752,16 @@ For our guide, we will follow the following steps to set up PDF service locally 
   }
 }
 ```
+{% endcode %}
 
-7. Now, open PDF service (under core-services repository of DIGIT-Dev) on your IDE. Open `Environment.js` file and change the following properties to point to the local config files that have been created. For example, in my local setup I have pointed these to the local files that I created -
+7. Open the PDF service (under core-services repository of DIGIT-Dev) on your IDE. Open `Environment.js` file and change the following properties to point to the local config files created. For example, in my local setup I have pointed these to the local files that I created -
 
 ```
 DATA_CONFIG_URLS: "file:///eGov/configs/pdf-service/data-config/digit-developer-guide.json",
 FORMAT_CONFIG_URLS: "file:///eGov/configs/pdf-service/format-config/digit-developer-guide.json"
 ```
 
-8. Now, make sure that Kafka and Workflow services are running locally and port-forward the following services -
+8. Make sure that Kafka and Workflow services are running locally and port-forward the following services -
    * egov-user to port 8284
    * egov-localization to port 8286
    * egov-filestore to 8288
@@ -1056,9 +1060,11 @@ curl --location --request POST 'http://localhost:8081/pdf-service/v1/_createnosa
 
 ### Deploy PDF Service
 
-Go to your fork of the DIGIT-DevOps repository. Under the `deploy-as-code/helm/environments` directory, find the deployment helm chart that was used to deploy DIGIT. &#x20;
-
-In the deployment helm chart (which was used to set up the DIGIT environment), find "pdf-service". Find the `"data-config-urls"` property and add the path to your new PDF config file here. For this module, we have added `file:///work-dir/configs/pdf-service/data-config/digit-developer-guide.json` to the end of the `data-config-urls`. The code block is shown below for reference:
+* Navigate to the forked DIGIT-DevOps repository.&#x20;
+* Find the deployment helm chart that was used to deploy DIGIT within the `deploy-as-code/helm/environments` directory. &#x20;
+* Find "pdf-service"in the deployment helm chart (which was used to set up the DIGIT environment).&#x20;
+* Find the `"data-config-urls"` property.
+* Add the path to your new PDF config file here. For this module, we have added `file:///work-dir/configs/pdf-service/data-config/digit-developer-guide.json` to the end of the `data-config-urls`. The code block is shown below for reference:
 
 ```yaml
 pdf-service:
@@ -1070,6 +1076,5 @@ pdf-service:
   data-config-urls: "file:///work-dir/configs/pdf-service/data-config/tradelicense-receipt.json,file:///work-dir/configs/pdf-service/data-config/property-receipt.json,file:///work-dir/configs/pdf-service/data-config/property-bill.json,file:///work-dir/configs/pdf-service/data-config/tradelicense-bill.json,file:///work-dir/configs/pdf-service/data-config/firenoc-receipt.json,file:///work-dir/configs/pdf-service/data-config/pt-receipt.json,file:///work-dir/configs/pdf-service/data-config/tl-receipt.json,file:///work-dir/configs/pdf-service/data-config/consolidatedbill.json,file:///work-dir/configs/pdf-service/data-config/consolidatedreceipt.json,file:///work-dir/configs/pdf-service/data-config/tlapplication.json,file:///work-dir/configs/pdf-service/data-config/ws-consolidatedacknowlegment.json,file:///work-dir/configs/pdf-service/data-config/ws-consolidatedsewerageconnection.json,file:///work-dir/configs/pdf-service/data-config/tlcertificate.json,file:///work-dir/configs/pdf-service/data-config/buildingpermit.json,file:///work-dir/configs/pdf-service/data-config/ptmutationcertificate.json,file:///work-dir/configs/pdf-service/data-config/tlrenewalcertificate.json,file:///work-dir/configs/pdf-service/data-config/bpa-revocation.json,file:///work-dir/configs/pdf-service/data-config/ws-applicationsewerage.json,file:///work-dir/configs/pdf-service/data-config/ws-applicationwater.json,file:///work-dir/configs/pdf-service/data-config/buildingpermit-low.json,file:///work-dir/configs/pdf-service/data-config/misc-receipt.json,file:///work-dir/configs/pdf-service/data-config/ws-estimationnotice.json,file:///work-dir/configs/pdf-service/data-config/ws-sanctionletter.json,file:///work-dir/configs/pdf-service/data-config/ws-bill.json,file:///work-dir/configs/pdf-service/data-config/ws-onetime-receipt.json,file:///work-dir/configs/pdf-service/data-config/occupancy-certificate.json, file:///work-dir/configs/pdf-service/data-config/bill-amendment.json, file:///work-dir/configs/pdf-service/data-config/bill-amendment-note.json, file:///work-dir/configs/pdf-service/data-config/fsm-receipt.json, file:///work-dir/configs/pdf-service/data-config/sewerage-bill-amendment-note.json, file:///work-dir/configs/pdf-service/data-config/mcollect-bill.json, file:///work-dir/configs/pdf-service/data-config/mcollect-challan.json,file:///work-dir/configs/pdf-service/data-config/birth-certificate-pdf.json, file:///work-dir/configs/pdf-service/data-config/death-certificate.json,file:///work-dir/configs/pdf-service/data-config/ws-waterdisconnection.json,file:///work-dir/configs/pdf-service/data-config/ws-sewagedisconnection.json,file:///work-dir/configs/pdf-service/data-config/ws-waterdisconnectionnotice.json,file:///work-dir/configs/pdf-service/data-config/ws-seweragedisconnectionnotice.json,file:///work-dir/configs/pdf-service/data-config/ws-sewerageconnectiondetails.json,file:///work-dir/configs/pdf-service/data-config/ws-waterconnectiondetails-metered.json,file:///work-dir/configs/pdf-service/data-config/ws-waterconnectiondetails-nonmetered.json,file:///work-dir/configs/pdf-service/data-config/digit-developer-guide.json"
 ```
 
-Raise a PR for this to the appropriate branch of DevOps which was forked/used to create the deployment.
-
-Once that is merged, restart the PDF service in the k8s cluster. It will pick up the latest config from this file above.
+* Raise a PR for this to the appropriate branch of DevOps which was forked/used to create the deployment.
+* Restart the PDF service in the k8s cluster, once the PR is merged. It will pick up the latest config from the file above.
