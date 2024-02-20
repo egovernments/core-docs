@@ -6,10 +6,9 @@ description: A list of FAQs for developers by developers
 
 <details>
 
-<summary>What are the recommended versions of tools used by digit?</summary>
+<summary>Q1. Which versions of tools are recommended for use with DIGIT?</summary>
 
-**Answer**\
-Git - 2.38.1(latest version)
+A. Git - 2.38.1 (latest version)
 
 Java - JDK 8
 
@@ -27,28 +26,26 @@ Postgres - v10
 
 <details>
 
-<summary>Which IDE is recommended for DIGIT development?</summary>
+<summary>Q2. Which IDE is recommended for DIGIT development?</summary>
 
-**Answer**\
-Intellij, Eclipse, VS Code or any other preferred IDE can be used. Make sure that it supports Java development and install the Lombok plugin for the IDE.
+**A.** Intellij, Eclipse, VS Code or any other preferred IDE can be used. Make sure that it supports Java development and install the Lombok plugin for the IDE.
 
 </details>
 
 <details>
 
-<summary>What are the tools which make development effortless?</summary>
+<summary>Q3. What are the tools which make development effortless?</summary>
 
-**Answer**\
+**A**. \
 [Jsonformatter.org](http://jsonformatter.org) is a lightweight tool which is quite handy when it comes to working with sending postman requests and putting objects to Kafka topics. Another such site is [editor.swagger.io](http://editor.swagger.io) which makes reading/designing APIs a lot easier and understandable. Use Postman to test APIs. Use k9s to work with your Kubernetes clusters.
 
 </details>
 
 <details>
 
-<summary>Is it necessary to get a new auth token every few hours?</summary>
+<summary>Q4. Is it necessary to get a new auth token every few hours?</summary>
 
-**Answer**\
-Auth tokens come with an expire period after which you will have to refresh it by hitting the oauth2 APIs.&#x20;
+**A.** Auth tokens come with an expire period after which you will have to refresh it by hitting the oauth2 APIs.&#x20;
 
 If you don’t want to refresh auth now and again you can port-forward services and get the same result. There are a couple of things to keep in mind though.&#x20;
 
@@ -75,7 +72,7 @@ Sample
 
 <details>
 
-<summary>What are our options when we get a bad request response in postman?</summary>
+<summary>Q5. What are our options when we get a bad request response in postman?</summary>
 
 **Answer**
 
@@ -85,7 +82,7 @@ You can disconnect the forwarded port and start port forwarding again with reche
 
 <details>
 
-<summary>I deployed the service in a DIGIT environment. But I am getting a 400 or 500 from Zuul.</summary>
+<summary>Q6. I deployed the service in a DIGIT environment. But I am getting a 400 or 500 from Zuul.</summary>
 
 Check whether the service is up. Insert appropriate namespace in the commands below.
 
@@ -105,7 +102,7 @@ Check the ingress and make sure the context path is right.
 
 <details>
 
-<summary>My service, pod, ingress are all looking good. But I am still getting a ZuulRuntimeException. What do I do?</summary>
+<summary>Q7. My service, pod, ingress are all looking good. But I am still getting a ZuulRuntimeException. What do I do?</summary>
 
 This could be a forwarding issue from Zuul to services. Restart Zuul and restart your service.&#x20;
 
@@ -113,7 +110,7 @@ This could be a forwarding issue from Zuul to services. Restart Zuul and restart
 
 <details>
 
-<summary>I made a change to the role action mapping in MDMS. But I am unable to access the APIs. Getting a 403 unauthorized error.</summary>
+<summary>Q8. I made a change to the role action mapping in MDMS. But I am unable to access the APIs. Getting a 403 unauthorized error.</summary>
 
 Restart MDMS so it picks up the role action mapping. Also restart the access control service. Access control caches the role action mappings for 15 minutes. Hence a hard restart will force the cache to reset.&#x20;
 
@@ -121,7 +118,7 @@ Restart MDMS so it picks up the role action mapping. Also restart the access con
 
 <details>
 
-<summary>My pod is in CrashLoopBackOff. What do I do?</summary>
+<summary>Q9. My pod is in CrashLoopBackOff. What do I do?</summary>
 
 
 
