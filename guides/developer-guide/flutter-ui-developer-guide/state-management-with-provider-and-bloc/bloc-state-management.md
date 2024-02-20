@@ -66,7 +66,7 @@ BlocListener<BlocType, StateType>(
     // Perform side effects based on the state
 ```
 
-For more information, Go through the reference links of Bloc Pattern
+For more information on Bloc Pattern, navigate through the below reference links -
 
 [Bloc State Management](https://blog.logrocket.com/state-management-flutter-bloc-pattern/)
 

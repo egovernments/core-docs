@@ -28,7 +28,7 @@ ChangeNotifier classes are responsible for holding the application state and not
 * Use `Provider.of<T>(context)` to obtain the current state within a widget. It rebuilds the widget whenever the state changes.
 * Use `Consumer<T>` to listen to changes in the state and rebuild only the specific subtree wrapped by the `Consumer` widget.
 
-For more information , Go through the reference links of Provider :&#x20;
+For detailed information on Provider, navigate through the below reference links:&#x20;
 
 [Provider Tutorial](https://www.youtube.com/watch?v=L\_QMsE2v6dw)
 
