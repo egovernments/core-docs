@@ -4,7 +4,9 @@
 
 This document will help us to generate the APK for Citizen and Employee applications.
 
-### 1. Android web view <a href="#1.-android-web-view" id="1.-android-web-view"></a>
+## Steps
+
+### 1. Android Web View <a href="#id-1.-android-web-view" id="id-1.-android-web-view"></a>
 
 Android offers a variety of ways to present content to a user. To provide a user experience that’s consistent with the rest of the platform, it’s usually best to build a native app that incorporates framework-provided experiences, such as [Android App Links](https://developer.android.com/training/app-links) or [Search](https://developer.android.com/guide/topics/search). Additionally, you can use Google Play-based experiences, such as [App Actions](https://developer.android.com/guide/actions) and [Slices](https://developer.android.com/guide/slices), where Google Play services are available. Some apps, however, may need increased control over the UI. In this case, a `WebView` is a good option for displaying trusted first-party content.
 
@@ -22,7 +24,7 @@ In Egov we will create only a responsive web app, we will not create native apps
 
 </div>
 
-### 2. How to generate APK for Citizen and Employee applications? <a href="#2.-how-to-generate-apk-for-citizen-and-employee-application" id="2.-how-to-generate-apk-for-citizen-and-employee-application"></a>
+### 2. Generate APK For Citizen & Employee Applications <a href="#id-2.-how-to-generate-apk-for-citizen-and-employee-application" id="id-2.-how-to-generate-apk-for-citizen-and-employee-application"></a>
 
 1. Clone the [GitHub - egovernments/DIGIT-OSS: eGov Foundation's Open source repository of the DIGIT](https://github.com/egovernments/DIGIT-OSS) repo.
 2. Open the below location in the [Android studio](https://developer.android.com/studio)
@@ -70,7 +72,7 @@ It will take some time to generate and it will show generated location.
 
 It will take some time to generate and it will show generated location.
 
-### 3. Generating APK for Production <a href="#3.-generating-apk-for-production" id="3.-generating-apk-for-production"></a>
+### 3. Generate APK For Production <a href="#id-3.-generating-apk-for-production" id="id-3.-generating-apk-for-production"></a>
 
 1. Follow the 3rd and 4th steps mentioned above.
 2. Then, Click on the **Build** menu, and select **Generate Signed Bundle / APK**.

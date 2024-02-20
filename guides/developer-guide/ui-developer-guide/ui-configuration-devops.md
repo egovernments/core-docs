@@ -8,9 +8,9 @@ description: UI configuration for the application
 
 This page provides details about the Digit UI configuration required to enable it in any environment
 
-### **DevOps Configuration**
+## **DevOps Configuration**
 
-#### **Build Configuration**
+### **Build Configuration**
 
 {% hint style="info" %}
 eGov recommends [CD/CI be set up](https://urban.digit.org/installation/jenkins-setup) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Please run the [CI installer to setup DIGIT CD/CI](https://urban.digit.org/installation/jenkins-setup) prior to developing on DIGIT.&#x20;
@@ -43,7 +43,7 @@ add the following content for digit-ui
 [build-and-deploy.md](build-and-deploy.md)
 {% endcontent-ref %}
 
-#### **Helmchart Configuration**
+### **Helmchart Configuration**
 
 **Step 1:** Add an entry in the helm chart of the frontend directory in the **master** branch of the forked [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps) repository.&#x20;
 
@@ -51,7 +51,7 @@ deploy-as-code/helm/charts/frontend/digit-ui
 
 [Reference Directory](https://github.com/egovernments/DIGIT-DevOps/tree/master/deploy-as-code/helm/charts/frontend/digit-ui)
 
-#### **Environment Configuration**
+### **Environment Configuration**
 
 In the DevOps repository of your organization, locate the following `"deploy-as-code/helm/environments/works-dev.yaml"`. Inside the environment YAML file used to deploy the Works platform, please add the following block of code:   &#x20;
 
