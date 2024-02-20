@@ -72,11 +72,7 @@ We have two main React Apps:
     * Dockerfile & nginx.conf
     * build-config.yaml
 
-<div align="left">
-
-<figure><img src="https://api.media.atlassian.com/file/d3c0041e-1b55-4574-b93e-e0a77e5838d8/image?allowAnimated=true&#x26;client=71e4ba1f-f4cc-4557-9e1e-0d64e9fd32f4&#x26;collection=contentId-1555956005&#x26;height=0&#x26;max-age=2592000&#x26;mode=full-fit&#x26;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI3MWU0YmExZi1mNGNjLTQ1NTctOWUxZS0wZDY0ZTlmZDMyZjQiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0xNTU1OTU2MDA1IjpbInJlYWQiXX0sImV4cCI6MTY4Njg5ODkwOSwibmJmIjoxNjg2ODk2MDI5fQ.EHQ-qU4Y68UV-eL3PYdGWcHeYdFMaPvGS-Enybhu1JI&#x26;width=0" alt="" width="563"><figcaption><p>DIGIT UI Architecture</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### CSS Library
 

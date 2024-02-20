@@ -28,7 +28,7 @@ Instructions here are provided assuming CD/CI has been set up using the DIGIT ci
 
 Before setting up the job pipeline, make sure each project has a docker folder in the root folder of the project. The cirrusci flutter docker tag must be mentioned for building the application through Jenkins. Check the image below for reference.
 
-![](../../../../.gitbook/assets/image.png)
+![](<../../../../.gitbook/assets/image (1).png>)
 
 The global assets inside the .env file should be loaded from the environment assets.&#x20;
 
