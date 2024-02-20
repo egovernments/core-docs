@@ -4,6 +4,12 @@ description: Pre -requirements for publishing the app bundle to play store
 
 # Publishing App Bundle To Play Store
 
+## Overview
+
+This page provides the requirements that should be met to publish the app bundle to Google Play Store.
+
+## Pre-requirements
+
 Before publishing an app bundle to the Google Play Store, ensure that the following requirements are met:
 
 * **App Content and Policies:**

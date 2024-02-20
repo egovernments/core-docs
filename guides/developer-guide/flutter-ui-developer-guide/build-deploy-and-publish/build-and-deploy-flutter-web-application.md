@@ -14,6 +14,12 @@ layout:
 
 # Build & Deploy Flutter Web Application
 
+## Overview
+
+This page runs you through the steps to build the web application and deploy in respective environment.
+
+## Steps
+
 Follow the instructions [here](../../backend-developer-guide/section-7-build-and-deploy-instructions.md) to set up the job pipeline. Ignore the steps not applicable to the front end.
 
 {% hint style="info" %}

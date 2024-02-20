@@ -2,7 +2,9 @@
 
 ## Overview
 
-Once the development environment setup is completed, we have to run the application locally, This document says how to run the works\_shg\_app on a local device.
+Once the development environment setup is completed, we have to run the application locally. This document provides steps on how to run the works\_shg\_app on a local device.
+
+## Steps
 
 1. Clone the repo [https://github.com/egovernments/DIGIT-Works](https://github.com/egovernments/DIGIT-Works)
 

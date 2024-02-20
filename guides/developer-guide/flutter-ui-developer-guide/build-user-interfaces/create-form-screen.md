@@ -13,7 +13,8 @@ This document provides details about creation of a form screen using the officia
 
 &#x20;**flutter create project\_name**
 
-\
+## Steps
+
 Build a form using the [digit\_components: ^latest\_version](https://pub.dev/packages/digit\_components)
 
 * In pubspec.yaml add the digit\_components and reactive\_forms under dependencies
