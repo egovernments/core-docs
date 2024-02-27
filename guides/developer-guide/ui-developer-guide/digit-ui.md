@@ -150,8 +150,11 @@ The app imports the developed module.
 import './index.css' import { initPGR } from '@egovernments/pgr-module'; import punjabLogo from './assets/logo.png' const theme = { "--primary-color": "#3f51b5", "--text-color": "#212121" } const PGRComponents = { "logo": punjabLogo } const initPunjabPGR = (onRouteChange) => initPGR({ state: "pb", element: "#appWrapper", components: PGRComponents, onRouteChange, theme }); export default initPunjabPGR;
 ```
 
-In the next phase, the Employee and Citizen app can be rewritten as a single app with the role and permissions-based rendering.\
+In the next phase, the Employee and Citizen app can be rewritten as a single app with the role and permissions-based rendering.
+
+## Related Links
+
 \
-[Prerequisite reference study materials](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2269085701)
+[Prerequisite reference study materials](../development-pre-requisites.md)
 
 [Troubleshoot using Browser network Tab](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2088009739)
