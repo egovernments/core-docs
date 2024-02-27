@@ -47,13 +47,15 @@ add the following content for digit-ui
 
 **Step 1:** Add an entry in the helm chart of the frontend directory in the **master** branch of the forked [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps) repository.&#x20;
 
-deploy-as-code/helm/charts/frontend/digit-ui
+**Step 2:** Deploy-as-code/helm/charts/frontend/digit-ui
 
 [Reference Directory](https://github.com/egovernments/DIGIT-DevOps/tree/master/deploy-as-code/helm/charts/frontend/digit-ui)
 
 ### **Environment Configuration**
 
-In the DevOps repository of your organization, locate the following `"deploy-as-code/helm/environments/works-dev.yaml"`. Inside the environment YAML file used to deploy the Works platform, please add the following block of code:   &#x20;
+**Step 1:** Locate the following `"deploy-as-code/helm/environments/works-dev.yaml" i`n the DevOps repository of your organization.&#x20;
+
+**Step 2:** Add the below code block within the environment YAML file used to deploy the Works platform -    &#x20;
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>digit-ui:
 </strong>  custom-js-injection: |
@@ -62,21 +64,20 @@ In the DevOps repository of your organization, locate the following `"deploy-as-
       &#x3C;script src={{INSERT_YOUR_AWS_BUCKET_NAME}}/globalConfigs.js type=text/javascript>&#x3C;/script>';"
 </code></pre>
 
-A dev environment sample file is linked [here](https://github.com/egovernments/DIGIT-DevOps/blob/efaf8d4335995d2c46c136d06a04e4ea2c2ef581/deploy-as-code/helm/environments/uat.yaml#L430). Note that you will have to modify this for your deployment.
+**Step 3:** Modify the development environment [sample file ](https://github.com/egovernments/DIGIT-DevOps/blob/efaf8d4335995d2c46c136d06a04e4ea2c2ef581/deploy-as-code/helm/environments/uat.yaml#L430)as per requirements.&#x20;
 
 ### **GlobalConfig**&#x20;
 
-This section contains a config that is applicable globally to all UI modules. These need to be configured prior to service-specific UI configurations.
+This section contains the configuration that is applicable globally to all UI modules. These need to be configured prior to the configuration of service-specific UI.
 
 #### Steps to create a globalconfig.js file:
 
-* Create a config file(globalconfigs.js) with the below-mentioned config (see code below).
-* Configure all the images/logo required in the S3 and add links as footerBWLogoURL , footerLogoURL
-* Mention the state tenant ID as stateTenantId
-* If any User roles have to be made invalid add as invalidEmployeeRoles
-* Then push this global config file into your S3 bucket as globalconfigs.js\
-
-* Mention the globalconfig file URL into your [`Environment config`](ui-configuration-devops.md#environment-configuration)&#x20;
+* Create a config file (globalconfigs.js) with the below-mentioned config (refer code below).
+* Configure all the images/logo required in the S3 and add links as footerBWLogoURL , footerLogoURL.
+* Mention the state tenant ID as stateTenantId.
+* If any User roles have to be made invalid add as invalidEmployeeRoles.
+* Then push this global config file into your S3 bucket as globalconfigs.js
+* Mention the globalconfig file URL into your [`Environment config`](ui-configuration-devops.md#environment-configuration)`.`&#x20;
 
 ```
 var globalConfigs = (function () {
