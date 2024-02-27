@@ -16,7 +16,7 @@ Android offers a variety of ways to present content to a user. To provide a user
 
 </div>
 
-In Egov we create only a responsive web apps instead of native apps(Android, IOS). The Android web view is used to render the out web application.
+In Egov we create only responsive web apps instead of native apps (Android, IOS). The Android web view is used to render the out web application.
 
 <div align="left">
 
