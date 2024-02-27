@@ -19,7 +19,7 @@ eGov recommends [CD/CI be set up](https://urban.digit.org/installation/jenkins-s
 **Step 1:** Add entry in build-config.yaml file in the **master** branch of the forked repository. This will set up the job pipeline in Jenkins. Make sure to also add the same config to the feature branch you are working on.\
 Refer  [build-config.yaml](https://github.com/egovernments/DIGIT-OSS/blob/6faf040bfecdc9b023e5578adf1e8c3480c8458b/build/build-config.yml#L734)
 
-add the following content for digit-ui
+Add the below content for digit-ui.
 
 ```yaml
   - name: builds/digit-dev/frontend/micro-ui/digit-ui
@@ -66,19 +66,20 @@ add the following content for digit-ui
 
 **Step 3:** Modify the development environment [sample file ](https://github.com/egovernments/DIGIT-DevOps/blob/efaf8d4335995d2c46c136d06a04e4ea2c2ef581/deploy-as-code/helm/environments/uat.yaml#L430)as per requirements.&#x20;
 
-### **GlobalConfig**&#x20;
+### **Global Configuration**&#x20;
 
 This section contains the configuration that is applicable globally to all UI modules. These need to be configured prior to the configuration of service-specific UI.
 
 #### Steps to create a globalconfig.js file:
 
-* Create a config file (globalconfigs.js) with the below-mentioned config (refer code below).
-* Configure all the images/logo required in the S3 and add links as footerBWLogoURL , footerLogoURL.
-* Mention the state tenant ID as stateTenantId.
-* If any User roles have to be made invalid add as invalidEmployeeRoles.
-* Then push this global config file into your S3 bucket as globalconfigs.js
-* Mention the globalconfig file URL into your [`Environment config`](ui-configuration-devops.md#environment-configuration)`.`&#x20;
+1. Create a config file (globalconfigs.js) with the below-mentioned config (refer code below).
+2. Configure all the images/logo required in the S3 and add links as footerBWLogoURL , footerLogoURL.
+3. Mention the state tenant ID as stateTenantId.
+4. If any User roles have to be made invalid add as invalidEmployeeRoles.
+5. Then push this global config file into your S3 bucket as globalconfigs.js
+6. Mention the globalconfig file URL into your [`Environment config`](ui-configuration-devops.md#environment-configuration)`.`&#x20;
 
+{% code lineNumbers="true" %}
 ```
 var globalConfigs = (function () {
   var stateTenantId = '<<INSERT_STATE_TENANT_ID>>'
@@ -124,16 +125,16 @@ var globalConfigs = (function () {
  }());
 
 ```
+{% endcode %}
 
-#### Configure AWS S3 Bucket
+### AWS S3 Bucket Configuration
 
 The S3 bucket has to be configured by the DevOps team, to store all the assets being used in the Application like Logos, globalConfigs, etc.
 
-Steps Creating a New AWS Bucket
+**Steps to create a new AWS Bucket -**
 
 1. Create a new AWS S3 Bucket&#x20;
-2. Update the Bucket Policy with the following content, to make the bucket public \
-
+2. Update the Bucket Policy with the following content, to make the bucket public&#x20;
 
 ```json
 {
@@ -150,7 +151,7 @@ Steps Creating a New AWS Bucket
 }
 ```
 
-3. Update the Cross-origin resource sharing (CORS) configuration with the following content
+3. Update the Cross-Origin Resource Sharing (CORS) configuration with the following content
 
 ```json
 [
@@ -177,10 +178,8 @@ Steps Creating a New AWS Bucket
 ]
 ```
 
-4. To proxy the Same Bucket in any environment make the below change in the environment configuration in the DevOps repo ie [environment.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/uat.yaml#LL48C11-L48C12)\
-   In the configmaps, under egov-config ->  data:
-
-&#x20;      add the `s3-assets-bucket: "pg-egov-assets"`
+4. To proxy the same bucket in any environment and make the necessary changes in the `environment.yaml` file located in the DevOps repository's `configmaps` under `egov-config`, follow the steps below:
+   * Add the `s3-assets-bucket: "pg-egov-assets"`
 
 ```
  configmaps:
