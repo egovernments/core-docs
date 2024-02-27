@@ -1,16 +1,16 @@
 ---
-description: New Screen in Digit-ui
+description: Steps to add new screens in DIGIT-ui
 ---
 
 # Create New Screen In DIGIT-UI
 
 ## Overview
 
-This document provides the steps for creating the new screen in the DIGIT-UI.
+This document provides the steps for creating new screens in the DIGIT-UI.
 
 ## Steps
 
-Creating a screen in DIGIT UI is simple and it can be classified into 4 types of screens -
+Creating a screen in DIGIT UI involve simple steps and is classified into 4 different screen -
 
 1. [Create](./#create-screen)
 2. [View](./#view-screen)

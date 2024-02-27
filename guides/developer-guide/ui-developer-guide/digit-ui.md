@@ -1,14 +1,26 @@
+---
+description: Key components of DIGIT-UI
+---
+
 # DIGIT-UI
+
+## Overview <a href="#frontend-components" id="frontend-components"></a>
+
+This page provides the architecture and key features of the DIGIT UI. Click on the broader headings below to find the details.
+
+* [Frontend components](digit-ui.md#frontend-components-1)
+* [UI Architecture](digit-ui.md#architecture)
+* [Employee/Citizen App](digit-ui.md#employee-citizen-app)
 
 ## Frontend Components <a href="#frontend-components" id="frontend-components"></a>
 
-Broadly, the frontend components can be categorized as followings:
+Broadly, the DIGIT UI frontend components are categorized as below:
 
-1. Libraries
-2. CSS Library
-3. React Components
-4. UI Modules
-5. Templates
+1. [Libraries](digit-ui.md#css-library)
+2. [CSS Library](digit-ui.md#css-library)
+3. [React Components](digit-ui.md#component-libraries)
+4. [UI Modules](digit-ui.md#modules)
+5. [Templates](digit-ui.md#templates)
 
 <div align="left">
 
@@ -18,7 +30,8 @@ Broadly, the frontend components can be categorized as followings:
 
 ### Nomenclature <a href="#nomenclature" id="nomenclature"></a>
 
-The first line contains the Architecture Component name or info, the second line has npm-package and in the bracket, we have a template based on which the component will be created.
+1. The first line contains the Architecture Component name or info
+2. The second line has npm-package and in the bracket there is a template based on which the component will be created.
 
 <div align="left">
 
@@ -39,44 +52,40 @@ The first line contains the Architecture Component name or info, the second line
 
 ### Templates <a href="#templates" id="templates"></a>
 
-The templates have the following folder structure:
-
-
-
-The components related to the template are inside the `src` folder of the template and an example is created to use and showcase the app created by the template.
+The templates have the following folder structure: The components related to the template are inside the `src` folder of the template and an example is created to use and showcase the app created by the template.
 
 ## Architecture <a href="#architecture" id="architecture"></a>
 
 We have two main React Apps:
 
-* `micro-ui-internals`&#x20;
-  * Meant for the eGov development team to build components and default modules.
-  * Contains the following modules:
-    * CSS Library
-    * UI Components (presently `react-components`)
-    * Utils Library: Contains Services, Localization handling and React Hooks.
-    * UI Modules
-      * Core - containing login, routing and global state.
-      * PGR
-      * FSM
-      * PT
-      * Payment
-      * etc ...
-* `micro-ui`
-  * Meant for the state team to manage, make changes, and deploy
-  * Import `digit-ui-internals` modules.
-  * Customizations
-    * View
-    * Services
-  * Build and deploy scripts
-    * Dockerfile & nginx.conf
-    * build-config.yaml
+1. `micro-ui-internals`&#x20;
+   * Meant for the eGov development team to build components and default modules.
+   * Contains the following modules:
+     * CSS Library
+     * UI Components (presently `react-components`)
+     * Utils Library: Contains Services, Localization handling and React Hooks.
+     * UI Modules
+       * Core - containing login, routing and global state.
+       * PGR
+       * FSM
+       * PT
+       * Payment
+       * etc ...
+2. `micro-ui`
+   * Meant for the state team to manage, make changes, and deploy
+   * Import `digit-ui-internals` modules
+   * Customizations
+     * View
+     * Services
+   * Build and deploy scripts
+     * Dockerfile & nginx.conf
+     * build-config.yaml
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### CSS Library
 
-The CSS Library will have all the classes both in the module and compiled form.
+The CSS Library contains all the classes both in the module and compiled form.
 
 <div align="left">
 
@@ -84,19 +93,13 @@ The CSS Library will have all the classes both in the module and compiled form.
 
 </div>
 
-Can be imported like
+This can be imported using `import "@egovernments/digit-ui.css/Button"`
 
-`import "@egovernments/digit-ui.css/Button"`
-
-or like this for full CSS import
-
-`import "@egovernments/digit-ui.css"`
+or full CSS import using `import "@egovernments/digit-ui.css"`
 
 ### Component Libraries <a href="#component-libraries" id="component-libraries"></a>
 
-Component Library will have a set of all the required components defined in them.
-
-
+Component Library contains a set of all the required components defined in them.
 
 <div align="left">
 
@@ -104,11 +107,11 @@ Component Library will have a set of all the required components defined in them
 
 </div>
 
-### Libraries and Utils <a href="#utils-library" id="utils-library"></a>
+### Libraries & Utils <a href="#utils-library" id="utils-library"></a>
 
-This will have the followings:
+These contain the following:
 
-* LocalizationWorkflows
+* Localization workflows
 * API handling - API caching and handling strategies will be here, imported, and shared by all modules. Published as a function, can be used by anyone.
 * Localisation
 
@@ -118,13 +121,11 @@ This will have the followings:
 
 </div>
 
-&#x20;
-
 ### Modules <a href="#modules" id="modules"></a>
 
-The module will be a black box for the states, they will only access throw `node_modules` or `CDN`. Any state-specific components can be passed during the initialization of the module inside the state’s employee or citizen app.
+The module will function as a closed system for the states, limiting their access to node\_modules or CDNs only. Any components specific to a state can be provided during the module's initialization within the employee or citizen application's state.
 
-The modules structure will look like:
+Below is an illustration of how the modules structure looks like:
 
 <div align="left">
 
@@ -132,9 +133,7 @@ The modules structure will look like:
 
 </div>
 
-&#x20;
-
-Modules will have the following inbuilt
+Modules contain the following inbuilt
 
 * Theme - this may change if we later decide to use any `css-in-js` library, like `styled-components`.
 * Components
@@ -143,12 +142,13 @@ Modules will have the following inbuilt
 * Business logic
 * API integrations
 
-### Employee / Citizen App <a href="#employee-citizen-app" id="employee-citizen-app"></a>
+## Employee / Citizen App <a href="#employee-citizen-app" id="employee-citizen-app"></a>
 
-The app will import the developed module.
+The app imports the developed module.
 
-`import './index.css' import { initPGR } from '@egovernments/pgr-module'; import punjabLogo from './assets/logo.png' const theme = { "--primary-color": "#3f51b5", "--text-color": "#212121" } const PGRComponents = { "logo": punjabLogo } const initPunjabPGR = (onRouteChange) => initPGR({ state: "pb", element: "#appWrapper", components: PGRComponents, onRouteChange, theme }); export default initPunjabPGR;`\
-
+```
+import './index.css' import { initPGR } from '@egovernments/pgr-module'; import punjabLogo from './assets/logo.png' const theme = { "--primary-color": "#3f51b5", "--text-color": "#212121" } const PGRComponents = { "logo": punjabLogo } const initPunjabPGR = (onRouteChange) => initPGR({ state: "pb", element: "#appWrapper", components: PGRComponents, onRouteChange, theme }); export default initPunjabPGR;
+```
 
 In the next phase, the Employee and Citizen app can be rewritten as a single app with the role and permissions-based rendering.\
 \
