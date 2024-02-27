@@ -81,7 +81,7 @@ We have two main React Apps:
      * Dockerfile & nginx.conf
      * build-config.yaml
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### CSS Library
 
@@ -157,4 +157,4 @@ In the next phase, the Employee and Citizen app can be rewritten as a single app
 \
 [Prerequisite reference study materials](../development-pre-requisites.md)
 
-[Troubleshoot using Browser network Tab](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2088009739)
+[Troubleshoot using Browser network Tab](faqs/troubleshoot-using-browser-network-tab.md)

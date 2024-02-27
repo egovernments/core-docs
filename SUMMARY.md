@@ -298,6 +298,7 @@
     * [Build & Deploy](guides/developer-guide/ui-developer-guide/build-and-deploy.md)
     * [Setup Monitoring Tools](guides/developer-guide/ui-developer-guide/setup-monitoring-tools.md)
     * [FAQs](guides/developer-guide/ui-developer-guide/faqs/README.md)
+      * [Troubleshoot Using Browser Network Tab](guides/developer-guide/ui-developer-guide/faqs/troubleshoot-using-browser-network-tab.md)
       * [Debug Android App Using Chrome Browser](guides/developer-guide/ui-developer-guide/faqs/debug-android-app-using-chrome-browser.md)
 * [🔄 Operations Guide](guides/operations-guide/README.md)
   * [DIGIT - Infra Overview](guides/operations-guide/digit-infra-overview.md)
