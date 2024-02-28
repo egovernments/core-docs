@@ -6,8 +6,6 @@ This utility is designed to transform the MDMS configuration into FormComposer a
 
 ## Steps
 
-#### How does this utility work?
-
 This utility serves as an engine that accepts MDMS configurations along with dependent parameters. It then processes this data to generate a parameter-enabled configuration. This resultant configuration can be utilized by FormComposer and InboxFormComposer to render the UI elements accordingly.
 
 Below is the method used to configure the MDMS -&#x20;

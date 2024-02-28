@@ -1,6 +1,8 @@
 # Install Dependency
 
-## Add MDMS (Master Data Management Service) Configuration
+## Steps
+
+#### Add MDMS (Master Data Management Service) Configuration
 
 When creating a new module, the module needs to be enabled in `citymodule.json.` A sample module is available for reference here: [citymodule.json](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/tenant/citymodule.json).
 
@@ -54,6 +56,3 @@ Below are the three places where the module needs to be registered:
 "@egovernments/digit-ui-module-br":"1.0.0",
 ```
 
-&#x20;
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

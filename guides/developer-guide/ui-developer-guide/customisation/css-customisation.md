@@ -2,9 +2,9 @@
 
 ## **Overview**
 
-This document describes how to publish CSS if there are any CSS Customization/changes. While customising, if any changes are made In the CSS folder it has to be compiled and published to npm.
+This page explores the steps to publish CSS if there are any CSS Customization/changes. While customising, if any changes are made In the CSS folder it has to be compiled and published to npm.
 
-## Customisation Steps
+## Steps
 
 Currently, the CSS is published in npm as **@egovernments/digit-ui-css**&#x20;
 
@@ -36,4 +36,4 @@ There are two ways to customize the CSS -
 
 **Reference** doc for publishing any package to npm -
 
-​[​![](https://docs.npmjs.com/favicon-32x32.png?v=f44ec608ba91563f864a30a276cd9065)Creating and publishing scoped public packages | npm Docs](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)​
+​[​<img src="https://docs.npmjs.com/favicon-32x32.png?v=f44ec608ba91563f864a30a276cd9065" alt="" data-size="line">Creating and publishing scoped public packages | npm Docs](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)​

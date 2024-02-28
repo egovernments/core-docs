@@ -5,7 +5,7 @@ description: Front-end module project structure
 # Project Structure
 
 {% hint style="info" %}
-Download the UI code from the link here [Birth-Registration. ](https://github.com/egovernments/DIGIT-OSS/tree/master)Follow the steps detailed in this doc.
+Download the UI code from the link here [Birth-Registration. ](https://github.com/egovernments/DIGIT-OSS/tree/master)Follow the steps detailed below.
 {% endhint %}
 
 ## **Create Project Structure**
@@ -63,5 +63,3 @@ Download the UI code from the link here [Birth-Registration. ](https://github.co
 <figure><img src="../../../../.gitbook/assets/f0cde6cc-2d1d-4f76-9e1d-2eeeaf040d48.png" alt=""><figcaption></figcaption></figure>
 
 </div>
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
