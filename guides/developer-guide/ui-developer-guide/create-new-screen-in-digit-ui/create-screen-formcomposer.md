@@ -6,7 +6,7 @@ This page provides the steps to configure the FormComposer.
 
 ## Configuration Details
 
-For complex configuration or screen details refer to documentation on[ Utility - preprocess](../customisation/utility-pre-process-mdms-config.md)
+For complex configuration or screen details refer to documentation on[ Utility - preprocess](../customisation/utility-pre-process-mdms-configuration.md)
 
 ### Other Variants (FormComposerV2)
 

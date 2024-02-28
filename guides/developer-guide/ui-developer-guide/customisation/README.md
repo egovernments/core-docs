@@ -1,8 +1,12 @@
+---
+description: Customisation options for DIGIT UI
+---
+
 # Customisation
 
 ## Overview
 
-This document provides the customisation details for DIGIT-UI. Customisation can be classified broadly into two types.
+This document provides the customisation details for DIGIT UI. Customisation can be classified broadly into two types -
 
 1. Overriding the Component/Hooks/CSS
 2. Overwriting the required changes directly into the Micro-ui-internals

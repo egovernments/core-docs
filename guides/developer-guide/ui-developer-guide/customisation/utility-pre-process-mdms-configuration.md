@@ -1,15 +1,16 @@
-# Utility - Pre-Process MDMS Config
+# Utility - Pre-Process MDMS Configuration
 
-Overview
+## Overview
 
-This utility is developed to convert the MDMS config into FormComposer and InboxFormComposer config. Basically, every UI configuration needs some dependent parameters. These params could be a dropdown dependency or a custom class we want to pass at runtime based on some logic. Since the config is a JSON put into MDMS, we cannot use variables directly inside it. To handle this use case, we have written a utility that will convert this JSON to a param-based JSON.
+This utility is designed to transform the MDMS configuration into FormComposer and InboxFormComposer configurations. Typically, every UI configuration relies on certain parameters. These parameters might include dropdown dependencies or custom classes determined at runtime based on specific logic. However, since the configuration is in JSON format stored within MDMS, direct usage of variables is not feasible. To address this requirement, we've developed a utility capable of converting this JSON into a parameter-based JSON structure.
 
-How does this utility works ?
+## Steps
 
-This utility is like an engine that takes MDMS config and dependent parameters and returns a param enabled config, which formcomposer and inbox form composer can use to render the UI elements.\
+#### How does this utility work?
 
+This utility serves as an engine that accepts MDMS configurations along with dependent parameters. It then processes this data to generate a parameter-enabled configuration. This resultant configuration can be utilized by FormComposer and InboxFormComposer to render the UI elements accordingly.
 
-Below is the way we need to set the MDMS config -&#x20;
+Below is the method used to configure the MDMS -&#x20;
 
 ```json
 {
@@ -37,16 +38,17 @@ Below is the way we need to set the MDMS config -&#x20;
 
 ```
 
-Here, we need to pass the JSON path of the dependent key we need to update at runtime. In the example above, we are targeting “populators.options”, So we want to update the options at runtime based on some logic.&#x20;
+1. Pass the JSON path of the dependent key that requires runtime updates. In the example above, the target is on “populators.options”.&#x20;
+2. Update the options at runtime based on certain logic.
 
-Note :
+{% hint style="info" %}
+**Note :**
 
-1. We always need to pass the JSON path in an array
-2. Also, the order in which we are passing these JSON path are important. Later on, we will use this order to target the respective dependent object.
+1. Make sure to pass the JSON path in an array.
+2. The order in which these JSON path are passed is important. Later on, this order will be used to target the respective dependent object.
+{% endhint %}
 
-Now, once we set the config as above, we will put this config in MDMS. So, the next thing is to pass this config and its dependencies to the Pre-Process utility.
-
-The Namespace to access this utility :&#x20;
+3. Once the configuration is complete, this will be added to MDMS. So, the next thing is to pass this config and its dependencies to the Pre-Process utility. The Namespace to access this utility :&#x20;
 
 ```
 Digit.Utils.preProcessMDMSConfig(t, MDMSObject, dependencyObject);
@@ -58,7 +60,7 @@ The dependency Object contains multiple actions which the pre-process function r
 2. updateDependent - This targets the JSON path and update the dependencies.
 3. convertStringToRegex -  This targets the JSON path and converts the String RegEx to RegExp based Regex.
 
-Below is the sample example -&#x20;
+Refer to the sample example below -&#x20;
 
 ```jsx
 const config = useMemo(
@@ -107,18 +109,16 @@ const config = useMemo(
        ]
      }),
      [withSubProjectSubSchemeOptions, noSubProjectSubSchemeOptions,
-      subTypeOfProjectOptions, ULBOptions, wardsAndLocalities, filteredLocalities, showInfoLabel, isEndDateValid]);
+      subTypeOfProjectOptions, ULBOptions, wardsAndLocalities, filteredLocalities, showInfoLabel, isEndDateValid]); 
 ```
-
-&#x20;  &#x20;
 
 In the example above, we are using the action “updatedependent” from pre-process utility.
 
 * “Key” targets the input key name. This will help preprocess to target the right input field.
-* “Value” - Every input in the confg has a json path set, where each JSON path target a dependent object. As we saw earlier, we were passing the JSON in order in an array. In the same way, we need to pass the respective dependent values in order, so as to keep the right target.
+* “Value” - Each input within the configuration is associated with a JSON path, with each path targeting a dependent object. As previously demonstrated, we passed the JSON in a specific order within an array. Similarly, we must pass the corresponding dependent values in the same order to ensure alignment with the correct targets.
 
-Note: Please make sure you are optimizing this pre-process call. Here, to optimize, we are only calling this when there is a change in the dependent values. Our dependent values are component states, so whenever the state changes, the component will re-render and the pre-process will run and return us a new config. Since there are chances of over iterations, we are using useMemo to cache the result.
+{% hint style="info" %}
+**Note:** Ensure that the preprocessing call is optimized for performance. It should only be invoked when there is a change in the dependent values. As our dependent values are component states, the preprocessing should occur whenever the state changes, triggering a re-render of the component. To mitigate potential over-iterations, we employ useMemo to cache the result, ensuring efficient processing and minimizing unnecessary recalculations.
+{% endhint %}
 
-A similar utility is also developed for InboxSearchComposer. Please refer to this document for both.
-
-\
+A similar utility is also developed for InboxSearchComposer. Refer to this same document for both utilities.
