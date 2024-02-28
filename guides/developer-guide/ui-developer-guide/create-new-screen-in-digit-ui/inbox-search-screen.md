@@ -19,31 +19,31 @@ This page provides the approach details for -
 
 This is a container component for inbox and search screens. It consists of 4 children components which can be rendered conditionally.                                                                                                     &#x20;
 
-<table><thead><tr><th>Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>configs</td><td>Config fetched from MDMS data</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="260">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>configs</td><td>Config fetched from MDMS data</td><td></td></tr></tbody></table>
 
 #### InboxSearchLinks
 
 This component is used to render titles and links in the inbox.
 
-<table><thead><tr><th>Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>headerText</td><td>Config fetched from MDMS data</td><td></td></tr><tr><td>links</td><td>Links to navigate to other screens</td><td></td></tr><tr><td>customClass</td><td>Class to update styling</td><td></td></tr><tr><td>logoIcon</td><td>Icon name and class to render in component</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="213">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>headerText</td><td>Config fetched from MDMS data</td><td></td></tr><tr><td>links</td><td>Links to navigate to other screens</td><td></td></tr><tr><td>customClass</td><td>Class to update styling</td><td></td></tr><tr><td>logoIcon</td><td>Icon name and class to render in component</td><td></td></tr></tbody></table>
 
 #### SearchComponent
 
 This component is used to render search or filter forms with ‘clear’ and ‘search’ buttons.
 
-<table><thead><tr><th>Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>uiConfig</td><td>Config to render search/filter form</td><td></td></tr><tr><td>header</td><td>Title of form</td><td></td></tr><tr><td>screenType</td><td>Type of parent screen, can be either ‘inbox’ or ‘search’</td><td></td></tr><tr><td>fullConfig</td><td>Entire config of screen which also includes API details </td><td></td></tr></tbody></table>
+<table><thead><tr><th width="209">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>uiConfig</td><td>Config to render search/filter form</td><td></td></tr><tr><td>header</td><td>Title of form</td><td></td></tr><tr><td>screenType</td><td>Type of parent screen, can be either ‘inbox’ or ‘search’</td><td></td></tr><tr><td>fullConfig</td><td>Entire config of screen which also includes API details </td><td></td></tr></tbody></table>
 
 #### Results table
 
 This component is used to render a table with searched results.
 
-<table><thead><tr><th>Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>config</td><td>Config to render table</td><td></td></tr><tr><td>data</td><td>Search results need to be populated in table</td><td></td></tr><tr><td>isLoading</td><td>Flag to pass to handle loading state</td><td></td></tr><tr><td>isFetching</td><td>Flag to pass to handle loading state</td><td></td></tr><tr><td>fullConfig</td><td>Entire config of screen which also includes API details </td><td></td></tr></tbody></table>
+<table><thead><tr><th width="207">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>config</td><td>Config to render table</td><td></td></tr><tr><td>data</td><td>Search results need to be populated in table</td><td></td></tr><tr><td>isLoading</td><td>Flag to pass to handle loading state</td><td></td></tr><tr><td>isFetching</td><td>Flag to pass to handle loading state</td><td></td></tr><tr><td>fullConfig</td><td>Entire config of screen which also includes API details </td><td></td></tr></tbody></table>
 
 #### RenderFormFields
 
 This component is used to render form fields passed in the 'fields' parameter in the config&#x20;
 
-<table><thead><tr><th>Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>fields</td><td>Config to render all form fields</td><td></td></tr><tr><td>control, formData, errors, register, setValue, getValues, setError, clearErrors</td><td>Props to handle all form actions like collectibe data, setting errors, clearing errors etc.</td><td></td></tr><tr><td>apiDetails</td><td>Includes all API details required to fetch data</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="273">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>fields</td><td>Config to render all form fields</td><td></td></tr><tr><td>control, formData, errors, register, setValue, getValues, setError, clearErrors</td><td>Props to handle all form actions like collectibe data, setting errors, clearing errors etc.</td><td></td></tr><tr><td>apiDetails</td><td>Includes all API details required to fetch data</td><td></td></tr></tbody></table>
 
 ### **Hooks Used**
 
@@ -61,32 +61,32 @@ To fetch inbox details, ‘useCustomAPIHook’ is used which takes all the API d
 
 ## Configure Screens - Steps
 
-1. Create config based on the sections that need to be displayed on the screen. The basic structure for Inbox and Search screens is as below.&#x20;
+1. Create config based on the sections that need to be displayed on the screen. The basic structure for Inbox and Search screens is given below.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>base search config</p></figcaption></figure>
 
 <figure><img src="../../../../.gitbook/assets/image (8) (3).png" alt=""><figcaption><p>Base Inbox config</p></figcaption></figure>
 
-1. Based on the flag given for each section its visibility is controlled. If the ‘show’ flag is true, then the section is visible, else it is hidden.&#x20;
-2.  Add API details in the top section, this API will be called via _useCustomAPIHook_ and return the data. This consists of the below details.&#x20;
+2. Based on the flag given for each section its visibility is controlled. If the ‘show’ flag is true, then the section is visible, else it is hidden.&#x20;
+3.  Add API details in the top section, this API will be called via _useCustomAPIHook_ and return the data. This consists of the below details.&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Api details section</p></figcaption></figure>
-3.  Add search form config which can be used in both inbox/search screen. It consists of UIconfig containing label info, styling info, default form values, and fields which need to be rendered in the form. Refer below&#x20;
+4.  Add search form config which can be used in both inbox/search screen. It consists of UIconfig containing label info, styling info, default form values, and fields which need to be rendered in the form. Refer below&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>search </p></figcaption></figure>
-4.  Add Links config consists of link info, logo to be shown and title. Refer below&#x20;
+5.  Add Links config consists of link info, logo to be shown and title. Refer below&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Links</p></figcaption></figure>
-5.  Add Filter form config which is similar to the search form. Refer below&#x20;
+6.  Add Filter form config which is similar to the search form. Refer below&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (10) (2).png" alt=""><figcaption><p>Filter section</p></figcaption></figure>
-6.  Add Table (Search result) config consists of labels, column data and related jsonpaths to access the data passed. Refer below&#x20;
+7.  Add Table (Search result) config consists of labels, column data and related jsonpaths to access the data passed. Refer below&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Results Table</p></figcaption></figure>
-7.  To add any customisations on query params, request body, table columns or to add any custom validations in forms, related code can be added in the _UICustomisations_ file as below&#x20;
+8.  To add any customisations on query params, request body, table columns or to add any custom validations in forms, related code can be added in the _UICustomisations_ file as below&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Ui customisations for Search project screen</p></figcaption></figure>
-8.  Once the above config is defined, created an index file/ Component in the pages folder. Fetch the config from MDMS and pass it to the _inboxSearchComposer_ component as below&#x20;
+9.  Once the above config is defined, created an index file/ Component in the pages folder. Fetch the config from MDMS and pass it to the _inboxSearchComposer_ component as below&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (14) (2).png" alt=""><figcaption><p>Sample code for project search page</p></figcaption></figure>
 
@@ -97,7 +97,7 @@ To fetch inbox details, ‘useCustomAPIHook’ is used which takes all the API d
 
 ### Usage
 
-To use the Latest Inbox search composer it has to be imported from the React components or Utilities
+To use the latest Inbox search composer it has to be imported from the React components or Utilities
 
 React components
 
