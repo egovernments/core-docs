@@ -1,6 +1,12 @@
 # Import Required Components
 
-DIGIT comes with common re-usable libraries that can be imported for use in a new module. **CSS , libraries , common , react components** can be imported by adding into package.json.
+## Overview
+
+DIGIT comes with common re-usable libraries that can be imported for use in a new module. This page provides the steps on importing the required components.
+
+## Steps
+
+**CSS , libraries , common , react components** can be imported by adding into package.json.
 
 ```
 "@egovernments/digit-ui-css": "1.5.3",

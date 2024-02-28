@@ -4,18 +4,24 @@ description: Writing citizen module logic
 
 # Write Citizen Module Code
 
-This section will walk you through the code that needs to be developed for the application. Detailed user screen wireframes should be available at this point for development.
+## Overview
+
+This section will walk you through the code that needs to be developed for the application.&#x20;
+
+## Steps
+
+Detailed user screen wireframes should be available at this point for development.
 
 <details>
 
 <summary>Create Application Form</summary>
 
-First, we need to create a form where users can enter all required information and submit the form. Create a file called index.js in the path below:
+1. Create a form where users can enter all required information and submit the form.&#x20;
+2. Create a file called index.js in the path below:
 
-`/web/micro-ui/internals/packages/module/br/src/pages/citizen/create/index.js`\
+`/web/micro-ui/internals/packages/module/br/src/pages/citizen/create/index.js`
 
-
-&#x20;`index.js` will import the **Formcomposer**. Inside that, we will add the heading, label, and form components. The configuration file that will contain the actual form schema is mapped below in the following two lines. The newConfig.json file details are mentioned in the below sections.
+3. `index.js` will import the **Formcomposer**. Inside this add the heading, label, and form components. The configuration file that will contain the actual form schema is mapped below in the following two lines. The newConfig.json file details are mentioned in the below sections.
 
 ```jsx
 import { newConfig } from "../../../components/config/config";
