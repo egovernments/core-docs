@@ -2,33 +2,31 @@
 
 ## Overview
 
-This document says about the customisation of Digit-UI. Customisation can be classified broadly into two types.
+This document provides the customisation details for DIGIT-UI. Customisation can be classified broadly into two types.
 
-1. Overriding the Component/Hooks/Css
+1. Overriding the Component/Hooks/CSS
 2. Overwriting the required changes directly into the Micro-ui-internals
 
-### Overriding
+## Overriding
 
-Overriding is how to make all the customization changes only in the micro-ui/web directory.
+Overriding involves making all customization changes exclusively within the micro-ui/web directory.
 
-#### For CSS:
+#### For CSS
 
-In the custom CSS module, with the same class name or ID define the customized CSS and publish. Mention this in the index.html to reflect changes in the website
+Within the custom CSS module, define customized CSS using the same class name or ID. Afterward, publish the changes. Ensure to reference this custom CSS file in the index.html to reflect the modifications on the website.
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/@egovernments/digit-ui-css@1.5.22/dist/index.css" />
 <link rel="stylesheet" href="https://unpkg.com/@egovernments/digit-ui-custom-css@0.2.6/dist/index.css" />// Some code
 ```
 
-#### For Components/Hooks:
+#### For Components/Hooks
 
 For overriding any components, re-register the same component in the same name in the customization folder. The latest changes are reflected.
 
-### Overwriting Changes
+## Overwriting Changes
 
-Overwriting is the other way of Customisation, where the changes were directly made in the micro-ui-internals directory, by this way taking the latest changes will be slightly harder.
-
-So while overwriting the docker file should be updated as follows and must include install-deps.sh
+Overwriting involves directly modifying the micro-ui-internals directory. This is slightly more challenging method to incorporate changes. Make sure the docker file is updated as per the code below and includes the install-deps.sh script.
 
 ````
 ```
@@ -42,7 +40,7 @@ RUN cd web/ \
 ```
 ````
 
-The workspace in the web/package.json should be updated as follows:
+The workspace in the web/package.json should be updated as below:
 
 ````
 ```json
