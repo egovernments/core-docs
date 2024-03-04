@@ -1,0 +1,98 @@
+{
+    "BusinessServices":[
+       {
+          "tenantId":"{{tenantId}}",
+          "businessService":"{{Module code}}",
+          "business":"{{Module name}}",
+          "businessServiceSla":432000000,//SLA for the service
+          //States defined for this module
+          "states":[
+             {
+                "sla":null, 
+                "state":null, //starting state is Null
+                "applicationStatus":null, //Application state at this stage is null
+                "docUploadRequired":true,
+                "isStartState":true,
+                "isTerminateState":false, 
+                "isStateUpdatable":true,
+                "actions":[
+                   {
+                      "action":"APPLY",
+                      "nextState":"APPLIED", //Next state when the action is applied
+                      //Roles should match what is defined in MDMS roles.json config
+                      "roles":[
+                         "CITIZEN",
+                         "EMPLOYEE"
+                      ]
+                   }
+                ]
+             },
+             {
+                "sla":null,
+                "state":"APPLIED",
+                "applicationStatus":"APPLIED",
+                "docUploadRequired":false,
+                "isStartState":false,
+                "isTerminateState":true,
+                "isStateUpdatable":false,
+                "actions":[
+                   {
+                      "action":"APPROVE",
+                      "nextState":"APPROVED",
+                      "roles":[
+                         "EMPLOYEE"
+                      ]
+                   },
+                   {
+                      "action":"REJECT",
+                      "nextState":"REJECTED",
+                      "roles":[
+                         "EMPLOYEE"
+                      ]
+                   }
+                ]
+             },
+             {
+                "sla":null,
+                "state":"APPROVED",
+                "applicationStatus":"APPROVED",
+                "docUploadRequired":false,
+                "isStartState":false,
+                "isTerminateState":false,
+                "isStateUpdatable":false,
+                "actions":[
+                   {
+                      "action":"PAY",
+                      "nextState":"REGISTRATIONCOMPLETED",
+                      "roles":[
+                         "SYSTEM_PAYMENT",
+                         "CITIZEN",
+                         "EMPLOYEE"
+                      ]
+                   }
+                ]
+             },
+             {
+                "sla":null,
+                "state":"REJECTED",
+                "applicationStatus":"REJECTED",
+                "docUploadRequired":false,
+                "isStartState":false,
+                "isTerminateState":true,
+                "isStateUpdatable":false,
+                "actions":null
+             },
+             {
+                "sla":null,
+                "state":"REGISTRATIONCOMPLETED",
+                "applicationStatus":"REGISTRATIONCOMPLETED",
+                "docUploadRequired":false,
+                "isStartState":false,
+                "isTerminateState":true,
+                "isStateUpdatable":false,
+                "actions":null
+             }
+          ]
+       }
+    ]
+ }

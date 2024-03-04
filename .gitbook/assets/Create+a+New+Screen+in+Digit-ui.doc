@@ -1,0 +1,359 @@
+Date: Mon, 5 Jun 2023 04:16:08 +0000 (UTC)
+Message-ID: <78742658.11.1685938568131@1b3aa232d1d3>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_10_1785774327.1685938568128"
+
+------=_Part_10_1785774327.1685938568128
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Create a New Screen in Digit-ui</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Create a New Screen in Digit-ui</h1>
+    <div class=3D"Section1">
+        <p>Creating a Simple Screen in DIgit UI Is made simple and it can b=
+e classified into 3 types of screens</p>
+<ol start=3D"1">
+<li><p>Create</p></li>
+<li><p>View</p></li>
+<li><p>Inbox</p></li>
+</ol>
+<p>Go through these <a href=3D"/wiki/spaces/DD/pages/2269085701/Prerequisit=
+e" data-linked-resource-id=3D"2269085701" data-linked-resource-version=3D"3=
+" data-linked-resource-type=3D"page">Prerequisite</a> and <a href=3D"/wiki/=
+spaces/DD/pages/2285273169/UI+Guidelines" data-linked-resource-id=3D"228527=
+3169" data-linked-resource-version=3D"5" data-linked-resource-type=3D"page"=
+>UI Guidelines</a>, before start creating any new Screen.<br></p>
+<p><strong>Create Screen:</strong><br>While Creating any new screen we will=
+ use a <strong>Formcomposer</strong> and send the config as mentioned in th=
+e </p>
+<p>sample file<br><br>Refer file <br><a href=3D"https://github.com/jagankum=
+ar-egov/DIGIT-OSS/blob/Ui-Dev-Certification/frontend/micro-ui/web/micro-ui-=
+internals/packages/modules/br/src/pages/employee/Sample.js" data-card-appea=
+rance=3D"inline" class=3D"external-link" rel=3D"nofollow">https://github.co=
+m/jagankumar-egov/DIGIT-OSS/blob/Ui-Dev-Certification/frontend/micro-ui/web=
+/micro-ui-internals/packages/modules/br/src/pages/employee/Sample.js</a> <b=
+r><br> To check the different types of config refer <code>fieldSelector</co=
+de> function.</p>
+<p><a href=3D"https://github.com/jagankumar-egov/DIGIT-OSS/blob/Ui-Dev-Cert=
+ification/frontend/micro-ui/web/micro-ui-internals/packages/react-component=
+s/src/hoc/FormComposer.js" data-card-appearance=3D"inline" class=3D"externa=
+l-link" rel=3D"nofollow">https://github.com/jagankumar-egov/DIGIT-OSS/blob/=
+Ui-Dev-Certification/frontend/micro-ui/web/micro-ui-internals/packages/reac=
+t-components/src/hoc/FormComposer.js</a> </p>
+<p></p>
+<p><strong>View Screen:</strong></p>
+<p>For using any view screen the hook has to be created for making API call=
+ and form the config for the View Part</p>
+<p>Check the screen integrated with <strong>ApplicationDetailsTemplate</str=
+ong><br><a href=3D"https://github.com/egovernments/DIGIT-OSS/blob/master/fr=
+ontend/micro-ui/web/micro-ui-internals/packages/modules/commonPt/src/pages/=
+pageComponents/ViewProperty.js" data-card-appearance=3D"inline" class=3D"ex=
+ternal-link" rel=3D"nofollow">https://github.com/egovernments/DIGIT-OSS/blo=
+b/master/frontend/micro-ui/web/micro-ui-internals/packages/modules/commonPt=
+/src/pages/pageComponents/ViewProperty.js</a> <br>the hook for the same is =
+mentioned in <br><a href=3D"https://github.com/egovernments/DIGIT-OSS/blob/=
+master/frontend/micro-ui/web/micro-ui-internals/packages/libraries/src/hook=
+s/pt/useGenericViewProperty.js" data-card-appearance=3D"inline" class=3D"ex=
+ternal-link" rel=3D"nofollow">https://github.com/egovernments/DIGIT-OSS/blo=
+b/master/frontend/micro-ui/web/micro-ui-internals/packages/libraries/src/ho=
+oks/pt/useGenericViewProperty.js</a> </p>
+<p>the service where the config mentioned is detailed in </p>
+<p><a href=3D"https://github.com/egovernments/DIGIT-OSS/blob/master/fronten=
+d/micro-ui/web/micro-ui-internals/packages/libraries/src/services/molecules=
+/PT/Search.js" data-card-appearance=3D"inline" class=3D"external-link" rel=
+=3D"nofollow">https://github.com/egovernments/DIGIT-OSS/blob/master/fronten=
+d/micro-ui/web/micro-ui-internals/packages/libraries/src/services/molecules=
+/PT/Search.js</a> <br></p>
+<p><strong>Inbox screen:</strong><br>For creating any inbox screen we have =
+this <strong>InboxComposer</strong> to which the following configurations h=
+as to be added.</p>
+<p>Main file <br><a href=3D"https://github.com/egovernments/DIGIT-OSS/blob/=
+master/frontend/micro-ui/web/micro-ui-internals/packages/modules/obps/src/p=
+ages/citizen/EdcrInbox/index.js" data-card-appearance=3D"inline" class=3D"e=
+xternal-link" rel=3D"nofollow">https://github.com/egovernments/DIGIT-OSS/bl=
+ob/master/frontend/micro-ui/web/micro-ui-internals/packages/modules/obps/sr=
+c/pages/citizen/EdcrInbox/index.js</a> <br>Check the following folder which=
+ contains other configs like filter, table, search, and mobile responsivene=
+ss,<br><a href=3D"https://github.com/egovernments/DIGIT-OSS/tree/master/fro=
+ntend/micro-ui/web/micro-ui-internals/packages/modules/obps/src/pages/citiz=
+en/EdcrInbox" data-card-appearance=3D"inline" class=3D"external-link" rel=
+=3D"nofollow">https://github.com/egovernments/DIGIT-OSS/tree/master/fronten=
+d/micro-ui/web/micro-ui-internals/packages/modules/obps/src/pages/citizen/E=
+dcrInbox</a> </p>
+<p>Hook for the same is defined at <br><a href=3D"https://github.com/egover=
+nments/DIGIT-OSS/blob/master/frontend/micro-ui/web/micro-ui-internals/packa=
+ges/libraries/src/hooks/obps/useEDCRInbox.js" data-card-appearance=3D"inlin=
+e" class=3D"external-link" rel=3D"nofollow">https://github.com/egovernments=
+/DIGIT-OSS/blob/master/frontend/micro-ui/web/micro-ui-internals/packages/li=
+braries/src/hooks/obps/useEDCRInbox.js</a> </p>
+<p></p>
+<p></p>
+<p></p>
+<p><strong>Localization Naming Convention:</strong></p>
+<ul>
+<li><p>Always use only localization codes, don't hard code direct messages =
+in the code.</p></li>
+<li><p>if any hardcoded messages then they won=E2=80=99t be translated into=
+ the user-selected language</p></li>
+<li><p>Use the t() function to translate the code to the Localised message.=
+</p></li>
+<li><p>The Localisation code should not contain space and lowercase.<br><br=
+><br><strong>Localisation</strong> Search call based on Module wise<br></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: xml; gutter: false; theme: Confluence" data-theme=3D"Confluence">curl --l=
+ocation --request POST 'https://dev.digit.org/localization/messages/v1/_sea=
+rch?locale=3Den_IN&amp;tenantId=3Dpb&amp;module=3Drainmaker-bnd' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+     "RequestInfo": {
+       "apiId" : "emp",
+       "ver" : "1.0",
+       "ts" : "10-03-2017 00:00:00",
+       "action" : "create",
+       "did" : "1",
+       "key" : "abcdkey",
+       "msgId" : "20170310130900",
+       "requesterId" : "rajesh",
+       "authToken" : "06afae01-c9d8-49b3-8f75-f10ba5a4ee62",
+       "userInfo" : {
+         "id" : 1
+       }
+   },
+  =20
+   "tenantId" : "pb"
+  =20
+}'</pre>=20
+</div>
+</div></li>
+</ul>
+<p></p>
+<p></p>
+<p><br></p>
+    </div>
+</body>
+</html>
+------=_Part_10_1785774327.1685938568128--
