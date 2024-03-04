@@ -4,7 +4,7 @@
 
 The pom.xml typically includes most of the dependencies listed below at project generation time. Review and ensure that all of these dependencies are present. Update the pom.xml in case any are missing.
 
-## **Process Flow**
+## **Steps**
 
 Models/POJOs of the dependent service can be imported from the digit-core-models library (work on creating the library is ongoing). These models are used to integrate with the dependent services.
 
@@ -44,7 +44,7 @@ These are pre-written libraries which contain tracer support, common models like
 
 Once these core models are imported, it is safe to delete the RequestInfo, and ResponseInfo classes from the models folder and use the ones present in the common contract that is imported.
 
-#### **Steps to import core models**
+### **Import Core Models**
 
 Before starting development, create/update the following classes as given below.
 

@@ -6,9 +6,9 @@ Once PostgreSQL (v10) has been installed and the basic setup is done, we use Fly
 
 ## **Steps**
 
-#### **Steps to enable flyway migration**
+### **Enable Flyway Migration**&#x20;
 
-1. Configure the following properties in the application.properties file to enable flyway migration:
+1. Configure the below properties in the application.properties file to enable flyway migration:
 
 ```properties
 spring.flyway.url=jdbc:postgresql://localhost:5432/birthregn

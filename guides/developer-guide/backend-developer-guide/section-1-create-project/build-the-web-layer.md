@@ -8,7 +8,7 @@ description: Implementing the controller layer in Spring
 
 The web/controller layer handles all the incoming REST requests to a service.
 
-## **Process Flow**
+## **Steps**
 
 The @RequestMapping("/v1") annotation is added on top of the controller class. This contains the version of the API (this becomes a part of the API endpoint URL).
 
@@ -16,13 +16,13 @@ The @RequestMapping("/v1") annotation is added on top of the controller class. T
 
 Follow the steps below to set up the request handler in the controller layer.
 
-1. Make a call to the method in the Service layer and get the response back from it.
+1. Make a call to the method in the Service Layer and get the response back from it.
 2. Build the responseInfo.
 3. Build the final response to be returned to the client.
 
 ![Sample request handler in controller layer](<../../../../.gitbook/assets/image (62).png>)
 
-For this guide, the controller class will contain the following content -
+The controller class here contains the below content -
 
 {% code lineNumbers="true" %}
 ```java
@@ -107,7 +107,7 @@ public class V1ApiController{
 **NOTE:** At this point, your IDE must be showing a lot of errors but do not worry we will add all dependent layers as we progress through this guide and the errors will go away.
 {% endhint %}
 
-4. Since the Codegen jar creates the search API with search parameters annotated with @RequestParam rather than taking request parameters as a POJO. For this, we will create a POJO by the name of BirthApplicationSearchCriteria within the Models package. Insert the following content in the POJO.
+4. Since the Codegen jar creates the search API with search parameters annotated with @RequestParam rather than taking request parameters as a POJO. For this, we will create a POJO by the name of BirthApplicationSearchCriteria within the Models package. Insert the following content in POJO.
 
 {% code lineNumbers="true" %}
 ```java

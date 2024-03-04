@@ -1,16 +1,20 @@
 # Create Validation & Enrichment Layers
 
-### Validation Layer
+## Overview
+
+Find the steps to create the [Validation Layer](create-validation-and-enrichment-layers.md#validation-layer) and [Enrichment Layer](create-validation-and-enrichment-layers.md#enrichment-layer) on DIGIT.
+
+## Validation Layer
 
 All business validation logic should be added to this class. For example, verifying the values against the master data, ensuring non-duplication of data etc.
 
-**Steps:** Follow the steps below to create the validation layer.
+### **Steps**
 
-a. Create a package called validators. This ensures the validation logic is separate so that the code is easy to navigate through and readable.
+Follow the steps below to create the validation layer.
 
-b. Create a class by the name of BirthApplicationValidator
-
-c. Annotate the class with @Component annotation and insert the following content in the class -
+1. Create a package called validators. This ensures the validation logic is separate so that the code is easy to navigate through and readable.
+2. Create a class by the name of BirthApplicationValidator
+3. Annotate the class with @Component annotation and insert the following content in the class -
 
 ```java
 package digit.validators;
@@ -47,17 +51,17 @@ public class BirthApplicationValidator {
 **NOTE:** For the sake of simplicity the above**-**mentioned validations are implemented. Required validations will vary on a case-to-case basis.
 {% endhint %}
 
-### **Enrichment Layer**
+## **Enrichment Layer**
 
 This layer enriches the request. System-generated values like id, auditDetails etc. are generated and added to the request. In the case of this module, since the applicant is the parent of a baby and a child cannot be a user of the system directly, both the parents' details are captured in the User table. The user ids of the parents are then enriched in the application.&#x20;
 
-**Steps:** Follow the steps below to create the enrichment layer.
+### **Steps**
 
-a. Create a package under DIGIT by the name of enrichment. This ensures the enrichment code is separate from business logic so that the codebase is easy to navigate through and readable.
+Follow the steps below to create the enrichment layer.
 
-b. Create a class by the name of BirthApplicationEnrichment
-
-c. Annotate the class with @Component and add the following methods to the class -
+1. Create a package under DIGIT by the name of enrichment. This ensures the enrichment code is separate from business logic so that the codebase is easy to navigate through and readable.
+2. Create a class by the name of BirthApplicationEnrichment
+3. Annotate the class with @Component and add the following methods to the class -
 
 ```java
 package digit.enrichment;
@@ -162,6 +166,4 @@ public class BirthApplicationEnrichment {
 {% hint style="info" %}
 **NOTE:** For the sake of simplicity the above-mentioned enrichment methods are implemented. Required enrichment will vary on a case-to-case basis.
 {% endhint %}
-
-
 

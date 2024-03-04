@@ -4,7 +4,7 @@
 
 Methods in the service layer, upon performing all the business logic, call methods in the repository layer to persist or lookup data i.e. it interacts with the configured data store. For executing the queries, JdbcTemplate class is used. JdbcTemplate takes care of the creation and release of resources such as creating and closing the connection etc. All database operations namely insert, update, search and delete can be performed on the database using methods of JdbcTemplate class.
 
-## **Process Flow**
+## **Steps**
 
 On DIGIT the create and update operations are handled asynchronously.&#x20;
 
@@ -12,11 +12,11 @@ The persister service listens on the topic to which service applications are pus
 
 The execution of search queries on the database returns applications as per the search parameters provided by the user.
 
-#### **Steps to implement the repository layer**
+### **Implement Repository Layer**
 
 1.  **Define POJOs -** The Address object is defined in the common contract (refer to the API spec). Link it to the birth registration table via the registrationId as defined in the DB schema.&#x20;
 
-    Update the Address POJO using the following lines:&#x20;
+    Update the Address POJO using the below code:&#x20;
 
 ```java
 @JsonProperty("registrationId")

@@ -1,8 +1,12 @@
 # Implement Service Layer
 
-**Overview:** The service layer performs business logic on the RequestData and prepares the Response to be returned back to the client.
+## **Overview**
 
-**Steps:** Follow the steps below to create the service layer.
+The service layer performs business logic on the RequestData and prepares the Response to be returned back to the client.
+
+## **Steps**
+
+Follow the steps below to create the service layer.
 
 1. Create a new package called Service.
 2. Create a new class in this folder by the name BirthRegistrationService.
@@ -113,6 +117,6 @@ public class BirthRegistrationService {
 ```
 
 {% hint style="info" %}
-**NOTE: At this point, your IDE must be showing a lot of errors but do not worry we will add all dependent layers as we progress through this guide and the errors will go away.**
+**NOTE:** At this point, your IDE must be showing a lot of errors but do not worry we will add all dependent layers as we progress through this guide and the errors will go away.
 {% endhint %}
 

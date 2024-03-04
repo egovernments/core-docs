@@ -4,12 +4,12 @@
 
 The application.properties file is already populated with default values. Read on to learn how to customise and add extra values for your application (if required).&#x20;
 
-## **Process Flow**
+## **Steps**
 
 Kafka topics for the module that need to be added are detailed [here](configure-application-properties.md#kafka-topics-for-module).&#x20;
 
 {% hint style="info" %}
-There are three ways of accessing services:
+There are three ways to access services:
 
 a. Run the code locally.
 
@@ -22,9 +22,11 @@ Wherever the localhost is in the URL, the Kubernetes port forwarding has been se
 For example, if no port forwarding has been done, you will have to provide the FQDN of your DIGIT install instead of localhost. Also, without port forwarding, you will have to update the auth tokens in your .aws profile file periodically.&#x20;
 {% endhint %}
 
-Include all the necessary service host URLs and API endpoints in the "application.properties" file. This guide specifically references the User, Localisation, HRMS, IDGen, MDMS, and Workflow services that are operational within the DIGIT development environment.
+Include all the necessary service host URLs and API endpoints in the "application.properties" file.
 
-**Steps to configure application properties**
+This guide specifically references the User, Localisation, HRMS, IDGen, MDMS, and Workflow services that are operational within the DIGIT development environment.
+
+### **Configure Application Properties**
 
 1. Add the following properties to the `application.properties` file.
 
@@ -80,7 +82,7 @@ spring.datasource.password=birth
 ```
 {% endcode %}
 
-## Kafka Configuration
+### Configure Kafka&#x20;
 
 {% code lineNumbers="true" %}
 ```properties
@@ -110,7 +112,7 @@ kafka.producer.config.buffer_memory_config=33554432
 
 ### Kafka Topics For Module
 
-#### Steps to create and update Kafka topics for the module
+#### Create & Update Kafka Topics For The Module
 
 1. Append Kafka configurations as per the specific requirements of the DIGIT services. Each module may use different configurations to manage its topics.
 
