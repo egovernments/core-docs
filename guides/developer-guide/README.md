@@ -2,9 +2,9 @@
 description: Follow our developer guides to start building on DIGIT
 ---
 
-# ⚒ Developer Guide
+# ⚒️ Developer Guide
 
-Welcome to DIGIT developer guides!
+Welcome to DIGIT Developer Guides!
 
 For ease of use, we have divided our guides broadly into 2 sections:
 
