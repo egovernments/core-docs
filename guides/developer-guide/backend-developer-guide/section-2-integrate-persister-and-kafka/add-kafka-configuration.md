@@ -1,6 +1,12 @@
 # Add Kafka Configuration
 
-**Steps:** Add the following code in application.properties to configure Kafka.
+## **Overview**
+
+Follow the steps detailed below to add the Kafka configurations.
+
+## **Steps**
+
+Add the below code in application.properties to configure Kafka.
 
 ```properties
 # BTR config

@@ -1,10 +1,14 @@
 # Implement Kafka Producer & Consumer
 
+## Overview
+
+Follow the steps detailed below to implement [Kafka Producer](implement-kafka-producer-and-consumer.md#producer) & [Consumer](implement-kafka-producer-and-consumer.md#consumer).
+
 ## Producer
 
 Producer classes help in pushing data from the application to Kafka topics.  DIGIT has a custom implementation of KafkaTemplate class in the tracer library called CustomKafkaTemplate. This implementation of the Producer class does not change across services of DIGIT.&#x20;
 
-#### **Steps to implement Kafka Producer**&#x20;
+### **Steps**
 
 1.  Access the producer implementation details here - [Producer Implementation. ](https://github.com/egovernments/DIGIT-Dev/blob/master/municipal-services/pgr-services/src/main/java/org/egov/pgr/producer/Producer.java)
 
@@ -27,7 +31,7 @@ Once an application is created/updated the data is pushed on Kafka topic. We tri
 (For example, It will replace the {NAME} placeholder with the owner name from the data consumed). Once the SMS text is ready, the service pushes this data on the notification topic. SMS service consumes data from notification topic and triggers SMS.
 {% endhint %}
 
-#### **Steps to implement Kafka Consumer**
+### **Steps**&#x20;
 
 1. Open `Kafka/NotificationConsumer.java` and paste the following code:
 
