@@ -2,11 +2,11 @@
 description: Available design artifacts
 ---
 
-# High level design
+# High Level Design
 
-## API specs
+## API Specs
 
-The following Open API specs have been defined for this guide:
+Find below the Open API specifications defined for this guide:
 
 [Birth Registration](https://github.com/egovernments/DIGIT-OSS/blob/master/tutorials/backend-developer-guide/btr-services/birth-registration-api-spec.yaml)
 
@@ -16,7 +16,7 @@ The following Open API specs have been defined for this guide:
 
 ## Registries
 
-As a part of this guide, we are going to build a single birth registry. We will re-use the user registry from the DIGIT core. We will capture the mother and father details and store them in the user registry. The baby's details will remain in the birth registry.&#x20;
+As a part of this guide, we are going to build a single birth registry. We will re-use the user registry from the DIGIT core. This will capture the mother and father details and store them in the user registry. The baby's details will remain in the birth registry.&#x20;
 
 ## Services
 
