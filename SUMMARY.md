@@ -231,7 +231,7 @@
       * [Add Kafka Configuration](guides/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/add-kafka-configuration.md)
       * [Implement Kafka Producer & Consumer](guides/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/implement-kafka-producer-and-consumer.md)
       * [Add Persister Configuration](guides/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/add-persister-configuration.md)
-      * [Enabling signed audit](guides/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/enabling-signed-audit.md)
+      * [Enable Signed Audit](guides/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/enable-signed-audit.md)
       * [Run Application](guides/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/run-application.md)
     * [Section 3: Integrate Microservices](guides/developer-guide/backend-developer-guide/section-3-integrate-microservices/README.md)
       * [Integrate IDGen Service](guides/developer-guide/backend-developer-guide/section-3-integrate-microservices/integrate-idgen-service.md)

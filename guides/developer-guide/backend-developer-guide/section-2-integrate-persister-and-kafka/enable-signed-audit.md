@@ -2,7 +2,7 @@
 description: Integration with signed audit
 ---
 
-# Enabling signed audit
+# Enable Signed Audit
 
 ## Overview
 
@@ -14,7 +14,7 @@ Enabled signed audit is optional but highly recommended to ensure data security.
 
 ## Steps
 
-#### Steps to enable signed audit
+### Enable Signed Audit
 
 1. Add the following lines of code to the birth registration persister after the `fromTopic` attribute under `mappings`:
 

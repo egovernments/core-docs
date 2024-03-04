@@ -33,7 +33,7 @@ serviceMaps:
 
 ## Steps
 
-**Steps for adding persister configuration**&#x20;
+### **Add Persister Configuration**&#x20;
 
 1. Fork the [configs repo](https://github.com/egovernments/configs). Ignore if done already. Clone configs repo in the local environment.
 
@@ -153,7 +153,7 @@ serviceMaps:
 ```
 {% endcode %}
 
-## **Run Persister Locally**
+### **Run Persister Locally**
 
 1. Import all the core-services projects as Maven projects into your IDE. It is assumed that you have already cloned the DIGIT code locally.&#x20;
 2. Modify the application.properties file in the egov-persister project and set the following property:
@@ -165,7 +165,7 @@ egov.persist.yml.repo.path=file:///Users/subha/Code/configs/egov-persister/btr-p
 {% endcode %}
 
 {% hint style="info" %}
-Note: You can set a comma-separated list of files as the value of the above property. If you are running multiple services locally, then this has to be a comma-separated list of persister config files. Make sure you always give the absolute path.
+**Note:** You can set a comma-separated list of files as the value of the above property. If you are running multiple services locally, then this has to be a comma-separated list of persister config files. Make sure you always give the absolute path.
 {% endhint %}
 
 3. Make sure the Spring DB configurations and Flyway config reflect the same database as what has been set in the module itself. Otherwise, we will see failures in the persister code.&#x20;
@@ -181,7 +181,7 @@ spring.datasource.password=yourpassword
 
 The persister is now ready for use.
 
-## **Deploy Persister Configuration**
+### **Deploy Persister Configuration**
 
 {% hint style="info" %}
 **Note:** Below steps are for when you deploy your code to the DIGIT env, not for local development. You may choose to do this when you build and deploy.&#x20;

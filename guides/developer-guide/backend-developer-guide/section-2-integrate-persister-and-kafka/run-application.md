@@ -6,7 +6,7 @@ We have completed integration with key services and we can now test out the REST
 
 ## **Steps**
 
-#### **Steps to run and test sample application**
+### **Run & Test Sample Application**
 
 1. Ensure that Kafka and Persister are running in the local environment.
 2. Run birth-registration-service that we just created.
