@@ -1,4 +1,4 @@
-# Adding MDMS Configuration
+# Add MDMS Configuration
 
 ## Overview
 
@@ -33,7 +33,7 @@ Make sure to add data to the **correct branch** of the MDMS repository. i.e. if 
 
 A sample MDMS config file can be viewed here - [Sample MDMS data file](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/common-masters/Department.json).
 
-## API Access Control Configuration
+### API Access Control Configuration
 
 URIs (actions), roles and URI-role mapping will be defined in MDMS. These will apply when the module is deployed into an environment  where Zuul is involved (not while locally running the app). In this sample app, we have used "pb" as a tenantId. In your environment, you can choose to define a new one or work with an existing one.&#x20;
 
@@ -87,13 +87,13 @@ Actions need to be defined inside the /`data/pb/ACCESS-CONTROL-ACTIONS/actions.j
   }
 ```
 
-Note that the IDs in the actions.json config are manually generated
+Note that the IDs in the actions.json config are generated manually.
 
-### Roles configuration
+### Roles Configuration
 
 Roles config happens at a state level. For birth registration, we need only CITIZEN and EMPLOYEE roles in the /`data/pb/ACCESSCONTROL-ROLES/roles.json` file.Here are some [sample roles ](https://github.com/egovernments/egov-mdms-data/tree/UAT/data/pg/ACCESSCONTROL-ROLES) that can be defined in an environment. If these roles are already present in the file, then there is no need to add them in again.
 
-### Role-action mapping
+### Role-action Mapping
 
 Append the below code to the "roleactions" key in the /`data/pb/ACCESSCONTROL-ROLEACTIONS/`**`roleactions.json.`** Note that other role-action mappings may already be defined in your DIGIT environment. So please make sure to append the below. The `actionid` refers to the URI ID defined in the actions.json file.&#x20;
 
