@@ -43,7 +43,7 @@ java -jar codegen-1.0-SNAPSHOT-jar-with-dependencies.jar -l -t -u https://github
 
 OR
 
-Download the contract [available here ](https://github.com/egovernments/DIGIT-OSS/tree/master/municipal-services/birth-death-services)and save it in a file locally. Run the following command to generate the skeleton code from the contract.
+Download the contract [available here ](https://github.com/egovernments/DIGIT-OSS/blob/master/tutorials/backend-developer-guide/btr-services/birth-registration-api-spec.yaml)and save it in a file locally. Run the following command to generate the skeleton code from the contract.
 
 ```
 java -jar codegen-1.0-SNAPSHOT-jar-with-dependencies.jar -l -t -u file:///{ABSOLUTE_PATH_OF_FILE} -a birth-registration -b digit
