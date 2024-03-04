@@ -1,18 +1,24 @@
 # Design User Interface
 
-**Design Transactional User Interface**
+## **Overview**
 
-To identify the points different roles interact with the system from the process model.
+This page provides the details on designing the transactional user interface and performance dashboards.
+
+## Steps
+
+### **Design Transactional User Interface**
+
+Identify the points different roles interact with the system from the process model.
 
 <table><thead><tr><th width="247">Activity</th><th>User Interface Required</th></tr></thead><tbody><tr><td>Apply for Birth Certificate</td><td>New Application UI<br>Applicated Submitted UI</td></tr><tr><td>Make Payment</td><td>Payment UI<br>Payment Successful UI</td></tr><tr><td>Verify Application</td><td>Verify Application UI<br>Application Verified UI</td></tr><tr><td>Send Notification</td><td>Notification UI</td></tr><tr><td>Update Application</td><td>Edit Application UI <br>Update Successful UI</td></tr><tr><td>Approve Application</td><td>Approve Application UI<br>Application Approved/Rejected UI</td></tr><tr><td>Download Certificate</td><td>Download Birth Certificate UI<br>Birth Certificate UI</td></tr></tbody></table>
 
-DIGIT UI Design Guidelines are available here - [https://egovernments.github.io/ui-docs/](https://egovernments.github.io/ui-docs/)&#x20;
+DIGIT UI design guidelines are [available here](https://design.digit.org/ui-docs/).
 
-FIGMA Designs using the above Guidelines are available here. Feel free to copy and modify as per your needs.
+FIGMA designs using the above Guidelines are available here. Feel free to copy and modify as per your needs.
 
-DIGIT UI Accelerators available in React and Flutter implement these Guidelines as reusable components and UI frameworks. The entire source code is open and available here - [https://github.com/egovernments/DIGIT-OSS/tree/master/frontend/mono-ui/web/rainmaker](https://github.com/egovernments/DIGIT-OSS/tree/master/frontend/mono-ui/web/rainmaker) &#x20;
+DIGIT UI Accelerators available in React and Flutter implement these Guidelines as reusable components and UI frameworks. The entire source code is open and [available here](https://github.com/egovernments/DIGIT-OSS/tree/master/frontend/mono-ui/web/rainmaker).
 
-**Design Performance Dashboard**
+### **Design Performance Dashboard**
 
 DIGIT Decision Support Dashboard (DSS) looks like below.&#x20;
 
