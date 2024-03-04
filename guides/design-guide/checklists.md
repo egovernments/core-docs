@@ -1,6 +1,6 @@
 # Checklists
 
-Please go through the following checklists BEFORE commencing development.&#x20;
+Browse through the following checklists before commencing development.&#x20;
 
 * APIs dos and don’ts -   [https://docs.digit.org/customize/customizing-digit/digit-customization/api-dos-and-donts](https://docs.digit.org/customize/customizing-digit/digit-customization/api-dos-and-donts)
 * Security - [https://docs.digit.org/product/digit-support/security-guidelines-handbook ](https://docs.digit.org/product/digit-support/security-guidelines-handbook)

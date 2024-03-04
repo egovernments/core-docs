@@ -30,18 +30,17 @@ For convenience, a consolidated JSON file per module is created with each releas
 1. Download the [postman collection](https://www.postman.com/collections/a140e7426ab4419ed5b5) - Setup an environment in postman and add the following variables:
    * authToken&#x20;
    * tenantId
-2. Login to DIGIT as a citizen user from the browser. To get auth token on your webpage, right-click and go to Inspect > Network > payload > RequestInfo. Here you will find a variable named authToken which will be a 32-bit string. Paste it in the values field of the `authToken` variable in Postman and click "Save".
-3. Run the “Insert Localization” script after adding the required localization messages for each module from [releasekit consolidated folder](https://github.com/egovernments/releasekit/tree/master/localisation/consolidated/en\_IN) in the Postman script body.&#x20;
+2. Login to DIGIT as a citizen user from the browser. To get auth token on your webpage, right-click and go to Inspect > Network > payload > RequestInfo. Here you will find a variable named authToken which will be a 32-bit string. Paste it in the values field of the `authToken` variable in Postman and click on Save.
+3. Run the **Insert Localization** script after adding the required localization messages for each module from [releasekit consolidated folder](https://github.com/egovernments/releasekit/tree/master/localisation/consolidated/en\_IN) in the Postman script body.&#x20;
 
 {% hint style="info" %}
 Run each module separately. Else, the server will throw a 40x error.&#x20;
 {% endhint %}
 
-The modules to set up depending on what has been installed as part of DIGIT. For the DIGIT core, we require localisation to be set up for the user module.&#x20;
+The modules to set up depending on what has been installed as part of DIGIT. For the DIGIT Core, we require localisation to be set up for the user module.&#x20;
 
-| Module    | Localization folder                                                                                         |
-| --------- | ----------------------------------------------------------------------------------------------------------- |
-| egov-user | [localization/digit\_core](https://github.com/egovernments/releasekit/tree/master/localisation/digit\_core) |
+<table><thead><tr><th width="268">Module</th><th>Localization folder</th></tr></thead><tbody><tr><td>egov-user</td><td><a href="https://github.com/egovernments/releasekit/tree/master/localisation/digit_core">localization/digit_core</a></td></tr></tbody></table>
 
 * Search endpoint: _domain_/localization/messages/v1/\_search
 * Upsert endpoint: _domain_/localization/messages/v1/\_upsert
+

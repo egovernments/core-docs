@@ -8,7 +8,7 @@ description: Steps to identify registries and services
 
 This document provides the steps to identify the registries and other services. One needs to identify the common nouns and verbs. Broadly, nouns translate to registries/services and verbs translate to operations or APIs.
 
-### **Steps - Identify Registries and Services**&#x20;
+## **Steps - Identify Registries & Services**&#x20;
 
 List the activities in a table and separate the nouns and the verbs as illustrated in the table below. The activities are generalized e.g. in verify application the word application refers to "Birth Certificate Application" hence generalize this to Verify Birth Certificate (we have dropped the term Application for brevity). Knowing the list of services available in DIGIT also helps - as you may call the activity "Pay Charges" instead of "Make Payment". This process may require a few iterations.&#x20;
 
@@ -16,11 +16,11 @@ List the activities in a table and separate the nouns and the verbs as illustrat
 
 Now transform the above verb and noun columns to the table below to identify the first set of services and their operations.
 
-<table><thead><tr><th width="240">Service</th><th>Operation</th></tr></thead><tbody><tr><td>Birth Certificate</td><td>Create</td></tr><tr><td></td><td>Update</td></tr><tr><td></td><td>Verify</td></tr><tr><td></td><td>Approve</td></tr><tr><td></td><td>Download</td></tr><tr><td>Notification</td><td>Send</td></tr></tbody></table>
+<table><thead><tr><th width="281">Service</th><th>Operation</th></tr></thead><tbody><tr><td>Birth Certificate</td><td>Create</td></tr><tr><td></td><td>Update</td></tr><tr><td></td><td>Verify</td></tr><tr><td></td><td>Approve</td></tr><tr><td></td><td>Download</td></tr><tr><td>Notification</td><td>Send</td></tr></tbody></table>
 
 So we have now identified 2 services Birth Certificate and Notification. When we get into detailing the sequence diagrams, it is quite possible that a few more services may emerge e.g. Birth Certificate Charge Calculator - assume charge calculation logic varies between different cities hence it makes sense to externalize this outside Birth Certificate Service. &#x20;
 
-### **Extract the Workflow**
+### **Extract Workflows**
 
 Workflows can be configured in DIGIT using the Workflow Service. Workflows must be extracted from the swim lane diagrams and converted into a sequence of states and specific activities a specific actor can perform on that state.&#x20;
 

@@ -4,11 +4,15 @@ description: Front-end module project structure
 
 # Project Structure
 
+## Overview
+
+This is the first step towards the setup of the citizen module. Follow the steps given below to create the project structure.
+
+## Steps
+
 {% hint style="info" %}
 Download the UI code from the link here [Birth-Registration. ](https://github.com/egovernments/DIGIT-OSS/tree/master)Follow the steps detailed below.
 {% endhint %}
-
-## **Create Project Structure**
 
 * [x] Go to `micro-ui--internals → packages → modules`.&#x20;
 * [x] Inside the module, create a folder and provide a name for the service. For instance, the service name here is birth registration.&#x20;

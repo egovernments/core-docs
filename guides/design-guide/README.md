@@ -17,8 +17,8 @@ The outputs of the design phase are listed below:
 1. Process Workflows
 2. User Stories
 3. Service Specifications (YAML)
-4. Service Detailed Design (Class and Database Design)
-5. Sequence Diagrams for each User Story&#x20;
+4. Service Detailed Design (Class & Database Design)
+5. Sequence Diagrams for each user story&#x20;
 6. User Navigation Model
 7. User Interface Design
 8. Dashboard Design
