@@ -46,7 +46,7 @@ yarn --version
 
 <details>
 
-<summary>Q3. <strong>How do we add Globalconfig in DIGIT UI environment?</strong></summary>
+<summary>Q3. How do we add Globalconfig in DIGIT UI environment?</summary>
 
 Local Environment: To enable it into local development we need to add the javascript code block of globalconfig.js into the index.html
 
@@ -126,31 +126,9 @@ digit-ui:
 
 ```
 
+**4) How to Register New Module in Digit UI?**
+
 </details>
-
-```
-  dashboard-url: "https://dashboard-pbuat.egovernments.org/s/w---s/app/kibana#/dashboard/4e687470-f3c7-11e8-8d09-b151e2b1cf8e?embed=true&_g=(refreshInterval%3A(pause%3A!f%2Cvalue%3A300000)%2Ctime%3A(from%3Anow-15m%2Cmode%3Aquick%2Cto%3Anow))"
-  custom-js-injection: |
-    sub_filter.conf: "
-      sub_filter  '<head>' '<head>
-      <script src=https://path/to/public/s3/bucket/globalConfigs.js type=text/javascript></script>
-      ';"
-
-citizen:
-  custom-js-injection: |
-    sub_filter.conf: "
-      sub_filter  '<head>' '<head>
-      <script src=https://path/to/public/s3/bucket/globalConfigs.js type=text/javascript></script>
-      ';"
-
-digit-ui:
-  custom-js-injection: |
-    sub_filter.conf: "
-      sub_filter  '<head>' '<head>
-      <script src=https://path/to/public/s3/bucket/globalConfigs.js type=text/javascript></script>
-      ';"
-
-```
 
 **4) How to Register New Module in Digit UI?**\
 Creating config into mdms:-
