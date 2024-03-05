@@ -1,7 +1,7 @@
 ---
 description: >-
   Complete DIGIT installation step-by-step Instructions across various Infra
-  types like public & private clouds
+  types for public & private clouds
 ---
 
 # Production Setup
@@ -19,7 +19,7 @@ description: >-
 
 ## Basics
 
-The [**Quickstart Guide**](../quick-setup/) would have helped you to get your hands dirty and build the Kubernetes cluster on a local/single VM instance - which you can consider for either local development or to understand the details involved in infra and deployment.
+The [**Quickstart Guide**](../quick-setup/) would have helped you get your hands dirty and build the Kubernetes cluster on a local/single VM instance - which you can consider for either local development or to understand the details involved in infra and deployment.
 
 However, DIGIT is a [**cloud-native**](https://www.appdynamics.com/topics/what-is-cloud-native-architecture#\~3-challenges) platform and at the same time [**cloud-agnostic**](https://looker.com/definitions/cloud-agnostic)**.** Depending on the scale and performance running **DIGIT on production** requires advanced capabilities like HA, DRS, autoscaling, resiliency, etc. All these capabilities are supported by commercial clouds like **AWS, Google, Azure, VMware, OpenStack, etc..** and also the private clouds like **NIC** and a **few SDCs implemented clouds.** These cloud providers provide the **Kubernetes-as-a-managed-service** that makes the entire infra setup and management seamless and automated, like **infra-as-code, and config-as-code**.
 
@@ -123,7 +123,7 @@ Forwarding from [::1]:8080 -> 8080
 
 * [x] Seed the sample data
 * [x] Ensure you have the postman to run the following seed data API. If not, [Install postman](https://www.postman.com/downloads/canary/) on your local machine.
-* [x] Import the following postman collection into the postman and run it. This collection has the seed data that enable sample test users and localisation data.
+* [x] Import the below-mentioned postman collection into the postman and run it. This collection has the seed data that enable sample test users and localisation data.
   * [DIGIT Bootstrap](https://raw.githubusercontent.com/egovernments/DIGIT-DevOps/quickstart/deploy-as-code/bootstrap\_scripts/seed\_data.json)
 
 ![](<../../../.gitbook/assets/image (155).png>)
@@ -152,12 +152,12 @@ Finally, clean up the DIGIT setup if you wish, using the following command. This
 To destroy previously-created infrastructure with Terraform, run the command below:
 
 1. ELB is not deployed via Terraform. ELB has created at deployment time by the setup of Kubernetes Ingress. This has to be deleted manually by deleting the ingress service.&#x20;
-   1. `kubectl delete deployment nginx-ingress-controller -n <namespace>`
-   2.  `kubectl delete svc nginx-ingress-controller -n <namespace>`
+   * `kubectl delete deployment nginx-ingress-controller -n <namespace>`
+   *   `kubectl delete svc nginx-ingress-controller -n <namespace>`
 
        **Note**: Namespace can be one of egov or jenkins.
 2. Delete S3 buckets manually from the AWS console and also verify if ELB got deleted.
-   1. In case of if ELB is not deleted, you need to delete ELB from [AWS console](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-delete.html).
+   * In case of if ELB is not deleted, you need to delete ELB from [AWS console](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-delete.html).
 3. Run `terraform destroy`.
 
 ```
