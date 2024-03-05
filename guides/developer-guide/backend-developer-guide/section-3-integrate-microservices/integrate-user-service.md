@@ -2,10 +2,10 @@
 
 ## **Overview**&#x20;
 
-The user service provides the capabilities of creating a user, searching for a user and retrieving the details of a user. This module will search for a user and if not found, create that user with the user service.
+The [User Service](../../../../platform/core-services/user-services.md) provides the capabilities of creating a user, searching for a user and retrieving the details of a user. This module will search for a user and if not found, create that user with the user service.
 
 {% hint style="info" %}
-DIGIT's user service masks PII that gets stored in the database using the encryption service.
+DIGIT's user service masks PII that gets stored in the database using the [Encryption Service](../../../../platform/core-services/encryption-service/).
 {% endhint %}
 
 ## Steps
@@ -512,7 +512,7 @@ public List<BirthRegistrationApplication> registerBtRequest(BirthRegistrationReq
 3. Add the following properties in application.properties file:
 
 {% hint style="info" %}
-Note that if you are port-forwarding using k8s, you will use localhost. Else, if you have a valid auth token, please provide the name of the host here.&#x20;
+**Note:** If you're port-forwarding using k8s, use "localhost". Otherwise, if you have a valid auth token, provide the hostname here.
 {% endhint %}
 
 ```properties

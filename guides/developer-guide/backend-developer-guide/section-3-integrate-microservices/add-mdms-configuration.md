@@ -5,11 +5,11 @@
 MDMS data is the master data used by the application. New modules with master data need to be configured inside the `/data/<tenant>/` folder of the MDMS repo. Each tenant should have a unique ID and sub-tenants can be configured in the format state.cityA, state.cityB etc..Further hierarchies are also possible with tenancy.&#x20;
 
 {% hint style="info" %}
-If you already have a DIGIT environment configured with a tenant and CITIZEN/EMPLOYEE roles, that is sufficient data to get this module running locally. Configuring role-action mapping is necessary during deployment of the app in the DIGIT environment. It will not be needed to run the application locally.
+If you've configured the DIGIT environment with a tenant and CITIZEN/EMPLOYEE roles, you have sufficient data to run this module locally. Configuring role-action mapping is only necessary during app deployment in the DIGIT environment and won't be needed for local application execution.
 {% endhint %}
 
 {% hint style="info" %}
-For more information on [MDMS](../../../../platform/core-services/mdms-master-data-management-service/) see here. To read about how to design for MDMS, please see the [design guide](../../../design-guide/design-services.md#identify-reference-data).
+Refer to [MDMS](../../../../platform/core-services/mdms-master-data-management-service/) docs for more information. To learn about how to design the MDMS, refer to the [design guide](../../../design-guide/design-services.md#identify-reference-data).
 {% endhint %}
 
 In the birth registration use case, we use the following master data:
@@ -20,7 +20,7 @@ In the birth registration use case, we use the following master data:
 4. Role-action mapping - for access control (see below section for more info)
 
 {% hint style="info" %}
-Make sure to add data to the **correct branch** of the MDMS repository. i.e. if you have setup CD CI to deploy the **DEV** branch of the repository to the dev environment (default), then make sure to add the information in the DEV branch. If you are testing in staging or some other environment, make sure to add the master data to the corresponding branch of MDMS.&#x20;
+Ensure that you add data to the appropriate branch of the MDMS repository. For example, if you've set up CD/CI to deploy the DEV branch of the repository to the development environment (default), add the information to the DEV branch. If you're testing in staging or another environment, make sure to add the master data to the corresponding branch of MDMS.
 {% endhint %}
 
 ## Steps

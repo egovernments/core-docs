@@ -81,7 +81,7 @@ public class NotificationConsumer {
 ```
 {% endcode %}
 
-2. Create a POJO by the name of SMSRequest in the `web.models` package and add the following content to it:
+2. Create a POJO by the name of SMSRequest in the `web.models` package and add the below content to it:
 
 {% code lineNumbers="true" %}
 ```java
@@ -104,7 +104,7 @@ public class SMSRequest {
 
 3.  Create a class by the name of `NotificationService` under `service` folder to handle preparation of customised messages and pushing the notifications.&#x20;
 
-    Add the following content to it -
+    Add the below content to it -
 
 {% code lineNumbers="true" %}
 ```java
