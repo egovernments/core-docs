@@ -8,7 +8,7 @@ description: Calculating costs for a service and raising demand for bill generat
 
 #### **Calculation**&#x20;
 
-The calculation class will contain the calculation logic for the birth certificate registration charges.  This can vary from city to city. Based on the application submitted, the calculator class will calculate the tax/charges and call the billing service to generate the demand.&#x20;
+The calculation class contains the calculation logic for the birth certificate registration charges.  This can vary from city to city. Based on the application submitted, the calculator class will calculate the tax/charges and call the billing service to generate the demand.&#x20;
 
 {% hint style="info" %}
 **What is a demand?**&#x20;

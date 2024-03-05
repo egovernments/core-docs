@@ -12,7 +12,7 @@ The collection service publishes an event on a Kafka topic when payment is colle
 
 ## Steps
 
-For our guide, we will follow the following steps to create payment back update consumer -
+For our guide, follow the steps below to create payment back update consumer -
 
 1. Create a consumer class by the name of PaymentBackUpdateConsumer. Annotate it with @Component annotation and add the following content to it -
 
