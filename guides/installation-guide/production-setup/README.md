@@ -25,12 +25,12 @@ However, DIGIT is a [**cloud-native**](https://www.appdynamics.com/topics/what-i
 
 ## Pre-reads
 
-* Know the basics of Kubernetes: [https://www.youtube.com/watch?v=PH-2FfFD2PU\&t=3s](https://www.youtube.com/watch?v=PH-2FfFD2PU\&t=3s)
-* Know the [basics of kubectl](https://www.tutorialspoint.com/kubernetes/kubernetes\_kubectl\_commands.htm) commands
-* Know kubernetes manifests: [https://www.youtube.com/watch?v=ohSUtEfDefc](https://www.youtube.com/watch?v=ohSUtEfDefc)
-* Know how to manage env values, secrets of any service deployed in kubernetes [https://www.youtube.com/watch?v=OW244LxB4oI](https://www.youtube.com/watch?v=OW244LxB4oI)
-* Know how to port forward to a pod running inside k8s cluster and work locally [https://www.youtube.com/watch?v=TT3nd5n5Yus](https://www.youtube.com/watch?v=TT3nd5n5Yus)
-* Know sops to secure your keys/creds: [https://www.youtube.com/watch?v=DWzJ87KbwxA](https://www.youtube.com/watch?v=DWzJ87KbwxA)
+* Learn the basics of Kubernetes: [https://www.youtube.com/watch?v=PH-2FfFD2PU\&t=3s](https://www.youtube.com/watch?v=PH-2FfFD2PU\&t=3s)
+* Learn the [basics of kubectl](https://www.tutorialspoint.com/kubernetes/kubernetes\_kubectl\_commands.htm) commands
+* Find out more on kubernetes manifests: [https://www.youtube.com/watch?v=ohSUtEfDefc](https://www.youtube.com/watch?v=ohSUtEfDefc)
+* Learn how to manage env values, secrets of any service deployed in kubernetes [https://www.youtube.com/watch?v=OW244LxB4oI](https://www.youtube.com/watch?v=OW244LxB4oI)
+* Explore how to port forward to a pod running inside k8s cluster and work locally [https://www.youtube.com/watch?v=TT3nd5n5Yus](https://www.youtube.com/watch?v=TT3nd5n5Yus)
+* Find the SOPs to secure your keys/creds: [https://www.youtube.com/watch?v=DWzJ87KbwxA](https://www.youtube.com/watch?v=DWzJ87KbwxA)
 
 ## Pre-requisites
 
@@ -145,9 +145,7 @@ Post grievance creation and assignment of the same to LME, capture the screensho
 
 ## 5. Destroy The Cluster
 
-Post validating the PGR functionality share the API response of the following request to assess the correctness of successful DIGIT PGR Deployment.
-
-Finally, clean up the DIGIT setup if you wish, using the following command. This will delete the entire cluster and other cloud resources that were provisioned for the DIGIT setup.
+After validating the PGR functionality, share the API response of the request below to verify the successful deployment of DIGIT PGR. Optionally, you can clean up the DIGIT setup using the below commands, which will delete the entire cluster and other provisioned cloud resources.
 
 To destroy previously-created infrastructure with Terraform, run the command below:
 
