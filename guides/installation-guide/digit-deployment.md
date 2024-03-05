@@ -26,7 +26,7 @@ DIGIT comes with configurable "CI as code", "Deploy as code" etc.. which can be 
 * [x] [Setup CD/CI pipeline](production-setup/ci-cd-set-up/) – This enables you to change code for individual modules/ add new modules (ILMS), build individual modules and deploy them into your environment.&#x20;
 * [x] Develop on top of DIGIT&#x20;
   1. Design Guide - [Reference docs](../design-guide/)
-  2. Create a new module. Follow the [development guide](../developer-guide/backend-developer-guide/)&#x20;
-  3. Build the new module (part of the development guide) [using Jenkins](production-setup/ci-cd-set-up/ci-cd-build-job-pipeline-setup.md) → [Reference docs ](production-setup/ci-cd-set-up/ci-cd-build-job-pipeline-setup.md)
-  4. Deploy the new module into your DIGIT environment
+  2. Create a new module. Refer to the steps in the [development guide](../developer-guide/backend-developer-guide/).
+  3. Build the new module (part of the development guide) [using Jenkins](production-setup/ci-cd-set-up/ci-cd-build-job-pipeline-setup.md) → [Reference docs](production-setup/ci-cd-set-up/ci-cd-build-job-pipeline-setup.md).
+  4. Deploy the new module into your DIGIT environment.
 
