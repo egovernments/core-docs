@@ -6,7 +6,7 @@ The indexer is designed to perform all the indexing tasks of the DIGIT platform.
 
 ## Steps
 
-1. Create a new file under `egov-indexer` in `configs` repo by the name of `digit-developer-guide.yml` and put the following content into it -
+1. Create a new file under `egov-indexer` in `configs` repo by the name of `digit-developer-guide.yml` and place the below content into it -
 
 ```yaml
 ServiceMaps:

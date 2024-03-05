@@ -27,7 +27,7 @@ Follow the below steps to set up PDF service locally and generate PDF for our vo
 > git checkout DIGIT_DEVELOPER_GUIDE
 ```
 
-4. Navigate to the configs folder and under pdf-service data config and format config folders, create file by the name of digit-developer-guide.json
+4. Navigate to the configs folder and under pdf-service data config. Create file by the name of digit-developer-guide.json
 
 ```
 > cd configs/pdf-service/data-config
@@ -387,7 +387,7 @@ Follow the below steps to set up PDF service locally and generate PDF for our vo
 ```
 {% endcode %}
 
-6. Create a file by the name of `digit-developer-guide.json` `format-config` folder and place the following content in it -
+6. Navigate to the format-config within the pdf service folder. Create a file by the name of `digit-developer-guide.json` and add the below content to it -
 
 {% code lineNumbers="true" %}
 ```json
