@@ -12,7 +12,7 @@ The web/controller layer handles all the incoming REST requests to a service.
 
 The @RequestMapping("/v1") annotation is added on top of the controller class. This contains the version of the API (this becomes a part of the API endpoint URL).
 
-#### **Steps to setup the request handler in the controller layer**
+### **Setup Request Handler In The Controller Layer**
 
 Follow the steps below to set up the request handler in the controller layer.
 
@@ -22,7 +22,7 @@ Follow the steps below to set up the request handler in the controller layer.
 
 ![Sample request handler in controller layer](<../../../../.gitbook/assets/image (122).png>)
 
-The controller class here contains the below content -
+The controller class reflects the below content -
 
 {% code lineNumbers="true" %}
 ```java
@@ -107,7 +107,7 @@ public class V1ApiController{
 **NOTE:** At this point, your IDE must be showing a lot of errors but do not worry we will add all dependent layers as we progress through this guide and the errors will go away.
 {% endhint %}
 
-4. Since the Codegen jar creates the search API with search parameters annotated with @RequestParam rather than taking request parameters as a POJO. For this, we will create a POJO by the name of BirthApplicationSearchCriteria within the Models package. Insert the following content in POJO.
+4. The Codegen jar makes the search API using @RequestParam annotations for search parameters instead of using a POJO for request parameters. So, we'll create a POJO named BirthApplicationSearchCriteria in the Models package and add the following content to it.
 
 {% code lineNumbers="true" %}
 ```java
