@@ -423,6 +423,8 @@
     * [Logging](reference/setup-basics/troubleshooting/logging.md)
     * [Monitoring & Alerts](reference/setup-basics/troubleshooting/monitoring-and-alerts.md)
 * [📥 Reference Reads](reference/reference-reads/README.md)
+  * [Gateway : The spring cloud way](reference/reference-reads/gateway-the-spring-cloud-way.md)
+  * [Upgrade to Springboot 3.2.2](reference/reference-reads/upgrade-to-springboot-3.2.2.md)
   * [Analytics](reference/reference-reads/analytics.md)
   * [DevSecOps](reference/reference-reads/devsecops.md)
   * [Low Code No Code](reference/reference-reads/low-code-no-code/README.md)

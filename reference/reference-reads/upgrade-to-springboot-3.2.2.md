@@ -1,0 +1,198 @@
+---
+description: >-
+  This document contains information about the code changes that will be
+  required in the registries for upgrading Spring boot and client libraries
+---
+
+# Upgrade to Springboot 3.2.2
+
+### Updates in POM:
+
+We need to upgrade the java version in the module to Java 17 before upgrading springboot version to 3.2.2. Following is a sample snippet of Java version upgrade:
+
+```
+<properties>
+    <java.version>17</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+</properties>
+```
+
+Upgrade spring-boot-starter-parent library to version 3.2.2. The code snippet of the dependency is shown below:
+
+```
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.2</version>
+    </parent>
+```
+
+Flyway library should be upgraded to version 9.22.3 for compatibility with Postgres 14 . Following is the code snippet:
+
+```
+      <dependency>
+         <groupId>org.flywaydb</groupId>
+         <artifactId>flyway-core</artifactId>
+         <version>9.22.3</version>
+      </dependency>
+```
+
+The _postgresql_ library is upgraded to version 42.7.1:
+
+```
+       <dependency>
+           <groupId>org.postgresql</groupId>
+           <artifactId>postgresql</artifactId>
+           <version>42.7.1</version>
+        </dependency>
+```
+
+Tracer library is upgraded to sprinboot 3.2.2. The updates are available in the library version 2.9.0. If the module is using tracer, upgrade the tracer version to 2.9.0 as shown below:
+
+```
+        <dependency>
+            <groupId>org.egov.services</groupId>
+            <artifactId>tracer</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+```
+
+The _service-common_ library is  upgraded and added in tracer. You don't have to explicitly upgrade the _services-common_ library and remove it from POM if you upgrade tracer. In case your module is using only  _services-common,_ you can directly upgrade the version to 2.9.0
+
+Use the following version of _junit_ which is compatible with Java 17:
+
+```
+          <dependency>
+               <groupId>junit</groupId>
+               <artifactId>junit</artifactId>
+               <version>4.13.2</version>
+               <scope>test</scope>
+          </dependency>
+```
+
+If you are using MDMS client library update the dependency version to 2.9.0 as shown below:
+
+```
+            <dependency>
+               <groupId>org.egov</groupId>
+               <artifactId>mdms-client</artifactId>
+               <version>2.9.0</version>
+            </dependency>
+```
+
+Update the lombok version in the pom.xml to 1.8.22:
+
+```
+  <properties>
+    <log4j2.version>2.17.1</log4j2.version>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>17</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <lombok.version>1.18.22</lombok.version>
+  </properties>
+```
+
+If you are using net.minidev library, upgrade the version to `2.5.0`
+
+```
+    <dependency>
+      <groupId>net.minidev</groupId>
+      <artifactId>json-smart</artifactId>
+      <version>2.5.0</version>
+    </dependency>
+```
+
+In case of Spring Kafka and Spring Redis dependency, to simplify dependency management and ensure version compatibility, we use the spring-boot-starter-parent as your project's parent in your pom.xml. This way, when you include the _spring-kafka_ or _spring-redis_ dependency without specifying a version, Spring Boot will automatically provide a compatible version of the dependency. Following are code snippets of both the dependencies:
+
+```
+ <dependency>
+      <groupId>org.springframework.kafka</groupId>
+      <artifactId>spring-kafka</artifactId>
+ </dependency>
+```
+
+```
+ <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+ </dependency>
+```
+
+_Note: If tracer library is implemented there is no need to explicitly import spring-kafka._
+
+
+
+### Code changes required in registries:
+
+* Javax is deprecated and getting migrated to Jakarta. Remove javax dependency if getting used and change all javax imports to jakarta as shown in following snippet. (The below change should be done for all Javax imports like PostConstruct, Valid etc.)
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-03-04 at 4.38.45 PM.png" alt=""><figcaption></figcaption></figure>
+
+* Remove the annotation _@javax.annotation.Generated_ which is now deprecated
+*   Update the Dockerfile for flyway migration with the following content:\
+    \
+    `FROM egovio/flyway:10.7.1`
+
+    `COPY ./migration/main /flyway/sql`
+
+    `COPY migrate.sh /usr/bin/migrate.sh`
+
+    `RUN chmod +x /usr/bin/migrate.sh`
+
+    `ENTRYPOINT ["/usr/bin/migrate.sh"]`
+*   Update the migrate.sh script:\
+    &#x20;`#!/bin/sh`
+
+    `flyway -url=$DB_URL -table=$SCHEMA_TABLE -user=$FLYWAY_USER -password=$FLYWAY_PASSWORD -locations=$FLYWAY_LOCATIONS -baselineOnMigrate=true -outOfOrder=true migrate`
+*   If you are using _spring-redis_, add the following configuration file:
+
+    ```
+    import org.springframework.beans.factory.annotation.Value;
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
+    import org.springframework.data.redis.connection.RedisConfiguration;
+    import org.springframework.data.redis.connection.RedisConnectionFactory;
+    import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
+    import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+    import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
+    import org.springframework.data.redis.core.StringRedisTemplate;
+
+    @Configuration
+    public class RedisConfig {
+
+        @Value("${spring.redis.host}")
+        private String redisHost;
+
+        @Value("${spring.redis.port}")
+        private int redisPort;
+
+        @Bean
+        public RedisConnectionFactory redisConnectionFactory() {
+            RedisConfiguration redisConfiguration = new RedisStandaloneConfiguration(redisHost, redisPort);
+            return new LettuceConnectionFactory(redisConfiguration);
+        }
+
+        @Bean
+        public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
+            return new StringRedisTemplate(redisConnectionFactory);
+        }
+
+    }
+    ```
+* Remove @SafeHtml annotation from the fields in POJO models as it is deprecated
+* Update the Junit dependencies in the test cases as shown below:
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-03-04 at 7.03.06 PM.png" alt=""><figcaption><p> </p></figcaption></figure>
+
+\
+
+
+
+
+\
+
+
+###
+
+###
