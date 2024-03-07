@@ -1,12 +1,10 @@
----
-description: >-
-  This document contains information about the code changes that will be
-  required in the registries for upgrading Spring boot and client libraries
----
+# Upgrade To Springboot 3.2.2
 
-# Upgrade to Springboot 3.2.2
+## Overview
 
-### Updates in POM:
+This document contains information about the code changes that will be required in the registries for upgrading Spring boot and client libraries
+
+### POM Updates
 
 We need to upgrade the java version in the module to Java 17 before upgrading springboot version to 3.2.2. Following is a sample snippet of Java version upgrade:
 
@@ -121,13 +119,15 @@ In case of Spring Kafka and Spring Redis dependency, to simplify dependency mana
 
 _Note: If tracer library is implemented there is no need to explicitly import spring-kafka._
 
-
-
-### Code changes required in registries:
+### Registry Code Changes&#x20;
 
 * Javax is deprecated and getting migrated to Jakarta. Remove javax dependency if getting used and change all javax imports to jakarta as shown in following snippet. (The below change should be done for all Javax imports like PostConstruct, Valid etc.)
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/Screenshot 2024-03-04 at 4.38.45 PM.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 * Remove the annotation _@javax.annotation.Generated_ which is now deprecated
 *   Update the Dockerfile for flyway migration with the following content:\
@@ -185,14 +185,3 @@ _Note: If tracer library is implemented there is no need to explicitly import sp
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-03-04 at 7.03.06 PM.png" alt=""><figcaption><p> </p></figcaption></figure>
 
-\
-
-
-
-
-\
-
-
-###
-
-###
