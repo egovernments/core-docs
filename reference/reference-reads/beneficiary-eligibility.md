@@ -15,7 +15,3 @@ To address the above concerns, designers of these systems must consider federate
 
 A federated architecture as above ensures the legal registrars of the data are enabled to determine the eligibility rather than transferring control of such an activity to a central department. It ensures a single source of truth which is the legal registrars of the respective data. There is no escalation of security and privacy risks beyond what already exists in these existing databases.
 
-
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
-

@@ -2,10 +2,10 @@
 
 DIGIT analytics enable -&#x20;
 
-* administrators to view the dashboard based on which they can take day-to-day planning and operational decisions
-* citizens to view and assess how the city administration is delivering services to them&#x20;
-* employees to identify immediate areas of focus so that they can direct their efforts accordingly
-* analysts and researchers to access data in a format that enables them to analyse data rapidly and provide deep insights
+* administrators to view the dashboard based on which they can make day-to-day planning and operational decisions;
+* citizens to view and assess how the city administration is delivering services to them;
+* employees to identify immediate areas of focus so that they can direct their efforts accordingly;
+* analysts and researchers to access data in a format that enables them to analyse data rapidly and provide deep insights;
 
 In order to enable the above in a scalable, secure and reliable manner, the DIGIT platform needs to ensure -
 
@@ -18,9 +18,7 @@ In order to enable the above in a scalable, secure and reliable manner, the DIGI
 * raw as well as analytical datasets are made available through open data APIs for analysts and researchers
 * anomalies detected are bubbled up to the right users at the right time
 * users can perform descriptive, diagnostic, predictive and prescriptive analytics seamlessly&#x20;
-* real-time scenarios e.g. IOT can be catered to by the platform.
-
-\
+* real-time scenarios e.g. IOT can be catered to by the platform.\
 
 
 ![Proposed Analytics Framework](<../../.gitbook/assets/image (219).png>)

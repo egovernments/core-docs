@@ -6,15 +6,15 @@ description: Pros and Cons of migrating to Sunbird RC
 
 Digital Registries must ensure the following
 
-1. Single Source of Truth
-2. Data Privacy
-3. Non Repudiation
+1. Single source of truth
+2. Data privacy
+3. Non repudiation
 4. Verification
 5. Audit/History
-6. Exchange using Open Standards
-7. Slow Moving Data
+6. Exchange using open standards
+7. Slow moving data
    1. Data may be classified depending on the rate of change&#x20;
-      1. Very Slow Changing Data may be called **Master Data.**  In DIGIT, all Master Data is  stored in single service called Master Data Registry. Examples of Master Data are -  Property Type, Property Usage etc.
+      1. Very slow changing data may be called **Master Data.**  In DIGIT, all Master Data is  stored in single service called Master Data Registry. Examples of Master Data are -  Property Type, Property Usage etc.
       2. Slow changing data that are basis for various transactions are stored in **Registry** e.g. Property, User, Employee, Trade License etc.&#x20;
       3. **Transaction Data** e.g. Payment for Property Tax etc.&#x20;
 

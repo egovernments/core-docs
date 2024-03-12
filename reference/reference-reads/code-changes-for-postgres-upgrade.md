@@ -1,5 +1,5 @@
 ---
-description: Code Changes required once Postgres is upgraded
+description: Code changes required once Postgres is upgraded
 ---
 
 # Code Changes For Postgres Upgrade
