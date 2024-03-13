@@ -1,5 +1,5 @@
 ---
-description: kafka Migration Documentation
+description: Kafka migration documentation
 ---
 
 # Kafka
