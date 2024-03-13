@@ -126,7 +126,7 @@ _Note: If tracer library is implemented there is no need to explicitly import sp
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-03-04 at 4.38.45 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-03-04 at 4.38.45 PM.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -187,4 +187,4 @@ public class RedisConfig {
 5. Remove @SafeHtml annotation from the fields in POJO models as it is deprecated
 6. Update the Junit dependencies in the test cases as shown below:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-03-04 at 7.03.06 PM.png" alt=""><figcaption><p> </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-03-04 at 7.03.06 PM.png" alt=""><figcaption><p> </p></figcaption></figure>

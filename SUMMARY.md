@@ -159,6 +159,13 @@
 * [👁️ Project Plan](https://github.com/orgs/egovernments/projects/2)
 * [📋 Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
 * [🤝 Contribute](platform/contribute.md)
+* [Releases](platform/releases/README.md)
+  * [DIGIT 2.9 LTS](platform/releases/digit-2.9-lts/README.md)
+    * [CHANGELOG.md](platform/releases/digit-2.9-lts/changelog.md.md)
+    * [Gateway: The Spring Cloud Way](platform/releases/digit-2.9-lts/gateway-the-spring-cloud-way.md)
+    * [Upgrade To Springboot 3.2.2](platform/releases/digit-2.9-lts/upgrade-to-springboot-3.2.2.md)
+    * [Postgres Upgrade: Service Code changes](platform/releases/digit-2.9-lts/postgres-upgrade-service-code-changes.md)
+    * [DIGIT Deployment Using GitHub Actions](platform/releases/digit-2.9-lts/digit-deployment-using-github-actions.md)
 
 ## Guides
 
@@ -427,9 +434,6 @@
     * [Logging](reference/setup-basics/troubleshooting/logging.md)
     * [Monitoring & Alerts](reference/setup-basics/troubleshooting/monitoring-and-alerts.md)
 * [📥 Reference Reads](reference/reference-reads/README.md)
-  * [Code Changes For Postgres Upgrade](reference/reference-reads/code-changes-for-postgres-upgrade.md)
-  * [Gateway: The Spring Cloud Way](reference/reference-reads/gateway-the-spring-cloud-way.md)
-  * [Upgrade To Springboot 3.2.2](reference/reference-reads/upgrade-to-springboot-3.2.2.md)
   * [Analytics](reference/reference-reads/analytics.md)
   * [DevSecOps](reference/reference-reads/devsecops.md)
   * [Low Code No Code](reference/reference-reads/low-code-no-code/README.md)

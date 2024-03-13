@@ -12,7 +12,7 @@ Spring Cloud Gateway and Zuul serve similar purposes as API gateways but differ 
 
 The new Gateway codebase is well modularised where each module hold similar files and named that makes it self explanatory as it identifies the tasks each actor performs. Below is a snapshot of the current directory structure.&#x20;
 
-![](<../../.gitbook/assets/image (315).png>)&#x20;
+![](<../../../.gitbook/assets/image (315).png>)&#x20;
 
 **Config**: It contains the configuration related files for example Application Properties etc.
 
@@ -59,7 +59,7 @@ At service helm chart level there are options to customise the RateLimiting by d
 * gateway-burstCapacity:
 * gateway-keyResolver: \[ ipKeyResolver or userKeyResolver ] if not provided spring will use the default principalKeyResolver automatically
 
-<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 If Rate limiting properties are provided for a particular service then a default rate limiting will be applied to those service which controlled at the gateway level.
 
