@@ -1,7 +1,7 @@
 ---
 description: >-
   Complete DIGIT installation step-by-step Instructions across various Infra
-  types for public & private clouds
+  types like public & private clouds
 ---
 
 # Production Setup
