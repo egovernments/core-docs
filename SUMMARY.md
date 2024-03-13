@@ -203,7 +203,7 @@
     * [Creating New HelmChart](guides/installation-guide/production-setup/creating-new-helmchart.md)
     * [DIGIT Deployment Using GitHub Actions](guides/installation-guide/production-setup/digit-deployment-using-github-actions.md)
     * [DIGIT Deployment Using Helmfile](guides/installation-guide/production-setup/digit-deployment-using-helmfile.md)
-    * [How to Backup your PostgreSQL Database in AWS](guides/installation-guide/production-setup/how-to-backup-your-postgresql-database-in-aws.md)
+    * [Backup PostgreSQL Database In AWS - Steps](guides/installation-guide/production-setup/backup-postgresql-database-in-aws-steps.md)
     * [Updating RDS Version in AWS](guides/installation-guide/production-setup/updating-rds-version-in-aws.md)
 * [💽 Data Setup Guide](guides/data-setup-guide/README.md)
   * [User Module](guides/data-setup-guide/user-module.md)

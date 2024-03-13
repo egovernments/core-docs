@@ -1,4 +1,4 @@
-# How to Backup your PostgreSQL Database in AWS
+# Backup PostgreSQL Database In AWS - Steps
 
 ## Overview
 
@@ -26,9 +26,9 @@ This document provides step-by-step instructions on how to take backups of Postg
 * Click on "Modify" and enable automated backups.
 * Configure the backup retention period according to your requirements.
 
-**Step 4: Manually Trigger a Snapshot :**
+**Step 4: Manually Trigger a Snapshot:**
 
-To create a manual snapshot, select the RDS instance that you want to back up. Click on the **Actions** button in the right upper corner and select **Take a snapshot**.
+To create a manual snapshot, select the RDS instance you want to back up. Click on the **Actions** button in the right upper corner and select **Take a snapshot**.
 
 ![](https://www.sqlservercentral.com/wp-content/uploads/2021/06/word-image-183.png)
 
