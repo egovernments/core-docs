@@ -1,14 +1,12 @@
----
-description: >-
-  Unlike rolling upgrades, direct upgrades involve migrating from an older
-  version to a newer one in a single coordinated operation.
----
-
 # ElasticSearch Direct Upgrade
+
+## Overview
+
+Unlike rolling upgrades, direct upgrades involve migrating from an older version to a newer one in a single coordinated operation.
 
 This comprehensive guide outlines the step-by-step process for deploying an Elasticsearch 8.11.3 cluster with enhanced security features. The document not only covers the initial deployment of the cluster but also includes instructions for seamlessly migrating data from an existing Elasticsearch cluster to the new one, allowing for a direct upgrade.
 
-### Process for Upgrading:
+## Steps
 
 1. Clone the DIGIT-DevOps repo and checkout to the branch \<branch\_name>.
 
@@ -18,13 +16,13 @@ git checkout <branch_name>
 code .
 ```
 
-2. If you want to make any changes to the elasticsearch cluster like namespaces etc. You'll find the helm chart for elastic search in the below provided path. In the below chart, security is enabled for elasticsearch. If you want to disable the security, please set the environment variable `xpack.security.enabled` as false in helmchart statefulset template.
+2. If you want to make any changes to the elasticsearch cluster like namespaces etc. You'll find the helm chart for elastic search in the path provided below. In the below chart, security is enabled for elasticsearch. If you want to disable the security, please set the environment variable `xpack.security.enabled` as false in the helmchart statefulset template.
 
 ```
 // Some code
 ```
 
-3. Deploy the Elastic Search Cluster using below commands.
+3. Deploy the Elastic Search Cluster using the below commands.
 
 ```
 cd deploy-as-code/deployer
@@ -35,13 +33,13 @@ go run main.go deploy -e <env_file_name> elasticsearch-master
 
 ```
 
-4. Check the pods status using below command.
+4. Check the pods status using the below command.
 
 ```
 kubectl get pods -n <elasticsearch_namespace>
 ```
 
-5. Once all pods are in running state, run the below commands inside playground pod to dump data from old elasticsearch cluster and restore in new elasticsearch cluster.
+5. Once all pods are running, execute the below commands inside the playground pod to dump data from the old elasticsearch cluster and restore it to the new elasticsearch cluster.
 
 ```
 # Copy the script and replace elasticsearch url's and indices names and save it in your local
@@ -155,8 +153,8 @@ cd <path_to_script_inside_playground_pod>
 ./es-dump.sh
 ```
 
-6. Using the above script, you can take the data dump from old cluster and restore it in new elasticsearch in single command.
-7. After restoring the data successfully in new elasticsearch cluster, check the cluster health and documents count using below command.&#x20;
+6. Using the above script, you can take the data dump from the old cluster and restore it in the new elasticsearch in a single command.
+7. After restoring the data successfully in the new elasticsearch cluster, check the cluster health and document count using the below command.&#x20;
 
 ```
 # Enter into elasticsearch pod
@@ -169,10 +167,10 @@ curl -X GET "<elasticsearch_url>:9200/_cat/health?v=true&pretty"
 curl <new_elasticsearch_url>:9200/_cat/indices?v
 ```
 
-8. Now the deployment and restoring the data completed successfully. It's time change the es\_url and indexer\_url in egov-config configmap using below command
+8. Now the deployment and restoring the data are completed successfully. It's time to change the es\_url and indexer\_url in egov-config configmap using the below command.
 
 ```
 kubectl edit configmap egov-config --namespace egov
 ```
 
-9. Restart all the pods which have dependency on elasticsearch to pick new elasticsearch\_url.
+9. Restart all the pods which have a dependency on elasticsearch to pick a new elasticsearch\_url.
