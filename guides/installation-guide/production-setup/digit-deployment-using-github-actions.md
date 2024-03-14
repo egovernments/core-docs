@@ -19,8 +19,8 @@ This guide provides step-by-step instructions for installing DIGIT using GitHub 
 
 #### Configure GitHub Repository
 
-1. Fork the Repository into your organization account on GitHub.
-2.  Navigate to the repository settings, then to Secrets and Variables, and add the following repository secrets:
+1. Fork the DIGIT-DevOps Repository into your organization account on GitHub.
+2.  Navigate to the repository settings, then to Secrets and Variables, click actions and add the following repository secrets:
 
     * `AWS_ACCESS_KEY_ID: <GENERATED_ACCESS_KEY>`
     * `AWS_SECRET_ACCESS_KEY: <GENERATED_SECRET_KEY>`
@@ -29,31 +29,40 @@ This guide provides step-by-step instructions for installing DIGIT using GitHub 
 
     #### Enable GitHub Actions
 
-    1. Open the GitHub Actions workflow file.
-    2. Specify the branch name you wish to enable GitHub Actions for.
+    &#x20; 1\.   Clone the DIGIT-DevOps repository which you've forked and open the repo in code editor.&#x20;
 
-    #### Configure Infrastructure-as-Code
+&#x20;         2\.  Switch  the branch from master to DIGIT-2.9LTS using below command&#x20;
 
-    1. Navigate to `infra-as-code/terraform/sample-aws`.
-    2. Open `input.yaml` and enter details such as `domain_name`, `cluster_name`, `bucket_name`, and `db_name`.
+```
+git checkout DIGIT-2.9LTS
+```
 
-    #### Configure Application Secrets
+&#x20;        3\.   Open the GitHub Actions workflow file.
 
-    1. Navigate to `config-as-code/environments`.
-    2. Open `egov-demo-secrets.yaml`.
-    3. Enter `db_password` and `ssh_private_key`. Add the `public_key` to your GitHub account.
+&#x20;        4\.  Specify the branch name you wish to enable GitHub Actions for.
 
-    #### Generate SSH Key Pair
+#### Configure Infrastructure-as-Code
 
-    Choose one of the following methods to generate an SSH key pair:
+1. Navigate to `infra-as-code/terraform/sample-aws`.
+2. Open `input.yaml` and enter details such as `domain_name`, `cluster_name`, `bucket_name`, and `db_name`.
 
-    * **Method a:** Use an online website (Note: This is not recommended for production setups, only for demo purposes): `https://8gwifi.org/sshfunctions.jsp`
-    *   **Method b:** Use OpenSSL commands:
+#### Configure Application Secrets
 
-        ```
-        openssl genpkey -algorithm RSA -out private_key.pem
-        openssl rsa -pubout -in private_key.pem -out public_key.pem
-        ```
+1. Navigate to deploy`-as-code/charts/environments`.
+2. Open `env-secrets.yaml`.
+3. Enter `db_password` and `ssh_private_key`. Add the `public_key` to your GitHub account.
+
+#### Generate SSH Key Pair
+
+Choose one of the following methods to generate an SSH key pair:
+
+* **Method a:** Use an online website (Note: This is not recommended for production setups, only for demo purposes): `https://8gwifi.org/sshfunctions.jsp`
+*   **Method b:** Use OpenSSL commands:
+
+    ```
+    openssl genpkey -algorithm RSA -out private_key.pem
+    openssl rsa -pubout -in private_key.pem -out public_key.pem
+    ```
 
 #### Finalize Installation
 

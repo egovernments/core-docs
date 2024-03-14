@@ -12,6 +12,7 @@ This page walks you through the steps required to set up DIGIT using helmfile.
 
 * [helmfile](https://helmfile.readthedocs.io/en/latest/)
 * git
+* Kubernetes Cluster
 
 Helmfile is a declarative spec for deploying helm charts. It lets you…
 
@@ -89,6 +90,8 @@ $ vi deploy-as-code/charts/environments/env.yaml
 <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * Update db password , flywaypassword, loginusername, loginpassword  and git-sync private key in env-secrets.yaml
+
+&#x20;           **Note:**  Make sure the db\_password and flywaypassword are same
 
 ```
 $ vi deploy-as-code/charts/environments/env-secrets.yaml

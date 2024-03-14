@@ -19,7 +19,7 @@ description: >-
 
 ## Basics
 
-The [**Quickstart Guide**](../quick-setup/) would have helped you get your hands dirty and build the Kubernetes cluster on a local/single VM instance - which you can consider for either local development or to understand the details involved in infra and deployment.
+The [**Quickstart Guide**](broken-reference) would have helped you get your hands dirty and build the Kubernetes cluster on a local/single VM instance - which you can consider for either local development or to understand the details involved in infra and deployment.
 
 However, DIGIT is a [**cloud-native**](https://www.appdynamics.com/topics/what-is-cloud-native-architecture#\~3-challenges) platform and at the same time [**cloud-agnostic**](https://looker.com/definitions/cloud-agnostic)**.** Depending on the scale and performance running **DIGIT on production** requires advanced capabilities like HA, DRS, autoscaling, resiliency, etc. All these capabilities are supported by commercial clouds like **AWS, Google, Azure, VMware, OpenStack, etc..** and also the private clouds like **NIC** and a **few SDCs implemented clouds.** These cloud providers provide the **Kubernetes-as-a-managed-service** that makes the entire infra setup and management seamless and automated, like **infra-as-code, and config-as-code**.
 

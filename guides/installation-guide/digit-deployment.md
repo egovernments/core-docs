@@ -19,7 +19,7 @@ DIGIT comes with configurable "CI as code", "Deploy as code" etc.. which can be 
   * One branch per environment - dev, qa, uat&#x20;
   * Developers to follow best practices for branching, code-checking, PRs etc..&#x20;
 * [x] Follow DIGIT installation docs and install the latest version **(v2.7)**. Installation steps given below:&#x20;
-  1. **Quickstart install (Single VM setup)** - for dev and test – [Reference docs ](quick-setup/)
+  1. **Quickstart install (Single VM setup)** - for dev and test – [Reference docs ](broken-reference)
   2. **Full installation (cluster setup)** - for UAT – [Reference docs ](production-setup/aws/)
   3. Add an extra node to the Kube cluster to deploy Prometheus/Jaeger&#x20;
      * Enable Jaeger and Prometheus post-installation (ONLY for production) as they are not enabled by default. These are our observability tools. Refer to [the docs ](../operations-guide/observability/egov-monitoring-and-alerting-setup.md)for detailed steps.&#x20;
