@@ -1,58 +1,57 @@
+---
+description: Installation Guide for DIGIT via GitHub Actions in AWS
+---
+
 # DIGIT Deployment Using GitHub Actions
 
-## Installation Guide for DIGIT via GitHub Actions in AWS
+Overview
 
 This guide provides step-by-step instructions for installing DIGIT using GitHub Actions within an AWS environment.
 
-### Prerequisites
+## Pre-requisites
 
 * AWS account
 * Github account
 
-### Installation Steps:
+## Installation
 
-#### Prepare AWS IAM User
+### Prepare AWS IAM User
 
 1. Create an IAM User in your AWS account.
 2. Generate `ACCESS_KEY` and `SECRET_KEY` for the IAM user.
 3. Assign Administrator Access to the IAM user for necessary permissions.
 
-#### Configure GitHub Repository
+### Configure GitHub Repository
 
 1. Fork the DIGIT-DevOps Repository into your organization account on GitHub.
-2.  Navigate to the repository settings, then to Secrets and Variables, click actions and add the following repository secrets:
-
-    * `AWS_ACCESS_KEY_ID: <GENERATED_ACCESS_KEY>`
-    * `AWS_SECRET_ACCESS_KEY: <GENERATED_SECRET_KEY>`
-    * `AWS_DEFAULT_REGION: ap-south-1`
-    * `AWS_REGION: ap-south-1`
-
-    #### Enable GitHub Actions
-
-    &#x20; 1\.   Clone the DIGIT-DevOps repository which you've forked and open the repo in code editor.&#x20;
-
-&#x20;         2\.  Switch  the branch from master to DIGIT-2.9LTS using below command&#x20;
+2. Navigate to the repository settings, then to Secrets and Variables, click actions and add the following repository secrets:
+   * `AWS_ACCESS_KEY_ID: <GENERATED_ACCESS_KEY>`
+   * `AWS_SECRET_ACCESS_KEY: <GENERATED_SECRET_KEY>`
+   * `AWS_DEFAULT_REGION: ap-south-1`
+   * `AWS_REGION: ap-south-1`
+3. Enable GitHub Actions
+   * Clone the DIGIT-DevOps repository which you've forked and open the repo in code editor.
+   * Switch  the branch from master to DIGIT-2.9LTS using below command&#x20;
 
 ```
 git checkout DIGIT-2.9LTS
 ```
 
-&#x20;        3\.   Open the GitHub Actions workflow file.
+4. Open the GitHub Actions workflow file.
+5. Specify the branch name you wish to enable GitHub Actions for.
 
-&#x20;        4\.  Specify the branch name you wish to enable GitHub Actions for.
-
-#### Configure Infrastructure-as-Code
+### Configure Infrastructure-as-Code
 
 1. Navigate to `infra-as-code/terraform/sample-aws`.
 2. Open `input.yaml` and enter details such as `domain_name`, `cluster_name`, `bucket_name`, and `db_name`.
 
-#### Configure Application Secrets
+### Configure Application Secrets
 
 1. Navigate to deploy`-as-code/charts/environments`.
 2. Open `env-secrets.yaml`.
 3. Enter `db_password` and `ssh_private_key`. Add the `public_key` to your GitHub account.
 
-#### Generate SSH Key Pair
+### Generate SSH Key Pair
 
 Choose one of the following methods to generate an SSH key pair:
 
@@ -64,7 +63,7 @@ Choose one of the following methods to generate an SSH key pair:
     openssl rsa -pubout -in private_key.pem -out public_key.pem
     ```
 
-#### Finalize Installation
+### Finalize Installation
 
 After entering all the details, push these changes to the remote GitHub repository. Open the `Actions` tab in your GitHub account to view the workflow. You should see that the workflow has started, and the pipelines are completing successfully.
 
@@ -72,7 +71,7 @@ After entering all the details, push these changes to the remote GitHub reposito
 
 This indicates that your setup is correctly configured, and your application is ready to be deployed. Monitor the output of the workflow for any errors or success messages to ensure everything is functioning as expected.
 
-### Cleanup and Uninstallation of DIGIT Infrastructure
+## Cleanup & Uninstallation Of DIGIT Infrastructure
 
 As you wrap up your work with DIGIT, ensuring a smooth and error-free cleanup of the resources is crucial. Regular monitoring of the GitHub Actions workflow's output is essential during the destruction process. Watch out for any error messages or signs of issues. A successful job completion will be confirmed by a success message in the GitHub Actions window, indicating that the infrastructure has been effectively destroyed.
 
@@ -80,7 +79,7 @@ When you're ready to remove DIGIT and clean up the resources it created, proceed
 
 We hope your experience with DIGIT was positive and that this guide makes the uninstallation process straightforward.
 
-#### How to Run the Terraform Infrastructure Destruction Job
+### How to Run the Terraform Infrastructure Destruction Job
 
 To initiate the destruction of a Terraform-managed infrastructure, follow these steps:
 
@@ -93,7 +92,11 @@ You can observe the progress of the destruction job in the actions window.
 
 **Note:** For DIGIT configurations created using the master branch
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-03-07 at 11.13.55 AM.png" alt=""><figcaption><p>Destroying the created DIGIT Infrastructure via Terraform</p></figcaption></figure>
+
+</div>
 
 If DIGIT is installed from a branch other than the main one, ensure that the branch name is correctly specified in the workflow file. For instance, if the installation is done from the **digit-install** branch, the following snippet should be updated to reflect that.
 
@@ -114,4 +117,3 @@ on:
 ```
 
 &#x20;
-
