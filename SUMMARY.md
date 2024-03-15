@@ -377,7 +377,7 @@
     * [I am unable to login to the citizen or employee portal. The UI shows a spinner.](guides/operations-guide/faqs/i-am-unable-to-login-to-the-citizen-or-employee-portal.-the-ui-shows-a-spinner..md)
     * [My DSS dashboard is not reflecting accurate numbers? What can I do?](guides/operations-guide/faqs/my-dss-dashboard-is-not-reflecting-accurate-numbers-what-can-i-do.md)
   * [Deployment using helm](guides/operations-guide/deployment-using-helm/README.md)
-    * [Helm installation:](guides/operations-guide/deployment-using-helm/helm-installation.md)
+    * [Helm Installation](guides/operations-guide/deployment-using-helm/helm-installation.md)
     * [Helm chart creation](guides/operations-guide/deployment-using-helm/helm-chart-creation.md)
     * [Helm chart customization](guides/operations-guide/deployment-using-helm/helm-chart-customization.md)
   * [How to Dump Elasticsearch Indexes](guides/operations-guide/how-to-dump-elasticsearch-indexes.md)
