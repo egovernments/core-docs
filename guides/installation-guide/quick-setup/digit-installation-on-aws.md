@@ -103,30 +103,33 @@ cd infra-as-code/terraform/sample-aws && go run ../scripts/init.go
 Confirm the action when prompted to start the provisioning process.
 
 10. To provision the DIGIT infrastructure using Terraform, follow these steps:
-    1. **Initialize Terraform**:
-       *   Navigate up one directory from your current location:
+    *   **Initialize Terraform**:
 
-           ```
-           cd ..
-           ```
+        Navigate up one directory from your current location:
 
-           *   Then initialize Terraform to install necessary plugins:
+        ```
+        cd ..
+        ```
 
-               ```
-               terraform init
-               ```
-    2. **Create an Execution Plan**:
-       *   Generate an execution plan in Terraform, allowing you to review what will be created:
+        Then initialize Terraform to install necessary plugins:
 
-           ```
-           terraform plan
-           ```
-    3. **Apply Changes**:
-       *   Apply the changes specified by the Terraform plan. You will be prompted to enter the database password during this step:
+        ```
+        terraform init
+        ```
+    *   **Create an Execution Plan**:
 
-           ```
-           terraform apply
-           ```
+        Generate an execution plan in Terraform, allowing you to review what will be created:
+
+        ```
+        terraform plan
+        ```
+    *   **Apply Changes**:
+
+        Apply the changes specified by the Terraform plan. You will be prompted to enter the database password during this step:
+
+        ```
+        terraform apply
+        ```
 
 **Important:**
 
@@ -135,7 +138,7 @@ Confirm the action when prompted to start the provisioning process.
     When you reach the terraform plan and apply stage, you will be prompted to provide a database password. Remember to adhere to the following criteria to ensure the password meets our security standards and to avoid provisioning failures with RDS:
 
     * The password must be at least 8 characters in length.
-    * It should only contain printable ASCII characters, with the exception of the following: `/`, `@`, `"`, and a space ( ).
+    * It should only contain printable ASCII characters, except for the following: `/`, `@`, `"`, and a space ( ).
 
     Failure to comply with these guidelines will result in RDS provisioning failure.
 * **The output of the apply command will be displayed on the console. Store this in a file somewhere. Values from this file will be used in the next step of deployment.**
