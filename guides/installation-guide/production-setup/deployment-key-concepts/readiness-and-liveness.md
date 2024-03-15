@@ -53,15 +53,19 @@ Liveness probes are used to restart unhealthy containers. The Kubelet periodical
 
 Liveness checks can help the application recover from a deadlock situation. Without liveness checks, Kubernetes deems a deadlocked pod healthy since the underlying process continues to run from Kubernetes’s perspective. By configuring the liveness probe, the Kubelet can detect that the application is in a bad state and restarts the pod to restore availability.
 
-![Kubernetes Liveness Probes](https://miro.medium.com/max/60/0\*yicsIyLNZJlDlIsf.GIF?q=20)
+<div align="left">
+
+<img src="https://miro.medium.com/max/60/0*yicsIyLNZJlDlIsf.GIF?q=20" alt="Kubernetes Liveness Probes">
+
+</div>
 
 ## **Startup Probes** <a href="#id-1b53" id="id-1b53"></a>
 
-Startup probes are similar to readiness probes but only executed at startup. They are optimized for slow-starting containers or applications with unpredictable initialization processes. With readiness probes, we can configure the `initialDelaySeconds` to determine how long to wait before probing for readiness. Now consider an application where it occasionally needs to download large amounts of data or do an expensive operation at the start of the process. Since `initialDelaySeconds` is a static number, we are forced to always take the worst-case scenario (or extend the `failureThreshold` one that may affect long-running behaviour) and wait for a long time even when that application does not need to carry out long-running initialization steps. With startup probes, we can instead configure `failureThreshold` and `periodSeconds` to model this uncertainty better. For example, setting `failureThreshold` to 15 and `periodSeconds` to 5 means the application will get 10 x 5 = 75s to startup before it fails.
+Startup probes are similar to readiness probes but only executed at startup. They are optimized for slow-starting containers or applications with unpredictable initialization processes. With readiness probes, we can configure the `initialDelaySeconds` to determine how long to wait before probing for readiness. Now consider an application where it occasionally needs to download large amounts of data or do an expensive operation at the start of the process. Since `initialDelaySeconds` is a static number, we are forced always to take the worst-case scenario (or extend the `failureThreshold` one that may affect long-running behaviour) and wait for a long time even when that application does not need to carry out long-running initialization steps. With startup probes, we can instead configure `failureThreshold` and `periodSeconds` to model this uncertainty better. For example, setting `failureThreshold` to 15 and `periodSeconds` to 5 means the application will get 10 x 5 = 75s to startup before it fails.
 
 ## Configuring Probe Actions
 
-Now that we understand the different types of probes, we can examine the three different ways to configure each probe.
+Now that we understand the different types of probes, we can examine the three distinct ways to configure each probe.
 
 ### **HTTP**
 
@@ -84,7 +88,7 @@ livenessProbe:
 
 ### TCP <a href="#ed8f" id="ed8f"></a>
 
-If you just need to check whether or not a TCP connection can be made, you can specify a TCP probe. The pod is marked healthy if can establish a TCP connection. Using a TCP probe may be useful for a gRPC or FTP server where HTTP calls may not be suitable.
+To check whether or not a TCP connection can be made, you can specify a TCP probe. The pod is marked healthy if it can establish a TCP connection. Using a TCP probe may be useful for a gRPC or FTP server where HTTP calls may not be suitable.
 
 ```
 readinessProbe:
@@ -115,7 +119,7 @@ In short, well-defined probes generally lead to better resilience and availabili
 
 ## Tools
 
-Finally, given the importance of Kubernetes probes, you can use a Kubernetes resource analysis tool to detect missing probes. These tools can be run against existing clusters or be baked into the CI/CD process to automatically reject workloads without properly configured resources.
+Considering the significance of Kubernetes probes, you can utilize a Kubernetes resource analysis tool to identify any missing probes. These tools can be executed against existing clusters or integrated into the CI/CD pipeline to automatically reject workloads that don't have properly configured resources.
 
 * [**Polaris**](https://github.com/FairwindsOps/polaris): a resource analysis tool with a nice dashboard that can also be used as a validating webhook or CLI tool.
 * [**Kube-score**](https://github.com/zegl/kube-score): a static code analysis tool that works with Helm, Kustomize, and standard YAML files.

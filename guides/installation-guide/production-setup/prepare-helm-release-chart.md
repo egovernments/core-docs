@@ -7,22 +7,22 @@ description: Release chart helps to deploy the product specific modules in one c
 #### Topics covered: <a href="#prepare-new-release-chart-for-existing-products." id="prepare-new-release-chart-for-existing-products."></a>
 
 * [Prepare new release chart for existing products](prepare-helm-release-chart.md#prepare-new-release-chart-for-existing-products.-1)
-* [Pre-requisites for preparing new release charts for existing products](prepare-helm-release-chart.md#pre-requisites)
-* [Steps to prepare release chart](prepare-helm-release-chart.md#steps-to-prepare-new-release-chart-for-existing-products)
+  * [Pre-requisites for preparing new release charts for existing products](prepare-helm-release-chart.md#pre-requisites)
+  * [Steps to prepare release chart](prepare-helm-release-chart.md#steps-to-prepare-new-release-chart-for-existing-products)
 * [Prepare new release chart for new products](prepare-helm-release-chart.md#steps-to-prepare-new-release-chart-for-existing-products)
-* [Pre-requisites for preparing release charts for new products](prepare-helm-release-chart.md#pre-requisites-1)
-* [Steps to prepare release chart](prepare-helm-release-chart.md#steps-to-prepare-release-chart)
+  * [Pre-requisites for preparing release charts for new products](prepare-helm-release-chart.md#pre-requisites-1)
+  * [Steps to prepare release chart](prepare-helm-release-chart.md#steps-to-prepare-release-chart)
 
 ## Prepare New Release Chart For Existing Products <a href="#prepare-new-release-chart-for-existing-products." id="prepare-new-release-chart-for-existing-products."></a>
 
 This section of the document walks you through the details of how to prepare a new release chart for existing products.
 
-## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
+### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
 1. Git
 2. ​[Install Visualstudio](https://code.visualstudio.com/download) IDE Code for better code visualization/editing capabilities
 
-## Steps To Prepare Release Charts <a href="#steps-to-prepare-new-release-chart-for-existing-products" id="steps-to-prepare-new-release-chart-for-existing-products"></a>
+### Steps To Prepare Release Charts <a href="#steps-to-prepare-new-release-chart-for-existing-products" id="steps-to-prepare-new-release-chart-for-existing-products"></a>
 
 Clone the following [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps) where we have all the release charts for you to refer.
 
@@ -35,7 +35,7 @@ Create a new release version of the below products.&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
-Select your product and copy the previous release version file and rename it with your new version.
+Select your product, copy the previous release version file, and rename it with your new version.
 
 ```
 $cd DIGIT-DevOps/config-as-code/product-release-charts/DIGIT
@@ -270,13 +270,13 @@ Add new modules
 
 This section of the document walks you through the details of how to prepare a new release chart for new products.
 
-## Pre-requisites <a href="#pre-requisites-1" id="pre-requisites-1"></a>
+### Pre-requisites <a href="#pre-requisites-1" id="pre-requisites-1"></a>
 
 1. Git
 2. GitHub Organization Account
 3. ​[Install Visualstudio](https://code.visualstudio.com/download) IDE Code for better code visualization/editing capabilities
 
-## Steps To Prepare Release Chart
+### Steps To Prepare Release Chart
 
 When you have a new product to introduce, you can follow the below steps to create the release chart for a new product.
 
