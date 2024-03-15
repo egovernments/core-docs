@@ -7,4 +7,4 @@ Postman collection corresponding to this stage is available [here](https://githu
 
 Steps to integrate Persister Service and Kafka:
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><mark style="color:blue;"><strong>Add Kafka Configuration</strong></mark></td><td></td><td></td></tr><tr><td><mark style="color:blue;"><strong>Implement Kafka Producer &#x26; Consumer</strong></mark></td><td></td><td></td></tr><tr><td><mark style="color:blue;"><strong>Add Persister Configuration</strong></mark></td><td></td><td></td></tr><tr><td><mark style="color:blue;"><strong>Run Application In Local Environment</strong></mark></td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><mark style="color:blue;"><strong>Add Kafka Configuration</strong></mark></td><td></td><td></td></tr><tr><td><mark style="color:blue;"><strong>Implement Kafka Producer &#x26; Consumer</strong></mark></td><td></td><td></td></tr><tr><td><mark style="color:blue;"><strong>Add Persister Configuration</strong></mark></td><td></td><td></td></tr></tbody></table>
