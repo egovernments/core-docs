@@ -23,7 +23,7 @@ In 2016, the Cloud Native Computing Foundation (CNCF) launched the Prometheus pr
 
 The timeline below shows the development of the Prometheus project.
 
-![](https://miro.medium.com/max/1284/0\*RQlhSVCUq4DmNDkH.png)
+<figure><img src="../../../.gitbook/assets/image (320).png" alt=""><figcaption></figcaption></figure>
 
 ## Concepts <a href="#id-169d" id="id-169d"></a>
 
@@ -155,10 +155,74 @@ Open your browser and go to [http://localhost:8080](http://localhost:8080/) and 
 
 The kube-stack-prometheus deployment has provisioned Grafana dashboards:
 
-![](https://miro.medium.com/max/1400/0\*s2fJ46FWAhY38sq-.png)
+<figure><img src="../../../.gitbook/assets/image (319).png" alt=""><figcaption></figcaption></figure>
 
 Here we can see one of them showing compute resources of Kubernetes pods:
 
 ![](https://miro.medium.com/max/1400/0\*4Px0EJ2kFoKalkmJ.png)
 
 That’s all folks. Today, we looked at installing Grafana and Prometheus on our K8s Cluster.
+
+## Loki
+
+Distributed Log Aggregation System: Loki is an open-source log aggregation system built for cloud-native environments, designed to efficiently collect, store, and query log data. Loki was inspired by Prometheus and shares similarities in its architecture and query language, making it a natural complement to Prometheus for comprehensive observability.
+
+<figure><img src="https://lh7-us.googleusercontent.com/75v3OVXpQFVIV-PxkU6s8flkN_TraEuN-Au5kuzLGbbULwhVxkPN72ELukBFMlS0Rjr1_ZMHNcSD9ckGM31LP4H7udcpnc8CjpthIeSNCghGRqDX73PKC-E7vrrG3LgkLWku3hZeeVI5I31H13ies0ku6A=s2048" alt=""><figcaption></figcaption></figure>
+
+## Key Features:
+
+* Label-based Indexing
+* LogQL Query Language
+* Log Stream Compression
+* Scalable and Cost-Efficient
+* Integration with Grafana
+
+<figure><img src="https://lh7-us.googleusercontent.com/Tn0pbHewet3AvF0Q1tIXQKHip-Ta8pzqgxQEWXQ4Dk7LbJL4X3iN9xsli09O8PjO7Ta1Ipd9xNelFb5dkPoRNHESFa1YzVsFkRjW2mAWqYK8qYMWD7c2EvEh-P1WKg0TKnb1OPappDlrZNMQEG7aq9NXTA=s2048" alt=""><figcaption></figcaption></figure>
+
+## Loki configuration
+
+```
+loki:
+  enabled: true
+  isDefault: true
+  image:
+    tag: 2.9.3
+    repository: "grafana/loki"
+  service:
+    port: 3100
+  url: http://{{(include "loki.serviceName" .)}}:{{ .Values.loki.service.port }}
+  readinessProbe:
+    httpGet:
+      path: /ready
+      port: http-metrics
+    initialDelaySeconds: 45
+  livenessProbe:
+    httpGet:
+      path: /ready
+      port: http-metrics
+    initialDelaySeconds: 45
+  datasource:
+    jsonData: "{}"
+    uid: ""
+  persistence:
+    enabled: true
+    accessModes:
+      - ReadWriteOnce
+    size: 10Gi  # Set the desired size for the persistent volume
+
+promtail:
+  enabled: true
+  config:
+    logLevel: info
+    serverPort: 3101
+    clients:
+      - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
+```
+
+
+
+### Loki grafana dashboard
+
+* Configure the loki dashboard for easy access
+
+<figure><img src="../../../.gitbook/assets/image (318).png" alt=""><figcaption></figcaption></figure>

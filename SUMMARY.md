@@ -333,6 +333,7 @@
   * [Infra provisioning using Terraform](guides/operations-guide/infra-provisioning-using-terraform/README.md)
     * [Installation of Terraform](guides/operations-guide/infra-provisioning-using-terraform/installation-of-terraform.md)
   * [Customization of existing tf templates](guides/operations-guide/customization-of-existing-tf-templates.md)
+  * [Page](guides/operations-guide/page.md)
   * [Cert-Manager](guides/operations-guide/cert-manager/README.md)
     * [Obtaining SSL certificates with the help of cluster-issuer](guides/operations-guide/cert-manager/obtaining-ssl-certificates-with-the-help-of-cluster-issuer.md)
   * [Moving Docker Images](guides/operations-guide/moving-docker-images.md)
