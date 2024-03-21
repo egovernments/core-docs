@@ -77,7 +77,9 @@ onSubmit={onFormSubmit}
 </React.Fragment>
 ```
 
-### **Example Configs** <a href="#ihbe789miobx" id="ihbe789miobx"></a>
+## **Example Configs** <a href="#ihbe789miobx" id="ihbe789miobx"></a>
+
+### **TextInput**
 
 #### **Config for TextInput Component (using FormComposerV2)** <a href="#id-1mwkh8rij8gt" id="id-1mwkh8rij8gt"></a>
 
@@ -130,10 +132,27 @@ For more information: [StoryBook for Text Input field](https://unified-dev.digit
 
 **Type: date**
 
-| <p><strong>{</strong><br><strong>label:"ExampleDate",</strong><br><strong>placeholder:"dd/mm/yyyy"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"date",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultDate",</strong><br><strong>error:"Error Message",</strong></p><p><strong>editableDate:true</strong><br><strong>}</strong><br><strong>}</strong></p> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+{
+label:"ExampleDate",
+placeholder:"dd/mm/yyyy"
+isMandatory: true,
+type:"date",
+disable:false,
+nonEditable:false,
+infoMessage:"Sample info message"
+description:"Help Text"
+charCount:true,
+withoutLabel:false,
+populators:{
+name:"defaultDate",
+error:"Error Message",
+editableDate:true
+}
+}
+```
 
-Usually date can be selected from the date chart, if editableDate is sent as true then date can be editable without using date chart else it cannot be.
+Typically, dates can be chosen from a predetermined chart. If "editableDate" is set to true, then the date can be edited directly without relying on the chart. Otherwise, editing the date directly is not possible.
 
 ![](../../../../../../.gitbook/assets/1.png)
 
@@ -141,19 +160,55 @@ For more information: [StoryBook for date field](https://unified-dev.digit.org/s
 
 **Type: time**
 
-| <p><strong>{</strong><br><strong>label:"ExampleTime",</strong><br><strong>placeholder:"placeholder"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"time",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultTime",</strong><br><strong>error:"Error Message",</strong></p><p><strong>editableTime:true</strong><br><strong>}</strong><br><strong>}</strong></p> |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+{
+label:"ExampleTime",
+placeholder:"placeholder"
+isMandatory: true,
+type:"time",
+disable:false,
+nonEditable:false,
+infoMessage:"Sample info message"
+description:"Help Text"
+charCount:true,
+withoutLabel:false,
+populators:{
+name:"defaultTime",
+error:"Error Message",
+editableTime:true
+}
+}
+```
 
-Usually time can be selected from the time chart, if editableTime is sent as true then time can be editable without using a time chart else it cannot be.![](<../../../../../../.gitbook/assets/2 (1).png>)
+Normally, time can be selected from a designated time chart. If "editableTime" is specified as true, then the time can be edited directly without relying on the time chart. Otherwise, direct editing of the time is not possible.
+
+![](<../../../../../../.gitbook/assets/2 (1).png>)
 
 For more information: [StoryBook for time field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:time)
 
 **Type: geolocation**
 
-| <p><strong>{</strong><br><strong>label:"ExampleGeolocation",</strong><br><strong>placeholder:"placeholder"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"geolocation",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultGeolocation",</strong><br><strong>error:"Error Message",</strong></p><p><strong>onIconSelection:{(e)=>{console.log(“clicked”);}}</strong></p><p><strong>}</strong><br><strong>}</strong></p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+{
+label:"ExampleGeolocation",
+placeholder:"placeholder"
+isMandatory: true,
+type:"geolocation",
+disable:false,
+nonEditable:false,
+infoMessage:"Sample info message"
+description:"Help Text"
+charCount:true,
+withoutLabel:false,
+populators:{
+name:"defaultGeolocation",
+error:"Error Message",
+onIconSelection:{(e)=>{console.log(“clicked”);}}
+}
+}
+```
 
-If the onIconSelection function is sent then that will be called when the geolocation icon is clicked. Else by default location details will be captured.
+If the "onIconSelection" function is provided, it will be called when the geolocation icon is clicked. Otherwise, by default, location details will be captured without any specific action.
 
 ![](../../../../../../.gitbook/assets/3.png)
 
