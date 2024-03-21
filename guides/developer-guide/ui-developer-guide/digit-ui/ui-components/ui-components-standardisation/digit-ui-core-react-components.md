@@ -1,14 +1,18 @@
+---
+description: >-
+  Migration guide to aid users in shifting from the "react-components" package
+  to the "components-core" package
+---
+
 # Digit UI Core React Components
 
-Digit UI - Core React Components
+## **Introduction** <a href="#yy16fmgmik0e" id="yy16fmgmik0e"></a>
 
-### **Introduction** <a href="#yy16fmgmik0e" id="yy16fmgmik0e"></a>
+This document details the essential modifications needed in the modules for smooth integration of components from the "components-core" package. It offers precise guidelines on utilizing FormComposerV2 and InboxSearchComposer, along with updates made in the configs.
 
-The aim of this migration guide is to aid users in shifting from the "react-components" package to the "components-core" package. This document details the essential modifications needed in the modules for smooth integration of components from the "components-core" package. It offers precise guidelines on utilizing FormComposerV2 and InboxSearchComposer, along with updates made in the configs.
+Topics covered:
 
-### **Table Of Contents** <a href="#id-7n0wnnipeow" id="id-7n0wnnipeow"></a>
-
-* Overview
+* [Overview](digit-ui-core-react-components.md#xoaiwtanhl6r)
 * Prerequisites
 * Changes
 * Example Configs
@@ -25,78 +29,100 @@ Furthermore, the components, namely TextInput, TextArea, Radio, Button, Checkbox
 
 These are some of the updations made in the components-core package.
 
-| **ATOM**             | **VARIANTS**                                                                                                            | **STATES**                                                                                                                                                                                         |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TextInput            | <p>Text</p><p>Date</p><p>Time</p><p>Geolocation</p><p>Numeric</p><p>Prefix</p><p>Suffix</p><p>Password</p><p>Search</p> | <p>Default</p><p>Filled</p><p>Disabled</p><p>NonEditable</p><p>Focus</p><p>Error</p><p>Label</p><p>Character Count</p><p>Inner Label</p><p>Info</p><p>Help Text/ Description</p>                   |
-| TextArea             |                                                                                                                         | <p>Default</p><p>Filled</p><p>Disabled</p><p>NonEditable</p><p>Focus</p><p>Error</p><p>Label</p><p>Character Count</p><p>Inner Label</p><p>Info</p><p>Help Text/ Description</p><p>resizeSmart</p> |
-| Radio                | Radio Selection                                                                                                         | <p>Default</p><p>Disabled</p><p>Selected</p><p>PreSelected</p>                                                                                                                                     |
-| Toggle               | Toggle                                                                                                                  | <p>Default</p><p>Disabled</p><p>Selected</p><p>PreSelected</p>                                                                                                                                     |
-| Button               | <p>Primary</p><p>Secondary</p><p>Teritiary</p><p>Link</p>                                                               | <p>Active</p><p>Disabled</p><p>Label</p><p>Interactions</p>                                                                                                                                        |
-| Dropdown             | <p>Default</p><p>Nested</p><p>Tree select</p><p>Profile</p><p>Profile with nested text</p><p>Nested Text</p>            | <p>Default</p><p>Disabled</p><p>Selected</p><p>Interactions</p>                                                                                                                                    |
-| MultiSelect Dropdown | <p>Default</p><p>Nested</p><p>Tree Multiselect</p><p>Nested Text Multiselect</p>                                        | <p>Default</p><p>Disabled</p><p>Selected</p><p>Interactions</p>                                                                                                                                    |
-| Checkbox             | <p>Default</p><p>Checked</p>                                                                                            | <p>Active</p><p>Disabled</p><p>Label</p><p>Interactions</p>                                                                                                                                        |
-| Toast                | <p>Success</p><p>Warning</p><p>Failure</p>                                                                              |                                                                                                                                                                                                    |
-| Info Card            | <p>Default</p><p>Success</p><p>Warning</p><p>Error</p>                                                                  |                                                                                                                                                                                                    |
+<table><thead><tr><th width="154">Atom</th><th width="210">Variants</th><th>State</th></tr></thead><tbody><tr><td>TextInput</td><td><p>Text</p><p>Date</p><p>Time</p><p>Geolocation</p><p>Numeric</p><p>Prefix</p><p>Suffix</p><p>Password</p><p>Search</p></td><td><p>Default</p><p>Filled</p><p>Disabled</p><p>NonEditable</p><p>Focus</p><p>Error</p><p>Label</p><p>Character Count</p><p>Inner Label</p><p>Info</p><p>Help Text/ Description</p></td></tr><tr><td>TextArea</td><td></td><td><p>Default</p><p>Filled</p><p>Disabled</p><p>NonEditable</p><p>Focus</p><p>Error</p><p>Label</p><p>Character Count</p><p>Inner Label</p><p>Info</p><p>Help Text/ Description</p><p>resizeSmart</p></td></tr><tr><td>Radio</td><td>Radio Selection</td><td><p>Default</p><p>Disabled</p><p>Selected</p><p>PreSelected</p></td></tr><tr><td>Toggle</td><td>Toggle</td><td><p>Default</p><p>Disabled</p><p>Selected</p><p>PreSelected</p></td></tr><tr><td>Button</td><td><p>Primary</p><p>Secondary</p><p>Teritiary</p><p>Link</p></td><td><p>Active</p><p>Disabled</p><p>Label</p><p>Interactions</p></td></tr><tr><td>Dropdown</td><td><p>Default</p><p>Nested</p><p>Tree select</p><p>Profile</p><p>Profile with nested text</p><p>Nested Text</p></td><td><p>Default</p><p>Disabled</p><p>Selected</p><p>Interactions</p></td></tr><tr><td>MultiSelect Dropdown</td><td><p>Default</p><p>Nested</p><p>Tree Multiselect</p><p>Nested Text Multiselect</p></td><td><p>Default</p><p>Disabled</p><p>Selected</p><p>Interactions</p></td></tr><tr><td>Checkbox</td><td><p>Default</p><p>Checked</p></td><td><p>Active</p><p>Disabled</p><p>Label</p><p>Interactions</p></td></tr><tr><td>Toast</td><td><p>Success</p><p>Warning</p><p>Failure</p></td><td></td></tr><tr><td>Info Card</td><td><p>Default</p><p>Success</p><p>Warning</p><p>Error</p></td><td></td></tr></tbody></table>
 
-### **Steps to Install** <a href="#jzh2thqrkpa1" id="jzh2thqrkpa1"></a>
+## **Install - Steps** <a href="#jzh2thqrkpa1" id="jzh2thqrkpa1"></a>
 
 To install:
 
-| **npm** **install** **-save** @**egovernments**/**digit**-**ui**-**components**-**core** |
-| ---------------------------------------------------------------------------------------- |
+```
+npm install -save @egovernments/digit-ui-components-core
+```
 
 Add the dependency in the frontend/micro-ui/web/package.json
 
-| "@egovernments/digit-ui-components-core":"0.0.1" |
-| ------------------------------------------------ |
+```
+"@egovernments/digit-ui-components-core":"0.0.1"
+```
 
-### **Changes** <a href="#obzg60wefrmr" id="obzg60wefrmr"></a>
+## **Apply** <a href="#obzg60wefrmr" id="obzg60wefrmr"></a>
 
 Syntax for importing any components:
 
-| **import** {TextInput, Dropdown} **from** "@egovernenets/digit-ui-components-core" |
-| ---------------------------------------------------------------------------------- |
+```
+import {TextInput, Dropdown} from "@egovernenets/digit-ui-components-core"
+```
 
-Syntax for importing FormComposerV2:\
+Syntax for importing FormComposerV2:
 
+```
+import {FormComposerV2} from "@egovernenets/digit-ui-components-core"
+```
 
-| **import** {FormComposerV2} **from** "@egovernenets/digit-ui-components-core" |
-| ----------------------------------------------------------------------------- |
-
-| <p>&#x3C;React.Fragment><br>&#x3C;Header >{t("CREATE_HEADER")}&#x3C;/Header><br>&#x3C;FormComposerV2<br>label={t("PROCEED")}<br>config={configs.map((config) => {<br>return {<br>...config,<br><strong>body: config.body.filter((a) => !a.hideInEmployee),</strong><br>};<br>})}<br>defaultValues={sessionFormData}<br>onFormValueChange={onFormValueChange}<br>onSubmit={onFormSubmit}<br>/><br>&#x3C;/React.Fragment></p> |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+<React.Fragment>
+<Header >{t("CREATE_HEADER")}</Header>
+<FormComposerV2
+label={t("PROCEED")}
+config={configs.map((config) => {
+return {
+...config,
+body: config.body.filter((a) => !a.hideInEmployee),
+};
+})}
+defaultValues={sessionFormData}
+onFormValueChange={onFormValueChange}
+onSubmit={onFormSubmit}
+/>
+</React.Fragment>
+```
 
 ### **Example Configs** <a href="#ihbe789miobx" id="ihbe789miobx"></a>
 
 #### **Config for TextInput Component (using FormComposerV2)** <a href="#id-1mwkh8rij8gt" id="id-1mwkh8rij8gt"></a>
 
-**Type: text**\
+**Type: text**
 
+```
+{
+inline:true,
+label:"Example",
+placeholder:"Enter Text"
+isMandatory: true,
+type:"text",
+disable:false,
+nonEditable:false,
+infoMessage:"Sample info message"
+description:"Help Text"
+charCount:true,
+withoutLabel:false,
+populators:{
+name:"defaultText",
+error:"Error Message",
+validation:{minLength:2, maxLength:10},
+customIcon:"DownloadIcon",
+onIconSelection:{(e)=>{console.log("clicked");}}
+prefix:"$",
+suffix:"$",
+wrapLabel:true
+}
+}
+```
 
-| <p><strong>{</strong><br><strong>inline:true,</strong><br><strong>label:"Example",</strong><br><strong>placeholder:"Enter Text"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"text",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultText",</strong><br><strong>error:"Error Message",</strong><br><strong>validation:{minLength:2, maxLength:10},</strong><br><strong>customIcon:"DownloadIcon",</strong><br><strong>onIconSelection:{(e)=>{console.log("clicked");}}</strong><br><strong>prefix:"$",</strong><br><strong>suffix:"$",</strong></p><p><strong>wrapLabel:true</strong><br><strong>}</strong><br><strong>}</strong></p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+Below are the details for the type: text:
 
-Here for the type: text:
+<table><thead><tr><th width="229">Label</th><th>Label for text field</th></tr></thead><tbody><tr><td>placeholder</td><td>Placeholder for the text field</td></tr><tr><td>isMandatory</td><td>Whether field is mandatory or not</td></tr><tr><td>disable</td><td>To disable the text field (no interaction will be possible if disabled)</td></tr><tr><td>nonEditable</td><td>To make text field readOnly</td></tr><tr><td>infoMessage</td><td>Information to be shown when hovered on the info icon beside the label</td></tr><tr><td>description</td><td>Help text for the text field</td></tr><tr><td>charCount</td><td>Number of characters in the input value</td></tr><tr><td>withoutLabel</td><td>Default will be false, if sent as true then label won't be shown</td></tr><tr><td>populators</td><td><p>Name : Mandatory field</p><p>Error : Error message to be shown</p><p>Validations: if required like maxlength, minlength etc</p><p>customIcon: to show any icon inside the text field (can be sent as a string)</p><p>onIconSelection: IconSelection function</p><p>Prefix: To show prefix</p><p>Suffix: to show suffix</p></td></tr><tr><td>wrapLabel</td><td>Can wrap label to the next line in desktop and tablet screens</td></tr></tbody></table>
 
-| label        | Label for text field                                                                                                                                                                                                                                                                                                          |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| placeholder  | Placeholder for the text field                                                                                                                                                                                                                                                                                                |
-| isMandatory  | Whether field is mandatory or not                                                                                                                                                                                                                                                                                             |
-| disable      | To disable the text field (no interaction will be possible if disabled)                                                                                                                                                                                                                                                       |
-| nonEditable  | To make text field readOnly                                                                                                                                                                                                                                                                                                   |
-| infoMessage  | Information to be shown when hovered on the info icon beside the label                                                                                                                                                                                                                                                        |
-| description  | Help text for the text field                                                                                                                                                                                                                                                                                                  |
-| charCount    | Number of characters in the input value                                                                                                                                                                                                                                                                                       |
-| withoutLabel | Default will be false, if sent as true then label won't be shown                                                                                                                                                                                                                                                              |
-| populators   | <p>Name : Mandatory field</p><p>Error : Error message to be shown</p><p>Validations: if required like maxlength, minlength etc</p><p>customIcon: to show any icon inside the text field (can be sent as a string)</p><p>onIconSelection: IconSelection function</p><p>Prefix: To show prefix</p><p>Suffix: to show suffix</p> |
-| wrapLabel    | Can wrap label to the next line in desktop and tablet screens                                                                                                                                                                                                                                                                 |
+**Example Usage of TextInput Component**
 
-**Example Usage of TextInput Component :**
-
-
-
-| <p>&#x3C;TextInput<br>type="text"<br>disabled={false}<br>populators={{customIcon: "MyLocation"}<br>onIconSelection={()=>{console.log("selected")}<br>>&#x3C;/TextInput></p> |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+<TextInput
+type="text"
+disabled={false}
+populators={{customIcon: "MyLocation"}
+onIconSelection={()=>{console.log("selected")}
+></TextInput>
+```
 
 ![](../../../../../../.gitbook/assets/0.png)
 

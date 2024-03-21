@@ -8,7 +8,7 @@ This technical documentation provides a comprehensive approach to enhancing a UI
 
 To address UI/UX audit bugs, we will integrate newer components that offer improved functionality, design, and performance. These components should align with current design trends and user expectations, enhancing the overall user experience.\
 \
-Below is the list of Digit Components
+Below is the list of DIGIT Components
 
 {% embed url="https://docs.google.com/spreadsheets/d/e/2PACX-1vRJ2qq0SfjgJzTbwMzcVXxt-2JEIo0aIQUJqCkgRPkN0gT-gHCMplWuXSlwCFmif9SRP8nZkhTm9Y0D/pubhtml" %}
 
