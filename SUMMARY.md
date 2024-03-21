@@ -279,7 +279,7 @@
     * [Best Practices & Tips](guides/developer-guide/flutter-ui-developer-guide/best-practices-and-tips.md)
     * [Troubleshooting](guides/developer-guide/flutter-ui-developer-guide/troubleshooting.md)
   * [UI Developer Guide](guides/developer-guide/ui-developer-guide/README.md)
-    * [DIGIT-UI](guides/developer-guide/ui-developer-guide/digit-ui/README.md)
+    * [DIGIT-UI](guides/developer-guide/ui-developer-guide/digit-ui.md)
       * [UI Components](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/README.md)
         * [UI Components Standardisation](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/README.md)
           * [Digit UI Core React Components](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components.md)

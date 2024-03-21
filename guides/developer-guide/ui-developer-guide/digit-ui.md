@@ -8,23 +8,23 @@ description: Key components of DIGIT-UI
 
 This page provides the architecture and key features of the DIGIT UI. Click on the broader headings below to find the details.
 
-* [Frontend components](./#frontend-components-1)
-* [UI Architecture](./#architecture)
-* [Employee/Citizen App](./#employee-citizen-app)
+* [Frontend components](digit-ui.md#frontend-components-1)
+* [UI Architecture](digit-ui.md#architecture)
+* [Employee/Citizen App](digit-ui.md#employee-citizen-app)
 
 ## Frontend Components <a href="#frontend-components" id="frontend-components"></a>
 
 Broadly, the DIGIT UI frontend components are categorized as below:
 
-1. [Libraries](./#css-library)
-2. [CSS Library](./#css-library)
-3. [React Components](./#component-libraries)
-4. [UI Modules](./#modules)
-5. [Templates](./#templates)
+1. [Libraries](digit-ui.md#css-library)
+2. [CSS Library](digit-ui.md#css-library)
+3. [React Components](digit-ui.md#component-libraries)
+4. [UI Modules](digit-ui.md#modules)
+5. [Templates](digit-ui.md#templates)
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure>
 
 </div>
 
@@ -35,7 +35,7 @@ Broadly, the DIGIT UI frontend components are categorized as below:
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/image (306).png" alt="" width="543"><figcaption><p>module naming convention</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (306).png" alt="" width="543"><figcaption><p>module naming convention</p></figcaption></figure>
 
 </div>
 
@@ -81,7 +81,7 @@ We have two main React Apps:
      * Dockerfile & nginx.conf
      * build-config.yaml
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### CSS Library
 
@@ -89,7 +89,7 @@ The CSS Library contains all the classes both in the module and compiled form.
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.05.10 PM.png" alt="" width="521"><figcaption><p>css folder structure</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-16 at 12.05.10 PM.png" alt="" width="521"><figcaption><p>css folder structure</p></figcaption></figure>
 
 </div>
 
@@ -103,7 +103,7 @@ Component Library contains a set of all the required components defined in them.
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.06.23 PM.png" alt="" width="540"><figcaption><p>react-components</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-16 at 12.06.23 PM.png" alt="" width="540"><figcaption><p>react-components</p></figcaption></figure>
 
 </div>
 
@@ -117,7 +117,7 @@ These contain the following:
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.07.18 PM.png" alt="" width="534"><figcaption><p>libraries</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-16 at 12.07.18 PM.png" alt="" width="534"><figcaption><p>libraries</p></figcaption></figure>
 
 </div>
 
@@ -129,7 +129,7 @@ Below is an illustration of how the modules structure looks like:
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.09.36 PM.png" alt="" width="365"><figcaption><p>modules</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-16 at 12.09.36 PM.png" alt="" width="365"><figcaption><p>modules</p></figcaption></figure>
 
 </div>
 
@@ -155,6 +155,6 @@ In the next phase, the Employee and Citizen app can be rewritten as a single app
 ## Related Links
 
 \
-[Prerequisite reference study materials](../../pre-requisites-training-resources.md)
+[Prerequisite reference study materials](../pre-requisites-training-resources.md)
 
-[Troubleshoot using Browser network Tab](../faqs/troubleshoot-using-browser-network-tab.md)
+[Troubleshoot using Browser network Tab](faqs/troubleshoot-using-browser-network-tab.md)

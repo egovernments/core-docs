@@ -107,7 +107,7 @@ Audio transcription is the process of converting an audio file to written text. 
 
 ![](<../../../.gitbook/assets/4 (1) (1).png>)
 
-![](<../../../.gitbook/assets/5 (1).png>)
+![](../../../.gitbook/assets/5.png)
 
 <div align="left">
 
@@ -153,7 +153,7 @@ In the existing version of the chatbot, the user has to select his/her city from
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/12 (1).png" alt="" width="375">
+<img src="../../../.gitbook/assets/12.png" alt="" width="375">
 
 </div>
 

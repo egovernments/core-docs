@@ -118,7 +118,7 @@ For more information: [StoryBook for date field](https://unified-dev.digit.org/s
 | <p><strong>{</strong><br><strong>label:"ExampleTime",</strong><br><strong>placeholder:"placeholder"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"time",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultTime",</strong><br><strong>error:"Error Message",</strong></p><p><strong>editableTime:true</strong><br><strong>}</strong><br><strong>}</strong></p> |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-Usually time can be selected from the time chart, if editableTime is sent as true then time can be editable without using a time chart else it cannot be.![](../../../../../../.gitbook/assets/2.png)
+Usually time can be selected from the time chart, if editableTime is sent as true then time can be editable without using a time chart else it cannot be.![](<../../../../../../.gitbook/assets/2 (1).png>)
 
 For more information: [StoryBook for time field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:time)
 
@@ -142,7 +142,7 @@ Numeric value by default increases and decreases by step value 1.
 
 But it can be configured using the step value sent as prop in the config.
 
-![](../../../../../../.gitbook/assets/4.png)
+![](<../../../../../../.gitbook/assets/4 (1).png>)
 
 For more information: [StoryBook for Numeric field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:numeric)
 
@@ -151,7 +151,7 @@ For more information: [StoryBook for Numeric field](https://unified-dev.digit.or
 | <p><strong>{</strong><br><strong>label:"ExamplePrefix",</strong><br><strong>placeholder:"placeholder"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"text",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultText",</strong><br><strong>error:"Error Message",</strong></p><p><strong>prefix:”+91”</strong></p><p><strong>},</strong><br><strong>}</strong></p> |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-![](../../../../../../.gitbook/assets/5.png)
+![](<../../../../../../.gitbook/assets/5 (1).png>)
 
 | <p><strong>{</strong><br><strong>label:"ExampleSuffix",</strong><br><strong>placeholder:"placeholder"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"text",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultText",</strong><br><strong>error:"Error Message",</strong></p><p><strong>suffix:”Kg”</strong></p><p><strong>},</strong><br><strong>}</strong></p> |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -206,7 +206,7 @@ For more information: [Storybook for radio field](https://unified-dev.digit.org/
 | <p><strong>{</strong><br><strong>isMandatory: false,</strong><br><strong>key: "toggle",</strong><br><strong>type: "toggle",</strong><br><strong>label: "Default",</strong><br><strong>disable: false,</strong><br><strong>populators: {</strong><br><strong>name: "toggle-Default",</strong><br><strong>optionsKey: "name",</strong><br><strong>error: "Error!",</strong><br><strong>required: false,</strong><br><strong>options: [</strong><br><strong>{</strong><br><strong>code: "1",</strong><br><strong>name: "Toggle1",</strong><br><strong>},</strong><br><strong>{</strong><br><strong>code: "2",</strong><br><strong>name: "Toggle2",</strong><br><strong>},</strong><br><strong>{</strong><br><strong>code: "3",</strong><br><strong>name: "Toggle3",</strong><br><strong>},</strong><br><strong>],</strong><br><strong>},</strong><br><strong>}</strong></p> |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-![](../../../../../../.gitbook/assets/12.png)
+![](<../../../../../../.gitbook/assets/12 (1).png>)
 
 For more information: [StoryBook for toggle field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-togglefield--default)
 
