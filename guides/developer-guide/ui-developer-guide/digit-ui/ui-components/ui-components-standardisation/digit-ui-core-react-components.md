@@ -13,13 +13,13 @@ This document details the essential modifications needed in the modules for smoo
 Topics covered:
 
 * [Overview](digit-ui-core-react-components.md#xoaiwtanhl6r)
-* Prerequisites
-* Changes
-* Example Configs
+* [Install](digit-ui-core-react-components.md#jzh2thqrkpa1)
+* [Apply](digit-ui-core-react-components.md#obzg60wefrmr)
+* [Example Configs](digit-ui-core-react-components.md#ihbe789miobx)
 * Modifications to the Project Module
 * Conclusion
 
-### **Overview** <a href="#xoaiwtanhl6r" id="xoaiwtanhl6r"></a>
+## **Overview** <a href="#xoaiwtanhl6r" id="xoaiwtanhl6r"></a>
 
 In the components-core package, several enhancements have been implemented to improve code clarity and address issues related to pixel inconsistencies. Previously, there were challenges associated with pixel-based sizing, leading to inconsistencies across different devices and screen resolutions. To mitigate this, the codebase has been updated to utilize rems as the primary unit of measurement. This transition to rems offers several advantages over pixels, including improved scalability and responsiveness across various viewport sizes.
 
@@ -31,7 +31,7 @@ These are some of the updations made in the components-core package.
 
 <table><thead><tr><th width="154">Atom</th><th width="210">Variants</th><th>State</th></tr></thead><tbody><tr><td>TextInput</td><td><p>Text</p><p>Date</p><p>Time</p><p>Geolocation</p><p>Numeric</p><p>Prefix</p><p>Suffix</p><p>Password</p><p>Search</p></td><td><p>Default</p><p>Filled</p><p>Disabled</p><p>NonEditable</p><p>Focus</p><p>Error</p><p>Label</p><p>Character Count</p><p>Inner Label</p><p>Info</p><p>Help Text/ Description</p></td></tr><tr><td>TextArea</td><td></td><td><p>Default</p><p>Filled</p><p>Disabled</p><p>NonEditable</p><p>Focus</p><p>Error</p><p>Label</p><p>Character Count</p><p>Inner Label</p><p>Info</p><p>Help Text/ Description</p><p>resizeSmart</p></td></tr><tr><td>Radio</td><td>Radio Selection</td><td><p>Default</p><p>Disabled</p><p>Selected</p><p>PreSelected</p></td></tr><tr><td>Toggle</td><td>Toggle</td><td><p>Default</p><p>Disabled</p><p>Selected</p><p>PreSelected</p></td></tr><tr><td>Button</td><td><p>Primary</p><p>Secondary</p><p>Teritiary</p><p>Link</p></td><td><p>Active</p><p>Disabled</p><p>Label</p><p>Interactions</p></td></tr><tr><td>Dropdown</td><td><p>Default</p><p>Nested</p><p>Tree select</p><p>Profile</p><p>Profile with nested text</p><p>Nested Text</p></td><td><p>Default</p><p>Disabled</p><p>Selected</p><p>Interactions</p></td></tr><tr><td>MultiSelect Dropdown</td><td><p>Default</p><p>Nested</p><p>Tree Multiselect</p><p>Nested Text Multiselect</p></td><td><p>Default</p><p>Disabled</p><p>Selected</p><p>Interactions</p></td></tr><tr><td>Checkbox</td><td><p>Default</p><p>Checked</p></td><td><p>Active</p><p>Disabled</p><p>Label</p><p>Interactions</p></td></tr><tr><td>Toast</td><td><p>Success</p><p>Warning</p><p>Failure</p></td><td></td></tr><tr><td>Info Card</td><td><p>Default</p><p>Success</p><p>Warning</p><p>Error</p></td><td></td></tr></tbody></table>
 
-## **Install - Steps** <a href="#jzh2thqrkpa1" id="jzh2thqrkpa1"></a>
+## **Install**  <a href="#jzh2thqrkpa1" id="jzh2thqrkpa1"></a>
 
 To install:
 
@@ -216,8 +216,25 @@ For more information: [StoryBook for Geolocation field](https://unified-dev.digi
 
 **Type: numeric**
 
-| <p><strong>{</strong><br><strong>label:"ExampleNumeric",</strong><br><strong>placeholder:"placeholder"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"numeric",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultGeolocation",</strong><br><strong>error:"Error Message",</strong></p><p><strong>},</strong></p><p><strong>config:{step:””}</strong><br><strong>}</strong></p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+{
+label:"ExampleNumeric",
+placeholder:"placeholder"
+isMandatory: true,
+type:"numeric",
+disable:false,
+nonEditable:false,
+infoMessage:"Sample info message"
+description:"Help Text"
+charCount:true,
+withoutLabel:false,
+populators:{
+name:"defaultGeolocation",
+error:"Error Message",
+},
+config:{step:””}
+}
+```
 
 Numeric value by default increases and decreases by step value 1.
 
@@ -229,8 +246,25 @@ For more information: [StoryBook for Numeric field](https://unified-dev.digit.or
 
 **With Prefix and Suffix**
 
-| <p><strong>{</strong><br><strong>label:"ExamplePrefix",</strong><br><strong>placeholder:"placeholder"</strong><br><strong>isMandatory: true,</strong><br><strong>type:"text",</strong><br><strong>disable:false,</strong><br><strong>nonEditable:false,</strong><br><strong>infoMessage:"Sample info message"</strong><br><strong>description:"Help Text"</strong><br><strong>charCount:true,</strong><br><strong>withoutLabel:false,</strong><br><strong>populators:{</strong><br><strong>name:"defaultText",</strong><br><strong>error:"Error Message",</strong></p><p><strong>prefix:”+91”</strong></p><p><strong>},</strong><br><strong>}</strong></p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+{
+label:"ExamplePrefix",
+placeholder:"placeholder"
+isMandatory: true,
+type:"text",
+disable:false,
+nonEditable:false,
+infoMessage:"Sample info message"
+description:"Help Text"
+charCount:true,
+withoutLabel:false,
+populators:{
+name:"defaultText",
+error:"Error Message",
+prefix:”+91”
+},
+}
+```
 
 ![](<../../../../../../.gitbook/assets/5 (1).png>)
 
