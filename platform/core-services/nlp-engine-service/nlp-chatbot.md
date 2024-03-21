@@ -97,21 +97,21 @@ Audio transcription is the process of converting an audio file to written text. 
 
 **Bill payment chatbot working:**
 
-![](../../../.gitbook/assets/0.png)
+![](<../../../.gitbook/assets/0 (1).png>)
 
-![](../../../.gitbook/assets/1.png)
+![](<../../../.gitbook/assets/1 (1).png>)
 
-![](<../../../.gitbook/assets/2 (1).png>)
+![](<../../../.gitbook/assets/2 (1) (1).png>)
 
-![](<../../../.gitbook/assets/3 (1).png>)
+![](<../../../.gitbook/assets/3 (1) (1).png>)
 
-![](<../../../.gitbook/assets/4 (1).png>)
+![](<../../../.gitbook/assets/4 (1) (1).png>)
 
-![](../../../.gitbook/assets/5.png)
+![](<../../../.gitbook/assets/5 (1).png>)
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/6 (1).png" alt="" width="180">
+<img src="../../../.gitbook/assets/6 (1) (1).png" alt="" width="180">
 
 </div>
 
@@ -119,19 +119,19 @@ Audio transcription is the process of converting an audio file to written text. 
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/7.png" alt="">
+<img src="../../../.gitbook/assets/7 (1).png" alt="">
 
 </div>
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/8.png" alt="">
+<img src="../../../.gitbook/assets/8 (1).png" alt="">
 
 </div>
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/9.png" alt="">
+<img src="../../../.gitbook/assets/9 (1).png" alt="">
 
 </div>
 
@@ -141,31 +141,31 @@ In the existing version of the chatbot, the user has to select his/her city from
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/10.png" alt="" width="375">
+<img src="../../../.gitbook/assets/10 (1).png" alt="" width="375">
 
 </div>
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/11.png" alt="" width="375">
+<img src="../../../.gitbook/assets/11 (1).png" alt="" width="375">
 
 </div>
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/12.png" alt="" width="375">
+<img src="../../../.gitbook/assets/12 (1).png" alt="" width="375">
 
 </div>
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/13.png" alt="" width="375">
+<img src="../../../.gitbook/assets/13 (1).png" alt="" width="375">
 
 </div>
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/14.png" alt="" width="375">
+<img src="../../../.gitbook/assets/14 (1).png" alt="" width="375">
 
 </div>
 
