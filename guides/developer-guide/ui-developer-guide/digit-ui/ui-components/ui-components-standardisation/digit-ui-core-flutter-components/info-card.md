@@ -1,19 +1,21 @@
 # Info Card
 
+## Overview
+
 This widget is a versatile and customizable information card designed inside a digit ui widget. It provides a visually appealing way to display information, with options for different types of information.
 
 The Info Card supports different types of information, each with its distinct visual style:
 
 * Info: Default information card with a blue background and an information icon.
-* Success: Represents a successful operation, featuring a green background and a check-circle icon.
+* Success: This represents a successful operation, featuring a green background and a check-circle icon.
 * Error: Indicates an error or unsuccessful operation with a red background and an error icon.
 * Warning: Represents a warning or caution, featuring a yellow background and a warning icon.
 
 Developers can include additional widgets beneath the description for extra information or interactive elements. The inline property controls whether these widgets are displayed horizontally or vertically.
 
-**Properties:**
+## **Properties**
 
-Info card have following **required** parameters:
+Info cards contain the following **required** parameters:
 
 ```
 Name                             Description
@@ -45,9 +47,9 @@ additionalWidgets               a list of widget to display below description
 inline                          determine whether additional widgets displayed inline
 ```
 
-**Usages:**
+**Usages**
 
-**Info Card:**
+**Info Card**
 
 <pre><code>InfoCard(
   title: 'Info',
@@ -56,7 +58,7 @@ inline                          determine whether additional widgets displayed i
 </strong>);
 </code></pre>
 
-**Success Card:**
+**Success Card**
 
 <pre><code>InfoCard(
   title: 'Success',
@@ -65,7 +67,7 @@ inline                          determine whether additional widgets displayed i
 );
 </code></pre>
 
-**Error Card:**
+**Error Card**
 
 ```
 InfoCard(
@@ -75,7 +77,7 @@ InfoCard(
 );
 ```
 
-**Warning Card:**
+**Warning Card**
 
 ```
 InfoCard(
@@ -84,3 +86,4 @@ InfoCard(
   Description: 'description'
 );
 ```
+

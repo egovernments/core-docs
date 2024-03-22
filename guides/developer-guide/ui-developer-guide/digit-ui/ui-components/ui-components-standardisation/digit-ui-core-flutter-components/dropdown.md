@@ -2,7 +2,7 @@
 
 ## Overview <a href="#dx8hmybsdzva" id="dx8hmybsdzva"></a>
 
-Digit UI Components offers various drop-down menus, including single-select, multi-select, and tree-select options.
+DIGIT UI components offer various drop-down menus, including single-select, multi-select, and tree-select options.
 
 ## Single Select Drop-down <a href="#dx8hmybsdzva" id="dx8hmybsdzva"></a>
 
@@ -202,7 +202,7 @@ TreeSelectDropDown<int>(
 
 ### Multi Select Drop-down <a href="#qu8jdmpofhjw" id="qu8jdmpofhjw"></a>
 
-The Multi-Select drop down in DIGIT UI components offers a user-friendly interface for selecting multiple options simultaneously. This clean and intuitive component is equipped with built-in chips and provides responsive mouse-down and hover effects.
+The Multi-Select drop-down in DIGIT UI components offers a user-friendly interface for selecting multiple options simultaneously. This clean and intuitive component is equipped with built-in chips and provides responsive mouse-down and hover effects.
 
 **Sub-Types**
 

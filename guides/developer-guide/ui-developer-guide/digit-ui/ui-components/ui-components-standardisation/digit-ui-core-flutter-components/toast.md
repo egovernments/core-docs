@@ -1,5 +1,7 @@
 # Toast
 
+## Overview
+
 The Toast widget provides a customizable toast notification for Flutter applications. It is designed to display short-lived messages, alerts, or notifications to users in a visually appealing and informative manner.
 
 The **ToastType** enumeration defines different types of toasts, including:
@@ -8,9 +10,9 @@ The **ToastType** enumeration defines different types of toasts, including:
 * error: Indicates an error or failure.
 * warning: Indicates a warning or caution.
 
-**Properties:**
+## **Properties**
 
-The Toast widget provides a static method show for displaying toasts. This method includes the following parameters:
+The Toast widget provides a static method for displaying toasts. This method includes the following parameters:
 
 ```
 Name                                Description
@@ -30,9 +32,9 @@ duration                           how long the toast message will be shown
                                    (default: 5 sec)
 ```
 
-**Usage:**
+**Usage**
 
-**Success Toast:**
+**Success Toast**
 
 ```
 Toast.show(context,
@@ -40,7 +42,7 @@ options: DigitToastOptions(
 "Your Success message", ToastType.success));
 ```
 
-**Error Toast:**
+**Error Toast**
 
 ```
 Toast.show(context,
@@ -48,7 +50,7 @@ options: DigitToastOptions(
 "Your Error message", ToastType.error));
 ```
 
-**Warning Toast:**
+**Warning Toast**
 
 ```
 Toast.show(context,
