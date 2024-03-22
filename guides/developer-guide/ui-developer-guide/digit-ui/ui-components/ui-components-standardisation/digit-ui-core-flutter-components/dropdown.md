@@ -1,24 +1,22 @@
----
-description: >-
-  Digit UI Components offers various drop down menus, including single-select,
-  multi-select, and tree-select options.
----
-
 # Dropdown
 
-### Single Select Drop down: <a href="#dx8hmybsdzva" id="dx8hmybsdzva"></a>
+## Overview <a href="#dx8hmybsdzva" id="dx8hmybsdzva"></a>
 
-The Single Select Drop down in Digit UI Components provides a drop down menu for users to make a single selection. It supports various features such as item filtering, selection handling. This intuitive component supports options with additional features such as images, icons, and descriptions, complemented by hover and mouse-down effects.
+Digit UI Components offers various drop-down menus, including single-select, multi-select, and tree-select options.
 
-**Sub Types:**
+## Single Select Drop-down <a href="#dx8hmybsdzva" id="dx8hmybsdzva"></a>
 
-* Default Drop down
-* Nested Drop down
-* Tree Drop down
+The Single Select drop-down in Digit UI Components provides a drop-down menu for users to make a single selection. It supports various features such as item filtering and selection handling. This intuitive component supports options with additional features such as images, icons, and descriptions, complemented by hover and mouse-down effects.
 
-**Properties:**
+**Sub-Types**
 
-These are some **required** parameters:
+* Default drop-down
+* Nested drop-down
+* Tree drop-down
+
+**Properties**
+
+Below are some **required** parameters:
 
 ```
 Name                             Description
@@ -47,12 +45,12 @@ suffixIcon                    modify the suffixIcon to open dropdown
 </strong></code></pre>
 
 ```
-emptyItemText                 Text to display when empty options are send or no match
+emptyItemText                 Text to display when empty options are sent or no match
                               is found during searching
 ```
 
 ```
-isSearchable                 flag indicating if dropdown should support filtering
+isSearchable                 flag indicating if the dropdown should support filtering
                              option
 ```
 
@@ -64,11 +62,11 @@ selectedOption              the default selected option
 isDisabled                 flag indicating where dropdown is disabled(default: false)
 ```
 
-**DropdownItem:**
+**DropdownItem**
 
-Inside the dropdown item, we can pass additional parameters to include inside the drop down like description, image and icons.
+Inside the dropdown item, we can pass additional parameters to include the drop-down like description, image and icons.
 
-There are the customisation available inside dropdown item:
+There are the customisations available inside the drop-down item:
 
 ```
 code(required)                 unique identifier for option
@@ -91,28 +89,28 @@ textIcon                      Icon to be displayed inside the dropdown option
 ```
 
 ```
-type                          incase of nested dropdown type will be send
+type                          in case of nested dropdown type will be sent
 ```
 
-**TreeNode:**
+**TreeNode**
 
-Inside the tree node we can pass list of children associated with a node:
+Inside the tree node we can pass a list of children associated with a node:
 
 ```
 code(required)                 unique identifier for that node
 ```
 
 ```
-name(required)                 displaying name or label for the node
+name(required)                 displaying the name or label for the node
 ```
 
 ```
-children                      a list of tree node
+children                      a list of the tree node
 ```
 
-**Usages:**
+**Usages**
 
-**Default Drop down**
+**Default drop-down**
 
 ```
 DigitDropdown<int>(
@@ -163,7 +161,7 @@ With description and profile image:
 );
 </code></pre>
 
-**Nested Drop down**
+**Nested drop-down**
 
 ```
 DigitDropdown<int>(
@@ -181,7 +179,7 @@ DigitDropdown<int>(
 );
 ```
 
-**Tree Drop down**
+**Tree drop-down**
 
 ```
 TreeSelectDropDown<int>(
@@ -202,19 +200,19 @@ TreeSelectDropDown<int>(
 );
 ```
 
-### Multi Select Drop down: <a href="#qu8jdmpofhjw" id="qu8jdmpofhjw"></a>
+### Multi Select Drop-down <a href="#qu8jdmpofhjw" id="qu8jdmpofhjw"></a>
 
-The Multi Select Drop down in Digit UI Components offers a user-friendly interface for selecting multiple options simultaneously. This clean and intuitive component is equipped with built-in chips and provides responsive mouse-down and hover effects.
+The Multi-Select drop down in DIGIT UI components offers a user-friendly interface for selecting multiple options simultaneously. This clean and intuitive component is equipped with built-in chips and provides responsive mouse-down and hover effects.
 
-**Sub Types:**
+**Sub-Types**
 
-* Default Drop down
-* Nested Drop down
-* Tree Drop down
+* Default drop-down
+* Nested drop-down
+* Tree drop-down
 
-**Properties:**
+**Properties**
 
-These are some **required** parameters:
+Below are some **required** parameters:
 
 ```
 Name                             Description
@@ -225,7 +223,7 @@ options                         A list of DropdownItem representing options
 ```
 
 ```
-onOptionSelected                callback function when a option is selected
+onOptionSelected                callback function when an option is selected
 ```
 
 These are some additional parameters:
@@ -243,7 +241,7 @@ selectedOptions                  List of DropdownItem, which will be selected by
 ```
 
 ```
-chipConfig                       configuration of appearance of of selected option
+chipConfig                       configuration of appearance of selected option
 ```
 
 ```
@@ -270,9 +268,9 @@ valueMapper                      mapper to show selected option inside the chip
 controller                      MultiSelectController can be passed
 ```
 
-**Usages:**
+**Usages**
 
-**Default Drop down:**
+**Default Drop-down**
 
 ```
 MultiSelectDropDown<int>(
@@ -287,7 +285,7 @@ MultiSelectDropDown<int>(
 );
 ```
 
-**Nested Drop down**
+**Nested Drop-down**
 
 ```
 MultiSelectDropDown<int>(
@@ -310,7 +308,7 @@ MultiSelectDropDown<int>(
 );
 ```
 
-**Tree Drop down**
+**Tree Drop-down**
 
 ```
 TreeSelectDropDown<int>(

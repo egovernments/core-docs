@@ -1,8 +1,10 @@
 # Radio
 
+## Overview
+
 The Radio Buttons component in Digit UI Components empowers users to make a single selection from a list of options. This intuitive interface provides a smooth user experience with hover and mouse-down effects. It is designed to handle both horizontal and vertical layouts based on the screen width.
 
-**Properties:**
+## **Properties**
 
 These are some **required** parameters inside the radio list:
 
@@ -22,7 +24,7 @@ These are additional parameters:
 
 ```
 groupValue                  the current selected value in the radio group, using this
-                            any radio button can be selected initially, default is a
+                            any radio button can be selected initially, the default is a
                             empty string.
 ```
 
@@ -34,9 +36,9 @@ isDisabled                   indicates whether radio buttons are disabled
 containerPadding              padding applied around each radio button
 ```
 
-**Usages:**
+**Usages**
 
-Add this lines of code:
+Add these lines of code:
 
 ```
 RadioList(

@@ -1,10 +1,12 @@
 # Toggle
 
-The Toggle Buttons component in Digit UI Components presents a list of interactive toggle buttons, providing users with the ability to select an option. Each button is equipped with callbacks for both mouse-down and hover effects, ensuring a responsive and engaging user interface.
+## Overview
 
-**Properties:**
+The Toggle Buttons component in DIGIT UI components presents a list of interactive toggle buttons, providing users with the ability to select an option. Each button is equipped with callbacks for both mouse-down and hover effects, ensuring a responsive and engaging user interface.
 
-This widget has following **required** parameters:
+## **Properties**
+
+This widget contains the following **required** parameters:
 
 ```
 Name                           Description
@@ -19,7 +21,7 @@ toggleButtons                   A list of ToggleButtonModels that define the tog
 onChanged                       a callback when a toggle is selected
 ```
 
-These are some additional parameters:
+Below are some additional parameters:
 
 ```
 selectedIndex                 initially selected toggle(by default first toggle will 
@@ -30,7 +32,7 @@ selectedIndex                 initially selected toggle(by default first toggle 
 contentPadding                optional Padding around toggle buttons
 ```
 
-**Usages:**
+**Usages**
 
 Add the following lines of code:
 

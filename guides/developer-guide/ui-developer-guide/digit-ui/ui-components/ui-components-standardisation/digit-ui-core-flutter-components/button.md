@@ -1,11 +1,15 @@
 # Button
 
-Digit UI Components provides a variety of buttons with optional suffix and prefix icons, contributing to a cohesive and visually appealing UI.
+## Overview
 
-**Button Type:**
+Digit UI components provide a variety of buttons with optional suffix and prefix icons, contributing to a cohesive and visually appealing UI.
 
-* Primary: Represents the primary action. It features a prominent color, and its appearance can change on hover or click.
-* Secondary: Offers a secondary action. It has a different color scheme than the primary button.
+## Properties
+
+**Button Type**
+
+* Primary: Represents the primary action. It features a prominent colour, and its appearance can change on hover or click.
+* Secondary: Offers a secondary action. It has a different colour scheme than the primary button.
 * Tertiary: Provides a tertiary action with a distinct visual style.
 * Link: Resembles a hyperlink, suitable for navigation or linking to other parts of the application. It typically includes an underline.
 
@@ -17,9 +21,9 @@ The DigitButton widget handles hover effects and a disabled state. When the butt
 
 The widget supports the placement of icons both before and after the label text. This allows for flexibility in button design.
 
-**Properties:**
+**Properties**
 
-It contains following **required** Parameters:
+It contains the following **required** Parameters:
 
 ```
 Name                         Description
@@ -40,20 +44,20 @@ type                        specify the type of button(primary or secondary)
 These are some optional parameters:
 
 ```
-PrefixIcon                  Icon to displayed before the label text
+PrefixIcon                  Icon to be displayed before the label text
 ```
 
 ```
-SuffixIcon                  Icon to displayed after the label text
+SuffixIcon                  Icon to be displayed after the label text
 ```
 
 ```
-isDisabled                  indicates where the button is in disabled state
+isDisabled                  indicates where the button is in a disabled state
 ```
 
-### Primary Button: <a href="#id-9cct4ogihm4j" id="id-9cct4ogihm4j"></a>
+### Primary Button <a href="#id-9cct4ogihm4j" id="id-9cct4ogihm4j"></a>
 
-To use primary button add this lines of code:
+To use the primary button add the below lines of code:
 
 ```
 Button(
@@ -84,11 +88,9 @@ With prefix Icon:
 );
 </code></pre>
 
+### Secondary Button <a href="#t80p74rmzb20" id="t80p74rmzb20"></a>
 
-
-### Secondary Button: <a href="#t80p74rmzb20" id="t80p74rmzb20"></a>
-
-To use secondary button add this lines of code:
+To use the secondary button add the following lines of code:
 
 ```
 Button(
@@ -98,11 +100,11 @@ Button(
 );
 ```
 
-Prefix and Suffix icons can be added in the secondary button same as the primary button.
+Prefix and Suffix icons can be added to the secondary button using the same code as given for the primary button.
 
-### Tertiary Button: <a href="#j0zgnhqlc248" id="j0zgnhqlc248"></a>
+### Tertiary Button <a href="#j0zgnhqlc248" id="j0zgnhqlc248"></a>
 
-To use tertiary button add this lines of code:
+To use the tertiary button add the below lines of code:
 
 ```
 Button(
@@ -112,9 +114,9 @@ Button(
 );
 ```
 
-### Link: <a href="#q13cttcv5ilz" id="q13cttcv5ilz"></a>
+### Link <a href="#q13cttcv5ilz" id="q13cttcv5ilz"></a>
 
-To use link, add this lines of code:
+To use link, add the following lines of code:
 
 <pre><code>Button(
   label: 'link',
