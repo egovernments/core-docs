@@ -282,7 +282,7 @@
     * [DIGIT-UI](guides/developer-guide/ui-developer-guide/digit-ui/README.md)
       * [UI Components](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/README.md)
         * [UI Components Standardisation](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/README.md)
-          * [Digit UI Core React Components](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components/README.md)
+          * [DIGIT UI Core React Components](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components/README.md)
             * [Input Field](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components/input-field.md)
             * [Radio](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components/radio.md)
             * [Toggle](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components/toggle.md)
