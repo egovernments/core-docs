@@ -42,8 +42,8 @@ Creating Flutter widgets extends the UI library's reach to mobile platforms, red
 
 #### Refer to the below docs to learn more about react and flutter components - <a href="#id-9wbii1syfx61" id="id-9wbii1syfx61"></a>
 
-* [React Component ](digit-ui-core-react-components.md)
-* [Flutter Component](digit-ui-core-flutter-components.md)
+* [React Component ](digit-ui-core-react-components/)
+* [Flutter Component](digit-ui-core-flutter-components/)
 
 ## Conclusion <a href="#id-1t75ngdm8hzh" id="id-1t75ngdm8hzh"></a>
 
