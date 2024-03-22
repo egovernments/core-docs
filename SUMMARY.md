@@ -291,7 +291,7 @@
             * [Checkbox](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components/checkbox.md)
             * [Toast](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components/toast.md)
             * [Info Card](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-react-components/info-card.md)
-          * [Digit UI Core Flutter Components](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-flutter-components/README.md)
+          * [DIGIT UI Core Flutter Components](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-flutter-components/README.md)
             * [Input Field](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-flutter-components/input-field.md)
             * [Radio](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-flutter-components/radio.md)
             * [Toggle](guides/developer-guide/ui-developer-guide/digit-ui/ui-components/ui-components-standardisation/digit-ui-core-flutter-components/toggle.md)
