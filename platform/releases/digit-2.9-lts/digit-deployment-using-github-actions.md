@@ -9,7 +9,7 @@ This guide provides step-by-step instructions for installing DIGIT using GitHub 
 * AWS account
 * Github account
 
-### Installation Steps:
+### Installation Steps
 
 #### Prepare AWS IAM User
 
@@ -57,7 +57,7 @@ This guide provides step-by-step instructions for installing DIGIT using GitHub 
 
 #### Finalize Installation
 
-After entering all the details, push these changes to the remote GitHub repository. Open the `Actions` tab in your GitHub account to view the workflow. You should see that the workflow has started, and the pipelines are completing successfully.
+After entering all the details, push these changes to the remote GitHub repository. Open the `Actions` tab in your GitHub account to view the workflow. You should see that the workflow has started, and the pipelines are completed successfully.
 
 <figure><img src="../../../.gitbook/assets/image1.png" alt=""><figcaption><p>Github actions workflow that gets created after committing the inputs</p></figcaption></figure>
 
