@@ -1,4 +1,4 @@
-# Upgrade To Springboot 3.2.2
+# Guide to Upgrading DIGIT Modules to SpingbooVersion 3.2.2
 
 ## Overview
 
@@ -122,31 +122,27 @@ _Note: If tracer library is implemented there is no need to explicitly import sp
 
 ### Registry Code Changes&#x20;
 
-1. Javax is deprecated and transitioning to Jakarta. Remove any javax dependencies and update all javax imports to jakarta. For example, change imports like PostConstruct and Valid to their jakarta counterparts in all occurrences.
+1.  Javax is deprecated and transitioning to Jakarta. Remove any javax dependencies and update all javax imports to jakarta. For example, change imports like PostConstruct and Valid to their jakarta counterparts in all occurrences.\
 
-<div align="left">
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-03-04 at 4.38.45 PM.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
+    <figure><img src="../../../.gitbook/assets/Screenshot 2024-03-14 at 11.05.01 AM (1).png" alt=""><figcaption></figcaption></figure>
 2. Remove the annotation _@javax.annotation.Generated_ which is now deprecated.
 3. Update the Dockerfile for flyway migration with the below content:\
    \
-   `FROM egovio/flyway:10.7.1`
+   &#x20; `FROM egovio/flyway:10.7.1`
 
-`COPY ./migration/main /flyway/sql`
+&#x20;         `COPY ./migration/main /flyway/sql`
 
-`COPY migrate.sh /usr/bin/migrate.sh`
+&#x20;         `COPY migrate.sh /usr/bin/migrate.sh`
 
-`RUN chmod +x /usr/bin/migrate.sh`
+&#x20;         `RUN chmod +x /usr/bin/migrate.sh`
 
-`ENTRYPOINT ["/usr/bin/migrate.sh"]`
+&#x20;         `ENTRYPOINT ["/usr/bin/migrate.sh"]`
 
 3. Update the migrate.sh script:\
-   &#x20;`#!/bin/sh`
+   &#x20;   `#!/bin/sh`
 
-`flyway -url=$DB_URL -table=$SCHEMA_TABLE -user=$FLYWAY_USER -password=$FLYWAY_PASSWORD -locations=$FLYWAY_LOCATIONS -baselineOnMigrate=true -outOfOrder=true migrate`
+`flyway -url=$DB_URL -table=$SCHEMA_TABLE -user=$FLYWAY_USER -password=$FLYWAY_PASSWORD -locations=$FLYWAY_LOCATIONS -baselineOnMigrate=true   -outOfOrder=true migrate`
 
 4. If you are using _spring-redis_, add the following configuration file:
 
