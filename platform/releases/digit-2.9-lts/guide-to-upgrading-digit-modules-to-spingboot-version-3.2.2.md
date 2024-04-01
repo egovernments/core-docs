@@ -1,4 +1,4 @@
-# Guide to Upgrading DIGIT Modules to SpingbooVersion 3.2.2
+# Guide to Upgrading DIGIT Modules to Spingboot Version 3.2.2
 
 ## Overview
 
@@ -48,7 +48,7 @@ This document contains information about the code changes that will be required 
         </dependency>
 ```
 
-5. Tracer library is upgraded to sprinboot 3.2.2. The updates are available in the library version 2.9.0. If the module is using tracer, upgrade the tracer version to 2.9.0 as shown below:
+5. Tracer library is upgraded to springboot 3.2.2. The updates are available in the library version 2.9.0. If the module is using tracer, upgrade the tracer version to 2.9.0 as shown below:
 
 ```
         <dependency>
@@ -59,7 +59,7 @@ This document contains information about the code changes that will be required 
 ```
 
 6. The _service-common_ library is  upgraded and added in tracer. You don't have to explicitly upgrade the _services-common_ library and remove it from POM if you upgrade tracer. In case your module is using only  _services-common,_ you can directly upgrade the version to 2.9.0
-7. Use the below version of _junit_ which is compatible with Java 17:
+7. Use the below version of _JUnit_ which is compatible with Java 17:
 
 ```
           <dependency>
