@@ -1,6 +1,10 @@
-# CHANGELOG.md
+---
+description: changelog.md
+---
 
-## CHANGELOG
+# Changelog
+
+## Overview
 
 This document provides a comprehensive log of system upgrades, detailing the progression of various software components from older versions to their latest releases as of this update. This ensures transparency and provides a reference for the evolution of our system's infrastructure.
 
