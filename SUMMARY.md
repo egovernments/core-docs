@@ -166,8 +166,8 @@
     * [Service Build Updates](platform/releases/digit-2.9-lts/service-build-updates.md)
     * [Test Cases](platform/releases/digit-2.9-lts/test-cases.md)
     * [Gateway: The Spring Cloud Way](platform/releases/digit-2.9-lts/gateway-the-spring-cloud-way.md)
-    * [DIGIT Deployment Using GitHub Actions](platform/releases/digit-2.9-lts/digit-deployment-using-github-actions.md)
-    * [Guide to Upgrading DIGIT Modules to Spingboot Version 3.2.2](platform/releases/digit-2.9-lts/guide-to-upgrading-digit-modules-to-spingboot-version-3.2.2.md)
+    * [Automated DIGIT Deployment](platform/releases/digit-2.9-lts/automated-digit-deployment.md)
+    * [Upgrade Guide: Transitioning DIGIT Modules to Spring Boot Version 3.2.2](platform/releases/digit-2.9-lts/upgrade-guide-transitioning-digit-modules-to-spring-boot-version-3.2.2.md)
     * [Postgres Upgrade: Service Code changes](platform/releases/digit-2.9-lts/postgres-upgrade-service-code-changes.md)
     * [CHANGELOG.md](platform/releases/digit-2.9-lts/changelog.md.md)
 
