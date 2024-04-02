@@ -161,6 +161,7 @@
 * [🤝 Contribute](platform/contribute.md)
 * [🔖 Releases](platform/releases/README.md)
   * [DIGIT 2.9 LTS](platform/releases/digit-2.9-lts/README.md)
+    * [Test Automation](platform/releases/digit-2.9-lts/test-automation.md)
     * [Release Checklist](platform/releases/digit-2.9-lts/release-checklist.md)
     * [Service Build Updates](platform/releases/digit-2.9-lts/service-build-updates.md)
     * [Test Cases](platform/releases/digit-2.9-lts/test-cases.md)
