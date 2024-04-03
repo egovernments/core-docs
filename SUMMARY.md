@@ -169,6 +169,7 @@
     * [Automated DIGIT Deployment](platform/releases/digit-2.9-lts/automated-digit-deployment.md)
     * [Upgrade Guide: Transitioning DIGIT Modules to Spring Boot Version 3.2.2](platform/releases/digit-2.9-lts/upgrade-guide-transitioning-digit-modules-to-spring-boot-version-3.2.2.md)
     * [Postgres Upgrade: Service Code Changes](platform/releases/digit-2.9-lts/postgres-upgrade-service-code-changes.md)
+    * [LTS DIGIT Migration - v2.8 To v2.9](platform/releases/digit-2.9-lts/lts-digit-migration-v2.8-to-v2.9.md)
     * [Changelog](platform/releases/digit-2.9-lts/changelog.md)
 
 ## Guides
@@ -211,7 +212,6 @@
     * [DIGIT Deployment Using Helmfile](guides/installation-guide/production-setup/digit-deployment-using-helmfile.md)
     * [DIGIT Installation on Azure](guides/installation-guide/quick-setup/digit-installation-on-azure.md)
     * [Backup PostgreSQL Database In AWS - Steps](guides/installation-guide/production-setup/backup-postgresql-database-in-aws-steps.md)
-    * [LTS DIGIT Migration - v2.8 To v2.9](guides/installation-guide/production-setup/lts-digit-migration-v2.8-to-v2.9.md)
     * [Updating RDS Version in AWS](guides/installation-guide/production-setup/updating-rds-version-in-aws.md)
 * [💽 Data Setup Guide](guides/data-setup-guide/README.md)
   * [User Module](guides/data-setup-guide/user-module.md)

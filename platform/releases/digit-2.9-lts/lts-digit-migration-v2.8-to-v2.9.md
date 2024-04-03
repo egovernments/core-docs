@@ -8,7 +8,7 @@ This comprehensive documentation provides step-by-step instructions and best pra
 
 * [Elasticsearch Upgrade](https://core.digit.org/guides/operations-guide/availability/backbone-services/elastic-search)
 * [Kafka Upgrade](https://core.digit.org/guides/operations-guide/availability/backbone-services/kafka)
-* [Postgres Upgrade](updating-rds-version-in-aws.md)
+* [Postgres Upgrade](../../../guides/installation-guide/production-setup/updating-rds-version-in-aws.md)
 
 ## Steps
 
