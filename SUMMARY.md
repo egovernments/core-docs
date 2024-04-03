@@ -211,6 +211,7 @@
     * [DIGIT Deployment Using Helmfile](guides/installation-guide/production-setup/digit-deployment-using-helmfile.md)
     * [DIGIT Installation on Azure](guides/installation-guide/quick-setup/digit-installation-on-azure.md)
     * [Backup PostgreSQL Database In AWS - Steps](guides/installation-guide/production-setup/backup-postgresql-database-in-aws-steps.md)
+    * [LTS DIGIT Migration - v2.8 To v2.9](guides/installation-guide/production-setup/lts-digit-migration-v2.8-to-v2.9.md)
     * [Updating RDS Version in AWS](guides/installation-guide/production-setup/updating-rds-version-in-aws.md)
 * [💽 Data Setup Guide](guides/data-setup-guide/README.md)
   * [User Module](guides/data-setup-guide/user-module.md)
