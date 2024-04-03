@@ -2,7 +2,11 @@
 description: Installation Guide for DIGIT via GitHub Actions in AWS
 ---
 
-# DIGIT Deployment Using GitHub Actions
+# Deployment Using GitHub Actions
+
+## Overview
+
+This guide provides step-by-step instructions for installing DIGIT using GitHub Actions within an AWS environment.
 
 ## Pre-requisites
 
@@ -62,7 +66,7 @@ Choose one of the following methods to generate an SSH key pair:
 
 After entering all the details, push these changes to the remote GitHub repository. Open the `Actions` tab in your GitHub account to view the workflow. You should see that the workflow has started, and the pipelines are completed successfully.
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-06 at 12.55.10 PM.png" alt=""><figcaption><p>Github actions workflow that gets created after committing the inputs</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-03-06 at 12.55.10 PM.png" alt=""><figcaption><p>Github actions workflow that gets created after committing the inputs</p></figcaption></figure>
 
 This indicates that your setup is correctly configured, and your application is ready to be deployed. Monitor the output of the workflow for any errors or success messages to ensure everything is functioning as expected.
 
@@ -76,7 +80,7 @@ aws configure list --profile <profile_name>
 
 Proceed only after verifying the correct configuration of your credentials. For any uncertainties on how to set up the credentials, consult the AWS documentation for detailed instructions.
 
-<figure><img src="../../../../.gitbook/assets/image (316).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (316).png" alt=""><figcaption></figcaption></figure>
 
 Run the below command to export AWS Credentials
 
@@ -138,7 +142,7 @@ You can observe the progress of the destruction job in the actions window.
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-07 at 11.13.55 AM.png" alt=""><figcaption><p>Destroying the created DIGIT Infrastructure via Terraform</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-03-07 at 11.13.55 AM.png" alt=""><figcaption><p>Destroying the created DIGIT Infrastructure via Terraform</p></figcaption></figure>
 
 </div>
 
