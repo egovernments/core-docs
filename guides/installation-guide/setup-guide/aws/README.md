@@ -37,14 +37,14 @@ The [**Amazon Elastic Kubernetes Service (EKS)**](https://docs.aws.amazon.com/ek
 [4.-provisioning-infra-using-terraform.md](4.-provisioning-infra-using-terraform.md)
 {% endcontent-ref %}
 
-{% content-ref url="5.-prepare-deployment-config.md" %}
-[5.-prepare-deployment-config.md](5.-prepare-deployment-config.md)
+{% content-ref url="../../digit-deployment/deployment-using-golang/prepare-deployment-configuration.md" %}
+[prepare-deployment-configuration.md](../../digit-deployment/deployment-using-golang/prepare-deployment-configuration.md)
 {% endcontent-ref %}
 
-{% content-ref url="6.-deploy-digit.md" %}
-[6.-deploy-digit.md](6.-deploy-digit.md)
+{% content-ref url="../../digit-deployment/deployment-using-golang/deploy-digit.md" %}
+[deploy-digit.md](../../digit-deployment/deployment-using-golang/deploy-digit.md)
 {% endcontent-ref %}
 
-{% content-ref url="7.-bootstrap-digit.md" %}
-[7.-bootstrap-digit.md](7.-bootstrap-digit.md)
+{% content-ref url="../bootstrap-digit.md" %}
+[bootstrap-digit.md](../bootstrap-digit.md)
 {% endcontent-ref %}

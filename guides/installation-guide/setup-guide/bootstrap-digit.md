@@ -2,13 +2,13 @@
 description: Steps to bootstrap DIGIT
 ---
 
-# 7. Bootstrap DIGIT
+# Bootstrap DIGIT
 
 #### Topics covered:
 
-* [Steps to Bootstrap DIGIT](7.-bootstrap-digit.md#steps-to-bootstrap)
-* [Assess deployment](7.-bootstrap-digit.md#digit-deployment-assessment)
-* [Destroy the cluster](7.-bootstrap-digit.md#destroy-the-cluster)
+* [Steps to Bootstrap DIGIT](bootstrap-digit.md#steps-to-bootstrap)
+* [Assess deployment](bootstrap-digit.md#digit-deployment-assessment)
+* [Destroy the cluster](bootstrap-digit.md#destroy-the-cluster)
 
 ## Overview
 
@@ -34,9 +34,9 @@ Forwarding from [::1]:8080 -> 8080
 
     [DIGIT Bootstrap](https://raw.githubusercontent.com/egovernments/DIGIT-DevOps/quickstart/deploy-as-code/bootstrap\_scripts/seed\_data.json)
 
-![](<../../../../.gitbook/assets/image (203).png>)
+![](<../../../.gitbook/assets/image (203).png>)
 
-![](<../../../../.gitbook/assets/image (83).png>)
+![](<../../../.gitbook/assets/image (83).png>)
 
 3. Execute the below commands to test your local machine's Kubernetes operations through kubectl.
 

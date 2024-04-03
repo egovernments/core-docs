@@ -2,12 +2,12 @@
 description: Steps to prepare the deployment configuration file
 ---
 
-# 5. Prepare Deployment Config
+# Prepare Deployment Configuration
 
 #### Topics covered:
 
-* [Pre-reads for preparing the deployment configuration file](5.-prepare-deployment-config.md#pre-reads)
-* [Steps to prepare the configuration file](5.-prepare-deployment-config.md#steps-to-prepare-deployment-configuration-file)
+* [Pre-reads for preparing the deployment configuration file](prepare-deployment-configuration.md#pre-reads)
+* [Steps to prepare the configuration file](prepare-deployment-configuration.md#steps-to-prepare-deployment-configuration-file)
 
 ## Overview
 

@@ -26,15 +26,15 @@ description: Provision infra for DIGIT on Azure using Terraform
 [3.-infra-as-code-terraform.md](3.-infra-as-code-terraform.md)
 {% endcontent-ref %}
 
-{% content-ref url="../aws/5.-prepare-deployment-config.md" %}
-[5.-prepare-deployment-config.md](../aws/5.-prepare-deployment-config.md)
+{% content-ref url="../../digit-deployment/deployment-using-golang/prepare-deployment-configuration.md" %}
+[prepare-deployment-configuration.md](../../digit-deployment/deployment-using-golang/prepare-deployment-configuration.md)
 {% endcontent-ref %}
 
-{% content-ref url="../aws/6.-deploy-digit.md" %}
-[6.-deploy-digit.md](../aws/6.-deploy-digit.md)
+{% content-ref url="../../digit-deployment/deployment-using-golang/deploy-digit.md" %}
+[deploy-digit.md](../../digit-deployment/deployment-using-golang/deploy-digit.md)
 {% endcontent-ref %}
 
-{% content-ref url="../aws/7.-bootstrap-digit.md" %}
-[7.-bootstrap-digit.md](../aws/7.-bootstrap-digit.md)
+{% content-ref url="../bootstrap-digit.md" %}
+[bootstrap-digit.md](../bootstrap-digit.md)
 {% endcontent-ref %}
 

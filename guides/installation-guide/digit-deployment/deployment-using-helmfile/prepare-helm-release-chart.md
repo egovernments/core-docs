@@ -33,7 +33,7 @@ cd config-as-code/product-release-charts/
 
 Create a new release version of the below products.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
 Select your product, copy the previous release version file, and rename it with your new version.
 

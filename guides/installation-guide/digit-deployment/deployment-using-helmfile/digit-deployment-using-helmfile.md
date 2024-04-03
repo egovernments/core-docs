@@ -4,10 +4,6 @@ description: Setting up DIGIT  using helmfile
 
 # DIGIT Deployment Using Helmfile
 
-## Overview
-
-This page walks you through the steps required to set up DIGIT using helmfile.
-
 ## Pre-requisites
 
 * [helmfile](https://helmfile.readthedocs.io/en/latest/)
@@ -87,7 +83,7 @@ $ git checkout DIGIT-2.9LTS(Helmfile)
 $ vi deploy-as-code/charts/environments/env.yaml
 ```
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * Update db password , flywaypassword, loginusername, loginpassword  and git-sync private key in env-secrets.yaml
 
@@ -97,9 +93,9 @@ $ vi deploy-as-code/charts/environments/env.yaml
 $ vi deploy-as-code/charts/environments/env-secrets.yaml
 ```
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note** &#x20;
@@ -149,7 +145,7 @@ $ git checkout DIGIT-2.9LTS(Helmfile)
 $ vi deploy-as-code/charts/environments/env.yaml
 ```
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 * Update db password , db username, flyway username, flyway password, login username, login password  and git-sync private key in env-secrets.yaml
 
@@ -157,9 +153,9 @@ $ vi deploy-as-code/charts/environments/env.yaml
 $ vi deploy-as-code/charts/environments/env-secrets.yaml
 ```
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note:**  1. Generate ssh key pairs using below method \
