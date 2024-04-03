@@ -2,7 +2,7 @@
 
 DIGIT 2.9 represents the most recent Long-Term Support (LTS) version, offering a stable and reliable foundation. This version emphasises enhanced security measures, improved system stability, streamlined deployment processes, simplified configuration, and comprehensive documentation. Periodic updates, encompassing both minor adjustments and significant enhancements, will be released as necessary. Support for this iteration of DIGIT will be available for the upcoming five years, with a clear migration guide available to facilitate the transition to subsequent LTS versions once the current support period concludes.
 
-### Benefits of Long Term Support
+### Long-Term Support Benefits
 
 1. **Extended Support:** LTS versions come with an extended period of support, which includes security updates, bug fixes, and sometimes even minor feature enhancements. This extended support period will last for 5 years, which means that users do not need to upgrade to newer versions frequently to receive critical updates.
 2. **Stability:** The LTS release is typically more stable than regular releases because it undergoes more extensive testing and bug fixing. Compatibility: With the extended support period, the LTS release ensures better compatibility with third-party applications and hardware over time. Developers and vendors have a stable base to target, reducing the frequency of compatibility issues.
@@ -43,11 +43,11 @@ DIGIT 2.9 represents the most recent Long-Term Support (LTS) version, offering a
 * Ability to create and link boundary nodes using UI/APIs
 * Geospatial queries like proximity search to locate boundary nodes
 
-### **Summary of Technical Enhancements and Fixes:**
+### **Technical Enhancements & Fixes**
 
 * Filestore Service: Fixed flow to store and retrieve files from Azure blob storage.
-* PDF Service: Fixed bug where \_create API creates duplicate PDF for each request and fixed kafka message getting pushed on single partition.
-* SMS Notification Service: Added API for sms bounce backtracking.
+* PDF Service: Fixed bug where \_create API creates duplicate PDF for each request and fixed Kafka message getting pushed on a single partition.
+* SMS Notification Service: Added API for SMS bounce backtracking.
 * Mail Notification Service: Added support for attachments.
 * User OTP Service: Added support for sending OTP via email by emitting email events.
 * User Service: Added fallback to default message if user email update localization messages are not configured.
@@ -60,12 +60,12 @@ DIGIT 2.9 represents the most recent Long-Term Support (LTS) version, offering a
 * Persister: Enhanced persister to make it compatible with Signed Audit Service.
 * Human Resource Management Service: Fixed bug where employee search causes server error in single instance clusters.
 * DIGIT Developer Guide: Backend and Frontend guides along with a sample birth registration spring-boot module, citizen and employee React modules were developed as part of this guide.
-* DIGIT Installer Enhancement: DIGIT Installer was simplified and detailed tutorial document was created for installing DIGIT services on AWS. (**Note:** Simplified DIGIT Installer has not been merged to master yet and is being released separately because many of our clusters are still running on legacy DevOps configurations)
+* DIGIT Installer Enhancement: DIGIT Installer was simplified and a detailed tutorial document was created for installing DIGIT services on AWS. (**Note:** Simplified DIGIT Installer has not been merged to master yet and is being released separately because many of our clusters are still running on legacy DevOps configurations)
 * Upgraded all helm charts to support Kubernetes version upgrade from 1.20 to 1.28.
 
 ## Bug Fixes
 
-<table><thead><tr><th width="122.33333333333331">S.no.</th><th>Service</th><th>Description of the fix</th></tr></thead><tbody><tr><td>1</td><td>PDF Service</td><td>Fixed bug where _create API creates duplicate PDF for each request.</td></tr><tr><td>2</td><td>PDF Service</td><td>Fixed issue where pdf service was pushing data to only one kafka topic partition</td></tr><tr><td>3</td><td>User Service</td><td>Fixed bug where updating citizen profile causes server error, fixed bug where employee details are updateable via citizen profile update API.</td></tr><tr><td>4</td><td>Location Service</td><td>Fixed bug where search on root level boundary type yields empty search response.</td></tr><tr><td>5</td><td>Human Resource Management Service</td><td>Fixed bug where employee search causes server error in single instance clusters.</td></tr></tbody></table>
+<table><thead><tr><th width="84.33333333333331">S.no.</th><th width="182">Service</th><th>Description of the fix</th></tr></thead><tbody><tr><td>1</td><td>PDF Service</td><td>Fixed bug where _create API creates duplicate PDF for each request.</td></tr><tr><td>2</td><td>PDF Service</td><td>Fixed issue where pdf service was pushing data to only one kafka topic partition</td></tr><tr><td>3</td><td>User Service</td><td>Fixed bug where updating citizen profile causes server error, fixed bug where employee details are updateable via citizen profile update API.</td></tr><tr><td>4</td><td>Location Service</td><td>Fixed bug where search on root level boundary type yields empty search response.</td></tr><tr><td>5</td><td>Human Resource Management Service</td><td>Fixed bug where employee search causes server error in single instance clusters.</td></tr></tbody></table>
 
 ## Document Resources & Links
 

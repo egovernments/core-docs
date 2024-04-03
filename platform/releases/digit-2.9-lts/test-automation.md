@@ -1,10 +1,10 @@
 # Test Automation
 
-### Overview
+## Overview
 
 A comprehensive guide on running automated test scripts for various core services.
 
-### Pre-requisites
+## Pre-requisites
 
 Before you begin automating DIGIT- LTS's core services, please ensure the Postman tool is installed.
 
@@ -12,10 +12,9 @@ Before you begin automating DIGIT- LTS's core services, please ensure the Postma
 _**Note**:- It is mandatory to run the automated script for user services, As User collection includes requests to create users, a crucial step as access to all resources requires a user._
 {% endhint %}
 
-### Steps&#x20;
+## Steps&#x20;
 
-Follow the steps below to run the egov-User service automation scripts.\
-
+Follow the steps below to run the egov-User service automation scripts.
 
 **1. Import User Collection:** To import the User Collection into Postman, follow the steps outlined in the [User Collection Document](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing). Access the Google document to proceed.
 
@@ -63,29 +62,11 @@ _Due to the uniqueness constraint on usernames, you cannot create duplicate user
 
 ### Test Automation - Localization service
 
-1. Import Localization Collection into Postman: &#x20;
-
-Copy the Localization collection link from the provided document link: [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing). Open Postman and import the collection.
-
-2. Prepare CSV File:
-
-Download the CSV file from the provided link: [https://docs.google.com/spreadsheets/d/1swMoCCVHpNnohmVp\_HbbfeykP1t0ZXy9ugQAii7UOWA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1swMoCCVHpNnohmVp\_HbbfeykP1t0ZXy9ugQAii7UOWA/edit?usp=sharing).
-
-Make sure the CSV file is in the correct format.
-
-3. Run localization Collection in Postman:
-
-Open the localization collection in Postman by clicking on localization collection.
-
-Click on the "Run" button to execute the collection.
-
-4. Select CSV File:
-
-When prompted, select the downloaded CSV file by clicking on the "Select File" button.
-
-5. &#x20;Run Collection:
-
-After selecting the CSV file, click on the "Run Collection" button to execute the collection.
+1. **Import Localization Collection into Postman:** [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) and copy the localization collection link (available in column B of the sheet). Open the Postman and import the collection.
+2. **Prepare CSV File:** [Click here ](https://docs.google.com/spreadsheets/d/1swMoCCVHpNnohmVp\_HbbfeykP1t0ZXy9ugQAii7UOWA/edit#gid=0)to download the CSV file. Make sure the CSV file is in the correct format.
+3. **Run localization Collection in Postman:** Open the localization collection in Postman by clicking on localization collection. Click on the "Run" button to execute the collection.
+4. **Select CSV File:** When prompted, select the downloaded CSV file by clicking on the "Select File" button.
+5. **Run Collection:** After selecting the CSV file, click on the "Run Collection" button to execute the collection.
 
 {% hint style="info" %}
 _**Note**: Ensure that if running the Localization collection multiple times within the same environment, you change the locale and code within the CSV file each time._
@@ -101,37 +82,36 @@ By following these steps, you can automate the localization services using Postm
 
 1\. Import Egov OTP Collection into Postman:
 
-* Copy the Egov OTP collection link from the provided document link: [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing).
+* [Click here ](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0)to open the document and copy the Egov OTP collection link&#x20;
 * Open Postman and import the collection.
 
 2\. To Run Egov OTP Collection in Postman:
 
-* Open the Egov OTP collection in Postman by clicking on Egov OTP collection.
-* Click on the "Run" button to execute the collection.
-* Click on the "Run Collection" button to execute the collection.
+* Open the Egov OTP collection in Postman by clicking on the Egov OTP collection.
+* Click on the **Run** button to execute the collection.
+* Click on the **Run Collection** button to execute the collection.
 
 ### Test Automation - MDMS Service
 
 1\. Import MDMS Collection into Postman:
 
-* Copy the MDMS collection link from the provided document link: [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing.](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing)
+* [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) to open the document and copy the MDMS collection link.
 * Open Postman and import the collection.
 
-2\. To Run MDMS Collection in Postman:
+2\. To run the MDMS Collection in Postman:
 
 * Open the MDMS collection in Postman by clicking on MDMS collection.
-* Click on the "Run" button to execute the collection.
-* Click on the "Run Collection" button to execute the collection.
+* Click on the **Run** button to execute the collection.
+* Click on the **Run Collection** button to execute the collection.
 
 ### Test Automation - URL Shortening Service
 
 1\. Import Url shortening Collection into Postman:
 
-* Copy the Url shortening collection link from the provided document link: [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing).
-* Open Postman and import the collection.\
+* [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) to open the document and copy the URL shortening collection link.
+* Open Postman and import the collection.
 
-
-2\. To Run URL - shortening Collection in Postman:
+2\. To run the URL - shortening collection in Postman:
 
 * Open the URL shortening collection in Postman by clicking on the URL shortening collection.
 * Click on the "Run" button to execute the collection.
