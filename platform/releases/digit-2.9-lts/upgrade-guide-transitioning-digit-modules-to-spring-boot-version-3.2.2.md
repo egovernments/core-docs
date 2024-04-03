@@ -1,4 +1,4 @@
-# Guide to Upgrading DIGIT Modules to Spingboot Version 3.2.2
+# Upgrade Guide: Transitioning DIGIT Modules to Spring Boot Version 3.2.2
 
 ## Overview
 
@@ -8,7 +8,7 @@ This document contains information about the code changes that will be required 
 
 ### POM Updates
 
-1. Upgrade the java version in the module to Java 17 before upgrading springboot version to 3.2.2. Following is a sample snippet of Java version upgrade:
+1. Upgrade the Java version in the module to Java 17 before upgrading the Spring Boot version to 3.2.2. Following is a sample snippet of the Java version upgrade:
 
 ```
 <properties>
@@ -28,7 +28,7 @@ This document contains information about the code changes that will be required 
     </parent>
 ```
 
-3. Upgrade the Flyway library to version 9.22.3 for compatibility with Postgres 14 . Below is the code snippet:
+3. Upgrade the Flyway library to version 9.22.3 for compatibility with Postgres 14. Below is the code snippet:
 
 ```
       <dependency>
@@ -48,7 +48,7 @@ This document contains information about the code changes that will be required 
         </dependency>
 ```
 
-5. Tracer library is upgraded to springboot 3.2.2. The updates are available in the library version 2.9.0. If the module is using tracer, upgrade the tracer version to 2.9.0 as shown below:
+5. The tracer library is upgraded to springboot 3.2.2. The updates are available in the library version 2.9.0. If the module is using the tracer, upgrade the tracer version to 2.9.0 as shown below:
 
 ```
         <dependency>
@@ -58,7 +58,7 @@ This document contains information about the code changes that will be required 
         </dependency>
 ```
 
-6. The _service-common_ library is  upgraded and added in tracer. You don't have to explicitly upgrade the _services-common_ library and remove it from POM if you upgrade tracer. In case your module is using only  _services-common,_ you can directly upgrade the version to 2.9.0
+6. The _service-common_ library is upgraded and added in tracer. You don't have to explicitly upgrade the _services-common_ library and remove it from POM if you upgrade the tracer. In case your module is using only  _services-common,_ you can directly upgrade the version to 2.9.0
 7. Use the below version of _JUnit_ which is compatible with Java 17:
 
 ```
@@ -70,7 +70,7 @@ This document contains information about the code changes that will be required 
           </dependency>
 ```
 
-8. If you are using MDMS client library update the dependency version to 2.9.0 as shown below:
+8. If you are using the MDMS client library update the dependency version to 2.9.0 as shown below:
 
 ```
             <dependency>
@@ -80,7 +80,7 @@ This document contains information about the code changes that will be required 
             </dependency>
 ```
 
-9. Update the lombok version in the pom.xml to 1.8.22:
+9. Update the Lombok version in the pom.xml to 1.8.22:
 
 ```
   <properties>
@@ -102,7 +102,7 @@ This document contains information about the code changes that will be required 
     </dependency>
 ```
 
-11. In case of Spring Kafka and Spring Redis dependency, to simplify dependency management and ensure version compatibility, we use the spring-boot-starter-parent as your project's parent in your pom.xml. This way, when you include the _spring-kafka_ or _spring-redis_ dependency without specifying a version, Spring Boot will automatically provide a compatible version of the dependency. Following are code snippets of both the dependencies:
+11. To simplify dependency management and ensure version compatibility for Spring Kafka and Spring Redis dependencies use the spring-boot-starter-parent as your project's parent in the pom.xml. This ensures the _spring-kafka_ or _spring-redis_ dependency is included without specifying a version, Spring Boot will automatically provide a compatible version of the dependency. Following are code snippets of both the dependencies:
 
 ```
  <dependency>
@@ -118,11 +118,11 @@ This document contains information about the code changes that will be required 
  </dependency>
 ```
 
-_Note: If tracer library is implemented there is no need to explicitly import spring-kafka._
+_Note: If a tracer library is implemented there is no need to explicitly import spring-kafka._
 
 ### Registry Code Changes&#x20;
 
-1.  Javax is deprecated and transitioning to Jakarta. Remove any javax dependencies and update all javax imports to jakarta. For example, change imports like PostConstruct and Valid to their jakarta counterparts in all occurrences.\
+1.  Javax is deprecated and transitioning to Jakarta. Remove any Javax dependencies and update all Javax imports to Jakarta. For example, change imports like PostConstruct and valid to their Jakarta counterparts in all occurrences.\
 
 
     <figure><img src="../../../.gitbook/assets/Screenshot 2024-03-14 at 11.05.01 AM (1).png" alt=""><figcaption></figcaption></figure>
@@ -180,7 +180,7 @@ public class RedisConfig {
 }
 ```
 
-5. Remove @SafeHtml annotation from the fields in POJO models as it is deprecated
+5. Remove @SafeHtml annotation from the fields in POJO models as it is deprecated.
 6. Update the Junit dependencies in the test cases as shown below:
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-03-04 at 7.03.06 PM.png" alt=""><figcaption><p> </p></figcaption></figure>
