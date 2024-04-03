@@ -36,15 +36,15 @@ For example: The first cell in the first row that is UserFIRST represents the fi
 | ---------- | ---------- | ---------- |
 | USERDemoM1 | EGOvDemoM2 | EGOvDemoM3 |
 
-* Open the User collection in Postman and click the "Run" button.
+* Open the User collection in Postman and click on the **Run** button.
 
 <figure><img src="https://lh7-us.googleusercontent.com/_6-JwZSB3nddFUyYe8L2d5xwkz-eNwoAQkP7m4IZW2XQwQJWDgz5i0L8KRazKs97gReDu7lKE-tOtDM_zOBvuBIDc0TlkBZw10_Jnvw-vvaZ7QA4TvPlW4zZeNegIvs4o1mPlhCwbB9z0SdO2h_37g" alt=""><figcaption></figcaption></figure>
 
-* Select the downloaded CSV file by clicking on the "Select File" button
+* Select the downloaded CSV file by clicking on the **Select File** button.
 
 <figure><img src="https://lh7-us.googleusercontent.com/v6VBtYJ0VHl8S7osw3_ggUMdLuVHjyREtRNSijJZjs5Qx5RjD51ctUG4jajGqr9Y0kMG_B9O_RSubI0ZFmAd9ocmHgjOwIiPbMOilmRWQEgRVVwTWDudCk-D9m1eJS3t034T-m_HsYCbI5fxXEoaTg" alt=""><figcaption></figcaption></figure>
 
-* Click on the "Run User" button to execute the collection.
+* Click on the **Run User** button to execute the collection.
 
 {% hint style="info" %}
 _Due to the uniqueness constraint on usernames, you cannot create duplicate users with the same username._&#x20;
@@ -114,98 +114,100 @@ By following these steps, you can automate the localization services using Postm
 2\. To run the URL - shortening collection in Postman:
 
 * Open the URL shortening collection in Postman by clicking on the URL shortening collection.
-* Click on the "Run" button to execute the collection.
-* Click on the "Run Collection" button to execute the collection.\
+* Click on the **Run** button to execute the collection.
+* Click on the **Run Collection** button to execute the collection.\
 
 
 ### Test Automation -  egov-location Service
 
 1\. Import Location Collection into Postman:
 
-* Copy the Location collection link from the provided document link: [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing).
+* [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) to open the document and copy the location collection link.
 * Open Postman and import the collection.
 
-2\. To Run Location Collection in Postman:
+2\. To run Location Collection in Postman:
 
 * Open the Location collection in Postman by clicking on Location collection.
-* Click on the "Run" button to execute the collection.
-* Click on the "Run Collection" button to execute the collection.
+* Click on the **Run** button to execute the collection.
+* Click on the **Run Collection** button to execute the collection.
 
 ### Test Automation - access-control Service
 
 1\. Import Access control Collection into Postman:
 
-* Copy the Access control collection link from the provided document link: [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing).
+* [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) to open the document and copy the Access Control collection link.&#x20;
 * Open Postman and import the collection.
 
-2\. To Run Access control Collection in Postman:
+2\. To run the Access Control collection in Postman:
 
-* Open the Access control collection in Postman by clicking on Access control collection.
-* Click on the "Run" button to execute the collection.
-* Click on the "Run Collection" button to execute the collection.
+* Open the Access Control collection in Postman by clicking on Access Control collection.
+* Click on the **Run** button to execute the collection.
+* Click on the **Run Collection** button to execute the collection.
 
 ### Test Automation - Filestore Service
 
 1\. Import Filestore Collection into Postman:
 
-* Copy the Filestore collection link from the provided document link: [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing).
+* [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) to open the document and copy the Filestore collection link.
 * Open Postman and import the collection.
 
-2\. To Run Filestore Collection in Postman:
+2\. To run Filestore Collection in Postman:
 
-* Open the Filestore collection in Postman by clicking on Filestore collection.
-* Click on the "Run" button to execute the collection.
-* Click on the "Run Collection" button to execute the collection.
+* Open the Filestore collection in Postman by clicking on the Filestore collection.
+* Click on the **Run** button to execute the collection.
+* Click on the **Run Collection** button to execute the collection.
 
 ### Test Automation - egov- Idgen Service
 
-1\. Import Id gen Collection into Postman:
+1\. Import the ID gen Collection into Postman:
 
-* Copy the Id gen collection link from the provided document link: [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing).
+* [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) to open the document and copy the ID-gen collection link.
 * Open Postman and import the collection.
 
 2\. To Run Id gen Collection in Postman:
 
 * Open the Id gen collection in Postman by clicking on Id gen collection.
-* Click on the "Run" button to execute the collection.
-* Click on the "Run Collection" button to execute the collection.
+* Click on the **Run** button to execute the collection.
+* Click on the **Run Collection** button to execute the collection.
 
 ### Test Automation - Workflow Service
 
 1\. Importing WorkFlow Collection:
 
-* Access the Google document [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing) copy WorkFlow collection link and import the WorkFlow collection into Postman.
+* [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) to open the document, copy the Workflow collection link and import the Workflow collection into Postman.
 
 2\. Running the WorkFlow Collection:
 
-* Before executing the WorkFlow collection, download the CSV file from [https://docs.google.com/spreadsheets/d/1bB3R5faJFfRC0cGZbtPBhv1bmKm\_MsH1upnuC3s2hso/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1bB3R5faJFfRC0cGZbtPBhv1bmKm\_MsH1upnuC3s2hso/edit?usp=sharing) in CSV format.
-* Open the WorkFlow collection in Postman and click on the "Run" button.
-* Select the downloaded CSV file by clicking on the "Select File" button.
-* Click on the "Run Workflow" button to execute the collection.
+* [Click here](https://docs.google.com/spreadsheets/d/1bB3R5faJFfRC0cGZbtPBhv1bmKm\_MsH1upnuC3s2hso/edit#gid=0) to download the CSV file before executing the WorkFlow collection.
+* Open the WorkFlow collection in Postman and click on the **Run** button.
+* Select the downloaded CSV file by clicking on the **Select File** button.
+* Click on the **Run Workflow** button to execute the collection.
 
 Additionally, you must update the columns `BusinessIdFirst` and `BusinessIdTwo` in your application for a successful transition.
 
+{% hint style="info" %}
 **IMPORTANT:** If you execute the WorkFlow collection multiple times in the same environment, it's essential to rename the services listed under the columns `BUSINESSSERVICE`, `BUSINESSSERVICETHIRD`, and `BUSINESSSERVICEFOURTH` in the CSV file for each execution to avoid conflicts.
 
 **Additional Notes**: You can also modify other columns but not mandatory.
+{% endhint %}
 
 ### Test Automation - Encryption Service
 
 1\. Importing Encryption Collection:
 
-* Access the Google document [https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing) copy Encryption collection link and import the Encryption collection into Postman.
+* [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) to open the document, copy the Encryption collection link and import the collection into Postman.&#x20;
 
 2\. Port Forwarding to Digit-LTS Environment:
 
 * Port-forward to the Digit-LTS environment to decrypt the Encrypted data. Use the following command:
-* kubectl port-forward \[Encryption] 8081:8080 -n egov
+* kubectl port-forward \[Encryption] 8081:8080-n egov
 * Replace \[Encryption] with the relevant Encryption pod name.
 
 3\. Running the Encryption Collection:
 
-* Before executing the Encryption collection, download the CSV file from [https://docs.google.com/spreadsheets/d/1qwtZ2AG60cIgZlMhZ3YN\_j58vMJgx1uovY8nlKThinM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1qwtZ2AG60cIgZlMhZ3YN\_j58vMJgx1uovY8nlKThinM/edit?usp=sharing) in CSV format.
+* [Click here ](https://docs.google.com/spreadsheets/d/1qwtZ2AG60cIgZlMhZ3YN\_j58vMJgx1uovY8nlKThinM/edit#gid=0)to download the CSV file before executing the Encryption collection.
 
-In CSV file , cell in first row UserFIRST,UserName2,UserName3  represents unique user and each cell in second row represent name given to specific user.
+In the CSV file, cells in the first row UserFIRST, UserName2, and UserName3 represent the unique user and each cell in the second row represents the name given to a specific user.
 
 For example: The first cell in the first row that is UserFIRST represents the first user and USERDemoM1 represents the name given to the user UserFIRST.
 
@@ -213,11 +215,11 @@ For example: The first cell in the first row that is UserFIRST represents the fi
 | ----------- |
 | EncUser1    |
 
-* Open the User collection in Postman and click on the "Run" button.
-* Select the downloaded CSV file by clicking on the "Select File" button.
-* Click on the "Run EncyptionApi" button to execute the collection.
+* Open the User collection in Postman and click on the **Run** button.
+* Select the downloaded CSV file by clicking on the **Select File** button.
+* Click on the **Run EncyptionApi** button to execute the collection.
 
 {% hint style="info" %}
-**IMPORTANT**: When executing the Encryption collection more than once in the same environment, it's essential to modify the username in the CSV file for every run. This ensures the newly created user has the necessary permissions to encrypt and decrypt data.&#x20;
+**IMPORTANT**: When executing the Encryption collection more than once in the same environment, it is essential to modify the username in the CSV file for every run. This ensures the newly created user has the necessary permissions to encrypt and decrypt data.&#x20;
 {% endhint %}
 
