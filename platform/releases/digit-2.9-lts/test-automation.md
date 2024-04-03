@@ -8,6 +8,10 @@ A comprehensive guide on running automated test scripts for various core service
 
 Before you begin automating DIGIT- LTS's core services, please ensure the Postman tool is installed.
 
+Create an environment in postman with a global variable  BaseUrl and set it's value as per your environment configuration for example we have set &#x20;https://digit-lts.digit.org as base URL.
+
+&#x20;Import all the services you want to automate in same environment.[](https://digit-lts.digit.org)
+
 {% hint style="info" %}
 _**Note**:- It is mandatory to run the automated script for user services, As User collection includes requests to create users, a crucial step as access to all resources requires a user._
 {% endhint %}
@@ -16,7 +20,7 @@ _**Note**:- It is mandatory to run the automated script for user services, As Us
 
 Follow the steps below to run the egov-User service automation scripts.
 
-**1. Import User Collection:** To import the User Collection into Postman, follow the steps outlined in the [User Collection Document](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing). Access the Google document to proceed.
+**1. Import User Collection:** Copy the User collection link from the provided document link: [ Collection Document](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing) and  import the collection in Postman.
 
 **2. Port Forward to Digit-LTS Environment:** Replace `[userPod]` with the relevant user pod name.
 
@@ -26,7 +30,7 @@ kubectl port-forward [userPod] 8081:8080 -n egov
 
 Port-forward to the Digit-LTS environment to create the first user using the command above.
 
-**3. Run the User Collection:** To download the CSV file, please follow this link: [Download CSV](https://docs.google.com/spreadsheets/d/10UxoY9FaIn5iLiQKQvt458TEwqTAx8EQsR0BmdQKkBE/edit?usp=sharing). Make sure to download the file before proceeding with the User collection.
+**3. Run the User Collection:** To download the CSV file, please follow this link: [Download CSV](https://docs.google.com/spreadsheets/d/10UxoY9FaIn5iLiQKQvt458TEwqTAx8EQsR0BmdQKkBE/edit?usp=sharing). Make sure to download the file in CSV format before proceeding with the User collection.
 
 In the CSV file, each cell in the first row UserFIRST, UserName2, and UserName3  represents a unique user and each cell in the second row represents a name given to a specific user.
 
@@ -67,6 +71,14 @@ _Due to the uniqueness constraint on usernames, you cannot create duplicate user
 3. **Run localization Collection in Postman:** Open the localization collection in Postman by clicking on localization collection. Click on the "Run" button to execute the collection.
 4. **Select CSV File:** When prompted, select the downloaded CSV file by clicking on the "Select File" button.
 5. **Run Collection:** After selecting the CSV file, click on the "Run Collection" button to execute the collection.
+
+In CSV file , code1 represents specific code for creating the massage in the locale1.&#x20;
+
+basically a massage got created in the "Punjab water park" locale/region/mohhala , for the created massage "Alpha pgr 1" unique code will be associated.
+
+| code1       | locale1           |
+| ----------- | ----------------- |
+| Alpha pgr 1 | Punjab water park |
 
 {% hint style="info" %}
 _**Note**: Ensure that if running the Localization collection multiple times within the same environment, you change the locale and code within the CSV file each time._
@@ -166,9 +178,10 @@ By following these steps, you can automate the localization services using Postm
 
 2\. To Run Id gen Collection in Postman:
 
+* Before executing the Id gen collection, download the CSV file from [https://docs.google.com/spreadsheets/d/1bB3R5faJFfRC0cGZbtPBhv1bmKm\_MsH1upnuC3s2hso/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1bB3R5faJFfRC0cGZbtPBhv1bmKm\_MsH1upnuC3s2hso/edit?usp=sharing) in CSV format.
 * Open the Id gen collection in Postman by clicking on Id gen collection.
-* Click on the **Run** button to execute the collection.
-* Click on the **Run Collection** button to execute the collection.
+* Click on the "Run" button to execute the collection.
+* Click on the "Run Collection" button to execute the collection.
 
 ### Test Automation - Workflow Service
 
@@ -189,6 +202,8 @@ Additionally, you must update the columns `BusinessIdFirst` and `BusinessIdTwo` 
 **IMPORTANT:** If you execute the WorkFlow collection multiple times in the same environment, it's essential to rename the services listed under the columns `BUSINESSSERVICE`, `BUSINESSSERVICETHIRD`, and `BUSINESSSERVICEFOURTH` in the CSV file for each execution to avoid conflicts.
 
 **Additional Notes**: You can also modify other columns but not mandatory.
+
+_**Note**_: if you are getting error in the transition folder of workflow collection, then change CSV file data and run individual folder (don't run whole Workflow  collection) to avoid error.
 {% endhint %}
 
 ### Test Automation - Encryption Service
@@ -207,9 +222,7 @@ Additionally, you must update the columns `BusinessIdFirst` and `BusinessIdTwo` 
 
 * [Click here ](https://docs.google.com/spreadsheets/d/1qwtZ2AG60cIgZlMhZ3YN\_j58vMJgx1uovY8nlKThinM/edit#gid=0)to download the CSV file before executing the Encryption collection.
 
-In the CSV file, cells in the first row UserFIRST, UserName2, and UserName3 represent the unique user and each cell in the second row represents the name given to a specific user.
-
-For example: The first cell in the first row that is UserFIRST represents the first user and USERDemoM1 represents the name given to the user UserFIRST.
+In CSV file , cell in first row "UserForEncy"  represents unique user and  cell in second row  "EncUser1" represent name given to specific user.
 
 | UserForEncy |
 | ----------- |
