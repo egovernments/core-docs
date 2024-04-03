@@ -1,18 +1,16 @@
----
-description: >-
-  This documentation provides you a detail explanation on how to create a new
-  helm chart using common templates and to deploy it using helmfile
----
-
 # Creating New HelmChart
 
-### Prerequisites
+## Overview
+
+This documentation provides a detailed explanation of how to create a new helm chart using common templates and deploy it using helmfile.
+
+## Pre-requisites
 
 * helm
 
-### Steps to be followed
+## Steps&#x20;
 
-* Clone the DIGIT-DevOps repository using below command and checkout to DIGIT-2.9LTS branch.
+* Clone the DIGIT-DevOps repository using the below command and checkout to the DIGIT-2.9LTS branch.
 
 ```
 $ git clone https://github.com/egovernments/DIGIT-DevOps.git
@@ -26,7 +24,7 @@ $ git checkout DIGIT-2.9LTS
 $ cd deploy-as-code/charts/common-chart-template
 ```
 
-* Edit  the chart.yaml  with your service\_name and update the dependency chart path.
+* Edit the chart.yaml with your service\_name and update the dependency chart path.
 
 ```
 apiVersion: v2
@@ -57,7 +55,7 @@ dependencies:
   repository: file://<path_to_common>
 ```
 
-* Now, edit the values.yaml file to override the values present in common chart and the values needs to be provided for your service. If your service doesn't depend on db then you can disable the dbmigration by seeting the value enable as false. And also if you are using your own docker account you need to update the docker container also in the below values.yaml file.
+* Now, edit the values.yaml file to override the values present in the common chart and the values need to be provided for your service. If your service doesn't depend on db then you can disable the DB migration by setting the value enable as false. Also if you are using your docker account you need to update the docker container in the below values.yaml file.
 
 ```
 $ cat values.yaml
@@ -114,5 +112,3 @@ releases:
   installed: true
   version: <chart_version>
 ```
-
-##
