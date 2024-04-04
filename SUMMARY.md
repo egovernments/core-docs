@@ -117,7 +117,6 @@
   * [ID Generation](platform/api-specifications/id-generation.md)
   * [URL Shortner](platform/api-specifications/url-shortner.md)
   * [Workflow Service](platform/api-specifications/workflow-service.md)
-  * [Workflow v2](platform/api-specifications/workflow-v2.md)
   * [Document Uploader Service](platform/api-specifications/document-uploader-service.md)
   * [OTP Service](platform/api-specifications/otp-service.md)
   * [Reporting Service](platform/api-specifications/reporting-service.md)
