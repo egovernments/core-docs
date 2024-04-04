@@ -29,9 +29,9 @@ To provision infrastructure and set up DIGIT, follow the steps below:
 1.  Clone the DIGIT-DevOps repository:
 
     `git clone` [`https://github.com/egovernments/DIGIT-DevOps.git`](https://github.com/egovernments/DIGIT-DevOps.git)
-2.  Navigate to the cloned repository and checkout the release-1.27-kubernetes branch:
+2.  Navigate to the cloned repository and checkout the release-1.28-kubernetes branch:
 
-    `cd DIGIT-DevOps git checkout release-1.27-kubernetes`
+    `cd DIGIT-DevOps git checkout release-1.28-kubernetes`
 3.  Check if correct credentials are configured using the command:
 
     `aws configure list`
