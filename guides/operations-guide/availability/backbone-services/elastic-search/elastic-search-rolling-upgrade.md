@@ -83,6 +83,7 @@ kubectl cp <path_to_script_in_your_machine>/es-dump.sh playground/<playground_na
 <pre><code><strong># Run the script which takes dump of your elasticsearch data using below command
 </strong>kubectl exec -it &#x3C;playground_pod_name> -n playground  bash
 <strong>cd &#x3C;path_to_script_inside_playground_pod>
+</strong><strong>chmod +x es-dump.sh
 </strong><strong>./es-dump.sh
 </strong><strong>
 </strong><strong># When playground pod restarts the data will be lost. So, to store data in your local machine run below command
@@ -152,6 +153,8 @@ kubectl scale statefulsets <elasticsearch_data> -n es-cluster --replicas=0
     
 # Compatible environment variables
 - env:
+  - name: cluster.initial_master_nodes
+    value: elasticsearch-master-v1-0,elasticsearch-master-v1-1,elasticsearch-master-v1-2 
   - name: discovery.seed_hosts
     value: elasticsearch-master-v1-headless
   - name: node.roles
