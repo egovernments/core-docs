@@ -8,486 +8,8 @@ The birth registration module follows a simple workflow derived from the swimlan
 
 Integration with workflow service requires the following steps -
 
-1. Add a workflow object to BirthRegistrationApplication POJO (this may already exist. Do not add if it exists already).&#x20;
-
-```java
-@Valid
-@JsonProperty("workflow")
-private Workflow workflow = null; 
-```
-
-2\. Create POJOs to support workflow - Create the following POJOs under the `digit.web.models` package.
-
-<details>
-
-<summary>ProcessInstance.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@EqualsAndHashCode(of = { "id" })
-@ToString
-public class ProcessInstance {
-
-    @Size(max = 64)
-    @JsonProperty("id")
-    private String id;
-
-    @NotNull
-    @Size(max = 128)
-    @JsonProperty("tenantId")
-    private String tenantId;
-
-    @NotNull
-    @Size(max = 128)
-    @JsonProperty("businessService")
-    private String businessService;
-
-    @NotNull
-    @Size(max = 128)
-    @JsonProperty("businessId")
-    private String businessId;
-
-    @NotNull
-    @Size(max = 128)
-    @JsonProperty("action")
-    private String action;
-
-    @NotNull
-    @Size(max = 64)
-    @JsonProperty("moduleName")
-    private String moduleName;
-
-    @JsonProperty("state")
-    private State state;
-
-    @JsonProperty("comment")
-    private String comment;
-
-    @JsonProperty("documents")
-    @Valid
-    private List<Document> documents;
-
-    @JsonProperty("assignes")
-    private List<User> assignes;
-
-    public ProcessInstance addDocumentsItem(Document documentsItem) {
-        if (this.documents == null) {
-            this.documents = new ArrayList<>();
-        }
-        if (!this.documents.contains(documentsItem))
-            this.documents.add(documentsItem);
-
-        return this;
-    }
-
-}
-```
-
-</details>
-
-<details>
-
-<summary>State.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
-import javax.validation.Valid;
-import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@ToString
-@EqualsAndHashCode(of = {"tenantId","businessServiceId","state"})
-public class State   {
-
-    @Size(max=256)
-    @JsonProperty("uuid")
-    private String uuid;
-
-    @Size(max=256)
-    @JsonProperty("tenantId")
-    private String tenantId;
-
-    @Size(max=256)
-    @JsonProperty("businessServiceId")
-    private String businessServiceId;
-
-    @JsonProperty("sla")
-    private Long sla;
-
-    @Size(max=256)
-    @JsonProperty("state")
-    private String state;
-
-    @Size(max=256)
-    @JsonProperty("applicationStatus")
-    private String applicationStatus;
-
-    @JsonProperty("docUploadRequired")
-    private Boolean docUploadRequired;
-
-    @JsonProperty("isStartState")
-    private Boolean isStartState;
-
-    @JsonProperty("isTerminateState")
-    private Boolean isTerminateState;
-
-    @JsonProperty("isStateUpdatable")
-    private Boolean isStateUpdatable;
-
-    @JsonProperty("actions")
-    @Valid
-    private List<Action> actions;
-
-    private AuditDetails auditDetails;
-
-
-    public State addActionsItem(Action actionsItem) {
-        if (this.actions == null) {
-            this.actions = new ArrayList<>();
-        }
-        this.actions.add(actionsItem);
-        return this;
-    }
-
-}
-```
-
-
-
-</details>
-
-<details>
-
-<summary>Action.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
-import javax.validation.Valid;
-import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@ToString
-@EqualsAndHashCode(of = {"tenantId","currentState","action"})
-public class Action {
-
-    @Size(max=256)
-    @JsonProperty("uuid")
-    private String uuid;
-
-    @Size(max=256)
-    @JsonProperty("tenantId")
-    private String tenantId;
-
-    @Size(max=256)
-    @JsonProperty("currentState")
-    private String currentState;
-
-    @Size(max=256)
-    @JsonProperty("action")
-    private String action;
-
-    @Size(max=256)
-    @JsonProperty("nextState")
-    private String nextState;
-
-    @Size(max=1024)
-    @JsonProperty("roles")
-    @Valid
-    private List<String> roles;
-
-    private AuditDetails auditDetails;
-
-
-    public Action addRolesItem(String rolesItem) {
-        if (this.roles == null) {
-            this.roles = new ArrayList<>();
-        }
-        this.roles.add(rolesItem);
-        return this;
-    }
-
-}
-```
-
-</details>
-
-<details>
-
-<summary>ProcessInstanceRequest.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import org.egov.common.contract.request.RequestInfo;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-import java.util.List;
-
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@ToString
-public class ProcessInstanceRequest {
-    @JsonProperty("RequestInfo")
-    private RequestInfo requestInfo;
-
-    @JsonProperty("ProcessInstances")
-    @Valid
-    @NotNull
-    private List<ProcessInstance> processInstances;
-
-
-    public ProcessInstanceRequest addProcessInstanceItem(ProcessInstance processInstanceItem) {
-        if (this.processInstances == null) {
-            this.processInstances = new ArrayList<>();
-        }
-        this.processInstances.add(processInstanceItem);
-        return this;
-    }
-
-}
-```
-
-</details>
-
-<details>
-
-<summary>ProcessInstanceResponse.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import org.egov.common.contract.response.ResponseInfo;
-
-import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class ProcessInstanceResponse {
-    @JsonProperty("ResponseInfo")
-    private ResponseInfo responseInfo;
-
-    @JsonProperty("ProcessInstances")
-    @Valid
-    private List<ProcessInstance> processInstances;
-
-
-    public ProcessInstanceResponse addProceInstanceItem(ProcessInstance proceInstanceItem) {
-        if (this.processInstances == null) {
-            this.processInstances = new ArrayList<>();
-        }
-        this.processInstances.add(proceInstanceItem);
-        return this;
-    }
-
-}
-```
-
-
-
-</details>
-
-<details>
-
-<summary>BusinessService.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
-
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@ToString
-@EqualsAndHashCode(of = {"tenantId","businessService"})
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class BusinessService   {
-
-    @Size(max=256)
-    @JsonProperty("tenantId")
-    private String tenantId = null;
-
-    @Size(max=256)
-    @JsonProperty("uuid")
-    private String uuid = null;
-
-    @Size(max=256)
-    @JsonProperty("businessService")
-    private String businessService = null;
-
-    @Size(max=256)
-    @JsonProperty("business")
-    private String business = null;
-
-    @Size(max=1024)
-    @JsonProperty("getUri")
-    private String getUri = null;
-
-    @Size(max=1024)
-    @JsonProperty("postUri")
-    private String postUri = null;
-
-    @JsonProperty("businessServiceSla")
-    private Long businessServiceSla = null;
-
-    @NotNull
-    @Valid
-    @JsonProperty("states")
-    private List<State> states = null;
-
-    @JsonProperty("auditDetails")
-    private AuditDetails auditDetails = null;
-
-
-
-    public BusinessService addStatesItem(State statesItem) {
-        if (this.states == null) {
-            this.states = new ArrayList<>();
-        }
-        this.states.add(statesItem);
-        return this;
-    }
-
-
-    /**
-     * Returns the currentState with the given uuid if not present returns null
-     * @param uuid the uuid of the currentState to be returned
-     * @return
-     */
-    public State getStateFromUuid(String uuid) {
-        State state = null;
-        if(this.states!=null){
-            for(State s : this.states){
-                if(s.getUuid().equalsIgnoreCase(uuid)){
-                    state = s;
-                    break;
-                }
-            }
-        }
-        return state;
-    }
-
-
-
-}ava
-```
-
-
-
-</details>
-
-<details>
-
-<summary>BusinessServiceResponse.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import org.egov.common.contract.response.ResponseInfo;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-import java.util.List;
-
-
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@ToString
-public class BusinessServiceResponse {
-
-    @JsonProperty("ResponseInfo")
-    private ResponseInfo responseInfo;
-
-    @JsonProperty("BusinessServices")
-    @Valid
-    @NotNull
-    private List<BusinessService> businessServices;
-
-
-    public BusinessServiceResponse addBusinessServiceItem(BusinessService businessServiceItem) {
-        if (this.businessServices == null) {
-            this.businessServices = new ArrayList<>();
-        }
-        this.businessServices.add(businessServiceItem);
-        return this;
-    }
-
-
-
-}
-```
-
-</details>
-
-3. Create Workflow service - Create a class to transition the workflow object across its states. For this, create a class by the name of WorkflowService.java under the service directory and annotate it with @Service annotation.&#x20;
-4. Add the below content to this class -
+1. Create Workflow service - Create a class to transition the workflow object across its states. For this, create a class by the name of WorkflowService.java under the service directory and annotate it with @Service annotation.&#x20;
+2. Add the below content to this class -
 
 ```java
 package digit.service;
@@ -497,7 +19,11 @@ import digit.config.BTRConfiguration;
 import digit.repository.ServiceRequestRepository;
 import digit.web.models.*;
 import lombok.extern.slf4j.Slf4j;
+import org.egov.common.contract.models.Workflow;
 import org.egov.common.contract.request.RequestInfo;
+import org.egov.common.contract.models.RequestInfoWrapper;
+import org.egov.common.contract.request.User;
+import org.egov.common.contract.workflow.*;
 import org.egov.tracer.model.CustomException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -554,7 +80,7 @@ public class WorkflowService {
             List<User> users = new ArrayList<>();
 
             workflow.getAssignes().forEach(uuid -> {
-                digit.web.models.User user = new digit.web.models.User();
+                User user = new User();
                 user.setUuid(uuid);
                 users.add(user);
             });
@@ -565,8 +91,8 @@ public class WorkflowService {
         return processInstance;
 
     }
-     
-     public ProcessInstance getCurrentWorkflow(RequestInfo requestInfo, String tenantId, String businessId) {
+
+    public ProcessInstance getCurrentWorkflow(RequestInfo requestInfo, String tenantId, String businessId) {
 
         RequestInfoWrapper requestInfoWrapper = RequestInfoWrapper.builder().requestInfo(requestInfo).build();
 
@@ -587,7 +113,7 @@ public class WorkflowService {
 
         return null;
     }
-    
+
     private BusinessService getBusinessService(BirthRegistrationApplication application, RequestInfo requestInfo) {
         String tenantId = application.getTenantId();
         StringBuilder url = getSearchURLWithParams(tenantId, "BTR");
@@ -654,22 +180,25 @@ public class WorkflowService {
 <summary>registerBtRequest</summary>
 
 ```java
-  public List<BirthRegistrationApplication> registerBtRequest(BirthRegistrationRequest birthRegistrationRequest) {
-        birthApplicationValidator.validateBirthApplication(birthRegistrationRequest);
-        birthApplicationEnrichment.enrichBirthApplication(birthRegistrationRequest);
+ public List<BirthRegistrationApplication> registerBtRequest(BirthRegistrationRequest birthRegistrationRequest) {
+        // Validate applications
+        validator.validateBirthApplication(birthRegistrationRequest);
 
-        // Enrich/Upsert user in upon birth registration
+        // Enrich applications
+        enrichmentUtil.enrichBirthApplication(birthRegistrationRequest);
+
+//         Enrich/Upsert user in upon birth registration
         userService.callUserService(birthRegistrationRequest);
-
-        // WORKFLOW INTEGRATION HERE: Initiate workflow for the new application
+//
+        // Initiate workflow for the new application
         workflowService.updateWorkflowStatus(birthRegistrationRequest);
 
         // Push the application to the topic for persister to listen and persist
-        producer.push(configuration.getCreateTopic(), birthRegistrationRequest);
+        producer.push("save-bt-application", birthRegistrationRequest);
 
         // Return the response back to user
         return birthRegistrationRequest.getBirthRegistrationApplications();
-    }Java
+    }
 ```
 
 
@@ -681,17 +210,24 @@ public class WorkflowService {
 <summary>updateBtApplication</summary>
 
 ```java
-  public List<BirthRegistrationApplication> updateBtApplication(BirthRegistrationRequest birthRegistrationRequest) {
+ public BirthRegistrationApplication updateBtApplication(BirthRegistrationRequest birthRegistrationRequest) {
         // Validate whether the application that is being requested for update indeed exists
-        List<BirthRegistrationApplication> existingApplication = birthApplicationValidator.validateApplicationUpdateRequest(birthRegistrationRequest);
-        // Enrich application upon update
-        birthApplicationEnrichment.enrichBirthApplicationUponUpdate(birthRegistrationRequest);
-        //Workflow integration
-        workflowService.updateWorkflowStatus(birthRegistrationRequest);
-        // Just like create request, update request will be handled asynchronously by the persister
-        producer.push(configuration.getUpdateTopic(), birthRegistrationRequest);
+        BirthRegistrationApplication existingApplication = validator.validateApplicationExistence(birthRegistrationRequest.getBirthRegistrationApplications().get(0));
+        existingApplication.setWorkflow(birthRegistrationRequest.getBirthRegistrationApplications().get(0).getWorkflow());
+        log.info(existingApplication.toString());
+        birthRegistrationRequest.setBirthRegistrationApplications(Collections.singletonList(existingApplication));
 
-        return birthRegistrationRequest.getBirthRegistrationApplications();
+        // Enrich application upon update
+        enrichmentUtil.enrichBirthApplicationUponUpdate(birthRegistrationRequest);
+
+        workflowService.updateWorkflowStatus(birthRegistrationRequest);
+
+        // Just like create request, update request will be handled asynchronously by the persister
+        producer.push("update-bt-application", birthRegistrationRequest);
+
+        return birthRegistrationRequest.getBirthRegistrationApplications().get(0);
+        
+        
     }
 ```
 
@@ -704,7 +240,7 @@ public class WorkflowService {
 <summary>searchBtApplications</summary>
 
 ```java
-  public List<BirthRegistrationApplication> searchBtApplications(RequestInfo requestInfo, BirthApplicationSearchCriteria birthApplicationSearchCriteria) {
+ public List<BirthRegistrationApplication> searchBtApplications(RequestInfo requestInfo, BirthApplicationSearchCriteria birthApplicationSearchCriteria) {
         // Fetch applications from database according to the given search criteria
         List<BirthRegistrationApplication> applications = birthRegistrationRepository.getApplications(birthApplicationSearchCriteria);
 
@@ -714,16 +250,11 @@ public class WorkflowService {
 
         // Enrich mother and father of applicant objects
         applications.forEach(application -> {
-            birthApplicationEnrichment.enrichFatherApplicantOnSearch(application);
-            birthApplicationEnrichment.enrichMotherApplicantOnSearch(application);
-        });
-        
-        //WORKFLOW INTEGRATION
-        applications.forEach(application -> {
-            application.setWorkflow(Workflow.builder().status(workflowService.getCurrentWorkflow(requestInfo, application.getTenantId(), application.getApplicationNumber()).getState().getState()).build());
+            enrichmentUtil.enrichFatherApplicantOnSearch(application);
+            enrichmentUtil.enrichMotherApplicantOnSearch(application);
         });
 
-        // Otherwise, return the found applications
+        // Otherwise return the found applications
         return applications;
     }
 ```
