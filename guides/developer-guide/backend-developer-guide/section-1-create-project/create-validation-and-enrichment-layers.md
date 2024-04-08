@@ -67,10 +67,13 @@ Follow the steps below to create the enrichment layer.
 package digit.enrichment;
 
 import digit.service.UserService;
-import digit.utils.IdgenUtil;
-import digit.utils.UserUtil;
+import digit.util.IdgenUtil;
+import digit.util.UserUtil;
 import digit.web.models.*;
 import lombok.extern.slf4j.Slf4j;
+import org.egov.common.contract.models.AuditDetails;
+import org.egov.common.contract.request.User;
+import org.egov.common.contract.user.UserDetailResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -90,7 +93,7 @@ public class BirthApplicationEnrichment {
     private UserUtil userUtils;
 
     public void enrichBirthApplication(BirthRegistrationRequest birthRegistrationRequest) {
-        List<String> birthRegistrationIdList = idgenUtil.getIdList(birthRegistrationRequest.getRequestInfo(), birthRegistrationRequest.getBirthRegistrationApplications().get(0).getTenantId(), "btr.registrationid", "", birthRegistrationRequest.getBirthRegistrationApplications().size());
+       List<String> birthRegistrationIdList = idgenUtil.getIdList(birthRegistrationRequest.getRequestInfo(), birthRegistrationRequest.getBirthRegistrationApplications().get(0).getTenantId(), "btr.registrationid", "", birthRegistrationRequest.getBirthRegistrationApplications().size());
         Integer index = 0;
         for(BirthRegistrationApplication application : birthRegistrationRequest.getBirthRegistrationApplications()){
             // Enrich audit details
@@ -100,17 +103,13 @@ public class BirthApplicationEnrichment {
             // Enrich UUID
             application.setId(UUID.randomUUID().toString());
 
-//            application.getFather().setId(application.getId());
-//            application.getMother().setId(application.getId());
-
-            // Enrich registration Id
-            application.getAddress().setRegistrationId(application.getId());
+//            Enrich application number from IDgen
+            application.setApplicationNumber(birthRegistrationIdList.get(index++));
+//             Enrich registration Id
+            application.getAddress().setApplicationNumber(application.getId());
 
             // Enrich address UUID
             application.getAddress().setId(UUID.randomUUID().toString());
-
-            //Enrich application number from IDgen
-            application.setApplicationNumber(birthRegistrationIdList.get(index++));
 
         }
     }
@@ -122,42 +121,32 @@ public class BirthApplicationEnrichment {
     }
 
     public void enrichFatherApplicantOnSearch(BirthRegistrationApplication application) {
-        UserDetailResponse fatherUserResponse = userService.searchUser(userUtils.getStateLevelTenant(application.getTenantId()),application.getFather().getId(),null);
+        UserDetailResponse fatherUserResponse = userService.searchUser(userUtils.getStateLevelTenant(application.getTenantId()),application.getFather().getUuid(),null);
         User fatherUser = fatherUserResponse.getUser().get(0);
         log.info(fatherUser.toString());
-        FatherApplicant fatherApplicant = FatherApplicant.builder().aadhaarNumber(fatherUser.getAadhaarNumber())
-                                                                    .accountLocked(fatherUser.getAccountLocked())
-                                                                    .active(fatherUser.getActive())
-                                                                    .altContactNumber(fatherUser.getAltContactNumber())
-                                                                    .bloodGroup(fatherUser.getBloodGroup())
-                                                                    .correspondenceAddress(fatherUser.getCorrespondenceAddress())
-                                                                    .correspondenceCity(fatherUser.getCorrespondenceCity())
-                                                                    .correspondencePincode(fatherUser.getCorrespondencePincode())
-                                                                    .gender(fatherUser.getGender())
-                                                                    .id(fatherUser.getUuid())
-                                                                    .name(fatherUser.getName())
-                                                                    .type(fatherUser.getType())
-                                                                    .roles(fatherUser.getRoles()).build();
+        User fatherApplicant = User.builder()
+                .mobileNumber(fatherUser.getMobileNumber())
+                .id(fatherUser.getId())
+                .name(fatherUser.getName())
+                .userName((fatherUser.getUserName()))
+                .type(fatherUser.getType())
+                .roles(fatherUser.getRoles())
+                .uuid(fatherUser.getUuid()).build();
         application.setFather(fatherApplicant);
     }
 
     public void enrichMotherApplicantOnSearch(BirthRegistrationApplication application) {
-        UserDetailResponse motherUserResponse = userService.searchUser(userUtils.getStateLevelTenant(application.getTenantId()),application.getFather().getId(),null);
+        UserDetailResponse motherUserResponse = userService.searchUser(userUtils.getStateLevelTenant(application.getTenantId()),application.getMother().getUuid(),null);
         User motherUser = motherUserResponse.getUser().get(0);
         log.info(motherUser.toString());
-        MotherApplicant motherApplicant = MotherApplicant.builder().aadhaarNumber(motherUser.getAadhaarNumber())
-                .accountLocked(motherUser.getAccountLocked())
-                .active(motherUser.getActive())
-                .altContactNumber(motherUser.getAltContactNumber())
-                .bloodGroup(motherUser.getBloodGroup())
-                .correspondenceAddress(motherUser.getCorrespondenceAddress())
-                .correspondenceCity(motherUser.getCorrespondenceCity())
-                .correspondencePincode(motherUser.getCorrespondencePincode())
-                .gender(motherUser.getGender())
-                .id(motherUser.getUuid())
+        User motherApplicant = User.builder()
+                .mobileNumber(motherUser.getMobileNumber())
+                .id(motherUser.getId())
                 .name(motherUser.getName())
+                .userName((motherUser.getUserName()))
                 .type(motherUser.getType())
-                .roles(motherUser.getRoles()).build();
+                .roles(motherUser.getRoles())
+                .uuid(motherUser.getUuid()).build();
         application.setMother(motherApplicant);
     }
 }
