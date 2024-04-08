@@ -4,7 +4,7 @@ description: >-
   types for public & private clouds
 ---
 
-# Production Setup
+# Setup Guide
 
 #### Topics Covered:
 
@@ -49,16 +49,16 @@ However, DIGIT is a [**cloud-native**](https://www.appdynamics.com/topics/what-i
 
 Choose your cloud and follow the instructions to set up a Kubernetes cluster before moving on to deployment.
 
-{% content-ref url="aws/" %}
-[aws](aws/)
+{% content-ref url="../setup-guide/aws/" %}
+[aws](../setup-guide/aws/)
 {% endcontent-ref %}
 
-{% content-ref url="azure/" %}
-[azure](azure/)
+{% content-ref url="../setup-guide/azure/" %}
+[azure](../setup-guide/azure/)
 {% endcontent-ref %}
 
-{% content-ref url="sdc/" %}
-[sdc](sdc/)
+{% content-ref url="../setup-guide/sdc/" %}
+[sdc](../setup-guide/sdc/)
 {% endcontent-ref %}
 
 ## 2. Deploy DIGIT

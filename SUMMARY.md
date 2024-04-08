@@ -175,7 +175,7 @@
 ## Guides
 
 * [📓 Installation Guide](guides/installation-guide/README.md)
-  * [Setup Guide](guides/installation-guide/setup-guide/README.md)
+  * [Setup Guide](guides/installation-guide/production-setup/README.md)
     * [AWS](guides/installation-guide/setup-guide/aws/README.md)
       * [1. Pre-requisites](guides/installation-guide/setup-guide/aws/1.-pre-requisites.md)
       * [2. Understanding EKS](guides/installation-guide/setup-guide/aws/2.-understanding-eks.md)
@@ -202,7 +202,7 @@
       * [Backbone Deployment](guides/installation-guide/setup-guide/deployment-key-concepts/backbone-deployment.md)
     * [Bootstrap DIGIT](guides/installation-guide/setup-guide/bootstrap-digit.md)
     * [Productionize DIGIT](guides/installation-guide/setup-guide/productionize-digit.md)
-  * [DIGIT Deployment](guides/installation-guide/digit-deployment/README.md)
+  * [DIGIT Deployment](guides/installation-guide/digit-deployment.md)
     * [Deployment Using GitHub Actions](guides/installation-guide/digit-deployment/deployment-using-github-actions.md)
     * [Deployment Using Helmfile](guides/installation-guide/digit-deployment/deployment-using-helmfile/README.md)
       * [Creating New HelmChart](guides/installation-guide/digit-deployment/deployment-using-helmfile/creating-new-helmchart.md)
