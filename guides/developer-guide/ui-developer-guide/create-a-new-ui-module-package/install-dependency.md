@@ -14,8 +14,8 @@ For the purpose of illustration here, add the following module (birth registrati
 
 ```
   "citymodule": [{
-      "module": "BR",
-      "code": "BR",
+      "module": "SAMPLE",
+      "code": "SAMPLE",
       "active": true,
       "order": 1,
       "tenants": [
@@ -36,25 +36,24 @@ For the purpose of illustration here, add the following module (birth registrati
 2. Register the birth registration UI module in three places so that it will be available to the developer at runtime as well as at the time of deployment. Below are the three places where the module needs to be registered:
 
 `micro-ui/web/micro-ui-internals/package.json`\
-`micro-ui/web/micro-ui-internals/example/package.json`\
-`micro-ui/web/micro-ui-internalsWeb/package.json`
+`micro-ui/web/micro-ui-internals/example/package.json`
 
 3. **Micro-ui-internals:-** Open the micro-ui-internals package.json file and add this module as a dependency.
 
 ```
-"dev:br": "cd packages/modules/br && yarn start",
-"build:br": "cd packages/modules/br && yarn build", 
+"dev:Sample": "cd packages/modules/br && yarn start",
+"build:Sample": "cd packages/modules/br && yarn build", 
 ```
 
 4. In the example/package.json, add the following line:
 
 ```
-"@egovernments/digit-ui-module-br":"^1.0.0",
+"@egovernments/digit-ui-module-Sample":"0.0.1",
 ```
 
 5. In the web/package.json, add the following line:
 
 ```
-"@egovernments/digit-ui-module-br":"1.0.0",
+"@egovernments/digit-ui-module-Sample":"0.0.1",
 ```
 

@@ -9,7 +9,7 @@
 2. Install NodeJS **14.20.0**
 3. [Install Yarn ](https://code.visualstudio.com/download)version **1.22.19**
 4. **Install Python version** 2.7
-5. Clone the [DIGIT-OSS](https://github.com/egovernments/DIGIT-OSS/tree/digit-ui-impl) repository locally from your organization's umbrella. This contains the frontend code under the frontend folder.
+5. Clone the[ DIGIT-Frontend](https://github.com/egovernments/DIGIT-Frontend/tree/sample) repository locally from your organization's umbrella. This contains the frontend code under the frontend folder.
 
 ```
 cd frontend/micro-ui/web/micro-ui-internals

@@ -28,13 +28,20 @@ REACT_APP_GLOBAL=https://s3.ap-south-1.amazonaws.com/works-dev-asset/globalConfi
 
 **Step 3:** To run the application as citizen, then update the value of `REACT_APP_USER_TYPE=CITIZEN.`
 
-**Step 4:** To point the frontend to different environment change the `REACT_APP_GLOBAL,`and add the GlobalConfig environment file for that environment.
+**Step 4:** To point the frontend to different environments change the `REACT_APP_GLOBAL,`and add the GlobalConfig environment file for that environment.
 
 To learn more about global config visit [How to configure globalconfig](https://core.digit.org/guides/developer-guide/ui-developer-guide/ui-configuration#globalconfig).
 
-Update both `REACT_APP_PROXY_API` and `REACT_APP_PROXY_ASSETS` to the environment URL.
+Update both `REACT_APP_PROXY_API` and `REACT_APP_PROXY_ASSETS` to the environment URL.\
 
-### Initialise & Run The Application
+
+### Initialise & Run Application
+
+Before initializing the frontend app locally, ensure that you are in the specified directory.
+
+```
+frontend/micro-ui/web/micro-ui-internals
+```
 
 **Step 1:** To initialise the Yarn execute the below command -
 
@@ -74,3 +81,55 @@ On the home page, users can see the cards mCollect, HRMS, NOC, Property Tax, etc
 
 Click on the [link here](run-application.md#configure-environment-file-citizen) to create a card for your module on the home page under "Citizen Services".
 
+### Troubleshoot
+
+if you do not have a global config and AWS credentials  are not present, then create a temporary local config under the path:
+
+```
+frontend/micro-ui/web/micro-ui-internals/example/public/index.html
+```
+
+Include this between the head tags
+
+```
+ <script>
+      var globalConfigs = (function () {
+      var stateTenantId = 'od'
+      var gmaps_api_key = 'AIzaSyAQOd09-vjmk1sXFb_ZQYDz2nlfhXq7Wf8'
+      var finEnv = 'uat'
+      var centralInstanceEnabled = false;
+      var footerBWLogoURL = 'https://s3.ap-south-1.amazonaws.com/egov-uat-assets/digit-footer-bw.png'
+      var footerLogoURL = 'https://s3.ap-south-1.amazonaws.com/egov-uat-assets/digit-footer.png'
+      var digitHomeURL = 'https://www.digit.org/'
+      var assetS3Bucket = 'pg-egov-assets';
+      var getConfig = function (key) {
+        if (key === 'STATE_LEVEL_TENANT_ID') {
+          return stateTenantId;
+        }
+        else if (key === 'GMAPS_API_KEY') {
+          return gmaps_api_key;
+        }
+        else if (key === 'FIN_ENV') {
+          return finEnv;
+        } else if (key === 'ENABLE_SINGLEINSTANCE') {
+          return centralInstanceEnabled;
+        } else if (key === 'DIGIT_FOOTER_BW') {
+          return footerBWLogoURL;
+        } else if (key === 'DIGIT_FOOTER') {
+          return footerLogoURL;
+        } else if (key === 'DIGIT_HOME_URL') {
+          return digitHomeURL;
+        } else if (key === 'S3BUCKET') {
+          return assetS3Bucket;
+        } else if (key === "JWT_TOKEN"){
+          return "ZWdvdi11c2VyLWNsaWVudDplZ292LXVzZXItc2VjcmV0";
+        }
+      };
+      return {
+        getConfig
+      };
+}());
+    </script>
+```
+
+[example](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/example/public/index.html)&#x20;

@@ -22,15 +22,16 @@ Common components live in `micro-ui/web/micro-ui-internals/packages/react-compon
 
 DIGIT components that we are reusing -
 
-1. FormComposer
-2. ActionBar
-3. Banner
-4. Card
-5. CardText
-6. Loader
-7. SubmitBar
-8. AppContainer
-9. BackButton
-10. PrivateRoute
-11. Icons
-12. CitizenHomecard
+1. FormComposerV2
+2. InboxSearchComposer
+3. ActionBar
+4. Banner
+5. Card
+6. CardText
+7. Loader
+8. SubmitBar
+9. AppContainer
+10. BackButton
+11. PrivateRoute
+12. Icons
+13. CitizenHomecard

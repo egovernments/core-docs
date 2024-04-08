@@ -10,8 +10,6 @@ This section will walk you through the code that needs to be developed for the a
 
 ## Steps
 
-Detailed user screen wireframes should be available at this point for development.
-
 <details>
 
 <summary>Create Application Form</summary>
@@ -122,16 +120,18 @@ export const newConfig =[
 ];
 ```
 
-Components that we are using in `newConfig.js`:-\
-\
-[BrSelectName](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectName.js)\
-[BrSelectGender](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BRSelectGender.js)\
-[BrSelectPhoneNumber](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectPhoneNumber.js)\
-[BrSelectEmailId](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectEmailId.js)\
-[BrSelectAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectAddress.js)\
-[SelectCorrespondenceAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectCorrespondenceAddress.js)
+Components that we are using in `newConfig.js`:-
 
+[\
+BrSelectName](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectName.js)
 
+&#x20;[BrSelectGender](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BRSelectGender.js)&#x20;
+
+[BrSelectPhoneNumber](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectPhoneNumber.js)
+
+[BrSelectPhoneNumber](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectPhoneNumber.js)
+
+&#x20;[BrSelectAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectAddress.js)   [SelectCorrespondenceAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectCorrespondenceAddress.js)
 
 </details>
 
@@ -174,7 +174,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 **Add a card on the citizen landing screen:**
@@ -266,8 +265,6 @@ export const initBRComponents = () => {
     Digit.ComponentRegistryService.setComponent(key, value);
   });
 };
-
-
 ```
 
 
@@ -402,7 +399,6 @@ const initDigitUI = () => {
 initLibraries().then(() => {
   initDigitUI();
 });
-
 ```
 
 Once we enable the BR module in app.js and index.js, the module will be available in the UI. Click on [http://localhost:3000/digit-ui/citizen](http://localhost:3000/digit-ui/citizen) to see the UI.
@@ -421,7 +417,7 @@ Once we add the link to the homepage,we can see the birth-registration module on
 
 Now, let's add the homepage card for the citizen module.
 
-```jsx
+```
 import {
     Calender, CardBasedOptions, CaseIcon, ComplaintIcon, DocumentIcon, HomeIcon, Loader, OBPSIcon, PTIcon, StandaloneSearchBar, WhatsNewCard
 } from "@egovernments/digit-ui-react-components";
@@ -536,7 +532,9 @@ const Home = () => {
 };
 
 export default Home;
+```
 
+```jsx
 ```
 
 
@@ -612,7 +610,6 @@ export const useBRCreate = (tenantId, config = {}) => {
 };
 
 export default useBRCreate;
-
 ```
 
 After creating Service and Hooks we need to register it into `packages/ libraries/src/index.js`
@@ -653,7 +650,6 @@ const initLibraries = () => {
 };
 
 export { initLibraries, Enums, Hooks, subFormRegistry };
-
 ```
 
 We have setup the backend service, and now we will use the hooks or service to send the data to the backend after submitting the form.
@@ -738,7 +734,6 @@ const Create = () => {
 };
 
 export default Create;
-
 ```
 
 

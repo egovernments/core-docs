@@ -22,7 +22,7 @@ Download the UI code from the link here [Birth-Registration. ](https://github.co
 ```
 {
     "name": "@egovernments/digit-ui-module-br",
-    "version": "1.5.4",
+    "version": "0.0.1",
     "license": "MIT",
     "description": "Birth Registration Module",
     "main": "dist/index.js",
@@ -42,7 +42,7 @@ Download the UI code from the link here [Birth-Registration. ](https://github.co
     },
     "dependencies": {
       "@egovernments/digit-ui-libraries": "1.5.4",
-      "@egovernments/digit-ui-react-components": "1.5.4",
+      "@egovernments/digit-ui-react-components": "1.8.0-beta.5",
       "lodash.merge": "^4.6.2",
       "react": "17.0.2",
       "react-dom": "17.0.2",
