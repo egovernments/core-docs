@@ -8,10 +8,6 @@ description: Implementing the controller layer in Spring
 
 The web/controller layer handles all the incoming REST requests to a service.
 
-## **Steps**
-
-The @RequestMapping("/v1") annotation is added on top of the controller class. This contains the version of the API (this becomes a part of the API endpoint URL).
-
 ### **Setup Request Handler In The Controller Layer**
 
 Follow the steps below to set up the request handler in the controller layer.
@@ -28,34 +24,35 @@ The controller class reflects the below content -
 ```java
 package digit.web.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import digit.service.BirthRegistrationService;
-import digit.utils.ResponseInfoFactory;
+import digit.util.ResponseInfoFactory;
 import digit.web.models.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.ApiParam;
-import io.swagger.annotations.Tag;
-import lombok.ToString;
-import lombok.extern.slf4j.Slf4j;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.egov.common.contract.response.ResponseInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
+import org.springframework.web.bind.annotation.RequestMapping;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-@javax.annotation.Generated(value = "org.egov.codegen.SpringBootCodegen", date = "2022-07-26T12:39:05.988+05:30")
-@Slf4j
-@ToString
+
+import jakarta.validation.Valid;
+import jakarta.servlet.http.HttpServletRequest;
+
+
+@jakarta.annotation.Generated(value = "org.egov.codegen.SpringBootCodegen", date = "2024-03-07T11:10:12.732364039+05:30[Asia/Kolkata]")
 @Controller
-@RequestMapping("/birth-services")
-public class V1ApiController{
+    @RequestMapping("")
+    public class BirthApiController{
 
     private final ObjectMapper objectMapper;
 
@@ -67,13 +64,13 @@ public class V1ApiController{
     private ResponseInfoFactory responseInfoFactory;
 
     @Autowired
-    public V1ApiController(ObjectMapper objectMapper, HttpServletRequest request, BirthRegistrationService birthRegistrationService) {
+    public BirthApiController(ObjectMapper objectMapper, HttpServletRequest request, BirthRegistrationService birthRegistrationService) {
         this.objectMapper = objectMapper;
         this.request = request;
         this.birthRegistrationService = birthRegistrationService;
     }
 
-    @RequestMapping(value="/v1/registration/_create", method = RequestMethod.POST)
+    @RequestMapping(value="/registration/v1/_create", method = RequestMethod.POST)
     public ResponseEntity<BirthRegistrationResponse> v1RegistrationCreatePost(@ApiParam(value = "Details for the new Birth Registration Application(s) + RequestInfo meta data." ,required=true )  @Valid @RequestBody BirthRegistrationRequest birthRegistrationRequest) {
         List<BirthRegistrationApplication> applications = birthRegistrationService.registerBtRequest(birthRegistrationRequest);
         ResponseInfo responseInfo = responseInfoFactory.createResponseInfoFromRequestInfo(birthRegistrationRequest.getRequestInfo(), true);
@@ -82,14 +79,14 @@ public class V1ApiController{
     }
 
     @RequestMapping(value="/v1/registration/_search", method = RequestMethod.POST)
-    public ResponseEntity<BirthRegistrationResponse> v1RegistrationSearchPost(@RequestBody RequestInfoWrapper requestInfoWrapper, @Valid @ModelAttribute BirthApplicationSearchCriteria birthApplicationSearchCriteria) {
-        List<BirthRegistrationApplication> applications = birthRegistrationService.searchBtApplications(requestInfoWrapper.getRequestInfo(), birthApplicationSearchCriteria);
-        ResponseInfo responseInfo = responseInfoFactory.createResponseInfoFromRequestInfo(requestInfoWrapper.getRequestInfo(), true);
+    public ResponseEntity<BirthRegistrationResponse> v1RegistrationSearchPost(@ApiParam(value = "Details for the new Birth Registration Application(s) + RequestInfo meta data." ,required=true )  @Valid @RequestBody BirthApplicationSearchRequest birthApplicationSearchRequest) {
+        List<BirthRegistrationApplication> applications = birthRegistrationService.searchBtApplications(birthApplicationSearchRequest.getRequestInfo(), birthApplicationSearchRequest.getBirthApplicationSearchCriteria());
+        ResponseInfo responseInfo = responseInfoFactory.createResponseInfoFromRequestInfo(birthApplicationSearchRequest.getRequestInfo(), true);
         BirthRegistrationResponse response = BirthRegistrationResponse.builder().birthRegistrationApplications(applications).responseInfo(responseInfo).build();
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
 
-    @RequestMapping(value="/v1/registration/_update", method = RequestMethod.POST)
+    @RequestMapping(value="/registration/v1/_update", method = RequestMethod.POST)
     public ResponseEntity<BirthRegistrationResponse> v1RegistrationUpdatePost(@ApiParam(value = "Details for the new (s) + RequestInfo meta data." ,required=true )  @Valid @RequestBody BirthRegistrationRequest birthRegistrationRequest) {
         BirthRegistrationApplication application = birthRegistrationService.updateBtApplication(birthRegistrationRequest);
 
@@ -98,7 +95,8 @@ public class V1ApiController{
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-}
+
+        }
 
 ```
 {% endcode %}
@@ -106,41 +104,5 @@ public class V1ApiController{
 {% hint style="info" %}
 **NOTE:** At this point, your IDE must be showing a lot of errors but do not worry we will add all dependent layers as we progress through this guide and the errors will go away.
 {% endhint %}
-
-4. The Codegen jar makes the search API using @RequestParam annotations for search parameters instead of using a POJO for request parameters. So, we'll create a POJO named BirthApplicationSearchCriteria in the Models package and add the following content to it.
-
-{% code lineNumbers="true" %}
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
-import java.util.List;
-
-@Data
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@ToString
-public class BirthApplicationSearchCriteria {
-
-    @JsonProperty("tenantId")
-    private String tenantId;
-
-    @JsonProperty("status")
-    private String status;
-
-    @JsonProperty("ids")
-    private List<String> ids;
-
-    @JsonProperty("applicationNumber")
-    private String applicationNumber;
-
-}
-```
-{% endcode %}
 
 The web layer is now setup.
