@@ -1,6 +1,6 @@
 # Integrate User Service
 
-## **Overview**&#x20;
+**Overview**&#x20;
 
 The [User Service](../../../../platform/core-services/user-services.md) provides the capabilities of creating a user, searching for a user and retrieving the details of a user. This module will search for a user and if not found, create that user with the user service.
 
@@ -10,146 +10,7 @@ DIGIT's user service masks PII that gets stored in the database using the [Encry
 
 ## Steps
 
-1. Create the following POJOs under the `model` directory:
-
-<details>
-
-<summary>CreateUserRequest.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import org.egov.common.contract.request.RequestInfo;
-
-@AllArgsConstructor
-@Getter
-@NoArgsConstructor
-public class CreateUserRequest {
-
-    @JsonProperty("requestInfo")
-    private RequestInfo requestInfo;
-
-    @JsonProperty("user")
-    private User user;
-
-}
-```
-
-</details>
-
-<details>
-
-<summary>UserSearchRequest.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
-import org.egov.common.contract.request.RequestInfo;
-
-import java.util.Collections;
-import java.util.List;
-
-
-@Getter
-@Setter
-public class UserSearchRequest {
-
-    @JsonProperty("RequestInfo")
-    private RequestInfo requestInfo;
-
-    @JsonProperty("uuid")
-    private List<String> uuid;
-
-    @JsonProperty("id")
-    private List<String> id;
-
-    @JsonProperty("userName")
-    private String userName;
-
-    @JsonProperty("name")
-    private String name;
-
-    @JsonProperty("mobileNumber")
-    private String mobileNumber;
-
-    @JsonProperty("aadhaarNumber")
-    private String aadhaarNumber;
-
-    @JsonProperty("pan")
-    private String pan;
-
-    @JsonProperty("emailId")
-    private String emailId;
-
-    @JsonProperty("fuzzyLogic")
-    private boolean fuzzyLogic;
-
-    @JsonProperty("active")
-    @Setter
-    private Boolean active;
-
-    @JsonProperty("tenantId")
-    private String tenantId;
-
-    @JsonProperty("pageSize")
-    private int pageSize;
-
-    @JsonProperty("pageNumber")
-    private int pageNumber = 0;
-
-    @JsonProperty("sort")
-    private List<String> sort = Collections.singletonList("name");
-
-    @JsonProperty("userType")
-    private String userType;
-
-    @JsonProperty("roleCodes")
-    private List<String> roleCodes;
-
-}
-```
-
-</details>
-
-<details>
-
-<summary>UserDetailResponse.java</summary>
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import org.egov.common.contract.response.ResponseInfo;
-
-import java.util.List;
-
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@ToString
-public class UserDetailResponse {
-    @JsonProperty("responseInfo")
-    ResponseInfo responseInfo;
-
-    @JsonProperty("user")
-    List<User> user;
-}
-```
-
-</details>
-
-2. Create a class by the name of UserService under service folder and add the following content to it:
+1. Create a class by the name of UserService under service folder and add the following content to it:
 
 <details>
 
@@ -160,15 +21,20 @@ public class UserDetailResponse {
 package digit.service;
 
 import digit.config.BTRConfiguration;
-import digit.utils.UserUtil;
+import digit.util.UserUtil;
 import digit.web.models.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.egov.common.contract.request.RequestInfo;
+import org.egov.common.contract.request.User;
+import org.egov.common.contract.user.CreateUserRequest;
+import org.egov.common.contract.user.UserDetailResponse;
+import org.egov.common.contract.user.UserSearchRequest;
 import org.egov.tracer.model.CustomException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
 
 import java.util.Collections;
 import java.util.List;
@@ -196,60 +62,58 @@ public class UserService {
      */
     public void callUserService(BirthRegistrationRequest request){
         request.getBirthRegistrationApplications().forEach(application -> {
-            if(!StringUtils.isEmpty(application.getFather().getId()))
+            if(!StringUtils.isEmpty(application.getFather().getUuid()))
                 enrichUser(application, request.getRequestInfo());
             else {
                 User user = createFatherUser(application);
-                application.getFather().setId(upsertUser(user, request.getRequestInfo()));
+                application.getFather().setUuid(upsertUser(user, request.getRequestInfo()).getUuid());
             }
         });
 
         request.getBirthRegistrationApplications().forEach(application -> {
-            if(!StringUtils.isEmpty(application.getMother().getId()))
+            if(!StringUtils.isEmpty(application.getMother().getUuid()))
                 enrichUser(application, request.getRequestInfo());
             else {
                 User user = createMotherUser(application);
-                application.getMother().setId(upsertUser(user, request.getRequestInfo()));
+                application.getMother().setUuid(upsertUser(user, request.getRequestInfo()).getUuid());
             }
         });
     }
 
     private User createFatherUser(BirthRegistrationApplication application){
-        FatherApplicant father = application.getFather();
+        User father = application.getFather();
         User user = User.builder().userName(father.getUserName())
                 .name(father.getName())
+                .userName((father.getUserName()))
                 .mobileNumber(father.getMobileNumber())
                 .emailId(father.getEmailId())
-                .altContactNumber(father.getAltContactNumber())
                 .tenantId(father.getTenantId())
                 .type(father.getType())
                 .roles(father.getRoles())
                 .build();
-//        String tenantId = father.getTenantId();
         return user;
     }
 
     private User createMotherUser(BirthRegistrationApplication application){
-        MotherApplicant mother = application.getMother();
+        User mother = application.getMother();
         User user = User.builder().userName(mother.getUserName())
                 .name(mother.getName())
+                .userName((mother.getUserName()))
                 .mobileNumber(mother.getMobileNumber())
                 .emailId(mother.getEmailId())
-                .altContactNumber(mother.getAltContactNumber())
                 .tenantId(mother.getTenantId())
                 .type(mother.getType())
                 .roles(mother.getRoles())
                 .build();
-//        String tenantId = father.getTenantId();
         return user;
     }
-    private String upsertUser(User user, RequestInfo requestInfo){
+    private User upsertUser(User user, RequestInfo requestInfo){
 
         String tenantId = user.getTenantId();
         User userServiceResponse = null;
 
         // Search on mobile number as user name
-        UserDetailResponse userDetailResponse = searchUser(userUtils.getStateLevelTenant(tenantId),null, user.getMobileNumber());
+        UserDetailResponse userDetailResponse = searchUser(userUtils.getStateLevelTenant(tenantId),null, user.getUserName());
         if (!userDetailResponse.getUser().isEmpty()) {
             User userFromSearch = userDetailResponse.getUser().get(0);
             log.info(userFromSearch.toString());
@@ -263,14 +127,14 @@ public class UserService {
         }
 
         // Enrich the accountId
-       // user.setId(userServiceResponse.getUuid());
-        return userServiceResponse.getUuid();
+        // user.setId(userServiceResponse.getUuid());
+        return userServiceResponse;
     }
 
 
     private void enrichUser(BirthRegistrationApplication application, RequestInfo requestInfo){
-        String accountIdFather = application.getFather().getId();
-        String accountIdMother = application.getMother().getId();
+        String accountIdFather = application.getFather().getUuid();
+        String  accountIdMother = application.getMother().getUuid();
         String tenantId = application.getTenantId();
 
         UserDetailResponse userDetailResponseFather = searchUser(userUtils.getStateLevelTenant(tenantId),accountIdFather,null);
@@ -278,12 +142,12 @@ public class UserService {
         if(userDetailResponseFather.getUser().isEmpty())
             throw new CustomException("INVALID_ACCOUNTID","No user exist for the given accountId");
 
-        else application.getFather().setId(userDetailResponseFather.getUser().get(0).getUuid());
+        else application.getFather().setUuid(userDetailResponseFather.getUser().get(0).getUuid());
 
         if(userDetailResponseMother.getUser().isEmpty())
             throw new CustomException("INVALID_ACCOUNTID","No user exist for the given accountId");
 
-        else application.getMother().setId(userDetailResponseMother.getUser().get(0).getUuid());
+        else application.getMother().setUuid(userDetailResponseMother.getUser().get(0).getUuid());
 
     }
 
@@ -319,7 +183,6 @@ public class UserService {
     private User updateUser(RequestInfo requestInfo,User user,User userFromSearch) {
 
         userFromSearch.setName(user.getName());
-        userFromSearch.setActive(true);
 
         StringBuilder uri = new StringBuilder(config.getUserHost())
                 .append(config.getUserContextPath())
@@ -343,7 +206,7 @@ public class UserService {
 
         UserSearchRequest userSearchRequest =new UserSearchRequest();
         userSearchRequest.setActive(true);
-        userSearchRequest.setUserType("CITIZEN");
+//        userSearchRequest.setUserType("CITIZEN");
         userSearchRequest.setTenantId(stateLevelTenant);
 
         if(StringUtils.isEmpty(accountId) && StringUtils.isEmpty(userName))
@@ -396,6 +259,151 @@ public class UserService {
 
 </details>
 
+#### 2.   Update the code in userUtil
+
+<details>
+
+<summary>UserUtil.java</summary>
+
+```java
+package digit.util;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import digit.config.Configuration;
+import static digit.config.ServiceConstants.*;
+import org.egov.common.contract.request.Role;
+import org.egov.common.contract.request.User;
+import org.egov.common.contract.user.UserDetailResponse;
+import org.egov.common.contract.user.enums.UserType;
+import digit.repository.ServiceRequestRepository;
+import org.egov.tracer.model.CustomException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+@Component
+public class UserUtil {
+
+    @Autowired
+    private ObjectMapper mapper;
+
+    @Autowired
+    private ServiceRequestRepository serviceRequestRepository;
+
+    @Autowired
+    private Configuration configs;
+
+
+    @Autowired
+    public UserUtil(ObjectMapper mapper, ServiceRequestRepository serviceRequestRepository) {
+        this.mapper = mapper;
+        this.serviceRequestRepository = serviceRequestRepository;
+    }
+
+    /**
+     * Returns UserDetailResponse by calling user service with given uri and object
+     * @param userRequest Request object for user service
+     * @param uri The address of the endpoint
+     * @return Response from user service as parsed as userDetailResponse
+     */
+
+    public UserDetailResponse userCall(Object userRequest, StringBuilder uri) {
+        String dobFormat = null;
+        if(uri.toString().contains(configs.getUserSearchEndpoint())  || uri.toString().contains(configs.getUserUpdateEndpoint()))
+            dobFormat=DOB_FORMAT_Y_M_D;
+        else if(uri.toString().contains(configs.getUserCreateEndpoint()))
+            dobFormat = DOB_FORMAT_D_M_Y;
+        try{
+            LinkedHashMap responseMap = (LinkedHashMap)serviceRequestRepository.fetchResult(uri, userRequest);
+            parseResponse(responseMap,dobFormat);
+            UserDetailResponse userDetailResponse = mapper.convertValue(responseMap,UserDetailResponse.class);
+            return userDetailResponse;
+        }
+        catch(IllegalArgumentException  e)
+        {
+            throw new CustomException(ILLEGAL_ARGUMENT_EXCEPTION_CODE,OBJECTMAPPER_UNABLE_TO_CONVERT);
+        }
+    }
+
+
+    /**
+     * Parses date formats to long for all users in responseMap
+     * @param responseMap LinkedHashMap got from user api response
+     */
+
+    public void parseResponse(LinkedHashMap responseMap, String dobFormat){
+        List<LinkedHashMap> users = (List<LinkedHashMap>)responseMap.get(USER);
+        String format1 = DOB_FORMAT_D_M_Y_H_M_S;
+        if(users!=null){
+            users.forEach( map -> {
+                        map.put(CREATED_DATE,dateTolong((String)map.get(CREATED_DATE),format1));
+                        if((String)map.get(LAST_MODIFIED_DATE)!=null)
+                            map.put(LAST_MODIFIED_DATE,dateTolong((String)map.get(LAST_MODIFIED_DATE),format1));
+                        if((String)map.get(DOB)!=null)
+                            map.put(DOB,dateTolong((String)map.get(DOB),dobFormat));
+                        if((String)map.get(PWD_EXPIRY_DATE)!=null)
+                            map.put(PWD_EXPIRY_DATE,dateTolong((String)map.get(PWD_EXPIRY_DATE),format1));
+                    }
+            );
+        }
+    }
+
+    /**
+     * Converts date to long
+     * @param date date to be parsed
+     * @param format Format of the date
+     * @return Long value of date
+     */
+    private Long dateTolong(String date,String format){
+        SimpleDateFormat f = new SimpleDateFormat(format);
+        Date d = null;
+        try {
+            d = f.parse(date);
+        } catch (ParseException e) {
+            throw new CustomException(INVALID_DATE_FORMAT_CODE,INVALID_DATE_FORMAT_MESSAGE);
+        }
+        return  d.getTime();
+    }
+
+    /**
+     * enriches the userInfo with statelevel tenantId and other fields
+     * The function creates user with username as mobile number.
+     * @param mobileNumber
+     * @param tenantId
+     * @param userInfo
+     */
+    public void addUserDefaultFields(String mobileNumber,String tenantId, User userInfo){
+        Role role = getCitizenRole(tenantId);
+        userInfo.setMobileNumber(mobileNumber);
+        userInfo.setTenantId(getStateLevelTenant(tenantId));
+        userInfo.setType("CITIZEN");
+    }
+
+    /**
+     * Returns role object for citizen
+     * @param tenantId
+     * @return
+     */
+    private Role getCitizenRole(String tenantId){
+        Role role = Role.builder().build();
+        role.setCode(CITIZEN_UPPER);
+        role.setName(CITIZEN_LOWER);
+        role.setTenantId(getStateLevelTenant(tenantId));
+        return role;
+    }
+
+    public String getStateLevelTenant(String tenantId){
+        return tenantId.split("\\.")[0];
+    }
+
+}
+```
+
+</details>
+
 #### Changes to BirthApplicationEnrichment.java
 
 Add the below methods to the enrichment class we created. When we search for an application, the code below will search for the users associated with the application and add in their details to the response object.
@@ -406,42 +414,32 @@ Add the below methods to the enrichment class we created. When we search for an 
 
 ```java
 public void enrichFatherApplicantOnSearch(BirthRegistrationApplication application) {
-        UserDetailResponse fatherUserResponse = userService.searchUser(userUtils.getStateLevelTenant(application.getTenantId()),application.getFather().getId(),null);
+        UserDetailResponse fatherUserResponse = userService.searchUser(userUtils.getStateLevelTenant(application.getTenantId()),application.getFather().getUuid(),null);
         User fatherUser = fatherUserResponse.getUser().get(0);
         log.info(fatherUser.toString());
-        FatherApplicant fatherApplicant = FatherApplicant.builder().aadhaarNumber(fatherUser.getAadhaarNumber())
-                .accountLocked(fatherUser.getAccountLocked())
-                .active(fatherUser.getActive())
-                .altContactNumber(fatherUser.getAltContactNumber())
-                .bloodGroup(fatherUser.getBloodGroup())
-                .correspondenceAddress(fatherUser.getCorrespondenceAddress())
-                .correspondenceCity(fatherUser.getCorrespondenceCity())
-                .correspondencePincode(fatherUser.getCorrespondencePincode())
-                .gender(fatherUser.getGender())
-                .id(fatherUser.getUuid())
+        User fatherApplicant = User.builder()
+                .mobileNumber(fatherUser.getMobileNumber())
+                .id(fatherUser.getId())
                 .name(fatherUser.getName())
+                .userName((fatherUser.getUserName()))
                 .type(fatherUser.getType())
-                .roles(fatherUser.getRoles()).build();
+                .roles(fatherUser.getRoles())
+                .uuid(fatherUser.getUuid()).build();
         application.setFather(fatherApplicant);
     }
 
     public void enrichMotherApplicantOnSearch(BirthRegistrationApplication application) {
-        UserDetailResponse motherUserResponse = userService.searchUser(userUtils.getStateLevelTenant(application.getTenantId()),application.getMother().getId(),null);
+        UserDetailResponse motherUserResponse = userService.searchUser(userUtils.getStateLevelTenant(application.getTenantId()),application.getMother().getUuid(),null);
         User motherUser = motherUserResponse.getUser().get(0);
         log.info(motherUser.toString());
-        MotherApplicant motherApplicant = MotherApplicant.builder().aadhaarNumber(motherUser.getAadhaarNumber())
-                .accountLocked(motherUser.getAccountLocked())
-                .active(motherUser.getActive())
-                .altContactNumber(motherUser.getAltContactNumber())
-                .bloodGroup(motherUser.getBloodGroup())
-                .correspondenceAddress(motherUser.getCorrespondenceAddress())
-                .correspondenceCity(motherUser.getCorrespondenceCity())
-                .correspondencePincode(motherUser.getCorrespondencePincode())
-                .gender(motherUser.getGender())
-                .id(motherUser.getUuid())
+        User motherApplicant = User.builder()
+                .mobileNumber(motherUser.getMobileNumber())
+                .id(motherUser.getId())
                 .name(motherUser.getName())
+                .userName((motherUser.getUserName()))
                 .type(motherUser.getType())
-                .roles(motherUser.getRoles()).build();
+                .roles(motherUser.getRoles())
+                .uuid(motherUser.getUuid()).build();
         application.setMother(motherApplicant);
     }
 ```
@@ -466,15 +464,21 @@ And enhance the following two methods in BirthRegistrationService.java:
 <summary>registerBtRequest</summary>
 
 ```java
-public List<BirthRegistrationApplication> registerBtRequest(BirthRegistrationRequest birthRegistrationRequest) {
-        birthApplicationValidator.validateBirthApplication(birthRegistrationRequest);
-        birthApplicationEnrichment.enrichBirthApplication(birthRegistrationRequest);
+  public List<BirthRegistrationApplication> registerBtRequest(BirthRegistrationRequest birthRegistrationRequest) {
+        // Validate applications
+        validator.validateBirthApplication(birthRegistrationRequest);
 
-        // Enrich/Upsert user in upon birth registration
+        // Enrich applications
+        enrichmentUtil.enrichBirthApplication(birthRegistrationRequest);
+
+//         Enrich/Upsert user in upon birth registration
         userService.callUserService(birthRegistrationRequest);
+//
+        // Initiate workflow for the new application
+        workflowService.updateWorkflowStatus(birthRegistrationRequest);
 
         // Push the application to the topic for persister to listen and persist
-        producer.push(configuration.getCreateTopic(), birthRegistrationRequest);
+        producer.push("save-bt-application", birthRegistrationRequest);
 
         // Return the response back to user
         return birthRegistrationRequest.getBirthRegistrationApplications();
@@ -498,11 +502,11 @@ public List<BirthRegistrationApplication> registerBtRequest(BirthRegistrationReq
 
         // Enrich mother and father of applicant objects
         applications.forEach(application -> {
-            birthApplicationEnrichment.enrichFatherApplicantOnSearch(application);
-            birthApplicationEnrichment.enrichMotherApplicantOnSearch(application);
+            enrichmentUtil.enrichFatherApplicantOnSearch(application);
+            enrichmentUtil.enrichMotherApplicantOnSearch(application);
         });
 
-        // Otherwise, return the found applications
+        // Otherwise return the found applications
         return applications;
     }
 ```
