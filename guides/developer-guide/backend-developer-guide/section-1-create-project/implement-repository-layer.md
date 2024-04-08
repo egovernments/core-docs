@@ -14,53 +14,8 @@ The execution of search queries on the database returns applications as per the 
 
 ### **Implement Repository Layer**
 
-1.  **Define POJOs -** The Address object is defined in the common contract (refer to the API spec). Link it to the birth registration table via the registrationId as defined in the DB schema.&#x20;
-
-    Update the Address POJO using the below code:&#x20;
-
-```java
-@JsonProperty("registrationId")
-private String registrationId = null;
-```
-
-2. Define a BirthApplicationSearchCriteria POJO to take care of search requests in the DB.&#x20;
-
-{% code lineNumbers="true" %}
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
-import java.util.List;
-
-@Data
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@ToString
-public class BirthApplicationSearchCriteria {
-
-    @JsonProperty("tenantId")
-    private String tenantId;
-
-    @JsonProperty("status")
-    private String status;
-
-    @JsonProperty("ids")
-    private List<String> ids;
-
-    @JsonProperty("applicationNumber")
-    private String applicationNumber;
-
-}
-```
-{% endcode %}
-
-3. **Create packages -** Add the`querybuilder` and `rowmapper` packages within the repository folder.
-4.  **Create a class -** by the name of BirthApplicationQueryBuilder in `querybuilder` folder and annotate it with `@Component` annotation.&#x20;
+1. **Create packages -** Add the`querybuilder` and `rowmapper` packages within the repository folder.
+2.  **Create a class -** by the name of BirthApplicationQueryBuilder in `querybuilder` folder and annotate it with `@Component` annotation.&#x20;
 
     Insert the following content in BirthApplicationQueryBuilder class -
 
@@ -80,7 +35,7 @@ public class BirthApplicationQueryBuilder {
 
     private static final String BASE_BTR_QUERY = " SELECT btr.id as bid, btr.tenantid as btenantid, btr.applicationnumber as bapplicationnumber, btr.babyfirstname as bbabyfirstname, btr.babylastname as bbabylastname, btr.fatherid as bfatherid, btr.motherid as bmotherid, btr.doctorname as bdoctorname, btr.hospitalname as bhospitalname, btr.placeofbirth as bplaceofbirth, btr.timeofbirth as btimeofbirth, btr.createdby as bcreatedby, btr.lastmodifiedby as blastmodifiedby, btr.createdtime as bcreatedtime, btr.lastmodifiedtime as blastmodifiedtime, ";
 
-    private static final String ADDRESS_SELECT_QUERY = " add.id as aid, add.tenantid as atenantid, add.doorno as adoorno, add.latitude as alatitude, add.longitude as alongitude, add.buildingname as abuildingname, add.addressid as aaddressid, add.addressnumber as aaddressnumber, add.type as atype, add.addressline1 as aaddressline1, add.addressline2 as aaddressline2, add.landmark as alandmark, add.street as astreet, add.city as acity, add.locality as alocality, add.pincode as apincode, add.detail as adetail, add.registrationid as aregistrationid ";
+    private static final String ADDRESS_SELECT_QUERY = " add.id as aid, add.tenantid as atenantid, add.type as atype, add.address as aaddress, add.city as acity, add.pincode as apincode, add.registrationid as aregistrationid ";
 
     private static final String FROM_TABLES = " FROM eg_bt_registration btr LEFT JOIN eg_bt_address add ON btr.id = add.registrationid ";
 
@@ -150,102 +105,98 @@ public class BirthApplicationQueryBuilder {
 
     Add the following content to the class.
 
+    ```java
+    package digit.repository.rowmapper;
+
+    import digit.web.models.*;
+    import org.egov.common.contract.models.Address;
+    import org.egov.common.contract.models.AuditDetails;
+    import org.egov.common.contract.request.User;
+    import org.egov.common.contract.user.enums.AddressType;
+    import org.springframework.dao.DataAccessException;
+    import org.springframework.jdbc.core.ResultSetExtractor;
+    import org.springframework.stereotype.Component;
+
+    import java.sql.ResultSet;
+    import java.sql.SQLException;
+    import java.util.*;
+
+    @Component
+    public class BirthApplicationRowMapper implements ResultSetExtractor<List<BirthRegistrationApplication>> {
+        public List<BirthRegistrationApplication> extractData(ResultSet rs) throws SQLException, DataAccessException {
+            Map<String,BirthRegistrationApplication> birthRegistrationApplicationMap = new LinkedHashMap<>();
+
+            while (rs.next()){
+                String uuid = rs.getString("bapplicationnumber");
+                BirthRegistrationApplication birthRegistrationApplication = birthRegistrationApplicationMap.get(uuid);
+
+                if(birthRegistrationApplication == null) {
+
+                    Long lastModifiedTime = rs.getLong("blastModifiedTime");
+                    if (rs.wasNull()) {
+                        lastModifiedTime = null;
+                    }
+
+
+                    User father = User.builder().uuid(rs.getString("bfatherid")).build();
+                    User mother = User.builder().uuid(rs.getString("bmotherid")).build();
+
+                    AuditDetails auditdetails = AuditDetails.builder()
+                            .createdBy(rs.getString("bcreatedBy"))
+                            .createdTime(rs.getLong("bcreatedTime"))
+                            .lastModifiedBy(rs.getString("blastModifiedBy"))
+                            .lastModifiedTime(lastModifiedTime)
+                            .build();
+
+                    birthRegistrationApplication = BirthRegistrationApplication.builder()
+                            .applicationNumber(rs.getString("bapplicationnumber"))
+                            .tenantId(rs.getString("btenantid"))
+                            .id(rs.getString("bid"))
+                            .babyFirstName(rs.getString("bbabyfirstname"))
+                            .babyLastName(rs.getString("bbabylastname"))
+                            .father(father)
+                            .mother(mother)
+                            .doctorName(rs.getString("bdoctorname"))
+                            .hospitalName(rs.getString("bhospitalname"))
+                            .placeOfBirth(rs.getString("bplaceofbirth"))
+                            .timeOfBirth(rs.getInt("btimeofbirth"))
+                            .auditDetails(auditdetails)
+                            .build();
+                }
+                addChildrenToProperty(rs, birthRegistrationApplication);
+                birthRegistrationApplicationMap.put(uuid, birthRegistrationApplication);
+            }
+            return new ArrayList<>(birthRegistrationApplicationMap.values());
+        }
+
+        private void addChildrenToProperty(ResultSet rs, BirthRegistrationApplication birthRegistrationApplication)
+                throws SQLException {
+            addAddressToApplication(rs, birthRegistrationApplication);
+        }
+
+        private void addAddressToApplication(ResultSet rs, BirthRegistrationApplication birthRegistrationApplication) throws SQLException {
+            Address address = Address.builder()
+                    .tenantId(rs.getString("atenantid"))
+                    .address(rs.getString("aaddress"))
+                    .city(rs.getString("acity"))
+                    .pinCode(rs.getString("apincode"))
+                    .build();
+
+            BirthApplicationAddress birthApplicationAddress= BirthApplicationAddress.builder()
+                            .id(rs.getString("aid"))
+                            .tenantId(rs.getString("atenantid"))
+                            .applicantAddress(address)
+                            .build();
+
+            birthRegistrationApplication.setAddress(birthApplicationAddress);
+
+        }
+
+    }
+    ```
+
 {% code lineNumbers="true" %}
 ```java
-package digit.repository.rowmapper;
-
-import digit.web.models.*;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.ResultSetExtractor;
-import org.springframework.stereotype.Component;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-@Component
-public class BirthApplicationRowMapper implements ResultSetExtractor<List<BirthRegistrationApplication>> {
-    public List<BirthRegistrationApplication> extractData(ResultSet rs) throws SQLException, DataAccessException {
-        Map<String,BirthRegistrationApplication> birthRegistrationApplicationMap = new LinkedHashMap<>();
-
-        while (rs.next()){
-            String uuid = rs.getString("bapplicationnumber");
-            BirthRegistrationApplication birthRegistrationApplication = birthRegistrationApplicationMap.get(uuid);
-
-            if(birthRegistrationApplication == null) {
-
-                Long lastModifiedTime = rs.getLong("blastModifiedTime");
-                if (rs.wasNull()) {
-                    lastModifiedTime = null;
-                }
-
-
-                Applicant father = Applicant.builder().id(rs.getString("bfatherid")).build();
-                Applicant mother = Applicant.builder().id(rs.getString("bmotherid")).build();
-
-                AuditDetails auditdetails = AuditDetails.builder()
-                        .createdBy(rs.getString("bcreatedBy"))
-                        .createdTime(rs.getLong("bcreatedTime"))
-                        .lastModifiedBy(rs.getString("blastModifiedBy"))
-                        .lastModifiedTime(lastModifiedTime)
-                        .build();
-
-                birthRegistrationApplication = BirthRegistrationApplication.builder()
-                        .applicationNumber(rs.getString("bapplicationnumber"))
-                        .tenantId(rs.getString("btenantid"))
-                        .id(rs.getString("bid"))
-                        .babyFirstName(rs.getString("bbabyfirstname"))
-                        .babyLastName(rs.getString("bbabylastname"))
-                        .fatherOfApplicant(father)
-                        .motherOfApplicant(mother)
-                        .doctorName(rs.getString("bdoctorname"))
-                        .hospitalName(rs.getString("bhospitalname"))
-                        .placeOfBirth(rs.getString("bplaceofbirth"))
-                        .timeOfBirth(rs.getInt("btimeofbirth"))
-                        .auditDetails(auditdetails)
-                        .build();
-            }
-            addChildrenToProperty(rs, birthRegistrationApplication);
-            birthRegistrationApplicationMap.put(uuid, birthRegistrationApplication);
-        }
-        return new ArrayList<>(birthRegistrationApplicationMap.values());
-    }
-
-    private void addChildrenToProperty(ResultSet rs, BirthRegistrationApplication birthRegistrationApplication)
-            throws SQLException {
-        addAddressToApplication(rs, birthRegistrationApplication);
-    }
-
-    private void addAddressToApplication(ResultSet rs, BirthRegistrationApplication birthRegistrationApplication) throws SQLException {
-        Address address = Address.builder()
-                .id(rs.getString("aid"))
-                .tenantId(rs.getString("atenantid"))
-                .doorNo(rs.getString("adoorno"))
-                .latitude(rs.getDouble("alatitude"))
-                .longitude(rs.getDouble("alongitude"))
-                .buildingName(rs.getString("abuildingname"))
-                .addressId(rs.getString("aaddressid"))
-                .addressNumber(rs.getString("aaddressnumber"))
-                .type(rs.getString("atype"))
-                .addressLine1(rs.getString("aaddressline1"))
-                .addressLine2(rs.getString("aaddressline2"))
-                .landmark(rs.getString("alandmark"))
-                .street(rs.getString("astreet"))
-                .city(rs.getString("acity"))
-                .pincode(rs.getString("apincode"))
-                .detail("adetail")
-                .registrationId("aregistrationid")
-                .build();
-
-        birthRegistrationApplication.setAddress(address);
-
-    }
-
-}
-
 ```
 {% endcode %}
 
