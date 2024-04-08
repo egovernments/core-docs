@@ -13,7 +13,7 @@ Producer classes help in pushing data from the application to Kafka topics.  DIG
 1.  Access the producer implementation details here - [Producer Implementation. ](https://github.com/egovernments/DIGIT-Dev/blob/master/municipal-services/pgr-services/src/main/java/org/egov/pgr/producer/Producer.java)
 
     The Codegen jar already has created a Producer class. We will continue using it.&#x20;
-2. Make sure the `tracer` dependency version in the `pom.xml` is 2.0.0-SNAPSHOT.&#x20;
+2. Make sure the `tracer` dependency version in the `pom.xml` is 2.9.0-SNAPSHOT.&#x20;
 
 ## Consumer
 
@@ -140,8 +140,8 @@ public class NotificationService {
     public void prepareEventAndSend(BirthRegistrationRequest request){
         List<SMSRequest> smsRequestList = new ArrayList<>();
         request.getBirthRegistrationApplications().forEach(application -> {
-            SMSRequest smsRequestForFather = SMSRequest.builder().mobileNumber(application.getFatherMobileNumber()).message(getCustomMessage(smsTemplate, application)).build();
-            SMSRequest smsRequestForMother = SMSRequest.builder().mobileNumber(application.getMotherMobileNumber()).message(getCustomMessage(smsTemplate, application)).build();
+            SMSRequest smsRequestForFather = SMSRequest.builder().mobileNumber( application.getFather().getMobileNumber()).message(getCustomMessage(smsTemplate, application)).build();
+            SMSRequest smsRequestForMother = SMSRequest.builder().mobileNumber(application.getMother().getMobileNumber()).message(getCustomMessage(smsTemplate, application)).build();
             smsRequestList.add(smsRequestForFather);
             smsRequestList.add(smsRequestForMother);
         });
