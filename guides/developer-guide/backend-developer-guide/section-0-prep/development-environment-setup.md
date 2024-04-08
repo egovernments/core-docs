@@ -14,22 +14,22 @@ To setup the DIGIT development environment -
        [Git for windows](https://git-scm.com/download/win)
 
        [Git for linux](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04-quickstart)
-   *   **Install JDK8**
+   *   **Install JDK17**
 
-       [JDK8 for windows](https://www.java.com/download/ie\_manual.jsp)
+       [JDK17 for windows](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 
-       [JDK8 for linux](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/)
+       [JDK17 for linux](https://www.itzgeek.com/how-tos/linux/how-to-install-oracle-java-jdk-17-on-linux.html)
    *   **Install IDE** - For creating SpringBoot/Java applications we recommend using IntelliJ IDE. IntelliJ can be downloaded from the following links -
 
        [IntelliJ for windows](https://www.jetbrains.com/idea/download/#section=windows)
 
        [IntelliJ for linux](https://www.jetbrains.com/idea/download/#section=linux)
    * Install the Lombok plugins for IntelliJ as we use Lombok annotations in this module.
-   *   **Install Kafka** (version 3.2.0 which is the latest version) - To install and run Kafka locally, follow the following links -
+   *   **Install Kafka** (3.6.0)- To install and run Kafka locally, follow the following links -
 
-       [Kafka for windows](https://dzone.com/articles/running-apache-kafka-on-windows-os)
+       [Kafka for windows](https://kafka.apache.org/downloads)
 
-       [Kafka for linux](https://tecadmin.net/install-apache-kafka-ubuntu/)
+       [Kafka for linux](https://www.conduktor.io/kafka/how-to-install-apache-kafka-on-linux-without-zookeeper-kraft-mode/)
    *   **Install Postman** - To install postman, follow the following links -
 
        [Postman for windows](https://www.postman.com/downloads/)
@@ -37,9 +37,9 @@ To setup the DIGIT development environment -
        [Postman for linux](https://dl.pstmn.io/download/latest/linux64)
    *   **Install Kubectl** - Kubectl is the tool that we use to interact with services deployed on our sandbox environment -
 
-       [https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)[https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+       [https://](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)[https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)[https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
    * **Install aws-iam-authenticator** - (if the DIGIT development environment is in AWS) - [https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
-   * **Install PostgreSQL v10 locally**
+   * **Install PostgreSQL v14.5 locally**
 2.  **Add configuration** - Post installation of kubectl, add the following configuration in the  Kubernetes config file to allow access to resources present in our sandbox environment.  Kubernetes config file is usually present in the user's home directory (which varies from OS to OS).&#x20;
 
     For example, on a Mac, it is present at:`/Users/xyz/.kube/config`&#x20;
