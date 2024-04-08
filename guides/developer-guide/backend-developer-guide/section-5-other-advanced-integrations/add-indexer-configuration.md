@@ -17,7 +17,7 @@ ServiceMaps:
       configKey: INDEX
       indexes:
         - name: btindex-v1
-          type: general
+          type: _doc
           id: $.id
           isBulk: true
           timeStampField: $.auditDetails.createdTime
