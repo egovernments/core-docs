@@ -2,8 +2,8 @@
 
 ## Pre-reads
 
-{% content-ref url="../../../reference/devops/14.-telemetry.md" %}
-[14.-telemetry.md](../../../reference/devops/14.-telemetry.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 This doc covers the steps on how to deploy an **OpenTelemetry** collector on Kubernetes. We will then use an OTEL instrumented (Go) **application** provided by OpenTelemetry to send traces to the **Collector**. From there, we will bring the trace data to a **Jaeger** **collector**. Finally, the traces will be visualised using the **Jaeger** **UI**.

@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# ☑️ Overview
+# Overview
 
 **DIGIT** is an open source platform to enable delivery and governance of public service. It is built for scale. It enables seamless and unified exchange of information between citizens, employees & vendors, administrators and policymakers.
 
@@ -88,9 +88,9 @@ To build a digital system that adheres to the above key principles, DIGIT provid
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 
-DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).&#x20;
+DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](guides/installation-guide/). To design and develop a new service on DIGIT Platform go through the [DIGIT Design Guide](guides/design-guide/) and [DIGIT Developer Guide](guides/developer-guide/).&#x20;
 
-DIGIT also provides [UI frameworks](platform/ui-frameworks/) as accelerators. These are optional. You may choose to develop your own UI framework.&#x20;
+DIGIT also provides [UI frameworks](accelerator/ui-frameworks/) as accelerators. These are optional. You may choose to develop your own UI framework.&#x20;
 
 ## Contact Us
 

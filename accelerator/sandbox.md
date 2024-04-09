@@ -1,8 +1,8 @@
 ---
-description: DIGIT demo environment
+description: DIGIT Sandbox for Demo and Development
 ---
 
-# Access
+# Sandbox
 
 Access DIGIT tool is an open demo instance designed to provide you with first-hand experience of the DIGIT platform. Navigate the DIGIT platform and explore its various features, workflows and applications.
 
@@ -44,7 +44,7 @@ The Sandbox environment allows users to develop a DIGIT service fast. The DIGIT 
 
 To access the DIGIT services you need an API Key and Secret. We are working on a self-service portal where you can register and get the keys. In the meantime, you can send an email to partner@egov.org.in to get the API access keys.
 
-Once you get the API access keys, follow the step-by-step[ Developer Guide](../../get-started/developer-guide/backend-developer-guide/) to build a new DIGIT service.
+Once you get the API access keys, follow the step-by-step[ Developer Guide](../guides/developer-guide/backend-developer-guide/) to build a new DIGIT service.
 
 </details>
 

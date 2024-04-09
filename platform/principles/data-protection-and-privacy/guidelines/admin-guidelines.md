@@ -57,7 +57,7 @@ _Data security measures and practices stand out as the core / foundational guide
 
 Data Privacy and Protection **(DPP)** is only possible when the systems and computer resources receiving and storing data are secure (safe from any harm). Some key data security measures include:
 
-* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a [legitimate purpose](../../../../reference/security/signed-data-audit.md) to access the data.
+* Access control: Establish audited and controlled access for personally identifying data, including authentication and authorization mechanisms. Authorize individuals only if they have a legal basis and a [legitimate purpose](broken-reference) to access the data.
 * Encryption: Encrypt PII data both in transit and at rest to protect it from unauthorized access and theft.
 * Data backup and disaster recovery: Regularly backing up PII data - including auditing the need for PII - if not required then deleting the PII, and implementing disaster recovery plans to ensure that important data can be recovered in the event of a data loss or breach.
 * Network security: Implement firewalls, intrusion detection and prevention systems, and other network security measures to protect against cyber threats.
