@@ -30,7 +30,11 @@ layout:
 
 ## Motivation
 
-Each government agency builds applications to deliver and manage services. However, most of these applications are not built to scale nor do they have the ability to exchange data with other applications. This results in data silos which is the primary cause for the fragmented experience of the citizens. The burden of coordination and keeping all these departmental databases rests with the citizens. This also increase burden on the employees who are forced to remember multiple passwords and use several applications at work - often copying data from one system to another. Data from multiple systems are often poor quality and hard to correlate. This starves Administrators of good data making it dificult for them to  monitor performance and identifying areas of improvement. In short, good public services requires good governance and good governance requires good data.&#x20;
+Government agencies build applications to deliver and manage public services. However, they face several challenges.&#x20;
+
+**Inability to scale limits citizen access** - Most of these applications are not built to scale and cannot be opened up for direct access to systems.&#x20;
+
+
 
 <div align="left">
 
@@ -38,18 +42,25 @@ Each government agency builds applications to deliver and manage services. Howev
 
 </div>
 
+**Data access impacts service delivery** - Most of these systems do not they have the ability to exchange data with other applications. Data gets locked in these siloed applications leading to fragmented experience for citizens. The burden of coordinating between these agencies and keeping their data in all these departmental databases updated rests on the citizens. Multiple siloed systems also increases burden on the employees who have to remember multiple password and often copy data from one to another. Data from multiple systems are often poor quality and hard to correlate. This makes is impossible for Administrators to get unified view of the data which makes it difficult for them to monitor performance and identify areas of improvement. &#x20;
+
+**Vendor Lock-In -** Many of these systems are proprietary and agencies are locked in with the vendor. This limits ability to evolve system independently as needs change.&#x20;
+
+There are several other issues like security of data and inability to evolve the system due to system complexity. Poor systems in government limits access to data for citizens, employees and administrators. This impacts service delivery and governance.
+
+Primary motivation of building DIGIT is to enable inclusive and accessible public services by making it easy for government agencies and partners to transform digital systems with speed and scale by adopting robust design principles.&#x20;
+
 ## Key Principles
 
-DIGIT is designed to keeping following key principles in mind
+DIGIT is designed based on the following principles&#x20;
 
-1. Security and Privacy - DIGIT is designed to be secure by default, with configurable role based access. All PII is encrypted and no PII is emitted into analytical systems.&#x20;
-2. Single Source of Truth - Shared Data Registries ensures data is kept up to date and reused without creating multiple copies of transactional data.
-3. Built for Scale - Multi-tenancy and Microservices architecture enables rolling out of services built on DIGIT to large number of citizens in multiple cities and provinces on a shared infrastructure.&#x20;
-4. Flexible - DIGIT is designed to enable each tenant to configure their own master data, workflows and if required their build and deploy their own version of the service even on a shared infrastructure.&#x20;
-5. &#x20;Modular - All DIGIT components are modular microservices with well defined APIs. All services can be scaled, evolved and deployed independent of each other.&#x20;
-6. Interoperable - API first design and uses of Open Standards wherever possible ensure DIGIT is interoperable with other systems.&#x20;
-7. Ease of Use - DIGIT is designed keep in mind ease of access of all actors - citizens, employees, administrators as well as developers, system administrator etc.
-8. Open - DIGIT is open source, uses all open source technologies and standards.
+1. **Security and Privacy** - DIGIT is designed to be secure by default, with configurable role based access. All PII is encrypted and no PII is emitted into analytical systems.&#x20;
+2. **Single Source of Truth** - Shared Data Registries ensures data is kept up to date and reused without creating multiple copies of transactional data. This is key for good governance and service delivery.&#x20;
+3. **Flexible** - DIGIT is designed to enable each tenant to configure their own master data, workflows and if required their build and deploy their own version of the service even on a shared infrastructure.&#x20;
+4. &#x20;**Modular** - All DIGIT components are modular microservices with well defined APIs. All services can be scaled, evolved and deployed independent of each other.&#x20;
+5. **Interoperable** - API first design and uses of Open Standards wherever possible ensure DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required.
+6. **Ease of Use** - DIGIT is designed keep in mind ease of access of all actors - citizens, employees, administrators as well as developers, system administrator etc. All data is available through API which can be used to channel specific applications - web, mobile, chat etc.&#x20;
+7. **Open** - DIGIT is open source, uses all open source technologies and standards to ensure that data and core services are never vendor locked-in.&#x20;
 
 ## Typical Public Service
 
@@ -71,19 +82,15 @@ A digital service must provide the following capabilities to enable effective ci
 10. Monitor/Improve - Ability for the administrators to monitor service performance and identify areas of improvement.
 11. Plan/Budget - Ability for administrators and policymakers to plan and budget continuous improvement of services.&#x20;
 
-To build a digital system that adheres to the above key principles, DIGIT provides a set of  building blocks which a developer can leverage. DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery.&#x20;
+To build a digital system that adheres to the above key principles, DIGIT provides a set of  building blocks which a developer can leverage. DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. The interactions between these services have been detailed out in the [Service Architecture](platform/architecture/service-architecture.md).
 
 
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 
-## Useful Links
+DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).&#x20;
 
-To install and start developing using DIGIT, visit the [Get Started](platform/get-started/) page.
-
-The list of developer [Checklists/Guidelines](platform/overview/checklists/) ensures that the services built using DIGIT are robust and easy to use.&#x20;
-
-Check out the platform [training resources](platform/get-started/training-and-certification/training-resources.md) page and access our multiple walk-through videos.
+DIGIT also provides [UI frameworks](platform/ui-frameworks/) as accelerators. These are optional. You may choose to develop your own UI framework.&#x20;
 
 ## Contact Us
 

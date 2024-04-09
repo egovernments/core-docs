@@ -2,7 +2,7 @@
 description: Ask Me Anything On DIGIT Deployment - December 8, 2023 ~ 2 PM to 3 PM
 ---
 
-# 🎬 Open Events
+# Open Events
 
 ## Ask me Anything on DIGIT DEPLOYMENT
 

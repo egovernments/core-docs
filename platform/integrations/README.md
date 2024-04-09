@@ -2,7 +2,7 @@
 description: Explore the DIGIT platform integration capabilities
 ---
 
-# ⚒️ Integrations
+# Integrations
 
 The DIGIT platform provides advanced integration capabilities through its well-defined APIs. The platform principles allow seamless sharing of data and functionalities between applications. We have successfully integrated third-party applications to serve specific objectives with the help of our implementation partners. This section highlights the platform integration possibilities along with the instances where these are implemented.&#x20;
 

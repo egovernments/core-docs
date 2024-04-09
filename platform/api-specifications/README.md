@@ -1,4 +1,4 @@
-# ✏️ API Specifications
+# API Specifications
 
 DIGIT offers several API collections that help integrate services on the platform. The table below enlists the DIGIT Core Service APIs and the link to related service configuration docs.
 
