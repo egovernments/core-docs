@@ -1,5 +1,5 @@
 ---
-description: An open source service delivery and governance platform
+description: An open source platform for service delivery and governance
 cover: .gitbook/assets/Docs Website Banner 4 (1).png
 coverY: 0
 layout:
@@ -18,15 +18,9 @@ layout:
     visible: true
 ---
 
-# ☑️ Introducing DIGIT Platform
+# ☑️ Overview
 
-## Vision
-
-To enable good citizen service, citizens, employees, vendors, administrators and policymakers to collaborate and exchange information seamlessly.
-
-## Overview
-
-**DIGIT** is a service delivery and governance platform. It enables ease of access to services for citizens, ease of coordination for employees & vendors, ease of administration for administrators and ease of policy-making for policymakers & researchers.
+**DIGIT** is an open source platform to enable delivery and governance of public service. It is built for scale. It enables seamless and unified exchange of information between citizens, employees & vendors, administrators and policymakers.
 
 <div align="left">
 
@@ -34,9 +28,32 @@ To enable good citizen service, citizens, employees, vendors, administrators and
 
 </div>
 
-## Goals
+## Motivation
 
-The diagram below abstracts the typical information exchange flow that needs to be enabled between the various actors to deliver effective citizen service.
+Each government agency builds applications to deliver and manage services. However, most of these applications are not built to scale nor do they have the ability to exchange data with other applications. This results in data silos which is the primary cause for the fragmented experience of the citizens. The burden of coordination and keeping all these departmental databases rests with the citizens. This also increase burden on the employees who are forced to remember multiple passwords and use several applications at work - often copying data from one system to another. Data from multiple systems are often poor quality and hard to correlate. This starves Administrators of good data making it dificult for them to  monitor performance and identifying areas of improvement. In short, good public services requires good governance and good governance requires good data.&#x20;
+
+<div align="left">
+
+<img src=".gitbook/assets/image (192).png" alt="Traditional application oriented approach leads to siloes, wasteful duplication, non-scalable and difficult to integrate">
+
+</div>
+
+## Key Principles
+
+DIGIT is designed to keeping following key principles in mind
+
+1. Security and Privacy - DIGIT is designed to be secure by default, with configurable role based access. All PII is encrypted and no PII is emitted into analytical systems.&#x20;
+2. Single Source of Truth - Shared Data Registries ensures data is kept up to date and reused without creating multiple copies of transactional data.
+3. Built for Scale - Multi-tenancy and Microservices architecture enables rolling out of services built on DIGIT to large number of citizens in multiple cities and provinces on a shared infrastructure.&#x20;
+4. Flexible - DIGIT is designed to enable each tenant to configure their own master data, workflows and if required their build and deploy their own version of the service even on a shared infrastructure.&#x20;
+5. &#x20;Modular - All DIGIT components are modular microservices with well defined APIs. All services can be scaled, evolved and deployed independent of each other.&#x20;
+6. Interoperable - API first design and uses of Open Standards wherever possible ensure DIGIT is interoperable with other systems.&#x20;
+7. Ease of Use - DIGIT is designed keep in mind ease of access of all actors - citizens, employees, administrators as well as developers, system administrator etc.
+8. Open - DIGIT is open source, uses all open source technologies and standards.
+
+## Typical Public Service
+
+A typical public service delivery starts with a citizen applying for a service or a service connection. The diagram below abstracts the typical information exchange flow that needs to be enabled between the various actors to deliver service.
 
 ![](<.gitbook/assets/image (159).png>)
 
@@ -54,25 +71,9 @@ A digital service must provide the following capabilities to enable effective ci
 10. Monitor/Improve - Ability for the administrators to monitor service performance and identify areas of improvement.
 11. Plan/Budget - Ability for administrators and policymakers to plan and budget continuous improvement of services.&#x20;
 
-## Approach
+To build a digital system that adheres to the above key principles, DIGIT provides a set of  building blocks which a developer can leverage. DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery.&#x20;
 
-Each government agency builds applications that provide some or all of the above-mentioned capabilities. However, most of these applications are not built to scale or have the ability to exchange data with other applications. This results in locked data within application siloes that renders it unusable to other services. It is a primary cause for the fragmented experience of the citizens - who find it difficult to discover and use these services. The employees are forced to remember multiple passwords and use several applications at work. Administrators fail to get the integrated information required for monitoring performance and identifying areas of improvement. The result is poor planning and inflated budgets.
 
-<div align="left">
-
-<img src=".gitbook/assets/image (192).png" alt="Traditional application oriented approach leads to siloes, wasteful duplication, non-scalable and difficult to integrate">
-
-</div>
-
-DIGIT is built using platform-based principles that enable the seamless sharing of data and functionality through well-defined building blocks. The building blocks can be integrated into higher-level services that can also be recomposed further to deliver unified data and experiences.&#x20;
-
-![](<.gitbook/assets/image (166).png>)
-
-Core services and core data registries are grouped together to define the "Foundation" or "Core Platform". These services and registries are reused by services that are part of Urban, Sanitation, Health Platforms etc. All services and registries are exposed through well-defined APIs which can be used to build applications that deliver a unified experience to citizens, employees, vendors, administrators and policymakers.
-
-Refer to the [platform design principles ](platform/overview/principles.md)that define DIGIT capabilities.
-
-To enable the capabilities required to develop a good service, DIGIT provides a set of reusable building blocks (microservices) listed below that adhere to the above principles. A developer can build any service or registry by reusing the DIGIT services. DIGIT also provides accelerators like DIGIT Web Dashboard that can be extended to develop citizen, employee and administrator dashboards. More details on each of the services are available on the [Platform Architecture](platform/overview/architecture/service-architecture.md) page.&#x20;
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 
