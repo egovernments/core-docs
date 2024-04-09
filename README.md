@@ -20,7 +20,7 @@ layout:
 
 # Overview
 
-**DIGIT** is an open source platform to enable delivery and governance of public service. It is built for scale. It enables seamless and unified exchange of information between citizens, employees & vendors, administrators and policymakers.
+**DIGIT** is an open source platform to enable delivery and governance of public service. It enables seamless and unified exchange of information between citizens, employees & vendors, administrators and policymakers. It is built for scale. It is multi-tenant i.e multiple services delivered by multiple agencies can be developed on single instance of DIGIT.&#x20;
 
 <div align="left">
 
@@ -30,11 +30,9 @@ layout:
 
 ## Motivation
 
-Government agencies build applications to deliver and manage public services. However, they face several challenges.&#x20;
+Government agencies build applications to deliver and manage public services. However, they face several challenges especially in low and middle income countries.
 
-**Inability to scale limits citizen access** - Most of these applications are not built to scale and cannot be opened up for direct access to systems.&#x20;
-
-
+**Inability to scale limits citizen access** - Many of these applications are not built to scale and cannot be opened up for direct access to systems.&#x20;
 
 <div align="left">
 
@@ -42,13 +40,13 @@ Government agencies build applications to deliver and manage public services. Ho
 
 </div>
 
-**Data access impacts service delivery** - Most of these systems do not they have the ability to exchange data with other applications. Data gets locked in these siloed applications leading to fragmented experience for citizens. The burden of coordinating between these agencies and keeping their data in all these departmental databases updated rests on the citizens. Multiple siloed systems also increases burden on the employees who have to remember multiple password and often copy data from one to another. Data from multiple systems are often poor quality and hard to correlate. This makes is impossible for Administrators to get unified view of the data which makes it difficult for them to monitor performance and identify areas of improvement. &#x20;
+**Data access impacts service delivery** - Most of these systems do not they have the ability to exchange data with other applications. Data gets locked in these siloed applications. The burden of coordinating between these agencies and keeping their data updated rests on the citizens. Multiple siloed systems also increases burden on the employees who have to remember multiple password and often copy data from one to another. Data from multiple systems are often poor quality and hard to correlate. This makes is impossible for Administrators to get unified view of the data which can help them monitor performance and identify areas of improvement.&#x20;
 
 **Vendor Lock-In -** Many of these systems are proprietary and agencies are locked in with the vendor. This limits ability to evolve system independently as needs change.&#x20;
 
 There are several other issues like security of data and inability to evolve the system due to system complexity. Poor systems in government limits access to data for citizens, employees and administrators. This impacts service delivery and governance.
 
-Primary motivation of building DIGIT is to enable inclusive and accessible public services by making it easy for government agencies and partners to transform digital systems with speed and scale by adopting robust design principles.&#x20;
+Primary motivation of building DIGIT is to enable inclusive and accessible public services by making it easy for government agencies and partners to transform digital systems at speed and scale by adopting robust design principles.&#x20;
 
 ## Key Principles
 
@@ -82,15 +80,21 @@ A digital service must provide the following capabilities to enable effective ci
 10. Monitor/Improve - Ability for the administrators to monitor service performance and identify areas of improvement.
 11. Plan/Budget - Ability for administrators and policymakers to plan and budget continuous improvement of services.&#x20;
 
-To build a digital system that adheres to the above key principles, DIGIT provides a set of  building blocks which a developer can leverage. DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. The interactions between these services have been detailed out in the [Service Architecture](platform/architecture/service-architecture.md).
-
-
+To build a digital system that adheres to the above key principles, DIGIT provides a set of  building blocks which a developer can leverage. DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. The interactions between these services have been detailed out in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 
-DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).&#x20;
+DIGIT is already being used to deliver services in 1000+ cities. Ecosystem partners including System Integrators are using DIGIT to build and deliver services.&#x20;
 
-DIGIT also provides [UI frameworks](accelerator/ui-frameworks.md) as accelerators. These are optional. You may choose to develop your own UI framework.&#x20;
+DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).  You can also take up the DIGIT Certification through the [DIGIT Academy](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/kI0HGCGboIe1ltcfV9XD/). &#x20;
+
+If you want to experience DIGIT or develop on DIGIT, you can also access DIGIT demo using [Sandbox](platform/get-started/access.md).&#x20;
+
+DIGIT comes with several accelerators. These include [UI frameworks](accelerator/ui-frameworks.md) and [Integration Adapters](platform/integrations/). These are optional. You may choose to develop or reuse your own UI framework and Integration Adapters.&#x20;
+
+We organize several events for architects and developers on DIGIT. Keep a watch on the [Events](https://egov.org.in/events/) Page for upcoming events.&#x20;
+
+Several volunteers are contributing to DIGIT in many ways. If you want to volunteer, check out our [contribute](platform/contribute.md) page.&#x20;
 
 ## Contact Us
 

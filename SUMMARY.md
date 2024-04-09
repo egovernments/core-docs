@@ -378,7 +378,7 @@
   * [View](platform/integrations/view.md)
   * [Calculation](platform/integrations/calculation.md)
 * [Sandbox](platform/get-started/access.md)
-* [Events](platform/open-events.md)
+* [Events](https://egov.org.in/events/)
 * [Checklists](platform/checklists/README.md)
   * [API Checklist](platform/checklists/api-checklist.md)
   * [Security Checklist](platform/checklists/security-checklist/README.md)
