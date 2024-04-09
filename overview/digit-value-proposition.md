@@ -2,7 +2,7 @@
 description: The value proposition for DIGIT stakeholders
 ---
 
-# DIGIT - Value Proposition
+# Why DIGIT?
 
 <figure><img src="../.gitbook/assets/image (245).png" alt=""><figcaption></figcaption></figure>
 

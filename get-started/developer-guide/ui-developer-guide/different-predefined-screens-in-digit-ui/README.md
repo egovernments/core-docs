@@ -2,7 +2,7 @@
 description: Steps to add new screens in DIGIT-ui
 ---
 
-# Create New Screen In DIGIT-UI
+# Different Predefined Screens In DIGIT-UI
 
 ## Overview
 

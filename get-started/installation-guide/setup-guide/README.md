@@ -49,16 +49,16 @@ However, DIGIT is a [**cloud-native**](https://www.appdynamics.com/topics/what-i
 
 Choose your cloud and follow the instructions to set up a Kubernetes cluster before moving on to deployment.
 
-{% content-ref url="../setup-guide/aws/" %}
-[aws](../setup-guide/aws/)
+{% content-ref url="aws/" %}
+[aws](aws/)
 {% endcontent-ref %}
 
-{% content-ref url="../setup-guide/azure/" %}
-[azure](../setup-guide/azure/)
+{% content-ref url="azure/" %}
+[azure](azure/)
 {% endcontent-ref %}
 
-{% content-ref url="../setup-guide/sdc/" %}
-[sdc](../setup-guide/sdc/)
+{% content-ref url="sdc/" %}
+[sdc](sdc/)
 {% endcontent-ref %}
 
 ## 2. Deploy DIGIT

@@ -2,7 +2,7 @@
 description: Checklist for setting up the DIGIT production environment
 ---
 
-# 8. Productionize DIGIT
+# Productionize DIGIT
 
 ## Overview
 

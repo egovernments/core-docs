@@ -1,4 +1,4 @@
-# Digit UI Core Flutter Components
+# DIGIT UI Core Flutter Components
 
 ## Introduction <a href="#jehqun33pi6v" id="jehqun33pi6v"></a>
 
