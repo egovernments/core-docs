@@ -70,9 +70,9 @@ To create a basic schema definition, define the following keywords:
 
 **Reference** - [<img src="https://json-schema.org/favicon.ico" alt="" data-size="line">JSON Schema - Creating your first schema](https://json-schema.org/learn/getting-started-step-by-step#create)
 
-Now, properties can be added under the schema definition. In JSON Schema terms, properties is a validation keyword. When you define properties, you create an object where each property represents a key in the JSON data that’s being validated. You can also specify the required properties defined in the object.
+Now, properties can be added under the schema definition. In JSON Schema terms, properties is a validation keyword. When you define properties, you create an object where each property represents a key in the JSON data that’s being validated. You can also specify the required properties described in the object.
 
-**Reference** - [![](https://json-schema.org/favicon.ico)JSON Schema - Creating your first schema](https://json-schema.org/learn/getting-started-step-by-step#define)
+**Reference** - [<img src="https://json-schema.org/favicon.ico" alt="" data-size="line">JSON Schema - Creating your first schema](https://json-schema.org/learn/getting-started-step-by-step#define)
 
 Additionally, we have two keys which are not part of standard JSON schema attributes -
 
