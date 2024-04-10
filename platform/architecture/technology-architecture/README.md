@@ -2,13 +2,13 @@
 description: List and details of technologies used to develop and deploy DIGIT
 ---
 
-# Technology
+# Technology Architecture
 
 DIGIT core services are developed using the following technologies -
 
 1. [Java Spring Boot](https://spring.io/projects/spring-boot)
 2. [Apache Kafka](https://kafka.apache.org/)
-3. [Netflix Zuul](https://github.com/Netflix/zuul/wiki)
+3. [Spring Cloud Gateway](https://github.com/spring-cloud/spring-cloud-gateway)
 4. [Postgres](https://www.poshttps/www.postgresql.org/tgresql.org/)
 5. [Elastic Search](https://www.elastic.co/)
 6. [Docker ](https://www.docker.com/)

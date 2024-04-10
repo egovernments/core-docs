@@ -166,6 +166,8 @@
       * [Prepare Deployment Configuration](get-started/installation-guide/digit-deployment/deployment-using-golang/prepare-deployment-configuration.md)
       * [Deploy DIGIT](get-started/installation-guide/digit-deployment/deployment-using-golang/deploy-digit.md)
 * [💽 Data Setup Guide](get-started/data-setup-guide/README.md)
+  * [Workbench](guides/data-setup-guide/workbench.md)
+  * [MDMS - V2](guides/data-setup-guide/mdms-v2.md)
   * [User Module](get-started/data-setup-guide/user-module.md)
   * [Localisation Module](get-started/data-setup-guide/localisation-module.md)
   * [Location Module](get-started/data-setup-guide/location-module.md)
