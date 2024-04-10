@@ -32,7 +32,7 @@ layout:
 
 Government agencies build applications to deliver and manage public services. However, due to the way they adopt technology, they face several challenges that limits the benefits of technology. This is especially common in low and middle income countries.
 
-**Multiple systems -** Government are federated in multiple layers - national, provincial and local - each consist of multiple agencies e.g. ministries, departments and sub departments. Each agency builds multiple systems. Many of these systems have similar functionality e.g. Policy for service charge calculation may vary across administrative boundaries so each agency builds a fit to purpose systems that cannot be reused.&#x20;
+**Multiple Similar Systems -** Government are federated in multiple layers - national, provincial and local - each consist of multiple agencies e.g. ministries, departments and sub departments. Each agency builds multiple systems. Many of these systems have similar functionality e.g. Policy for service charge calculation may vary across administrative boundaries so each agency builds a fit to purpose systems that cannot be reused.&#x20;
 
 **Scalability Issues** - Many of these applications were not built for scale. They were built for data collection or at best coordination between agency staff. These cannot be opened up for direct digital access to citizens. This limits access for service delivery for citizen.
 
@@ -42,7 +42,7 @@ Government agencies build applications to deliver and manage public services. Ho
 
 </div>
 
-**Data fragmentation** - Most of these systems do not they have the ability to exchange data with other applications. Data gets locked in these siloed applications. The burden of keeping the data updated rests on the citizens. Multiple siloed systems also increases burden on the employees who have to remember multiple password and often copy data from one application to another. Data from multiple systems are often poor quality and hard to correlate. This makes is impossible for Administrators to get unified view of the data which can help them monitor performance and identify areas of improvement.&#x20;
+**Data Fragmentation** - Most of these systems do not they have the ability to exchange data with other applications. Data gets locked in these siloed applications. The burden of keeping the data updated rests on the citizens. Multiple siloed systems also increases burden on the employees who have to remember multiple password and often copy data from one application to another. Data from multiple systems are often poor quality and hard to correlate. This makes is impossible for Administrators to get unified view of the data which can help them monitor performance and identify areas of improvement.&#x20;
 
 **Vendor Lock-In -** Many of these systems are proprietary and government agencies are locked in with the vendor. This limits the ability of agencies to evolve system to meet evolving needs.
 
