@@ -10,12 +10,12 @@ Before starting development on top of DIGIT make sure:&#x20;
 * [x] Access a DIGIT environment - FQDN, Access keys etc..The DIGIT environment can be a single VM setup for a development environment. Please refer to these docs for the installation of DIGIT.&#x20;
 * [x] Install DIGIT in a development environment (Single VM setup) by following the [quick setup guide](https://core.digit.org/guides/installation-guide/quick-setup).&#x20;
 * [x] It is recommended to deploy the following services in the development environment -
-  * [User](../../../../platform/core-services/user-services.md)
+  * [User](../../../../platform/core-services/user.md)
   * [MDMS](../../../../platform/core-services/mdms-master-data-management-service/)
-  * [Localization](../../../../platform/core-services/location-services.md)
+  * [Localization](../../../../platform/core-services/location.md)
   * [Id-Gen](../../../../platform/core-services/id-generation-service.md)
   * [URL-shortener](../../../../platform/core-services/url-shortening-service.md)
-  * [Workflow](../../../../platform/core-services/workflow-service/)
+  * [Workflow](../../../../platform/core-services/workflow/)
 
 Some of the above services can also be port-forwarded using Kubernetes to bypass user authentication.
 

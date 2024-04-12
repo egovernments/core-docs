@@ -38,7 +38,7 @@ The below table illustrates the process:
 
 &#x20;                                                                               **Workflow Table1**
 
-The above table needs to be translated into [Workflow](../../platform/core-services/workflow-service/configuring-workflows-for-an-entity.md) and MDMS service configurations.&#x20;
+The above table needs to be translated into [Workflow](../../platform/core-services/workflow/configuring-workflows-for-an-entity.md) and MDMS service configurations.&#x20;
 
 At a high level, a workflow consists of:
 

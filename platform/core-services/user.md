@@ -2,7 +2,7 @@
 description: Configure user data management services
 ---
 
-# User Services
+# User
 
 ## Overview
 
@@ -12,11 +12,10 @@ User service is responsible for user data management and providing functionality
 
 Before you proceed with the configuration, make sure the following pre-requisites are met -
 
-* Java 8
-* The Kafka server is up and running
+* Java 17
 * Encryption and MDMS services are running
-* PSQL server is running&#x20;
-* The Redis database is running
+* PostgreSQL server is running&#x20;
+* Redis is running
 
 ## Key Functionalities
 

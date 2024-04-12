@@ -2,7 +2,7 @@
 description: Configure workflows as per requirements
 ---
 
-# Workflow Service
+# Workflow
 
 ## Overview
 
@@ -12,7 +12,7 @@ Workflows are a series of steps that moves a process from one state to another s
 
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
-* Java 8
+* Java 17
 * Kafka server is up and running
 * egov-persister service is running and has a workflow persister config path added to it
 * PSQL server is running and a database is created to store workflow configuration and data

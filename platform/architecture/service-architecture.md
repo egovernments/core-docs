@@ -8,7 +8,7 @@ DIGIT consists of several reusable building blocks on top of which one can devel
 
 ## Microservice - Building Blocks
 
-To develop a new service, one needs to create a microservice and make it available through the API gateway. The API gateway calls the [**User Service**](../core-services/user-services.md) for authentication and the [**Access Service**](../core-services/access-control-services.md) for authorisation. The service developer can configure the roles and map the roles and actions using the [**Master Data Management Service**](../core-services/mdms-master-data-management-service/).&#x20;
+To develop a new service, one needs to create a microservice and make it available through the API gateway. The API gateway calls the [**User Service**](../core-services/user.md) for authentication and the [**Access Service**](../core-services/access-control-services.md) for authorisation. The service developer can configure the roles and map the roles and actions using the [**Master Data Management Service**](../core-services/mdms-master-data-management-service/).&#x20;
 
 ![DIGIT Services](<../../.gitbook/assets/image (311).png>)
 
@@ -22,11 +22,11 @@ The [**Billing Service**](https://urban.digit.org/platform/configure-digit/servi
 
 The [**Collection service**](https://urban.digit.org/platform/configure-digit/services-overview/business-services/collection-service/collection-service-v2) is the payment registry and records all the successful payments. For offline payments, a record is made in the collection service after the collection of the Cash/Cheque/DD/RTGS. The allowed payment modes are configurable. The PDF service is used to generate receipts based on a configurable template.&#x20;
 
-The service then triggers the [**Workflow Service**](../core-services/workflow-service/) to assign tasks for verification and approval. Workflows can be configured.  The **Employee Service** allows employee registrations and enables them to log in using the **Employee Dashboard**. The dashboard displays the list of pending applications as per the employee's role. The employee can perform actions on these applications using the employee UI for the service. &#x20;
+The service then triggers the [**Workflow Service**](../core-services/workflow/) to assign tasks for verification and approval. Workflows can be configured.  The **Employee Service** allows employee registrations and enables them to log in using the **Employee Dashboard**. The dashboard displays the list of pending applications as per the employee's role. The employee can perform actions on these applications using the employee UI for the service. &#x20;
 
 As the status changes or actions are taken on the applications the relevant [**SMS and Email Notification Service** ](../core-services/sms-notification-service/)sends the updates to the applicant. Once the application is approved, the applicant can download the final certificate which is generated using [**PDF Service**](../core-services/pdf-generation-service.md). &#x20;
 
-DIGIT has multi-tenant configuration capabilities. The [**Location Service**](../core-services/location-services.md) allows the configuration of the tenant hierarchy and maps multiple tenants like Country, State, District or State, Department, and Sub Department. Each tenant can have their own configurations for service, roles, workflows etc. This allows for variations across different agencies in tune with the local context.&#x20;
+DIGIT has multi-tenant configuration capabilities. The [**Location Service**](../core-services/location.md) allows the configuration of the tenant hierarchy and maps multiple tenants like Country, State, District or State, Department, and Sub Department. Each tenant can have their own configurations for service, roles, workflows etc. This allows for variations across different agencies in tune with the local context.&#x20;
 
 The [**Language Service**](../core-services/localization-service/) facilitates the support of multiple languages in DIGIT. This service stores the translations in multiple languages.
 
