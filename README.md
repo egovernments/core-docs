@@ -20,7 +20,7 @@ layout:
 
 # Overview
 
-**DIGIT** is a **D**igital **I**nfrastructure for **G**overnance and **I**nclusive **T**ransformation of public services. It enables seamless and unified exchange of information between citizens, employees & vendors, administrators and policymakers. DIGIT is an open source platform and built for scale. It is multi-tenant and uses microservices architecture. It is ideal when rolling out multiple services delivered by multiple agencies in multiple geographies.&#x20;
+**D**igital **I**nfrastructure for **G**overnance and **I**nclusive **T**ransformation (DIGIT) is an open-source, scalable, interoperable platform for responsive public service delivery and good governance.  It enables governments to digitize public service delivery with intuitive interfaces for citizens, front-line employees and administrators. DIGIT enables a seamless and unified exchange of information between citizens, employees & vendors, administrators and policymakers. DIGIT is an open-source platform built for scale. It enables the digital transformation of multiple government departments and is highly flexible enabling it to serve a variety of needs.&#x20;
 
 <div align="left">
 
@@ -30,11 +30,11 @@ layout:
 
 ## Motivation
 
-Government agencies build applications to deliver and manage public services. However, due to the way they adopt technology, they face several challenges that limits the benefits of technology. This is especially common in low and middle income countries.
+Government bodies deliver and manage a host of public services. Technology is the enabler in providing the infrastructure for seamless management and governance. The key challenge here is the several limitations (listed below) facing the effective adoption and implementation of technology, especially in low and middle-income countries.&#x20;
 
-**Multiple Similar Systems -** Government are federated in multiple layers - national, provincial and local - each consist of multiple agencies e.g. ministries, departments and sub departments. Each agency builds multiple systems. Many of these systems have similar functionality e.g. Policy for service charge calculation may vary across administrative boundaries so each agency builds a fit to purpose systems that cannot be reused.&#x20;
+**Multiple Similar Systems -** In a federated government structure, multiple agencies operate at national, regional, and local levels, each implementing its custom-built systems. The system architecture is often hard-wired to support specific requirements of individual ministries, departments and agencies for distinct sectors. These systems, though similar, cannot be reused in case the policies change in future.
 
-**Scalability Issues** - Many of these applications were not built for scale. They were built for data collection or at best coordination between agency staff. These cannot be opened up for direct digital access to citizens. This limits access for service delivery for citizen.
+**Scalability Issues** - Most of these applications are not scalable in terms of meeting the evolving demands of a growing population or achieving streamlined governance objectives. The scope of localised systems is limited to specific goals that often include data collection or coordination between stakeholders. This restricts the scope for promoting ease of service delivery.&#x20;
 
 <div align="left">
 
