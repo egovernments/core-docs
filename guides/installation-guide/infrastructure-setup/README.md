@@ -1,10 +1,8 @@
 ---
-description: >-
-  Complete DIGIT installation step-by-step Instructions across various Infra
-  types for public & private clouds
+description: Setup infrastructure required for deploying DIGIT
 ---
 
-# Infrastructure Setup Guide
+# Infrastructure Setup
 
 #### Topics Covered:
 
