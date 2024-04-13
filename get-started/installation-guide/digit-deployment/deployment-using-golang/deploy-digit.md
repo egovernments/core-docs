@@ -62,11 +62,9 @@ All done, wait and watch for 10 min. The DIGIT setup is complete, and the applic
 You can now test the DIGIT application status in the command prompt/terminal using the command below.
 
 ```
-curl -Is http://digit.try.com/employee/login |  head -n 1
+curl -Is https://digit.try.com/employee/login |  head -n 1
 
 OutPut:
 HTTP/2 200
 ```
-
-<mark style="color:red;">**Note: Initially pgr-services would be in crashloopbackoff state, but after performing the post-deployment steps the pgr-services will start running.**</mark>
 

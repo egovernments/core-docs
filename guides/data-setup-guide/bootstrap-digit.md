@@ -34,9 +34,9 @@ Forwarding from [::1]:8080 -> 8080
 
     [DIGIT Bootstrap](https://raw.githubusercontent.com/egovernments/DIGIT-DevOps/quickstart/deploy-as-code/bootstrap\_scripts/seed\_data.json)
 
-![](<../../../.gitbook/assets/image (203).png>)
+![](<../../.gitbook/assets/image (203).png>)
 
-![](<../../../.gitbook/assets/image (83).png>)
+![](<../../.gitbook/assets/image (83).png>)
 
 3. Execute the below commands to test your local machine's Kubernetes operations through kubectl.
 
@@ -101,29 +101,6 @@ Eg: https://mysetup.digit.org and create a grievance to ensure the PGR module de
 {% embed url="https://urban.digit.org/products/modules/public-grievances-and-redressal/pgr-user-manual" %}
 
 Post grievance creation and assignment of the same to LME, capture the screenshot of the same and share it to ensure your setup is working fine. Post validation, the PGR functionality shares the API response of the following request to assess the correctness of successful DIGIT PGR Deployment.
-
-## Destroy Cluster <a href="#destroy-the-cluster" id="destroy-the-cluster"></a>
-
-Follow the steps below to clean up the DIGIT setup, if required. This will delete the entire cluster and other cloud resources that were provisioned for the DIGIT Setup.
-
-Run the command below to destroy previously-created infrastructure using Terraform -
-
-1.  ELB is not deployed via Terraform. ELB has created at deployment time by the setup of Kubernetes Ingress. This has to be deleted manually by deleting the ingress service.&#x20;
-
-    * `kubectl delete deployment nginx-ingress-controller -n <namespace>`
-    *   `kubectl delete svc nginx-ingress-controller -n <namespace>`
-
-
-
-    <mark style="color:red;">**Note: Namespace can be either provided by egov or Jenkins.**</mark>
-2. Delete S3 buckets manually from the AWS console and also verify if the ELB got deleted.
-   * In case the ELB is not deleted, you need to delete ELB from the [AWS console](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-delete.html).
-3. Run `terraform destroy`.
-
-```
-cd DIGIT-DevOps/infra-as-code/terraform/my-digit-eks
-terraform destroy
-```
 
 ## Conclusion
 

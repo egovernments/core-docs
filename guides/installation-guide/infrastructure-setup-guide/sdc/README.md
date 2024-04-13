@@ -50,16 +50,16 @@ If you already using Ansible, Kubespray is a great option, otherwise, we recomme
 [2.-infra-as-code-kubespray.md](2.-infra-as-code-kubespray.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../digit-deployment/deployment-using-golang/prepare-deployment-configuration.md" %}
-[prepare-deployment-configuration.md](../../digit-deployment/deployment-using-golang/prepare-deployment-configuration.md)
+{% content-ref url="../../../../get-started/installation-guide/digit-deployment/deployment-using-golang/prepare-deployment-configuration.md" %}
+[prepare-deployment-configuration.md](../../../../get-started/installation-guide/digit-deployment/deployment-using-golang/prepare-deployment-configuration.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../digit-deployment/deployment-using-golang/deploy-digit.md" %}
-[deploy-digit.md](../../digit-deployment/deployment-using-golang/deploy-digit.md)
+{% content-ref url="../../../../get-started/installation-guide/digit-deployment/deployment-using-golang/deploy-digit.md" %}
+[deploy-digit.md](../../../../get-started/installation-guide/digit-deployment/deployment-using-golang/deploy-digit.md)
 {% endcontent-ref %}
 
-{% content-ref url="../bootstrap-digit.md" %}
-[bootstrap-digit.md](../bootstrap-digit.md)
+{% content-ref url="../../../data-setup-guide/bootstrap-digit.md" %}
+[bootstrap-digit.md](../../../data-setup-guide/bootstrap-digit.md)
 {% endcontent-ref %}
 
 

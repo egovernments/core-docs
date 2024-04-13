@@ -100,7 +100,7 @@ Verify that you can connect to the cluster by running the following command.
 ```
 kubectl config use-context <cluster_name>
 
-kubectl get nodes -A
+kubectl get nodes 
 
 kubectl get pods -A
 ```
@@ -116,6 +116,14 @@ The output of this will be the something like this:
 &#x20;[ae210873da6ff4c03bde2ad22e18fe04-233d3411.ap-south-1.elb.amazonaws.com](http://ae210873da6ff4c03bde2ad22e18fe04-233d3411.ap-south-1.elb.amazonaws.com/)&#x20;
 
 Add the CNAME to your domain provider against your domain name.
+
+### Post Deployment
+
+Login to the employee dashboard with the username and password provided in [env-secrets.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/DIGIT-2.9LTS/deploy-as-code/charts/environments/env-secrets.yaml#L10) file using the domain name provided in [input.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/DIGIT-2.9LTS/infra-as-code/terraform/sample-aws/input.yaml#L21).
+
+Login to <mark style="color:blue;">https://\<domain\_name>/employee</mark>\
+\
+![](../../../.gitbook/assets/image.png)
 
 ## Cleanup & Uninstallation Of DIGIT Infrastructure
 

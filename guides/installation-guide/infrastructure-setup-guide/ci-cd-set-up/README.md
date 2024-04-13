@@ -313,7 +313,7 @@ variable "ssh_key_name" {
 
 We have covered what the terraform script does, the resources graph that it provisions and what custom values should be given with respect to the selected environment.
 
-Now, run the terraform scripts to provision the infra required to [Deploy DIGIT on AWS](../../digit-deployment/deployment-using-golang/deploy-digit.md).
+Now, run the terraform scripts to provision the infra required to [Deploy DIGIT on AWS](../../../../get-started/installation-guide/digit-deployment/deployment-using-golang/deploy-digit.md).
 
 Use the 'cd' command to change to the following directory and run the following commands. Check the output.
 
