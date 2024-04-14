@@ -11,7 +11,7 @@ description: Setup infrastructure required for deploying DIGIT
 
 ## Basics
 
-However, DIGIT is a [**cloud-native**](https://www.appdynamics.com/topics/what-is-cloud-native-architecture#\~3-challenges) platform and at the same time [**cloud-agnostic**](https://looker.com/definitions/cloud-agnostic)**.** Depending on the scale and performance running **DIGIT on production** requires advanced capabilities like HA, DRS, autoscaling, resiliency, etc. All these capabilities are supported by commercial clouds like **AWS, Google, Azure, VMware, OpenStack, etc..** and also the private clouds like **NIC** and a **few SDCs implemented clouds.** These cloud providers provide the **Kubernetes-as-a-managed-service** that makes the entire infra setup and management seamless and automated, like **infra-as-code, and config-as-code**.
+DIGIT can be deployed on public cloud like AWS, Azure or private cloud.&#x20;
 
 ## Pre-reads
 

@@ -56,11 +56,12 @@ DIGIT is designed based on the following principles&#x20;
 
 1. **Single Source of Truth** - Shared Data Registries ensures data is kept up to date and reused without creating multiple copies of transactional data. DIGIT registries are accessible through standard APIs and can be leveraged by multiple service providers.&#x20;
 2. **Security and Privacy** - DIGIT is designed to be secure by default, with configurable role based access. All PII is encrypted and no PII is emitted into analytical systems.&#x20;
-3. **Flexible** - DIGIT is designed to enable each tenant (agency or service provider) to configure their own master data, workflows and if required they can build and deploy their own version of the service even on a shared infrastructure e.g. if an tenant (agency) wants to build a different service charge calculator instead of reusing a generic one, they can do so.&#x20;
-4. &#x20;**Modular** - All DIGIT components are modular microservices with well defined APIs. All services can be scaled, evolved and deployed independent of each other.&#x20;
-5. **Interoperable** - API first design and use of Open Standards wherever possible ensures DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required. This also allows market players to innovate rapidly to reach last mile without agencies losing strategic control of the data and key services. E.g. government agencies can ensure policy compliance through master data and workflow management while allowing market actors to build applications that delivers varied experience for different for different user groups.&#x20;
-6. **Ease of Use** - DIGIT is designed keep in mind ease of access of all actors - citizens, employees, administrators as well as developers, system administrator etc. All data is available through API which can be used to channel specific applications - web, mobile, chat etc.&#x20;
-7. **Open** - DIGIT is open source, uses all open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives the right to any agency or its partners to copy the source code and deploy it for their needs.
+3. **Scalability -** DIGIT is built for scale. Event driven asynchronous microservices architecture enables DIGIT to scale to millions of service requests.
+4. **Flexible** - DIGIT is multi-tenant. Each tenant (agency or service provider) can configure their own master data and workflows. If required, they can build and deploy their own version of the service e.g. if an tenant (agency) wants to build a different service charge calculator instead of reusing a generic one, they can do so.&#x20;
+5. &#x20;**Modular** - All DIGIT components are modular microservices with well defined APIs. All services can be scaled, evolved and deployed independent of each other.&#x20;
+6. **Interoperable** - API first design and use of Open Standards wherever possible ensures DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required. This allows market players to innovate rapidly to reach last mile without agencies losing strategic control of the data and key services.
+7. **Ease of Access** - DIGIT is designed keep in mind ease of access of all actors - citizens, employees, administrators as well as developers, system administrator etc. All data is available through API which can be used to channel specific applications - web, mobile, chat etc.&#x20;
+8. **Open** - DIGIT is open source, uses all open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives the right to any agency or its partners to copy the source code and deploy it for their needs.
 
 ## Typical Public Service
 
@@ -82,11 +83,15 @@ A digital system must provide the following capabilities to enable effective cit
 10. Monitor/Improve - Ability for the administrators to monitor service performance and identify areas of improvement. All transactions must be accompanied with data events into analytical database that allows slicing and dicing the data required for performance monitoring.&#x20;
 11. Plan/Budget - Ability for administrators and policymakers to plan and budget continuous improvement of services. This requires ability to link outlays to outputs.&#x20;
 
-DIGIT provides a set of  [building blocks](platform/core-services/) that can leveraged to build above described [digital services ](./#typical-public-service)that adheres to the [key design principles](./#key-principles). DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. The interactions between these services have been detailed out in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
+## DIGIT Services
+
+DIGIT provides a set of  [building blocks](platform/core-services/) (i.e. services) that can leveraged to realize any [digital services ](./#typical-public-service)that adheres to the [key design principles](./#key-principles). DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. Reusable building blocks not only ensures faster delivery but also ensures well architected digital services. The interactions between these services have been detailed out in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
+
+All services are built on DIGIT emits micro-level transactional data into an analytical database. This is key for real time monitoring and auditing of the operations. This also enables planning, budgeting and policy decision making.&#x20;
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 
-DIGIT is already being used to deliver services in 1000+ cities. Ecosystem partners including System Integrators are using DIGIT to build and deliver services.&#x20;
+DIGIT is proven and well supported. It already being used to deliver services in 1000+ cities. Ecosystem partners including System Integrators are using DIGIT to build and deliver services.  DIGIT Core LTS 2.9 version comes with long term support. This implies that any technical issues like security or performance reported on any of these services in the DIGIT Core 2.9 LTS version will be fixed by the DIGIT team.&#x20;
 
 DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).  You can also take up the DIGIT Certification through the [DIGIT Academy](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/kI0HGCGboIe1ltcfV9XD/). &#x20;
 
