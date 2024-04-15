@@ -28,7 +28,7 @@ layout:
 
 </div>
 
-## Motivation
+## Motivation For Building Governance Platform
 
 Government bodies deliver and manage a host of public services. Technology is the enabler in providing the infrastructure for seamless management and governance. The key challenge here is the several limitations (listed below) facing the effective adoption and implementation of technology, especially in low and middle-income countries.&#x20;
 
@@ -42,26 +42,26 @@ Government bodies deliver and manage a host of public services. Technology is th
 
 </div>
 
-**Data Fragmentation** - Most of these systems do not they have the ability to exchange data with other applications. Data gets locked in these siloed applications. The burden of keeping the data updated rests on the citizens. Multiple siloed systems also increases burden on the employees who have to remember multiple password and often copy data from one application to another. Data from multiple systems are often poor quality and hard to correlate. This makes is impossible for Administrators to get unified view of the data which can help them monitor performance and identify areas of improvement.&#x20;
+**Data Fragmentation** - Most agency-implemented systems cannot exchange data with other applications. Data gets locked in these siloed applications. The burden of keeping the data updated rests on the citizens. Multiple siloed systems also increase the burden on the employees who have to remember several passwords and often copy data from one application to another. Data fetched from these systems is of poor quality and hard to correlate. This makes it impossible for Administrators to get a unified view of the data which can help them monitor performance and identify areas of improvement.&#x20;
 
-**Vendor Lock-In -** Many of these systems are proprietary and government agencies are locked in with the vendor. This limits the ability of agencies to evolve system to meet evolving needs.
+**Vendor Lock-In -** Many of these systems are proprietary and government agencies are locked in with the vendor. This limits the ability of agencies to evolve systems to meet changing requirements.
 
-There and several other issues like security and limited technology capacity impedes the ability of governments to leverage technology for public service delivery at scale.
+Several other issues like security and limited technology capacity impede governments' ability to leverage technology for public service delivery at scale.
 
-Technology is designed properly can make public service delivery inclusive and accessible by all citizens. DIGIT is a set of reusable building blocks built using robust design principles and can accelerate digital transformation of public service delivery systems.&#x20;
+Well-designed technology makes public service delivery inclusive and accessible to all citizens. DIGIT is a set of reusable building blocks built using robust design principles and can accelerate the digital transformation of public service delivery systems.&#x20;
 
 ## Key Principles
 
 DIGIT is designed based on the following principles&#x20;
 
 1. **Single Source of Truth** - Shared Data Registries ensures data is kept up to date and reused without creating multiple copies of transactional data. DIGIT registries are accessible through standard APIs and can be leveraged by multiple service providers.&#x20;
-2. **Security and Privacy** - DIGIT is designed to be secure by default, with configurable role based access. All PII is encrypted and no PII is emitted into analytical systems.&#x20;
-3. **Scalability -** DIGIT is built for scale. Event driven asynchronous microservices architecture enables DIGIT to scale to millions of service requests.
-4. **Flexible** - DIGIT is multi-tenant. Each tenant (agency or service provider) can configure their own master data and workflows. If required, they can build and deploy their own version of the service e.g. if an tenant (agency) wants to build a different service charge calculator instead of reusing a generic one, they can do so.&#x20;
-5. &#x20;**Modular** - All DIGIT components are modular microservices with well defined APIs. All services can be scaled, evolved and deployed independent of each other.&#x20;
-6. **Interoperable** - API first design and use of Open Standards wherever possible ensures DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required. This allows market players to innovate rapidly to reach last mile without agencies losing strategic control of the data and key services.
-7. **Ease of Access** - DIGIT is designed keep in mind ease of access of all actors - citizens, employees, administrators as well as developers, system administrator etc. All data is available through API which can be used to channel specific applications - web, mobile, chat etc.&#x20;
-8. **Open** - DIGIT is open source, uses all open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives the right to any agency or its partners to copy the source code and deploy it for their needs.
+2. **Security and Privacy** - DIGIT is designed to be secure by default, with configurable role-based access. All PII is encrypted and no PII is emitted into analytical systems.&#x20;
+3. **Scalability -** DIGIT is built for scale. Event-driven asynchronous microservices architecture enables DIGIT to scale to millions of service requests.
+4. **Flexible** - DIGIT adopts a multi-user approach. Users (agencies or service providers) have the provision to configure their master data and workflows. They also have the flexibility to develop and implement their service versions. For example, an agency can create a distinct service charge calculator instead of utilizing the standard one.
+5. &#x20;**Modular** - All DIGIT components are modular microservices with well-defined APIs. All services can be scaled, evolved and deployed independently of each other.&#x20;
+6. **Interoperable** - API first design and use of Open Standards wherever possible ensures DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required. This allows market players to innovate rapidly to reach the last mile without agencies losing strategic control of the data and key services.
+7. **Ease of Access** - DIGIT is designed to keep in mind the ease of access of all actors - citizens, employees, administrators as well as developers, system administrators etc. All data is available through API which can be used to channel specific applications - web, mobile, chat etc.&#x20;
+8. **Open** - DIGIT is open source, uses open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives the right to any agency or its partners to copy the source code and deploy it for their needs.
 
 ## Typical Public Service
 
