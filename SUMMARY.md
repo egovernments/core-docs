@@ -2,9 +2,9 @@
 
 ## Platform
 
-* [Overview](README.md)
-* [Why DIGIT?](overview/digit-value-proposition.md)
-* [Principles](platform/principles/README.md)
+* [🙂 Overview](README.md)
+* [⏩ Why DIGIT?](overview/digit-value-proposition.md)
+* [📝 Principles](platform/principles/README.md)
   * [🔐 Data Protection & Privacy](platform/principles/data-protection-and-privacy/README.md)
     * [Data Protection & Privacy Definitions](platform/principles/data-protection-and-privacy/data-protection-and-privacy-definitions.md)
     * [Legal Obligations For Privacy - eGov](platform/principles/data-protection-and-privacy/legal-obligations-for-privacy-egov.md)
@@ -21,13 +21,13 @@
       * [Admin & Program Owner Privacy Policy](platform/principles/data-protection-and-privacy/data-privacy-policy-templates/admin-and-program-owner-privacy-policy.md)
       * [Supporting Agency Privacy Policy](platform/principles/data-protection-and-privacy/data-privacy-policy-templates/supporting-agency-privacy-policy.md)
     * [Global Standards For All Roles](platform/principles/data-protection-and-privacy/global-standards-for-all-roles.md)
-* [Architecture](platform/architecture/README.md)
+* [🏛️ Architecture](platform/architecture/README.md)
   * [Service Architecture](platform/architecture/service-architecture.md)
   * [Technology Architecture](platform/architecture/technology-architecture/README.md)
     * [Open Source Tools](platform/architecture/technology-architecture/open-source-tools.md)
   * [Infrastructure Architecture](platform/architecture/infrastructure-architecture.md)
   * [Deployment Architecture](platform/architecture/deployment-architecture.md)
-* [API Specifications](platform/api-specifications/README.md)
+* [✏️ API Specifications](platform/api-specifications/README.md)
   * [Access Control](platform/api-specifications/access-control.md)
   * [Employee](platform/api-specifications/employee.md)
   * [Location](platform/api-specifications/location.md)
@@ -49,7 +49,7 @@
   * [Reporting Service](platform/api-specifications/reporting-service.md)
   * [PDF Generation Service](platform/api-specifications/pdf-generation-service.md)
   * [Payment Gateway Service](platform/api-specifications/payment-gateway-service.md)
-* [Core Services](platform/core-services/README.md)
+* [⚙️ Core Services](platform/core-services/README.md)
   * [MDMS (Master Data Management Service)](platform/core-services/mdms-master-data-management-service/README.md)
     * [Setting up Master Data](platform/core-services/mdms-master-data-management-service/setting-up-master-data/README.md)
       * [MDMS Overview](platform/core-services/mdms-master-data-management-service/setting-up-master-data/mdms-overview.md)
@@ -111,7 +111,7 @@
   * [Service Request](platform/core-services/service-request.md)
   * [Accelerators](platform/core-services/accelerators/README.md)
     * [Inbox Service](platform/core-services/accelerators/inbox-service.md)
-* [Releases](platform/releases/README.md)
+* [🆕 Releases](platform/releases/README.md)
   * [DIGIT 2.9 LTS](platform/releases/digit-2.9-lts/README.md)
     * [Test Automation](platform/releases/digit-2.9-lts/test-automation.md)
     * [Release Checklist](platform/releases/digit-2.9-lts/release-checklist.md)
@@ -125,7 +125,7 @@
     * [LTS DIGIT Migration - v2.8 To v2.9](platform/releases/digit-2.9-lts/lts-digit-migration-v2.8-to-v2.9.md)
     * [Changelog](platform/releases/digit-2.9-lts/changelog.md)
     * [Backup PostgreSQL Database In AWS - Steps](platform/releases/digit-2.9-lts/backup-postgresql-database-in-aws-steps.md)
-* [Source Code](https://github.com/egovernments/Digit-Core/tree/master/)
+* [💾 Source Code](https://github.com/egovernments/Digit-Core/tree/master/)
 
 ## Guides
 
