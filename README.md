@@ -94,11 +94,11 @@ The following capabilities support the employee and management experience:
 5. Monitor/Improve - Administrators can monitor service performance and identify areas for improvement. All transactions should generate data events in an analytical database for comprehensive performance monitoring.
 6. Plan/Budget - Administrators and policymakers can plan and budget for service improvement, linking expenditures to outcomes.
 
-## DIGIT Service Architecture
+## DIGIT Service Design
 
 DIGIT offers a set of [building blocks](platform/core-services/) (i.e. services) that can leveraged to develop any [digital services ](./#typical-public-service)while adhering to the [key design principles](./#key-principles). Additionally, DIGIT provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to create citizen, employee and administrator dashboards.&#x20;
 
-The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. Leveraging reusable building blocks not only speeds up delivery but also ensures well-structured digital services. The interactions between these services are detailed in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
+The diagram below illustrates how some of the reusable building blocks interact to realise a typical public service delivery. Leveraging reusable building blocks not only speeds up delivery but also ensures well-structured digital services. The interactions between these services are detailed in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 
