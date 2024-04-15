@@ -71,7 +71,7 @@ The DIGIT platform design is based on the following key principles:
 7. **Ease of Access** - DIGIT enables easy access to all stakeholders including citizens, employees, administrators, developers or system administrators. Data available through API can be routed to specific applications on the web, mobile, or chat.
 8. **Open** - DIGIT is open source and uses open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives the right to any agency or its partners to copy the source code and deploy it for their needs.
 
-## Typical Public Service
+## Typical Public Service Design
 
 A typical public service delivery starts with a citizen applying for a service or a service connection. The diagram below abstracts the typical information exchange flow required to enable the delivery of a service.
 
@@ -94,15 +94,17 @@ The following capabilities support the employee and management experience:
 5. Monitor/Improve - Administrators can monitor service performance and identify areas for improvement. All transactions should generate data events in an analytical database for comprehensive performance monitoring.
 6. Plan/Budget - Administrators and policymakers can plan and budget for service improvement, linking expenditures to outcomes.
 
-## DIGIT Services
+## DIGIT Service Architecture
 
-DIGIT provides a set of  [building blocks](platform/core-services/) (i.e. services) that can leveraged to realize any [digital services ](./#typical-public-service)that adheres to the [key design principles](./#key-principles). DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. Reusable building blocks not only ensures faster delivery but also ensures well architected digital services. The interactions between these services have been detailed out in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
+DIGIT offers a set of [building blocks](platform/core-services/) (i.e. services) that can leveraged to develop any [digital services ](./#typical-public-service)while adhering to the [key design principles](./#key-principles). Additionally, DIGIT provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to create citizen, employee and administrator dashboards.&#x20;
 
-All services are built on DIGIT emits micro-level transactional data into an analytical database. This is key for real-time monitoring and auditing of the operations. This also enables planning, budgeting and policy decision-making.&#x20;
+The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. Leveraging reusable building blocks not only speeds up delivery but also ensures well-structured digital services. The interactions between these services are detailed in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 
-DIGIT is proven and well-supported. It is already being used to deliver services in 1000+ cities. Ecosystem partners including System Integrators are using DIGIT to build and deliver services.  DIGIT Core LTS 2.9 version comes with long-term support. This implies that any technical issues like security or performance reported on any of these services in the DIGIT Core 2.9 LTS version will be fixed by the DIGIT team.&#x20;
+All services are built on DIGIT emits micro-level transactional data into an analytical database. This is key for real-time monitoring and auditing of the operations. It facilitates planning, budgeting and policy decision-making.&#x20;
+
+DIGIT is proven and well-supported serving over 1000 cities. Ecosystem partners including System Integrators are using DIGIT to build and deliver services.  DIGIT Core LTS 2.9 version comes with long-term support. This implies that any technical issues like security or performance reported on any of these services in the DIGIT Core 2.9 LTS version will be fixed by the DIGIT team.&#x20;
 
 DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on the DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).  You can also take up the DIGIT Certification through the [DIGIT Academy](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/kI0HGCGboIe1ltcfV9XD/). &#x20;
 
