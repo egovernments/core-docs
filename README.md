@@ -34,7 +34,11 @@ Government bodies deliver and manage a host of public services. Technology is th
 
 **Multiple Similar Systems -** In a federated government structure, multiple agencies operate at national, regional, and local levels, each implementing its custom-built systems. The system architecture is often hard-wired to support specific requirements of individual ministries, departments and agencies for distinct sectors. These systems, though similar, cannot be reused in case the policies change in future.
 
+_DIGIT as a technology platform deals with federation within governance at national, regional and local levels. It also serves the individual ministries, departments and agencies within a sector. Therefore a federated approach to architecture is baked into the design of the platform to address the realities of how governments work._
+
 **Scalability Issues** - Most of these applications are not scalable in terms of meeting the evolving demands of a growing population or achieving streamlined governance objectives. The scope of localised systems is limited to specific goals that often include data collection or coordination between stakeholders. This restricts the scope for promoting ease of service delivery.&#x20;
+
+_DIGIT is a scalable platform that addresses the requirements of populous countries as well as smaller countries effectively. DIGIT drives improvements in governance and public service delivery initiatives._
 
 <div align="left">
 
@@ -42,62 +46,69 @@ Government bodies deliver and manage a host of public services. Technology is th
 
 </div>
 
-**Data Fragmentation** - Most agency-implemented systems cannot exchange data with other applications. Data gets locked in these siloed applications. The burden of keeping the data updated rests on the citizens. Multiple siloed systems also increase the burden on the employees who have to remember several passwords and often copy data from one application to another. Data fetched from these systems is of poor quality and hard to correlate. This makes it impossible for Administrators to get a unified view of the data which can help them monitor performance and identify areas of improvement.&#x20;
+**Data Fragmentation** - The existing systems cannot exchange data with other applications. Data is locked in siloed applications. Administrators find it difficult to get a unified view of the data to monitor performance and identify areas of improvement.
 
-**Vendor Lock-In -** Many of these systems are proprietary and government agencies are locked in with the vendor. This limits the ability of agencies to evolve systems to meet changing requirements.
+_The foundations of effective governance and robust policy-making are built on high-quality data and coordination across multiple agencies and ministries. DIGIT enables this through data registries that enable a shared source of truth and robust interoperability across institutional and systemic boundaries._
 
-Several other issues like security and limited technology capacity impede governments' ability to leverage technology for public service delivery at scale.
+**Vendor Lock-In -** Proprietary systems do not support scalable solutions that evolve with changing requirements.
 
-Well-designed technology makes public service delivery inclusive and accessible to all citizens. DIGIT is a set of reusable building blocks built using robust design principles and can accelerate the digital transformation of public service delivery systems.&#x20;
+_Countries must have the ability to control and manage their data and systems as per their national priorities. DIGIT enables this as it is open source, free to use and is backed by a wide ecosystem of vendors enabling governments to switch service providers without losing strategic control._
 
-## Key Principles
+Multiple other challenges like security concerns and limited technical capabilities hinder the government's ability to effectively utilise technology for large-scale public service delivery.
 
-DIGIT is designed based on the following principles&#x20;
+Well-designed technology ensures public service delivery is inclusive and accessible to all citizens. The DIGIT platform contains a set of reusable building blocks built using robust design principles that can accelerate the digital transformation of public service delivery systems.
 
-1. **Single Source of Truth** - Shared Data Registries ensures data is kept up to date and reused without creating multiple copies of transactional data. DIGIT registries are accessible through standard APIs and can be leveraged by multiple service providers.&#x20;
-2. **Security and Privacy** - DIGIT is designed to be secure by default, with configurable role-based access. All PII is encrypted and no PII is emitted into analytical systems.&#x20;
-3. **Scalability -** DIGIT is built for scale. Event-driven asynchronous microservices architecture enables DIGIT to scale to millions of service requests.
-4. **Flexible** - DIGIT adopts a multi-user approach. Users (agencies or service providers) have the provision to configure their master data and workflows. They also have the flexibility to develop and implement their service versions. For example, an agency can create a distinct service charge calculator instead of utilizing the standard one.
-5. &#x20;**Modular** - All DIGIT components are modular microservices with well-defined APIs. All services can be scaled, evolved and deployed independently of each other.&#x20;
-6. **Interoperable** - API first design and use of Open Standards wherever possible ensures DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required. This allows market players to innovate rapidly to reach the last mile without agencies losing strategic control of the data and key services.
-7. **Ease of Access** - DIGIT is designed to keep in mind the ease of access of all actors - citizens, employees, administrators as well as developers, system administrators etc. All data is available through API which can be used to channel specific applications - web, mobile, chat etc.&#x20;
-8. **Open** - DIGIT is open source, uses open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives the right to any agency or its partners to copy the source code and deploy it for their needs.
+## Key Platform Design Principles
+
+The DIGIT platform design is based on the following key principles:
+
+1. **Single Source of Truth** - Shared data registries ensure data is updated and reused without duplication of transactional data. DIGIT registries offer standard API access that can be leveraged by multiple service providers.
+2. **Security and Privacy** - DIGIT is designed to be secure by default featuring configurable role-based access. Personally Identifiable Information (PII) is encrypted and is not accessible by analytical systems.&#x20;
+3. **Scalability -** DIGIT is built for scale. Its event-driven asynchronous microservices architecture enables DIGIT to handle millions of service requests with ease.
+4. **Flexible** - DIGIT adopts a multi-user approach. Users (agencies or service providers) have the provision to configure their master data and workflows. They also have the flexibility to develop and implement custom service versions.
+5. &#x20;**Modular** - DIGIT components are designed as modular microservices with interoperable APIs. Each service can be scaled, updated and deployed autonomously independent of others.&#x20;
+6. **Interoperable** - API first design and use of Open Standards wherever possible ensures DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required.
+7. **Ease of Access** - DIGIT enables easy access to all stakeholders including citizens, employees, administrators, developers or system administrators. Data available through API can be routed to specific applications on the web, mobile, or chat.
+8. **Open** - DIGIT is open source and uses open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives the right to any agency or its partners to copy the source code and deploy it for their needs.
 
 ## Typical Public Service
 
-A typical public service delivery starts with a citizen applying for a service or a service connection. The diagram below abstracts the typical information exchange flow that needs to be enabled between the various actors to deliver a service.
+A typical public service delivery starts with a citizen applying for a service or a service connection. The diagram below abstracts the typical information exchange flow required to enable the delivery of a service.
 
 ![](<.gitbook/assets/image (159).png>)
 
-A digital system must provide the following capabilities to enable effective citizen service.&#x20;
+A digital system offers the following capabilities to improve citizen experience:
 
-1. Register/Login - Ability for the citizens to register or sign in or identify themselves. Ability to sign in using a single login id is key to enabling ease of access to digital services.&#x20;
-2. Apply/Upload - Ability for the citizens to request services by filling out an application form and uploading a set of valid documents. Citizens should be able to access services from multiple channels and in their preferred language.&#x20;
-3. Pay/Bill - Ability for the citizens to pay for the service and be able to download a bill for the payment made. Multiple options to pay through digital payments or cash should be available.&#x20;
-4. Inform/Track - Ability for the citizen to track or receive updates about the applied services through SMS, Email or App Notifications.
-5. Assign - Ability for the employees or vendors to assign the service application or trigger a workflow that would assign it to an employee or a vendor.  System should allow for configuring different workflows for different tenants to meet local needs.&#x20;
-6. Search/View - Ability for the employees or vendors to search and view the application. Search should be enabled on multiple attributes.
-7. Update/Comment - Ability for the employees to update and comment on the service application. In complex service delivery, back and forth is required between various parties. System should allow for structured and unstructured data flows between parties.&#x20;
-8. Deliver/Verify- Ability for the employees or vendors to deliver the service e.g. set up a new water connection or verify/certify the information provided such as verifying economic status. Most service delivery requires field visit by staff or vendors. In low mobile coverage areas, apps with offline capabilities are required. Synchronization of data from these apps create load spikes and the system design should be able to handle these situations.&#x20;
-9. Support/Feedback - Ability for citizens to raise support requests in case of an exception or provided feedback in case of closure of the service request. This requires ability configure surveys and feedback forms & analyze the responses to take corrective action.
-10. Monitor/Improve - Ability for the administrators to monitor service performance and identify areas of improvement. All transactions must be accompanied with data events into analytical database that allows slicing and dicing the data required for performance monitoring.&#x20;
-11. Plan/Budget - Ability for administrators and policymakers to plan and budget continuous improvement of services. This requires ability to link outlays to outputs.&#x20;
+1. Register/Login - Citizens can register, sign in, or authenticate themselves. Single sign-on capability streamlines access to digital services.&#x20;
+2. Apply/Upload - Citizens can request services by completing an application form and uploading necessary documents. Services should be accessible through multiple channels and in various languages.&#x20;
+3. Pay/Bill - Citizens can make payments for services and download bills. Multiple payment options, including digital and cash, should be available..&#x20;
+4. Inform/Track - Citizens can track service progress or receive updates via SMS, email, or app notifications.
+5. Support/Feedback - Citizens can raise support requests or provide feedback on service closure. The system should allow configuring surveys and feedback forms, with the ability to analyse responses for corrective action.
+
+The following capabilities support the employee and management experience:
+
+1. Assign - Employees or vendors can assign service applications or trigger workflows tailored to different user/agency local requirements.
+2. Search/View - Employees or vendors can search for and view applications based on multiple attributes.
+3. Update/Comment - Employees can update and comment on service applications, facilitating structured and unstructured data exchange between parties.
+4. Deliver/Verify- Employees or vendors can deliver services, such as setting up a new connection, or verify and certify information provided by citizens. Offline-capable apps are crucial in low mobile coverage areas, with data synchronization capabilities to handle load spikes.&#x20;
+5. Monitor/Improve - Administrators can monitor service performance and identify areas for improvement. All transactions should generate data events in an analytical database for comprehensive performance monitoring.
+6. Plan/Budget - Administrators and policymakers can plan and budget for service improvement, linking expenditures to outcomes.
 
 ## DIGIT Services
 
 DIGIT provides a set of  [building blocks](platform/core-services/) (i.e. services) that can leveraged to realize any [digital services ](./#typical-public-service)that adheres to the [key design principles](./#key-principles). DIGIT also provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to develop citizen, employee and administrator dashboards. The diagram below illustrates how some of the reusable building blocks interact to realize a typical public service delivery. Reusable building blocks not only ensures faster delivery but also ensures well architected digital services. The interactions between these services have been detailed out in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
 
-All services are built on DIGIT emits micro-level transactional data into an analytical database. This is key for real time monitoring and auditing of the operations. This also enables planning, budgeting and policy decision making.&#x20;
+All services are built on DIGIT emits micro-level transactional data into an analytical database. This is key for real-time monitoring and auditing of the operations. This also enables planning, budgeting and policy decision-making.&#x20;
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 
-DIGIT is proven and well supported. It already being used to deliver services in 1000+ cities. Ecosystem partners including System Integrators are using DIGIT to build and deliver services.  DIGIT Core LTS 2.9 version comes with long term support. This implies that any technical issues like security or performance reported on any of these services in the DIGIT Core 2.9 LTS version will be fixed by the DIGIT team.&#x20;
+DIGIT is proven and well-supported. It is already being used to deliver services in 1000+ cities. Ecosystem partners including System Integrators are using DIGIT to build and deliver services.  DIGIT Core LTS 2.9 version comes with long-term support. This implies that any technical issues like security or performance reported on any of these services in the DIGIT Core 2.9 LTS version will be fixed by the DIGIT team.&#x20;
 
-DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).  You can also take up the DIGIT Certification through the [DIGIT Academy](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/kI0HGCGboIe1ltcfV9XD/). &#x20;
+DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on the DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).  You can also take up the DIGIT Certification through the [DIGIT Academy](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/kI0HGCGboIe1ltcfV9XD/). &#x20;
 
-If you want to experience DIGIT or develop on DIGIT, you can also access DIGIT demo using [Sandbox](platform/get-started/access.md).&#x20;
+If you want to experience DIGIT or develop on DIGIT, you can also access the DIGIT demo using [Sandbox](platform/get-started/access.md).&#x20;
 
-DIGIT comes with several accelerators. These include [UI frameworks](accelerator/ui-frameworks.md) and [Integration Adapters](platform/integrations/). These are optional. You may choose to develop or reuse your own UI framework and Integration Adapters.&#x20;
+DIGIT comes with several accelerators. These include [UI frameworks](accelerator/ui-frameworks.md) and [Integration Adapters](platform/integrations/). These are optional. You may choose to develop or reuse your UI framework and Integration Adapters.&#x20;
 
 We organize several events for architects and developers on DIGIT. Keep a watch on the [Events](https://egov.org.in/events/) Page for upcoming events.&#x20;
 
