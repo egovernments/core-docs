@@ -48,17 +48,17 @@ This document contains information about the code changes that will be required 
         </dependency>
 ```
 
-5. The tracer library is upgraded to springboot 3.2.2. The updates are available in the library version 2.9.0. If the module is using the tracer, upgrade the tracer version to 2.9.0 as shown below:
+5. The tracer library is upgraded to springboot 3.2.2. The updates are available in the library version 2.9.0-SNAPSHOT. If the module is using the tracer, upgrade the tracer version to 2.9.0-SNAPSHOT as shown below:
 
 ```
         <dependency>
             <groupId>org.egov.services</groupId>
             <artifactId>tracer</artifactId>
-            <version>2.9.0</version>
+            <version>2.9.0-SNAPSHOT</version>
         </dependency>
 ```
 
-6. The _service-common_ library is upgraded and added in tracer. You don't have to explicitly upgrade the _services-common_ library and remove it from POM if you upgrade the tracer. In case your module is using only  _services-common,_ you can directly upgrade the version to 2.9.0
+6. The _service-common_ library is upgraded and added in tracer. You don't have to explicitly upgrade the _services-common_ library and remove it from POM if you upgrade the tracer. In case your module is using only  _services-common,_ you can directly upgrade the version to 2.9.0-SNAPSHOT
 7. Use the below version of _JUnit_ which is compatible with Java 17:
 
 ```
@@ -70,13 +70,13 @@ This document contains information about the code changes that will be required 
           </dependency>
 ```
 
-8. If you are using the MDMS client library update the dependency version to 2.9.0 as shown below:
+8. If you are using the MDMS client library update the dependency version to 2.9.0-SNAPSHOT as shown below:
 
 ```
             <dependency>
                <groupId>org.egov</groupId>
                <artifactId>mdms-client</artifactId>
-               <version>2.9.0</version>
+               <version>2.9.0-SNAPSHOT</version>
             </dependency>
 ```
 
