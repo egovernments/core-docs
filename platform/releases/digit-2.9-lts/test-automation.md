@@ -6,7 +6,7 @@ A comprehensive guide on running automated test scripts for various core service
 
 ## Pre-requisites
 
-Before you begin automating DIGIT- LTS's core services, ensure the Postman tool is installed.
+Before initiating automating DIGIT- LTS core services, ensure the Postman tool is installed.
 
 Create an environment in Postman with a global variable  BaseUrl and set its value per your environment configuration. For example - we have set &#x20;https://digit-lts.digit.org as the base URL.
 
@@ -20,9 +20,9 @@ _**Note**:- It is mandatory to run the automated script for user services, As Us
 
 Follow the steps below to run the egov-User service automation scripts.
 
-**1. Import User Collection:** Copy the User collection link from the provided document link: [ Collection Document](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing) and import the collection in Postman.
+**1. Import user collection:** Copy the User collection link from the provided document link: [ Collection Document](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit?usp=sharing) and import the collection in Postman.
 
-**2. Port Forward to Digit-LTS Environment:** Replace `[userPod]` with the relevant user pod name.
+**2. Port forward to DIGIT-LTS environment:** Replace `[userPod]` with the relevant user pod name.
 
 ```shell
 kubectl port-forward [userPod] 8081:8080 -n egov
@@ -30,7 +30,7 @@ kubectl port-forward [userPod] 8081:8080 -n egov
 
 Port-forward to the DIGIT-LTS environment to create the first user using the command above.
 
-**3. Run the User Collection:** Click on the [Download CSV](https://docs.google.com/spreadsheets/d/10UxoY9FaIn5iLiQKQvt458TEwqTAx8EQsR0BmdQKkBE/edit?usp=sharing) link to download the CSV file.  Make sure to download the file in CSV format before proceeding with the User collection.
+**3. Run the user collection:** Click on the [Download CSV](https://docs.google.com/spreadsheets/d/10UxoY9FaIn5iLiQKQvt458TEwqTAx8EQsR0BmdQKkBE/edit?usp=sharing) link to download the CSV file.  Make sure to download the file in CSV format before proceeding with the User collection.
 
 In the CSV file, each cell in the first row UserFIRST, UserName2, and UserName3  represents a unique user and each cell in the second row represents a name given to a specific user.
 
@@ -40,15 +40,15 @@ For example: The first cell in the first row that is UserFIRST represents the fi
 | ---------- | ---------- | ---------- |
 | USERDemoM1 | EGOvDemoM2 | EGOvDemoM3 |
 
-* Open the User collection in Postman and click on the **Run** button.
+Open the User collection in Postman and click on the **Run** button.
 
 <figure><img src="https://lh7-us.googleusercontent.com/_6-JwZSB3nddFUyYe8L2d5xwkz-eNwoAQkP7m4IZW2XQwQJWDgz5i0L8KRazKs97gReDu7lKE-tOtDM_zOBvuBIDc0TlkBZw10_Jnvw-vvaZ7QA4TvPlW4zZeNegIvs4o1mPlhCwbB9z0SdO2h_37g" alt=""><figcaption></figcaption></figure>
 
-* Select the downloaded CSV file by clicking on the **Select File** button.
+Select CSV file - Select the downloaded CSV file by clicking on the **Select File** button.
 
 <figure><img src="https://lh7-us.googleusercontent.com/v6VBtYJ0VHl8S7osw3_ggUMdLuVHjyREtRNSijJZjs5Qx5RjD51ctUG4jajGqr9Y0kMG_B9O_RSubI0ZFmAd9ocmHgjOwIiPbMOilmRWQEgRVVwTWDudCk-D9m1eJS3t034T-m_HsYCbI5fxXEoaTg" alt=""><figcaption></figcaption></figure>
 
-* Click on the **Run User** button to execute the collection.
+Click on the **Run User** button to execute the collection.
 
 {% hint style="info" %}
 _Due to the uniqueness constraint on usernames, you cannot create duplicate users with the same username._&#x20;
@@ -60,11 +60,11 @@ _Due to the uniqueness constraint on usernames, you cannot create duplicate user
 ### **Additional Notes**
 
 * The provided steps automate the creation of users in the DIGIT-LTS environment, which is essential for accessing all resources.
-* Make sure to review and modify the CSV file as needed to include accurate user data.
-* For further assistance or troubleshooting, refer to the Postman documentation or reach out to the relevant support channels.
-* By following these steps, you can effectively automate the core services of Digit-LTS, starting with the User service, using Postman.
+* Review and modify the CSV file as needed to include accurate user data.
+* For further assistance or troubleshooting, refer to the Postman documentation or contact the relevant support channels.
+* By following these steps, you can effectively automate the core services of DIGIT-LTS, starting with the User service, using Postman.
 
-### Test Automation - Localization service
+### Test Automation - Localization Service
 
 1. **Import Localization Collection into Postman:** [Click here](https://docs.google.com/spreadsheets/d/1xTkC\_IeKjWJOWQcD0kXazoFtEPcSG1civVfEHGmIqMM/edit#gid=0) and copy the localization collection link (available in column B of the sheet). Open the Postman and import the collection.
 2. **Prepare CSV File:** [Click here ](https://docs.google.com/spreadsheets/d/1swMoCCVHpNnohmVp\_HbbfeykP1t0ZXy9ugQAii7UOWA/edit#gid=0)to download the CSV file. Make sure the CSV file is in the correct format.
@@ -74,7 +74,7 @@ _Due to the uniqueness constraint on usernames, you cannot create duplicate user
 
 In the CSV file, code1 represents the specific code for creating the message in the locale1.&#x20;
 
-A message is created in the "Punjab water park" locale/region/mohalla. A unique code is associated with the created message "Alpha pgr 1".
+The message "Punjab water park" is created in the locale/region/mohalla. A unique code "Alpha pgr 1" is associated with the created message.
 
 | code1       | locale1           |
 | ----------- | ----------------- |
@@ -84,11 +84,11 @@ A message is created in the "Punjab water park" locale/region/mohalla. A unique 
 _**Note**: Ensure that if running the Localization collection multiple times within the same environment, you change the locale and code within the CSV file each time._
 {% endhint %}
 
-The locale column in the CSV file represents the place/area where you can create the message (mandatory).
+The locale column in the CSV file represents the place/area to create the message (mandatory).
 
 The code column represents the unique code associated with the message.
 
-By following these steps, you can automate the localization services using Postman.
+The above steps automate the localization services using Postman.
 
 ### Test Automation -  Egov-OTP Services
 
@@ -99,7 +99,7 @@ By following these steps, you can automate the localization services using Postm
 
 2\. To Run Egov OTP Collection in Postman:
 
-* Open the Egov OTP collection in Postman by clicking on the Egov OTP collection.
+* Click on the Egov OTP collection in Postman to open the collection.
 * Click on the **Run** button to execute the collection.
 * Click on the **Run Collection** button to execute the collection.
 
