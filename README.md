@@ -108,13 +108,13 @@ DIGIT is proven and well-supported serving over 1000 cities. Ecosystem partners 
 
 DIGIT is easy to install, configure and use. To install DIGIT on your servers use the [DIGIT Installation Guide](get-started/installation-guide/). To design and develop a new service on the DIGIT Platform go through the [DIGIT Design Guide](get-started/design-guide/) and [DIGIT Developer Guide](get-started/developer-guide/).  You can also take up the DIGIT Certification through the [DIGIT Academy](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/kI0HGCGboIe1ltcfV9XD/). &#x20;
 
-If you want to experience DIGIT or develop on DIGIT, you can also access the DIGIT demo using [Sandbox](platform/get-started/access.md).&#x20;
+If you want to experience DIGIT or develop on DIGIT, you can also access the DIGIT demo using [Sandbox](accelerators/sandbox.md).&#x20;
 
-DIGIT comes with several accelerators. These include [UI frameworks](accelerator/ui-frameworks.md) and [Integration Adapters](platform/integrations/). These are optional. You may choose to develop or reuse your UI framework and Integration Adapters.&#x20;
+DIGIT comes with several accelerators. These include [UI frameworks](accelerators/ui-frameworks.md) and [Integration Adapters](accelerators/integrations/). These are optional. You may choose to develop or reuse your UI framework and Integration Adapters.&#x20;
 
 We organize several events for architects and developers on DIGIT. Keep a watch on the [Events](https://egov.org.in/events/) Page for upcoming events.&#x20;
 
-Several volunteers are contributing to DIGIT in many ways. If you want to volunteer, check out our [contribute](platform/contribute.md) page.&#x20;
+Several volunteers are contributing to DIGIT in many ways. If you want to volunteer, check out our [contribute](accelerators/contribute.md) page.&#x20;
 
 ## Contact Us
 

@@ -8,30 +8,5 @@ Various infrastructure resources required for DIGIT deployment can be provisione
 
 ![](<../../.gitbook/assets/image (185).png>)
 
-## **Infrastructure Resources**
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-1. [**Ingress Rules, WAF, SSL Termination**](broken-reference)
-2. [**VPC**](broken-reference)
-3. [**Subnets (Private/Public, CIDR, Security Groups)**](broken-reference)
-4. [**EKS (Managed Kubernetes Service)**](broken-reference)
-5. [**Worker Node Group (Autoscaling)**](broken-reference)
-6. [**RDS (Managed Database Service)**](broken-reference)
-7. [**NAT Gateway**](broken-reference)
-8. [**Internet Gateway**](broken-reference)
-9. [**Block Storage (EBS Volumes)**](broken-reference)
-10. [**Object Storage (S3)**](broken-reference)
-
 
 

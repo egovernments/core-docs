@@ -1,4 +1,4 @@
-# 📓 Installation Guide
+# Installation Guide
 
 This guide takes you through a step by step process for installing DIGIT Core. Installation  consists of provisioning and configuring the hardware and network, installing the backbone services like PostgresDB, ElasticSearch, Apache Kakfa etc and DIGIT core services i.e. API Gateway, User Service etc. We also install a sample product built on top of the DIGIT core called Public Grievance Redressal (PGR).  DIGIT Core can be installed on public cloud like AWS, Azure or on Private Cloud. Installing DIGIT on personal computers is not recommended.
 
