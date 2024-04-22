@@ -58,18 +58,7 @@ Multiple other challenges like security concerns and limited technical capabilit
 
 Well-designed technology ensures public service delivery is inclusive and accessible to all citizens. The DIGIT platform contains a set of reusable building blocks built using robust design principles that can accelerate the digital transformation of public service delivery systems.
 
-## Key Platform Design Principles
-
-The DIGIT platform design is based on the following key principles:
-
-1. **Single Source of Truth** - Shared data registries ensure data is updated and reused without duplication of transactional data. DIGIT registries offer standard API access that can be leveraged by multiple service providers.
-2. **Security and Privacy** - DIGIT is designed to be secure by default featuring configurable role-based access. Personally Identifiable Information (PII) is encrypted and is not accessible by analytical systems.&#x20;
-3. **Scalability -** DIGIT is built for scale. Its event-driven asynchronous microservices architecture enables DIGIT to handle millions of service requests with ease.
-4. **Flexible** - DIGIT adopts a multi-user approach. Users (agencies or service providers) have the provision to configure their master data and workflows. They also have the flexibility to develop and implement custom service versions.
-5. &#x20;**Modular** - DIGIT components are designed as modular microservices with interoperable APIs. Each service can be scaled, updated and deployed autonomously independent of others.&#x20;
-6. **Interoperable** - API first design and use of Open Standards wherever possible ensures DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required.
-7. **Ease of Access** - DIGIT enables easy access to all stakeholders including citizens, employees, administrators, developers or system administrators. Data available through API can be routed to specific applications on the web, mobile, or chat.
-8. **Open** - DIGIT is open source and uses open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives the right to any agency or its partners to copy the source code and deploy it for their needs.
+Refer to the [DIGIT platform design principles](platform/principles/) page.
 
 ## Typical Public Service Design
 
@@ -98,7 +87,7 @@ The following capabilities support the employee and management experience:
 
 DIGIT offers a set of [building blocks](platform/core-services/) (i.e. services) that can leveraged to develop any [digital services ](./#typical-public-service)while adhering to the [key design principles](./#key-principles). Additionally, DIGIT provides optional accelerators like DIGIT UI and Dashboard Framework that can be extended to create citizen, employee and administrator dashboards.&#x20;
 
-The diagram below illustrates how some of the reusable building blocks interact to realise a typical public service delivery. Leveraging reusable building blocks not only speeds up delivery but also ensures well-structured digital services. The interactions between these services are detailed in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
+The diagram below illustrates how reusable building blocks interact to realise a typical public service delivery. Leveraging reusable building blocks not only speeds up delivery but also ensures well-structured digital services. The interactions between these services are detailed in the [Service Architecture](platform/architecture/service-architecture.md).&#x20;
 
 ![DIGIT Services](<.gitbook/assets/image (270).png>)
 

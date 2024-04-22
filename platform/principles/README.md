@@ -4,12 +4,16 @@ description: The foundational approach and design principles of the DIGIT platfo
 
 # Principles
 
-1. Security and Privacy - DIGIT is designed to be secure by default, with configurable role based access. All PII is encrypted and no PII is emitted into analytical systems.&#x20;
-2. Single Source of Truth - Shared Data Registries ensures data is kept up to date and reused without creating multiple copies of transactional data.
-3. Built for Scale - Multi-tenancy and Microservices architecture enables rolling out of services built on DIGIT to large number of citizens in multiple cities and provinces on a shared infrastructure.&#x20;
-4. Flexible - DIGIT is designed to enable each tenant to configure their own master data, workflows and if required their build and deploy their own version of the service even on a shared infrastructure.&#x20;
-5. &#x20;Modular - All DIGIT components are modular microservices with well defined APIs. All services can be scaled, evolved and deployed independent of each other.&#x20;
-6. Interoperable - API first design and uses of Open Standards wherever possible ensure DIGIT is interoperable with other systems.&#x20;
-7. Ease of Use - DIGIT is designed keep in mind ease of access of all actors - citizens, employees, administrators as well as developers, system administrator etc.
-8. Open - DIGIT is open source, uses all open source technologies and standards.
+1.
+
+    The DIGIT platform design is based on the following key principles:
+
+    1. **Single Source of Truth** - Shared data registries ensure data is updated and reused without duplicating transactional data. DIGIT registries offer standard API access that multiple service providers can leverage.
+    2. **Security and Privacy** - DIGIT is designed to be secure by default featuring configurable role-based access. Personally Identifiable Information (PII) is encrypted and inaccessible by analytical systems.&#x20;
+    3. **Scalability -** DIGIT is built for scale. Its event-driven asynchronous microservices architecture enables DIGIT to handle millions of service requests with ease.
+    4. **Flexible** - DIGIT adopts a multi-user approach. Users (agencies or service providers) have the provision to configure their master data and workflows. They also have the flexibility to develop and implement custom service versions.
+    5. &#x20;**Modular** - DIGIT components are designed as modular microservices with interoperable APIs. Each service can be scaled, updated and deployed autonomously independent of others.&#x20;
+    6. **Interoperable** - API first design and use of Open Standards wherever possible ensures DIGIT is interoperable with other systems. Data can be exchanged seamlessly as and when required.
+    7. **Ease of Access** - DIGIT enables easy access to all stakeholders including citizens, employees, administrators, developers or system administrators. Data available through API can be routed to specific applications on the web, mobile, or chat.
+    8. **Open** - DIGIT is open source and uses open source technologies and standards to ensure that data and core services are never vendor locked-in. MIT License gives rights to any agency or its partners to copy the source code and deploy it for their needs.
 

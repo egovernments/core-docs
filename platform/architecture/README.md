@@ -8,6 +8,10 @@ description: Platform architecture details
 [service-architecture.md](service-architecture.md)
 {% endcontent-ref %}
 
+{% content-ref url="technology-architecture/" %}
+[technology-architecture](technology-architecture/)
+{% endcontent-ref %}
+
 {% content-ref url="infrastructure-architecture.md" %}
 [infrastructure-architecture.md](infrastructure-architecture.md)
 {% endcontent-ref %}
