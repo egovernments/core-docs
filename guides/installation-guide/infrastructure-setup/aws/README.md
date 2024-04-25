@@ -12,7 +12,7 @@ description: Provision infra for DIGIT on AWS using Terraform
 
 ## Overview
 
-The [**Amazon Elastic Kubernetes Service (EKS)**](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html) is one of the AWS services for deploying, managing, and scaling any distributed and containerized workloads. Here we can provision the EKS cluster on AWS from the ground up and using an automated way (infra-as-code) using [**terraform**](https://www.terraform.io/intro/index.html) and then deploy the DIGIT services config-as-code using [**Helm**](https://helm.sh/docs/).
+[Amazon Elastic Kubernetes Service (EKS) ](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)is an AWS service for deploying, managing, and scaling distributed and containerized workloads. With EKS, you can easily provision a cluster on AWS using [Terraform](https://www.terraform.io/intro/index.html)**,** which automates the process. Then, deploy the DIGIT services configuration using [Helm](https://helm.sh/docs/).
 
 ## Pre-reads
 

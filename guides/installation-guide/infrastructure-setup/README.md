@@ -11,7 +11,7 @@ description: Setup infrastructure required for deploying DIGIT
 
 ## Basics
 
-DIGIT can be deployed on public cloud like AWS, Azure or private cloud.&#x20;
+DIGIT can be deployed on a public cloud like AWS, Azure or a private cloud.&#x20;
 
 ## Pre-reads
 
@@ -20,9 +20,11 @@ DIGIT can be deployed on public cloud like AWS, Azure or private cloud.&#x20;
 
 ## Choose Your Cloud
 
-<mark style="color:orange;">**Note:**</mark> If you want to deploy DIGIT using Github Actions, you can refer directly to  [DIGIT Deployment Using GithubActions](https://core.digit.org/guides/installation-guide/digit-deployment/deployment-using-github-actions). There's no need to create the infrastructure manually because Github Actions will automatically create and deploy DIGIT.
+{% hint style="info" %}
+<mark style="color:orange;">**Note:**</mark> To deploy DIGIT using Github Actions, refer to the document - [DIGIT Deployment Using GithubActions](https://core.digit.org/guides/installation-guide/digit-deployment/deployment-using-github-actions). With this installation approach, there's no need to manually create the infrastructure as GitHub Actions will automatically handle the creation and deployment of DIGIT.
+{% endhint %}
 
-Choose your cloud and follow the instructions to set up a Kubernetes cluster before moving on to deployment.
+Choose your cloud and follow the instructions to set up a Kubernetes cluster before deploying.
 
 {% content-ref url="aws/" %}
 [aws](aws/)
