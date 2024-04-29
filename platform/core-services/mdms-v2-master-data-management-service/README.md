@@ -2,7 +2,7 @@
 
 ## Overview
 
-MDMS v2 exposes APIs for defining schemas, searching schemas and then adding master data against these defined schemas. The data is now stored in PostgreSQL tables rather than in GitHub. MDMS v2 currently also exposes v1 search API which will fetch data from the database in the same format as MDMS v1 search API to maintain backward compatibility.&#x20;
+MDMS v2 provides APIs for defining schemas, searching schemas, and adding master data against these defined schemas. All data is now stored in PostgreSQL tables instead of GitHub. MDMS v2 currently also includes v1 search API for fetching data from the database in the same format as MDMS v1 search API to ensure backward compatibility.&#x20;
 
 ## **Pre-requisites**
 
@@ -10,11 +10,11 @@ MDMS v2 exposes APIs for defining schemas, searching schemas and then adding mas
 2. Prior knowledge of Spring Boot.
 3. Prior knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
 4. Prior knowledge of Git.
-5. Advanced knowledge of how to operate JSON data would be an added advantage to understanding the service.
+5. Advanced knowledge of operating JSON data would be an added advantage to understanding the service.
 
 ## **Functionalities**
 
-1. Create schema: MDMS v2 introduces functionality to define your schema with all validations and properties supported by JSON schema draft 07. Here is a sample schema definition for your reference -
+1. Create schema: MDMS v2 introduces functionality to define your schema with all validations and properties supported by JSON schema draft 07. Below is a sample schema definition for your reference -
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```
@@ -57,13 +57,13 @@ MDMS v2 exposes APIs for defining schemas, searching schemas and then adding mas
 ```
 {% endcode %}
 
-To create a basic schema definition, define the following keywords:
+To create a basic schema definition, use the following keywords:
 
-* $schema: specifies which draft of the JSON Schema standard the schema adheres to.
-* title and description: state the intent of the schema. These keywords don’t add any constraints to the data being validated.
-* type: defines the first constraint on the JSON data.
+* **$schema**: specifies which draft of the JSON Schema standard the schema adheres to.
+* **title and description**: state the intent of the schema. These keywords don’t add any constraints to the data being validated.
+* **type**: defines the first constraint on the JSON data.
 
-Reference - [<img src="https://json-schema.org/favicon.ico" alt="" data-size="line">JSON Schema - Creating your first schema](https://json-schema.org/learn/getting-started-step-by-step#create)Now, properties can be added under the schema definition. In JSON Schema terms, properties is a validation keyword. When you define properties, you create an object where each property represents a key in the JSON data that’s being validated. You can also specify which properties defined in the object are required.
+Reference - [<img src="https://json-schema.org/favicon.ico" alt="" data-size="line">JSON Schema - Creating your first schema](https://json-schema.org/learn/getting-started-step-by-step#create)Now, properties can be added under the schema definition. In JSON Schema terms, properties is a validation keyword. When you define properties, you create an object where each property represents a key in the JSON data that’s being validated. You can also specify which properties described in the object are required.
 
 Reference - [<img src="https://json-schema.org/favicon.ico" alt="" data-size="line">JSON Schema - Creating your first schema](https://json-schema.org/learn/getting-started-step-by-step#define)
 
@@ -73,7 +73,7 @@ Additionally, we have two keys which are not part of standard JSON schema attrib
 * x-ref-schema: specifies referenced data. This is useful in scenarios where the parent-child relationship needs to be established in master data. For example, Trade Type can be a parent master data to Trade Sub Type. In the example above, the field path represents the JsonPath of the attribute in the master data which contains the unique identifier of the parent which is being referenced. Schema code represents the schema under which the referenced master data needs to be validated for existence.
 
 2. Search schema: MDMS v2 has API to search schema based on the tenantid, schema code, and unique identifier.
-3. Create data: MDMS v2 enables the creation of data according to the defined schema. Below is an example of data based on the mentioned schema:
+3. Create data: MDMS v2 enables data creation according to the defined schema. Below is an example of data based on the mentioned schema:
 
 ```
 "Mdms": {
@@ -90,7 +90,7 @@ Additionally, we have two keys which are not part of standard JSON schema attrib
 
 4. Search data: MDMS v2 exposes two search APIs - v1 and v2 search where v1 search API is completely backward compatible.
 5. Update data: MDMS v2 allows the updation of master data fields.
-6. Fallback functionality: Both the search APIs have fallback implemented where if data is not found for a particular tenant, the services fall back to the parent tenant(s) and return the response back. If data is not found even for the parent tenant, an empty response is sent to the user.
+6. Fallback functionality: Both the search APIs have fallback implemented where if data is not found for a particular tenant, the services fall back to the parent tenant(s) and return the response. If data is not found even for the parent tenant, an empty response is sent to the user.
 
 #### API Details <a href="#api-details" id="api-details"></a>
 
