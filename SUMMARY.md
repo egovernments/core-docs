@@ -51,7 +51,7 @@
   * [Payment Gateway Service](platform/api-specifications/payment-gateway-service.md)
 * [Core Services](platform/core-services/README.md)
   * [MDMS V2 (Master Data Management Service)](platform/core-services/mdms-v2-master-data-management-service/README.md)
-    * [Steps to adopt new MDMS](platform/core-services/mdms-v2-master-data-management-service/steps-to-adopt-new-mdms.md)
+    * [Adopt New MDMS - Steps](platform/core-services/mdms-v2-master-data-management-service/adopt-new-mdms-steps.md)
   * [MDMS (Master Data Management Service)](platform/core-services/mdms-master-data-management-service/README.md)
     * [Setting up Master Data](platform/core-services/mdms-master-data-management-service/setting-up-master-data/README.md)
       * [MDMS Overview](platform/core-services/mdms-master-data-management-service/setting-up-master-data/mdms-overview.md)
