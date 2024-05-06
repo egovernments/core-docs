@@ -205,7 +205,7 @@ public class UserService {
     public UserDetailResponse searchUser(String stateLevelTenant, String accountId, String userName){
 
         UserSearchRequest userSearchRequest =new UserSearchRequest();
-        userSearchRequest.setActive(true);
+        userSearchRequest.setActive(false);
 //        userSearchRequest.setUserType("CITIZEN");
         userSearchRequest.setTenantId(stateLevelTenant);
 
@@ -231,7 +231,7 @@ public class UserService {
     private Map<String,User> searchBulkUser(List<String> uuids){
 
         UserSearchRequest userSearchRequest =new UserSearchRequest();
-        userSearchRequest.setActive(true);
+        userSearchRequest.setActive(false);
         userSearchRequest.setUserType("CITIZEN");
 
 

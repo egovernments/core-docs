@@ -48,7 +48,7 @@ To run and test our sample application, follow the below steps -
    * egov-filestore to 8288 (for e.g. `kubectl port-forward egov-filestore-86c688bbd6-zzk72 8288:8080`)
    * egov-mdms to 8082 (for e.g. `kubectl port-forward egov-mdms-service-c9d4877d7-kd4zp 8082:8080`)
 3. Run birth-registration-service that we just created.
-4. Import the postman collection of the APIs that this sample service exposes from here -[Birth Registration Postman Collection](https://github.com/egovernments/Digit-Core/blob/master/tutorials/backend-developer-guide/btr-services/birth-registration-service-stage-4-postman-collection.json)
+4. Import the postman collection of the APIs that this sample service exposes from here -[Birth Registration Postman Collection](https://github.com/egovernments/Digit-Core/blob/postman-birth-update/tutorials/backend-developer-guide/btr-services/birth-registration-service-stage-4-postman-collection.json)
 5. Setup environment variables in Postman:
    * hostWithPort - Eg. yourserver.digit.org:8080 or yourserver.digit.org if the service is running on port 80.&#x20;
    * applicationNumber - used in the search/update requests to search for that specific application number. Set it post the create birth registration application call.&#x20;
