@@ -200,7 +200,6 @@
       * [Implement Kafka Producer & Consumer](get-started/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/implement-kafka-producer-and-consumer.md)
       * [Add Persister Configuration](get-started/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/add-persister-configuration.md)
       * [Enable Signed Audit](get-started/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/enable-signed-audit.md)
-      * [Run Application](get-started/developer-guide/backend-developer-guide/section-2-integrate-persister-and-kafka/run-application.md)
     * [Section 3: Integrate Microservices](get-started/developer-guide/backend-developer-guide/section-3-integrate-microservices/README.md)
       * [Integrate IDGen Service](get-started/developer-guide/backend-developer-guide/section-3-integrate-microservices/integrate-idgen-service.md)
       * [Integrate User Service](get-started/developer-guide/backend-developer-guide/section-3-integrate-microservices/integrate-user-service.md)
