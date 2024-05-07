@@ -72,129 +72,15 @@ curl --location --request POST 'http://localhost:8285/egov-idgen/id/_generate' \
 ```
 {% endcode %}
 
-4. Once verified, we can call the ID generation service from within our application and generate the registrationId.&#x20;
-5.  Add the following model POJOs under `models` folder:&#x20;
-
-    IdGenerationRequest.java
-
-```java
-package digit.web.models;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.egov.common.contract.request.RequestInfo;
-
-import java.util.List;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class IdGenerationRequest {
-
-    @JsonProperty("RequestInfo")
-    private RequestInfo requestInfo;
-
-    private List<IdRequest> idRequests;
-
-}
-```
-
-IdGenerationResponse.java
-
-```java
-package digit.web.models;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.egov.common.contract.response.ResponseInfo;
-
-import java.util.List;
-
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class IdGenerationResponse {
-
-    private ResponseInfo responseInfo;
-
-    private List<IdResponse> idResponses;
-
-}
-
-```
-
-IdRequest.java
-
-```java
-package digit.web.models;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.NotNull;
-
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class IdRequest {
-
-    @JsonProperty("idName")
-    @NotNull
-    private String idName;
-
-    @NotNull
-    @JsonProperty("tenantId")
-    private String tenantId;
-
-    @JsonProperty("format")
-    private String format;
-
-}
-
-```
-
-IdResponse.java
-
-```java
-package digit.web.models;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class IdResponse {
-
-    private String id;
-
-}
-```
+4. Once verified, we can call the ID generation service from within our application and generate the registrationId. \
 
 5. In the BirthApplicationEnrichment class, update the enrichBirthApplication method as shown below:
 
 ```java
-public void enrichBirthApplication(BirthRegistrationRequest birthRegistrationRequest) {
-        //Retrieve list of IDs from IDGen service
+  public void enrichBirthApplication(BirthRegistrationRequest birthRegistrationRequest) {
         List<String> birthRegistrationIdList = idgenUtil.getIdList(birthRegistrationRequest.getRequestInfo(), birthRegistrationRequest.getBirthRegistrationApplications().get(0).getTenantId(), "btr.registrationid", "", birthRegistrationRequest.getBirthRegistrationApplications().size());
         Integer index = 0;
-        for(BirthRegistrationApplication application : birthRegistrationRequest.getBirthRegistrationApplications()) {
+        for(BirthRegistrationApplication application : birthRegistrationRequest.getBirthRegistrationApplications()){
             // Enrich audit details
             AuditDetails auditDetails = AuditDetails.builder().createdBy(birthRegistrationRequest.getRequestInfo().getUserInfo().getUuid()).createdTime(System.currentTimeMillis()).lastModifiedBy(birthRegistrationRequest.getRequestInfo().getUserInfo().getUuid()).lastModifiedTime(System.currentTimeMillis()).build();
             application.setAuditDetails(auditDetails);
@@ -202,14 +88,14 @@ public void enrichBirthApplication(BirthRegistrationRequest birthRegistrationReq
             // Enrich UUID
             application.setId(UUID.randomUUID().toString());
 
-            // Set application number from IdGen
+//            Enrich application number from IDgen
             application.setApplicationNumber(birthRegistrationIdList.get(index++));
-            
-            // Enrich registration Id
-            application.getAddress().setRegistrationId(application.getId());
+//             Enrich registration Id
+            application.getAddress().setApplicationNumber(application.getId());
 
             // Enrich address UUID
             application.getAddress().setId(UUID.randomUUID().toString());
+
         }
     }
 ```
