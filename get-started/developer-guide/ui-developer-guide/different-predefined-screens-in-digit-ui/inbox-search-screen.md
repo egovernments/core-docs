@@ -24,37 +24,37 @@ This page outlines the following:
 
 #### InboxSearchComposer
 
-This is a container component for inbox and search screens. It consists of 4 child components which can be rendered conditionally.                                                                                                     &#x20;
+InboxSearchComposer is a container component for the inbox and search screens. It consists of four child components, which can be rendered conditionally.                                                                                                    &#x20;
 
 <table><thead><tr><th width="260">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>configs</td><td>Config fetched from MDMS data</td><td></td></tr></tbody></table>
 
 #### InboxSearchLinks
 
-This component is used to render titles and links in the inbox.
+The InboxSearchLinks component is used to render titles and links in the inbox.
 
 <table><thead><tr><th width="213">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>headerText</td><td>Config fetched from MDMS data</td><td></td></tr><tr><td>links</td><td>Links to navigate to other screens</td><td></td></tr><tr><td>customClass</td><td>Class to update styling</td><td></td></tr><tr><td>logoIcon</td><td>Icon name and class to render in component</td><td></td></tr></tbody></table>
 
 #### SearchComponent
 
-This component is used to render search or filter forms with ‘clear’ and ‘search’ buttons.
+The SearchComponent is used to render search or filter forms. It includes 'clear' and 'search' buttons for user interaction.
 
 <table><thead><tr><th width="209">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>uiConfig</td><td>Config to render search/filter form</td><td></td></tr><tr><td>header</td><td>Title of form</td><td></td></tr><tr><td>screenType</td><td>Type of parent screen, can be either ‘inbox’ or ‘search’</td><td></td></tr><tr><td>fullConfig</td><td>Entire config of screen which also includes API details </td><td></td></tr></tbody></table>
 
 #### Results table
 
-This component is used to render a table with searched results.
+The Results table component is used to render a table with searched results.
 
 <table><thead><tr><th width="207">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>config</td><td>Config to render table</td><td></td></tr><tr><td>data</td><td>Search results need to be populated in table</td><td></td></tr><tr><td>isLoading</td><td>Flag to pass to handle loading state</td><td></td></tr><tr><td>isFetching</td><td>Flag to pass to handle loading state</td><td></td></tr><tr><td>fullConfig</td><td>Entire config of screen which also includes API details </td><td></td></tr></tbody></table>
 
 #### RenderFormFields
 
-This component is used to render form fields passed in the 'fields' parameter in the config&#x20;
+The RenderFormFields component is used to render form fields specified in the 'fields' parameter of the configuration.
 
 <table><thead><tr><th width="273">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>fields</td><td>Config to render all form fields</td><td></td></tr><tr><td>control, formData, errors, register, setValue, getValues, setError, clearErrors</td><td>Props to handle all form actions like collectibe data, setting errors, clearing errors etc.</td><td></td></tr><tr><td>apiDetails</td><td>Includes all API details required to fetch data</td><td></td></tr></tbody></table>
 
 ### **Hooks Used**
 
-To fetch inbox details, ‘useCustomAPIHook’ is used which takes all the API details like URL, query params, body, config etc. from config (defined in MDMS).                                                                                         &#x20;
+To fetch inbox details, the `useCustomAPIHook` is utilized. This hook takes all necessary API details such as URL, query parameters, body, and config from the configuration (defined in MDMS).                                                                       &#x20;
 
 {% embed url="https://github.com/egovernments/DIGIT-Works/blob/develop/frontend/micro-ui/web/micro-ui-internals/packages/libraries/src/hooks/useCustomAPIHook.js" %}
 
@@ -68,7 +68,7 @@ To fetch inbox details, ‘useCustomAPIHook’ is used which takes all the API d
 
 ## Configure Screens - Steps
 
-1. Create config based on the sections that need to be displayed on the screen. The basic structure for Inbox and Search screens is given below.&#x20;
+1. Create config based on the sections to be displayed on the screen. The basic structure for the Inbox and Search screens is given below.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/image (154).png" alt=""><figcaption><p>base search config</p></figcaption></figure>
 
