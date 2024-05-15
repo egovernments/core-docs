@@ -8,16 +8,23 @@ description: >-
 
 ## **Overview**
 
-This page provides the approach details for -
+The inbox service is an event-based service designed to:
 
-* rendering the Inbox screen or Search screen based on the config
-* calling the API dynamically based on API details passed via config
+* Fetch pre-aggregated data of municipal services and workflows.
+* Perform complex search operations.
+* Return applications and workflow data in a paginated manner.
+* Provide the total count of entries matching the search criteria.
+
+This page outlines the following:
+
+* Rendering the Inbox or Search screen based on configurations.
+* Dynamically calling APIs using details provided in configurations.
 
 ## Common Components Used
 
 #### InboxSearchComposer
 
-This is a container component for inbox and search screens. It consists of 4 children components which can be rendered conditionally.                                                                                                     &#x20;
+This is a container component for inbox and search screens. It consists of 4 child components which can be rendered conditionally.                                                                                                     &#x20;
 
 <table><thead><tr><th width="260">Prop Name</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td>configs</td><td>Config fetched from MDMS data</td><td></td></tr></tbody></table>
 
