@@ -8,7 +8,7 @@ description: >-
 
 ## **Overview**
 
-The inbox service is an event-based service designed to:
+The [Inbox Service](../../../../platform/core-services/accelerators/inbox-service.md) is an event-based service designed to:
 
 * Fetch pre-aggregated data of municipal services and workflows.
 * Perform complex search operations.
