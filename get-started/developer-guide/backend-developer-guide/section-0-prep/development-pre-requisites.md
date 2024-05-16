@@ -10,7 +10,7 @@ Before starting development on top of DIGIT make sure:&#x20;
 * [x] Access a DIGIT environment - FQDN, Access keys etc..The DIGIT environment can be a single VM setup for a development environment. Please refer to these docs for the installation of DIGIT.&#x20;
 * [x] Install DIGIT in a development environment (Single VM setup) by following the [quick setup guide](https://core.digit.org/guides/installation-guide/quick-setup).&#x20;
 * [x] It is recommended to deploy the following services in the development environment -
-  * [User](../../../../platform/core-services/user.md)
+  * [User](../../../../platform/core-services/user/)
   * [MDMS](../../../../platform/core-services/mdms-master-data-management-service/)
   * [Localization](../../../../platform/core-services/location.md)
   * [Id-Gen](../../../../platform/core-services/id-generation-service.md)

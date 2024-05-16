@@ -43,6 +43,8 @@ The localization service is used to store **key-value pairs** of metadata in dif
 2. `/localization/messages/v1/_upsert` should be added as the create endpoint for creating localization key-value pairs in the system
 3. `/localization/messages/v1/_search` should be added as the search endpoint. This method handles all requests to search existing records depending on different search criteria
 
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+
 ### Postman Collection <a href="#postman-collection" id="postman-collection"></a>
 
 [https://www.getpostman.com/collections/a140e7426ab4419ed5b5](https://www.getpostman.com/collections/a140e7426ab4419ed5b5)

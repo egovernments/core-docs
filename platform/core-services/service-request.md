@@ -20,15 +20,17 @@ Users can -
 
 ## API Details
 
-1. /service-request/service/definition/v1/\_create - Takes RequestInfo and ServiceDefinition in request body. ServiceDefinition has all the parameters related to the service definition being created.\
+1. `/service-request/service/definition/v1/_create` - Takes RequestInfo and ServiceDefinition in request body. ServiceDefinition has all the parameters related to the service definition being created.\
 
-2. /service-request/service/definition/v1/\_search - Allows searching of existing service definitions. Takes RequestInfo, ServiceDefinitionCriteria and Pagination objects in the request body.\
+2. `/service-request/service/definition/v1/_search` - Allows searching of existing service definitions. Takes RequestInfo, ServiceDefinitionCriteria and Pagination objects in the request body.\
 
-3. /service-request/service/v1/\_create - Takes RequestInfo and Service in the request body. Service has all the parameters related to the service being created against a particular ServiceDefinition.\
+3. `/service-request/service/v1/_create` - Takes RequestInfo and Service in the request body. Service has all the parameters related to the service being created against a particular ServiceDefinition.\
 
-4. /service-request/service/v1/\_search - Allows searching of existing services created against service definitions. Takes RequestInfo, ServiceCriteria and Pagination objects in the request body.
+4. `/service-request/service/v1/_search` - Allows searching of existing services created against service definitions. Takes RequestInfo, ServiceCriteria and Pagination objects in the request body.
 
 Detailed API payloads for interacting with Service Request for all four endpoints can be found in the following collection - [Service Request Collection](https://api.postman.com/collections/12892142-f7bf3d00-6eed-4efc-8cbe-66dd22833f8e?access\_key=PMAT-01GST3SNZDFX2CZ5GW0A69M91K)
+
+### Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
 
 ### Swagger Documentation
 

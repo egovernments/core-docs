@@ -8,7 +8,7 @@ Persister Service persists data in the database in a sync manner providing very 
 
 Below is a sample configuration which inserts data in a couple of tables.
 
-```
+```json
 serviceMaps:
   serviceName: pgr-services
   mappings:

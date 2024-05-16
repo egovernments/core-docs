@@ -18,19 +18,23 @@ DIGIT is an API-based platform where each API denotes a DIGIT resource. The prim
 
 Before you proceed with the configuration, make sure the following pre-requisites are met -
 
-* Java 8
-* MDMS service is up and running
+* Java 17
+* [MDMS](mdms-master-data-management-service/) service is up and running
 
 ## Key Functionalities
 
-* Serve the applicable actions for a user based on user roles (To print menu three).
+* Serve the applicable actions for a user based on user roles .
 * On each action performed by a user, access control looks at the roles for the user and validates actions mapping with the role.
 * Support tenant-level role action - For instance, an employee from Amritsar can have the role of APPROVER for other ULBs like Jalandhar and hence will be authorised to act as APPROVER in Jalandhar.
 
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+
 ## Deployment Details
 
-1. Deploy the latest version of the Access Control Service
-2. Deploy MDMS service to fetch the Role Action Mappings
+1. [Deploy](../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md)  the latest version of the Access Control Service
+   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../releases/digit-2.9-lts/service-build-updates.md) here.
+2. [Deploy](../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md)  service to fetch the Role Action Mappings
+   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../releases/digit-2.9-lts/service-build-updates.md) here.
 
 ## Configuration Details
 
@@ -86,16 +90,16 @@ The details about the fields in the configuration can be found in the [Swagger c
 
 ### Integration Scope
 
-Any microservice which requires authorisation can leverage the functionalities provided by the access control service.
+Any Service which requires **authorisation** can leverage the functionalities provided by the access control service.
 
 ### Integration Benefits
 
-Any new microservice that is to be added to the platform will not have to worry about authorisation. It can just add its role action mapping in the master data and the Access Control Service will perform authorisation whenever the API for the microservice is called.
+Any new service that is to be added to the platform will not have to worry about authorisation. It can just add its role action mapping in the master data and the Access Control Service will perform authorisation whenever the API for the microservice is called.
 
 ### Integration Steps
 
-1. To integrate with Access Control Service the role action mapping has to be configured (added) in the MDMS service.
-2. The service needs to call /actions/\_authorize API of Access Control Service to check for authorisation of any request.
+1. To integrate with Access Control Service the [role action mapping](https://github.com/egovernments/playground-mdms-data/blob/master/data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json) has to be configured (added) in the MDMS service.
+2. The service needs to call `/actions/_authorize` API of Access Control Service to check for authorisation of any request.
 
 ## Interaction Diagram
 
@@ -111,7 +115,7 @@ Any new microservice that is to be added to the platform will not have to worry 
 
 ### API List
 
-| Title                  | Link                  |
-| ---------------------- | --------------------- |
-|  `/actions/_authorize` | \[LINK TO BE UPDATED] |
+| Title                  | Link                                                              |
+| ---------------------- | ----------------------------------------------------------------- |
+|  `/actions/_authorize` | [\[LINK TO BE UPDATED\]](https://digit-api.apidog.io/api-6828950) |
 

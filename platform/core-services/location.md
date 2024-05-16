@@ -2,20 +2,23 @@
 description: Configure service to enable fetch and share of location details
 ---
 
-# Location Services
+# Location
 
 ## Overview <a href="#overview" id="overview"></a>
 
 A core application that provides location details of the tenant for which the services are being provided.
 
+### API's Playground : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+
 ## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
-* Java 8
-* PSQL server is running and the database is created
-* Knowledge of egov-mdms service
-* egov-mdms service is running and all the required MDMS masters are loaded in it
+* Java 17
+* PostgreSQL server is running and the DB is created
+  * Follow this guide to see how to [setup and create DB](https://www.cherryservers.com/blog/how-to-install-and-setup-postgresql-server-on-ubuntu-20-04) in postgreSQL.
+* Working Knowledge of [egov-mdms](mdms-master-data-management-service/setting-up-master-data/mdms-overview.md) service to add location data in master data.
+* egov-mdms service is running and all the required [MDMS masters](mdms-master-data-management-service/setting-up-master-data/configuring-master-data.md) are loaded in it
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
@@ -44,7 +47,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 The boundary data has been moved to MDMS from the master tables in DB. The location service fetches the JSON from MDMS and parses it to the structure of the boundary object as mentioned above. A sample master would look like below.
 
 {% code lineNumbers="true" %}
-```
+```json
 {
   "tenantId": "pg.cityA",
    "moduleName": "egov-location",
@@ -72,21 +75,7 @@ The boundary data has been moved to MDMS from the master tables in DB. The locat
 ```
 {% endcode %}
 
-| Attribute Name                    | Description                                                                   |
-| --------------------------------- | ----------------------------------------------------------------------------- |
-| tenantId                          | The tenantId (ULB code) for which the boundary data configuration is defined. |
-| moduleName                        | The name of the module where TenantBoundary master is present.                |
-| TenantBoundary.hierarchyType.name | Unique name of the hierarchy type.                                            |
-| TenantBoundary.hierarchyType.code | Unique code of the hierarchy type.                                            |
-| TenantBoundary.boundary.id        | Id of boundary defined for particular hierarchy.                              |
-| boundaryNum                       | Sequence number of boundary attribute defined for the particular hierarchy.   |
-| name                              | Name of the boundary like Block 1 or Zone 1 or City name.                     |
-| localname                         | Local name of the boundary.                                                   |
-| longitude                         | Longitude of the boundary.                                                    |
-| latitude                          | Latitude of the boundary.                                                     |
-| label                             | Label of the boundary.                                                        |
-| code                              | Code of the boundary.                                                         |
-| children                          | Details of its sub-boundaries.                                                |
+<table><thead><tr><th width="342">Attribute Name</th><th>Description</th></tr></thead><tbody><tr><td>tenantId</td><td>The tenantId (ULB code) for which the boundary data configuration is defined.</td></tr><tr><td>moduleName</td><td>The name of the module where TenantBoundary master is present.</td></tr><tr><td>TenantBoundary.hierarchyType.name</td><td>Unique name of the hierarchy type.</td></tr><tr><td>TenantBoundary.hierarchyType.code</td><td>Unique code of the hierarchy type.</td></tr><tr><td>TenantBoundary.boundary.id</td><td>Id of boundary defined for particular hierarchy.</td></tr><tr><td>boundaryNum</td><td>Sequence number of boundary attribute defined for the particular hierarchy.</td></tr><tr><td>name</td><td>Name of the boundary like Block 1 or Zone 1 or City name.</td></tr><tr><td>localname</td><td>Local name of the boundary.</td></tr><tr><td>longitude</td><td>Longitude of the boundary.</td></tr><tr><td>latitude</td><td>Latitude of the boundary.</td></tr><tr><td>label</td><td>Label of the boundary.</td></tr><tr><td>code</td><td>Code of the boundary.</td></tr><tr><td>children</td><td>Details of its sub-boundaries.</td></tr></tbody></table>
 
 ## Integration Details <a href="#integration" id="integration"></a>
 
@@ -118,11 +107,11 @@ The egov-location APIs can be used by any module which needs to store the locati
 
 ### API List
 
-| APIs                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [/boundarys/\_search](https://github.com/egovernments/core-services/blob/master/egov-location/postman/BoundaryNewVersion11Endpoint.postman\_collection.json) |
-| [/geography/\_search](https://github.com/egovernments/core-services/blob/master/egov-location/postman/BoundaryNewVersion11Endpoint.postman\_collection.json) |
-| [/tenant/\_search](https://github.com/egovernments/core-services/blob/master/egov-location/postman/BoundaryNewVersion11Endpoint.postman\_collection.json)    |
+| APIs                                                           |
+| -------------------------------------------------------------- |
+| [/boundarys/\_search](https://digit-api.apidog.io/api-6903255) |
+| [/geography/\_search](https://digit-api.apidog.io/api-6829077) |
+| [/tenant/\_search](https://digit-api.apidog.io/api-6829078)    |
 
-Please refer to the [Swagger API contract](https://editor.swagger.io/?url=https://raw.githubusercontent.com/egovernments/egov-services/master/docs/egov-location/contracts/v11-0-0.yml#!/) for the location service to understand the structure of APIs and to have a visualisation of all internal APIs.
+Please refer to the [Swagger API contract](https://github.com/egovernments/DIGIT-Specs/blob/grouped-service-contracts/Common%20Services/location.yaml) for the location service to understand the structure of APIs and to have a visualisation of all internal APIs.
 

@@ -88,7 +88,7 @@ The audit service is used to push signed data for tracking each and every create
 Sample Request Body -
 
 {% code lineNumbers="true" %}
-```
+```json
 {
     "RequestInfo": {
         "apiId": "asset-services",
@@ -183,4 +183,8 @@ curl --location --request POST 'https://dev.digit.org/audit-service/log/v1/_sear
 }'
 ```
 
-#### Postman Collection - [Audit Service Postman Collection](https://www.getpostman.com/collections/27d92894fa32f72b83f5) <a href="#postman-collection-audit-service-postman-collection" id="postman-collection-audit-service-postman-collection"></a>
+### Reference Documents <a href="#postman-collection-audit-service-postman-collection" id="postman-collection-audit-service-postman-collection"></a>
+
+Postman Collection - [Audit Service Postman Collection](https://www.getpostman.com/collections/27d92894fa32f72b83f5)
+
+Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;

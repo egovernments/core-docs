@@ -25,9 +25,12 @@ The MDMS service aims to reduce the time spent by developers on writing codes to
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
-1. Deploy the latest version of the Mdms-service
-2. Add conf path for the file location
-3. Add master config JSON path
+1. [Deploy](../../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md) the latest version of the MDMS-service
+   1. **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the  latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.
+2. Add [conf path](https://github.com/egovernments/Digit-Core/blob/f7b71c2e2b5c312b94b4738749a781d0ef874eab/core-services/egov-mdms-service/src/main/resources/application.properties#L7) for the file location
+3. Add [master config](https://github.com/egovernments/Digit-Core/blob/f7b71c2e2b5c312b94b4738749a781d0ef874eab/core-services/egov-mdms-service/src/main/resources/application.properties#L8) JSON path
+
+Note : See the [Reference Docs](./#reference-docs) for the values of conf path and master config.
 
 ## **Integration Details**
 
@@ -49,10 +52,10 @@ The MDMS service provides ease of access to master data for any service.
 
 ### Doc Links
 
-| Title                                                                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| egov-mdms sample data - [https://github.com/egovernments/egov-mdms-data/tree/DEV/data - Connect to preview](https://github.com/egovernments/egov-mdms-data/tree/DEV/data)                          |
-| master-config.json - [https://github.com/egovernments/egov-mdms-data/blob/DEV/master-config.json - Connect to preview](https://github.com/egovernments/egov-mdms-data/blob/DEV/master-config.json) |
+| Title                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| egov-mdms sample data - [https://github.com/egovernments/egov-mdms-data/tree/DEV/data - Connect to preview](https://github.com/egovernments/egov-mdms-data/tree/DEV/data) \[Download this and refer it's path as conf path value]               |
+| master-config.json - [https://github.com/egovernments/egov-mdms-data/blob/DEV/master-config.json - Connect to preview](https://github.com/egovernments/egov-mdms-data/blob/DEV/master-config.json) \[Refer to this path as master config value] |
 
 ### API List <a href="#api-list" id="api-list"></a>
 
@@ -60,3 +63,4 @@ The MDMS service provides ease of access to master data for any service.
 | -------------------------------------------------------------------------------------------- |
 | [egov-mdms-service/v1/\_search](https://www.getpostman.com/collections/fcc9a71375b674de1308) |
 
+## Access to all the API's at  : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;

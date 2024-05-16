@@ -8,10 +8,11 @@ eGov Payment Gateway acts as a liaison between eGov apps and external payment ga
 
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
-* _Java 8_
+* _Java 17_
 * Kafka server is up and running
-* egov-persister service is running and has pg service persister config path added in it
+* [egov-persister](persister-service/) service is running and has pg service [persister config path](https://github.com/egovernments/DIGIT-DevOps/blob/1e3c8ee05ad312ab6cfa3811d71ae9c777ca0957/deploy-as-code/helm/environments/unified-dev.yaml#L476) added in it
 * PSQL server is running and the database is created to store transaction data.
+  * Note : You can follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04) to setup postgreSQL locally and create a DB in it.
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
@@ -80,6 +81,8 @@ The egov-pg-service acts as communication/contact between eGov apps and external
 4. _/pg-service/transaction/v1/\_search_ should be added as the search endpoint for retrieving the current status of a payment in our system.
 
 ## Reference Docs
+
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
 
 ### Doc Links <a href="#doc-links" id="doc-links"></a>
 

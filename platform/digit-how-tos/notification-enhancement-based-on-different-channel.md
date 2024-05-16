@@ -15,6 +15,7 @@ Configuration of the notification messages for a business service based on the c
 * To have this functionality for different business services, a channel names file was created and added to the MDMS data.&#x20;
 * It contains information about the combination of different actions and channels for a particular business service. Example below:
 
+{% code lineNumbers="true" %}
 ```json
  "channelList": [
  {   "businessService": "PT.CREATE",
@@ -48,6 +49,7 @@ Configuration of the notification messages for a business service based on the c
     }
 ]
 ```
+{% endcode %}
 
 * The different channels are
   * SMS: ID (Mobile Number)

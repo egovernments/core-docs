@@ -12,10 +12,11 @@ The objective of the PDF generation service is to bulk generate pdf as per requi
 
 Before proceeding with the documentation, ensure the following prerequisites are met:
 
-1. Install npm
+1. [Install](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04) _NPM_
 2. Ensure the Kafka server is operational
-3. Confirm that the egov-persister service is running and configured with a pdf generation persister path
+3. Confirm that the [persister](persister-service/) service is running and configured with a [PDF generation](https://github.com/egovernments/configs/blob/DEV/egov-persister/pdf-generator.yml) persister [path](https://github.com/egovernments/DIGIT-DevOps/blob/1e3c8ee05ad312ab6cfa3811d71ae9c777ca0957/deploy-as-code/helm/environments/unified-dev.yaml#L476)
 4. Verify that the PostgreSQL (PSQL) server is running, and a database is created to store filestore IDs and job IDs of generated PDFs
+   * Note : Refer to this [document](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04) to know how to install postgreSQL locally and then creating a DB&#x20;
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
@@ -52,7 +53,7 @@ Before proceeding with the documentation, ensure the following prerequisites are
 
 ## Configuration Details <a href="#configuration-details" id="configuration-details"></a>
 
-For configuration details, refer to [Customizing PDF Receipts & Certificates.](https://urban.digit.org/platform/configure-digit/configuring-digit-services/customizing-pdf-notices-and-certificates/customizing-pdf-receipts-and-certificates)
+For configuration details, refer to [Customizing PDF Receipts & Certificates](https://urban.digit.org/platform/configure-digit/configuring-digit-services/configuring-common-services/customizing-pdf-notices-and-certificates/customizing-pdf-receipts-and-certificates).
 
 ## Integration Details <a href="#integration" id="integration"></a>
 
@@ -74,13 +75,15 @@ To download and print the required PDF \_create API has to be called with the re
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+
 ### Doc Links <a href="#doc-links" id="doc-links"></a>
 
-| Title                                                                                                                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Customizing PDF Receipts & Certificates](https://urban.digit.org/platform/configure-digit/configuring-digit-services/customizing-pdf-notices-and-certificates/customizing-pdf-receipts-and-certificates)                                 |
-| [Steps for Integration of PDF in UI for download and print PDF](https://urban.digit.org/platform/configure-digit/configuring-digit-services/customizing-pdf-notices-and-certificates/integration-of-pdf-in-ui-for-download-and-print-pdf) |
-| [API Swagger Documentation](https://raw.githubusercontent.com/egovernments/DIGIT-OSS/master/core-services/pdf-service/pdf-swagger-contract.yml)                                                                                           |
+| Title                                                                                                                                                                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Customizing PDF Receipts & Certificates](https://urban.digit.org/platform/configure-digit/configuring-digit-services/configuring-common-services/customizing-pdf-notices-and-certificates/customizing-pdf-receipts-and-certificates)                                 |
+| [Steps for Integration of PDF in UI for download and print PDF](https://urban.digit.org/platform/configure-digit/configuring-digit-services/configuring-common-services/customizing-pdf-notices-and-certificates/integration-of-pdf-in-ui-for-download-and-print-pdf) |
+| [API Swagger Documentation](https://raw.githubusercontent.com/egovernments/DIGIT-OSS/master/core-services/pdf-service/pdf-swagger-contract.yml)                                                                                                                       |
 
 ### API List <a href="#api-list" id="api-list"></a>
 

@@ -28,7 +28,9 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 This service is a consumer, which means it reads from the Kafka queue and does not provide a facility to be accessed through API calls, there’s no REST layer here. The producers willing to integrate with this consumer will be posting a JSON onto the topic configured at ‘[kafka.topics.notification.sms.name](http://kafka.topics.notification.sms.name/)’. The notification-sms service reads from the queue and sends the sms to the mentioned phone number using one of the SMS providers configured.
 
-The implementation of the consumer is present in the directory `src/main/java/org/egov/web/notification/sms/service/impl`.
+The implementation of the consumer is present in the directory
+
+`src/main/java/org/egov/web/notification/sms/service/impl`.
 
 These are the current providers available
 
@@ -140,7 +142,7 @@ Notification SMS service consumes SMS from the Kafka notification topic and proc
    and send it to the Kafka topic:- egov.core.notification.sms
 2. The notification-sms service reads from the queue and sends the sms to the mentioned phone number using one of the SMS providers configured.
 
-```
+```json
 {
   "mobileNumber": "9480411228",
   "message": "Hey, how you doing?"
@@ -149,8 +151,10 @@ Notification SMS service consumes SMS from the Kafka notification topic and proc
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+
 ### Doc Links <a href="#doc-links" id="doc-links"></a>
 
-| Title                                                                |
-| -------------------------------------------------------------------- |
-| [SMS Template Approval Process](../sms-template-approval-process.md) |
+| Title                                                                                 |
+| ------------------------------------------------------------------------------------- |
+| [SMS Template Approval Process](../../digit-how-tos/sms-template-approval-process.md) |

@@ -8,14 +8,14 @@ User-OTP service handles the OTP for user registration, user log in and password
 
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
-* _Java 8_
-* egov-user service is running
-* egov-localization service is running
-* egov-otp service is running
+* _Java 17_
+* [egov-user](user/) service is running
+* [egov-localization](localization-service/) service is running
+* [egov-otp](../api-specifications/otp-service.md) service is running
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
-The user-otp service sends the OTP to the user on login request, on password change request and during new user registration.
+The User-OTP service sends the OTP to the user on login request, on password change request and during new user registration.
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
@@ -40,6 +40,8 @@ User-OTP service handles the OTP for user registration, user login and password 
 2. `/user-otp/v1/_send` should be added as the endpoint for sending OTP to the user via sms or email
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
+
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
 
 ### Doc Links <a href="#doc-links" id="doc-links"></a>
 

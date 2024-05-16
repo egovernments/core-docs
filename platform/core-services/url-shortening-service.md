@@ -35,6 +35,8 @@ This shortened URL contains the path to this endpoint. The service uses the id u
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+
 ### Doc Links <a href="#doc-links" id="doc-links"></a>
 
 | Title                                                                                                                                                           |

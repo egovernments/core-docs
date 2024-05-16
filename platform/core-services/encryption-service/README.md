@@ -8,7 +8,7 @@ Encryption Service is used to secure sensitive data that is being stored in the 
 
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
-* _Java 8._
+* _Java 17._
 * Kafka server is up and running.
 
 ### Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
@@ -38,8 +38,10 @@ Following are the properties in application.properties file in egov-enc-service 
 
 ### Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
-1. Deploy the latest version of Encryption Service.
-2. Add Role-Action mapping for API’s.
+1.  [Deploy](../../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md) the latest version of Encryption Service
+
+    &#x20;**Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.
+2. Add [Role-Action](https://github.com/egovernments/playground-mdms-data/blob/master/data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json) mapping for API’s.
 
 ### Integration <a href="#integration" id="integration"></a>
 
@@ -89,3 +91,5 @@ Check if the signature is correct for the provided value.
 e) `POST /crypto/v1/_rotatekey`
 
 Deactivate the keys for the given tenant and generate new keys. It will deactivate both symmetric and asymmetric keys for the provided tenant.
+
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;

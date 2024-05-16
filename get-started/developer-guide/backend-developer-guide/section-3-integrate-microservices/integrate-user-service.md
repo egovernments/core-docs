@@ -2,7 +2,7 @@
 
 **Overview**&#x20;
 
-The [User Service](../../../../platform/core-services/user.md) provides the capabilities of creating a user, searching for a user and retrieving the details of a user. This module will search for a user and if not found, create that user with the user service.
+The [User Service](../../../../platform/core-services/user/) provides the capabilities of creating a user, searching for a user and retrieving the details of a user. This module will search for a user and if not found, create that user with the user service.
 
 {% hint style="info" %}
 DIGIT's user service masks PII that gets stored in the database using the [Encryption Service](../../../../platform/core-services/encryption-service/).

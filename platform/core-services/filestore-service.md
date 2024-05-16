@@ -25,87 +25,60 @@ The search api takes the uuid, tenantid as mandatory url params and a few option
 
 The **Application** is present among the core group of applications available in the eGov-services git repository.  The spring boot application but needs **lombok** extension added in your ide to load it. Once the application is up and running API requests can be posted to the url and ids can be generated.&#x20;
 
-&#x20;
-
-\*\*in case of intellij the plugin can be installed directly, for eclipse the lombok jar location has to be added in eclipse.ini file in this format **-javaagent:lombok.jar**.
+* NOTE : In case of intellij the plugin can be installed directly, for eclipse the lombok jar location has to be added in eclipse.ini file in this format **-javaagent:lombok.jar**.
 
 \
-For the API information please refer the swagger yaml&#x20;
+**For the API information please refer the swagger YAML**
+
+* Go To : [![](https://editor.swagger.io/dist/favicon-16x16.png)Swagger Editor](https://editor.swagger.io/)   and click on file -> import url&#x20;
+* Then add the raw url of the API doc in the pop up. [https://raw.githubusercontent.com/egovernments/DIGIT-OSS/master/core-services/docs/filestore-service-contract.yml](https://raw.githubusercontent.com/egovernments/DIGIT-OSS/master/core-services/docs/filestore-service-contract.yml)
+* Incase the url is unavailable, please go to the [docs folder](https://github.com/egovernments/DIGIT-OSS/tree/master/core-services/docs) of egov-services git repo and find the yaml for egov-filestroe.
+
+_**NOTE**_ : The application needs at least one type of storage available for it to store the files either file-storage, AWS S3 or azure. More storage types can be added by extending the application interface also.
 
 \
-GOTO : [![](https://editor.swagger.io/dist/favicon-16x16.png)Swagger Editor](https://editor.swagger.io/)   and click on file -> import url&#x20;
-
-\
-Then add the raw url of the API doc in the pop up.&#x20;
-
-[https://raw.githubusercontent.com/egovernments/DIGIT-OSS/master/core-services/docs/filestore-service-contract.yml](https://raw.githubusercontent.com/egovernments/DIGIT-OSS/master/core-services/docs/filestore-service-contract.yml)
-
-\
-Incase the url is unavailable, please go to the [docs folder](https://github.com/egovernments/DIGIT-OSS/tree/master/core-services/docs) of egov-services git repo and find the yaml for egov-filestroe.
-
-The application needs at least one type of storage available for it to store the files either file-storage, AWS S3 or azure. More storage types can be added by extending the application interface also.
-
-\
-To work work any of the file storages there are some application properties which needs to be configured.
+_**IMPORTANT**_ : To work work any of the file storage there are some **application properties** which needs to be configured.
 
 \
 **DiskStorage:**
 
 The mount path of the disk should be provided in the following variable to save files in the disc. **file.storage.mount.path=path.**
 
+
+
 Following are the variables that needs to be populated based on the aws/azure account you are integrating with.
 
 **How to enable Minio SDC:**
 
-minio.url=[http://minio](http://minio/).backbone:9000(Minio server end point)
-
-isS3Enabled=true(Should be true)
-
-aws.secretkey={minio\_secretkey}
-
-aws.key={minio\_accesskey}
-
-fixed.bucketname=egov-rainmaker(Minio bucket name)
-
-minio.source=minio
-
-\
-\
-
+* minio.url = [http://minio](http://minio/).backbone:9000(Minio server end point)
+* isS3Enabled = true(Should be true)
+* aws.secretkey = {minio\_secretkey}
+* aws.key = {minio\_accesskey}
+* fixed.bucketname = egov-rainmaker(Minio bucket name)
+* minio.source = minio
 
 **How to enable AWS S3:**
 
-minio.url=[https://s3.amazonaws.com](https://s3.amazonaws.com/)
-
-isS3Enabled=true(Should be true)
-
-aws.secretkey={s3\_secretkey}
-
-aws.key={s3\_accesskey}
-
-fixed.bucketname=egov-rainmaker(S3 bucket name)
-
-minio.source=minio
+* minio.url = [https://s3.amazonaws.com](https://s3.amazonaws.com/)
+* isS3Enabled = true(Should be true)
+* aws.secretkey = {s3\_secretkey}
+* aws.key = {s3\_accesskey}
+* fixed.bucketname = egov-rainmaker(S3 bucket name)
+* minio.source = minio
 
 **AZURE:**
 
-**isAzureStorageEnabled** - informing the application whether Azure is available or not
-
-**azure.defaultEndpointsProtocol -** type of protocol **https**
-
-**azure.accountName -** name of the user account&#x20;
-
-**azure.accountKey -** secret key of the user account
+* **isAzureStorageEnabled** - informing the application whether Azure is available or not
+* **azure.defaultEndpointsProtocol -** type of protocol **https**
+* **azure.accountName -** name of the user account&#x20;
+* **azure.accountKey -** secret key of the user account
 
 **NFS :**
 
-**isnfsstorageenabled**-informing the application whether NFS is available or not \<True/False>
-
-**file.storage.mount.path** - \<NFS location, example /filestore>
-
-**source.disk -** diskStorage - name of storage
-
-**disk.storage.host.url**=\<Main Domain URL>
+* **isnfsstorageenabled**-informing the application whether NFS is available or not \<True/False>
+* **file.storage.mount.path** - \<NFS location, example /filestore>
+* **source.disk -** diskStorage - name of storage
+* **disk.storage.host.url**=\<Main Domain URL>
 
 **Allowed formats to be uploaded**\
 The default format of the files is the use of set brackets with strings inside it - {"jpg", "png"}. Make sure to follow the same.
@@ -145,6 +118,8 @@ Can perform file upload independently without having to add fileupload specific 
 1. To integrate, the host of the filestore module should be overwritten in the helm chart.
 2. `/filestore/v1/files` should be added as the endpoint for uploading files in the system
 3. `/filestore/v1/files/url` should be added as the search endpoint. This method handles all requests to search existing files depending on different search criteria
+
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
 
 ### Postman Collection <a href="#postman-collection" id="postman-collection"></a>
 

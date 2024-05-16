@@ -14,8 +14,8 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 * Java 17
 * Kafka server is up and running
-* egov-persister service is running and has a workflow persister config path added to it
-* PSQL server is running and a database is created to store workflow configuration and data
+* [egov-persister](../persister-service/) service is running and has a [workflow](https://github.com/egovernments/configs/blob/UNIFIED-DEV/egov-persister/egov-workflow-v2-persister.yml) yml added yo  [persister config path](https://github.com/egovernments/Digit-Core/blob/1022a4beec120df1be0f3f20065f13b698be2ecc/core-services/egov-persister/src/main/resources/application.properties#L45).
+* PostgreSQL server is running and a database is created to store workflow configuration and data
 
 ## Key Functionalities
 
@@ -38,8 +38,9 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 ## Deployment Details
 
-1. Deploy the latest version of egov-workflow-v2 service
-2. Add businessService persister yaml path in persister configuration
+1. [Deploy](../../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md)  the latest version of eGov-workflow-V2 service
+   1. **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the **latest builds** for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.
+2. Add BusinessService Persister YAML path in persister configuration
 3. Add Role-Action mapping for BusinessService APIs
 4. Overwrite the egov.wf.statelevel flag ( _true_ for state level and _false_ for tenant level)
 5. Create businessService (workflow configuration) according to product requirements
@@ -64,7 +65,7 @@ The workflow configuration can be used by any module which performs a sequence o
 
 ### Integration Steps
 
-1. To integrate, the host of egov-workflow-v2 should be overwritten in the helm chart.
+1. To integrate, the host of eGov-workflow-v2 should be overwritten in the helm chart.
 2. /process/\_search should be added as the search endpoint for searching workflow process Instance objects.
 3. /process/\_transition should be added to perform an action on an application. _(It’s for internal use in modules and should not be added in Role-Action mapping)._
 4. The workflow configuration can be fetched by calling _\_search_ API to check if data can be updated or not in the current state.
@@ -73,14 +74,20 @@ The workflow configuration can be used by any module which performs a sequence o
 
 ### Doc Links
 
-| Title                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------ |
-| [Configuring Workflows For New Product/Entity](configuring-workflows-for-an-entity.md)                             |
-| [Setting Up Workflows](setting-up-workflows.md)                                                                    |
-| [API Swagger Documentation](https://raw.githubusercontent.com/egovernments/core-services/master/docs/worfklow-2.0) |
-| [Migration to Workflow 2.0](migration-to-workflow-2.0.md)                                                          |
+| Title                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------- |
+| [Configuring Workflows For New Product/Entity](configuring-workflows-for-an-entity.md)                                                  |
+| [Setting Up Workflows](setting-up-workflows.md)                                                                                         |
+| [API Swagger Documentation](https://github.com/egovernments/DIGIT-Specs/blob/grouped-service-contracts/Common%20Services/workflow.yaml) |
+| [Migration to Workflow 2.0](migration-to-workflow-2.0.md)                                                                               |
 
 ### API List
+
+
+
+{% embed url="https://digit-api.apidog.io/api-6829047" %}
+
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
 
 | Title                                                                                      |
 | ------------------------------------------------------------------------------------------ |
@@ -93,3 +100,4 @@ The workflow configuration can be used by any module which performs a sequence o
 {% hint style="info" %}
 **Note:** All the APIs are in the same Postman collection therefore the same link is added in each row.
 {% endhint %}
+

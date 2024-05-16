@@ -10,35 +10,41 @@ User service is responsible for user data management and providing functionality
 
 ## Pre-requisites
 
-Before you proceed with the configuration, make sure the following pre-requisites are met -
+Before you proceed with the configuration, make sure the following pre-requisites are met&#x20;
 
 * Java 17
-* Encryption and MDMS services are running
+* [Encryption](../encryption-service/) and [MDMS](../mdms-master-data-management-service/) services are running
 * PostgreSQL server is running&#x20;
 * Redis is running
 
 ## Key Functionalities
 
 * Store, update and search user data
-* Provide authentication
+* Provide Authentication
 * Provide login and logout functionality into the DIGIT platform
 * Store user data PIIs in encrypted form
 
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+
 ## Interaction Diagram
 
-<figure><img src="../../.gitbook/assets/f4b12b30-af64-4407-9c87-a2abb1ca7fb0.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/f4b12b30-af64-4407-9c87-a2abb1ca7fb0.png" alt=""><figcaption></figcaption></figure>
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/70851aa5-78c8-4c49-9326-082d03e2c9ac.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/70851aa5-78c8-4c49-9326-082d03e2c9ac.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
 ## Deployment Details
 
-1. Setup the latest version of egov-enc-service and egov-mdms- service
-2. Deploy the latest version of egov-user service
-3. Add role-action mapping for APIs
+1. Setup the latest version of [egov-enc-service](../encryption-service/) and [egov-mdms- service](../mdms-master-data-management-service/)&#x20;
+2.  [Deploy](../../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md) the latest version of egov-user service
+
+    &#x20;**Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.
+3.  Add [role-action mapping](https://github.com/egovernments/playground-mdms-data/blob/master/data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json) for APIs
+
+    **Note** : This is a sample JSON file containing role-action mapping , If you don't have any of the master data setup yet you can you this to create on for you and then add all these files and start making changed in your repo.
 
 ## Configuration Details
 
@@ -136,11 +142,25 @@ If an employee has a role with statelevel `tenantId` they can perform actions co
 
 ### User Data Privacy <a href="#user-data-privacy" id="user-data-privacy"></a>
 
-#### MDM Configuration For Security Policy <a href="#mdms-configuration-for-security-policy" id="mdms-configuration-for-security-policy"></a>
+Since User service handles PII (Personal Identifiable information) encrypting the data before saving in DB becomes crucial.
 
-{% code lineNumbers="true" %}
-```json
-{
+&#x20;DIGIT manages these as security policy in Master Data which is then referred by encryption service to encrypt the data before persisting it to DB.&#x20;
+
+#### MDMS Configuration For Security Policy <a href="#mdms-configuration-for-security-policy" id="mdms-configuration-for-security-policy"></a>
+
+There are two security policy models for user data - **User** and **UserSelf**.
+
+**User model**
+
+* &#x20;`attributes` contains a list of fields from the user object that needs to be secured and the field &#x20;
+* `roleBasedDecryptionPolicy` is an attribute-level role-based policy. It defines visibility for each attribute.&#x20;
+* User security model is used for Search API response
+
+**UserSelf**
+
+* &#x20;**It** contains the same structure of security policy but the UserSelf is used for Create/Update API response.
+
+<pre class="language-json" data-line-numbers><code class="lang-json">{
   "tenantId": "pb",
   "moduleName": "DataSecurity",
   "SecurityPolicy": [
@@ -275,13 +295,13 @@ If an employee has a role with statelevel `tenantId` they can perform actions co
     },
     {
       "model": "UserSelf",
-      "uniqueIdentifier": {
-        "name": "uuid",
+<strong>      "uniqueIdentifier": {
+</strong>        "name": "uuid",
         "jsonPath": "/uuid"
       },
       "attributes": [
-        {
-          "name": "name",
+<strong>        {
+</strong>          "name": "name",
           "jsonPath": "name",
           "patternId": null,
           "defaultVisibility": "PLAIN"
@@ -357,20 +377,15 @@ If an employee has a role with statelevel `tenantId` they can perform actions co
     }
   ]
 }
-```
-{% endcode %}
+</code></pre>
 
-There are two security policy models for user data - User and UserSelf.
 
-In model **User**, the field `attributes` contains a list of fields from the user object that needs to be secured and the field `roleBasedDecryptionPolicy` is an attribute-level role-based policy. It defines visibility for each attribute.
-
-**UserSelf** model contains the same structure of security policy but the User security model is used for Search API response and UserSelf is used for Create/Update API response.
 
 The visibility of the PII data is based on the above MDMS configuration. There are three types of visibility mentioned in the config.
 
-1. PLAIN - Show text in plain form.
-2. MASKED - The returned text contains masked data. The masking pattern is applied as defined in the Masking Patterns master data.
-3. NONE - The returned text does not contain any data. It contains strings like _“Confidential Information”_.
+1. **PLAIN** - Show text in plain form.
+2. **MASKED** - The returned text contains masked data. The masking pattern is applied as defined in the Masking Patterns master data.
+3. **NONE** - The returned text does not contain any data. It contains strings like _“Confidential Information”_.
 
 ### Plain Access Request <a href="#plain-access-request" id="plain-access-request"></a>
 
@@ -393,18 +408,18 @@ Any user can get plain access to the secured data (citizen’s PII) by requestin
 1. `recordId` - It is the unique identifier of the record that is requested for plain access.
 2. `fields` - It defines a list of attributes that are requested for plain access.
 
-To know more about the encryption policy, refer to the document [**Encryption Service**](encryption-service/) docs.
+To know more about the encryption policy, refer to the document [**Encryption Service**](../encryption-service/) docs.
 
 ## Reference Docs
 
 ### Doc Links
 
-{% file src="../../.gitbook/assets/promotion.pdf" %}
+{% file src="../../../.gitbook/assets/promotion.pdf" %}
 User data encryption promotion document
 {% endfile %}
 
-{% content-ref url="encryption-service/" %}
-[encryption-service](encryption-service/)
+{% content-ref url="../encryption-service/" %}
+[encryption-service](../encryption-service/)
 {% endcontent-ref %}
 
 ### API List

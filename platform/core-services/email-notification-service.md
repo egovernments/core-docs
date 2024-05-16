@@ -42,3 +42,7 @@ The email notification service is used to send out email notifications for all m
 ### Integration Steps <a href="#steps-to-integration" id="steps-to-integration"></a>
 
 To integrate, the client service should send email requests to email notification consumer topics.
+
+### Reference Documents
+
+Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;

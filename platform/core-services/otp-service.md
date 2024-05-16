@@ -8,7 +8,7 @@ OTP Service is a core service that is available on the DIGIT platform. The servi
 
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
-* _Java 8_
+* _Java 17_
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
@@ -48,6 +48,8 @@ The egov-otp service is used to authenticate the user in the platform.
 4. `/otp/v1/_search` should be added as the search endpoint. This API searches the mobile number and OTP using uuid - mapping uuid to OTP reference number.
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
+
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
 
 ### Doc Links <a href="#doc-links" id="doc-links"></a>
 

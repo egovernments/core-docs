@@ -9,34 +9,35 @@ Reporting Service is a service running independently on a separate server. The m
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
 * Prior knowledge of Java/J2EE.
-* Prior knowledge of SpringBoot.
+* Prior knowledge of Spring Boot.
 * Advanced knowledge of PostgreSQL.
-* Encryption and MDMS services must be running.
+* [Encryption](../encryption-service/) and [MDMS](../mdms-master-data-management-service/) services must be running.
 * Prior knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
-* JSON path for filtering required data from json objects.
+* JSON path for filtering required data from JSON objects.
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
 * Provides an easy way to add reports on the fly just by adding configurations without any coding effort.
 * Provides flexibility to customise result column names in the config.
-* Provides flexibility to fetch data from DB and also from some other services returning required json objects when its not possible to get all required data from DB.
+* Provides flexibility to fetch data from DB and also from some other services returning required JSON objects when its not possible to get all required data from DB.
 * Provides functionality to add filters as per requirements before actually fetching data for reports.
-* Provides user data in masked form. People with authorization will get plain data one by one.
+* Provides user data in masked form. People with Authorization will get plain data one by one.
 
 ## Configuration Details <a href="#configuration-details" id="configuration-details"></a>
 
 #### **Definitions:** <a href="#definitions" id="definitions"></a>
 
 1. **Config file**
-   * A YAML (xyz.yml) file which contains configuration for report requirements.&#x20;
+   * A YAML (xyz.yml) file which contains configuration for report requirements.
+     * **Note** :  You can go through some sample configs [here](https://github.com/egovernments/configs/tree/master/reports/config).
 2. **API**
    * A REST endpoint to fetch data based on the configuration.
 3. **Inline-table**
    * If we also want to show data from some external service with data coming from DB  in reports we use inline tables. The data from an external service is stored in an inline table and then used as any normal DB table to get data. This table is short-lived and stays only for the time when the query is being executed. It is never stored in DB. We provide JSON paths in an ordered manner corresponding to each column in the table. These JSON paths will be used to extract the required data from the external service’s response. For configs please see the ‘How to Use’ section.&#x20;
 
-### How to Use <a href="#how-to-use" id="how-to-use"></a>
+## How to Use Write **Configuration ?** <a href="#how-to-use" id="how-to-use"></a>
 
-**Configuration**: As mentioned above, the report service uses a config file per module to store all the configurations of reports pertaining to that module. Report service reads multiple such files at start-up to support reports of all the configured modules. The file contains the following keys:
+As mentioned above, the report service uses a config file per module to store all the configurations of reports pertaining to that module. Report service reads multiple such files at start-up to support reports of all the configured modules. The file contains the following keys:
 
 1. **reportName:** name of the report, to be used with module name to identify any report config
 2. **summary:** summary of the report
@@ -67,23 +68,24 @@ Before you proceed with the documentation, make sure the following pre-requisite
 10. **Groupby:** group by clause to be appended into base query
 11. **additionalConfig:** to provide additional custom configs which are not present above
 
+
+
 **Call the MDMS or any other API with the post method**
 
-Configuring the post object in the yaml itself like below.
+1. Configuring the post object in the yaml itself like below.
 
-externalService:
-
-* entity: $.MdmsRes.egf-master.FinancialYear
-* [apiURL](https://raw.githubusercontent.com/egovernments/punjab-rainmaker-customization/master/configs/reports/configs/pt-reports.yml)
-* keyOrder: finYearRange,startingDate,endingDate,tenantId
-* tableName: tbl\_financialyear
-* stateData: true
-* postObject:
-  * tenantId: $tenantid
-  * moduleDetails:
-    * moduleName: egf-master
-    * masterDetails:
-* name: FinancialYear filter: "\[?(@.id IN \[2,3] && @.active == true)]"
+* _externalService_:
+  * _entity_: $.MdmsRes.egf-master.FinancialYear
+    * [apiURL](https://raw.githubusercontent.com/egovernments/punjab-rainmaker-customization/master/configs/reports/configs/pt-reports.yml) : [ http://localhost:8094/egov-mdms-service/v1/\_search](http://localhost:8094/egov-mdms-service/v1/\_search)
+      * _keyOrder_: finYearRange,startingDate,endingDate,tenantId
+      * _tableName_: tbl\_financialyear
+      * _stateData_: true
+      * _postObject_:
+        * _tenantId_: $tenantid
+          * _moduleDetails_:
+            * _moduleName_: egf-master
+            * _masterDetails_:
+              * _name_: FinancialYear filter: "\[?(@.id IN \[2,3] && @.active == true)]"
 
 Keep the post object in a separate JSON file externally and call at runtime.
 
@@ -216,7 +218,7 @@ There are two API calls to report service ‘GET METADATA’ and ‘GET DATA’.
 
 This request to report service is made to get metadata for any report. The metadata contains information about search filters to be used in the report before actually sending a request to get actual data. The user-selected values are then used in the GET\_DATA request to filter data.
 
-**endpoint:** /report/{moduleName}/{report name}/metadata/\_get
+**endpoint:** `/report/{moduleName}/{report name}/metadata/_get`
 
 **moduleName**:- It is used to define the names of the module which contain current report
 
@@ -254,7 +256,7 @@ This request to report service is made to get metadata for any report. The metad
 
 This request-to-report service is used to get data for the report. Inputs given by the user for filters are sent in the request body. These filter values are used while querying data from DB.
 
-**endpoint:** report/{moduleName}/{report name}/\_get
+**endpoint:** `report/{moduleName}/{report name}/_get`
 
 **moduleName:** It is used to define the names of the module which contains the current repo
 
@@ -329,7 +331,7 @@ The report service provides a common framework to generate reports and show the 
 2. The API should be mentioned in ACCESSCONTROL-ACTIONS-TEST. Refer below example
 3. Add role-action mapping for APIs.
 
-```
+```json
 //This entry is for to decide the location of report on UI screen
 {
       "id": {Placeholder1},
@@ -380,11 +382,13 @@ The report service provides a common framework to generate reports and show the 
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
+## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+
 #### Doc Links <a href="#doc-links" id="doc-links"></a>
 
 | Title                                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [API Swagger Documentation](https://editor.swagger.io/?url=https://raw.githubusercontent.com/egovernments/egov-services/master/docs/reportinfra/contracts/reportinfra-1-0-0.yml#!/) |
-| Local Setup                                                                                                                                                                         |
+| [Local Setup](https://github.com/egovernments/Digit-Core/blob/core-2.9-lts-mvn-check/core-services/report/LOCALSETUP.md)                                                            |
 | [Guidelines for supporting User privacy changes in report service](../encryption-service/guidelines-for-supporting-user-privacy-in-a-module.md#demand-generation-changes)           |
 

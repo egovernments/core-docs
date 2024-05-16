@@ -103,3 +103,7 @@ The persister configuration can be used by any module to store records in partic
 2. Check-in the config file to a remote location preferably github.
 3. Provide the absolute path of the checked-in file to DevOps, to add it to the file-read path of egov-persister. The file will be added to egov-persister's environment manifest file for it to be read at start-up of the application.
 4. Run the egov-persister app and push data on kafka topic specified in config to persist it in DB
+
+## Reference Docs
+
+### Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
