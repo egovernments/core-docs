@@ -1,12 +1,8 @@
 ---
-description: DIGIT building blocks (LEGO pieces)
+description: DIGIT building blocks (as in LEGO pieces)
 ---
 
 # Core Services
-
-
-
-Service Name
 
 1. [Access-Control ](access-control-services.md)
 2. [Audit-service ](audit-service/)
@@ -33,8 +29,8 @@ Service Name
 23. [User-OTP ](user-otp-service.md)
 24. [User ](user/)
 25. [Libraries ](libraries/)
-    1. [Enc-client ](libraries/encryption-client.md)
-    2. MDMS-client&#x20;
-    3. Services-common&#x20;
-    4. [Tracer](libraries/tracer-library.md)
+    * [Encryption-client ](libraries/encryption-client.md)
+    * MDMS-client&#x20;
+    * Services-common&#x20;
+    * [Tracer](libraries/tracer-library.md)
 
