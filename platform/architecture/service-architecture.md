@@ -8,7 +8,7 @@ DIGIT consists of several reusable building blocks on top of which one can devel
 
 ## Microservice - Building Blocks
 
-To develop a new service, one needs to create a microservice and make it available through the API gateway. The API gateway calls the [**User Service**](../core-services/user/) for authentication and the [**Access Service**](../core-services/access-control-services.md) for authorisation. The service developer can configure the roles and map the roles and actions using the [**Master Data Management Service**](../core-services/mdms-master-data-management-service/).&#x20;
+To develop a new service, one needs to create a microservice and make it available through the API gateway. The API gateway calls the [**User Service**](../core-services/user/) for authentication and the [**Access Service**](../core-services/access-control-services.md) for authorisation. The service developer can configure the roles and map the roles and actions using the [**Master Data Management Service**](../core-services/mdms-v2-master-data-management-service/mdms-master-data-management-service/).&#x20;
 
 ![DIGIT Services](<../../.gitbook/assets/image (311).png>)
 

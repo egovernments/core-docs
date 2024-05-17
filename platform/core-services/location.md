@@ -17,8 +17,8 @@ Before you proceed with the documentation, make sure the following pre-requisite
 * Java 17
 * PostgreSQL server is running and the DB is created
   * Follow this guide to see how to [setup and create DB](https://www.cherryservers.com/blog/how-to-install-and-setup-postgresql-server-on-ubuntu-20-04) in postgreSQL.
-* Working Knowledge of [egov-mdms](mdms-master-data-management-service/setting-up-master-data/mdms-overview.md) service to add location data in master data.
-* egov-mdms service is running and all the required [MDMS masters](mdms-master-data-management-service/setting-up-master-data/configuring-master-data.md) are loaded in it
+* Working Knowledge of [egov-mdms](mdms-v2-master-data-management-service/mdms-master-data-management-service/setting-up-master-data/mdms-overview.md) service to add location data in master data.
+* egov-mdms service is running and all the required [MDMS masters](mdms-v2-master-data-management-service/mdms-master-data-management-service/setting-up-master-data/configuring-master-data.md) are loaded in it
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 

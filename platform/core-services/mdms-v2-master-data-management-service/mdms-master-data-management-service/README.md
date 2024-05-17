@@ -25,8 +25,8 @@ The MDMS service aims to reduce the time spent by developers on writing codes to
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
-1. [Deploy](../../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md) the latest version of the MDMS-service
-   1. **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the  latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.
+1. [Deploy](../../../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md) the latest version of the MDMS-service
+   1. **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the  latest builds for each service in out latest [release document](../../../releases/digit-2.9-lts/service-build-updates.md) here.
 2. Add [conf path](https://github.com/egovernments/Digit-Core/blob/f7b71c2e2b5c312b94b4738749a781d0ef874eab/core-services/egov-mdms-service/src/main/resources/application.properties#L7) for the file location
 3. Add [master config](https://github.com/egovernments/Digit-Core/blob/f7b71c2e2b5c312b94b4738749a781d0ef874eab/core-services/egov-mdms-service/src/main/resources/application.properties#L8) JSON path
 

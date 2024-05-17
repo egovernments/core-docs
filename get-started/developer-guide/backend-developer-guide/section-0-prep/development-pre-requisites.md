@@ -11,7 +11,7 @@ Before starting development on top of DIGIT make sure:&#x20;
 * [x] Install DIGIT in a development environment (Single VM setup) by following the [quick setup guide](https://core.digit.org/guides/installation-guide/quick-setup).&#x20;
 * [x] It is recommended to deploy the following services in the development environment -
   * [User](../../../../platform/core-services/user/)
-  * [MDMS](../../../../platform/core-services/mdms-master-data-management-service/)
+  * [MDMS](../../../../platform/core-services/mdms-v2-master-data-management-service/mdms-master-data-management-service/)
   * [Localization](../../../../platform/core-services/location.md)
   * [Id-Gen](../../../../platform/core-services/id-generation-service.md)
   * [URL-shortener](../../../../platform/core-services/url-shortening-service.md)

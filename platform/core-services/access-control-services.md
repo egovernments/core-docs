@@ -19,7 +19,7 @@ DIGIT is an API-based platform where each API denotes a DIGIT resource. The prim
 Before you proceed with the configuration, make sure the following pre-requisites are met -
 
 * Java 17
-* [MDMS](mdms-master-data-management-service/) service is up and running
+* [MDMS](mdms-v2-master-data-management-service/mdms-master-data-management-service/) service is up and running
 
 ## Key Functionalities
 

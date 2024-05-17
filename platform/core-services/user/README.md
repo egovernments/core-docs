@@ -13,7 +13,7 @@ User service is responsible for user data management and providing functionality
 Before you proceed with the configuration, make sure the following pre-requisites are met&#x20;
 
 * Java 17
-* [Encryption](../encryption-service/) and [MDMS](../mdms-master-data-management-service/) services are running
+* [Encryption](../encryption-service/) and [MDMS](../mdms-v2-master-data-management-service/mdms-master-data-management-service/) services are running
 * PostgreSQL server is running&#x20;
 * Redis is running
 
@@ -38,7 +38,7 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ## Deployment Details
 
-1. Setup the latest version of [egov-enc-service](../encryption-service/) and [egov-mdms- service](../mdms-master-data-management-service/)&#x20;
+1. Setup the latest version of [egov-enc-service](../encryption-service/) and [egov-mdms- service](../mdms-v2-master-data-management-service/mdms-master-data-management-service/)&#x20;
 2.  [Deploy](../../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md) the latest version of egov-user service
 
     &#x20;**Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.

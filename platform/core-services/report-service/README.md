@@ -11,7 +11,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 * Prior knowledge of Java/J2EE.
 * Prior knowledge of Spring Boot.
 * Advanced knowledge of PostgreSQL.
-* [Encryption](../encryption-service/) and [MDMS](../mdms-master-data-management-service/) services must be running.
+* [Encryption](../encryption-service/) and [MDMS](../mdms-v2-master-data-management-service/mdms-master-data-management-service/) services must be running.
 * Prior knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
 * JSON path for filtering required data from JSON objects.
 

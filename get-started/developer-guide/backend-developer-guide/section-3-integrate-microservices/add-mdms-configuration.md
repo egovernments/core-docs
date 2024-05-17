@@ -9,7 +9,7 @@ If you've configured the DIGIT environment with a tenant and CITIZEN/EMPLOYEE ro
 {% endhint %}
 
 {% hint style="info" %}
-Refer to [MDMS](../../../../platform/core-services/mdms-master-data-management-service/) docs for more information. To learn about how to design the MDMS, refer to the [design guide](../../../design-guide/design-services.md#identify-reference-data).
+Refer to [MDMS](../../../../platform/core-services/mdms-v2-master-data-management-service/mdms-master-data-management-service/) docs for more information. To learn about how to design the MDMS, refer to the [design guide](../../../design-guide/design-services.md#identify-reference-data).
 {% endhint %}
 
 In the birth registration use case, we use the following master data:
