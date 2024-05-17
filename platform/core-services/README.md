@@ -17,7 +17,7 @@ Service Name
 7. [Filestore ](filestore-service.md)
 8. [Id Generation ](id-generation-service.md)
 9. [Indexer ](indexer-service/)
-10. Internal Gateway
+10. [Internal Gateway](internal-gateway.md)
 11. [Location ](location.md)
 12. [Localization ](localization-service/)
 13. [Master Data Management Service (MDMS) V2](mdms-v2-master-data-management-service/)
