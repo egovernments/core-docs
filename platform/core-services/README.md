@@ -31,8 +31,7 @@ Service Name
 21. [URL-shortening ](url-shortening-service.md)
 22. [User-OTP ](user-otp-service.md)
 23. [User ](user/)
-24. Zuul / gateway (in 2.9-lts)
-25. [Libraries ](libraries/)
+24. [Libraries ](libraries/)
     1. [Enc-client ](libraries/encryption-client.md)
     2. MDMS-client&#x20;
     3. Services-common&#x20;
