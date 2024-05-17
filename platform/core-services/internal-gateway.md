@@ -1,32 +1,30 @@
 # Internal Gateway
 
-### Overview <a href="#overview" id="overview"></a>
+## Overview <a href="#overview" id="overview"></a>
 
-The Internal Gateway is a simplified Zuul service which provides an easy integration of services running different namespaces of a multistate instance, the clients need not know about all the details of microservices and its namespace in the K8s setup.
+The Internal Gateway is a simplified Zuul service which provides an easy integration of services running different namespaces of a multistate instance, the clients need not know about all the details of microservices and their namespace in the K8s setup.
 
-&#x20;
-
-### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
+## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
 Before you proceed with the documentation, make sure the following pre-requisites are met -
 
-* _Java 8_
-* Zuul gateway service
+* _Java 17_
+* API Gateway
 
-### Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
+## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
 * Provides an easier API interface between services running in different tenants(namespaces) where direct access between microservices is blocked by default.
 * Allows refactoring microservices independently without forcing the clients to refactor integrating logic with other tenants.
 
-### Zuul Components: <a href="#zuul-components" id="zuul-components"></a>
+### Zuul Components <a href="#zuul-components" id="zuul-components"></a>
 
-Route filter - single route filter enables the routing based on tenatId from the HTTP header of the incoming requests.
+Route filter - a single route filter enables the routing based on tenatId from the HTTP header of the incoming requests.
 
-### Configuration <a href="#configuration" id="configuration"></a>
+## Configuration Details <a href="#configuration" id="configuration"></a>
 
-**Routing Property**
+### **Routing Property**
 
-For each service, below-mentioned property has to be added in `internal-gateway.json`
+For each service, the below-mentioned property has to be added in `internal-gateway.json`
 
 ```json
 {
@@ -62,5 +60,7 @@ For each service, below-mentioned property has to be added in `internal-gateway.
 ### Sequence Diagram  <a href="#sequence-diagram" id="sequence-diagram"></a>
 
 Open&#x20;
+
+
 
 &#x20;
