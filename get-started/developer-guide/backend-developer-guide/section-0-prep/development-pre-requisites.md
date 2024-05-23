@@ -23,7 +23,7 @@ Some of the above services can also be port-forwarded using Kubernetes to bypass
   * [Persister](../../../../platform/core-services/persister-service/)
   * [Indexer ](../../../../platform/core-services/indexer-service/)(optional)
   * [PDF Service](../../../../platform/core-services/pdf-generation-service.md)
-* [x] [CD/CI](broken-reference) has been set up for DIGIT. This is a pre-requisite to deploying new DIGIT modules. CD/CI processes will be used to build and deploy the new module that will be developed.&#x20;
+* [x] [CD/CI](../../../../guides/installation-guide/infrastructure-setup/ci-cd-set-up/) has been set up for DIGIT. This is a pre-requisite to deploying new DIGIT modules. CD/CI processes will be used to build and deploy the new module that will be developed.&#x20;
 * [x] [Design phase artefacts](design-inputs/)
 * [x] In addition, knowledge of the following technologies is required for developing on DIGIT: (Refer to the [DIGIT Pre-requisites tutorials](development-pre-requisites.md#digit-pre-requisites-tutorials) for help with installing and deploying these tools)
   * Java/J2EE
