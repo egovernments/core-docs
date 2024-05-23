@@ -106,7 +106,7 @@
     * [Encryption Client](platform/core-services/libraries/encryption-client.md)
   * [Accelerators](platform/core-services/accelerators/README.md)
     * [Inbox Service](platform/core-services/accelerators/inbox-service.md)
-* [DIGIT : How To's](platform/digit-how-tos/README.md)
+* [DIGIT: How-Tos](platform/digit-how-tos/README.md)
   * [SMS Template Approval Process](platform/digit-how-tos/sms-template-approval-process.md)
   * [Notification Enhancement Based On Different Channel](platform/digit-how-tos/notification-enhancement-based-on-different-channel.md)
 * [Core Service : Archived](platform/core-service-archived/README.md)

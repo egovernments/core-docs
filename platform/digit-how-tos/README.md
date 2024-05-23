@@ -1,6 +1,6 @@
 ---
-description: Some guides dealing with core services
+description: Few core service guides
 ---
 
-# DIGIT : How To's
+# DIGIT: How-Tos
 
