@@ -386,6 +386,7 @@
   * [Verification](accelerators/integrations/verification.md)
   * [View](accelerators/integrations/view.md)
   * [Calculation](accelerators/integrations/calculation.md)
+* [DIGIT API Playground](https://digit-api.apidog.io/)
 * [Sandbox](accelerators/sandbox.md)
 * [Events](https://egov.org.in/events/)
 * [Checklists](accelerators/checklists/README.md)
