@@ -20,7 +20,7 @@ layout:
 
 # Overview
 
-**D**igital **I**nfrastructure for **G**overnance and **I**nclusive **T**ransformation (DIGIT) is an open-source, scalable, interoperable platform for responsive public service delivery and good governance.  It enables governments to digitize public service delivery with intuitive interfaces for citizens, front-line employees and administrators. DIGIT enables a seamless and unified exchange of information between citizens, employees & vendors, administrators and policymakers. DIGIT is an open-source platform built for scale. It enables the digital transformation of multiple government departments and is highly flexible enabling it to serve a variety of needs.&#x20;
+**D**igital **I**nfrastructure for **G**overnance and **I**nclusive **T**ransformation (DIGIT) is an open-source, scalable, interoperable platform for responsive public service delivery and good governance.  It enables government agencies to digitize public service delivery  - providing unified interfaces for citizens, front-line employees and administrators to exchange information with each other in a seamless and trusted manner. DIGIT is an open-source platform built for scale. DIGIT is multi-tenant and can enable the digital transformation of multiple government agencies at speed and scale using a common shared infrastructure.&#x20;
 
 <div align="left">
 
@@ -28,17 +28,14 @@ layout:
 
 </div>
 
-## Motivation For Building Governance Platform
+## Motivation
 
-Government bodies deliver and manage a host of public services. Technology is the enabler in providing the infrastructure for seamless management and governance. The key challenge here is the several limitations (listed below) facing the effective adoption and implementation of technology, especially in low and middle-income countries.&#x20;
+Government agencies deliver and manage a host of public services. Each of them are increasingly leveraging information technology to automate and manage delivery of these services. Inadvertently,  they endup building systems  have common functionality and also end up duplicating similar data sets that are all out of synch. This leads to several challenges in the long term.&#x20;
 
-**Multiple Similar Systems -** In a federated government structure, multiple agencies operate at national, regional, and local levels, each implementing its custom-built systems. The system architecture is often hard-wired to support specific requirements of individual ministries, departments and agencies for distinct sectors. These systems, though similar, cannot be reused in case the policies change in future.
-
-_DIGIT as a technology platform deals with federation within governance at national, regional and local levels. It also serves the individual ministries, departments and agencies within a sector. Therefore a federated approach to architecture is baked into the design of the platform to address the realities of how governments work._
-
-**Scalability Issues** - Most of these applications are not scalable in terms of meeting the evolving demands of a growing population or achieving streamlined governance objectives. The scope of localised systems is limited to specific goals that often include data collection or coordination between stakeholders. This restricts the scope for promoting ease of service delivery.&#x20;
-
-_DIGIT is a scalable platform that addresses the requirements of populous countries as well as smaller countries effectively. DIGIT drives improvements in governance and public service delivery initiatives._
+1. Lack of Single Source of Truth - Multiple systems with similar datasets leads to multiple sources of truth.&#x20;
+2. Siloed - These systems often don't talk to each other hence citizens have to run pillar to post to get same data in multiple systems updated to receive services and benefits. Administrators also struggle to get access to data to identify areas of improvement. Employees have to learn to work with multiple systems to deliver services.
+3. Scalability - Many of these systems are built for internal users and cannot be opened up for direct access to citizens. This makes it difficult for citizens to access their own data.&#x20;
+4. Vendor Lock-In - Often these systems have been developed by external vendors and government agencies do not have capacity to take these over leading to vendor lock-in.&#x20;
 
 <div align="left">
 
@@ -46,17 +43,9 @@ _DIGIT is a scalable platform that addresses the requirements of populous countr
 
 </div>
 
-**Data Fragmentation** - The existing systems cannot exchange data with other applications. Data is locked in siloed applications. Administrators find it difficult to get a unified view of the data to monitor performance and identify areas of improvement.
-
-_The foundations of effective governance and robust policy-making are built on high-quality data and coordination across multiple agencies and ministries. DIGIT enables this through data registries that enable a shared source of truth and robust interoperability across institutional and systemic boundaries._
-
-**Vendor Lock-In -** Proprietary systems do not support scalable solutions that evolve with changing requirements.
-
-_Countries must have the ability to control and manage their data and systems as per their national priorities. DIGIT enables this as it is open source, free to use and is backed by a wide ecosystem of vendors enabling governments to switch service providers without losing strategic control._
-
 Multiple other challenges like security concerns and limited technical capabilities hinder the government's ability to effectively utilise technology for large-scale public service delivery.
 
-Well-designed technology ensures public service delivery is inclusive and accessible to all citizens. The DIGIT platform contains a set of reusable building blocks built using robust design principles that can accelerate the digital transformation of public service delivery systems.
+DIGIT is developed using sound architectural principles to enable government agencies to deliver public services is an inclusive and accessible to all citizens.&#x20;
 
 Refer to the [DIGIT platform design principles](platform/principles/) page.
 
