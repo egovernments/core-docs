@@ -85,7 +85,7 @@ DIGIT 2.9 represents the most recent Long-Term Support (LTS) version, offering a
 | [Persister Service](https://core.digit.org/platform/core-services/persister-service)                                |
 | [Encryption Service](https://core.digit.org/platform/core-services/encryption-service)                              |
 | [ID Generation Service](https://core.digit.org/platform/core-services/id-generation-service)                        |
-| [Gateway Service](../../core-services/api-gateway.md)                                                               |
+| [Gateway Service](../../core-services/api-gateway/)                                                                 |
 | [User OTP Service](https://core.digit.org/platform/core-services/user-otp-service)                                  |
 | [Audit Service](https://core.digit.org/platform/core-services/audit-service)                                        |
 | [Service Request](https://core.digit.org/platform/core-services/service-request)                                    |
