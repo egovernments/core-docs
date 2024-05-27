@@ -45,7 +45,9 @@ Government agencies deliver and manage a host of public services. Each of them a
 
 Multiple other challenges like security concerns and limited technical capabilities hinder the government's ability to effectively utilise technology for large-scale public service delivery.
 
-DIGIT is developed using sound architectural principles to enable government agencies to deliver public services is an inclusive and accessible to all citizens.&#x20;
+DIGIT platform is developed using sound architectural principles to enable multiple government agencies to deliver public services is an inclusive and accessible to all citizens and business in at scale and speed. DIGIT provide a shared infrastructure consist of shared data registries and common services like authentication, authorisation, workflow, notification, payments etc. that enable agencies to develop and deliver services in a secure, scalable and cost effective manner.&#x20;
+
+<figure><img src=".gitbook/assets/image (323).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Refer to the [DIGIT platform design principles](platform/principles/) page.
 
