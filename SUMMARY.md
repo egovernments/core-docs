@@ -376,10 +376,12 @@
   * [Deployment Job Pipeline Setup](get-started/operations-guide/deployment-job-pipeline-setup.md)
   * [OAuth2-Proxy Setup](get-started/operations-guide/oauth2-proxy-setup.md)
   * [Jira Ticket Creation](get-started/operations-guide/jira-ticket-creation.md)
+* [Implementation Guide](guides/implementation-guide.md)
 
 ## 🚀 Accelerators
 
-* [UI Frameworks](accelerators/ui-frameworks.md)
+* [UI Frameworks](accelerators/ui-frameworks/README.md)
+  * [Service Build Updates](accelerators/ui-frameworks/service-build-updates.md)
 * [Integrations](accelerators/integrations/README.md)
   * [Payment](accelerators/integrations/payment.md)
   * [Notification](accelerators/integrations/notification.md)

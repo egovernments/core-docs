@@ -90,7 +90,7 @@ DIGIT is easy to install, configure and use. To install DIGIT on your servers us
 
 If you want to experience DIGIT or develop on DIGIT, you can also access the DIGIT demo using [Sandbox](accelerators/sandbox.md).&#x20;
 
-DIGIT comes with several accelerators. These include [UI frameworks](accelerators/ui-frameworks.md) and [Integration Adapters](accelerators/integrations/). These are optional. You may choose to develop or reuse your UI framework and Integration Adapters.&#x20;
+DIGIT comes with several accelerators. These include [UI frameworks](accelerators/ui-frameworks/) and [Integration Adapters](accelerators/integrations/). These are optional. You may choose to develop or reuse your UI framework and Integration Adapters.&#x20;
 
 We organize several events for architects and developers on DIGIT. Keep a watch on the [Events](https://egov.org.in/events/) Page for upcoming events.&#x20;
 
