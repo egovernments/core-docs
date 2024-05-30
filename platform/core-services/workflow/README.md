@@ -38,7 +38,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 ## Deployment Details
 
-1. [Deploy](../../../guides/installation-guide/digit-deployment/deployment-key-concepts/deploying-digit-services.md)  the latest version of eGov-workflow-V2 service
+1. [Deploy](../../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md)  the latest version of eGov-workflow-V2 service
    1. **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the **latest builds** for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.
 2. Add BusinessService Persister YAML path in persister configuration
 3. Add Role-Action mapping for BusinessService APIs

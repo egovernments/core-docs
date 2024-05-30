@@ -30,7 +30,7 @@ cat id_rsa.pub
 * open GitHub and add this SSH key as shown below:
 * open **Settings** and go to **SSH and** **GPG keys**
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/Screenshot from 2022-12-02 17-05-20.png" alt=""><figcaption></figcaption></figure>
 

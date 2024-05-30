@@ -2,10 +2,10 @@
 
 #### Topics covered:
 
-* [DIGIT platform service deployment basics](deploy-digit.md#overview)
-* [Pre-requisites for deployment](deploy-digit.md#pre-requisites)
-* [Steps to run the deployer](deploy-digit.md#run-deployer)
-* [Adding security group](deploy-digit.md#adding-security-group-id-of-instance-ec2-to-rds)
+* [DIGIT platform service deployment basics](./#overview)
+* [Pre-requisites for deployment](./#pre-requisites)
+* [Steps to run the deployer](./#run-deployer)
+* [Adding security group](./#adding-security-group-id-of-instance-ec2-to-rds)
 
 ## Overview
 

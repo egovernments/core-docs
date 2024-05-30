@@ -1,8 +1,8 @@
 ---
-description: Setting up DIGIT  using helmfile
+description: Set up DIGIT using HelmFile. You can still try it out and give us feedback.
 ---
 
-# Deployment Using Helmfile
+# Full Deployment (Beta)
 
 ## Overview
 
@@ -87,7 +87,7 @@ $ git checkout DIGIT-2.9LTS
 $ vi deploy-as-code/charts/environments/env.yaml
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Update db password , flywaypassword, loginusername, loginpassword  and git-sync private key in env-secrets.yaml
 
@@ -159,7 +159,7 @@ $ vi deploy-as-code/charts/environments/env-secrets.yaml
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

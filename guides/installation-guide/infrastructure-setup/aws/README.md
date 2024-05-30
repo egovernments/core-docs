@@ -25,16 +25,16 @@ description: Provision infra for DIGIT on AWS using Terraform
 [1.-pre-requisites.md](1.-pre-requisites.md)
 {% endcontent-ref %}
 
-{% content-ref url="2.-understanding-eks.md" %}
-[2.-understanding-eks.md](2.-understanding-eks.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="3.-setup-aws-account.md" %}
-[3.-setup-aws-account.md](3.-setup-aws-account.md)
+{% content-ref url="2.-setup-aws-account.md" %}
+[2.-setup-aws-account.md](2.-setup-aws-account.md)
 {% endcontent-ref %}
 
-{% content-ref url="4.-provisioning-infra-using-terraform.md" %}
-[4.-provisioning-infra-using-terraform.md](4.-provisioning-infra-using-terraform.md)
+{% content-ref url="3.-provision-infrastructure.md" %}
+[3.-provision-infrastructure.md](3.-provision-infrastructure.md)
 {% endcontent-ref %}
 
 {% content-ref url="../../../../get-started/installation-guide/digit-deployment/" %}
