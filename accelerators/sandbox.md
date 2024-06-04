@@ -5,7 +5,7 @@ description: DIGIT Sandbox for Demo and Development
 # Sandbox
 
 {% hint style="warning" %}
-**Note: Due to a scheduled maintenance upgrade, the staging environment will not be available from 9 AM on 31st May 2024 till 6 PM on 3rd June 2024.**&#x20;
+**Note: Due to a scheduled maintenance upgrade, the staging environment will not be available from 9 AM on 31st May 2024 till 6 PM on 9th June 2024.**&#x20;
 {% endhint %}
 
 Access DIGIT tool is an open demo instance designed to provide you with first-hand experience of the DIGIT platform. Navigate the DIGIT platform and explore its various features, workflows and applications.
