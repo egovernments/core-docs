@@ -251,7 +251,7 @@
       * [Common Hooks](get-started/developer-guide/ui-developer-guide/create-a-new-ui-module-package/common-hooks.md)
     * [Employee Module Setup](get-started/developer-guide/ui-developer-guide/employee-module-setup/README.md)
       * [Write Employee Module Code](get-started/developer-guide/ui-developer-guide/employee-module-setup/write-employee-module-code.md)
-      * [Creation of new Create Form (Create Screen)](get-started/developer-guide/ui-developer-guide/employee-module-setup/creation-of-new-create-form-create-screen.md)
+      * [Create Form - Create Screen](guides/developer-guide/ui-developer-guide/employee-module-setup/create-form-create-screen.md)
     * [Citizen Module Setup](get-started/developer-guide/ui-developer-guide/citizen-module-setup/README.md)
       * [Sample screenshots](get-started/developer-guide/ui-developer-guide/citizen-module-setup/sample-screenshots.md)
       * [Citizen Landing Screen](get-started/developer-guide/ui-developer-guide/citizen-module-setup/citizen-landing-screen.md)
