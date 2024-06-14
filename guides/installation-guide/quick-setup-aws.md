@@ -41,11 +41,11 @@ AWS_REGION=ap-south-1
 
 1. Fork the [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps) Repository into **your account** on GitHub (_**Uncheck**  Copy the master branch only_ while forking)  see the below image where to find fork in Github.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 1. Enable github workflow by clicking on _I understand my workflow, go ahead and enable them_
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Navigate to the repository settings, under the _security_ section go to _Secrets and Variables_, click on actions and add the following repository secrets one by one by clicking on _New repository secret_:
 
@@ -68,7 +68,7 @@ Once all four secrets are added it will look like below:
 
 * Clone the forked DIGIT-DevOps repository (using `git clone` command) and open the repo in the code editor or optionally you can use [github web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) by replacting github.com with github.dev.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Switch the branch from master to DIGIT-2.9LTS using the below command.
 
@@ -196,7 +196,7 @@ Login to the employee dashboard with the username and password provided in [env-
 
 Login to <mark style="color:blue;">https://\<domain\_name>/employee</mark>\
 \
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 ## Cleanup & Uninstallation Of DIGIT Infrastructure
 

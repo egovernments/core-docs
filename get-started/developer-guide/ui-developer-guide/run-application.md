@@ -21,12 +21,12 @@ SKIP_PREFLIGHT_CHECK=true
 REACT_APP_USER_TYPE=EMPLOYEE
 REACT_APP_EMPLOYEE_TOKEN=c835932f-2ad4-4d05-83d6-49e0b8c59f8a
 REACT_APP_CITIZEN_TOKEN=7cd58aae-30b3-41ed-a1b3-3417107a993c
-REACT_APP_PROXY_API=https://works-dev.digit.org
-REACT_APP_PROXY_ASSETS=https://works-dev.digit.org
+REACT_APP_PROXY_API=https://unified-dev.digit.org
+REACT_APP_PROXY_ASSETS=https://unified-dev.digit.org
 REACT_APP_GLOBAL=https://s3.ap-south-1.amazonaws.com/works-dev-asset/globalConfigsWorks.js
 ```
 
-**Step 3:** To run the application as citizen, then update the value of `REACT_APP_USER_TYPE=CITIZEN.`
+**Step 3:** To run the application as employee, then update the value of `REACT_APP_USER_TYPE=EMPLOYEE.`
 
 **Step 4:** To point the frontend to different environments change the `REACT_APP_GLOBAL,`and add the GlobalConfig environment file for that environment.
 
@@ -82,6 +82,8 @@ On the home page, users can see the cards mCollect, HRMS, NOC, Property Tax, etc
 Click on the [link here](run-application.md#configure-environment-file-citizen) to create a card for your module on the home page under "Citizen Services".
 
 ### Troubleshoot
+
+Refer [this](ui-configuration-devops.md#global-configuration) section to learn about globalConfig file&#x20;
 
 if you do not have a global config and AWS credentials  are not present, then create a temporary local config under the path:
 

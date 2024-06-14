@@ -1,25 +1,16 @@
 # Module.js
 
+Next, we need to register the `SampleModule` in the `module.js` file.The `module.js` file is the entry file for the module. We can illustrate rendering a plain screen with the text "**Sample Module**"  using a simple`<div>` element within the SampleModule component. This demonstrates how to create a basic screen using the module setup, which can later be customized or expanded as needed.
 
 
-<details>
 
-<summary>Registering the module and components</summary>
-
-Module.js is the entry point where we can register all components and modules.So here we need to register all the components, links, code etc.This file serves as a central place for initializing modules within your application.\
-\
-Create a file Module.js under the following path:
+Add the following code in the Module.js file which we have already created.
 
 ```
-micro-ui-internals/packages/modules/sample/src/Module.js
-```
-
-```
-import SampleCard from "./components/SampleCard";
+import { Loader} from "@egovernments/digit-ui-react-components";
+import React from "react";
 
 export const SampleModule = ({ stateCode, userType, tenants }) => {
- 
-  const { path, url } = useRouteMatch();
   const tenantId = Digit.ULBService.getCurrentTenantId();
   const moduleCode = ["sample", "common","workflow"];
   const language = Digit.StoreData.getCurrentLanguage();
@@ -29,80 +20,108 @@ export const SampleModule = ({ stateCode, userType, tenants }) => {
     language,
   });
 
-  if (isLoading) {
+if (isLoading) {
     return <Loader />;
   }
-  return <EmployeeApp path={path} stateCode={stateCode} userType={userType} tenants={tenants} />;
-};
+  return ( <Switch>
+  <AppContainer className="ground-container">
+           <div>Sample Module </div> 
 
-
-```
-
-\
-**Component Registration**: React applications often consist of numerous components responsible for rendering UI elements and encapsulating functionality. Registering these components allows them to be easily accessed and rendered within different parts of the application.So these components are registered in Module.js
-
-```
+  </AppContainer>
+  </Switch>)
+  
 const componentsToRegister = {
-SampleModule,
-  SampleCard
+  SampleModule,
 };
-init <modulename >component
 export const initSampleComponents = () => {
+  overrideHooks();
+  updateCustomConfigs();
   Object.entries(componentsToRegister).forEach(([key, value]) => {
     Digit.ComponentRegistryService.setComponent(key, value);
   });
 };
 
-
 ```
 
-Refer the file below:\
+* We need to initialize our module's custom hooks, configurations, and register components using `initSampleComponents()` here.
+
+Refer the file below:
+
 [Module.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/Module.js)
 
-\
 
-
-</details>
 
 <details>
 
-<summary>UICustomizations</summary>
+<summary>Linking the Newly created module in Main App</summary>
 
-The UICustomizations object serves as a repository for middle ware functions that customize the user interface behaviour based on different module names within the application. These functions intercept UI-related operations, such as payload updates,inbox module configuration, and customization of search configurations, facilitating dynamic and modular UI customization in the application. Create UICustomizations under the following path:
+* After creating module code we need to enable it in two places:
 
-Create UICustomizations.js under the following path:
+1. **For Deployment** \
+   &#x20;In app.js we import the SampleModule, initSampleComponents,  and enable the Sample module.\
+   Add App.js file under the following path:\
+   `micro-ui/web/src/App.js`
 
+```jsx
+const enabledModules = [
+  "sample"
+];
+
+const moduleReducers = (initData) => ({
+  initData,
+});
+
+const initDigitUI = () => {
+  window.Digit.ComponentRegistryService.setupRegistry({});
+  window.Digit.Customizations = {
+    PGR: {},
+    commonUiConfig: UICustomizations,
+  };
+  initSampleComponents();
+};
+
+initLibraries().then(() => {
+  initDigitUI();
+});
 ```
-micro-ui-internals/packages/modules/sample/src/configs/UICustomizations.js
-```
 
-```
-import { Link, useHistory } from "react-router-dom";
-import _ from "lodash";
-import React from "react";
-
-//create functions here based on module name set in mdms(eg->SearchProjectConfig)
-//how to call these -> Digit?.Customizations?.[masterName]?.[moduleName]
-// these functions will act as middlewares
-// var Digit = window.Digit || {};
-
-const businessServiceMap = {};
-
-const inboxModuleNameMap = {};
-
-export const UICustomizations = {};
-```
-
-
-
-The UICustomizations object is linked to the module.js file by importing it into the relevant components or modules and calling its functions to customize the user interface behavior based on module names and other parameters, facilitating UI in the application.
-
-Refer the link below:\
-[UICusttomisations](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/configs/UICustomizations.js)\
 \
+Reference for the App.js file is given below:\
+[App.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/src/App.js)
 
+2. **For Local development** \
+   In index.js, we will import the SampleModule, initSampleComponents,  and enable the  Sample module.\
+   Create the index.js file under the following path:\
+   `micro-ui-internals/example/src/index.js`
+
+```jsx
+ const enabledModules = [
+  "Sample"
+];
+
+const initDigitUI = () => {
+  window.contextPath = window?.globalConfigs?.getConfig("CONTEXT_PATH") || "digit-ui";
+  window.Digit.Customizations = {
+    commonUiConfig: UICustomizations
+  };
+  initSampleComponents();
+```
+
+Reference for the Index.js file is given below:\
+[Index.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/example/src/index.js)
 
 </details>
 
+* If you have a local server running, please stop it. Restart by running `yarn install` followed by `yarn start` at the `micro-ui-internals` level .
 
+Hurray!  Now you can see the screen displayed below by visiting the given URL:
 
+```
+http://localhost:3000/digit-ui/employee/sample
+```
+
+<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+Refer below sections for deeper understanding
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Reusable Components</td><td></td><td><a href="import-required-components.md">import-required-components.md</a></td></tr><tr><td></td><td>Reusable Hooks</td><td></td><td><a href="common-hooks.md">common-hooks.md</a></td></tr><tr><td></td><td>Employee Module Setup</td><td></td><td><a href="../employee-module-setup/">employee-module-setup</a></td></tr></tbody></table>

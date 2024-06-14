@@ -1,29 +1,4 @@
-# Creation of new Create Form (Create Screen)
-
-<details>
-
-<summary>Routing</summary>
-
-Routing in a  application is essential for navigation and managing different views or pages based on the URL.
-
-Create the index.js under the following path:
-
-<pre><code><strong>micro-ui-internals/packages/modules/sample/src/pages/employee/index.js
-</strong></code></pre>
-
-\
-In `index.js,` we will add the private route and we mention the path and component name which component we need to show or render when we hit that route.
-
-```
- <PrivateRoute path={`${path}/sample-create`} component={() => <Create></Create>} />
- <PrivateRoute path={`${path}/inbox`} component={() => <Inbox></Inbox>} />       
-```
-
-Reference for routing and index.js file is given below:
-
-[Index.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/pages/employee/index.js)
-
-</details>
+# Create Form - Create Screen
 
 <details>
 
@@ -44,12 +19,13 @@ const configs = newConfig?newConfig:newConfig;
 Example of a Create Screen is given below. Create a page IndividualCreate.js under the following path:
 
 ```
-micro-ui-internals/packages/modules/sample/src/configs/IndividualCreateConfig.js
+/micro-ui-internals/packages/modules/sample/src/pages/employee/IndividualCreate.js
 ```
 
 ```
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 import { FormComposerV2 } from "@egovernments/digit-ui-react-components";
 import useCustomAPIMutationHook from "../../hooks/useCustomAPIMutationHook";
 import { newConfig } from "../../configs/IndividualCreateConfig";
@@ -69,14 +45,13 @@ const IndividualCreate = () => {
     },
   };
 
-  
-
   const mutation = useCustomAPIMutationHook(reqCreate);
 
   const handleGenderChange = (e) => {
     setGender(e.target.value);
   };
-   return (
+
+  return (
     <div>
       <h1> Create Individual</h1>
       <FormComposerV2
@@ -104,7 +79,6 @@ const IndividualCreate = () => {
 }
 
 export default IndividualCreate;
-
 ```
 
 Reference for the create screen:\
@@ -114,12 +88,12 @@ Reference for the create screen:\
 
 <details>
 
-<summary>Filling in config.js<br></summary>
+<summary>Filling in Config.js</summary>
 
-Create a file called newConfig.js under the following path:
+Create a file called IndividualCreateConfig.js under the following path:
 
 ```
-micro-ui-internals/packages/modules/br/src/components/newConfig.js
+/micro-ui-internals/packages/modules/sample/src/configs/IndividualCreateConfig.js
 ```
 
 This file defines the form meta-data and structure. The form heading goes into the "head" field. Components inside the form go into the body field.
@@ -186,7 +160,7 @@ This config file is being imported in the Create screen
 
 Example for the config file is as given below:
 
-[Config.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/configs/IndividualCreateConfig.js)
+[IndividualCreate-Config.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/configs/IndividualCreateConfig.js)
 
 </details>
 
@@ -194,38 +168,63 @@ Example for the config file is as given below:
 
 <summary>Custom Component</summary>
 
-If we want, we can create custom components in our application. These components are designed specifically to address our unique requirements.\
-1\) First we need to add that custom componet in Module.js file
+* If we want, we can create custom components in our application. These components are designed specifically to address our unique requirements.
+
+<!---->
+
+* First, we need to create a custom component with the features or specifications you need.\
+  This Panel component is used for displaying responsive messages, similar to informational cards, allowing users to display text dynamically.\
+  Create **Panel.js** file under the following path:
+
+```
+micro-ui-internals/packages/modules/sample/src/components/Panel.js
+```
+
+* You can refer to the code for the panel in the link provided below.
+
+[Panel.js](https://github.com/egovernments/DIGIT-UI-LIBRARIES/blob/develop/react/ui-components/src/atoms/Panels.js)
+
+* Import the custom component in the Module.js file.
+
+```
+import Panel from "./components/Panel.js";
+```
+
+* Add that custom component in Module.js file
 
 ```
 const componentsToRegister = {
   SampleModule,
   SampleCard,
-  ViewEstimatePage: ViewEstimateComponent,
+  Panel
 };
+```
+
+* To include the **Panel** Component in your configuration file, you need to specify the **component name** and **type** as "component". Here's how you can do it:
+
+```
+{
+  "label": "Panel Name",
+  "type": "component",
+  "isMandatory": false,
+  "key": "panel",
+  "component": "Panel",
+  "customProps": {
+    "module": "HCM"
+  },
+    "populators": {
+      "name": "panel",
+      "error": "sample error message for panel"
+    },
+    "validation": {
+      "min": 1,   
+      "max": 10 
+    }
+}
 
 ```
 
-Refer the file below:\
-[Module.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/Module.js)\
-\
-2\) Create the Custom component \
-This `ViewEstimateComponent` is an example of a custom component tailored to display estimate details and enable specific workflow actions within an application.\
-Create `ViewEstimateComponent`file under the following path:
 
-```
-micro-ui-internals/packages/modules/sample/src/components/ViewEstimateComponent.js
-```
-
-Reference for the Custom Component is given below:
-
-[ViewEstimateComponent](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/components/ViewEstimateComponent.js)\
-
-
-3\)Give the same Component name in the config file for the field where you need that
-
-Example of a page using this component\
-[SampleView.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/pages/employee/SampleView.js)
 
 </details>
 
@@ -233,7 +232,21 @@ Example of a page using this component\
 
 <summary>Enable Module in the UI framework</summary>
 
-Once we enable the Sample module in app.js and index.js, the module will be available in the UI. Click on [http://localhost:3000/digit-ui/employee](http://localhost:3000/digit-ui/employee) to see the UI.
+* Click on [http://localhost:3000/digit-ui/employee](http://localhost:3000/digit-ui/employee) to see the UI.
+
+<!---->
+
+* You can access the create form screen by navigating to the URL  given below.&#x20;
+
+```
+/sample/create-individual
+```
+
+* You can see a screen similar to the image below, displaying the create form.
+
+<img src="../../../../.gitbook/assets/image (5).png" alt="" data-size="original">
+
+
 
 
 
@@ -243,11 +256,11 @@ Once we enable the Sample module in app.js and index.js, the module will be avai
 
 <summary>Integration with Backend API</summary>
 
-We have done with the UI part for the Emplopyee module. Now, we will see how to integrate it with the backend API.\
+We have done with the UI part for the Employee module. Now, we will see how to integrate it with the backend API.\
 
 
 **Hooks**\
-**We** will use  hooks in our code to pass the data to the backend.Custom hook which can make Api call and format response. \
+We will use  hooks in our code to pass the data to the backend. Custom hook which can make Api call and format response. \
 Refer the link:\
 [Common Hooks](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/egsIWleSdyH9rMLJ8ShI/\~/changes/95/guides/developer-guide/ui-developer-guide/create-a-new-ui-module-package/common-hooks)
 

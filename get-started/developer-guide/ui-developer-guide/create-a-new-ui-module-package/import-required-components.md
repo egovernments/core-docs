@@ -6,32 +6,16 @@ DIGIT comes with common re-usable libraries that can be imported for use in a ne
 
 ## Steps
 
-**CSS , libraries , common , react components** can be imported by adding into package.json.
+We are reusing certain React components from our libraries, such as `InboxSearchComposer`, `FormComposerV2`, `Submit``Card`, `CardText`, and others. You can refer to the link provided below to learn more about these components.
 
-```
-"@egovernments/digit-ui-css": "1.5.3",
-"@egovernments/digit-ui-libraries":"1.5.3",
-"@egovernments/digit-ui-module-common":"1.5.3",
-"@egovernments/digit-ui-module-br":"1.5.4",
-"@egovernments/digit-ui-module-dss":"1.5.3",
-"@egovernments/digit-ui-react-components":"1.5.3",
-```
+[Learn more about our React components](https://core.digit.org/guides/developer-guide/ui-developer-guide/digit-ui/ui-components)
 
-Common components live in `micro-ui/web/micro-ui-internals/packages/react-components`\
-`micro-ui/web/micro-ui-internals/packages/css`
+You can see all the components in the provided link below.\
+[Digit-UI-Components](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-popup--default)
 
-DIGIT components that we are reusing -
 
-1. FormComposerV2
-2. InboxSearchComposer
-3. ActionBar
-4. Banner
-5. Card
-6. CardText
-7. Loader
-8. SubmitBar
-9. AppContainer
-10. BackButton
-11. PrivateRoute
-12. Icons
-13. CitizenHomecard
+
+
+
+
+

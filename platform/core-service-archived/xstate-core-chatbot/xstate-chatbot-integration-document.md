@@ -120,7 +120,7 @@ Add this [telemetry file](https://github.com/egovernments/configs/pull/629/files
 
 Information images for PGR and Open Search
 
-![](<../../../.gitbook/assets/image (276).png>)![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (276).png>)![](<../../../.gitbook/assets/image (8) (1).png>)
 
 ## Reference Docs
 

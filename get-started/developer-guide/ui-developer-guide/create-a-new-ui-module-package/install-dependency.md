@@ -6,43 +6,52 @@ Once the project structure is ready, it is time to install and configure the mod
 
 ## Steps
 
-#### Add MDMS (Master Data Management Service) Configuration
+After creating the `Sample` module and its `package.json` file, you need to ensure that this module is enabled in the `citymodule.json` file in the MDMS (Master Data Management Service) configuration. If it is not enabled, you need to update the MDMS configuration accordingly. You need to add this module to the root tenant in your environment from your branch.
 
-1. Enable the module in `citymodule.json`before creating a new module. A sample module is available for reference here: [citymodule.json](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/tenant/citymodule.json).
+```
+modulename : tenant
+mastername : citymodule
+```
 
-For the purpose of illustration here, add the following module (birth registration) as given below:
+file location&#x20;
+
+{% hint style="info" %}
+```
+https://github.com/<<YOUR ORG NAME>>/egov-mdms-data/blob/<<BRANCH WHERE THE ENVIRONMENTS IS POINTED TO>>/data/<<ROOT TENANT OF YOUR ENVIRONMENT>>/tenant/citymodule.json
+```
+{% endhint %}
+
+for reference : [citymodule.json](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/tenant/citymodule.json).
+
+For illustration here, add the following module (Sample) as given below:
 
 ```
   "citymodule": [{
       "module": "SAMPLE",
-      "code": "SAMPLE",
+      "code": "<<REPLACE WITH YOUR MODULECODE>>",
       "active": true,
       "order": 1,
       "tenants": [
         {
-          "code": "pb.jalandhar"
-        },
-        {
-          "code": "pb.nawanshahr"
-        },
-        {
-          "code": "pb.amritsar"
+          "code": "<<REPLACE WITH YOUR TENANTS>>"
         }
       ]
     }],
 
 ```
 
-2. Register the birth registration UI module in three places so that it will be available to the developer at runtime as well as at the time of deployment. Below are the three places where the module needs to be registered:
+2. Register the **Sample UI module** in three places so that it will be available to the developer at runtime as well as at the time of deployment. Below are the three places where the module needs to be registered:
 
 `micro-ui/web/micro-ui-internals/package.json`\
 `micro-ui/web/micro-ui-internals/example/package.json`
 
-3. **Micro-ui-internals:-** Open the micro-ui-internals package.json file and add this module as a dependency.
+3. **Micro-ui-internals:-** Open the `micro-ui-internals` `package.json` file and add the following inside the scripts:
 
 ```
-"dev:Sample": "cd packages/modules/br && yarn start",
-"build:Sample": "cd packages/modules/br && yarn build", 
+"scripts": { 
+    "dev:sample": "cd packages/modules/sample && yarn start",
+    "build:sample": "cd packages/modules/sample && yarn build",
+  },
 ```
 
 4. In the example/package.json, add the following line:
@@ -57,3 +66,6 @@ For the purpose of illustration here, add the following module (birth registrati
 "@egovernments/digit-ui-module-Sample":"0.0.1",
 ```
 
+
+
+The next step is to initailise the module.js, refer [here](module.js.md) to know more about the setup
