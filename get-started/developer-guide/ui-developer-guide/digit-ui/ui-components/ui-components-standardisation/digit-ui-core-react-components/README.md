@@ -24,7 +24,7 @@ In the components-core package, several enhancements have been implemented to im
 
 By adopting rems, the components' styling is now more consistent and adaptable, providing a seamless user experience across different platforms and devices.
 
-Furthermore, the components, namely TextInput, TextArea, Radio, Button, Checkbox, Toggle, Dropdown, Multiselectdropdown, InfoCard, and Toast, now offer different variants. Adding variants for these components makes them more flexible, serving a wider range of purposes and meeting different design needs effectively.
+Furthermore, TextInput, TextArea, Radio, Button, Checkbox, Toggle, Dropdown, Multiselectdropdown, InfoCard, and Toast now offer different variants. Adding variants for these components makes them more flexible, serving a wider range of purposes and meeting different design needs effectively.
 
 These are some of the updates made in the components-core package.
 
