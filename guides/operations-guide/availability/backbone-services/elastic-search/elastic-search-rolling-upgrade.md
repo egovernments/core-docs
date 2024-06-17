@@ -17,13 +17,17 @@ This page provides comprehensive documentation and instructions for implementing
 #es-dump.sh
 
 #  Replace Elasticsearch cluster URL in elasticsearch_url 
-ELASTICSEARCH_URL="<elasticsearch_url>"
-
+ELASTICSEARCH_URL="<elasticsearch URL>:9200"
 # Provide the indices to take dump
-INDICES=("pqm-application" "muster-inbox" "fsm" "vehicle" "pqm-service" "pqm-application" "kafka-connect-poc-1" "pqm-anomaly-finder" "project-resource-index-v1" "sample-data-poc" "kafka-connect-poc" "individual-index-v1" "contract-inbox" "vendor" "estimate-inbox-v3" "project-index" "measurement-service-index" "user-sync-index-v1" "fsm-application" "product-variant-index-v1" "vehicletrip" "expense-bill-index" "product-index-v1" "project-staff-index-v1" "organisation-index"   )
-
-# Backup directory
+EXCLUDE_INDEX_PATTERN="jaeger|monitor|kibana|fluentbit"
+# Provide backup directory
 BACKUP_DIR="backup"
+# Provide indices output file
+IDICES_OUTPUT="elasticsearch-indexes.txt"
+
+mapfile -t INDICES < <(curl -s http://<elasticsearch URL>:9200/_cat/indices | grep -v -E "(${EXCLUDE_INDEX_PATTERN})" | awk '{print $3}')
+
+printf "%s\n" "${INDICES[@]}" > $IDICES_OUTPUT
 
 # Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
@@ -56,7 +60,10 @@ for INDEX in "${INDICES[@]}"; do
     ELASTICDUMP_CMD="elasticdump \
         --input=${ELASTICSEARCH_URL}/${INDEX} \
         --output=${OUTPUT_FILE} \
-        --type=data"
+        --type=data
+        --timeout=300000
+        --limit 10000
+        --skip-existing"
 
     # Execute the elasticdump command
     $ELASTICDUMP_CMD
@@ -193,6 +200,8 @@ nodeGroup: master-v1
     value: "2"
   - name: gateway.recover_after_data_nodes
     value: "1"
+  - name: ingest.geoip.downloader.enabled
+    value: "false"
     
 # Compatible environment variables
 - env: 
@@ -237,6 +246,83 @@ curl -X GET "<elasticsearch_url>:9200/_cat/health?v=true&pretty"
 ```
 
 You have successfully upgraded the elasticsearch cluster from v6.6.2 to v7.17.15 **:)**
+
+**ReIndexing the Indices:**
+
+After successfully upgrading the elasticsearch,  reindex the indices present in elasticsearch using below script which are created in v6.6.2 or earlier.
+
+Copy the below script and save it as es-reindex.sh. Replace the e**lasticsearch URL** in the script.
+
+```
+#!/bin/bash
+
+ELASTICSEARCH_URL="<Elasticsearch URL>:9200"
+TMP="_tmp"
+
+FILENAME="elasticsearch-indexes.txt"
+INDICES=()
+while IFS= read -r index; do
+    INDICES+=("$index")
+done < "$FILENAME"
+
+# do for all abc elastic indices
+for INDEX in "${INDICES[@]}"; do
+    sleep 5
+    echo -e "Reindex process starting for index: $INDEX\n"
+    tmp_index=$INDEX${TMP}
+    echo "Starting reindexing elastic data from original index:$INDEX to temporary index:$tmp_index"
+    output=$(curl -X POST "${ELASTICSEARCH_URL}/_reindex" --max-time 3600 -H 'Content-Type: application/json' -d'
+    {
+      "source": {
+        "index": "'"$INDEX"'"
+      },
+      "dest": {
+        "index": "'"$tmp_index"'"
+      }
+    }
+    ')
+    sleep 5
+    echo -e "Reindexing completed from original index:$INDEX to temporary index:$tmp_index with output: $output\n"
+    echo -e "Deleting $INDEX\n"
+    output=$(curl -X DELETE "${ELASTICSEARCH_URL}/$INDEX")
+    echo -e "$INDEX deleted with status: $output\n"
+    echo "Starting reindexing elastic data from temporary index:$tmp_index to original index:$INDEX"
+    output=$(curl -X POST "${ELASTICSEARCH_URL}/_reindex" --max-time 3600 -H 'Content-Type: application/json' -d'
+    {
+      "source": {
+        "index": "'"$tmp_index"'"
+      },
+      "dest": {
+        "index": "'"$INDEX"'"
+      }
+    }
+    ')
+    echo -e "Reindexing completed from temporary index:$tmp_index to original index:$INDEX with output: $output\n"
+    echo -e "Deleting $tmp_index\n"
+    output=$(curl -X DELETE "${ELASTICSEARCH_URL}/$tmp_index")
+    echo -e "$tmp_index deleted with status: $output\n\n\n"
+done
+```
+
+Run the below commands in the terminal.
+
+```
+export KUBECONFIG=<path_to_your_kubeconfig>
+kubectl get pods -n playground
+kubectl cp <path_to_script_in_your_machine>/es-reindex.sh playground/<playground_name>:<path_in_playground_pod>/es-dump.sh
+```
+
+Now, run the below command inside the playground pod.
+
+```
+# Run the script which reinex the indicesc of your elasticsearch data using below command
+kubectl exec -it <playground_pod_name> -n playground  bash
+cd <path_to_script_inside_playground_pod>
+chmod +x es-reindex.sh
+./es-reindex.sh
+```
+
+**NOTE:** Make Sure to delete jaeger indices  as mapping is not supported in v8.11.3 and the indices which are created before v7.17.15  by reindexing. If the indices which are created in v6.6.2 or earlier are present then the upgradation from v7.17.15 to v8.11.3  may fail.
 
 ## Rolling upgrade from v7.17.15 to v8.11.3 & security is disabled
 

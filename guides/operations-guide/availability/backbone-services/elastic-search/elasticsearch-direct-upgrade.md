@@ -12,14 +12,15 @@ This comprehensive guide outlines the step-by-step process for deploying an Elas
 
 ```
 git clone https://github.com/egovernments/DIGIT-DevOps.git
-git checkout <branch_name>
+git checkout digit-lts-go
 code .
 ```
 
 2. If you want to make any changes to the elasticsearch cluster like namespaces etc. You'll find the helm chart for elastic search in the path provided below. In the below chart, security is enabled for elasticsearch. If you want to disable the security, please set the environment variable `xpack.security.enabled` as false in the helmchart statefulset template.
 
 ```
-// Some code
+cd deploy-as-code/helm/backbone-services/elasticsearch-master
+cd deploy-as-code/helm/backbone-services/elasticsearch-data
 ```
 
 3. Deploy the Elastic Search Cluster using the below commands.
@@ -42,18 +43,29 @@ kubectl get pods -n <elasticsearch_namespace>
 5. Once all pods are running, execute the below commands inside the playground pod to dump data from the old elasticsearch cluster and restore it to the new elasticsearch cluster.
 
 ```
-# Copy the script and replace elasticsearch url's and indices names and save it in your local
+# Copy the script and replace elasticsearch url's and authentication credentials and save it in your local
 #!/bin/bash
 
 # Elasticsearch cluster information
 ELASTICSEARCH_OLD_URL="<old_elasticsearch_url>"
 ELASTICSEARCH_NEW_URL="<new_elasticsearch_url>"
 
-# Indices to export
-INDICES=("pqm-application" "muster-inbox" "fsm" "vehicle")
+# Authentication credentials
+USERNAME="elastic"
+PASSWORD="<es_pwd>
 
-# Backup directory
+#  Replace Elasticsearch cluster URL in elasticsearch_url 
+ELASTICSEARCH_URL="http://elasticsearch-data-v1.es-cluster:9200"
+# Provide the indices to take dump
+EXCLUDE_INDEX_PATTERN="jaeger|monitor|kibana|fluentbit"
+# Provide backup directory
 BACKUP_DIR="backup"
+# Provide indices output file
+IDICES_OUTPUT="elasticsearch-indexes.txt"
+
+mapfile -t INDICES < <(curl -s ${ELASTICSEARCH_OLD_URL}/_cat/indices | grep -v -E "(${EXCLUDE_INDEX_PATTERN})" | awk '{print $3}')
+
+printf "%s\n" "${INDICES[@]}" > $IDICES_OUTPUT
 
 # Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
@@ -64,7 +76,7 @@ for INDEX in "${INDICES[@]}"; do
 
     # Build the elasticdump command
     ELASTICDUMP_CMD="elasticdump \
-        --input=${ELASTICSEARCH_OLD_URL}/${INDEX} \
+        --input=http://${ELASTICSEARCH_OLD_URL}/${INDEX} \
         --output=${OUTPUT_FILE} \
         --type=mapping"
 
@@ -84,7 +96,7 @@ for INDEX in "${INDICES[@]}"; do
 
     # Build the elasticdump command
     ELASTICDUMP_CMD="elasticdump \
-        --input=${ELASTICSEARCH_OLD_URL}/${INDEX} \
+        --input=http://${ELASTICSEARCH_OLD_URL}/${INDEX} \
         --output=${OUTPUT_FILE} \
         --type=data"
 
@@ -101,11 +113,23 @@ done
 
 for INDEX in "${INDICES[@]}"; do
     OUTPUT_FILE="${BACKUP_DIR}/${INDEX}_mapping_backup.json"
+    
+    # Process the mapping file to remove unsupported parameters
+
+    PROCESSED_FILE="${BACKUP_DIR}/${INDEX}_mapping_processed.json"
+
+    jq 'del(.mappings._default_, .mappings._meta, .mappings.dynamic_templates, .mappings.dynamic, .mappings.general) | .mappings = .mappings["_doc"]' "${INPUT_FILE}" > "${PROCESSED_FILE}"
+
+    # Print the contents of the processed file for debugging
+
+    echo "Contents of ${PROCESSED_FILE}:"
+
+    cat "${PROCESSED_FILE}"
 
     # Build the elasticdump command
     ELASTICDUMP_CMD="elasticdump \
-        --input=${OUTPUT_FILE} \
-        --output=${ELASTICSEARCH_NEW_URL}/${INDEX} \
+        --input=${PROCESSED_FILE} \
+        --output=https://${USERNAME}:${PASSWORD}@${ELASTICSEARCH_NEW_URL}/${INDEX} \
         --type=mapping"
 
     # Execute the elasticdump command
@@ -125,7 +149,7 @@ for INDEX in "${INDICES[@]}"; do
     # Build the elasticdump command
     ELASTICDUMP_CMD="elasticdump \
         --input=${OUTPUT_FILE} \
-        --output=${ELASTICSEARCH_NEW_URL}/${INDEX} \
+        --output=https://${USERNAME}:${PASSWORD}@${ELASTICSEARCH_NEW_URL}/${INDEX} \
         --type=data"
 
     # Execute the elasticdump command
