@@ -1,8 +1,12 @@
 # Common Hooks
 
-We can create customized versions of React hooks such as `useCustomAPIMutationHook` to adjust how our application interacts with APIs. By crafting these custom hooks, we can tailor how data is fetched and managed, ensuring it aligns with our specific needs.
+## Overview
 
-This custom hook, `useCustomAPIMutationHook`, facilitates making API calls with mutation operations in React applications using the `react-query` library. It handles mutation requests to a specified URL, including parameter and body customization, while providing loading indicators and data management functionalities, thereby simplifying API interaction and state management in components.
+We can develop custom React hooks like `useCustomAPIMutationHook` to fine-tune our application's API interactions. These custom hooks allow us to control how data is fetched and managed, aligning it perfectly with our requirements.
+
+## Configuration
+
+This custom hook, `useCustomAPIMutationHook`, simplifies API calls for mutation operations in React applications using `react-query`. It allows parameter and body customization for requests to a specified URL, managing loading indicators and state seamlessly. This hook streamlines API interaction and state management within components.
 
 Create `useCustomAPIMutationHook` under the following path:
 
@@ -128,10 +132,6 @@ export const useCustomMDMSV2 = ({ tenantId, schemaCode, select, changeQueryName 
 };
 ```
 
-
-
-
-
 <details>
 
 <summary>Creating  New Hook</summary>
@@ -223,8 +223,6 @@ Reference of using this hook on a view screen:\
 
 
 </details>
-
-
 
 <details>
 
