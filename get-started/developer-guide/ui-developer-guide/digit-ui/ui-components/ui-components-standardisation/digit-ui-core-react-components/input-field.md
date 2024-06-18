@@ -123,8 +123,6 @@ onIconSelection:{(e)=>{console.log(“clicked”);}}
 
 If the onIconSelection function is sent then that will be called when the geolocation icon is clicked. Else by default location details will be captured.
 
-
-
 For more information: [StoryBook for Geolocation field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:geolocation)
 
 **Type: numeric**
@@ -149,9 +147,9 @@ config:{step:””}
 }
 ```
 
-Numeric value by default increases and decreases by step value 1.
+The numeric value by default increases and decreases by step value 1.
 
-But it can be configured using the step value sent as prop in the config.
+But it can be configured using the step value sent as a prop in the config.
 
 For more information: [StoryBook for Numeric field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:numeric)
 
