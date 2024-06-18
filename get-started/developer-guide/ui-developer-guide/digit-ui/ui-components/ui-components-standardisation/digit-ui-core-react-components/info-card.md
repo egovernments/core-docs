@@ -1,14 +1,14 @@
 # Info Card
 
-The InfoCard component has four variants: default, success, error and warning.
+## Description
 
-The default labels will be Info, Success, Error and Warning respectively for each variant.
+The InfoCard component has four variants: default, success, error and warning. The default labels for these variants are Info, Success, Error and Warning.
 
-But the label can be configurable using the label prop.
+However, the label can be configured using the label prop. The configuration enables users to set the array of elements for display in the info card component.
 
-Also, we can send an array of elements that need to be shown in the info card component.
+By default, the elements are shown in the vertical direction. To show the elements in the horizontal direction set the inline prop to true.
 
-By default, the elements will be shown in the vertical direction and if you want to show them in the horizontal direction then the inline prop can be sent as true.
+## Configuration
 
 **With Additional Elements:**
 
