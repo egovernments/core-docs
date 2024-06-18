@@ -21,9 +21,9 @@ https://github.com/<<YOUR ORG NAME>>/egov-mdms-data/blob/<<BRANCH WHERE THE ENVI
 ```
 {% endhint %}
 
-for reference : [citymodule.json](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/tenant/citymodule.json).
+for reference: [citymodule.json](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/tenant/citymodule.json).
 
-For illustration here, add the following module (Sample) as given below:
+For illustration here, add the following module (sample) as given below:
 
 ```
   "citymodule": [{
@@ -65,7 +65,5 @@ For illustration here, add the following module (Sample) as given below:
 ```
 "@egovernments/digit-ui-module-Sample":"0.0.1",
 ```
-
-
 
 The next step is to initailise the module.js, refer [here](module.js.md) to know more about the setup

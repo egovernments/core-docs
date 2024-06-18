@@ -1,10 +1,12 @@
 # Module.js
 
-Next, we need to register the `SampleModule` in the `module.js` file.The `module.js` file is the entry file for the module. We can illustrate rendering a plain screen with the text "**Sample Module**"  using a simple`<div>` element within the SampleModule component. This demonstrates how to create a basic screen using the module setup, which can later be customized or expanded as needed.
+## Overview
 
+The next step is to register `SampleModule` in `module.js`, the module's entry file. To demonstrate rendering, display "**Sample Module**" using a simple `<div>` element within the `SampleModule` component. This creates a basic screen setup for the module, which can be customized or expanded as needed.
 
+## Steps
 
-Add the following code in the Module.js file which we have already created.
+Add the below code in the Module.js file which is already created.
 
 ```
 import { Loader} from "@egovernments/digit-ui-react-components";
@@ -43,23 +45,19 @@ export const initSampleComponents = () => {
 
 ```
 
-* We need to initialize our module's custom hooks, configurations, and register components using `initSampleComponents()` here.
+* Initialize the module's custom hooks, configurations, and register components using `initSampleComponents()` here.
 
-Refer the file below:
-
-[Module.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/Module.js)
-
-
+Refer to the file here: [Module.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/Module.js)
 
 <details>
 
-<summary>Linking the Newly created module in Main App</summary>
+<summary>Linking the newly created module in Main App</summary>
 
-* After creating module code we need to enable it in two places:
+* After creating the module code we need to enable it in two places:
 
 1. **For Deployment** \
    &#x20;In app.js we import the SampleModule, initSampleComponents,  and enable the Sample module.\
-   Add App.js file under the following path:\
+   Add the App.js file in the following path:\
    `micro-ui/web/src/App.js`
 
 ```jsx
@@ -86,11 +84,10 @@ initLibraries().then(() => {
 ```
 
 \
-Reference for the App.js file is given below:\
-[App.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/src/App.js)
+Reference for the App.js file: [App.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/src/App.js)
 
 2. **For Local development** \
-   In index.js, we will import the SampleModule, initSampleComponents,  and enable the  Sample module.\
+   In index.js, import the SampleModule, initSampleComponents,  and enable the  Sample module.\
    Create the index.js file under the following path:\
    `micro-ui-internals/example/src/index.js`
 
@@ -107,14 +104,13 @@ const initDigitUI = () => {
   initSampleComponents();
 ```
 
-Reference for the Index.js file is given below:\
-[Index.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/example/src/index.js)
+Reference for the Index.js file: [Index.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/example/src/index.js)
 
 </details>
 
-* If you have a local server running, please stop it. Restart by running `yarn install` followed by `yarn start` at the `micro-ui-internals` level .
+* If there is a local server running, make sure to stop it. Restart by running `yarn install` followed by `yarn start` at the `micro-ui-internals` level.
 
-Hurray!  Now you can see the screen displayed below by visiting the given URL:
+Hurray!  Now, the screen is displayed below on visiting the given URL:
 
 ```
 http://localhost:3000/digit-ui/employee/sample
@@ -122,6 +118,6 @@ http://localhost:3000/digit-ui/employee/sample
 
 <figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-Refer below sections for deeper understanding
+Refer to the below sections for a deeper understanding
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Reusable Components</td><td></td><td><a href="import-required-components.md">import-required-components.md</a></td></tr><tr><td></td><td>Reusable Hooks</td><td></td><td><a href="common-hooks.md">common-hooks.md</a></td></tr><tr><td></td><td>Employee Module Setup</td><td></td><td><a href="../employee-module-setup/">employee-module-setup</a></td></tr></tbody></table>

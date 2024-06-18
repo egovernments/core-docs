@@ -243,7 +243,7 @@
     * [UI Configuration (DevOps)](get-started/developer-guide/ui-developer-guide/ui-configuration-devops.md)
     * [Local Development Setup](get-started/developer-guide/ui-developer-guide/local-development-setup.md)
     * [Run Application](get-started/developer-guide/ui-developer-guide/run-application.md)
-    * [Create a New UI Module / package](get-started/developer-guide/ui-developer-guide/create-a-new-ui-module-package/README.md)
+    * [Create a New UI Module/Package](get-started/developer-guide/ui-developer-guide/create-a-new-ui-module-package/README.md)
       * [Project Structure](get-started/developer-guide/ui-developer-guide/create-a-new-ui-module-package/project-structure.md)
       * [Install Dependency](get-started/developer-guide/ui-developer-guide/create-a-new-ui-module-package/install-dependency.md)
       * [Module.js](get-started/developer-guide/ui-developer-guide/create-a-new-ui-module-package/module.js.md)
