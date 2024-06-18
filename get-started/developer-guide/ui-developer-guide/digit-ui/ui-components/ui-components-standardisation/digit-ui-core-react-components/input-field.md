@@ -1,5 +1,11 @@
 # Input Field
 
+## Description
+
+The Input field enables users to interact with the application through content input and data. The component allows users to input responses or data based on specific requirements.
+
+## Configuration
+
 #### **Config for TextInput Component (using FormComposerV2)** <a href="#id-1mwkh8rij8gt" id="id-1mwkh8rij8gt"></a>
 
 **Type: text**
@@ -69,7 +75,7 @@ editableDate:true
 }
 ```
 
-Usually date can be selected from the date chart, if editableDate is sent as true then date can be editable without using date chart else it cannot be.
+The date can be selected from the date chart. If editableDate is set to true, the date can be edited without using the date chart; otherwise, it cannot be edited.
 
 For more information: [StoryBook for date field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:date)
 
@@ -95,7 +101,7 @@ editableTime:true
 }
 ```
 
-Usually time can be selected from the time chart, if editableTime is sent as true then time can be editable without using a time chart else it cannot be.
+The time can be selected from the time chart. If `editableTime` is set to `true`, the time can be edited without using the time chart; otherwise, it cannot be edited.
 
 For more information: [StoryBook for time field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:time)
 
@@ -121,7 +127,7 @@ onIconSelection:{(e)=>{console.log(“clicked”);}}
 }
 ```
 
-If the onIconSelection function is sent then that will be called when the geolocation icon is clicked. Else by default location details will be captured.
+Click on the geolocation icon to call and activate the onIconSelection function. Otherwise, the location details are captured by default.
 
 For more information: [StoryBook for Geolocation field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:geolocation)
 
@@ -147,15 +153,11 @@ config:{step:””}
 }
 ```
 
-The numeric value by default increases and decreases by step value 1.
-
-But it can be configured using the step value sent as a prop in the config.
+The numeric value by default increases and decreases by step value 1. But it can be configured using the step value sent as a prop in the config.
 
 For more information: [StoryBook for Numeric field](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:numeric)
 
 **With Prefix and Suffix**
-
-
 
 ```
 {
@@ -177,8 +179,6 @@ prefix:”+91”
 }
 ```
 
-
-
 ```
 {
 label:"ExampleSuffix",
@@ -198,8 +198,6 @@ suffix:”Kg”
 },
 }
 ```
-
-
 
 **Type: password**
 
@@ -246,8 +244,6 @@ onIconSelection:{(e)=>{console.log(“clicked”);}}
 }
 ```
 
-
-
 #### **Config for TextArea Component (using FormComposerV2)** <a href="#gxsd3529bja3" id="gxsd3529bja3"></a>
 
 ```
@@ -270,9 +266,6 @@ resizeSmart: false,
 
 ```
 
-There are two variants for the textarea , one which has resize option and the other is resizeSmart which increases the height automatically based on the content present inside.
+There are two variants for the textarea - one has a resize option and the other is resizeSmart which auto-adjusts the height based on the input content.
 
-For more information : [Storybook for TextArea](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:textarea)
-
-
-
+For more information: [Storybook for TextArea](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-inputfield--default\&args=type:textarea)
