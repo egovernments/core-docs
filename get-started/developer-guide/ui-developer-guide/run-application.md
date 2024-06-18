@@ -32,8 +32,7 @@ REACT_APP_GLOBAL=https://s3.ap-south-1.amazonaws.com/works-dev-asset/globalConfi
 
 To learn more about global config visit [How to configure globalconfig](https://core.digit.org/guides/developer-guide/ui-developer-guide/ui-configuration#globalconfig).
 
-Update both `REACT_APP_PROXY_API` and `REACT_APP_PROXY_ASSETS` to the environment URL.\
-
+Update both `REACT_APP_PROXY_API` and `REACT_APP_PROXY_ASSETS` to the environment URL.
 
 ### Initialise & Run Application
 
@@ -83,7 +82,7 @@ Click on the [link here](run-application.md#configure-environment-file-citizen) 
 
 ### Troubleshoot
 
-Refer [this](ui-configuration-devops.md#global-configuration) section to learn about globalConfig file&#x20;
+Refer to [this](ui-configuration-devops.md#global-configuration) section to learn about globalConfig file.
 
 if you do not have a global config and AWS credentials  are not present, then create a temporary local config under the path:
 
