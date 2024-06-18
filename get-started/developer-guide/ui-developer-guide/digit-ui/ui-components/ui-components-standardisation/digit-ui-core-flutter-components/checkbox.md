@@ -4,9 +4,9 @@
 
 This widget is a versatile and customizable checkbox component. It provides a checkbox with an associated label and allows users to toggle between checked and unchecked states. This widget supports various customisation options, including the ability to customise the checkbox icon colour, label, padding, and disabled state.
 
-The widget provides a hover state, visually indicating when the user hovers over the checkbox. This can be useful for enhancing the user experience.
+The widget provides a hover state, visually indicating when the user hovers over the checkbox. This is useful for enhancing the user experience.
 
-## **Properties**
+### **Properties**
 
 This widget contains the following **required** parameters:
 
@@ -39,6 +39,8 @@ iconColor                    checkbox colour can be customized using this
 ```
 Padding                      padding around the checkbox widget
 ```
+
+## **Configuration**
 
 **Usages**
 

@@ -14,7 +14,7 @@ The Single Select drop-down in Digit UI Components provides a drop-down menu for
 * Nested drop-down
 * Tree drop-down
 
-**Properties**
+### **Properties**
 
 Below are some **required** parameters:
 
@@ -108,6 +108,8 @@ name(required)                 displaying the name or label for the node
 children                      a list of the tree node
 ```
 
+### **Configuration**
+
 **Usages**
 
 **Default drop-down**
@@ -200,7 +202,7 @@ TreeSelectDropDown<int>(
 );
 ```
 
-### Multi Select Drop-down <a href="#qu8jdmpofhjw" id="qu8jdmpofhjw"></a>
+## Multi Select Drop-down <a href="#qu8jdmpofhjw" id="qu8jdmpofhjw"></a>
 
 The Multi-Select drop-down in DIGIT UI components offers a user-friendly interface for selecting multiple options simultaneously. This clean and intuitive component is equipped with built-in chips and provides responsive mouse-down and hover effects.
 
@@ -210,7 +212,7 @@ The Multi-Select drop-down in DIGIT UI components offers a user-friendly interfa
 * Nested drop-down
 * Tree drop-down
 
-**Properties**
+### **Properties**
 
 Below are some **required** parameters:
 
@@ -267,6 +269,8 @@ valueMapper                      mapper to show selected option inside the chip
 ```
 controller                      MultiSelectController can be passed
 ```
+
+### **Configuration**
 
 **Usages**
 

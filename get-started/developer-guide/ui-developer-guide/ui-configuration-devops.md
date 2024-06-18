@@ -6,17 +6,17 @@ description: UI configuration for the application
 
 ## **Overview**
 
-This page provides details about the Digit UI configuration required to enable it in any environment
+This page offers details of the DIGIT UI configuration required to enable it in any environment.
 
 ## **DevOps Configuration**
 
 ### **Build Configuration**
 
 {% hint style="info" %}
-eGov recommends [CD/CI be set up](https://urban.digit.org/installation/jenkins-setup) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Please run the [CI installer to setup DIGIT CD/CI](https://urban.digit.org/installation/jenkins-setup) prior to developing on DIGIT.&#x20;
+eGov recommends [CD/CI be set up](https://urban.digit.org/installation/jenkins-setup) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Please run the [CI installer to setup DIGIT CD/CI](https://urban.digit.org/installation/jenkins-setup) before developing on DIGIT.&#x20;
 {% endhint %}
 
-**Step 1:** Add entry in build-config.yaml file in the **master** branch of the forked repository. This will set up the job pipeline in Jenkins. Make sure to also add the same config to the feature branch you are working on.\
+**Step 1:** Add entry in build-config.yaml file in the **master** branch of the forked repository. This will set up the job pipeline in Jenkins. Make sure to add the same config to the feature branch you are working on.\
 Refer  [build-config.yaml](https://github.com/egovernments/DIGIT-OSS/blob/6faf040bfecdc9b023e5578adf1e8c3480c8458b/build/build-config.yml#L734)
 
 Add the below content for digit-ui.
@@ -29,7 +29,7 @@ Add the below content for digit-ui.
         image-name: digit-ui
 ```
 
-**Step 2:** Go to the Jenkins build the page, select "Job Builder" and click on "Build now". This will pull the config from build\_config.yaml and identify all modules that need to be built.&#x20;
+**Step 2:** Go to the Jenkins build page, select "Job Builder" and click on "Build now". This will pull the config from build\_config.yaml and identify all modules that need to be built.&#x20;
 
 **Step 3**: Once the build is done, go to your Jenkins build page. The service will appear under the repository path in which it has been added, i.e. if the service is added under frontend, it will show up in the frontend section as below,
 
@@ -37,7 +37,7 @@ Add the below content for digit-ui.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-06-13 at 12.10.44 PM.png" alt=""><figcaption><p>build ui docker image from jenkins</p></figcaption></figure>
 
-&#x20;**To know more about** [**Build**](https://core.digit.org/guides/developer-guide/ui-developer-guide/build-and-deploy#build) **and** [**deployment**](https://core.digit.org/guides/developer-guide/ui-developer-guide/build-and-deploy#deploy) **process visit**&#x20;
+&#x20;**To learn more about the** [**Build**](https://core.digit.org/guides/developer-guide/ui-developer-guide/build-and-deploy#build) **and** [**deployment**](https://core.digit.org/guides/developer-guide/ui-developer-guide/build-and-deploy#deploy) **process visit**&#x20;
 
 {% content-ref url="build-and-deploy.md" %}
 [build-and-deploy.md](build-and-deploy.md)
@@ -68,16 +68,16 @@ Add the below content for digit-ui.
 
 ### **Global Configuration**&#x20;
 
-This section contains the configuration that is applicable globally to all UI modules. These need to be configured prior to the configuration of service-specific UI.
+This section contains the configuration that applies globally to all UI modules. These need to be configured before the configuration of service-specific UI.
 
 #### Steps to create a globalconfig.js file:
 
-1. Create a config file (globalconfigs.js) with the below-mentioned config (refer code below).
-2. Configure all the images/logo required in the S3 and add links as footerBWLogoURL , footerLogoURL.
+1. Create a config file (globalconfigs.js) with the below-mentioned config (refer to code below).
+2. Configure all the images/logos required in the S3 and add links as footerBWLogoURL , footerLogoURL.
 3. Mention the state tenant ID as stateTenantId.
 4. If any User roles have to be made invalid add as invalidEmployeeRoles.
 5. Then push this global config file into your S3 bucket as globalconfigs.js
-6. Mention the globalconfig file URL into your [`Environment config`](ui-configuration-devops.md#environment-configuration)`.`&#x20;
+6. Mention the globalconfig file URL in your [`Environment config`](ui-configuration-devops.md#environment-configuration)`.`&#x20;
 
 {% code lineNumbers="true" %}
 ```
@@ -129,7 +129,7 @@ var globalConfigs = (function () {
 
 ### AWS S3 Bucket Configuration
 
-The S3 bucket has to be configured by the DevOps team, to store all the assets being used in the Application like Logos, globalConfigs, etc.
+The S3 bucket has to be configured by the DevOps team, to store all the assets being used in the application like Logos, globalConfigs, etc.
 
 **Steps to create a new AWS Bucket -**
 
@@ -188,6 +188,6 @@ The S3 bucket has to be configured by the DevOps team, to store all the assets b
         s3-assets-bucket: "(pg-egov-assets|egov-playground-assets|egov-uat-assets)"
 ```
 
-5. After adding the proxy in the enironment file, restart the `s3-proxy` build in the environment with config enabled.
+5. After adding the proxy in the environment file, restart the `s3-proxy` build in the environment with config enabled.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-06-13 at 12.56.30 PM.png" alt=""><figcaption><p>Sample S3 Bucket with Public access</p></figcaption></figure>

@@ -10,7 +10,7 @@ The **ToastType** enumeration defines different types of toasts, including:
 * error: Indicates an error or failure.
 * warning: Indicates a warning or caution.
 
-## **Properties**
+### **Properties**
 
 The Toast widget provides a static method for displaying toasts. This method includes the following parameters:
 
@@ -31,6 +31,8 @@ options(required)                  configuration options for the toast, such as 
 duration                           how long the toast message will be shown
                                    (default: 5 sec)
 ```
+
+## **Configuration**
 
 **Usage**
 

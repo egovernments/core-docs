@@ -13,7 +13,7 @@ The Info Card supports different types of information, each with its distinct vi
 
 Developers can include additional widgets beneath the description for extra information or interactive elements. The inline property controls whether these widgets are displayed horizontally or vertically.
 
-## **Properties**
+### **Properties**
 
 Info cards contain the following **required** parameters:
 
@@ -46,6 +46,8 @@ additionalWidgets               a list of widget to display below description
 ```
 inline                          determine whether additional widgets displayed inline
 ```
+
+## **Configuration**
 
 **Usages**
 
@@ -86,4 +88,3 @@ InfoCard(
   Description: 'description'
 );
 ```
-

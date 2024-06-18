@@ -2,9 +2,9 @@
 
 ## Overview
 
-Digit UI components provide a variety of buttons with optional suffix and prefix icons, contributing to a cohesive and visually appealing UI.
+DIGIT UI components provide a variety of buttons with optional suffix and prefix icons, contributing to a cohesive and visually appealing UI.
 
-## Properties
+### Properties
 
 **Button Type**
 
@@ -54,6 +54,8 @@ SuffixIcon                  Icon to be displayed after the label text
 ```
 isDisabled                  indicates where the button is in a disabled state
 ```
+
+## Configuration <a href="#id-9cct4ogihm4j" id="id-9cct4ogihm4j"></a>
 
 ### Primary Button <a href="#id-9cct4ogihm4j" id="id-9cct4ogihm4j"></a>
 
@@ -116,7 +118,7 @@ Button(
 
 ### Link <a href="#q13cttcv5ilz" id="q13cttcv5ilz"></a>
 
-To use link, add the following lines of code:
+To use a link, add the following lines of code:
 
 <pre><code>Button(
   label: 'link',
