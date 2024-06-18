@@ -1,5 +1,11 @@
 # Radio
 
+## **Description** <a href="#f5cx7rg1qwba" id="f5cx7rg1qwba"></a>
+
+Radio button components enable users to select a single option from a list of alternatives.&#x20;
+
+## Configuration
+
 #### **Config for Radio Component (using FormComposerV2)** <a href="#f5cx7rg1qwba" id="f5cx7rg1qwba"></a>
 
 ```

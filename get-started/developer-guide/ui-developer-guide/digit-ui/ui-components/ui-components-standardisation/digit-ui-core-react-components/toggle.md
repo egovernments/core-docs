@@ -1,5 +1,11 @@
 # Toggle
 
+## **Description** <a href="#id-77ohd4ewu8zs" id="id-77ohd4ewu8zs"></a>
+
+A toggle UI component is a user interface element that allows users to switch between two states, typically "on" and "off" or "enabled" and "disabled".
+
+## **Configuration**
+
 #### **Config for Toggle Component (using FormComposerV2)** <a href="#id-77ohd4ewu8zs" id="id-77ohd4ewu8zs"></a>
 
 ```

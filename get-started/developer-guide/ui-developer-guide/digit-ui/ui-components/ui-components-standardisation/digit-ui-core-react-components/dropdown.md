@@ -1,5 +1,11 @@
 # Dropdown
 
+## **Description** <a href="#id-3bsz0jtw0iwh" id="id-3bsz0jtw0iwh"></a>
+
+A dropdown UI component is a user interface element that allows users to select one option from a list of choices. When the dropdown is clicked, it expands to reveal the list of options, and the user can click an item to select it. This component is often used in forms and navigation menus to save space and organize options efficiently.
+
+## **Configuration** <a href="#id-3bsz0jtw0iwh" id="id-3bsz0jtw0iwh"></a>
+
 #### **Config for Dropdown Component (using FormComposerV2)** <a href="#id-3bsz0jtw0iwh" id="id-3bsz0jtw0iwh"></a>
 
 **Simple Dropdown**
@@ -39,9 +45,7 @@ icon: "Article",
 }
 ```
 
-We can show icons beside each option, for that we need to send the showIcon prop as true and also send the icons as a string along with the options.
-
-Usually, the dropdown will be searchable but can be configured using the isSearchable prop.
+To show the icons beside each option, set the showIcon prop to true. Send the icons as a string along with the required options. The dropdown is searchable but can be configured using the isSearchable prop.
 
 To reset the option after selecting it, clear the option and click enter.
 
@@ -88,11 +92,7 @@ code: "Category B",
 }
 ```
 
-For the type dropdown, and variant “nesteddropdown” , options can be sent like the above config.
-
-Icons are not mandatory, but if required can be sent like this.
-
-While searching for any option, the results will be based on the main Category names.
+For the type dropdown with the "nesteddropdown" variant, options can be configured as shown above. Icons are optional but can be included if needed. The search results are displayed as per the main category names.
 
 For more information: [Storybook for nesteddropdown varinat](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-dropdownfield--nested-dropdown-with-icons)
 
@@ -159,13 +159,11 @@ code: "Category C",
 }
 ```
 
-For the type dropdown, and variant “treedropdown”, options can be sent like the above config.
+Here's a simplified version of your explanation:
 
-For now, treedropdown does not support icons.
+For the type dropdown with the "treedropdown" variant, options can be configured as shown in the configuration above. Currently, the treedropdown does not support icons. Clicking on the parent option displays the child options. The final child options are enabled for selection.
 
-When the user clicks on any of the parent options, then the child options will be shown. If the user clicks on the final child option that will be selected.
-
-Only the final child options are selectable options in the tree dropdown.
+This version maintains the necessary details while being clear and concise.
 
 For more information: [Storybook for treedropdown](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-dropdownfield--tree-dropdown)
 
@@ -209,9 +207,9 @@ description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eius
 },
 ```
 
-For the type dropdown, and variant “nestedtextdropdown” , options can be sent like the above config.
+For the `type` dropdown with the variant `nestedtextdropdown`, use the above configuration details to define the options.
 
-This variant can be used when you want to send a description for each option.
+Use this variant when you need to describe each option.
 
 For more information: [StoryBook for nestedtext dropdown](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-dropdownfield--nested-text-drop-down-with-icon).
 
@@ -260,9 +258,9 @@ https://www.freeiconspng.com/uploads/am-a-19-year-old-multimedia-artist-student-
 }
 ```
 
-For the type dropdown, and variant “profiledropdown”, options can be sent like the above config.
+For the type dropdown with the "profiledropdown" variant, use the configuration details above to define the options.
 
-Any image can be sent as a profileIcon as shown in the config.
+You can set any image as a profileIcon as shown in the configuration.
 
 For more information: [Storybook for profiledropdown](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-dropdownfield--profile-dropdown-with-custom-icon)
 
@@ -355,13 +353,11 @@ icon: "Article",
 }
 ```
 
-For the type multiselect dropdown, the options can be sent like this.
+For a multi-select dropdown, set options in the format given in the above configuration.
 
-If icons are not needed one can ignore them. Else showIcon should be sent as true.
+Ignore these If icons are not needed. Else, set the showIcon to true. Set the isDropdownWithChip parameter to true to show chips once the options are selected.
 
-isDropdownWithChip should be sent as true to show chips after options are selected.
-
-The label for clearing all chips can be configured using clearLabel.
+Configure the clearLabel param to ensure the chips are cleared from the label.
 
 For more information: [Storybook for multiselect dropdown](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-dropdownfield--multi-select-dropdown-with-icons)
 
@@ -474,13 +470,9 @@ code: "Category C",
 }
 ```
 
-In Tree multiselect dropdown, both parent and child options can be selected.
+In a tree multiselect dropdown, you can select both parent and child options. Choosing a child option does not automatically select the parent option. When only some child options are selected, the parent option will show in an intermediate state.
 
-Selecting the child option does not select the parent option.
-
-If only some of the child options are selected then the parent option will be in an intermediate state.
-
-If any parent option is selected, that makes all the child options to get selected.
+Selecting any parent option will automatically select all its child options.
 
 For more information: [Storybook for treemultiselect dropdown](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-dropdownfield--tree-multiselect-dropdown)
 
@@ -526,4 +518,3 @@ description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eius
 ```
 
 For more information: [Storybook for Nestedtext Multiselect Dropdown](https://unified-dev.digit.org/storybook/?path=/story/atom-groups-dropdownfield--nested-text-multi-select-with-icons)
-
