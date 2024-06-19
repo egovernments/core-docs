@@ -2,11 +2,11 @@
 
 ## Overview
 
-We can develop custom React hooks like `useCustomAPIMutationHook` to fine-tune our application's API interactions. These custom hooks allow us to control how data is fetched and managed, aligning it perfectly with our requirements.
+We can develop custom React hooks like `useCustomAPIMutationHook` to fine-tune the application API interactions. The custom hooks allow us to control how data is fetched and managed, aligning it perfectly with our requirements.
 
 ## Configuration
 
-This custom hook, `useCustomAPIMutationHook`, simplifies API calls for mutation operations in React applications using `react-query`. It allows parameter and body customization for requests to a specified URL, managing loading indicators and state seamlessly. This hook streamlines API interaction and state management within components.
+This custom hook, `useCustomAPIMutationHook`, simplifies API calls for mutation operations in React applications using `react-query`. It allows parameter and body customization for requests to a specified URL, seamlessly managing loading indicators and states. This hook streamlines API interaction and state management within components.
 
 Create `useCustomAPIMutationHook` under the following path:
 
@@ -74,13 +74,13 @@ const useCustomAPIMutationHook = ({ url, params, body, config = {}, plainAccessR
 export default useCustomAPIMutationHook;
 ```
 
-#### Overriding the hook
+### Override Hook
 
-To override the `useCustomAPIMutationHook`, you would need to create a new custom hook with the desired enhancements.When considering overriding `useCustomAPIMutationHook`, users should first identify specific modifications required, such as adding additional parameters or altering data processing logic. Then, they can create a new custom hook, preserving the original hook's functionality while incorporating these modifications to better suit their application's needs.
+To override the `useCustomAPIMutationHook`, create a new custom hook with the desired enhancements. When considering overriding `useCustomAPIMutationHook`, identify specific modifications required, such as adding additional parameters or altering data processing logic. Create a new custom hook, preserving the original functionality while incorporating these modifications to suit specific application needs.
 
-We need to replace the usage of the original hook throughout the codebase with the new custom hook. This ensures that wherever the original hook was used, the modified functionality of the custom hook will be applied instead.
+We need to replace the usage of the original hook throughout the codebase with the new custom hook. This ensures that wherever the original hook is used, the modified functionality of the custom hook is applied instead.
 
-There is a hook called `useCustomMDMSV2`, which is used for getting data from a Multi-Domain Master Service (MDMS) API. This hook makes it easier to request data, handle loading, and prepare the received data for use in React applications.
+There is a hook called `useCustomMDMSV2`, which is used to get data from a Multi-Domain Master Service (MDMS) API. This hook makes it easier to request data, handle load, and prepare the received data for React applications.
 
 `useCustomMDMSV2`
 
@@ -156,7 +156,7 @@ export const useIndividualView = ({t,individualId,tenantId,config={} }) =>{
 };
 ```
 
-This `searchTestResultData` function is used within the `useIndividualView` hook to fetch data related to a specific individual. It utilizes an asynchronous operation to send a request to a server endpoint, retrieves the response, and then processes the data to extract relevant details. The extracted details are then returned, providing necessary information for rendering the individual's view within the application.\
+This `searchTestResultData` function is used within the `useIndividualView` hook to fetch data related to a specific individual. It utilizes an asynchronous operation to send a request to a server endpoint, retrieves the response, and then processes the data to extract relevant details. The extracted details are then returned, providing the necessary information for rendering the individual's view within the application.\
 \
 Create the Function `searchTestResultData` under the following path:
 
@@ -215,12 +215,7 @@ export const searchTestResultData = async ({ t, individualId, tenantId }) => {
         }
 ```
 
-Reference of using this hook on a view screen:\
-
-
-[ViewIndividual.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/configs/ViewIndividual.js)
-
-
+Reference of using this hook on a view screen: [ViewIndividual.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/configs/ViewIndividual.js)
 
 </details>
 
@@ -228,7 +223,7 @@ Reference of using this hook on a view screen:\
 
 <summary>Registering the Hooks</summary>
 
-In order to register  hooks in your application, they should be exported from an `index.js` file like this. Ensure that each custom hook is correctly exported within this file for seamless integration and usage across your application.\
+To register  hooks in your application, they should be exported from an `index.js` file like this. Ensure that each custom hook is correctly exported within this file for seamless integration and usage across your application.\
 \
 Create an`index.js`  file under the following path:
 
@@ -246,8 +241,6 @@ const Hooks = {
 };
 ```
 
-Refer the file below:\
-[index.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/hooks/index.js)\
-
+Refer to the file here: [index.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/hooks/index.js)
 
 </details>
