@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This guide walks you through the steps required to create and integrate a form within a micro-frontend architecture using the DIGIT framework. You will learn how to set up the form configuration, create a custom component, and integrate the form with backend APIs.&#x20;
+The guide walks you through the steps required to create and integrate a form within a micro-frontend architecture using the DIGIT framework. You will learn how to set up the form configuration, create a custom component, and integrate the form with backend APIs.&#x20;
 
 ## Steps
 
@@ -171,29 +171,23 @@ An example of the configuration file is available here: [IndividualCreate-Config
 
 <summary>Custom Component</summary>
 
-* If we want, we can create custom components in our application. These components are designed specifically to address our unique requirements.
+* To meet unique requirements, we can design custom components in our application.
+*   Begin by creating a custom component featuring the necessary specifications. The Panel component displays responsive messages, similar to informational cards. This enables users to display dynamic text.
 
-<!---->
-
-* First, we need to create a custom component with the features or specifications you need.\
-  This Panel component is used for displaying responsive messages, similar to informational cards, allowing users to display text dynamically.\
-  Create **Panel.js** file under the following path:
+    Create a **Panel.js** file in the specified path.
 
 ```
 micro-ui-internals/packages/modules/sample/src/components/Panel.js
 ```
 
-* You can refer to the code for the panel in the link provided below.
-
-[Panel.js](https://github.com/egovernments/DIGIT-UI-LIBRARIES/blob/develop/react/ui-components/src/atoms/Panels.js)
-
+* Refer to the code for the panel in the link here - [Panel.js](https://github.com/egovernments/DIGIT-UI-LIBRARIES/blob/develop/react/ui-components/src/atoms/Panels.js)
 * Import the custom component in the Module.js file.
 
 ```
 import Panel from "./components/Panel.js";
 ```
 
-* Add that custom component in Module.js file
+* Add the custom component to the Module.js file
 
 ```
 const componentsToRegister = {
@@ -203,7 +197,7 @@ const componentsToRegister = {
 };
 ```
 
-* To include the **Panel** Component in your configuration file, you need to specify the **component name** and **type** as "component". Here's how you can do it:
+* To include the **Panel** Component in your configuration file, specify the **component name** and **type** as "component". Refer to the code below to find how to do it:
 
 ```
 {
@@ -227,8 +221,6 @@ const componentsToRegister = {
 
 ```
 
-
-
 </details>
 
 <details>
@@ -236,22 +228,15 @@ const componentsToRegister = {
 <summary>Enable Module in the UI framework</summary>
 
 * Click on [http://localhost:3000/digit-ui/employee](http://localhost:3000/digit-ui/employee) to see the UI.
-
-<!---->
-
-* You can access the create form screen by navigating to the URL  given below.&#x20;
+* Access the create form screen by navigating to the URL below.&#x20;
 
 ```
 /sample/create-individual
 ```
 
-* You can see a screen similar to the image below, displaying the create form.
+* The screen is similar to the image below, illustrating the Create Form.
 
 <img src="../../../../.gitbook/assets/image (5).png" alt="" data-size="original">
-
-
-
-
 
 </details>
 
@@ -259,17 +244,15 @@ const componentsToRegister = {
 
 <summary>Integration with Backend API</summary>
 
-We have done with the UI part for the Employee module. Now, we will see how to integrate it with the backend API.\
-
+We have completed the UI for the Employee module. Now, let's integrate it with the backend API.
 
 **Hooks**\
-We will use  hooks in our code to pass the data to the backend. Custom hook which can make Api call and format response. \
-Refer the link:\
-[Common Hooks](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/egsIWleSdyH9rMLJ8ShI/\~/changes/95/guides/developer-guide/ui-developer-guide/create-a-new-ui-module-package/common-hooks)
+We will implement custom hooks in our code to handle data transfers to the backend. These hooks will make API calls and format the responses accordingly.\
+Refer to the link - [Common Hooks](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/egsIWleSdyH9rMLJ8ShI/\~/changes/95/guides/developer-guide/ui-developer-guide/create-a-new-ui-module-package/common-hooks)
 
-We have setup the backend service, and now we will use the hooks or service to send the data to the backend after submitting the form.
+After setting up the backend service, we will use hooks or a service to send data to the backend upon form submission.
 
-This On Submit function should be added in the Create screen.
+This On Submit function is added to the Create screen.
 
 ```
     const onSubmit = async(data) => {
@@ -344,11 +327,7 @@ This On Submit function should be added in the Create screen.
   };
 ```
 
-Refer the file below:\
-[IndividualCreate.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/pages/employee/IndividualCreate.js)\
-\
-Once the integration is done the data will be saved into the database.
-
-
+Refer to the file here - [IndividualCreate.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/pages/employee/IndividualCreate.js)\
+Once the integration is complete the data is saved into the database.
 
 </details>
