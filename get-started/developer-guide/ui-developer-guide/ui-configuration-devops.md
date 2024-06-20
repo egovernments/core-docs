@@ -6,7 +6,13 @@ description: UI configuration for the application
 
 ## **Overview**
 
-This page offers details of the DIGIT UI configuration required to enable it in any environment.
+This page offers details of the DIGIT UI configuration required to enable it in any environment. Browse through the configuration details listed below:
+
+* [Build configuration](ui-configuration-devops.md#build-configuration)
+* [Helmchart configuration](ui-configuration-devops.md#helmchart-configuration)
+* [Environment configuration](ui-configuration-devops.md#environment-configuration)
+* [Global configuration](ui-configuration-devops.md#global-configuration)
+* [AWS S3 Bucket configuration](ui-configuration-devops.md#aws-s3-bucket-configuration)
 
 ## **DevOps Configuration**
 
