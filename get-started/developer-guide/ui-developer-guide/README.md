@@ -10,7 +10,7 @@ This guide offers a systematic view of creating the application screens on DIGIT
 
 **Developer code:** Download the UI code from the link here [Birth-Registration.](https://github.com/egovernments/DIGIT-OSS/tree/master)
 
-## **Key fundamentals**&#x20;
+## **Key UI Fundamentals**&#x20;
 
 DIGIT UI basics to browse through before initiating the frontend development.
 
@@ -22,9 +22,9 @@ Follow the cards below to build and deploy the DIGIT UI.
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:blue;"><strong>UI Configuration</strong></mark></td><td>DIGIT UI configuration required to enable it in any environment</td><td></td><td><a href="ui-configuration-devops.md">ui-configuration-devops.md</a></td></tr><tr><td><mark style="color:blue;"><strong>Local Development Setup</strong></mark></td><td>Set up the UI development environment locally</td><td></td><td><a href="local-development-setup.md">local-development-setup.md</a></td></tr><tr><td><mark style="color:blue;"><strong>Run Front End App</strong></mark> </td><td>Run the front end application locally</td><td></td><td><a href="run-application.md">run-application.md</a></td></tr><tr><td><mark style="color:blue;"><strong>Build &#x26; Deploy</strong></mark></td><td>Deploy the DIGIT-UI module</td><td></td><td><a href="create-a-new-ui-module-package/">create-a-new-ui-module-package</a></td></tr></tbody></table>
 
-## Steps For Specific UI Instances&#x20;
+## Scenario-based UI Development
 
-The steps listed below depend on specific user requirements. Follow the user-specific scenarios to learn the UI setup details.
+Custom UI development depends on specific user requirements. We have listed common scenarios (listed below) - follow the steps outlined for each to set up DIGIT UI as per requirements.
 
 * [Create a new UI module/package](create-a-new-ui-module-package/)
 * [Setup employee module](employee-module-setup/)
