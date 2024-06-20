@@ -1,22 +1,28 @@
 # Create Form - Create Screen
 
+## Introduction
+
+This guide walks you through the steps required to create and integrate a form within a micro-frontend architecture using the DIGIT framework. You will learn how to set up the form configuration, create a custom component, and integrate the form with backend APIs.&#x20;
+
+## Steps
+
 <details>
 
 <summary>Create Application Form</summary>
 
 1. Create a form where users can enter all required information and submit the form.
-2. Update the Index.js file with routes
+2. Update the Index.js file with routes.
 
 <!---->
 
-3. `Index.js` will import the **FormcomposerV2**. Inside this add the heading, label, and form components. The configuration file that will contain the actual form schema is mapped in the section below. The config file needs to be imported in the create screen.
+3. `Index.js` will import **FormcomposerV2**. Add the heading, label, and form components inside it. Import the configuration file containing the form schema mapping detail (refer to the code below) into the create screen.
 
 ```
 import { newConfig } from "../../configs/IndividualCreateConfig";
 const configs = newConfig?newConfig:newConfig;
 ```
 
-Example of a Create Screen is given below. Create a page IndividualCreate.js under the following path:
+An example of a Create Screen is given below. Create a page IndividualCreate.js under the following path:
 
 ```
 /micro-ui-internals/packages/modules/sample/src/pages/employee/IndividualCreate.js
@@ -81,8 +87,7 @@ const IndividualCreate = () => {
 export default IndividualCreate;
 ```
 
-Reference for the create screen:\
-[IndividualCreate.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/pages/employee/IndividualCreate.js)
+Reference for the create screen: [IndividualCreate.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/pages/employee/IndividualCreate.js)
 
 </details>
 
@@ -90,15 +95,17 @@ Reference for the create screen:\
 
 <summary>Filling in Config.js</summary>
 
-Create a file called IndividualCreateConfig.js under the following path:
+#### File Creation Path
+
+Create a file named `IndividualCreateConfig.js` in the following path:
 
 ```
 /micro-ui-internals/packages/modules/sample/src/configs/IndividualCreateConfig.js
 ```
 
-This file defines the form meta-data and structure. The form heading goes into the "head" field. Components inside the form go into the body field.
+The configuration file outlines the form's meta-data and structure. The "head" field contains the form heading, while the form's components are placed in the "body" field.
 
-This config file is being imported in the Create screen
+This configuration file is imported into the Create screen.
 
 ```
  export const newConfig = [
@@ -156,11 +163,7 @@ This config file is being imported in the Create screen
 
 ```
 
-
-
-Example for the config file is as given below:
-
-[IndividualCreate-Config.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/configs/IndividualCreateConfig.js)
+An example of the configuration file is available here: [IndividualCreate-Config.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/src/configs/IndividualCreateConfig.js)
 
 </details>
 
