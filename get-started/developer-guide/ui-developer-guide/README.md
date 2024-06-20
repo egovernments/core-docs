@@ -8,7 +8,7 @@ After the backend development and deployment of DIGIT, as per the steps detailed
 
 This guide offers a systematic view of creating the application screens on DIGIT.
 
-**Developer code:** Download the UI code from the link here [Birth-Registration.](https://github.com/egovernments/DIGIT-OSS/tree/master)
+**Developer code:** Download the UI code from the link here [Sample-Registration](https://github.com/egovernments/DIGIT-Frontend/tree/sample).
 
 ## **Key UI Fundamentals**&#x20;
 
