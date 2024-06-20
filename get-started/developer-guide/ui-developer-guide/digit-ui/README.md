@@ -38,13 +38,11 @@ The CSS Library contains all the classes both in the module and compiled form.
 
 </div>
 
-This can be imported using `import "@egovernments/digit-ui.css/Button"`
-
-or full CSS import using `import "@egovernments/digit-ui.css"`
+This can be imported using `import "@egovernments/digit-ui.css/Button"`or full CSS import using `import "@egovernments/digit-ui.css"`
 
 ### Component Libraries <a href="#component-libraries" id="component-libraries"></a>
 
-Component Library contains a set of all the required components defined in them.
+The Component Library contains a set of all required components defined in it.
 
 <div align="left">
 
@@ -54,10 +52,10 @@ Component Library contains a set of all the required components defined in them.
 
 ### Libraries & Utils <a href="#utils-library" id="utils-library"></a>
 
-These contain the following:
+The libraries and utils contain the following:
 
 * Localization workflows
-* API handling - API caching and handling strategies will be here, imported, and shared by all modules. Published as a function, can be used by anyone.
+* API Handling Strategies - Centralize API caching and handling strategies within shared functions, accessible by all modules. This ensures consistency and efficiency across the application.
 * Localisation
 
 <div align="left">
@@ -68,9 +66,9 @@ These contain the following:
 
 ### Modules <a href="#modules" id="modules"></a>
 
-The module will function as a closed system for the states, limiting their access to node\_modules or CDNs only. Any components specific to a state can be provided during the module's initialization within the employee or citizen application's state.
+The module is a closed system for states, allowing access only to node\_modules or CDNs. State-specific components can be provided during the module's initialization in the employee or citizen application.
 
-Below is an illustration of how the modules structure looks like:
+Below is an illustration of how the module structure looks like:
 
 <div align="left">
 
@@ -90,7 +88,7 @@ Modules contain the following inbuilt
 ### Nomenclature <a href="#nomenclature" id="nomenclature"></a>
 
 1. The first line contains the Architecture Component name or info
-2. The second line has npm-package and in the bracket there is a template based on which the component will be created.
+2. The second line contains an npm package and a template in brackets for creating the component.
 
 <div align="left">
 
@@ -111,15 +109,15 @@ Modules contain the following inbuilt
 
 ### Templates <a href="#templates" id="templates"></a>
 
-The templates have the following folder structure: The components related to the template are inside the `src` folder of the template and an example is created to use and showcase the app created by the template.
+The templates have the following folder structure: Components related to the template are inside the `src` folder. An example is provided to demonstrate the app created by the template.
 
 ## Architecture <a href="#architecture" id="architecture"></a>
 
 We have two main React Apps:
 
 1. `micro-ui-internals`&#x20;
-   * Meant for the eGov development team to build components and default modules.
-   * Contains the following modules:
+   * This is meant for the eGov development team to build components and default modules.
+   * It contains the following modules:
      * CSS Library
      * UI Components (presently `react-components`)
      * Utils Library: Contains Services, Localization handling and React Hooks.
@@ -131,8 +129,8 @@ We have two main React Apps:
        * Payment
        * etc ...
 2. `micro-ui`
-   * Meant for the state team to manage, make changes, and deploy
-   * Import `digit-ui-internals` modules
+   * This is meant for the state team to manage, make changes, and deploy
+   * It allows the import of `digit-ui-internals` modules
    * Customizations
      * View
      * Services
@@ -150,11 +148,10 @@ The app imports the developed module.
 import './index.css' import { initPGR } from '@egovernments/pgr-module'; import punjabLogo from './assets/logo.png' const theme = { "--primary-color": "#3f51b5", "--text-color": "#212121" } const PGRComponents = { "logo": punjabLogo } const initPunjabPGR = (onRouteChange) => initPGR({ state: "pb", element: "#appWrapper", components: PGRComponents, onRouteChange, theme }); export default initPunjabPGR;
 ```
 
-In the next phase, the Employee and Citizen app can be rewritten as a single app with the role and permissions-based rendering.
+In the next phase, we can merge the Employee and Citizen apps into one app with role-based permissions and content.
 
 ## Related Links
 
-\
 [Prerequisite reference study materials](../../pre-requisites-training-resources.md)
 
-[Troubleshoot using Browser network Tab](../faqs/troubleshoot-using-browser-network-tab.md)
+[Troubleshoot using the Browser Network Tab](../faqs/troubleshoot-using-browser-network-tab.md)
