@@ -1,5 +1,9 @@
 # DIGIT UI Development Pre-requisites
 
+## **Introduction**
+
+This page lists the technical resources and knowledge required to develop a user interface on DIGIT.&#x20;
+
 ## **Technical Pre-requisites**
 
 * Prior knowledge of React JS

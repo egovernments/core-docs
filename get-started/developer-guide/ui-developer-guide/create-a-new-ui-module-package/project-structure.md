@@ -68,8 +68,6 @@ Download the UI code from the link here [Digit-Frontend](https://github.com/egov
 }
 ```
 
-Refer the file below:
+Refer to the file here - [Package.json](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/package.json)
 
-[Package.json](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/packages/modules/sample/package.json)
-
-The next step is to initailise the Dependency, refer [here](install-dependency.md) to know more about the setup
+The next step is to initialise the Dependency, refer [here](install-dependency.md) to learn more about the setup

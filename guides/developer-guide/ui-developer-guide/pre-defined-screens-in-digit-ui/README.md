@@ -2,7 +2,7 @@
 description: Steps to add new screens in DIGIT-ui
 ---
 
-# Different Predefined Screens In DIGIT-UI
+# Pre-defined Screens In DIGIT-UI
 
 ## Overview
 
@@ -44,4 +44,4 @@ To create any inbox screen, use the **InboxComposer** and add the following conf
 
 ### Search Screen
 
-An example for Search screen is available in [SearchConfig](https://github.com/egovernments/works-mdms-data/blob/DEV/data/pg/commonMuktaUiConfig/SearchBillWMSConfig.json).
+An example of a Search screen is available in [SearchConfig](https://github.com/egovernments/works-mdms-data/blob/DEV/data/pg/commonMuktaUiConfig/SearchBillWMSConfig.json).

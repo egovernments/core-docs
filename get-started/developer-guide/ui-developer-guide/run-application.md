@@ -14,7 +14,7 @@ Once the local setup is completed, the next step is to run the application local
 frontend/micro-ui/web/micro-ui-internals/example
 ```
 
-**Step 2:** Copy the below content and add to the .env file. If the user is a citizen then configure the .env file as follows:-
+**Step 2:** Copy the following content and add it to the .env file. If the user is a citizen, configure the .env file as shown below:
 
 ```js-templates
 SKIP_PREFLIGHT_CHECK=true
@@ -26,9 +26,9 @@ REACT_APP_PROXY_ASSETS=https://unified-dev.digit.org
 REACT_APP_GLOBAL=https://s3.ap-south-1.amazonaws.com/works-dev-asset/globalConfigsWorks.js
 ```
 
-**Step 3:** To run the application as employee, then update the value of `REACT_APP_USER_TYPE=EMPLOYEE.`
+**Step 3:** To run the application as an employee, update the value of the param to - `REACT_APP_USER_TYPE=EMPLOYEE.`
 
-**Step 4:** To point the frontend to different environments change the `REACT_APP_GLOBAL,`and add the GlobalConfig environment file for that environment.
+**Step 4:** To direct the front end to different environments, update the `REACT_APP_GLOBAL` variable and add the GlobalConfig environment file corresponding to that environment.
 
 To learn more about global config visit [How to configure globalconfig](https://core.digit.org/guides/developer-guide/ui-developer-guide/ui-configuration#globalconfig).
 
@@ -133,4 +133,4 @@ Include this between the head tags
     </script>
 ```
 
-[example](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/example/public/index.html)&#x20;
+Link to [example](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/example/public/index.html).

@@ -20,7 +20,7 @@ This page runs you through the steps to build the web application and deploy in 
 
 ## Steps
 
-Follow the instructions [here](../../backend-developer-guide/section-7-build-and-deploy-instructions.md) to set up the job pipeline. Ignore the steps not applicable to the front end.
+Follow the instructions [here](../../../../get-started/developer-guide/backend-developer-guide/section-7-build-and-deploy-instructions.md) to set up the job pipeline. Ignore the steps not applicable to the front end.
 
 {% hint style="info" %}
 Instructions here are provided assuming CD/CI has been set up using the DIGIT ci-as-code module.

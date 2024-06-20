@@ -1,6 +1,12 @@
 # Local Development Setup
 
-**Before setting up:** The following tools have to be installed prior to development. Make sure to install the specific versions provided below. If no version is provided, it is assumed that the latest version can be installed.
+## **Overview**
+
+This page outlines the steps to set up the UI development environment locally.
+
+## Steps
+
+**Before setting up:** Install the tools listed below before development. Make sure the specific versions are installed. In case no version in listed, install the latest version.&#x20;
 
 1. Install Visual Studio Code. VS Code Extensions to be installed from the marketplace:
    * [GitLense](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)

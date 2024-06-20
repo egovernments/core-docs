@@ -2,11 +2,22 @@
 
 ## Introduction <a href="#dlzdc5xdz5ch" id="dlzdc5xdz5ch"></a>
 
-This technical documentation provides a comprehensive approach to enhancing a UI library to reduce UI/UX audit bugs after development. The improvements include the integration of newer components, standardisation of design principles, stability enhancements, conversion of px to em units for scalability and accessibility, the introduction of Storybook for component checking, implementation of colour and text size constants, addition of newer component variants, and creation of Flutter widgets for cross-platform compatibility.
+This page outlines methods to reduce UI/UX audit bugs post-development by enhancing a UI library. Key improvements include:
+
+* [Integration of new components](./#id-3aqkabis4f9a)
+* [Standardization of design principles](./#a-ds3u4tuhemc)
+* [Stability enhancements](./#axrg4lhtt9hj)
+* [Conversion of px to em units for scalability and accessibility](./#tfi9ikybdhq4)
+* [Introduction of Storybook for Component Validation](./#mg554ko71sbr)
+* [Implementation of color and text size constants](./#n19lwfyl25ke)
+* [Addition of new component variants](./#id-20groophu08q)
+* [Creation of Flutter widgets for cross-platform support](./#naxi948y7b02)
+
+These enhancements aim to streamline development and ensure a consistent, user-friendly interface.
 
 ### Integrate New Components <a href="#id-3aqkabis4f9a" id="id-3aqkabis4f9a"></a>
 
-To address UI/UX audit bugs, we will integrate newer components that offer improved functionality, design, and performance. These components should align with current design trends and user expectations to enhance the overall user experience.\
+To resolve UI/UX audit issues, we will implement new components featuring enhanced functionality, modern design, and superior performance. These elements should adhere to current design trends and meet user expectations to improve the user experience.\
 \
 Below is the list of DIGIT Components
 
@@ -47,5 +58,5 @@ Creating Flutter widgets extends the UI library's reach to mobile platforms, red
 
 ## Conclusion <a href="#id-1t75ngdm8hzh" id="id-1t75ngdm8hzh"></a>
 
-By implementing these improvements, including integrating newer components, standardizing design principles, enhancing stability, converting px to em units, integrating with Storybook, introducing colour and text size constants, adding newer component variants, and creating Flutter widgets, the UI library will be better equipped to reduce UI/UX audit bugs after development. These enhancements promote consistency, scalability, accessibility, and cross-platform compatibility, resulting in a more polished and user-friendly experience for end-users.
+Implementing the improvements discussed here ensures the UI library is better equipped to reduce UI/UX audit bugs after development. These enhancements promote consistency, scalability, accessibility, and cross-platform compatibility, resulting in a more polished and user-friendly experience for end-users.
 
