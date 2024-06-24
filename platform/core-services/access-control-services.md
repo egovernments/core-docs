@@ -6,9 +6,9 @@ description: Configure role based user access and map actions to roles
 
 ## Overview
 
-DIGIT is an API-based platform where each API denotes a DIGIT resource. The primary job of Access Control Service (ACS) is to authorise end-user based on their roles and provide access to the DIGIT platform resources. Access control functionality is essentially based on below points:
+DIGIT is an API-based platform where each API denotes a DIGIT resource. The primary job of Access Control Service (ACS) is to authorise end-users based on their roles and provide access to the DIGIT platform resources. Access control functionality is essentially based on the following points:
 
-**Actions:** Actions are events which are performed by a user. This can be an API end-point or front-end event. This is the MDMS master.
+**Actions:** Actions are events performed by a user. This can be an API end-point or front-end event. This is the MDMS master.
 
 **Roles:** Roles are assigned to users. A single user can hold multiple roles. Roles are defined in MDMS masters.
 
@@ -23,18 +23,18 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ## Key Functionalities
 
-* Serve the applicable actions for a user based on user roles .
-* On each action performed by a user, access control looks at the roles for the user and validates actions mapping with the role.
+* Serve the applicable actions for a user based on user roles.
+* On each action performed by a user, access control looks at the user's roles and validates actions that map with the role.
 * Support tenant-level role action - For instance, an employee from Amritsar can have the role of APPROVER for other ULBs like Jalandhar and hence will be authorised to act as APPROVER in Jalandhar.
 
-## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+## Play around with the APIs: [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
 
 ## Deployment Details
 
 1. [Deploy](../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md)  the latest version of the Access Control Service
-   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../releases/digit-2.9-lts/service-build-updates.md) here.
+   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further, you can find the latest builds for each service in our latest [release document](../releases/digit-2.9-lts/service-build-updates.md) here.
 2. [Deploy](../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md)  service to fetch the Role Action Mappings
-   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../releases/digit-2.9-lts/service-build-updates.md) here.
+   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further, you can find the latest builds for each service in our latest [release document](../releases/digit-2.9-lts/service-build-updates.md) here.
 
 ## Configuration Details
 
@@ -90,15 +90,15 @@ The details about the fields in the configuration can be found in the [Swagger c
 
 ### Integration Scope
 
-Any Service which requires **authorisation** can leverage the functionalities provided by the access control service.
+Any service that requires **authorisation** can leverage the functionalities provided by the access control service.
 
 ### Integration Benefits
 
-Any new service that is to be added to the platform will not have to worry about authorisation. It can just add its role action mapping in the master data and the Access Control Service will perform authorisation whenever the API for the microservice is called.
+To add a new service to the platform, simply update its role action mapping in the master data. The Access Control Service will handle authorisation each time the microservice API is called.
 
 ### Integration Steps
 
-1. To integrate with Access Control Service the [role action mapping](https://github.com/egovernments/playground-mdms-data/blob/master/data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json) has to be configured (added) in the MDMS service.
+1. To integrate with the Access Control Service the [role action mapping](https://github.com/egovernments/playground-mdms-data/blob/master/data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json) has to be configured (added) in the MDMS service.
 2. The service needs to call `/actions/_authorize` API of Access Control Service to check for authorisation of any request.
 
 ## Interaction Diagram
