@@ -55,6 +55,8 @@
     * [Signed Audit Performance Testing Results](platform/core-services/audit-service/signed-audit-performance-testing-results.md)
   * [API Gateway](platform/core-services/api-gateway/README.md)
     * [Configuring Gateway Rate Limiting](platform/core-services/api-gateway/configuring-gateway-rate-limiting.md)
+  * [Boundary Service](platform/core-services/boundary-service/README.md)
+    * [Migrate Old Boundary Data - Steps](platform/core-services/boundary-service/migrate-old-boundary-data-steps.md)
   * [eGov OTP Service](platform/core-services/egov-otp-service.md)
   * [Email Notification Service](platform/core-services/email-notification-service.md)
   * [Encryption Service](platform/core-services/encryption-service/README.md)
