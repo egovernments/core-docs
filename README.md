@@ -49,7 +49,7 @@ DIGIT platform is developed using sound architectural principles to enable multi
 
 <figure><img src=".gitbook/assets/image (323).png" alt="" width="375"><figcaption></figcaption></figure>
 
-Refer to the [DIGIT platform design principles](platform/principles/) page.
+Refer to the [DIGIT platform design principles](platform/principles.md) page.
 
 ## Typical Public Service Design
 
