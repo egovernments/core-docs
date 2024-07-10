@@ -18,7 +18,7 @@ Ensuring security and privacy within DIGIT is paramount to protecting sensitive 
 
 ## What is a DIGIT Implementation?
 
-The DIGIT platform, with its suite of products and building blocks, is a [DPG](https://digitalpublicgoods.net/blog/unpacking-concepts-definitions-digital-public-infrastructure-building-blocks-and-their-relation-to-digital-public-goods/). Several steps and actors are involved in converting the DIGIT platform into a DPI – a live instance used to deliver services to citizens.
+The DIGIT platform, with its suite of products and building blocks, is a [DPG](https://digitalpublicgoods.net/blog/unpacking-concepts-definitions-digital-public-infrastructure-building-blocks-and-their-relation-to-digital-public-goods/). Several steps and actors (listed below) are involved in converting the DIGIT platform into a DPI – a live instance used to deliver services to citizens.
 
 * A Program Owner (typically a government agency) decides to implement the DIGIT platform or specific DIGIT products as its software platform for service delivery.
 * The Program Owner procures the services of a Solution Implementing Agency (also known as a System Integrator) to implement the DIGIT platform/products in that specific context.
@@ -37,7 +37,7 @@ The DIGIT platform, with its suite of products and building blocks, is a [DPG](h
 
 ## Security and Privacy are Shared Responsibilities
 
-When building, deploying, and using solutions built on the DIGIT platform, security and privacy are shared responsibilities between the DIGIT Platform, Product Developers, Solution Implementing Agencies (Systems Integrators), and Program Owners. The DIGIT Platform team incorporates key security and privacy features into the DIGIT code and installation scripts and provides guidelines to Product Developers, Solution Implementing Agencies, and Program Owners to ensure comprehensive protection.
+When building, deploying, and using solutions built on the DIGIT platform, security and privacy are shared responsibilities between the DIGIT Platform, Product Developers, Solution Implementing Agencies (Systems Integrators), and Program Owners. The DIGIT Platform team incorporates key security and privacy features into the DIGIT code and installation scripts. It provides guidelines to Product Developers, Solution Implementing Agencies, and Program Owners to ensure comprehensive protection.
 
 The responsibilities of key actors are as follows:
 
@@ -100,11 +100,11 @@ The responsibilities of key actors are as follows:
 
 The key building blocks that play a crucial role in ensuring security and privacy are as follows.
 
-1. API Gateway: Ensures that no data is accessible without authentication and authorization.
-2. User Services: Manages users and passwords. Provides authentication services.
-3. Role Services: Allows configuration of roles and limits access each role has to specified data and services.
-4. Encryption Services: Provides the ability to encrypt and decrypt data.
-5. Signed Audit Services: Logs all changes made to all data in a signed audit log.
+1. [API Gateway](../../platform/core-services/api-gateway/): Ensures that no data is accessible without authentication and authorization.
+2. [User Services](../../platform/core-services/user/): Manages users and passwords. Provides authentication services.
+3. [Role Services](../../platform/core-services/access-control-services.md): Allows configuration of roles and limits access each role has to specified data and services.
+4. [Encryption Services](../../platform/core-services/encryption-service/): Provides the ability to encrypt and decrypt data.
+5. [Signed Audit Services](../../platform/core-services/audit-service/signed-audit-performance-testing-results.md): Logs all changes made to all data in a signed audit log.
 
 The diagram below illustrates how information flows in DIGIT, and how these services enable security and privacy during such information flow.
 
