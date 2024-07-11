@@ -2,9 +2,13 @@
 
 ## Overview <a href="#overview" id="overview"></a>
 
-The Indexer Service runs as a separate service. This service is designed to perform all the indexing tasks of the digit platform. The service reads records posted on specific Kafka topics and picks the corresponding index configuration from the yaml file provided by the respective module. The objective of the Indexer Service is listed below.
+The Indexer Service operates independently and is responsible for all indexing tasks on the DIGIT platform. It processes records from specific Kafka topics and utilizes the corresponding index configuration defined in YAML files by each module.
 
-* To provide a one-stop framework for indexing the data to elasticsearch.
+**Objectives:**
+
+* Efficiently read and process records from Kafka topics.
+* Retrieve and apply appropriate index configurations from YAML files.
+* To provide a one-stop framework for indexing the data to Elasticsearch.
 * To create provisions for indexing live data, reindexing from one index to the other and indexing legacy data from the data store.
 
 ## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
@@ -20,19 +24,19 @@ Before you proceed with the configuration, make sure the following pre-requisite
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
 * Performs three major tasks namely: LiveIndex, Reindex and LegacyIndex.
-* LiveIndex: Task of indexing the live transaction data on the platform. This keeps the es data in sync with the DB.
-* Reindex: Task of indexing data from one index to the other. ES already provides this feature, the indexer does the same but with data transformation.
-* LegacyIndex: Task of indexing legacy data from the tables to ES.
+  * LiveIndex: Task of indexing the live transaction data on the platform. This keeps the es data in sync with the DB.
+  * Reindex: Task of indexing data from one index to the other. ES already provides this feature, the indexer does the same but with data transformation.
+  * LegacyIndex: Task of indexing legacy data from the tables to ES.
 * Provides flexibility to index the entire object, a part of the object or an entirely different custom object all using one input JSON from modules.
 * Provides features for customizing index JSON by field mapping, field masking, data enrichment through external APIs and data denormalization using MDMS.
 * One-stop shop for all the es index requirements with easy-to-write and easy-to-maintain configuration files.
-* Designed as a consumer to save API overhead. The consumer configs are written from scratch to have complete control over consumer behaviour.
+* Designed as a consumer to save API overhead. The consumer configs are written from scratch for complete control over consumer behaviour.
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
 * **Step 1:** Write the configuration as per your requirement. The structure of the config file is explained later in the same doc.
 * **Step 2:** Check in the config file to a remote location preferably Github. Currently, we check the files into this folder [https://github.com/egovernments/configs/tree/DEV/egov-indexer](https://github.com/egovernments/configs/tree/DEV/egov-indexer) -for dev
-* **Step 3:** Provide the absolute path of the checked-in file to DevOps, to add it to the file-read path of egov-indexer. The files are added to egov-indexer's environment manifest file for it to be read at the start-up of the application.
+* **Step 3:** Provide the absolute path of the checked-in file to the DevOps team. They will add it to the file-read path of egov-indexer by updating the environment manifest file, ensuring it is read at the time of the application's startup.
 * **Step 4:** Run the egov-indexer app. Since it is a consumer, it starts listening to the configured topics and indexes the data.
 
 ## Interaction Diagram <a href="#interaction-diagram" id="interaction-diagram"></a>
