@@ -41,7 +41,7 @@ Before you proceed with the configuration, make sure the following pre-requisite
 1. Setup the latest version of [egov-enc-service](../encryption-service/) and [egov-mdms- service](../mdms-v2-master-data-management-service/mdms-master-data-management-service/)&#x20;
 2.  [Deploy](../../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md) the latest version of egov-user service
 
-    &#x20;**Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.
+    &#x20;**Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates/) here.
 3.  Add [role-action mapping](https://github.com/egovernments/playground-mdms-data/blob/master/data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json) for APIs
 
     **Note** : This is a sample JSON file containing role-action mapping , If you don't have any of the master data setup yet you can you this to create on for you and then add all these files and start making changed in your repo.

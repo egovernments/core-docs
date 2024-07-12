@@ -40,7 +40,7 @@ Following are the properties in application.properties file in egov-enc-service 
 
 1.  [Deploy](../../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md) the latest version of Encryption Service
 
-    &#x20;**Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates.md) here.
+    &#x20;**Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates/) here.
 2. Add [Role-Action](https://github.com/egovernments/playground-mdms-data/blob/master/data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json) mapping for API’s.
 
 ### Integration <a href="#integration" id="integration"></a>

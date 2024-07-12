@@ -32,9 +32,9 @@ Before you proceed with the configuration, make sure the following pre-requisite
 ## Deployment Details
 
 1. [Deploy](../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md)  the latest version of the Access Control Service
-   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further, you can find the latest builds for each service in our latest [release document](../releases/digit-2.9-lts/service-build-updates.md) here.
+   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further, you can find the latest builds for each service in our latest [release document](../releases/digit-2.9-lts/service-build-updates/) here.
 2. [Deploy](../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md)  service to fetch the Role Action Mappings
-   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further, you can find the latest builds for each service in our latest [release document](../releases/digit-2.9-lts/service-build-updates.md) here.
+   * **Note**: This video will give you an idea of how to deploy any Digit-service. Further, you can find the latest builds for each service in our latest [release document](../releases/digit-2.9-lts/service-build-updates/) here.
 
 ## Configuration Details
 
