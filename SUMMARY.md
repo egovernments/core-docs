@@ -356,10 +356,10 @@
   * [OAuth2-Proxy Setup](get-started/operations-guide/oauth2-proxy-setup.md)
   * [Jira Ticket Creation](get-started/operations-guide/jira-ticket-creation.md)
 * [Implementation Guide](guides/implementation-guide.md)
-* [Data & Privacy Guide](guides/data-and-privacy-guide/README.md)
-  * [Security & Privacy Guidelines For Product Developers](guides/data-and-privacy-guide/security-and-privacy-guidelines-for-product-developers.md)
-  * [Security & Privacy Guidelines For Solution Implementing Agencies](guides/data-and-privacy-guide/security-and-privacy-guidelines-for-solution-implementing-agencies.md)
-  * [Security & Privacy Guidelines For Program Owners](guides/data-and-privacy-guide/security-and-privacy-guidelines-for-program-owners.md)
+* [Security & Privacy Guide](guides/security-and-privacy-guide/README.md)
+  * [Security & Privacy Guidelines For Product Developers](guides/security-and-privacy-guide/security-and-privacy-guidelines-for-product-developers.md)
+  * [Security & Privacy Guidelines For Solution Implementing Agencies](guides/security-and-privacy-guide/security-and-privacy-guidelines-for-solution-implementing-agencies.md)
+  * [Security & Privacy Guidelines For Program Owners](guides/security-and-privacy-guide/security-and-privacy-guidelines-for-program-owners.md)
 
 ## 🚀 Accelerators
 
