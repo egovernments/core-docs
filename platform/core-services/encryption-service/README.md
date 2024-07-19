@@ -2,7 +2,7 @@
 
 ### Overview <a href="#overview" id="overview"></a>
 
-Encryption Service is used to secure sensitive data that is being stored in the database.
+Encryption Service is used to secure sensitive data that is being stored in the database. The encryption services uses envelope encryption.&#x20;
 
 ### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
@@ -25,14 +25,11 @@ Encryption Service offers following features :&#x20;
 
 Following are the properties in application.properties file in egov-enc-service which are configurable.
 
-| Property               | Default Value   | Remarks                                                                                                                                                                        |
-| ---------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `master-password`      | asd@#$@$!132123 | Master password for encryption/ decryption. It can be any string.                                                                                                              |
-| `master.salt`          | qweasdzx        | A salt is random data that is used as an additional input to a one-way function that hashes data, a password or passphrase. It needs to be an alphanumeric string of length 8. |
-| `master.initialvector` | qweasdzxqwea    | An initialization vector is a fixed-size input to a cryptographic primitive. It needs to be an alphanumeric string of length 12.                                               |
-| `size.key.symmetric`   | 256             | Default size of Symmetric key.                                                                                                                                                 |
-| `size.key.asymmetric`  | 1024            | Default size of Asymmetric key.                                                                                                                                                |
-| `size.initialvector`   | 12              | Default size of Initial vector.                                                                                                                                                |
+<table><thead><tr><th width="306.66666666666663">Property</th><th>Default Value</th><th>Remarks</th></tr></thead><tbody><tr><td><code>master-password</code></td><td>asd@#$@$!132123</td><td>Master password for encryption/ decryption. It can be any string.</td></tr><tr><td><code>master.salt</code></td><td>qweasdzx</td><td>A salt is random data that is used as an additional input to a one-way function that hashes data, a password or passphrase. It needs to be an alphanumeric string of length 8.</td></tr><tr><td><code>master.initialvector</code></td><td>qweasdzxqwea</td><td>An initialization vector is a fixed-size input to a cryptographic primitive. It needs to be an alphanumeric string of length 12.</td></tr><tr><td><code>size.key.symmetric</code></td><td>256</td><td>Default size of Symmetric key.</td></tr><tr><td><code>size.key.asymmetric</code></td><td>1024</td><td>Default size of Asymmetric key.</td></tr><tr><td><code>size.initialvector</code></td><td>12</td><td>Default size of Initial vector.</td></tr><tr><td><code>master.password.provider</code></td><td>software</td><td>Name of the implementation to be used for encrypting DEKs</td></tr><tr><td><p></p><pre><code>aws.kms.access.key
+</code></pre></td><td>NA</td><td>AWS access key to access the KMS service (Note: this field is required only if <code>master.password.provider</code> is set to kms)</td></tr><tr><td><p></p><pre><code>aws.kms.secret.key
+</code></pre></td><td>NA</td><td>AWS secret to access the KMS service (Note: this field is required only if <code>master.password.provider</code> is set to kms)</td></tr><tr><td><p></p><pre><code>aws.kms.region
+</code></pre></td><td>NA</td><td>AWS region to access the KMS service (Note: this field is required only if <code>master.password.provider</code> is set to kms)</td></tr><tr><td><p></p><pre data-full-width="true"><code>aws.kms.master.password.key.id
+</code></pre></td><td>NA</td><td>Id of the KMS key to be used for encrypting the DEK (Note: this field is required only if <code>master.password.provider</code> is set to kms)</td></tr></tbody></table>
 
 &#x20;
 
@@ -47,20 +44,20 @@ Following are the properties in application.properties file in egov-enc-service 
 
 #### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
 
-The Encryption service is used to encrypt sensitive data that needs to be stored in the database.
+The Encryption service is used to encrypt sensitive data that needs to be stored in the database. For each tenant, a different data encryption key (DEK) is used. The DEK is encrypted using Key Encryption Keys (KEK).  Currently, there are two implementations of encrypting the data encryption keys available. The first one is using AWS KMS service and the second one is using a master password. For any custom implementation, the _MasterKeyProvider_ interface in the service should be extended. Based on the _master.password.provider_ flag in _appication.properties_ you can enable which implementation of _MasterKeyProvider_ interface to use
 
 #### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
 
-* Can perform encryption without having to re-write encryption logic everytime in every service.
+* Can perform encryption without having to re-write encryption logic every time in every service.
 
 #### Steps to Integration <a href="#steps-to-integration" id="steps-to-integration"></a>
 
-1. To integrate, host of encryption-services module should be overwritten in helm chart.
-2. `/crypto/v1/_encrypt` should be added as endpoint for encrypting input data in the system
+1. To integrate, the host of encryption-services module should be overwritten in the helm chart.
+2. `/crypto/v1/_encrypt` should be added as an endpoint for encrypting input data in the system
 3. `/crypto/v1/_decrypt` should be added as the decryption endpoint.
-4. `/crypto/v1/_sign` should be added as the endpoint for providing signature for a given value.
+4. `/crypto/v1/_sign` should be added as the endpoint for providing a signature for a given value.
 5. `/crypto/v1/_verify` should be added as the endpoint for verifying whether the signature for the provided value is correct.
-6. `/crypto/v1/_rotatekey` should be added as endpoint to deactivate the keys and generate new keys for a given tenant.
+6. `/crypto/v1/_rotatekey` should be added as an endpoint to deactivate the keys and generate new keys for a given tenant.
 
 ### Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
@@ -92,4 +89,4 @@ e) `POST /crypto/v1/_rotatekey`
 
 Deactivate the keys for the given tenant and generate new keys. It will deactivate both symmetric and asymmetric keys for the provided tenant.
 
-## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+## Play around with the APIs : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
