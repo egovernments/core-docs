@@ -146,7 +146,9 @@ MDMS Path: \
 \
 [Click here](https://github.com/egovernments/DIGIT-Frontend/blob/develop/micro-ui/web/micro-ui-internals/packages/modules/core/src/components/PrivacyComponent.js) to access the privacy component file.
 
-Localisation modules used: [digit-privacy-policy](https://docs.google.com/spreadsheets/d/1XY0OYiLsC1eKHeD-WpQv6GV7Sxiy2LHR9KoeVz95q2o/edit?gid=1511586820#gid=1511586820)&#x20;
+Localisation modules used:&#x20;
 
-rainmaker-common
+[digit-privacy-policy](https://docs.google.com/spreadsheets/d/1XY0OYiLsC1eKHeD-WpQv6GV7Sxiy2LHR9KoeVz95q2o/edit?gid=1511586820#gid=1511586820)&#x20;
+
+[rainmaker-common](https://docs.google.com/spreadsheets/d/1XY0OYiLsC1eKHeD-WpQv6GV7Sxiy2LHR9KoeVz95q2o/edit?gid=51685018#gid=51685018)
 
