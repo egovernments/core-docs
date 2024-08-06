@@ -253,6 +253,7 @@
       * [Utility - Pre-Process MDMS Configuration](get-started/developer-guide/ui-developer-guide/customisation/utility-pre-process-mdms-configuration.md)
       * [CSS Customisation](get-started/developer-guide/ui-developer-guide/customisation/css-customisation.md)
       * [Kibana Dashboard Integration With DSS Module](guides/developer-guide/ui-developer-guide/customisation/kibana-dashboard-integration-with-dss-module.md)
+      * [Login Page](guides/developer-guide/ui-developer-guide/customisation/login-page.md)
     * [Setup Monitoring Tools](get-started/developer-guide/ui-developer-guide/setup-monitoring-tools.md)
     * [Android Web View & How To Generate APK](get-started/developer-guide/ui-developer-guide/android-web-view-and-how-to-generate-apk.md)
     * [FAQs](get-started/developer-guide/ui-developer-guide/faqs/README.md)
