@@ -67,6 +67,7 @@
         * [Configuring Master Data](platform/core-services/mdms-v2-master-data-management-service/mdms-master-data-management-service/setting-up-master-data/configuring-master-data.md)
         * [Adding New Master](platform/core-services/mdms-v2-master-data-management-service/mdms-master-data-management-service/setting-up-master-data/adding-new-master.md)
         * [State Level Vs City Level Master](platform/core-services/mdms-v2-master-data-management-service/mdms-master-data-management-service/setting-up-master-data/state-level-vs-city-level-master.md)
+    * [MDMS Migration](platform/core-services/mdms-v2-master-data-management-service/mdms-migration.md)
   * [Payment Gateway Service](platform/core-services/payment-gateway-service.md)
   * [PDF Generation Service](platform/core-services/pdf-generation-service.md)
   * [Persister Service](platform/core-services/persister-service/README.md)
