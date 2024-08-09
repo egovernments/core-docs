@@ -11,7 +11,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 * _Java 17_
 * [egov-user](user/) service is running
 * [egov-localization](localization-service/) service is running
-* [egov-otp](../api-specifications/otp-service.md) service is running
+* [egov-otp](../api-specifications/otp.md) service is running
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 

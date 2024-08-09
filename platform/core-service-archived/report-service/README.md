@@ -11,7 +11,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 * Prior knowledge of Java/J2EE.
 * Prior knowledge of Spring Boot.
 * Advanced knowledge of PostgreSQL.
-* [Encryption](../encryption-service/) and [MDMS](../mdms-v2-master-data-management-service/mdms-master-data-management-service/) services must be running.
+* [Encryption](../../core-services/encryption-service/) and [MDMS](../../core-services/mdms-v2-master-data-management-service/mdms-master-data-management-service/) services must be running.
 * Prior knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
 * JSON path for filtering required data from JSON objects.
 
@@ -377,7 +377,7 @@ The report service provides a common framework to generate reports and show the 
 ```
 
 {% hint style="info" %}
-**Note:** Refer to the [guidelines](../encryption-service/guidelines-for-supporting-user-privacy-in-a-module.md#demand-generation-changes) for supporting user privacy in a module, for the changes required in the report config to support the encryption/decryption process.
+**Note:** Refer to the [guidelines](../../core-services/encryption-service/guidelines-for-supporting-user-privacy-in-a-module.md#demand-generation-changes) for supporting user privacy in a module, for the changes required in the report config to support the encryption/decryption process.
 {% endhint %}
 
 ## Reference Docs <a href="#reference-docs" id="reference-docs"></a>
@@ -386,9 +386,9 @@ The report service provides a common framework to generate reports and show the 
 
 #### Doc Links <a href="#doc-links" id="doc-links"></a>
 
-| Title                                                                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [API Swagger Documentation](https://editor.swagger.io/?url=https://raw.githubusercontent.com/egovernments/egov-services/master/docs/reportinfra/contracts/reportinfra-1-0-0.yml#!/) |
-| [Local Setup](https://github.com/egovernments/Digit-Core/blob/core-2.9-lts-mvn-check/core-services/report/LOCALSETUP.md)                                                            |
-| [Guidelines for supporting User privacy changes in report service](../encryption-service/guidelines-for-supporting-user-privacy-in-a-module.md#demand-generation-changes)           |
+| Title                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [API Swagger Documentation](https://editor.swagger.io/?url=https://raw.githubusercontent.com/egovernments/egov-services/master/docs/reportinfra/contracts/reportinfra-1-0-0.yml#!/)        |
+| [Local Setup](https://github.com/egovernments/Digit-Core/blob/core-2.9-lts-mvn-check/core-services/report/LOCALSETUP.md)                                                                   |
+| [Guidelines for supporting User privacy changes in report service](../../core-services/encryption-service/guidelines-for-supporting-user-privacy-in-a-module.md#demand-generation-changes) |
 
