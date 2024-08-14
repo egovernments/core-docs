@@ -6,27 +6,31 @@ description: >-
 
 # Quick Setup (AWS)
 
-Known Issues:
+{% hint style="info" %}
+**Before you begin with the installation:**&#x20;
 
 1. ap-south-1 is hardcoded in terraform script. It will be moved to input.yaml shortly.
-2. Secrets should be encrypted using SOPS. Currently private repo will be required to restrict access to sensitive information
+2. Secrets should be encrypted using SOPS. Currently, a private repository is needed to restrict access to sensitive information.
+{% endhint %}
 
 ## Overview
 
 This guide provides step-by-step instructions for installing DIGIT using GitHub Actions within an AWS environment.
 
+Secrets should be encrypted using SOPS. Currently, the private repo will be required to restrict access to sensitive information
+
 ## Pre-requisites
 
-* AWS account with adminstrative privilege
+* AWS account with administrative privilege
 * Github account
 
 ## Installation
 
 ### Create IAM User and generate Access Key & Secret Key&#x20;
 
-* _Skip this step if you already have access and secret key_
+* _Skip this step if you already have access and a secret key_
 
-1. Create an IAM User with adminstrative privilege in yout AWS account
+1. Create an IAM User with administrative privilege in your AWS account
 2. Generate `ACCESS_KEY` and `SECRET_KEY` for the IAM user.
 
 ```
@@ -39,11 +43,11 @@ AWS_REGION=ap-south-1
 
 ### Configure GitHub Repository
 
-1. Fork the [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps) Repository into **your account** on GitHub (_**Uncheck**  Copy the master branch only_ while forking)  see the below image where to find fork in Github.
+1. Fork the [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps) Repository into **your account** on GitHub (_**Uncheck**  Copy the master branch only_ while forking)  see the below image where to find a fork in GitHub.
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-1. Enable github workflow by clicking on _I understand my workflow, go ahead and enable them_
+2. Enable GitHub workflow by clicking on _I understand my workflow, go ahead and enable them_
 
 <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -51,22 +55,17 @@ AWS_REGION=ap-south-1
 
 <figure><img src="../../.gitbook/assets/Screenshot (142).png" alt=""><figcaption></figcaption></figure>
 
-The following secrets needs to be added:
+The following secrets need to be added:
 
-| Name                    | Secret                   |
-| ----------------------- | ------------------------ |
-| `AWS_ACCESS_KEY_ID`     | `<GENERATED_ACCESS_KEY>` |
-| `AWS_SECRET_ACCESS_KEY` | `<GENERATED_SECRET_KEY>` |
-| `AWS_DEFAULT_REGION`    | `<AWS_REGION>`           |
-| `AWS_REGION`            | `<AWS_REGION>`           |
+<table><thead><tr><th width="299">Name</th><th>Secret</th></tr></thead><tbody><tr><td><code>AWS_ACCESS_KEY_ID</code></td><td><code>&#x3C;GENERATED_ACCESS_KEY></code></td></tr><tr><td><code>AWS_SECRET_ACCESS_KEY</code></td><td><code>&#x3C;GENERATED_SECRET_KEY></code></td></tr><tr><td><code>AWS_DEFAULT_REGION</code></td><td><code>&#x3C;AWS_REGION></code></td></tr><tr><td><code>AWS_REGION</code></td><td><code>&#x3C;AWS_REGION></code></td></tr></tbody></table>
 
 <figure><img src="../../.gitbook/assets/Screenshot (144).png" alt=""><figcaption></figcaption></figure>
 
-Once all four secrets are added it will look like below:
+Once all four secrets are added it will look like the below:
 
 <figure><img src="../../.gitbook/assets/Screenshot (145).png" alt=""><figcaption></figcaption></figure>
 
-* Clone the forked DIGIT-DevOps repository (using `git clone` command) and open the repo in the code editor or optionally you can use [github web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) by replacting github.com with github.dev.
+* Clone the forked DIGIT-DevOps repository (using `git clone` command) and open the repo in the code editor or optionally you can use [github web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) by replicating github.com with github.dev.
 
 <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -77,15 +76,9 @@ Once all four secrets are added it will look like below:
 
 ### Generate SSH Key Pair
 
-Choose one of the following methods to generate an SSH key pair:
+Choose the following method to generate an SSH key pair:
 
 * **Method a:** Use an online website (Note: This is not recommended for production setups, only for demo purposes): `https://8gwifi.org/sshfunctions.jsp`
-*   **Method b:** Use OpenSSL commands:
-
-    ```
-    openssl genpkey -algorithm RSA -out private_key.pem
-    openssl rsa -pubout -in private_key.pem -out public_key.pem
-    ```
 
 Store the generated private key and public key in separate files on your local.
 
@@ -101,35 +94,25 @@ The _private key_ will look like:
 > LlDiIZQFBtr7CriRDD2Nx\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*TCaHk8CGmA+TXSKM9q7cTtMb6ythUQhZrpq 0EEY5TgQKBgQ\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*8/PD+mT 5jFvon5Q==\
 > \-----END RSA PRIVATE KEY-----
 
-And the _public key_ will look like:
+And the _public key_ will look like the below:
 
 > ssh-rsa AAAAB3NzaC1yc2EAAAADAQA\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*HBFUNjyMLpFltqwbsA\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*MaMhX7Ou3\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*PWHKx\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*oVTBWxloXFQy/XFU\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*W/QVdgs5xp+P5hhZgm9WpdN3Cz\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*clYmUHoPCPwKIqElX2DZzYGJc\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*y4gR
 
-
-
-### Configure Infrastructure Parameters:
+### Configure Infrastructure Parameters
 
 1. In your editor go to `DIGIT-DevOps/infra-as-code/terraform/sample-aws`.
-2. Open `input.yaml` and enter details such as `domain_name`, `cluster_name`, `bucket_name`, `db_name` and add  `public_ssh_key` generated in the above step. _(Fill in the inputs as per the regex mentioned in the comments.)_ Following variables needs to be set in input.yaml
+2. Open `input.yaml` and enter details such as `domain_name`, `cluster_name`, `bucket_name`, `db_name` and add  `public_ssh_key` generated in the above step. _(Fill in the inputs as per the regex mentioned in the comments)._ The following variables need to be set in the input.yaml
 
-| Parameter                      | Description                                                                                                   |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| cluster\_name                  | Name of the EKS cluster. The Cluster name can have only lowercase alphanumeric characters and hyphens         |
-| ssh\_key\_name                 | The name of the ssh key. Can contain any alphanumeric character                                               |
-| public\_ssh\_key               | The public ssh key generated in section above (Generate SSH Key Pair)                                         |
-| db\_name                       | Name of the database. The name that you enter should contain only alphanumeric characters                     |
-| db\_username                   | Username of the root user. DB user name must contain only alphanumeric characters                             |
-| domain\_name                   | The domain url for the UI                                                                                     |
-| terraform\_state\_bucket\_name | Name to be given to S3 bucket which will be created in terraform. This bucket will store the terraform state. |
+<table><thead><tr><th width="234">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>cluster_name</td><td>Name of the EKS cluster. The Cluster name can have only lowercase alphanumeric characters and hyphens</td></tr><tr><td>ssh_key_name</td><td>The name of the ssh key. Can contain any alphanumeric character</td></tr><tr><td>public_ssh_key</td><td>The public ssh key generated in section above (Generate SSH Key Pair) </td></tr><tr><td>db_name</td><td>Name of the database. The name that you enter should contain only alphanumeric characters</td></tr><tr><td>db_username</td><td>Username of the root user. DB user name must contain only alphanumeric characters</td></tr><tr><td>domain_name</td><td>The domain url for the UI</td></tr><tr><td>terraform_state_bucket_name</td><td>Name to be given to S3 bucket which will be created in terraform. This bucket will store the terraform state.</td></tr></tbody></table>
 
 ### Configure Application Secrets
 
 1. Go to `deploy-as-code/charts/environments`.
 2. Open `env-secrets.yaml`.
-3. Enter `db_password` and `ssh_private_key (in git-sync section)`. _(please make sure that the indentation is same as the sample value given for_ `ssh_private_key`_)_
+3. Enter `db_password` and `ssh_private_key (in git-sync section)`. _(please make sure that the indentation is the same as the sample value given for_ `ssh_private_key`_)_
 4. Add the public key to your [GitHub account](https://www.youtube.com/watch?v=9C7\_jBn9XJ0).
 
-### &#x20;Trigger Installation
+### Trigger Installation
 
 After entering all the details, push these changes to the remote GitHub repository (in the same DIGIT-2.9LTS branch). Open the `Actions` tab in your GitHub account to view the workflow. You should see that the workflow has started, and the pipelines are completed successfully.
 
@@ -161,7 +144,7 @@ aws configure list --profile <profile_name>
 
 <figure><img src="../../.gitbook/assets/image (316).png" alt=""><figcaption></figcaption></figure>
 
-Run the following command to get kubernetes configuration:
+Run the following command to get Kubernetes configuration:
 
 ```
 # Run the below command and give the respective region-code and the cluster name
@@ -184,7 +167,7 @@ Once the deployment is done get the CNAME of the _nginx-ingress-controller:_
 kubectl get svc ingress-nginx-controller -n backbone -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
 ```
 
-The output of this will be the something like this:
+The output of this will be something like this:
 
 &#x20;[ae210873da6ff4c03bde2ad22e18fe04-233d3411.ap-south-1.elb.amazonaws.com](http://ae210873da6ff4c03bde2ad22e18fe04-233d3411.ap-south-1.elb.amazonaws.com/)&#x20;
 
@@ -244,6 +227,3 @@ on:
         required: true
         default: ''  
 ```
-
-
-
