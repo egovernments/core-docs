@@ -1,5 +1,5 @@
 ---
-description: DIGIT Sandbox for Demo and Development
+description: DIGIT Sandbox for demo and development
 ---
 
 # Sandbox
@@ -12,7 +12,7 @@ Access DIGIT tool is an open demo instance designed to provide you with first-ha
 
 ### **Access DIGIT in Citizen Role**
 
-* [x] [Click here](https://staging.digit.org/digit-ui/citizen) to access DIGIT as Citizen.&#x20;
+* [x] [Click here](https://staging.digit.org/digit-ui/citizen) to access DIGIT as a Citizen.&#x20;
 * [x] Provide a mobile number for OTP verification. Make sure you provide a mobile number other than the one shared in the request [form](https://egov.org.in/access-digit/) to generate demo credentials.
 * [x] Select City as <mark style="color:blue;">**City B**</mark> for all transactions.
 
@@ -30,9 +30,9 @@ Access DIGIT tool is an open demo instance designed to provide you with first-ha
 
 We have added user assistance docs below to help you learn more about DIGIT modules and the use-case scenarios supported by each.
 
-* [TL Demo Script](broken-reference)
-* [OBPS Demo Script](broken-reference)
-* [PGR Demo Script](broken-reference)
+* [TL Demo Script](https://urban.digit.org/products/modules/trade-license-tl/tl-demo-script)
+* [OBPS Demo Script](https://urban.digit.org/products/modules/online-building-plan-approval-system-obpas/obpas-demo-script)
+* [PGR Demo Script](https://urban.digit.org/products/modules/public-grievances-and-redressal/pgr-demo-script)
 
 </details>
 
@@ -51,7 +51,7 @@ Once you get the API access keys, follow the step-by-step[ Developer Guide](../g
 ## Feedback
 
 {% hint style="info" %}
-We would love to get your feedback and suggestions on the Access DIGIT experience to help us build on this!
+We would love your feedback and suggestions on the Access DIGIT experience to help us build on this!
 
 [**Click here**](https://docs.google.com/forms/d/e/1FAIpQLSeNxbjGmCeS6Q-\_2703SV8D4s-1kYyvZrHJMa\_WLpk41KmScg/viewform) **to enter your feedback.**
 
