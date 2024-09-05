@@ -5,7 +5,7 @@
 Follow the instructions on this page to build and deploy applications on DIGIT.
 
 {% hint style="info" %}
-eGov recommends [CD/CI be set up](../../../guides/installation-guide/infrastructure-setup/ci-cd-set-up/) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Run the [CI installer to setup DIGIT CD/CI](../../../guides/installation-guide/infrastructure-setup/ci-cd-set-up/#setup-details) prior to developing on DIGIT.&#x20;
+eGov recommends [CD/CI be set up](../../../guides/installation-guide/infrastructure-setup/ci-cd-set-up/) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Run the [CI installer to setup DIGIT CD/CI](../../operations-guide/setup-jenkins-docker-way.md) before developing on DIGIT.&#x20;
 {% endhint %}
 
 ## **Steps**
@@ -20,11 +20,11 @@ eGov recommends [CD/CI be set up](../../../guides/installation-guide/infrastruct
 
 **Step 5**: Most likely, you will be working on a feature branch for this module and not on "master". Click on "Build with parameters" for the module and search for the branch name in the filter box. Select the feature branch you are working on and then click "Build". This will make sure that Jenkins builds the module pulling code from the branch you prefer.
 
-**Step 6:** Click on "Console Output". If the build pipeline and docker registries have been set up properly as part of CD/CI setup, the docker image will be built and pushed to the registry. The console output will have the docker image ID for the module. Scroll down to the bottom and copy the following information -&#x20;
+**Step 6:** Click on "Console Output". If the build pipeline and docker registries have been set up properly as part of the CD/CI setup, the docker image will be built and pushed to the registry. The console output will have the docker image ID for the module. Scroll down to the bottom and copy the following information -&#x20;
 
 ![Image name of the build](../../../.gitbook/assets/buildInfo.png)
 
-**Step 7:** After copying the docker image ID, go to your Jenkins server home page, click on "Deployments" and scroll to find your deployment environment. Deployment environments have the template of **deploy-to-\<env name>** and get created as part of CD/CI setup. If multiple environments have been configured, you will see multiple **deploy-to-\*** entries.&#x20;
+**Step 7:** After copying the docker image ID, go to your Jenkins server home page, click on "Deployments" and scroll to find your deployment environment. Deployment environments have the template of **deploy-to-\<env name>** and get created as part of the CD/CI setup. If multiple environments have been configured, you will see multiple **deploy-to-\*** entries.&#x20;
 
 **Step 8:** It is best practice to always test out any new module in the dev environment. Select the environment you would like to deploy to and click on the "Run" icon on the right-hand side of the page against the environment. In the Images text box, paste the copied docker image ID and click "Build". Refer to the screenshot below.
 
