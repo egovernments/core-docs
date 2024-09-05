@@ -54,6 +54,6 @@ labelKey: "TL\_NEW\_TRADE\_DETAILS\_TRADE\_UNIT\_HEADER"
 
 #### Doc Links <a href="#doc-links" id="doc-links"></a>
 
-| Title                                                                                                        | Link                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adding New Language to DIGIT System. You can refer to the link provided for how languages are added in DIGIT | [Adding New Language](https://urban.digit.org/platform/configure-digit/configuring-digit-services/configuring-common-services/setting-up-a-language/adding-a-language) |
+| Title                                                                                                             | Link                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Adding new language to the DIGIT System. Refer to the link provided to find out how languages are added in DIGIT. | [Adding New Language](https://urban.digit.org/platform/configure-digit/configuring-digit-services/configuring-common-services/setting-up-a-language/adding-a-language) |
