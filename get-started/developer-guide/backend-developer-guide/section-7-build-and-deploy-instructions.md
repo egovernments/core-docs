@@ -5,7 +5,7 @@
 Follow the instructions on this page to build and deploy applications on DIGIT.
 
 {% hint style="info" %}
-eGov recommends [CD/CI be set up](broken-reference) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Run the [CI installer to setup DIGIT CD/CI](broken-reference) prior to developing on DIGIT.&#x20;
+eGov recommends [CD/CI be set up](../../../guides/installation-guide/infrastructure-setup/ci-cd-set-up/) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Run the [CI installer to setup DIGIT CD/CI](../../../guides/installation-guide/infrastructure-setup/ci-cd-set-up/#setup-details) prior to developing on DIGIT.&#x20;
 {% endhint %}
 
 ## **Steps**
