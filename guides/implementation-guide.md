@@ -1,8 +1,8 @@
 # Implementation Guide
 
-### Reimagining & Building for new domains on the DIGIT platform
+### Reimagining & building for new domains on the DIGIT platform
 
-1. Install the DIGIT core using the [Installation Guide](../get-started/installation-guide/). It is not recommended to customize DIGIT core platform components. Please raise issues or PRs for bug fixes. Raise questions in the DIGIT discussion board.&#x20;
+1. Install the DIGIT core using the [Installation Guide](../get-started/installation-guide/). Customizing DIGIT core platform components is not recommended. Please raise issues or PRs for bug fixes on the [DIGIT discussion board.](https://github.com/egovernments/Digit-Core/discussions)&#x20;
 2. Deploy the DIGIT UI build from the published [service build updates.](../accelerators/ui-frameworks/service-build-updates.md)
 3. Verify the deployment by setting up the Public Grievances Redressal (PGR) (optional). Or ensure that all services are running in the Kubernetes cluster.&#x20;
 4. Verify that the Citizen portal is available at `<hostname>/digit-ui/citizen`.&#x20;
