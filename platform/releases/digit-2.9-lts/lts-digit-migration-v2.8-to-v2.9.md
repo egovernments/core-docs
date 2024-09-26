@@ -38,7 +38,7 @@ go run main.go deploy -e <env_file> <image_name>
 
 * Note: If you encounter this (**`V20180731215512__alter_eg_role_address_fk.sql or version V20180731215512`**) flyway migration issue in **egov-user** service, follow these steps to resolve it
   * Connect to postgres pod of your server since we need to run few query to resolve it. &#x20;
-  * Run this SQL query : `DELETE FROM egov_user_schema_version where version = '20180731215512';`
+  * Run this SQL query : `DELETE FROM egov_user_schema where version = '20180731215512';`
   * Now run this SQL query :  `ALTER TABLE eg_userrole DROP CONSTRAINT eg_userrole_userid_fkey;`
   * Restart the egov-user pod after successfullt executing these queries.
 
