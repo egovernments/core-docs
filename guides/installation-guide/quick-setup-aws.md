@@ -24,7 +24,7 @@ Secrets should be encrypted using SOPS. Currently, the private repo will be requ
 * AWS account with administrative privilege
 * Github account
 
-## Installation
+{% include "../../.gitbook/includes/installation (1).md" %}
 
 ### Create IAM User and generate Access Key & Secret Key&#x20;
 
