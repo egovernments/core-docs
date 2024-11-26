@@ -37,7 +37,7 @@ The **Application** is present among the core group of applications available in
 _**NOTE**_ : The application needs at least one type of storage available for it to store the files either file-storage, AWS S3 or azure. More storage types can be added by extending the application interface also.
 
 \
-_**IMPORTANT**_ : To work work any of the file storage there are some **application properties** which needs to be configured.
+&#xNAN;_**IMPORTANT**_ : To work work any of the file storage there are some **application properties** which needs to be configured.
 
 \
 **DiskStorage:**

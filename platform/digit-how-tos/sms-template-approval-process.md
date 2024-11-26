@@ -38,9 +38,9 @@ Click on the **Add** button to go to the next section.
 Note:\
 a) For placeholder text (dynamic text in message) mention **{#var#}** in the message. Each **{#var#}** can contain 0-30 characters. If dynamic text is supposed to cross 30 characters in length, then two **{#var#}** have to be mentioned side by side. Now the dynamic text can be up to 60 characters.\
 **Example**:- _Hi Citizen,_\
-_Click on this link to pay the bill {#var#}{#var#}_\
+&#xNAN;_&#x43;lick on this link to pay the bill {#var#}{#var#}_\
 \
-_EGOVS_\
+&#xNAN;_&#x45;GOVS_\
 \
 b) Mentioning EGOVS at the end of every message is mandatory.\
 \

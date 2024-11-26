@@ -111,7 +111,7 @@ The workflow should always start from the null state as the service treats new a
 {% endcode %}
 
 In the action object whatever nextState is defined, the application will be sent to that state. It can be to another forward state or even some backward state from where the application has already passed\
-_(generally, such actions are named SENDBACK)_
+&#xNAN;_(generally, such actions are named SENDBACK)_
 
 SENDBACKTOCITIZEN is a special keyword for an action name. This action sends back the application to the citizen’s inbox for him to take action. A new State should be created on which Citizen can take action and should be the nextState of this action. While calling this action from the module _assignees_ should be enriched by the module with the UUIDs of the owners of the application
 

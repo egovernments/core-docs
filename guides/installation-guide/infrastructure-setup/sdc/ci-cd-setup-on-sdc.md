@@ -60,7 +60,7 @@ Run and follow instructions on all nodes.
 
 ### Install Python <a href="#install-python" id="install-python"></a>
 
-Ansible needs Python to be installed on all the machines**.**
+Ansible needs Python to be installed on all the machine&#x73;**.**
 
 `apt-get update && apt-get install python3-pip -y`
 
@@ -165,7 +165,7 @@ loadbalancer_apiserver:
 
 * Deploy Kubespray with Ansible Playbook - run the playbook as Ubuntu
   * The option `--become` is required, for example writing SSL keys in /etc/, installing packages and interacting with various system daemons.
-  * <mark style="color:red;">**Note: Without**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**`--become`**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**- the playbook will fail to run!**</mark>
+  * <mark style="color:red;">**Note: Without**</mark><mark style="color:red;">**&#x20;**</mark><mark style="color:red;">**`--become`**</mark><mark style="color:red;">**&#x20;**</mark><mark style="color:red;">**- the playbook will fail to run!**</mark>
 
 ```
 ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=ubuntu cluster.yml

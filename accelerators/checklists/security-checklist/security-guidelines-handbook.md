@@ -461,7 +461,7 @@ private void setId(final Integer id) {
 
 **URL Redirection to Untrusted Site ('Open Redirect')**\
 It was observed that the application redirects the user’s browser to a URL provided in a user request, without proper validation of the user input.\
-_So it is recommended not to allow external input to modify the target URL. Perform a strict validation on the external input to ensure that the final URL is valid, appropriate for the application, and authorized_
+&#xNAN;_&#x53;o it is recommended not to allow external input to modify the target URL. Perform a strict validation on the external input to ensure that the final URL is valid, appropriate for the application, and authorized_
 
 ```
 window.open(validateAndReturn(strDest), "myresults");
@@ -499,7 +499,7 @@ _It is recommended to set attribute exported=false or remove the intent-filter a
 **Potential code injection via WebView.addJavaScriptInterface()**
 
 Exposing Java objects to JavaScript could have negative security implications, such as code injection (allowing access to native phone functionality like sending SMS to premium numbers, accessing account information and sensitive data, etc.) Such code injection may, for example, do something like this (to launch a system command): exposedObj.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec(cmd)\
-_To avoid this security issue, you may remove addJavaScriptInterface() when possible_
+&#xNAN;_&#x54;o avoid this security issue, you may remove addJavaScriptInterface() when possible_
 
 _Either_
 
@@ -520,7 +520,7 @@ _(3) upgrade to API level 17 or higher and place a @JavascriptInterface annotati
 
 The application allows the user input to control Intent parameters that could enable an attacker to control the behaviour of the subsequent activity\
 If untrusted input is inserted into certain parts of an Android Intent, without proper sanitization, a malicious user or app could force, via the tainted Intent, the execution of unintended code or inject malicious data in the vulnerable app. Certain Intent properties could change the expected semantics of the Intent, like setAction(), setClass(), setClassName(), or setComponent(). If the Intent is used to start an Activity or Service, for example, the attacker may change the expected element launched, with potential nefarious consequences\
-_It is recommended to validate untrusted input that does not proceed from app-controlled resources, and in particular user interface fields and other Intents coming from other apps._
+&#xNAN;_&#x49;t is recommended to validate untrusted input that does not proceed from app-controlled resources, and in particular user interface fields and other Intents coming from other apps._
 
 ```
 	void loadView(String url, Boolean tab) {
@@ -548,7 +548,7 @@ _It is recommended to validate untrusted input that does not proceed from app-co
 **Do not release debuggable apps**
 
 It was observed that android:debuggable is set to true. Android allows the attribute android:debuggable to be set to true in the manifest so that the app can be debugged. By default this attribute is disabled, i.e., it is set to false, but it may be set to true to help with debugging during the development of the app. However, an app should never be released with this attribute set to true as it enables users to gain access to details of the app that should be kept secure.\
-_The best practice is to set android:debuggable="false">_
+&#xNAN;_&#x54;he best practice is to set android:debuggable="false">_
 
 **Enabling JavaScript is not recommended**\
 WebView consumes web content that can include HTML and JavaScript from an external URL, improper use can introduce common web security issues such as cross-site-scripting (XSS, or JavaScript injection).

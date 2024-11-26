@@ -48,7 +48,7 @@ public class BirthApplicationValidator {
 ```
 
 {% hint style="info" %}
-**NOTE:** For the sake of simplicity the above**-**mentioned validations are implemented. Required validations will vary on a case-to-case basis.
+**NOTE:** For the sake of simplicity the abov&#x65;**-**&#x6D;entioned validations are implemented. Required validations will vary on a case-to-case basis.
 {% endhint %}
 
 ## **Enrichment Layer**

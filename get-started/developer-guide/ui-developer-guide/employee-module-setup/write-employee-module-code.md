@@ -56,11 +56,7 @@ const componentsToRegister = {
 
 * Hurray! Now you can see the Sample Card with 2 links on the screen as visible in the below screenshot:
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt="" width="204"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (7).png" alt="" width="204"><figcaption></figcaption></figure></div>
 
 Nothing is rendered when clicking on the label. We need to set up the routes to fix this.
 
@@ -104,7 +100,7 @@ if (isLoading) {
 ```
 
 * The Sample Card is now visible with routes to the Respective Pages.
-* One link is for the **Create Individual s**creen**,** and the other is for the I**ndividual Search**. You can view the code for the Create screen or set up the Create page by referring to the link here - [Create-Screen](creation-of-new-create-form-create-screen.md)
+* One link is for the **Create Individual s**cree&#x6E;**,** and the other is for the I**ndividual Search**. You can view the code for the Create screen or set up the Create page by referring to the link here - [Create-Screen](creation-of-new-create-form-create-screen.md)
 
 </details>
 

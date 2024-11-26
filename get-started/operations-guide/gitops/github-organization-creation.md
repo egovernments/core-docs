@@ -20,9 +20,9 @@ An organization are shared accounts where businesses and open source projects ca
 ### GitHub account creation:
 
 * Go to [https://github.com/](https://github.com/)
-* After completing the process Your GitHub account will be created**.**
+* After completing the process Your GitHub account will be create&#x64;**.**
 * Click on **Sign Up.** Create your account by using **email and password.** Then add **Username.**
-* After completing the process Your GitHub account will be created**.**
+* After completing the process Your GitHub account will be create&#x64;**.**
 
 ### Creating Organization in GitHub:
 

@@ -77,7 +77,7 @@ https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/environ
 
 <figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
-* [x] If you are using the DIGIT-DevOps repo's **release** branch for deployment, this step is optional.  Other branches require job-name-specific conditions in seed-deployment-jobs helm/charts/jenkins/values.yaml**.** Add your respective **repo, branch** names
+* [x] If you are using the DIGIT-DevOps repo's **release** branch for deployment, this step is optional.  Other branches require job-name-specific conditions in seed-deployment-jobs helm/charts/jenkins/values.yam&#x6C;**.** Add your respective **repo, branch** names
 
 1. **Repo**: To which repository the deployment job be added.
 2. **Branch**: Usually master branch.

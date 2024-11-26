@@ -377,4 +377,5 @@
 
 ***
 
-* [.Well-known](.well-known.md)
+* [.Well-known](.well-known/README.md)
+  * [Funding Manifest URLs](.well-known/funding-manifest-urls.md)
