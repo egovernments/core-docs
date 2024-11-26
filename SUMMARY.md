@@ -378,4 +378,4 @@
 ***
 
 * [.Well-known](.well-known/README.md)
-  * [Funding Manifest URLs](.well-known/funding-manifest-urls.md)
+  * [funding manifest urls](.well-known/funding-manifest-urls.md)
