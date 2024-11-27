@@ -378,5 +378,4 @@
 ***
 
 * [.Well-known](.well-known/README.md)
-  * [funding manifest urls](.well-known/funding-manifest-urls.md)
-  * [   ](https://egov.org.in/.well-known/funding-manifest-urls)
+  * [   funding-manifest-urls](https://egov.org.in/.well-known/funding-manifest-urls)

@@ -24,8 +24,6 @@ Secrets should be encrypted using SOPS. Currently, the private repo will be requ
 * AWS account with administrative privilege
 * Github account
 
-{% include "../../.gitbook/includes/installation (1).md" %}
-
 ### Create IAM User and generate Access Key & Secret Key&#x20;
 
 * _Skip this step if you already have access and a secret key_
@@ -86,7 +84,7 @@ The _private key_ will look like:
 
 > \-----BEGIN RSA PRIVATE KEY-----\
 > MIIEpAIBAAKCAQEAue4+1\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*K7mGXRIv6enEP4lN/y9i287wsNBpg+IDGjIV\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\
-> \+zrt79wBgG5vlGMoT1hysRDpxNNlDdimE6G8OHaCj6e5cwhXrMt1swKFUwVsZaFx\
+> +zrt79wBgG5vlGMoT1hysRDpxNNlDdimE6G8OHaCj6e5cwhXrMt1swKFUwVsZaFx\
 > UMv1xVFU/OsrJ8v8\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*Sd74a4d2h28pIEHNbrlvAVn7Zt9IDC\
 > kgske+VBY+X0D2en1l8bt3Vdnn5xgcDQsPmp6GdoRfE2luJ6lAe+mdkCgYEA0wUj\
 > tUHRH9sI3X86wZVREt\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*poTy6hNQr9IT2TsBckuN/qqockBR/j+iRap7lec3tJM\
@@ -110,7 +108,7 @@ And the _public key_ will look like the below:
 1. Go to `deploy-as-code/charts/environments`.
 2. Open `env-secrets.yaml`.
 3. Enter `db_password` and `ssh_private_key (in git-sync section)`. _(please make sure that the indentation is the same as the sample value given for_ `ssh_private_key`_)_
-4. Add the public key to your [GitHub account](https://www.youtube.com/watch?v=9C7\_jBn9XJ0).
+4. Add the public key to your [GitHub account](https://www.youtube.com/watch?v=9C7_jBn9XJ0).
 
 ### Trigger Installation
 
@@ -204,11 +202,7 @@ You can observe the progress of the destruction job in the actions window.
 **Note:** For DIGIT configurations created using the master branch.
 {% endhint %}
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-03-07 at 11.13.55 AM.png" alt=""><figcaption><p>Destroying the created DIGIT Infrastructure via Terraform</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot 2024-03-07 at 11.13.55 AM.png" alt=""><figcaption><p>Destroying the created DIGIT Infrastructure via Terraform</p></figcaption></figure></div>
 
 If DIGIT is installed from a branch other than the main one, ensure that the branch name is correctly specified in the workflow file.  For instance, if the installation is done from the **digit-install** branch, the following snippet should be updated to reflect that.
 
