@@ -204,6 +204,11 @@
           * [Checkbox](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-core-flutter-components/checkbox.md)
           * [Toast](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-core-flutter-components/toast.md)
           * [Info Card](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-core-flutter-components/info-card.md)
+        * [Digit UI Components0.0.2](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.0.2/README.md)
+          * [Atom](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.0.2/atom/README.md)
+            * [Accordion](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.0.2/atom/accordion.md)
+            * [Copy of Accordion](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.0.2/atom/copy-of-accordion.md)
+          * [Molecule](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.0.2/molecule.md)
     * [DIGIT UI Development Pre-requisites](get-started/developer-guide/ui-developer-guide/digit-ui-development-pre-requisites.md)
     * [UI Configuration (DevOps)](get-started/developer-guide/ui-developer-guide/ui-configuration-devops.md)
     * [Local Development Setup](get-started/developer-guide/ui-developer-guide/local-development-setup.md)
@@ -378,4 +383,4 @@
 ***
 
 * [.Well-known](.well-known/README.md)
-  * [   funding-manifest-urls](https://egov.org.in/.well-known/funding-manifest-urls)
+  * [funding-manifest-urls](https://egov.org.in/.well-known/funding-manifest-urls)
