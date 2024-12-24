@@ -8,7 +8,7 @@ description: Provision infra for DIGIT on AWS using Terraform
 
 * [AWS deployment basics](./#overview)
 * [Pre-reads before deployment](./#pre-reads)
-* [Steps to install ](./#prerequisites)
+* [Steps to install](./#prerequisites)
 
 ## Overview
 
@@ -23,10 +23,6 @@ description: Provision infra for DIGIT on AWS using Terraform
 
 {% content-ref url="1.-pre-requisites.md" %}
 [1.-pre-requisites.md](1.-pre-requisites.md)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="2.-setup-aws-account.md" %}
