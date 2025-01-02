@@ -1,8 +1,8 @@
 ---
-description: DIGIT Sandbox for demo and development
+description: Access the DIGIT platform, explore and play around
 ---
 
-# Sandbox
+# How To Access DIGIT
 
 Access DIGIT tool is an open demo instance designed to provide you with first-hand experience of the DIGIT platform. Navigate the DIGIT platform and explore its various features, workflows and applications.
 
@@ -10,29 +10,29 @@ Access DIGIT tool is an open demo instance designed to provide you with first-ha
 
 <summary>How To Access DIGIT</summary>
 
-### **Access DIGIT in Citizen Role**
+#### **Access DIGIT in Citizen Role**
 
-* [x] [Click here](https://staging.digit.org/digit-ui/citizen) to access DIGIT as a Citizen.&#x20;
+* [x] [Click here](https://staging.digit.org/digit-ui/citizen) to access DIGIT as a Citizen.
 * [x] Provide a mobile number for OTP verification. Make sure you provide a mobile number other than the one shared in the request [form](https://egov.org.in/access-digit/) to generate demo credentials.
 * [x] Select City as <mark style="color:blue;">**City B**</mark> for all transactions.
 
-### **Access DIGIT in Employee Role**
+#### **Access DIGIT in Employee Role**
 
-* [x] [Click here](https://staging.digit.org/employee/language-selection) to access DIGIT in an employee role.            &#x20;
-* [x] Use the credentials to log in as an employee. _(If you do not have the credentials, visit_ [_this page_](https://egov.org.in/access-digit/) _to generate your role-based credentials)_.                      &#x20;
+* [x] [Click here](https://staging.digit.org/employee/language-selection) to access DIGIT in an employee role.
+* [x] Use the credentials to log in as an employee. _(If you do not have the credentials, visit_ [_this page_](https://egov.org.in/access-digit/) _to generate your role-based credentials)_.
 * [x] Select City as <mark style="color:blue;">**City B**</mark>.
 
 </details>
 
 <details>
 
-<summary>Demo Scripts</summary>
+<summary>User Assistance Manuals</summary>
 
-We have added user assistance docs below to help you learn more about DIGIT modules and the use-case scenarios supported by each.
+Refer to our user assistance manuals below to help you learn more about DIGIT modules and the features or functionalities supported by each.
 
-* [TL Demo Script](https://urban.digit.org/products/modules/trade-license-tl/tl-demo-script)
-* [OBPS Demo Script](https://urban.digit.org/products/modules/online-building-plan-approval-system-obpas/obpas-demo-script)
-* [PGR Demo Script](https://urban.digit.org/products/modules/public-grievances-and-redressal/pgr-demo-script)
+* [Local Business License Issuing User Manual](https://docs.digit.org/local-governance/local-governance-product-suite/local-governance-stack/trade-license-tl/tl-user-manual)
+* [Residential Construction Permit System User Manual](https://docs.digit.org/local-governance/local-governance-product-suite/local-governance-stack/online-building-plan-approval-system-obpas/obpas-user-manual)
+* [Citizen Complaint Resolution User Manual](https://docs.digit.org/local-governance/local-governance-product-suite/local-governance-stack/public-grievances-and-redressal/pgr-user-manual)
 
 </details>
 
@@ -40,7 +40,7 @@ We have added user assistance docs below to help you learn more about DIGIT modu
 
 <summary>Developer Access</summary>
 
-The Sandbox environment allows users to develop a DIGIT service fast. The DIGIT core services are already set up in the sandbox environment.&#x20;
+The Sandbox environment allows users to develop a DIGIT service fast. The DIGIT core services are already set up in the sandbox environment.
 
 To access the DIGIT services you need an API Key and Secret. We are working on a self-service portal where you can register and get the keys. In the meantime, you can send an email to partner@egov.org.in to get the API access keys.
 
@@ -53,7 +53,7 @@ Once you get the API access keys, follow the step-by-step[ Developer Guide](../g
 {% hint style="info" %}
 We would love your feedback and suggestions on the Access DIGIT experience to help us build on this!
 
-[**Click here**](https://docs.google.com/forms/d/e/1FAIpQLSeNxbjGmCeS6Q-\_2703SV8D4s-1kYyvZrHJMa\_WLpk41KmScg/viewform) **to enter your feedback.**
+[**Click here**](https://docs.google.com/forms/d/e/1FAIpQLSeNxbjGmCeS6Q-_2703SV8D4s-1kYyvZrHJMa_WLpk41KmScg/viewform) **to enter your feedback.**
 
 For any further queries or feedback please write to us at [**partner@egov.org.in**](mailto:partner@egov.org.in)
 {% endhint %}
