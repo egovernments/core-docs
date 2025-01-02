@@ -62,4 +62,4 @@ For any further queries or feedback please write to us at [**partner@egov.org.in
 
 Click on the page link below :arrow\_down: to request a walkthrough of the DIGIT platform and specific applications.
 
-{% embed url="https://egov.org.in/digit-demo/" %}
+{% embed url="https://digit.org/demo/" %}
