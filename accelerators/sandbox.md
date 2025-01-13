@@ -6,6 +6,8 @@ DIGIT Sandbox provides a self-service platform to rapidly try out, build, test, 
 * **Build** new products and services in no time with DIGIT Sandbox.
 * **Deploy** products and solutions built with DIGIT Sandbox easily.
 
+[Click here to explore the Sandbox details](https://docs.digit.org/core/sandbox).
+
 ## Developer Access
 
 The Sandbox environment allows users to develop a DIGIT service fast. The DIGIT core services are already set up in the sandbox environment.
