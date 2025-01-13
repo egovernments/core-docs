@@ -23,9 +23,9 @@ Once you get the API access keys, follow the step-by-step[ Developer Guide](../g
 [Click here to access Sandbox.](https://sandbox.digit.org/sandbox-ui/user/sign-up)
 
 {% hint style="info" %}
-Note that the current Sandbox environment allows access to PGR and HRMS modules.&#x20;
+Note that the current Sandbox environment supports access to PGR and HRMS modules only.&#x20;
 
-[**Access DIGIT** ](https://urban.digit.org/general/access-digit)tool enables you to explore other applications built for Local Governance.
+The [**Access DIGIT** ](https://urban.digit.org/general/access-digit)tool enables you to explore other applications built for Local Governance.
 {% endhint %}
 
 ## Demo Request
