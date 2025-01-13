@@ -367,7 +367,7 @@
     * [Routing Traffic](accelerators/concepts/deployment-key-concepts/routing-traffic.md)
     * [Backbone Deployment](accelerators/concepts/deployment-key-concepts/backbone-deployment.md)
 * [API Playground](https://digit-api.apidog.io/)
-* [Access DIGIT](accelerators/sandbox.md)
+* [Sandbox](accelerators/sandbox.md)
 * [Checklists](accelerators/checklists/README.md)
   * [API Checklist](accelerators/checklists/api-checklist.md)
   * [Security Checklist](accelerators/checklists/security-checklist/README.md)

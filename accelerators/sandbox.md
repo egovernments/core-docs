@@ -1,44 +1,12 @@
----
-description: Access the DIGIT platform, explore and play around
----
+# Sandbox
 
-# How To Access DIGIT
+DIGIT Sandbox provides a self-service platform to rapidly try out, build, test, and deploy scalable solutions leveraging DIGIT’s open-source technology stack.
 
-Access DIGIT tool is an open demo instance designed to provide you with first-hand experience of the DIGIT platform. Navigate the DIGIT platform and explore its various features, workflows and applications.
+* **Explore** DIGIT products, modules, and offerings more quickly with Sandbox.
+* **Build** new products and services in no time with DIGIT Sandbox.
+* **Deploy** products and solutions built with DIGIT Sandbox easily.
 
-<details>
-
-<summary>How To Access DIGIT</summary>
-
-#### **Access DIGIT in Citizen Role**
-
-* [x] [Click here](https://staging.digit.org/digit-ui/citizen) to access DIGIT as a Citizen.
-* [x] Provide a mobile number for OTP verification. Make sure you provide a mobile number other than the one shared in the request [form](https://egov.org.in/access-digit/) to generate demo credentials.
-* [x] Select City as <mark style="color:blue;">**City B**</mark> for all transactions.
-
-#### **Access DIGIT in Employee Role**
-
-* [x] [Click here](https://staging.digit.org/employee/language-selection) to access DIGIT in an employee role.
-* [x] Use the credentials to log in as an employee. _(If you do not have the credentials, visit_ [_this page_](https://egov.org.in/access-digit/) _to generate your role-based credentials)_.
-* [x] Select City as <mark style="color:blue;">**City B**</mark>.
-
-</details>
-
-<details>
-
-<summary>User Assistance Manuals</summary>
-
-Refer to our user assistance manuals below to help you learn more about DIGIT modules and the features or functionalities supported by each.
-
-* [Local Business License Issuing User Manual](https://docs.digit.org/local-governance/local-governance-product-suite/local-governance-stack/trade-license-tl/tl-user-manual)
-* [Residential Construction Permit System User Manual](https://docs.digit.org/local-governance/local-governance-product-suite/local-governance-stack/online-building-plan-approval-system-obpas/obpas-user-manual)
-* [Citizen Complaint Resolution User Manual](https://docs.digit.org/local-governance/local-governance-product-suite/local-governance-stack/public-grievances-and-redressal/pgr-user-manual)
-
-</details>
-
-<details>
-
-<summary>Developer Access</summary>
+## Developer Access
 
 The Sandbox environment allows users to develop a DIGIT service fast. The DIGIT core services are already set up in the sandbox environment.
 
@@ -46,20 +14,22 @@ To access the DIGIT services you need an API Key and Secret. We are working on a
 
 Once you get the API access keys, follow the step-by-step[ Developer Guide](../get-started/developer-guide/backend-developer-guide/) to build a new DIGIT service.
 
-</details>
+## Sandbox Access
 
-## Feedback
+[Click here to access Sandbox.](https://sandbox.digit.org/sandbox-ui/user/sign-up)
 
 {% hint style="info" %}
-We would love your feedback and suggestions on the Access DIGIT experience to help us build on this!
+Note that the current Sandbox environment allows access to PGR and HRMS modules.&#x20;
 
-[**Click here**](https://docs.google.com/forms/d/e/1FAIpQLSeNxbjGmCeS6Q-_2703SV8D4s-1kYyvZrHJMa_WLpk41KmScg/viewform) **to enter your feedback.**
-
-For any further queries or feedback please write to us at [**partner@egov.org.in**](mailto:partner@egov.org.in)
+[**Access DIGIT** ](https://urban.digit.org/general/access-digit)tool enables you to explore other applications built for Local Governance.
 {% endhint %}
 
 ## Demo Request
 
-Click on the page link below :arrow\_down: to request a walkthrough of the DIGIT platform and specific applications.
+**Feedback** - [**Click here**](https://docs.google.com/forms/d/e/1FAIpQLSeNxbjGmCeS6Q-_2703SV8D4s-1kYyvZrHJMa_WLpk41KmScg/viewform) **to enter your feedback.**
+
+**Partnership Queries** - For any further queries or feedback please write to us at [**partner@egov.org.in**](mailto:partner@egov.org.in)
+
+**Demo Request** - Click on the page link below :arrow\_down: to request a walkthrough of the DIGIT platform and specific applications.
 
 {% embed url="https://digit.org/demo/" %}
