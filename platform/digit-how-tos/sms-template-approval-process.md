@@ -38,9 +38,9 @@ Click on the **Add** button to go to the next section.
 Note:\
 a) For placeholder text (dynamic text in message) mention **{#var#}** in the message. Each **{#var#}** can contain 0-30 characters. If dynamic text is supposed to cross 30 characters in length, then two **{#var#}** have to be mentioned side by side. Now the dynamic text can be up to 60 characters.\
 **Example**:- _Hi Citizen,_\
-&#xNAN;_&#x43;lick on this link to pay the bill {#var#}{#var#}_\
+\&#xNAN;_Click on this link to pay the bill {#var#}{#var#}_\
 \
-&#xNAN;_&#x45;GOVS_\
+\&#xNAN;_EGOVS_\
 \
 b) Mentioning EGOVS at the end of every message is mandatory.\
 \
@@ -58,7 +58,7 @@ Once the template gets approved save the template ID and the message.
 Note: The below steps are to add approved templates in the SMS Country web portal. These steps might vary between service providers but the data required for any service provider would be the same.
 {% endhint %}
 
-**Step 6:** Enter the credentials to log into the SMS Country portal ([SMS Marketing Solution Provider | SMS & Voice Marketing APIs - SMSCountry](https://www.smscountry.com/Index.aspx?msg=Logged%20out%20successfully) ).
+**Step 6:** Enter the credentials to log into the SMS Country portal.
 
 {% hint style="info" %}
 Contact the HR manager for the credentials.
@@ -85,4 +85,4 @@ The DLT-approved template is added to the SMS Country portal and is ready to use
 Select the ISLanguage check box if the message is in any other language besides English.
 {% endhint %}
 
-**Step 9:** Repeat the process from **Step 7** to **Step 8** to add the approved template in the SMS Country portal.
+**Step 9:** Repeat **Step 7** and **Step 8** to add the approved template in the SMS Country portal.
