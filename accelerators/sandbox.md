@@ -3,11 +3,11 @@
 DIGIT Sandbox provides a self-service platform to rapidly try out, build, test, and deploy scalable solutions leveraging DIGIT’s open-source technology stack.
 
 * **Explore** DIGIT products, modules, and offerings more quickly with Sandbox.
-* **Build** _new products and services in no time with DIGIT Sandbox (work in progress)_
-* **Deploy** products and solutions built with DIGIT Sandbox easily.
+* **Build** new products and services in no time with DIGIT Sandbox. _(work in progress)_
+* **Deploy** products and solutions built with DIGIT Sandbox easily. _(work in progress)_
 
 {% hint style="info" %}
-**Note:** The Sandbox is currently a work in progress and offers limited functions including Complaints and Employee Management modules.&#x20;
+**Note:** The DIGIT Sandbox is currently a work in progress and offers limited functions including Complaints and Employee Management modules.&#x20;
 {% endhint %}
 
 [Click here to explore the Sandbox details](https://docs.digit.org/core/sandbox).
