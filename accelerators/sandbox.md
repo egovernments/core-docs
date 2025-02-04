@@ -17,7 +17,7 @@ DIGIT Sandbox provides a self-service platform to rapidly try out, build, test, 
 
 The Sandbox environment allows users to develop a DIGIT service fast. The DIGIT core services are already set up in the sandbox environment.
 
-To access the DIGIT services you need an API Key and Secret. We are working on a self-service portal where you can register and get the keys. In the meantime, you can send an email to partner@egov.org.in to get the API access keys.
+To access the DIGIT services you need an API Key and Secret. We are working on a self-service portal where you can register and get the keys. In the meantime, email partner@egov.org.in to get the API access keys.
 
 Once you get the API access keys, follow the step-by-step[ Developer Guide](../get-started/developer-guide/backend-developer-guide/) to build a new DIGIT service.
 {% endhint %}
@@ -27,7 +27,7 @@ Once you get the API access keys, follow the step-by-step[ Developer Guide](../g
 [Click here to access Sandbox.](https://sandbox.digit.org/sandbox-ui/user/sign-up)
 
 {% hint style="info" %}
-Note that the current Sandbox environment supports access to PGR and HRMS modules only.&#x20;
+Note that the current Sandbox environment only supports access to the Complaints and Employee Management modules.&#x20;
 
 The [**Access DIGIT** ](https://urban.digit.org/general/access-digit)tool enables you to explore other applications built for Local Governance.
 {% endhint %}
