@@ -3,8 +3,12 @@
 DIGIT Sandbox provides a self-service platform to rapidly try out, build, test, and deploy scalable solutions leveraging DIGIT’s open-source technology stack.
 
 * **Explore** DIGIT products, modules, and offerings more quickly with Sandbox.
-* **Build** new products and services in no time with DIGIT Sandbox.
+* **Build** _new products and services in no time with DIGIT Sandbox (work in progress)_
 * **Deploy** products and solutions built with DIGIT Sandbox easily.
+
+{% hint style="info" %}
+**Note:** The Sandbox is currently a work in progress and offers limited functions including Complaints and Employee Management modules.&#x20;
+{% endhint %}
 
 [Click here to explore the Sandbox details](https://docs.digit.org/core/sandbox).
 
@@ -30,7 +34,7 @@ The [**Access DIGIT** ](https://urban.digit.org/general/access-digit)tool enable
 
 ## Demo Request
 
-**Feedback** - [**Click here**](https://docs.google.com/forms/d/e/1FAIpQLSeNxbjGmCeS6Q-_2703SV8D4s-1kYyvZrHJMa_WLpk41KmScg/viewform) **to enter your feedback.**
+**Feedback** - [**Click here**](https://docs.google.com/forms/d/e/1FAIpQLSeNxbjGmCeS6Q-_2703SV8D4s-1kYyvZrHJMa_WLpk41KmScg/viewform) **to give your feedback.**
 
 **Partnership Queries** - For any further queries or feedback please write to us at [**partner@egov.org.in**](mailto:partner@egov.org.in)
 
