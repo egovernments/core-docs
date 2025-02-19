@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The guide walks you through the steps required to create and integrate a form within a micro-frontend architecture using the DIGIT framework. You will learn how to set up the form configuration, create a custom component, and integrate the form with backend APIs.&#x20;
+The guide walks you through the steps required to create and integrate a form within a micro-frontend architecture using the DIGIT framework. You will learn how to set up the form configuration, create a custom component, and integrate the form with backend APIs.
 
 ## Steps
 
@@ -13,9 +13,7 @@ The guide walks you through the steps required to create and integrate a form wi
 1. Create a form where users can enter all required information and submit the form.
 2. Update the Index.js file with routes.
 
-<!---->
-
-3. `Index.js` will import **FormcomposerV2**. Add the heading, label, and form components inside it. Import the configuration file containing the form schema mapping detail (refer to the code below) into the create screen.
+3) `Index.js` will import **FormcomposerV2**. Add the heading, label, and form components inside it. Import the configuration file containing the form schema mapping detail (refer to the code below) into the create screen.
 
 ```
 import { newConfig } from "../../configs/IndividualCreateConfig";
@@ -95,7 +93,7 @@ Reference for the create screen: [IndividualCreate.js](https://github.com/egover
 
 <summary>Filling in Config.js</summary>
 
-#### File Creation Path
+**File Creation Path**
 
 Create a file named `IndividualCreateConfig.js` in the following path:
 
@@ -228,7 +226,7 @@ const componentsToRegister = {
 <summary>Enable Module in the UI framework</summary>
 
 * Click on [http://localhost:3000/digit-ui/employee](http://localhost:3000/digit-ui/employee) to see the UI.
-* Access the create form screen by navigating to the URL below.&#x20;
+* Access the create form screen by navigating to the URL below.
 
 ```
 /sample/create-individual
@@ -248,7 +246,7 @@ We have completed the UI for the Employee module. Now, let's integrate it with t
 
 **Hooks**\
 We will implement custom hooks in our code to handle data transfers to the backend. These hooks will make API calls and format the responses accordingly.\
-Refer to the link - [Common Hooks](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/egsIWleSdyH9rMLJ8ShI/\~/changes/95/guides/developer-guide/ui-developer-guide/create-a-new-ui-module-package/common-hooks)
+Refer to the link - [Common Hooks](../create-a-new-ui-module-package/common-hooks.md)
 
 After setting up the backend service, we will use hooks or a service to send data to the backend upon form submission.
 
