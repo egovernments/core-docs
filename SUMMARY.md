@@ -207,7 +207,7 @@
         * [Digit UI Components0.2.0](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/README.md)
           * [Foundation](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/foundation/README.md)
             * [Typography](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/foundation/typography.md)
-            * [Color Pallete](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/foundation/color-pallete.md)
+            * [Colour Pallete](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/foundation/colour-pallete.md)
             * [Spacer](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/foundation/spacer.md)
           * [Atom](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/atom/README.md)
             * [Accordion](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/atom/accordion.md)

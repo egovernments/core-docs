@@ -60,7 +60,7 @@ DigitButton(
 
 <table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Label</strong><br>This property represents the text displayed inside the button. It is a required field and helps users understand the action that the button will trigger. The label should be concise and clear to communicate the button’s purpose effectively.<br></td><td><img src="../../../../../../../.gitbook/assets/Imagep1.png" alt=""></td></tr><tr><td><strong>Disabled</strong><br>The “isDisabled” property disables the button, preventing any user interaction. It also applies a disabled visual style (like graying out the button) to indicate that the button is not active.</td><td><img src="../../../../../../../.gitbook/assets/Imagep2.png" alt=""></td></tr><tr><td><strong>Icon</strong><br>The icon property specifies the name of the icon to be rendered inside the button. This helps provide a visual cue along with the button text. The icon placement can be either before or after the label based on the how the “Prefix” and “Suffix” properties are defined.</td><td><img src="../../../../../../../.gitbook/assets/Imagep3.png" alt=""></td></tr><tr><td><strong>Size</strong><br>The size property specifies the size of the button. You can choose between "large", "medium", and "small" to adjust the button's height and font size.</td><td><img src="../../../../../../../.gitbook/assets/Imagep4.png" alt=""></td></tr><tr><td><strong>Type</strong><br>The type property determines the HTML type attribute for the button, such as "submit", "button", or "actionButton". This is useful for form submission or defining button behavior in HTML forms.</td><td><img src="../../../../../../../.gitbook/assets/Imagep5.png" alt=""></td></tr></tbody></table>
 
-## Table of Properties
+## Properties Table
 
 Each design component offers a range of configurable options. These options are intentionally platform-agnostic, allowing implementations to adapt and tailor them to align with the specific requirements of the chosen framework.
 
@@ -98,7 +98,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 {% endtabs %}
 
-## Behaviors
+## Behaviours
 
 ***
 
@@ -117,9 +117,8 @@ Each design component offers a range of configurable options. These options are 
 
 ## Content Guidelines
 
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | <p><strong>Concise and actionable labels</strong></p><p>Button labels should be clear, concise, and action-oriented to help users understand their purpose instantly. Instead of words which are not verbs like "My Bills" or "Inbox," use specific phrases like "Download Bills " or "View Application" that tell users what will happen when clicked.   </p><p>Avoid unnecessary words that clutter the label—brevity improves readability and reduces cognitive load. Labels should also align with user expectations; for example, a delete action should say "Delete" instead of "Remove" if deletion is permanent.    </p> | ![](../../../../../../../.gitbook/assets/Imageb7.png) |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | <p><strong>Casing</strong></p><p>Use ‘Titlecase’ for buttons. This means capitalising the first letter of all words, except for articles and conjunctions. Eg. “Submit Feedback”, “Create Account”, “Learn More.”  </p><p>Title case enhances the emphasis of actions at the same time ensuring accessibility and readability. There can be exception to this casing definition if the action is a sentence.</p>                                                                                                                                                                                                                 | ![](../../../../../../../.gitbook/assets/Imageb8.png) |
 
 ## Change log
