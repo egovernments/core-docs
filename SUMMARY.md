@@ -204,7 +204,7 @@
           * [Checkbox](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-core-flutter-components/checkbox.md)
           * [Toast](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-core-flutter-components/toast.md)
           * [Info Card](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-core-flutter-components/info-card.md)
-        * [Digit UI Components0.2.0](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/README.md)
+        * [DIGIT UI Components v0.2.0](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/README.md)
           * [Foundation](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/foundation/README.md)
             * [Typography](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/foundation/typography.md)
             * [Colour Pallete](guides/developer-guide/ui-developer-guide/digit-ui/ui-components-standardisation/digit-ui-components0.2.0/foundation/colour-pallete.md)

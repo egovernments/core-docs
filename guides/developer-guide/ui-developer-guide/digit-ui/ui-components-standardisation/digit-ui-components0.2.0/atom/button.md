@@ -40,7 +40,7 @@ DigitButton(
 {% endtab %}
 
 {% tab title="Component Design" %}
-
+{% embed url="https://www.figma.com/design/sH2pLZBXZZ6c7LlfQwFFjR/Design-System?node-id=10013-14407&t=bXeR2K2cY0SyAPnC-0" %}
 {% endtab %}
 {% endtabs %}
 
