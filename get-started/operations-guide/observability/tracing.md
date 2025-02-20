@@ -2,23 +2,23 @@
 
 ## Pre-reads
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="broken-reference/" %}
+[broken-reference](broken-reference/)
 {% endcontent-ref %}
 
 This doc covers the steps on how to deploy an **OpenTelemetry** collector on Kubernetes. We will then use an OTEL instrumented (Go) **application** provided by OpenTelemetry to send traces to the **Collector**. From there, we will bring the trace data to a **Jaeger** **collector**. Finally, the traces will be visualised using the **Jaeger** **UI**.
 
 This image shows the flow between the **application**, OpenTelemetry **collector** and **Jaeger**.
 
-![](https://miro.medium.com/max/1400/1\*8wbA6DvV0jepbkNbsr8yag.png)
+![](https://miro.medium.com/max/1400/1*8wbA6DvV0jepbkNbsr8yag.png)
 
-> This OpenTelemetry [repository](https://github.com/open-telemetry/opentelemetry-go/tree/main/example/otel-collector) provides a complete demo on how you can deploy OpenTelemetry on Kubernetes, **we can use this as a starting point.**
+> This OpenTelemetry [repository](https://github.com/open-telemetry/opentelemetry-go/tree/main/sdk/metric/exemplar) provides a complete demo on how you can deploy OpenTelemetry on Kubernetes, **we can use this as a starting point.**
 
 ## **Pre-requisites**
 
-To start off, we need a **Kubernetes** cluster you can use any of your existing Kubernetes clusters that has got the apx 2vCPUs, 4GB RAM, and 100GB Storage.&#x20;
+To begin, we need a **Kubernetes** cluster you can use any of your existing Kubernetes clusters with the apx 2vCPUs, 4GB RAM, and 100GB Storage.
 
-### Local Kubernetes Cluster Setup &#x20;
+### Local Kubernetes Cluster Setup
 
 Skip this in case you have the existing cluster.
 
@@ -164,7 +164,7 @@ NAME                     READY STATUS    RESTARTS   AGEsimplest-656d7cf5c8-lff7b
 
 To get the pod name, query for the pods belonging to the simplest Jaeger instance:
 
-![](https://miro.medium.com/max/1400/1\*sA3Xf7l\_o77s0poLNWvWAg.png)
+![](https://miro.medium.com/max/1400/1*sA3Xf7l_o77s0poLNWvWAg.png)
 
 Query the logs from the pod:
 
@@ -186,7 +186,7 @@ Forwarding from 127.0.0.1:16686 -> 16686Forwarding from [::1]:16686 -> 16686
 
 Jaeger UI
 
-![](https://miro.medium.com/max/1400/1\*ZaBDx\_6zL8NtpCfazTrwZA.png)
+![](https://miro.medium.com/max/1400/1*ZaBDx_6zL8NtpCfazTrwZA.png)
 
 ## Deploy Open Telemetry Collector <a href="#eaf0" id="eaf0"></a>
 
@@ -252,7 +252,7 @@ Open the web-browser and go to [http://127.0.0.1:16686/](http://127.0.0.1:16686/
 
 Under Service select **test-service** to view the generated traces.
 
-![](https://miro.medium.com/max/1400/1\*FrgRm1lvFZz6OzT-smeoIw.png)![](https://miro.medium.com/max/1400/1\*YijRHBoe4BpoFCHZA0RZ5A.png)
+![](https://miro.medium.com/max/1400/1*FrgRm1lvFZz6OzT-smeoIw.png) ![](https://miro.medium.com/max/1400/1*YijRHBoe4BpoFCHZA0RZ5A.png)
 
 The **service name** is specified in the `main.go` [file](https://github.com/open-telemetry/opentelemetry-go/blob/main/example/otel-collector/main.go).
 
@@ -269,7 +269,5 @@ conn, err := grpc.DialContext(ctx, "localhost:30080", grpc.WithTransportCredenti
 Done
 
 This document has covered how we deploy an **OpenTelemetry** collector on **Kubernetes**. Then we sent trace data to this collector using an Otel **SDK** instrumented **application** written in Go. From there, the traces were sent to a Jaeger collector and visualised in J**aeger UI**.
-
-
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)_​_](http://creativecommons.org/licenses/by/4.0/)_All content on this page by_ [_eGov Foundation_](https://egov.org.in/) _is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
