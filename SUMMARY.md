@@ -271,7 +271,7 @@
   * [DIGIT - Infra Overview](get-started/operations-guide/digit-infra-overview.md)
   * [Kubernetes](get-started/operations-guide/kubernetes/README.md)
     * [RBAC Management](get-started/operations-guide/kubernetes/rbac-management.md)
-    * [DB Dump - Playground](get-started/operations-guide/kubernetes/db-dump-playground.md)
+    * [Database Dump - Playground](get-started/operations-guide/kubernetes/db-dump-playground.md)
   * [Setup Jenkins - Docker way](get-started/operations-guide/setup-jenkins-docker-way.md)
   * [GitOps](get-started/operations-guide/gitops/README.md)
     * [Git Client installation](get-started/operations-guide/gitops/git-client-installation.md)

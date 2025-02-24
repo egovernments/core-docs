@@ -6,44 +6,42 @@ description: Jenkins for Build, Test and Deployment Automation
 
 While we are adopting the Microservices architecture, it also demands to have an efficient CI/CD tools like jenkins. Along the cloud-native application developement and deployment jenkins can also be run cloud-native.
 
-Since all processes, including software build, test and deployment, are performed every two or four weeks, this is an ideal playground for automation tools like Jenkins: After the developer commits a code change to the repository, Jenkins will detect this change and will trigger the build and test process.  So Let's setup Jenkins as a docker container. Step-by-step.
+Since all processes, including software build, test and deployment, are performed every two or four weeks, this is an ideal playground for automation tools like Jenkins: After the developer commits a code change to the repository, Jenkins will detect this change and will trigger the build and test process. So Let's setup Jenkins as a docker container. Step-by-step.
 
 ## Installing Jenkins the Docker Way
 
 ### Tools and Versions used
 
-* VM or EC2 Instance or a Standalone on-premisis machin
+* VM or C2 Instance or a Standalone on-premisis machin
 * Docker 1.12.1
 * Jenkins 2.32.2
 * Job DSL Plugin 1.58
 
 ### Prerequisites:
 
-* Ubuntu or an Liniux  Machine
-* Free RAM for the a VM/Machine  >\~ 4 GB.
+* Ubuntu or an Liniux Machine
+* Free RAM for the a VM/Machine >\~ 4 GB.
 * Docker Host is available.
 * Tested with 3 vCPU (2 vCPU might work as well).
 
+## Step 1: Install a Docker on the Host you provisioned for Jenkins & Connect to the Host via SSH
 
+If you are using a host that already has docker installed, you can skip this step. Make sure that your host has enough memory.
 
-## Step 1: Install a Docker on the Host you provisioned for jenkins and Connect to the Host via SSH
-
-If you are using an host already has docker installed, you can skip this step. Make sure that your host has enough memory.
-
-We will run Jenkins in a [Docker](https://www.docker.com/) container in order to allow for maximum interoperability. This way, we always can use the latest Jenkins version without the need to control the java version used.
+We will run Jenkins in a [Docker](https://www.docker.com/) container to allow for maximum interoperability. This way, we always can use the latest Jenkins version without the need to control the Java version used.
 
 If you are new to Docker, you might want to read [this blog post](https://vocon-it.com/2015/09/28/what-are-containers-why-to-start-with-docker/).
 
-Installing Docker on Windows and Mac can be a real challenge, but possible: here we will see an efficient way by using linux machine.&#x20;
+Installing Docker on Windows and Mac can be a real challenge, but possible: here we will see an efficient way by using a Linux machine.
 
 **Prerequisites of this step:**
 
-* I recommend to have direct access to the Internet: via Firewall, but without HTTP proxy.&#x20;
-* Administration rights on you computer.
+* I recommend having direct access to the Internet: via Firewall, but without HTTP proxy.
+* Administration rights on your computer.
 
 #### Step 2: Download Jenkins Image
 
-This extra download step is optional, since the Docker image will be downloaded automatically in step 3, if it is not already found on the system:
+This extra download step is optional since the Docker image will be downloaded automatically in step 3 if it is not already found on the system:
 
 <pre><code><strong>(dockerhost)$ sudo docker pull jenkins
 </strong>Using default tag: latest
@@ -52,7 +50,7 @@ Digest: sha256:8820149b54bfc5d05146b82150b5fdab583eef3e0499fb4ed630f77647a42942
 Status: Image is up to date for jenkins:latest
 </code></pre>
 
-The version of the downloaded Jenkins image can be checked with following command:
+The version of the downloaded Jenkins image can be checked with the following command:
 
 <pre><code><strong>(dockerhost)$ sudo docker run -it --rm jenkins --version
 </strong>2.19.3
@@ -187,7 +185,7 @@ localhost:8080
 
 The Jenkins login screen will open:
 
-![2016-11-30-19\_36\_42-jenkins-jenkins](https://vocon-it.com/wp-content/uploads/2016/11/2016-11-30-19\_36\_42-jenkins-jenkins.png)
+![2016-11-30-19\_36\_42-jenkins-jenkins](https://vocon-it.com/wp-content/uploads/2016/11/2016-11-30-19_36_42-jenkins-jenkins.png)
 
 The admin password can be retrieved from the startup log, we have seen above (`0c4a8413a47943ac935a4902e3b8167e`), or we can find it by typing
 
@@ -237,13 +235,13 @@ In the nex, we will create our first Jenkins job. I plan to trigger the Maven an
 
 The [Job DSL Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Job+DSL+Plugin) can be installed like any other Jenkins plugin:
 
-\-> ![Manage Jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19\_45\_32-dashboard-jenkins.png)\
-\-> ![Manage Plugins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19\_46\_30-manage-jenkins-jenkins.png)\
-\-> ![Plugins - Available](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19\_47\_36-update-center-jenkins.png)
+-> ![Manage Jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19_45_32-dashboard-jenkins.png)\
+-> ![Manage Plugins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19_46_30-manage-jenkins-jenkins.png)\
+-> ![Plugins - Available](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19_47_36-update-center-jenkins.png)
 
-\-> ![Filter job-dsl](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11\_41\_52-update-center-jenkins.png) (with dash between job and dsl; wait for the filter to become active and do not press enter, otherwise you will get an error message)
+-> ![Filter job-dsl](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11_41_52-update-center-jenkins.png) (with dash between job and dsl; wait for the filter to become active and do not press enter, otherwise you will get an error message)
 
-\-> ![Install without restart](https://vocon-it.com/wp-content/uploads/2117/01/2017-02-11-20\_34\_21-update-center-jenkins.png)
+-> ![Install without restart](https://vocon-it.com/wp-content/uploads/2117/01/2017-02-11-20_34_21-update-center-jenkins.png)
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20_00_15-update-center-jenkins.png" alt=""><figcaption></figcaption></figure>
 
@@ -253,27 +251,27 @@ The [Job DSL Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Job+DSL+Plugin)
 
 We create a Job DSL Job like follows:
 
-\-> ![Back to Dashboard](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11\_48\_23-update-center-jenkins.png)
+-> ![Back to Dashboard](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11_48_23-update-center-jenkins.png)
 
-\-> ![New Item](https://vocon-it.com/wp-content/uploads/2016/12/2016-12-09-10\_25\_35-dashboard-jenkins.png)
+-> ![New Item](https://vocon-it.com/wp-content/uploads/2016/12/2016-12-09-10_25_35-dashboard-jenkins.png)
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20_10_41-new-item-jenkins.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2018/02/2017-02-15-19_42_31-new-item-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-\-> ![OK](https://vocon-it.com/wp-content/uploads/2018/02/2017-02-15-19\_45\_39-new-item-jenkins.png)
+-> ![OK](https://vocon-it.com/wp-content/uploads/2018/02/2017-02-15-19_45_39-new-item-jenkins.png)
 
 ##
 
 ## Step 4: Configure Job DSL Project
 
-\-> ![Add build step: Process Job DSLs](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20\_12\_34-jobdsljob-config-jenkins.png)
+-> ![Add build step: Process Job DSLs](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20_12_34-jobdsljob-config-jenkins.png)
 
-\-> if you have got a [Github](https://github.com/) account, fork [this open source Java Hello World software](https://github.com/oveits/java-maven-junit-helloworld) (originally created by of [LableOrg](https://github.com/LableOrg)) that will allow you to see, what happens with your Jenkins job, if you check in changed code. Moreover the hello world software allows you to perform [JUnit 4](http://junit.org/) tests, run [PowerMockito](https://code.google.com/p/powermock/) Mock services, run JUnit 4 Integration tests and calculate the code coverage using the tool [Cobertura](http://cobertura.github.io/cobertura/).
+-> if you have got a [Github](https://github.com/) account, fork [this open source Java Hello World software](https://github.com/oveits/java-maven-junit-helloworld) (originally created by of [LableOrg](https://github.com/LableOrg)) that will allow you to see, what happens with your Jenkins job, if you check in changed code. Moreover the hello world software allows you to perform [JUnit 4](http://junit.org/) tests, run [PowerMockito](https://code.google.com/p/powermock/) Mock services, run JUnit 4 Integration tests and calculate the code coverage using the tool [Cobertura](http://cobertura.github.io/cobertura/).
 
-\-> [![Use the provided DSL script](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-08\_47\_19-jobdsljob-config-jenkins.png)](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-08\_47\_19-jobdsljob-config-jenkins.png)
+-> [![Use the provided DSL script](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-08_47_19-jobdsljob-config-jenkins.png)](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-08_47_19-jobdsljob-config-jenkins.png)
 
-\-> insert:
+-> insert:
 
 ```
 job('Job-DSL-Hello-World-Job') {
@@ -289,12 +287,11 @@ job('Job-DSL-Hello-World-Job') {
 }
 ```
 
-here, exchange the username oveits by your own [Github](https://github.com/) username.\
-
+here, exchange the username oveits by your own [Github](https://github.com/) username.\\
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11_50_36-jobdsljob-config-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-\-> ![Save](https://vocon-it.com/wp-content/uploads/2016/12/2016-12-22-19\_07\_35-github-triggered-build-config-jenkins.png)
+-> ![Save](https://vocon-it.com/wp-content/uploads/2016/12/2016-12-22-19_07_35-github-triggered-build-config-jenkins.png)
 
 ## Step 5: Prepare Maven Usage
 
@@ -304,15 +301,15 @@ Goto Jenkins -> Manage Jenkins -> Global Tool Configuration (available for Jenki
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2016/12/2016-12-09-11_35_26-global-tool-configuration-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-Scroll down to Maven -> ![Add Maven](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-14\_38\_49-global-tool-configuration-jenkins.png)
+Scroll down to Maven -> ![Add Maven](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-14_38_49-global-tool-configuration-jenkins.png)
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-14_32_46-global-tool-configuration-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-\-> choose Version (3.3.9 in my case)
+-> choose Version (3.3.9 in my case)
 
-\-> Add a name („Maven 3.3.9“ in my case)
+-> Add a name („Maven 3.3.9“ in my case)
 
-\-> ![Save](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-14\_26\_15-global-tool-configuration-jenkins.png)
+-> ![Save](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-14_26_15-global-tool-configuration-jenkins.png)
 
 Since we have checked „Install automatically“ above, I expect that it will be installed automatically on first usage.
 
@@ -320,15 +317,15 @@ Since we have checked „Install automatically“ above, I expect that it will b
 
 As described in [this StackOverflow Q\&A](http://stackoverflow.com/questions/11122913/jenkins-git-tell-me-who-you-are-error-why-does-it-need-to-tag), we need to add the Git username and email address, since Jenkins tries to tag and commit on the Git repo, which requires those configuration items to be set. For that, we perform:
 
-\-> ![2017-02-25-18\_04\_32-job-dsl-hello-world-job-1-console-jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18\_04\_32-job-dsl-hello-world-job-1-console-jenkins.png)
+-> ![2017-02-25-18\_04\_32-job-dsl-hello-world-job-1-console-jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_04_32-job-dsl-hello-world-job-1-console-jenkins.png)
 
-\-> ![Manage Jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19\_45\_32-dashboard-jenkins.png)
+-> ![Manage Jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19_45_32-dashboard-jenkins.png)
 
-\-> ![Configure System](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18\_06\_36-manage-jenkins-jenkins.png)
+-> ![Configure System](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_06_36-manage-jenkins-jenkins.png)
 
-\-> scroll down to „Git plugin“
+-> scroll down to „Git plugin“
 
-\->&#x20;
+->
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_07_51-configure-system-jenkins.png" alt=""><figcaption></figcaption></figure>
 
@@ -336,57 +333,57 @@ As described in [this StackOverflow Q\&A](http://stackoverflow.com/questions/111
 
 ### Step 7.1 Build Project
 
-\-> ![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_53\_05-github-triggered-build-jenkins.png)
+-> ![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_53_05-github-triggered-build-jenkins.png)
 
 ### Step 7.2 (optional): Check Console Output
 
-\-> ![Build History: click on latest #nnn](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11\_51\_50-jobdsljob-jenkins.png)
+-> ![Build History: click on latest #nnn](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11_51_50-jobdsljob-jenkins.png)
 
-\-> ![Console Output](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_55\_38-github-triggered-build-2-jenkins.png)
+-> ![Console Output](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_55_38-github-triggered-build-2-jenkins.png)
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11_53_18-jobdsljob-1-console-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-\->  ![Back to Project](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11\_56\_52-jobdsljob-1-console-jenkins.png)
+-> ![Back to Project](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11_56_52-jobdsljob-1-console-jenkins.png)
 
 ### Step 7.3: Review automatically built Project
 
-\-> ![2017-02-25-11\_48\_23-update-center-jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11\_48\_23-update-center-jenkins1.png)
+-> ![2017-02-25-11\_48\_23-update-center-jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11_48_23-update-center-jenkins1.png)
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-11_59_46-dashboard-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-\-> ![Job-DSL-Hello-World-Job](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-12\_00\_52-dashboard-jenkins.png)
+-> ![Job-DSL-Hello-World-Job](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-12_00_52-dashboard-jenkins.png)
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-12_03_05-job-dsl-hello-world-job-jenkins.png" alt=""><figcaption></figcaption></figure>
 
 This is showing a build failure, since I had not performed Step 5 and 6 before. In your case, it should be showing a success (in blue). If you are experiencing problems here, check out the Appendices below.
 
-\-> ![Configure](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_58\_57-github-triggered-build-jenkins.png)
+-> ![Configure](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_58_57-github-triggered-build-jenkins.png)
 
-\-> scroll down to Source Code Management
+-> scroll down to Source Code Management
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-12_05_52-job-dsl-hello-world-job-config-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-\-> Scroll down to Build Triggers
+-> Scroll down to Build Triggers
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-12_07_25-job-dsl-hello-world-job-config-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-\-> Scroll down to Build
+-> Scroll down to Build
 
-\-> verify that „Maven 3.3.9“ is chosen as defined in Step 5
+-> verify that „Maven 3.3.9“ is chosen as defined in Step 5
 
-\-> enter „-e clean test“ as Maven Goal
+-> enter „-e clean test“ as Maven Goal
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_19_16-job-dsl-hello-world-job-config-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-\-> ![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_53\_05-github-triggered-build-jenkins.png)
+-> ![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_53_05-github-triggered-build-jenkins.png)
 
 See, what happens by clicking on:
 
-\-> Build History
+-> Build History
 
-\-> #nnn
+-> #nnn
 
-\-> ![Console Output](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_55\_38-github-triggered-build-2-jenkins.png)
+-> ![Console Output](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_55_38-github-triggered-build-2-jenkins.png)
 
 If everything went fine, we will see many downloads and a „BUILD SUCCESS“:
 
@@ -398,11 +395,11 @@ If everything went fine, we will see many downloads and a „BUILD SUCCESS“:
 
 In a new installation of Jenkins, Git does not seem to work out of the box. You can see this by choosing the Jenkins project Job-DSL-Hello-World-Job on the dashboard, then click „build now“, if the build was not already automatically triggered. Then:
 
-\-> Build History
+-> Build History
 
-\-> [Last Build](http://localhost:8080/job/Job-DSL-Hello-World-Job/lastBuild/) (link works only, if Jenkins is running on localhost:8080 and you have chosen the same job name)
+-> [Last Build](http://localhost:8080/job/Job-DSL-Hello-World-Job/lastBuild/) (link works only, if Jenkins is running on localhost:8080 and you have chosen the same job name)
 
-\-> ![Console Output](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_55\_38-github-triggered-build-2-jenkins.png)
+-> ![Console Output](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_55_38-github-triggered-build-2-jenkins.png)
 
 There, we will see:
 
@@ -429,31 +426,31 @@ fatal: empty ident name (for <jenkins@61915398735e.(none)>) not allowed
 
 As described in [this StackOverflow Q\&A](http://stackoverflow.com/questions/11122913/jenkins-git-tell-me-who-you-are-error-why-does-it-need-to-tag): we can resolve this issue by either suppressing the git tagging, or (I think this is better) by adding your username and email address to git:
 
-\-> ![2017-02-25-18\_04\_32-job-dsl-hello-world-job-1-console-jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18\_04\_32-job-dsl-hello-world-job-1-console-jenkins.png)
+-> ![2017-02-25-18\_04\_32-job-dsl-hello-world-job-1-console-jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_04_32-job-dsl-hello-world-job-1-console-jenkins.png)
 
-\-> ![Manage Jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19\_45\_32-dashboard-jenkins.png)
+-> ![Manage Jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-14-19_45_32-dashboard-jenkins.png)
 
-\-> ![Configure System](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18\_06\_36-manage-jenkins-jenkins.png)
+-> ![Configure System](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_06_36-manage-jenkins-jenkins.png)
 
-\-> scroll down to „Git plugin“
+-> scroll down to „Git plugin“
 
-\-> ![Git plugin; user.name = jenkins and user.email = admin@jenkins.org](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18\_07\_51-configure-system-jenkins.png)
+-> ![Git plugin; user.name = jenkins and user.email = admin@jenkins.org](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_07_51-configure-system-jenkins.png)
 
 Step 2: Re-run „Build Now“ on the Project
 
 To test the new configuration, we go to
 
-\-> the [Job-DSL-Hello-World-Job](http://localhost:8080/job/Job-DSL-Hello-World-Job/) and press
+-> the [Job-DSL-Hello-World-Job](http://localhost:8080/job/Job-DSL-Hello-World-Job/) and press
 
-\-> [![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_53\_05-github-triggered-build-jenkins.png)](http://localhost:8080/job/Job-DSL-Hello-World-Job/build?delay=0sec)
+-> [![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_53_05-github-triggered-build-jenkins.png)](http://localhost:8080/job/Job-DSL-Hello-World-Job/build?delay=0sec)
 
 Now, we should see a BUILD SUCCESS like follows:
 
-\-> Build History
+-> Build History
 
-\-> #nnn
+-> #nnn
 
-\-> [![Console Output](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_55\_38-github-triggered-build-2-jenkins.png)](http://localhost:8080/job/Job-DSL-Hello-World-Job/lastBuild/console)
+-> [![Console Output](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_55_38-github-triggered-build-2-jenkins.png)](http://localhost:8080/job/Job-DSL-Hello-World-Job/lastBuild/console)
 
 If everything went fine, we will a „BUILD SUCCESS“:
 
@@ -506,7 +503,7 @@ For Test, you can test a manual: choose the correct Maven version, when configur
 
 <figure><img src="https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_19_16-job-dsl-hello-world-job-config-jenkins.png" alt=""><figcaption></figcaption></figure>
 
-and verify that ![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_53\_05-github-triggered-build-jenkins.png) does not throw the Maven error anymore.
+and verify that ![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_53_05-github-triggered-build-jenkins.png) does not throw the Maven error anymore.
 
 For our case, we need to correct the Job DSL like follows:
 
@@ -533,15 +530,15 @@ Here, the mavenInstallation needs to specify the exact same name, as the one we 
 
 After correction, we will receive the correct Maven goal
 
-\-> JobDSL -> ![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_53\_05-github-triggered-build-jenkins.png)
+-> JobDSL -> ![Build Now](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_53_05-github-triggered-build-jenkins.png)
 
 Now, we can check the Maven configuration:
 
-\-> ![Jenkins Home leading to the Dashboard](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18\_04\_32-job-dsl-hello-world-job-1-console-jenkins.png)
+-> ![Jenkins Home leading to the Dashboard](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-18_04_32-job-dsl-hello-world-job-1-console-jenkins.png)
 
-\-> ![Job-DSL-Hello-World-Job](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-12\_00\_52-dashboard-jenkins.png)
+-> ![Job-DSL-Hello-World-Job](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-25-12_00_52-dashboard-jenkins.png)
 
-\-> ![Configure](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15\_58\_57-github-triggered-build-jenkins.png)
+-> ![Configure](https://vocon-it.com/wp-content/uploads/2016/12/2017-01-02-15_58_57-github-triggered-build-jenkins.png)
 
 After scrolling down, we will see the correct Maven Version:
 
@@ -563,13 +560,13 @@ Updating Jenkins (in my case: from 2.32.1 to 2.32.2) was as simple as following 
 
 However, after that, some data was unreadable:
 
-[![2017-02-24-20\_04\_36-manage-old-data-jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20\_04\_36-manage-old-data-jenkins.png)](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20\_04\_36-manage-old-data-jenkins.png)
+[![2017-02-24-20\_04\_36-manage-old-data-jenkins](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20_04_36-manage-old-data-jenkins.png)](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20_04_36-manage-old-data-jenkins.png)
 
 I have clicked
 
-\-> Manage Jenkins\
-\-> Manage\
-\-> [![Discard Unreadable Data](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20\_05\_42-manage-old-data-jenkins.png)](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20\_05\_42-manage-old-data-jenkins.png)
+-> Manage Jenkins\
+-> Manage\
+-> [![Discard Unreadable Data](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20_05_42-manage-old-data-jenkins.png)](https://vocon-it.com/wp-content/uploads/2017/02/2017-02-24-20_05_42-manage-old-data-jenkins.png)
 
 to resolve the issue (hopefully…). At least, after that, the warning was gone.
 
@@ -651,9 +648,9 @@ In this blog post, we have learned how to
 2. Prepare the usage of Git and Maven
 3. Install the Job DSL Plugin
 4. Define a Jenkins Job via Groovy script
-5. Create a Jenkins Job by a push of  the „Build now“ button
+5. Create a Jenkins Job by a push of the „Build now“ button
 6. Review and run the automatically created Jenkins job
 
 We have seen that the usage of the Job DSL is no rocket science. The only topic, we had to take care, is, that Git and Maven need to be prepared for first usage on a Jenkins server.
 
-\
+\\
