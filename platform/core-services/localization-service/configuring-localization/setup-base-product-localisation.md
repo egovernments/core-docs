@@ -1,4 +1,4 @@
-# Setup Base Product Localization
+# Setup Base Product Localisation
 
 ## Overview <a href="#overview" id="overview"></a>
 
@@ -24,19 +24,11 @@ After localisation, users can view DIGIT screens in their preferred language. Co
 
 * Select a label that needs to be localised from the Product code. Here is the example code for a header before setting up Localisation.
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/spaces_X13sH0e4xi7bV1juDmGX_uploads_5E0CgclMUoAYGb69A0lT_example-2.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/spaces_X13sH0e4xi7bV1juDmGX_uploads_5E0CgclMUoAYGb69A0lT_example-2.png" alt=""><figcaption></figcaption></figure></div>
 
 * As we see the above which supports only the English language, To set up Localisation to that header we need to the code in the following manner.
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/spaces_X13sH0e4xi7bV1juDmGX_uploads_t0oSQ4i438GPw7trhRc1_example-1 (1).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/spaces_X13sH0e4xi7bV1juDmGX_uploads_t0oSQ4i438GPw7trhRc1_example-1 (1).png" alt=""><figcaption></figcaption></figure></div>
 
 * When comparing the code before and after the Localisation setup, we can see that the following code has been added.
 
@@ -54,6 +46,6 @@ labelKey: "TL\_NEW\_TRADE\_DETAILS\_TRADE\_UNIT\_HEADER"
 
 #### Doc Links <a href="#doc-links" id="doc-links"></a>
 
-| Title                                                                                                             | Link                                                                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Adding new language to the DIGIT System. Refer to the link provided to find out how languages are added in DIGIT. | [Adding New Language](https://urban.digit.org/platform/configure-digit/configuring-digit-services/configuring-common-services/setting-up-a-language/adding-a-language) |
+| Title                                                                                                             | Link                                                                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Adding new language to the DIGIT System. Refer to the link provided to find out how languages are added in DIGIT. | [Adding New Language](https://urban.digit.org/setup/configure-digit/configuring-digit-services/configuring-common-services/setting-up-a-language/adding-a-language) |
