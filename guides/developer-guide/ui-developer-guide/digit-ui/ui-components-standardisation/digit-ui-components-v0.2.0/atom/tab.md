@@ -1,5 +1,6 @@
 ---
 description: Design System - Tab component
+hidden: true
 ---
 
 # Tab

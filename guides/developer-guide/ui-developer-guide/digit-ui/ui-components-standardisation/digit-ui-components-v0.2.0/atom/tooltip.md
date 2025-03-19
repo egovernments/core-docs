@@ -1,5 +1,6 @@
 ---
 description: Design System - Tooltip component
+hidden: true
 ---
 
 # Tooltip

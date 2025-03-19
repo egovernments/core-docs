@@ -1,5 +1,6 @@
 ---
 description: Design System - Dropdown component
+hidden: true
 ---
 
 # Dropdown

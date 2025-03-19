@@ -23,11 +23,11 @@ Below is the list of DIGIT Components
 
 {% embed url="https://docs.google.com/spreadsheets/d/e/2PACX-1vRJ2qq0SfjgJzTbwMzcVXxt-2JEIo0aIQUJqCkgRPkN0gT-gHCMplWuXSlwCFmif9SRP8nZkhTm9Y0D/pubhtml" %}
 
-### Standardise Design Principles <a href="#ads3u4tuhemc" id="ads3u4tuhemc"></a>
+### Standardise Design Principles <a href="#a-ds3u4tuhemc" id="a-ds3u4tuhemc"></a>
 
 Standardising design principles ensures consistency across the UI library, reducing the likelihood of UI/UX audit bugs. This involves establishing design guidelines, naming conventions, and component usage patterns.
 
-### Enhance Stability  <a href="#axrg4lhtt9hj" id="axrg4lhtt9hj"></a>
+### Enhance Stability <a href="#axrg4lhtt9hj" id="axrg4lhtt9hj"></a>
 
 Enhancing the stability of the UI library is crucial for reducing UI/UX audit bugs. This includes optimizing code quality, implementing robust testing strategies, and monitoring performance to identify and address potential issues.
 
@@ -53,10 +53,9 @@ Creating Flutter widgets extends the UI library's reach to mobile platforms, red
 
 #### Refer to the below docs to learn more about react and flutter components - <a href="#id-9wbii1syfx61" id="id-9wbii1syfx61"></a>
 
-* [React Component ](digit-ui-core-react-components/)
+* [React Component](digit-ui-core-react-components.md)
 * [Flutter Component](digit-ui-core-flutter-components/)
 
 ## Conclusion <a href="#id-1t75ngdm8hzh" id="id-1t75ngdm8hzh"></a>
 
 Implementing the improvements discussed here ensures the UI library is better equipped to reduce UI/UX audit bugs after development. These enhancements promote consistency, scalability, accessibility, and cross-platform compatibility, resulting in a more polished and user-friendly experience for end-users.
-

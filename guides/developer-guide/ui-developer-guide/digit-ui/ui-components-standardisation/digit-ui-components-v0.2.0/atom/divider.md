@@ -1,5 +1,6 @@
 ---
 description: Design System - Divider component
+hidden: true
 ---
 
 # Divider

@@ -1,5 +1,6 @@
 ---
 description: Design System - Timeline component
+hidden: true
 ---
 
 # Timeline

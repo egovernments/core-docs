@@ -1,5 +1,6 @@
 ---
 description: Design System - Toggle component
+hidden: true
 ---
 
 # Toggle

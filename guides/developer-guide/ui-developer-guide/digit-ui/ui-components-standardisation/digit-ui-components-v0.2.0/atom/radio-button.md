@@ -1,5 +1,6 @@
 ---
 description: Design System - Radio component
+hidden: true
 ---
 
 # Radio Button

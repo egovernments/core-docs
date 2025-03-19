@@ -1,5 +1,6 @@
 ---
 description: Design System - Alert Card Component
+hidden: true
 ---
 
 # Alert Card

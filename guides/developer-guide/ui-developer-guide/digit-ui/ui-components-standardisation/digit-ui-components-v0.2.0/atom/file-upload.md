@@ -1,5 +1,6 @@
 ---
 description: Design System - File Upload component
+hidden: true
 ---
 
 # File Upload

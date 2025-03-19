@@ -1,5 +1,6 @@
 ---
 description: Design System - Tags component
+hidden: true
 ---
 
 # Tag

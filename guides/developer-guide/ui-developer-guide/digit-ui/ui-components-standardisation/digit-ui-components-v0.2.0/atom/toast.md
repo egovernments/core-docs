@@ -1,5 +1,6 @@
 ---
 description: Design System - Toast component
+hidden: true
 ---
 
 # Toast

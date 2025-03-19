@@ -1,5 +1,6 @@
 ---
 description: Design System - Input Field component
+hidden: true
 ---
 
 # Input Field

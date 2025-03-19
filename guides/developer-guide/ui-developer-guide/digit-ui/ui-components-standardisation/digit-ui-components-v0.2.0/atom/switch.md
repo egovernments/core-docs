@@ -1,5 +1,6 @@
 ---
 description: Design System - Switch component
+hidden: true
 ---
 
 # Switch

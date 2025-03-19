@@ -1,5 +1,6 @@
 ---
 description: Design System - Back Link Component
+hidden: true
 ---
 
 # Back Link

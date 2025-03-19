@@ -1,5 +1,6 @@
 ---
 description: Design System - Stepper component
+hidden: true
 ---
 
 # Stepper

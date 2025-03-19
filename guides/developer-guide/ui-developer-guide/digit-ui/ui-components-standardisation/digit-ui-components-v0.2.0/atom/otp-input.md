@@ -1,5 +1,6 @@
 ---
 description: Design System - OTP Input component
+hidden: true
 ---
 
 # OTP Input

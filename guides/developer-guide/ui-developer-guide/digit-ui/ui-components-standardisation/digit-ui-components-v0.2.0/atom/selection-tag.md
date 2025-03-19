@@ -1,5 +1,6 @@
 ---
 description: Design System - Selection Tag component
+hidden: true
 ---
 
 # Selection Tag

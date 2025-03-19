@@ -1,5 +1,6 @@
 ---
 description: Design System - Panel component
+hidden: true
 ---
 
 # Panels

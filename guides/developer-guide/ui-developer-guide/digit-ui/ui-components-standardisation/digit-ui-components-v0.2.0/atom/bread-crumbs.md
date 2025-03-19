@@ -1,5 +1,6 @@
 ---
 description: Design System - Bread Crumbs Component
+hidden: true
 ---
 
 # Bread Crumbs

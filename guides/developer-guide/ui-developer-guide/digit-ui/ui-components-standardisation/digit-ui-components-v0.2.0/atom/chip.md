@@ -1,5 +1,6 @@
 ---
 description: Design System - Chip component
+hidden: true
 ---
 
 # Chip

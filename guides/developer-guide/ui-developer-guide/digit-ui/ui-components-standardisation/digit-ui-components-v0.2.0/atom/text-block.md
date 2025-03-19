@@ -1,5 +1,6 @@
 ---
 description: Design System - Text Block component
+hidden: true
 ---
 
 # Text Block

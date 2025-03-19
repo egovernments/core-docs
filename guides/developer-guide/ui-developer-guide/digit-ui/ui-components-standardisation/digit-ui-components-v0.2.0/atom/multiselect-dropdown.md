@@ -1,5 +1,6 @@
 ---
 description: Design System - Loader component
+hidden: true
 ---
 
 # Multiselect Dropdown
