@@ -342,6 +342,7 @@
   * [Observability](get-started/operations-guide/observability/README.md)
     * [ES-Curator - Clear Old Logs/indices](guides/operations-guide/observability/es-curator-clear-old-logs-indices.md)
     * [Monitoring](get-started/operations-guide/observability/monitoring.md)
+    * [Environment Changes](guides/operations-guide/observability/environment-changes.md)
     * [Tracing](get-started/operations-guide/observability/tracing.md)
     * [Jaeger Tracing Setup](get-started/operations-guide/observability/jaeger-tracing-setup.md)
     * [Logging](get-started/operations-guide/observability/logging.md)

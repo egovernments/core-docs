@@ -1,8 +1,8 @@
 # Monitoring
 
-There are many monitoring tools out there. Before choosing what we would work with on our clients Clusters, we had to take many things into consideration. We use Prometheus and Grafana for Monitoring of our and our client’s clusters.
+There are many monitoring tools out there. Before choosing what we would work with on our client's Clusters, we need to consider many things. We use Prometheus and Grafana for Monitoring our and our client’s clusters.
 
-![](https://miro.medium.com/max/1400/0\*tbNYcUWT5XdWoVBO.png)
+![](https://miro.medium.com/max/1400/0*tbNYcUWT5XdWoVBO.png)
 
 ## Introduction <a href="#c581" id="c581"></a>
 
@@ -12,164 +12,28 @@ One of Kubernetes’ great strengths is its ability to extend its services and a
 
 Prometheus makes it possible to collect, store, and use platform metrics. Grafana, on the other hand, connects to Prometheus, allowing you to create beautiful dashboards and charts.
 
-Today we’ll talk about what Prometheus is and the best way to deploy it to Kubernetes, with the operator. We will see how to set up a monitoring platform using Prometheus and Grafana.
-
-This tutorial provides a good starting point for observability and goes a step further!
-
 ### Prometheus <a href="#f4d6" id="f4d6"></a>
 
-Prometheus is a free open source event monitoring and notification application developed on SoundCloud in 2012. Since then, many companies and organizations have adopted and contributed to them.\
-In 2016, the Cloud Native Computing Foundation (CNCF) launched the Prometheus project shortly after Kubernetes
+**What is Prometheus?**
 
-The timeline below shows the development of the Prometheus project.
+* **Prometheus** is an open-source monitoring and alerting toolkit designed for reliability and scalability.
+* It collects and stores time-series data, allowing real-time monitoring of applications, infrastructure, and services.
 
-<figure><img src="../../../.gitbook/assets/image (320).png" alt=""><figcaption></figcaption></figure>
+**Key Features:**
 
-## Concepts <a href="#id-169d" id="id-169d"></a>
+* **Time-Series Data Collection**: Stores metrics with timestamps and labels.
+* **Powerful Querying**: Uses **PromQL** (Prometheus Query Language) for data analysis.
+* **Alerting Mechanism**: Integrated with **Alertmanager** to notify about critical issues.
+* **Service Discovery**: Automatically detects targets (containers, pods, nodes) for monitoring.
+* **Pull-Based Model**: Fetches metrics from targets instead of relying on push mechanisms.
 
-Prometheus is considered Kubernetes’ default monitoring solution and was inspired by Google’s [Borgman](https://static.googleusercontent.com/media/research.google.com/en/pubs/archive/43438.pdf). Use HTTP pull requests to collect metrics from your application and infrastructure. It’s targets are discovered via service discovery or static configuration. Time series push is supported through the intermediate gateway.
-
-![](https://miro.medium.com/max/1400/0\*L\_ibDR\_yo4dkASyn.png)
-
-```
-Metrics exposed by a Prometheus target has the following format: <metric name>{<label name>=<label value>, ...}
-```
-
-Prometheus records real-time metrics in a time series database (TSDB). It provides a dimensional data model, ease of use, and scalable data collection. It also provides PromQL, a flexible query language to use this dimensionality.
-
-![](https://miro.medium.com/max/1400/0\*yW\_QRSkS6px7wjZc.png)
-
-The above architecture diagram shows that Prometheus is a multi-component monitoring system. The following parts are built into the Prometheus deployment:
-
-* The Prometheus server scrapes and stores time series data. It also provides a user interface for querying metrics.
-* The [Client libraries](https://prometheus.io/docs/instrumenting/clientlibs/) are used for instrumenting application code.
-* [Pushgateway ](https://prometheus.io/docs/instrumenting/exporters/)supports collecting metrics from short-lived jobs.
-* Prometheus also has a service [exporter](https://github.com/prometheus/alertmanager) for services that do not directly instrument metrics.
-* The Alertmanager takes care of real-time alerts based on triggers
-
-## Why Choose The Prometheus Operator? <a href="#aa28" id="aa28"></a>
-
-Kubernetes provides many objects (pods, deploys, services, ingress, etc.) for deploying applications.\
-Kubernetes allows you to create custom resources via custom resource definitions (CRDs).
-
-The CRD object implements the final application behavior. This improves maintainability and reduces deployment effort. When using the [Prometheus operator](https://github.com/prometheus-operator/prometheus-operator), each component of the architecture is taken from the CRD. This makes Prometheus setup easier than traditional installations.
-
-Prometheus Classic installation requires a server configuration update to add new metric endpoints. This allows you to register a new endpoint as a target for collecting metrics. Prometheus operators use monitor objects ([PodMonitor](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#podmonitor), [ServiceMonitor](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#servicemonitor)) to dynamically discover endpoints and scrape metrics.
-
-```
-Prometheus Operator saves you time in installing and maintaining Prometheus. Provides monitoring objects for dynamically collecting metrics without updating the Prometheus configuration.
-```
-
-## Deploying Prometheus With The Operator <a href="#id-718c" id="id-718c"></a>
-
-kube-prometheus-stack is a series of Kubernetes manifests, Grafana dashboards, and Prometheus rules. Make use of Prometheus using the operator to provide easy-to-use end-to-end monitoring of Kubernetes clusters.
-
-[**Github Link**](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
-
-This collection is available and can be deployed using a Helm Chart. You can deploy your monitor stack from a single command line-first time with Helm? Check out this [article](https://medium.com/@apotitech/k8s-quickstart-helm-3667d58e1f29) for a helm tutorial.
-
-## Installing Helm <a href="#ab21" id="ab21"></a>
-
-```
-$ brew install helm
-```
-
-Not using Mac?
-
-```
-Take a look at this documentation, to find the appropriate setup for you: https://helm.sh/docs/intro/install/#through-package-managers
-```
-
-## Creating the dedicated monitoring namespace <a href="#id-6a56" id="id-6a56"></a>
-
-In Kubernetes, _namespaces_ provide a mechanism for isolating groups of resources within a single cluster. We create a namespace named _monitoring_ to prepare the new deployment:
-
-```
-$ kubectl create namespace monitoring
-```
-
-## Installing kube-prometheus-stack with Helm <a href="#f728" id="f728"></a>
-
-Add the Prometheus chart repository and update the local cache:
-
-```
-$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts$ helm repo update
-```
-
-Deploy the _kube-stack-prometheus_ chart in the namespace monitoring with Helm:
-
-```
-$ helm upgrade --namespace monitoring --install kube-stack-prometheus prometheus-community/kube-prometheus-stack --set prometheus-node-exporter.hostRootFsMount.enabled=false
-```
-
-`hostRootFsMount.enabled` is to be set to `false` to work on Docker Desktop on Macbook.
-
-Now, CRDs are installed in the namespace. You can verify with the following kubectl command:
-
-```
-$ kubectl get -n monitoring crds                                                           NAME                                        CREATED ATalertmanagerconfigs.monitoring.coreos.com   2022-03-15T10:54:41Zalertmanagers.monitoring.coreos.com         2022-03-15T10:54:42Zpodmonitors.monitoring.coreos.com           2022-03-15T10:54:42Zprobes.monitoring.coreos.com                2022-03-15T10:54:42Zprometheuses.monitoring.coreos.com          2022-03-15T10:54:42Zprometheusrules.monitoring.coreos.com       2022-03-15T10:54:42Zservicemonitors.monitoring.coreos.com       2022-03-15T10:54:42Zthanosrulers.monitoring.coreos.com          2022-03-15T10:54:42Z
-```
-
-Here is what we have running now in the namespace:
-
-The chart has installed Prometheus components and Operator, Grafana — and the following exporters:
-
-* [prometheus-node-exporter](https://github.com/prometheus/node\_exporter) exposes hardware and OS metrics
-* [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics) listens to the Kubernetes API server and generates metrics about the state of the objects
-
-Our monitoring stack with Prometheus and Grafana is up and ready!
-
-## Connecting To Prometheus Web Interface <a href="#id-4aae" id="id-4aae"></a>
-
-The Prometheus web UI is accessible through port-forward with this command:
-
-```
-$ kubectl port-forward --namespace monitoring svc/kube-stack-prometheus-kube-prometheus 9090:9090
-```
-
-Opening a browser tab on [http://localhost:9090](http://localhost:9090/) shows the Prometheus web UI. We can retrieve the metrics collected from exporters:
-
-![](https://miro.medium.com/max/1400/0\*zd8JqLK14jW28Gk4.png)
-
-Going to the _“Status>Targets”_ and you can see all the metric endpoints discovered by the Prometheus server:
-
-![](https://miro.medium.com/max/1400/0\*RlcWdsmSOKXqWEq3.png)
-
-### Connecting To Grafana <a href="#id-58fa" id="id-58fa"></a>
-
-The credentials to connect to the Grafana web interface are stored in a Kubernetes Secret and encoded in base64. We retrieve the username/password couple with these two commands:
-
-```
-$ kubectl get secret --namespace monitoring kube-stack-prometheus-grafana -o jsonpath='{.data.admin-user}' | base64 -d$ kubectl get secret --namespace monitoring kube-stack-prometheus-grafana -o jsonpath='{.data.admin-password}' | base64 -d
-```
-
-We create the port-forward to Grafana with the following command:
-
-```
-$ kubectl port-forward --namespace monitoring svc/kube-stack-prometheus-grafana 8080:80
-```
-
-Open your browser and go to [http://localhost:8080](http://localhost:8080/) and fill in previous credentials:
-
-![](https://miro.medium.com/max/1334/0\*GzWIwpCuaKdyyLRT.png)
-
-The kube-stack-prometheus deployment has provisioned Grafana dashboards:
-
-<figure><img src="../../../.gitbook/assets/image (319).png" alt=""><figcaption></figcaption></figure>
-
-Here we can see one of them showing compute resources of Kubernetes pods:
-
-![](https://miro.medium.com/max/1400/0\*4Px0EJ2kFoKalkmJ.png)
-
-That’s all folks. Today, we looked at installing Grafana and Prometheus on our K8s Cluster.
-
-## Loki
+### Loki
 
 Distributed Log Aggregation System: Loki is an open-source log aggregation system built for cloud-native environments, designed to efficiently collect, store, and query log data. Loki was inspired by Prometheus and shares similarities in its architecture and query language, making it a natural complement to Prometheus for comprehensive observability.
 
-<figure><img src="https://lh7-us.googleusercontent.com/75v3OVXpQFVIV-PxkU6s8flkN_TraEuN-Au5kuzLGbbULwhVxkPN72ELukBFMlS0Rjr1_ZMHNcSD9ckGM31LP4H7udcpnc8CjpthIeSNCghGRqDX73PKC-E7vrrG3LgkLWku3hZeeVI5I31H13ies0ku6A=s2048" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (338).png" alt=""><figcaption></figcaption></figure>
 
-## Key Features:
+#### Key Features
 
 * Label-based Indexing
 * LogQL Query Language
@@ -177,52 +41,262 @@ Distributed Log Aggregation System: Loki is an open-source log aggregation syste
 * Scalable and Cost-Efficient
 * Integration with Grafana
 
-<figure><img src="https://lh7-us.googleusercontent.com/Tn0pbHewet3AvF0Q1tIXQKHip-Ta8pzqgxQEWXQ4Dk7LbJL4X3iN9xsli09O8PjO7Ta1Ipd9xNelFb5dkPoRNHESFa1YzVsFkRjW2mAWqYK8qYMWD7c2EvEh-P1WKg0TKnb1OPappDlrZNMQEG7aq9NXTA=s2048" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (339).png" alt=""><figcaption></figcaption></figure>
 
-## Loki configuration
+### Alermanager
+
+Alertmanager is a crucial component in the Prometheus ecosystem responsible for managing alerts and notifications. It receives alerts from Prometheus and processes them by grouping, deduplicating, and silencing them based on predefined rules. This ensures that notifications are sent only when necessary, reducing alert fatigue. Alertmanager supports multiple integrations, allowing alerts to be delivered via email, Slack, PagerDuty, and other communication channels. It also provides high availability by clustering multiple Alertmanager instances. By enabling effective alert management, Alertmanager helps DevOps and SRE teams maintain system reliability and quickly respond to incidents.
+
+## Install Monitoring Tools Using Helmfile <a href="#ab21" id="ab21"></a>
+
+### Pre-requisites
+
+* Export the kubeconfig file to enable cluster login from the terminal.
+* Use the command below to install the decryption plugin. If it is already installed, you can skip this step.
 
 ```
-loki:
-  enabled: true
-  isDefault: true
-  image:
-    tag: 2.9.3
-    repository: "grafana/loki"
-  service:
-    port: 3100
-  url: http://{{(include "loki.serviceName" .)}}:{{ .Values.loki.service.port }}
-  readinessProbe:
-    httpGet:
-      path: /ready
-      port: http-metrics
-    initialDelaySeconds: 45
-  livenessProbe:
-    httpGet:
-      path: /ready
-      port: http-metrics
-    initialDelaySeconds: 45
-  datasource:
-    jsonData: "{}"
-    uid: ""
-  persistence:
-    enabled: true
-    accessModes:
-      - ReadWriteOnce
-    size: 10Gi  # Set the desired size for the persistent volume
-
-promtail:
-  enabled: true
-  config:
-    logLevel: info
-    serverPort: 3101
-    clients:
-      - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
+helm plugin install https://github.com/jkroepke/helm-secrets
 ```
 
+* With this plugin, the encrypted key file will be automatically decrypted during deployment.
+* command to verify the plugin istallation
 
+```
+helm plugin list
+```
 
-### Loki grafana dashboard
+### Deployment Steps&#x20;
 
-* Configure the loki dashboard for easy access
+* Clone the repository
+
+```
+git clone https://github.com/egovernments/DIGIT-DevOps.git
+```
+
+* Command to change directory
+
+```
+cd DIGIT-DevOps
+```
+
+* Command to switch branch(monitoring tolls branch)
+
+```
+git checkout DIGIT-2.9LTS-monitoring
+```
+
+* Please refer to [this](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/egsIWleSdyH9rMLJ8ShI/~/changes/335/guides/operations-guide/observability/changes-in-the-environment) document for the required changes in the environment and secrets YAML files.
+* use the below command to deploy the monitoring tools
+
+```
+helmfile -e env -f <path of the monitoring-helmfile>
+```
+
+* This command will deploy all the monitoring tools.
+
+### Connect To Alermanager Web Interface <a href="#id-4aae" id="id-4aae"></a>
+
+The Alertmanager web UI is accessible through port-forward with this command:
+
+```
+kubectl port-forward svc/kube-prometheus-stack-alertmanager -n monitoring 9093:9093
+```
+
+Opening a browser tab on [http://localhost:9093](http://localhost:9093) shows the Alertmanager web UI.&#x20;
+
+<figure><img src="../../../.gitbook/assets/image (342).png" alt=""><figcaption></figcaption></figure>
+
+### Connect To Grafana <a href="#id-58fa" id="id-58fa"></a>
+
+* &#x20;Grafana Dashboard URL: **DomainName/monitoring**
+
+&#x20;       Ex: [https://unified-dev.digit.org/monitoring/](https://unified-dev.digit.org/monitoring/)
+
+* Command to get the Grafana admin credentials
+
+```
+kubectl get secret grafana -n monitoring -o json | jq -r '.data | map_values(@base64d)'
+```
+
+<figure><img src="../../../.gitbook/assets/image (332).png" alt=""><figcaption></figcaption></figure>
+
+* Use sign-in with Github for viewer access.
+
+### Kubernetes Dashboards
+
+<figure><img src="../../../.gitbook/assets/image (335).png" alt=""><figcaption><p>Grafana Dashboards</p></figcaption></figure>
+
+## Dashboards Explanations
+
+### 1. Blackbox Exporter:
+
+<figure><img src="../../../.gitbook/assets/image (336).png" alt=""><figcaption></figcaption></figure>
+
+* **Purpose**:
+  * The dashboard monitors the health and availability of multiple HTTP endpoints using probes.
+  * It tracks response status, latency, SSL details, and DNS lookup times.
+* **Key Metrics**:
+  * **Instance**: The URL of the monitored endpoint.
+  * **Status**: Indicates whether the endpoint is **UP** (reachable) or **DOWN** (unreachable or failing).
+  * **HTTP Code**: Displays the HTTP response code (e.g., 200 for success, 403 for forbidden, 503 for service unavailable).
+  * **SSL Status**: Shows whether SSL/TLS is correctly configured.
+  * **TLS Version**: Indicates the TLS version used (e.g., TLS 1.3).
+  * **SSL Certificate Expiry**: Days remaining before the SSL certificate expires.
+  * **Probe Duration**: The time taken to complete the probe request.
+  * **DNS Lookup Duration**: The time required to resolve the domain name.
+* **Observations**:
+  * SSL is correctly configured for all monitored URLs with TLS 1.3.
+  * Certificate expiry dates are tracked to prevent SSL disruptions.
+  * Probe and DNS lookup durations help identify performance issues.
+
+### 2. Kubernetes overview:
+
+<figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 21-33-09.png" alt=""><figcaption></figcaption></figure>
+
+* **Purpose**:
+  * Provides an overview of cluster-wide resource utilization.
+  * Helps monitor CPU, memory, and resource allocation.
+* **Key Metrics Monitored**:
+  * **CPU Utilization**: Tracks real usage, requested, and limit allocations.
+  * **Memory Utilization**: Monitors actual usage, requested, and allocated limits.
+  * **Cluster Resources**: Displays active nodes, namespaces, and running pods.
+  * **Kubernetes Object Counts**: Shows counts of containers, services, secrets, ingresses, PVCs, and other resources.
+* **Insights & Utility**:
+  * Identifies resource consumption trends.
+  * Helps in optimizing resource requests and limits.
+  * Assists in capacity planning and performance monitoring.
+
+### 3. Overview of Namespaces:
+
+<figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 21-38-02.png" alt=""><figcaption></figcaption></figure>
+
+* **Purpose**:
+  * Monitors resource usage at the **namespace level**.
+  * Helps track CPU, memory, and resource allocation per namespace.
+* **Key Metrics Monitored**:
+  * **CPU Usage**: Percentage and core utilization within the cluster.
+  * **Memory Usage**: Percentage and actual memory consumption.
+  * **Resource Count**: Tracks running pods, services, config maps, secrets, ingresses, and persistent volume claims.
+* **Insights & Utility**:
+  * Identifies high resource consumption namespaces.
+  * Helps optimize requests and limits for efficient utilization.
+  * Assists in monitoring namespace health and scaling decisions.
+
+### 4. Overview of Nodes:
+
+<figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 21-41-54.png" alt=""><figcaption></figcaption></figure>
+
+* **Purpose**:
+  * Monitors individual node performance and resource utilization.
+  * Provides insights into node-level workload distribution.
+* **Key Metrics Tracked**:
+  * **CPU & RAM Usage**: Current utilization and total capacity.
+  * **Pod Count**: Number of running pods on the node.
+  * **Uptime**: Node availability duration.
+* **Insights & Utility**:
+  * Helps detect resource bottlenecks or underutilized nodes.
+  * Assists in load balancing and capacity planning.
+  * Useful for troubleshooting node-specific performance issues.
+
+### 5. Overview of Pods:
+
+<figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 22-31-09.png" alt=""><figcaption></figcaption></figure>
+
+* **General Pod Information**
+  * Displays pod details such as name, namespace, creation source, node it’s running on, and IP address.
+  * Includes priority and QoS class to determine resource allocation behavior.
+* **Resource Utilization Metrics**
+  * Shows CPU and memory requests vs. limits for the pod.
+  * Visualizes real-time utilization with gauges for quick assessment.
+* **Container-Level Resource Usage**
+  * Breaks down CPU and memory usage per container inside the pod.
+  * Helps in identifying whether a container is over- or under-utilizing resources.
+* **Performance Insights**
+  * Helps monitor resource consumption to avoid over-provisioning or underutilization.
+  * Supports scaling decisions based on actual usage trends.
+* **Operational Use Case**
+  * Useful for Kubernetes administrators to track performance, optimize configurations, and ensure stability in deployments.
+
+### 6. Nginx Ingress Dashboard:
+
+<figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-12 10-38-11.png" alt=""><figcaption></figcaption></figure>
+
+* **Requests Overview**
+  * Displays total HTTP requests over a specific period.
+  * Shows the percentage of successful requests.
+  * Provides active connections and recent request counts.
+* **Success Rate & HTTP Status Codes**
+  * Shows success percentage over a 2-minute window.
+  * Categorizes HTTP responses:
+    * **1xx/2xx:** Successful responses.
+    * **3xx:** Redirects.
+    * **4xx:** Client errors (e.g., 404, 499).
+    * **5xx:** Server errors (e.g., 500, 502, 503).
+* **Traffic Analysis**
+  * **HTTP Requests / Ingress Graph:** Visualizes request trends over time.
+  * **Total HTTP Requests Graph:** Breakdown of request types (color-coded for different status codes).
+* **Additional Metrics**
+  * **Latency Panels:** Measure response time.
+  * **Connection Panels:** Monitor concurrent connections.
+  * **CPU Intensive Graphs:** Helps in resource usage analysis.
+
+### 7. Persistent Volume (PV) & Persistent Volume Claim Dashboard:
+
+<figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 21-44-40.png" alt=""><figcaption></figcaption></figure>
+
+* **Purpose**:
+  * Monitors the status and usage of PVs and PVCs in the Kubernetes cluster.
+  * Helps track storage capacity, usage trends, and potential issues.
+* **Key Metrics Tracked**:
+  * **PVC Utilization**: Shows if any PVCs are nearing full capacity.
+  * **Storage Availability**: Displays available storage per PVC.
+  * **PVC Status**: Indicates if PVCs are bound, pending, or lost.
+
+### 8. Loki Grafana Dashboard:
 
 <figure><img src="../../../.gitbook/assets/image (318).png" alt=""><figcaption></figcaption></figure>
+
+* **Log Filtering & Search**
+  * Filtering logs based on namespaces, pods, and keywords (`error|fatal`).
+  * Supports advanced search queries for efficient troubleshooting.
+* **Real-Time Log Visualization**
+  * Displays log frequency over time for better incident analysis.
+  * Helps identify peaks in errors or warnings.
+* **Log Source Details**
+  * Shows logs from specific Loki stack components.
+  * Includes metadata like timestamps, severity levels, and source pods.
+* **Performance Insights**
+  * Provides query execution details, including response times and processed log entries.
+  * Helps optimize query performance for log retrieval.
+
+### 9. Redis Monitoring Dashboard:
+
+<figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-12 15-31-10.png" alt=""><figcaption></figcaption></figure>
+
+* **Max Uptime**
+  * Displays how long the Redis instance has been running without a restart (e.g., 6 days).
+  * Helps track system stability and potential need for maintenance.
+* **Clients**
+  * Shows the number of active client connections (e.g., 35).
+  * A high or fluctuating number might indicate load variations or connection issues.
+* **Memory Usage**
+  * Indicates the percentage of allocated memory in use (e.g., 83%).
+  * High memory usage could lead to performance degradation or eviction of keys.
+* **Total Commands per Second**
+  * Displays the rate of commands being executed.
+  * Spikes in command execution can indicate high activity or potential performance bottlenecks.
+* **Hits/Misses per Second**
+  * Tracks cache efficiency by measuring successful vs. failed key lookups.
+  * A high miss rate may indicate suboptimal caching strategies.
+* **Total Memory Usage**
+  * Shows used vs. maximum memory allocation over time.
+  * Helps identify memory growth trends and potential out-of-memory risks.
+* **Network I/O**
+  * Monitors data ingress and egress (e.g., in MiB).
+  * Spikes may indicate high request loads or potential network-related issues.
+* **Total Items per DB**
+  * Represents the number of keys stored in each database instance.
+  * Helps monitor data distribution and growth across databases.
+* **Expiring vs. Non-Expiring Keys**
+  * Tracks how many keys are set to expire vs. persistent ones.
+  * Useful for understanding key retention policies and potential memory optimizations.
