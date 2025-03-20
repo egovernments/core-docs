@@ -85,7 +85,7 @@ cd DIGIT-DevOps
 git checkout DIGIT-2.9LTS-monitoring
 ```
 
-* Please refer to [this](https://app.gitbook.com/o/-MEQmzNGXk5ajuZujG7E/s/egsIWleSdyH9rMLJ8ShI/~/changes/335/guides/operations-guide/observability/changes-in-the-environment) document for the required changes in the environment and secrets YAML files.
+* Please refer to [this](../../../guides/operations-guide/observability/environment-changes.md) document for the required changes in the environment and secrets YAML files.
 * use the below command to deploy the monitoring tools
 
 ```
