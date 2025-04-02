@@ -52,11 +52,29 @@ Alertmanager is a crucial component in the Prometheus ecosystem responsible for 
 ### Pre-requisites
 
 * Export the kubeconfig file to enable cluster login from the terminal.
-* Use the command below to install the decryption plugin. If it is already installed, you can skip this step.
+* Command to install Helm, a package manager for Kubernetes that simplifies the deployment and management of applications using Helm charts.
 
 ```
-helm plugin install https://github.com/jkroepke/helm-secrets
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
+
+* Commands to install Helmfile, which allows you to manage multiple Helm releases in a declarative manner.
+
+```
+wget https://github.com/helmfile/helmfile/releases/latest/download/helmfile_linux_amd64 -O /usr/local/bin/helmfile
+chmod +x /usr/local/bin/helmfile
+```
+
+* Command to install the **Helm Diff** plugin, which allows you to compare the current Helm release with the proposed changes before applying them:
+
+```
+helm plugin install https://github.com/databus23/helm-diff
+```
+
+* Use the command below to install the decryption plugin. If it is already installed, you can skip this step.
+
+<pre><code><strong>helm plugin install https://github.com/jkroepke/helm-secrets
+</strong></code></pre>
 
 * With this plugin, the encrypted key file will be automatically decrypted during deployment.
 * command to verify the plugin istallation
@@ -86,10 +104,28 @@ git checkout DIGIT-2.9LTS-monitoring
 ```
 
 * Please refer to [this](../../../guides/operations-guide/observability/environment-changes.md) document for the required changes in the environment and secrets YAML files.
+* Checkout to working directory
+
+```
+cd deploy-as-code/helm/charts/monitoring
+```
+
+* Generate and preview Kubernetes manifests to see what will be applied.
+
+```
+helmfile -e env -f monitoring-helmfile.yaml template
+```
+
+* Compare the current state with the new changes to see what will be modified.
+
+```
+helmfile -e env -f monitoring-helmfile.yaml diff
+```
+
 * use the below command to deploy the monitoring tools
 
 ```
-helmfile -e env -f <path of the monitoring-helmfile>
+helmfile -e env -f monitoring-helmfile.yaml apply
 ```
 
 * This command will deploy all the monitoring tools.
@@ -166,7 +202,7 @@ kubectl get secret grafana -n monitoring -o json | jq -r '.data | map_values(@ba
   * Helps in optimizing resource requests and limits.
   * Assists in capacity planning and performance monitoring.
 
-### 3. Overview of Namespaces:
+### 3. Namespaces Overview
 
 <figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 21-38-02.png" alt=""><figcaption></figcaption></figure>
 
@@ -182,7 +218,7 @@ kubectl get secret grafana -n monitoring -o json | jq -r '.data | map_values(@ba
   * Helps optimize requests and limits for efficient utilization.
   * Assists in monitoring namespace health and scaling decisions.
 
-### 4. Overview of Nodes:
+### 4. Nodes Overview
 
 <figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 21-41-54.png" alt=""><figcaption></figcaption></figure>
 
@@ -198,7 +234,7 @@ kubectl get secret grafana -n monitoring -o json | jq -r '.data | map_values(@ba
   * Assists in load balancing and capacity planning.
   * Useful for troubleshooting node-specific performance issues.
 
-### 5. Overview of Pods:
+### 5. Pods Overview
 
 <figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 22-31-09.png" alt=""><figcaption></figcaption></figure>
 
@@ -217,7 +253,7 @@ kubectl get secret grafana -n monitoring -o json | jq -r '.data | map_values(@ba
 * **Operational Use Case**
   * Useful for Kubernetes administrators to track performance, optimize configurations, and ensure stability in deployments.
 
-### 6. Nginx Ingress Dashboard:
+### 6. Nginx Ingress Dashboard
 
 <figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-12 10-38-11.png" alt=""><figcaption></figcaption></figure>
 
@@ -240,7 +276,7 @@ kubectl get secret grafana -n monitoring -o json | jq -r '.data | map_values(@ba
   * **Connection Panels:** Monitor concurrent connections.
   * **CPU Intensive Graphs:** Helps in resource usage analysis.
 
-### 7. Persistent Volume (PV) & Persistent Volume Claim Dashboard:
+### 7. Persistent Volume (PV) & Persistent Volume Claim Dashboard
 
 <figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-11 21-44-40.png" alt=""><figcaption></figcaption></figure>
 
@@ -252,7 +288,7 @@ kubectl get secret grafana -n monitoring -o json | jq -r '.data | map_values(@ba
   * **Storage Availability**: Displays available storage per PVC.
   * **PVC Status**: Indicates if PVCs are bound, pending, or lost.
 
-### 8. Loki Grafana Dashboard:
+### 8. Loki Grafana Dashboard
 
 <figure><img src="../../../.gitbook/assets/image (318).png" alt=""><figcaption></figcaption></figure>
 
@@ -269,7 +305,7 @@ kubectl get secret grafana -n monitoring -o json | jq -r '.data | map_values(@ba
   * Provides query execution details, including response times and processed log entries.
   * Helps optimize query performance for log retrieval.
 
-### 9. Redis Monitoring Dashboard:
+### 9. Redis Monitoring Dashboard
 
 <figure><img src="../../../.gitbook/assets/Screenshot from 2025-03-12 15-31-10.png" alt=""><figcaption></figcaption></figure>
 

@@ -22,6 +22,10 @@ description: Steps to configure changes in the environment for deploying the too
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdfB3bfygy5QRrB6UZuWOHqjGDbTg3BUeNekOMwLygi3_YI1lvcP6BJEVgYvEQvGD-Y4UP9uQs8xFGS3j7JWjux3FuMZrwQMEtGuruZDxnqKlhACn_CNs5heh4aoZe9QE0ahn3T?key=iKnMqxt7hBWD34AV_hYyp26I" alt=""><figcaption></figcaption></figure>
 
+Optional:
+
+S3&#x20;
+
 ### Step-5: Make the required changes in the env-secrets file
 
 Changes to the Alertmanager configuration in the env-secrets.yaml file.
@@ -77,14 +81,13 @@ cluster-configs:
        kafka:
            clusterID: HshRPdVrcvxWoB4kuTdEbawtq
        elasticsearch:
-           password: 8fwbD6HbJh6HUcvb0offddsHm8TEI
+           password: <Password>
        oauth2:
-           cookieSecret: QVbnq0L8npoyvcbfxZs96nbfmnvwtBg==
-           clientSecret: d94dfcf27dd823ecxvbe7232f4cnjfbfn3d5127c6b4a2e3a09
-           clientID: 6fc3b6b2nbnd6dsfgsaeae293d6f
+           clientSecret: <Client Sec ID>    
+           clientID: <Client ID>
        grafana:
-           clientID: cdabba358452e5jgf9cfg8c67    ##change ID
-           clientSecret: 8292723f0jgbgxfbe1d596d234b5eea796569594a96adb5 ##change
+           clientID: <OAuth-key>    ##change ID
+           clientSecret: <OAuth-token> #change secrets key
        git-sync:
            ssh: |-
                -----BEGIN RSA PRIVATE KEY-----
@@ -118,7 +121,7 @@ cluster-configs:
        alertmanager:
            config:
                global:
-                   slack_api_url: https://hooks.slack.com/services/T109J63r1DY/BLYD39NH/uMfS5JxoyOzrooJpsrfwDUsY    ##change the slack api url
+                   slack_api_url: https://hooks.slack.com     ##change the slack api url
                    resolve_timeout: 5m
                route:
                    group_by:
@@ -138,7 +141,7 @@ cluster-configs:
                receivers:
                    - name: slack-notification
                      slack_configs:
-                       - channel: '#unified-dev-alerts'     ##change the slack channel name 
+                       - channel: '<slack-channel>'     ##change the slack channel name 
                          send_resolved: true
                          username: Alertmanager
                          title: |
@@ -166,11 +169,11 @@ cluster-configs:
                            {{- end }}
                    - name: email-notification
                      email_configs:
-                       - to: unified-alert@egovernments.org    ##change the Email ID to get the alert in the Email
-                         from: unified.alerts@example.com
+                       - to: <Email ID>    ##change the Email ID to get the alert in the Email
+                         from: <Email ID>
                          smarthost: smtp.gmail.com:587
-                         auth_username: unified.alerts@egovernments.org
-                         auth_password: mujp cgjj fhdv wieu
+                         auth_username: <Email ID>           # Ex: unified.alerts@egovernments.org
+                         auth_password: <Password>           # Ex: mujp cgjj fhdv wieu
                          send_resolved: true
                          headers:
                            subject: |
