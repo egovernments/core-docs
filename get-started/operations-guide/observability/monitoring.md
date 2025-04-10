@@ -107,7 +107,7 @@ git checkout DIGIT-2.9LTS-monitoring
 * Checkout to working directory
 
 ```
-cd deploy-as-code/helm/charts/monitoring
+cd deploy-as-code/charts/monitoring
 ```
 
 * Generate and preview Kubernetes manifests to see what will be applied.

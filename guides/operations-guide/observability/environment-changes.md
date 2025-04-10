@@ -22,9 +22,78 @@ description: Steps to configure changes in the environment for deploying the too
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdfB3bfygy5QRrB6UZuWOHqjGDbTg3BUeNekOMwLygi3_YI1lvcP6BJEVgYvEQvGD-Y4UP9uQs8xFGS3j7JWjux3FuMZrwQMEtGuruZDxnqKlhACn_CNs5heh4aoZe9QE0ahn3T?key=iKnMqxt7hBWD34AV_hYyp26I" alt=""><figcaption></figcaption></figure>
 
-Optional:
+Optional: **S3 bucket configuraation(Recommended for prod)**
 
-S3&#x20;
+**Caution:** Use the `sub` claim instead of `aud` when setting up Web Identity (OIDC) IAM roles to ensure correct identity matching.
+
+Step-1: Create AWS Web Identity (OIDC) IAM role with following policy.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AccessToLokiBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<s3-bucket>",
+                "arn:aws:s3:::<s3-bucket>/*"
+            ]
+        }
+    ]
+}
+
+```
+
+Step-2: Update s3 details & role ARN in below config.
+
+```
+# deploy-as-code/helm/environments/egov-demo.yaml
+loki:
+  persistence:
+    enabled: true
+    accessModes:
+      - ReadWriteOnce
+    size: 10Gi
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: <s3-role-arn>    ## AWS arn for s3 role 
+  additionalConfigs:
+    schema_config:
+      configs:
+        - from: 2020-10-24
+          store: boltdb-shipper
+          object_store: s3                         ## AWS s3 as storage
+          schema: v11
+          index:
+            prefix: index_
+            period: 24h
+    storage_config:
+      boltdb_shipper:
+        active_index_directory: /data/loki/index
+        cache_location: /data/loki/index_cache
+        shared_store: s3                           ## AWS s3 as storage
+        cache_ttl: 24h
+      aws:
+        s3: s3://<region>/<s3-bucket>              ## s3 region & bucket
+    compactor:
+      working_directory: /data/loki/boltdb-shipper-compactor
+      shared_store: s3                             ## AWS s3 as storage
+      retention_enabled: true
+      compaction_interval: 168h                    ## compaction in hours
+    table_manager:
+      retention_deletes_enabled: true
+      retention_period: 168h                       ## retention in hours
+
+```
+
+**Note:** Refer to [official docs](https://grafana.com/docs/loki/latest/configure/) for detailed configuration.
 
 ### Step-5: Make the required changes in the env-secrets file
 
