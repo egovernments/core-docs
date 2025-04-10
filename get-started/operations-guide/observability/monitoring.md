@@ -1,6 +1,6 @@
 # Monitoring
 
-There are many monitoring tools out there. Before choosing what we would work with on our client's Clusters, we need to consider many things. We use Prometheus and Grafana for Monitoring our and our client’s clusters.
+There are many monitoring tools out there. We must consider many things before choosing what would work best for our client clusters. We use Prometheus and Grafana for monitoring the clusters.
 
 ![](https://miro.medium.com/max/1400/0*tbNYcUWT5XdWoVBO.png)
 

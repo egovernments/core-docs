@@ -4,7 +4,7 @@ description: Steps to configure changes in the environment for deploying the too
 
 # Environment Changes
 
-### Step-1: Update domain name
+### Step-1: Update the domain name
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcAcgnpd1sONV8VMwmpbeLxvQNfXg8tPrcJbxmtCoWr57DJJgffGIu45gJIi9ypM3RAupajPF9Ms67227P1NHCkQ8gzYHi-x-zBb004TY3H_LXzSFNzuYWNMJz5EXqfsVNIYa42?key=iKnMqxt7hBWD34AV_hYyp26I" alt=""><figcaption></figcaption></figure>
 
@@ -12,7 +12,7 @@ description: Steps to configure changes in the environment for deploying the too
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3RsXqzOY38gxGBz0DiL14Jdn9MXUdSctrLvFHItzLELVnSe3r3YE6T5oWdCzLHjknZ8fsY_2LAbdGiQ11rd5d6RXJn1hbo8-GQnRHu9ZDVERvOTYnnxx5g2w408BBhpKwrI_utg?key=iKnMqxt7hBWD34AV_hYyp26I" alt=""><figcaption></figcaption></figure>
 
-### Step-3: Modify the retention, storage size ,cluster name and targets based on the specific requirements
+### Step-3: Modify the retention, storage size, cluster name and targets based on the specific requirements
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeGKZEbbkc4lNd2mjRZjxvdfZ7uBR7gdCSirdUss8XrA9DvOAd092Vxzn7F2KkBT43fPbZExX1JXq4Oy60WHP_UmRzutRlZLiwSl0-SR7nPFJunvACfFMAtNqBmp6d58pR9J2Y54A?key=iKnMqxt7hBWD34AV_hYyp26I" alt=""><figcaption></figcaption></figure>
 
@@ -26,7 +26,7 @@ Optional: **S3 bucket configuraation(Recommended for prod)**
 
 **Caution:** Use the `sub` claim instead of `aud` when setting up Web Identity (OIDC) IAM roles to ensure correct identity matching.
 
-Step-1: Create AWS Web Identity (OIDC) IAM role with following policy.
+Step-4a: Create an AWS Web Identity (OIDC) IAM role with the following policy.
 
 ```
 {
@@ -51,7 +51,7 @@ Step-1: Create AWS Web Identity (OIDC) IAM role with following policy.
 
 ```
 
-Step-2: Update s3 details & role ARN in below config.
+Step-4b: Update S3 details & role ARN in the below config.
 
 ```
 # deploy-as-code/helm/environments/egov-demo.yaml
@@ -93,7 +93,7 @@ loki:
 
 ```
 
-**Note:** Refer to [official docs](https://grafana.com/docs/loki/latest/configure/) for detailed configuration.
+**Note:** Refer to the [official docs](https://grafana.com/docs/loki/latest/configure/) for detailed configuration.
 
 ### Step-5: Make the required changes in the env-secrets file
 
@@ -103,7 +103,7 @@ Changes to the Alertmanager configuration in the env-secrets.yaml file.
 
 <figure><img src="../../../.gitbook/assets/image (334).png" alt=""><figcaption></figcaption></figure>
 
-### Step-6: Oauth app configuration
+### Step-6: OAuth app configuration
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfGORgumhubJBpKtQoLfvF6LJAzVkqk9CIN5HsaqWQDI6BuB7X89BaTocfiV3ECBueUtgdx6npicIqqZEPMF1KrikC5ravMwzu64APq26dyhWPBe7tkR8B5iuYvCDVam757X33IZg?key=iKnMqxt7hBWD34AV_hYyp26I" alt=""><figcaption></figcaption></figure>
 
