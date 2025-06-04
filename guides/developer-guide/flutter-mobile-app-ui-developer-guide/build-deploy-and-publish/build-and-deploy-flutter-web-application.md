@@ -30,7 +30,7 @@ Before setting up the job pipeline, make sure each project has a docker folder i
 
 ![](<../../../../.gitbook/assets/image (142).png>)
 
-The global assets inside the .env file should be loaded from the environment assets.&#x20;
+The global assets inside the .env file should be loaded from the environment assets.
 
 {% hint style="info" %}
 **Note:** The global assets file needs to be in JSON format for Flutter
@@ -54,22 +54,20 @@ Congrats!!! We are now ready to build and deploy the application on the web.
 
 <summary>Build</summary>
 
-Go to the Jenkins [build](https://builds.digit.org/job/builds/) page. Click on your project to build under the folder path mentioned below.&#x20;
+Go to the Jenkins [build](https://builds.digit.org/job/builds/) page. Click on your project to build under the folder path mentioned below.
 
 For reference, if works\_shg\_app need to be build, Go to path\
 [digit-works/job/frontend/job/works-shg-app/](https://builds.digit.org/job/builds/job/digit-works/job/frontend/job/works-shg-app/)
 
-![](<../../../../.gitbook/assets/image (225).png>)
+<img src="../../../../.gitbook/assets/image (225).png" alt="" data-size="original">
 
 Click on `Build with parameter`. Select the feature branch name by searching for it in the search box on the right side of the screen. Click on Build.
 
-![](<../../../../.gitbook/assets/image (160).png>)
+<img src="../../../../.gitbook/assets/image (160).png" alt="" data-size="original">
 
 Once the build is successful, open the console output and find the docker image that has been built. Copy the docker image ID.
 
-![](<../../../../.gitbook/assets/image (150).png>)
-
-
+<img src="../../../../.gitbook/assets/image (150).png" alt="" data-size="original">
 
 </details>
 
@@ -83,13 +81,10 @@ For reference, Let's deploy the works-shg-app build that was created to works-de
 
 Path ref: [https://builds.digit.org/job/deployments/job/deploy-to-works-dev/](https://builds.digit.org/job/deployments/job/deploy-to-works-dev/)
 
-![](<../../../../.gitbook/assets/image (148).png>)
+<img src="../../../../.gitbook/assets/image (148).png" alt="" data-size="original">
 
 Copy the docker image IDs from the previous step and paste in the above box. Click on "Build". Once the image is deployed, you will see a message as shown below:
 
-![](<../../../../.gitbook/assets/image (162).png>)
-
-
+<img src="../../../../.gitbook/assets/image (162).png" alt="" data-size="original">
 
 </details>
-

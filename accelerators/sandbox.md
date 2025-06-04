@@ -7,13 +7,13 @@ DIGIT Sandbox provides a self-service platform to rapidly try out, build, test, 
 * **Deploy** products and solutions built with DIGIT Sandbox easily. _(work in progress)_
 
 {% hint style="info" %}
-**Note:** The DIGIT Sandbox is currently a work in progress and offers limited functions, including Complaints and Employee Management modules.&#x20;
+**Note:** The DIGIT Sandbox is currently a work in progress and offers limited functions, including Complaints and Employee Management modules.
 {% endhint %}
 
 [Click here to explore the Sandbox details](https://docs.digit.org/sandbox).
 
 {% hint style="info" %}
-## Note For Developers&#x20;
+### Note For Developers
 
 The Sandbox environment allows users to develop a DIGIT service fast. The DIGIT core services are already set up in the sandbox environment.
 
@@ -27,7 +27,7 @@ Once you get the API access keys, follow the step-by-step[ Developer Guide](../g
 [Click here to access Sandbox.](https://sandbox.digit.org/sandbox-ui/user/sign-up)
 
 {% hint style="info" %}
-Note that the current Sandbox environment only supports access to the Complaints and Employee Management modules.&#x20;
+Note that the current Sandbox environment only supports access to the Complaints and Employee Management modules.
 
 The [**Access DIGIT** ](https://docs.digit.org/local-governance/general/access-digit)tool enables you to explore other applications built for Local Governance.
 {% endhint %}

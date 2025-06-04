@@ -6,7 +6,7 @@ description: Writing citizen module logic
 
 ## Overview
 
-This section will walk you through the code that needs to be developed for the application.&#x20;
+This section will walk you through the code that needs to be developed for the application.
 
 ## Steps
 
@@ -14,7 +14,7 @@ This section will walk you through the code that needs to be developed for the a
 
 <summary>Create Application Form</summary>
 
-1. Create a form where users can enter all required information and submit the form.&#x20;
+1. Create a form where users can enter all required information and submit the form.
 2. Create a file called index.js in the path below:
 
 `/web/micro-ui/internals/packages/module/br/src/pages/citizen/create/index.js`
@@ -69,7 +69,7 @@ Create a file called config.js under the following path:
 
 This file defines the form meta-data and structure. The form heading goes into the "head" field. Components inside the form go into the body field.
 
-This form config has already been mapped in the `index.js` file and therefore will be rendered onto the screen.&#x20;
+This form config has already been mapped in the `index.js` file and therefore will be rendered onto the screen.
 
 ```
 export const newConfig =[
@@ -125,13 +125,13 @@ Components that we are using in `newConfig.js`:-
 [\
 BrSelectName](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectName.js)
 
-&#x20;[BrSelectGender](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BRSelectGender.js)&#x20;
+[BrSelectGender](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BRSelectGender.js)
 
 [BrSelectPhoneNumber](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectPhoneNumber.js)
 
 [BrSelectPhoneNumber](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectPhoneNumber.js)
 
-&#x20;[BrSelectAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectAddress.js)   [SelectCorrespondenceAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectCorrespondenceAddress.js)
+[BrSelectAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/BrSelectAddress.js) [SelectCorrespondenceAddress](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055d450924e8772e75bd1ac6/frontend/micro-ui/web/micro-ui-internals/packages/modules/br/src/pagecomponents/SelectCorrespondenceAddress.js)
 
 </details>
 
@@ -139,7 +139,7 @@ BrSelectName](https://github.com/egovernments/DIGIT-OSS/blob/a235f1eedef56652055
 
 <summary>Routing</summary>
 
-After adding the `config.js` and `create/index.js` , add routing for the birth registration form.&#x20;
+After adding the `config.js` and `create/index.js` , add routing for the birth registration form.
 
 Create the index.js into `br/src/pages/citizen/index.js` where we will add the private route. In `index.js`, we mention the path and component name which component we need to show or render when we hit that route.
 
@@ -178,11 +178,9 @@ export default App;
 
 **Add a card on the citizen landing screen:**
 
-![](<../../../../.gitbook/assets/image (280).png>)
+<img src="../../../../.gitbook/assets/image (280).png" alt="" data-size="original">
 
-Once the form is created and routing is added, we add the module card on our Digit-UI landing page for citizens.&#x20;
-
-
+Once the form is created and routing is added, we add the module card on our Digit-UI landing page for citizens.
 
 </details>
 
@@ -266,10 +264,6 @@ export const initBRComponents = () => {
   });
 };
 ```
-
-
-
-
 
 </details>
 
@@ -413,7 +407,7 @@ In `modules/core/src/pages/citizen/Home/index.js,` add the following:
       },
 ```
 
-Once we add the link to the homepage,we can see the birth-registration module on our Digit-UI Homepage.&#x20;
+Once we add the link to the homepage,we can see the birth-registration module on our Digit-UI Homepage.
 
 Now, let's add the homepage card for the citizen module.
 
@@ -536,10 +530,6 @@ export default Home;
 
 ```jsx
 ```
-
-
-
-
 
 </details>
 
@@ -736,15 +726,10 @@ const Create = () => {
 export default Create;
 ```
 
-
-
-
-
 </details>
 
 Once the integration is done the data will be saved into the database.
 
-\
-
+\\
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
