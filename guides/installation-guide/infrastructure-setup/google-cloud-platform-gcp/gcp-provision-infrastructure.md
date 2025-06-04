@@ -1,4 +1,4 @@
-# Provision Infrastructure
+# GCP - Provision Infrastructure
 
 ## Overview
 
@@ -212,7 +212,7 @@ terraform apply
 
 The Kubernetes tools can be used to verify the newly created cluster.
 
-1. Once the **Terraform Apply** execution is complete, use the below command to get the kubeconfig. It will store your kubeconfig in the .kube/\<file-name> folder.
+1. Once the **Terraform Apply** execution is complete, use the following command to get the kubeconfig. It will store your kubeconfig in the .kube/\<file-name> folder.
 
 {% code lineNumbers="true" %}
 ```
@@ -230,7 +230,7 @@ kubectl get nodes
 ```
 {% endcode %}
 
-3. Update below output received post terraform apply in [environment](https://github.com/egovernments/DIGIT-DevOps/tree/gcp-support/deploy-as-code/charts/environments) configuration
+3. Update below output received post terraform apply in the [environment](https://github.com/egovernments/DIGIT-DevOps/tree/gcp-support/deploy-as-code/charts/environments) configuration
 
 {% code lineNumbers="true" %}
 ```
@@ -246,7 +246,7 @@ sops_key                      # .sops.yaml (for encryption/decryption of secrets
 
 {% code lineNumbers="true" %}
 ```
-# creation rules are evaluated sequentially, the first match wins
+# creation rules are evaluated sequentially; the first match wins
 creation_rules:
         # upon creation of a file that matches the pattern *dev.yaml,
         # KMS set A is used
@@ -257,6 +257,6 @@ creation_rules:
 {% endcode %}
 
 {% hint style="info" %}
-_**Note:**_ Refer to the[ DIGIT deployment ](https://core.digit.org/guides/installation-guide/digit-deployment/full-deployment-beta)documentation to deploy DIGIT services.
+_**Note:**_ Refer to the[ DIGIT deployment ](../../digit-deployment/full-deployment-beta/)documentation to deploy DIGIT services.
 {% endhint %}
 

@@ -15,6 +15,6 @@ description: Provision infra for DIGIT on GCP using Terraform
 
 ## Installation Steps <a href="#installation-steps" id="installation-steps"></a>
 
-* [GCP Pre-requisites](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2757492745/GCP+Pre-requisites)
-* [Setup GCP Account](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2762670085/Setup+GCP+Account)
-* [Provision Infrastructure](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2762965027/Provision+Infrastructure)
+* [GCP Pre-requisites](gcp-pre-requisites.md)
+* [Setup GCP Account](setup-gcp-account.md)
+* [Provision Infrastructure](gcp-provision-infrastructure.md)
