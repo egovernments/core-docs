@@ -86,7 +86,7 @@ DIGIT comes with several accelerators. These include [UI frameworks](accelerator
 
 We organize several events for architects and developers on DIGIT. Keep a watch on the [Events](https://egov.org.in/events/) Page for upcoming events.
 
-Several volunteers are contributing to DIGIT in many ways. If you want to volunteer, check out our [contribute](accelerators/contribute.md) page.
+Several volunteers are contributing to DIGIT in many ways. If you want to volunteer, check out our [contribute](community/contribute.md) page.
 
 ## Contact Us
 

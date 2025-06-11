@@ -416,12 +416,16 @@
     * [Security Flow - Exemplar](accelerators/checklists/security-checklist/security-flow-exemplar.md)
   * [Performance Checklist](accelerators/checklists/performance-checklist.md)
   * [Deployment Checklist](accelerators/checklists/deployment-checklist.md)
-* [Contribute](accelerators/contribute.md)
-* [Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
-* [Academy](https://academy.digit.org)
-* [Events](https://egov.org.in/events/)
 
 ***
 
 * [.Well-known](.well-known/README.md)
   * [funding-manifest-urls](https://egov.org.in/.well-known/funding-manifest-urls)
+
+## Community
+
+* [DIGIT Support Solutions](https://docs.digit.org/digit-solutions-support)
+* [Contribute](community/contribute.md)
+* [Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
+* [Academy](https://academy.digit.org)
+* [Events](https://egov.org.in/events/)
