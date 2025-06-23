@@ -4,19 +4,19 @@ description: Setup infrastructure required for deploying DIGIT
 
 # Infrastructure Setup
 
-#### Topics Covered:
+{% include "../../../.gitbook/includes/topics-covered.md" %}
 
 * [List of pre-reads for a better understanding](./#pre-reads)
 * [Choose your cloud for setup](./#1.-choose-your-cloud)
 
 ## Basics
 
-DIGIT can be deployed on a public cloud like AWS, Azure or a private cloud.&#x20;
+DIGIT can be deployed on a public cloud like AWS, Azure or a private cloud.
 
 ## Pre-reads
 
 * Learn the basics of Kubernetes: [https://www.youtube.com/watch?v=PH-2FfFD2PU\&t=3s](https://www.youtube.com/watch?v=PH-2FfFD2PU\&t=3s)
-* Learn the [basics of kubectl](https://www.tutorialspoint.com/kubernetes/kubernetes\_kubectl\_commands.htm) commands
+* Learn the [basics of kubectl](https://www.tutorialspoint.com/kubernetes/kubernetes_kubectl_commands.htm) commands
 
 ## Choose Your Cloud
 
@@ -37,10 +37,3 @@ Choose your cloud and follow the instructions to set up a Kubernetes cluster bef
 {% content-ref url="sdc/" %}
 [sdc](sdc/)
 {% endcontent-ref %}
-
-
-
-
-
-&#x20;
-
