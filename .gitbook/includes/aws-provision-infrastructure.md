@@ -1,0 +1,139 @@
+---
+title: AWS-Provision Infrastructure
+---
+
+# Overview <a href="#cloud-resources-required-for-digit" id="cloud-resources-required-for-digit"></a>
+
+The image below illustrates the multiple components deployed. These include the EKS, Worker Nodes, Postgres DB, EBS Volumes, and Load Balancer.
+
+![EKS Architecture for DIGIT Setup](https://4016629814-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FX13sH0e4xi7bV1juDmGX%2Fuploads%2FJXM1sfK9pUwfLFyorwqD%2Fimage%20\(109\).png?alt=media)
+
+# Steps
+
+1. Clone the DIGIT-DevOps repository:
+
+```
+git clone https://github.com/egovernments/DIGIT-DevOps.git
+```
+
+2. Navigate to the cloned repository and checkout the kubernetes-1.30 branch:
+
+```bash
+cd DIGIT-DevOps 
+git checkout kubernetes-1.30
+```
+
+3. Check if the correct credentials are configured using the command below. Refer to the attached doc to [setup AWS Account](https://core.digit.org/v/2.9-lts/guides/installation-guide/production-setup/aws/3.-setup-aws-account) on the local machine.
+
+```
+aws configure list
+```
+
+_Make sure that the above command reflects the set AWS credentials. Proceed once the details are confirmed. (If the credentials are not set follow Step 2_ [_Setup AWS account_](../../guides/installation-guide/infrastructure-setup/aws/2.-setup-aws-account.md) _)_
+
+4. Choose either method below to generate SSH key pairs
+   * a. Use an online website (not recommended in a production setup. To be only used for demo setups): [https://8gwifi.org/sshfunctions.jsp](https://8gwifi.org/sshfunctions.jsp)
+   * b. Use openssl:
+
+```
+openssl genpkey -algorithm RSA -out private_key.pem openssl rsa -pubout -in private_key.pem -out public_key.pem
+```
+
+5. Add the public key to your [GitHub account](https://www.youtube.com/watch?v=9C7_jBn9XJ0).
+6.  Open input.yaml file in vscode. Use the below code to open it in VS code:
+
+    `code infra-as-code/terraform/sample-aws/input.yaml`
+
+    _If the command does not work, open the file in VS code manually. Once the file is open, fill in the inputs. (If you are not using vscode, open it in any editor of your choice)._
+7. Fill in the inputs as per the regex mentioned in the comments.
+8. Go to _infra-as-code/terraform/sample-aws_ and run _init.go_ script to enrich different files based on _input.yaml_.
+
+```
+cd infra-as-code/terraform/sample-aws 
+go run ../scripts/init.go
+```
+
+## Terraform Execution: Infrastructure Resources Provisioning <a href="#id-86fd" id="id-86fd"></a>
+
+Once we are complete declaring the resources, begin with deploying all resources.
+
+![](https://miro.medium.com/max/1400/0*jXSs3AmnbnJmV5i3.png)
+
+Run the terraform scripts to provision infra required to Deploy DIGIT on AWS.
+
+1. CD (change directory) to the following directory and run the below commands to create the remote state.
+
+```
+### Create the remote-state first, remember that the state name should be unique
+### You may need to use sudo incase you don't have requisite permission
+
+cd remote-state
+
+terraform init
+
+terraform plan
+
+terraform apply
+```
+
+Once the remote state is created, it is time to provision DIGIT infra. Run the below commands:
+
+<pre><code>### Once the remote state is created, you can create the DIGIT Infra
+
+<strong>cd ..
+</strong>
+terraform init
+
+terraform plan
+
+terraform apply
+</code></pre>
+
+**Important:**
+
+* **DB password is asked for in the application stage. Remember the password you have provided. It should be at least 8 characters long. Otherwise, RDS provisioning will fail.**
+* **The output of the apply command will be displayed on the console. Store this in a file somewhere. Values from this file will be used in the next step of deployment.**
+
+2\. Use this link to [get the kubeconfig from EKS](https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html) for the cluster. The region code is the default region provided in the availability zones in variables.tf. For example - ap-south-1. EKS cluster name also should've been filled in variables.tf.
+
+```bash
+aws sts get-caller-identity
+
+# Run the below command and give the respective region-code and the cluster name
+aws eks --region <region-code> update-kubeconfig --name <cluster_name>
+```
+
+3\. Verify that you can connect to the cluster by running the following command
+
+```
+kubectl config use-context <cluster_name>
+
+kubectl get nodes
+
+NAME                                             STATUS AGE   VERSION               OS-Image           
+ip-192-168-xx-1.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   
+ip-192-168-xx-2.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   
+ip-192-168-xx-3.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   
+ip-192-168-xx-4.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2 
+```
+
+At this point, your basic infra has been provisioned.
+
+<mark style="color:orange;">**Note:**</mark> Refer to the[ DIGIT deployment ](https://core.digit.org/guides/installation-guide/digit-deployment)documentation to deploy DIGIT services.
+
+# Destroying Infra <a href="#id-48f3" id="id-48f3"></a>
+
+To destroy the previously created infrastructure with Terraform, run the command below:
+
+1. ELB is not deployed via Terraform. ELB was created at deployment time by the setup of Kubernetes Ingress. This has to be deleted manually by deleting the ingress service.
+   * `kubectl delete deployment nginx-ingress-controller -n <namespace>`
+   *   `kubectl delete svc nginx-ingress-controller -n <namespace>`
+
+       **Note**: Namespace can be either egov or jenkins.
+2. Delete S3 buckets manually from the AWS console and verify if ELB got deleted.
+   * In case of if ELB is not deleted, you need to delete ELB from the [AWS console](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-delete.html).
+3. Run `terraform destroy`.
+
+{% hint style="info" %}
+Sometimes all artefacts associated with a deployment cannot be deleted through Terraform. For example, RDS instances might have to be deleted manually. It is recommended to log in to the AWS management console and look through the infra to delete any remnants.`​`
+{% endhint %}
