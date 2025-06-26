@@ -16,11 +16,11 @@ The image below illustrates the multiple components deployed. These include the 
 git clone https://github.com/egovernments/DIGIT-DevOps.git
 ```
 
-2. Navigate to the cloned repository and checkout the kubernetes-1.30 branch:
+2. Navigate to the cloned repository and checkout the kubernetes-1.31 branch:
 
 ```bash
 cd DIGIT-DevOps 
-git checkout kubernetes-1.30
+git checkout kubernetes-1.31
 ```
 
 3. Check if the correct credentials are configured using the command below. Refer to the attached doc to [setup AWS Account](https://core.digit.org/v/2.9-lts/guides/installation-guide/production-setup/aws/3.-setup-aws-account) on the local machine.
