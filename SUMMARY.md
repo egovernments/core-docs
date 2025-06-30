@@ -114,7 +114,6 @@
       * [FAQ](guides/installation-guide/infrastructure-setup/aws/faq.md)
     * [Azure](guides/installation-guide/infrastructure-setup/azure/README.md)
       * [1. Azure Pre-requisites](guides/installation-guide/infrastructure-setup/azure/1.-azure-pre-requisites.md)
-      * [2. Understanding AKS](guides/installation-guide/infrastructure-setup/azure/2.-understanding-aks.md)
       * [3. Infra-as-code (Terraform)](guides/installation-guide/infrastructure-setup/azure/3.-infra-as-code-terraform.md)
     * [SDC](guides/installation-guide/infrastructure-setup/sdc/README.md)
       * [1. SDC Pre-requisites](guides/installation-guide/infrastructure-setup/sdc/1.-sdc-pre-requisites.md)
