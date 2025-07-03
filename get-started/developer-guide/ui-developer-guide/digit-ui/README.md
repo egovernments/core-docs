@@ -2,7 +2,7 @@
 description: Key components of DIGIT-UI
 ---
 
-# DIGIT-UI
+# DIGIT-UI Architecture
 
 ## Overview <a href="#frontend-components" id="frontend-components"></a>
 
@@ -14,7 +14,7 @@ This page provides the architecture and key features of the DIGIT UI. Click on t
 
 ## Frontend Components <a href="#frontend-components" id="frontend-components"></a>
 
-Broadly, the DIGIT UI frontend components are categorized as below:
+Broadly, the DIGIT UI frontend components are categorised as follows:
 
 1. [Libraries](./#css-library)
 2. [CSS Library](./#css-library)
@@ -22,21 +22,13 @@ Broadly, the DIGIT UI frontend components are categorized as below:
 4. [UI Modules](./#modules)
 5. [Templates](./#templates)
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure></div>
 
 ### CSS Library
 
 The CSS Library contains all the classes both in the module and compiled form.
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.05.10 PM.png" alt="" width="521"><figcaption><p>css folder structure</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.05.10 PM.png" alt="" width="521"><figcaption><p>css folder structure</p></figcaption></figure></div>
 
 This can be imported using `import "@egovernments/digit-ui.css/Button"`or full CSS import using `import "@egovernments/digit-ui.css"`
 
@@ -44,37 +36,25 @@ This can be imported using `import "@egovernments/digit-ui.css/Button"`or full C
 
 The Component Library contains a set of all required components defined in it.
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.06.23 PM.png" alt="" width="540"><figcaption><p>react-components</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.06.23 PM.png" alt="" width="540"><figcaption><p>react-components</p></figcaption></figure></div>
 
 ### Libraries & Utils <a href="#utils-library" id="utils-library"></a>
 
-The libraries and utils contain the following:
+The libraries and utilities contain the following:
 
 * Localization workflows
-* API Handling Strategies - Centralize API caching and handling strategies within shared functions, accessible by all modules. This ensures consistency and efficiency across the application.
+* API Handling Strategies - Centralise API caching and handling strategies within shared functions, accessible by all modules. This ensures consistency and efficiency across the application.
 * Localisation
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.07.18 PM.png" alt="" width="534"><figcaption><p>libraries</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.07.18 PM.png" alt="" width="534"><figcaption><p>libraries</p></figcaption></figure></div>
 
 ### Modules <a href="#modules" id="modules"></a>
 
-The module is a closed system for states, allowing access only to node\_modules or CDNs. State-specific components can be provided during the module's initialization in the employee or citizen application.
+The module is a closed system for states, allowing access only to node\_modules or CDNs. State-specific components can be provided during the module's initialisation in the employee or citizen application.
 
-Below is an illustration of how the module structure looks like:
+Below is an illustration of how the module structure looks:
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.09.36 PM.png" alt="" width="365"><figcaption><p>modules</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot 2023-06-16 at 12.09.36 PM.png" alt="" width="365"><figcaption><p>modules</p></figcaption></figure></div>
 
 Modules contain the following inbuilt
 
@@ -90,11 +70,7 @@ Modules contain the following inbuilt
 1. The first line contains the Architecture Component name or info
 2. The second line contains an npm package and a template in brackets for creating the component.
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/image (306).png" alt="" width="543"><figcaption><p>module naming convention</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (306).png" alt="" width="543"><figcaption><p>module naming convention</p></figcaption></figure></div>
 
 ### Features <a href="#features" id="features"></a>
 
@@ -104,7 +80,7 @@ Modules contain the following inbuilt
 * [create-react-app](https://github.com/facebookincubator/create-react-app) for example usage and local dev for React-based libraries
 * [Rollup](https://rollupjs.org/) for bundling
 * [Babel](https://babeljs.io/) for transpiling
-* Supports complicated peer-dependencies
+* Supports complicated peer dependencies
 * Supports CSS modules
 
 ### Templates <a href="#templates" id="templates"></a>
@@ -115,12 +91,12 @@ The templates have the following folder structure: Components related to the tem
 
 We have two main React Apps:
 
-1. `micro-ui-internals`&#x20;
+1. `micro-ui-internals`
    * This is meant for the eGov development team to build components and default modules.
    * It contains the following modules:
      * CSS Library
      * UI Components (presently `react-components`)
-     * Utils Library: Contains Services, Localization handling and React Hooks.
+     * Utils Library: Contains Services, Localisation handling and React Hooks.
      * UI Modules
        * Core - containing login, routing and global state.
        * PGR

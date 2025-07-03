@@ -2,20 +2,6 @@
 description: Digital Infrastructure for Governance and Inclusive Transformation
 cover: .gitbook/assets/Docs Website Banner 4 (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Overview
