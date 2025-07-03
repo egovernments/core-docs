@@ -214,6 +214,7 @@
         * [Radio](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-1.md)
         * [Stepper](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-2.md)
         * [Dropdown - Single Select](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-3.md)
+        * [Input Fields](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-4.md)
         * [Chip](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/chip.md)
         * [Divider](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/divider.md)
         * [Dropdown](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/dropdown.md)
