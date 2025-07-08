@@ -10,7 +10,7 @@ While using the application or while performing some action if something fails w
 
 Such as - <mark style="color:red;">Something went wrong / Please try again or contact support.</mark>
 
-&#x20;Despite trying again, the same error message pops back up. What else could go wrong?\
+Despite trying again, the same error message pops back up. What else could go wrong?\
 The **Network tab** enables us to see more information about the Error.
 
 ## Steps
@@ -22,7 +22,7 @@ To fetch more information in context to the error message -
 3. **Refresh the Page** - Click the Refresh button in your browser. Since the Network tab will only show us the requests that occur after the tab has been opened, we’ll need to refresh the page so that we can view the error as it occurs. As the page reloads, you’ll see various API requests populate the panel.
 4. **Re-create the Error -** In order to understand what’s causing our error, we’ll first need to go through the same steps we took to get the error so that we can watch the request happen in real-time. In this case, to recreate the error we’ll click Update again. By re-creating the error, we’ll see exactly which request is causing the issue.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 5. **Find the Red-Line Item in the Network Panel -** This is the error that occurs when clicking Update. The status is 400, which is the error code for “bad request.” Everything else has the status 200, which is the code for “OK,” meaning nothing went wrong for those other requests.
 6. **Preview the Error Details -** Click the red-line item to see the error details. Clicking that line item will open a new frame on the right-hand side, and in this frame, you’ll see a few tabs: Headers, Preview, Response, Cookies, and Timing. In this case, stick with Preview since this contains the basic information.

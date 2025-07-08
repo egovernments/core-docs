@@ -56,7 +56,7 @@ const componentsToRegister = {
 
 * Hurray! Now you can see the Sample Card with 2 links on the screen as visible in the below screenshot:
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (7).png" alt="" width="204"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (7) (1).png" alt="" width="204"><figcaption></figcaption></figure></div>
 
 Nothing is rendered when clicking on the label. We need to set up the routes to fix this.
 
@@ -106,7 +106,7 @@ if (isLoading) {
 
 <details>
 
-<summary>Registering  Components</summary>
+<summary>Registering Components</summary>
 
 * After registering all components, links and module code we need to enable it in two places:
 
@@ -157,4 +157,3 @@ const initDigitUI = () => {
 Reference for the Index.js file is available here: [Index.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/example/src/index.js)
 
 </details>
-

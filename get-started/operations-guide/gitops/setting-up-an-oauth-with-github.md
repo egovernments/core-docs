@@ -2,8 +2,6 @@
 
 You can create and register an OAuth App under your personal account or under any organization you have administrative access to. While creating your OAuth app, remember to protect your privacy by only using information you consider public.
 
-
-
 **Note:** A user or organization can own up to 100 OAuth apps.
 
 * In the upper-right corner of any page, click your profile photo, then click **Settings**.
@@ -33,7 +31,7 @@ You can create and register an OAuth App under your personal account or under an
 
 * Optionally, in "Application description", type a description of your app that users will see.
 
-<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
 
 * In "Authorization callback URL", type the callback URL of your app.
 

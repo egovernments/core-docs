@@ -25,7 +25,7 @@ Click on `Build with parameter`. Select the feature branch name by searching for
 
 Once the build is successful, open the console output and find the docker image that has been built. Copy the docker image ID.
 
-<img src="../../../.gitbook/assets/image (28).png" alt="" data-size="original">
+<img src="../../../.gitbook/assets/image (28) (1).png" alt="" data-size="original">
 
 </details>
 

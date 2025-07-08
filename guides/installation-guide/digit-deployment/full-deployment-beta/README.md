@@ -70,8 +70,7 @@ The helmfile apply sub-command begins by executing diff. If diff finds that ther
 
 ### destroy
 
-The helmfile destroys sub-commands uninstalls and purges all the releases defined in the manifests. helmfile --interactive destroy instructs Helm File to request your confirmation before actually deleting releases.\
-
+The helmfile destroys sub-commands uninstalls and purges all the releases defined in the manifests. helmfile --interactive destroy instructs Helm File to request your confirmation before actually deleting releases.\\
 
 ## Deploying DIGIT Using Helmfile
 
@@ -87,26 +86,26 @@ $ git checkout DIGIT-2.9LTS
 $ vi deploy-as-code/charts/environments/env.yaml
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-* Update db password , flywaypassword, loginusername, loginpassword  and git-sync private key in env-secrets.yaml
+* Update db password , flywaypassword, loginusername, loginpassword and git-sync private key in env-secrets.yaml
 
-&#x20;           <mark style="color:red;">**Note:**</mark>  <mark style="color:red;"></mark><mark style="color:red;">Make sure the db\_password and flywaypassword are same</mark>
+<mark style="color:red;">**Note:**</mark> <mark style="color:red;">Make sure the db\_password and flywaypassword are same</mark>
 
 ```
 $ vi deploy-as-code/charts/environments/env-secrets.yaml
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-**Note** &#x20;
+**Note**
 
-1\. Generate SSH key pairs using the below method \
+1\. Generate SSH key pairs using the below method\
 Using the online website (not recommended in a production setup. To be only used for demo setups): [https://8gwifi.org/sshfunctions.jsp](https://8gwifi.org/sshfunctions.jsp)\
-2\. Add the public key to your GitHub account - (reference: [https://www.youtube.com/watch?v=9C7\_jBn9XJ0\&ab\_channel=AOSNote](https://www.youtube.com/watch?v=9C7\_jBn9XJ0\&ab\_channel=AOSNote) )
+2\. Add the public key to your GitHub account - (reference: [https://www.youtube.com/watch?v=9C7\_jBn9XJ0\&ab\_channel=AOSNote](https://www.youtube.com/watch?v=9C7_jBn9XJ0\&ab_channel=AOSNote) )
 {% endhint %}
 
 * Run the below command to install DIGIT successfully.
@@ -136,9 +135,9 @@ $ cd DIGIT-DevOps
 $ git checkout DIGIT-2.9LTS(Helmfile)
 ```
 
-*   To integrate a managed PostgreSQL service, modify the following parameters in the&#x20;
+*   To integrate a managed PostgreSQL service, modify the following parameters in the
 
-    deploy-as-code/charts/environments/env.yaml  configuration file:
+    deploy-as-code/charts/environments/env.yaml configuration file:
 
     * `db-host`: Update with the database service host address.
     * **`db-name`**: Update with the specific database name.
@@ -149,7 +148,7 @@ $ git checkout DIGIT-2.9LTS(Helmfile)
 $ vi deploy-as-code/charts/environments/env.yaml
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Update db password, db username, flyway username, flyway password, login username, login password and git-sync private key in env-secrets.yaml
 
@@ -157,18 +156,14 @@ $ vi deploy-as-code/charts/environments/env.yaml
 $ vi deploy-as-code/charts/environments/env-secrets.yaml
 ```
 
-<div align="left">
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-**Note:**  1. Generate SSH key pairs using the below method \
+**Note:** 1. Generate SSH key pairs using the below method\
 Using the online website (not recommended in production setup. To be only used for demo setups): [https://8gwifi.org/sshfunctions.jsp](https://8gwifi.org/sshfunctions.jsp)\
-2\. Add the public key to your GitHub account - (reference: [https://www.youtube.com/watch?v=9C7\_jBn9XJ0\&ab\_channel=AOSNote](https://www.youtube.com/watch?v=9C7\_jBn9XJ0\&ab\_channel=AOSNote) )
+2\. Add the public key to your GitHub account - (reference: [https://www.youtube.com/watch?v=9C7\_jBn9XJ0\&ab\_channel=AOSNote](https://www.youtube.com/watch?v=9C7_jBn9XJ0\&ab_channel=AOSNote) )
 {% endhint %}
 
 * Run the below command to install DIGIT successfully.
@@ -200,4 +195,4 @@ $ helmfile -f deploy-as-code/digit-helmfile.yaml destroy
 \
 Tested Environment
 
-This deployment approach has been thoroughly tested on an Amazon Web Services Elastic Kubernetes Service (AWS EKS) Cluster with Kubernetes version 1.28.\
+This deployment approach has been thoroughly tested on an Amazon Web Services Elastic Kubernetes Service (AWS EKS) Cluster with Kubernetes version 1.28.\\

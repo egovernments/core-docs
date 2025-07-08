@@ -217,6 +217,8 @@
         * [Input Fields](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-4.md)
         * [Panel](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-5.md)
         * [Toggles](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-6.md)
+        * [Toast](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-7.md)
+        * [OTP Input](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-8.md)
         * [Chip](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/chip.md)
         * [Divider](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/divider.md)
         * [Dropdown](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/dropdown.md)

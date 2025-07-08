@@ -55,8 +55,8 @@ Refer to the file here: [Module.js](https://github.com/egovernments/DIGIT-Fronte
 
 * After creating the module code we need to enable it in two places:
 
-1. **For Deployment** \
-   &#x20;In app.js we import the SampleModule, initSampleComponents,  and enable the Sample module.\
+1. **For Deployment**\
+   In app.js we import the SampleModule, initSampleComponents, and enable the Sample module.\
    Add the App.js file in the following path:\
    `micro-ui/web/src/App.js`
 
@@ -86,8 +86,8 @@ initLibraries().then(() => {
 \
 Reference for the App.js file: [App.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/src/App.js)
 
-2. **For Local development** \
-   In index.js, import the SampleModule, initSampleComponents,  and enable the  Sample module.\
+2. **For Local development**\
+   In index.js, import the SampleModule, initSampleComponents, and enable the Sample module.\
    Create the index.js file under the following path:\
    `micro-ui-internals/example/src/index.js`
 
@@ -110,13 +110,13 @@ Reference for the Index.js file: [Index.js](https://github.com/egovernments/DIGI
 
 * If there is a local server running, make sure to stop it. Restart by running `yarn install` followed by `yarn start` at the `micro-ui-internals` level.
 
-Hurray!  Now, the screen is displayed below on visiting the given URL:
+Hurray! Now, the screen is displayed below on visiting the given URL:
 
 ```
 http://localhost:3000/digit-ui/employee/sample
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Refer to the below sections for a deeper understanding
 

@@ -6,7 +6,7 @@ description: Front-end module project structure
 
 ## Overview
 
-Before starting with the  Module code, ensure your local development environment is set up. You can refer to the local development setup guide link given below for detailed instructions.
+Before starting with the Module code, ensure your local development environment is set up. You can refer to the local development setup guide link given below for detailed instructions.
 
 [Local-Development-Setup](https://core.digit.org/guides/developer-guide/ui-developer-guide/local-development-setup)
 
@@ -16,19 +16,15 @@ Before starting with the  Module code, ensure your local development environment
 Download the UI code from the link here [Digit-Frontend](https://github.com/egovernments/Digit-Frontend). if not done earlier
 {% endhint %}
 
-&#x20; Follow the steps given below to create the project structure.
+Follow the steps given below to create the project structure.
 
 1. Once you have cloned the repository from Digit-Frontend, do the following.
-2. Go to `micro-ui-internals → packages → modules`.&#x20;
-3. Create a new folder with module's name , For example (**Sample**).&#x20;
+2. Go to `micro-ui-internals → packages → modules`.
+3. Create a new folder with module's name , For example (**Sample**).
 4. Create a folder called **src** and add the **components** , **configs**, **hooks** and **pages** inside that.
 5. The project structure should be as in the image below:
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt="" width="351"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt="" width="351"><figcaption></figcaption></figure></div>
 
 6. After creating the new `Sample` module, we need to create a `package.json` file for the module, specifying the module name, version, scripts, and required dependencies.
 
