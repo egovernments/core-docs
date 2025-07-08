@@ -21,7 +21,7 @@ description: >-
 
 * Next, Click on **Invite member**
 
-<figure><img src="../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Type the username, full name, or email address of the person you want to invite and click **Invite**.
 

@@ -56,7 +56,7 @@ const componentsToRegister = {
 
 * Hurray! Now you can see the Sample Card with 2 links on the screen as visible in the below screenshot:
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt="" width="204"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt="" width="204"><figcaption></figcaption></figure></div>
 
 Nothing is rendered when clicking on the label. We need to set up the routes to fix this.
 
