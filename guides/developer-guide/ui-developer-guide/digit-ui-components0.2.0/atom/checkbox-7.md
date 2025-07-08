@@ -6,7 +6,7 @@ description: Design System - Toast component
 
 The Toast component delivers brief, unobtrusive feedback messages to inform users about the result of an action. It is accessible, timely, and clearly distinguishes message types through consistent visual cues and positioning.
 
-<figure><img src="../../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,17 +43,17 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Success</strong></p><p>Indicates a successful or completed action, with a green background and check icon.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Warning</strong></p><p>Alerts users to potential issues that need attention but aren’t critical. Often styled with an amber background.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Info</strong> </p><p>Provides general information or guidance in blue, without urgency.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Error</strong> </p><p>Communicates a failure or problem, using red tones to draw immediate attention.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Success</strong></p><p>Indicates a successful or completed action, with a green background and check icon.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Warning</strong></p><p>Alerts users to potential issues that need attention but aren’t critical. Often styled with an amber background.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Info</strong> </p><p>Provides general information or guidance in blue, without urgency.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Error</strong> </p><p>Communicates a failure or problem, using red tones to draw immediate attention.</p></td></tr></tbody></table>
 
 ## Properties
 
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Input Text</strong><br>Custom message text that conveys the result or information clearly and concisely.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Duration</strong><br>Specifies how long the toast remains visible on the screen, usually in milliseconds.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Input Text</strong><br>Custom message text that conveys the result or information clearly and concisely.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Duration</strong><br>Specifies how long the toast remains visible on the screen, usually in milliseconds.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Property Configuration Table
 
@@ -73,10 +73,10 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                       |                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Auto Dismiss</strong></p><p>Toast automatically disappears after the defined duration.</p> |
-| <div><figure><img src="../../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Manual Dismiss</strong></p><p>Users can manually close a toast using the close icon.</p>   |
+|                                                                                                                           |                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Auto Dismiss</strong></p><p>Toast automatically disappears after the defined duration.</p> |
+| <div><figure><img src="../../../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Manual Dismiss</strong></p><p>Users can manually close a toast using the close icon.</p>   |
 
 ***
 
@@ -84,9 +84,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Keep messages brief and time-sensitive</strong></p><p>Use short and actionable text that disappears automatically after 3-5 seconds. Ensure it provides immediate value without interrupting workflow and is horizontally centre-aligned for better visibility..  Never stack multiple toasts; excessive toasts overwhelm users and dilute the importance of urgent notifications.</p> |
-| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                   |
+| <div><figure><img src="../../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Keep messages brief and time-sensitive</strong></p><p>Use short and actionable text that disappears automatically after 3-5 seconds. Ensure it provides immediate value without interrupting workflow and is horizontally centre-aligned for better visibility..  Never stack multiple toasts; excessive toasts overwhelm users and dilute the importance of urgent notifications.</p> |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## Changelog
 

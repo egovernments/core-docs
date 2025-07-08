@@ -6,7 +6,7 @@ description: Design System - OTP input component
 
 The OTP Input component is designed to collect secure, time-sensitive verification codes from users in a clear and accessible way. It emphasises clarity, accuracy, and ease of use across different devices, ensuring a smooth authentication process.
 
-<figure><img src="../../../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,17 +43,17 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>4-characters</strong></p><p>Used when the OTP is limited to four digits, offering a compact layout ideal for simpler authentication flows.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>6-characters</strong></p><p>Common in more secure flows, this variant provides six input boxes for enhanced verification.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>4-characters</strong></p><p>Used when the OTP is limited to four digits, offering a compact layout ideal for simpler authentication flows.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>6-characters</strong></p><p>Common in more secure flows, this variant provides six input boxes for enhanced verification.</p></td></tr></tbody></table>
 
 ## Properties
 
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Label</strong><br>Positioned above the input fields (e.g., "Enter OTP"), it provides clear instructions to the user.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Error</strong><br>Displays an error message (e.g., “Invalid OTP”) with a red border and icon to indicate incorrect input.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><p><strong>Masking</strong></p><p>Optionally replaces typed characters with dots (●) for added security, particularly useful in shared or public environments.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td></td><td></td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Label</strong><br>Positioned above the input fields (e.g., "Enter OTP"), it provides clear instructions to the user.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Error</strong><br>Displays an error message (e.g., “Invalid OTP”) with a red border and icon to indicate incorrect input.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><p><strong>Masking</strong></p><p>Optionally replaces typed characters with dots (●) for added security, particularly useful in shared or public environments.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td></td><td></td></tr></tbody></table>
 
 ## Property Configuration Table
 
@@ -73,7 +73,7 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Single Focus</strong><br>In Single Focus mode, only one input box is actively focused at a time. As the user types, the focus automatically moves to the next box, improving usability and reducing the need for manual navigation between fields.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Single Focus</strong><br>In Single Focus mode, only one input box is actively focused at a time. As the user types, the focus automatically moves to the next box, improving usability and reducing the need for manual navigation between fields.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Behaviours
 

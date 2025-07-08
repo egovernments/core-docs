@@ -234,7 +234,7 @@ const componentsToRegister = {
 
 * The screen is similar to the image below, illustrating the Create Form.
 
-<img src="../../../../.gitbook/assets/image (5) (1).png" alt="" data-size="original">
+<img src="../../../../.gitbook/assets/image (5) (1) (1).png" alt="" data-size="original">
 
 </details>
 
