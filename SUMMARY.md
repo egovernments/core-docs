@@ -224,6 +224,7 @@
         * [Chips](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-11.md)
         * [Divider](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-12.md)
         * [Switch](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-13.md)
+        * [Tooltip](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-14.md)
         * [Chip](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/chip.md)
         * [Divider](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/divider.md)
         * [Dropdown](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/dropdown.md)
