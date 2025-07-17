@@ -6,49 +6,49 @@ description: Configure user data management services
 
 ## Overview
 
-User service is responsible for user data management and providing functionality to login and logout into the DIGIT system
+User service is responsible for user data management and providing functionality to log in and log out of the DIGIT system.
 
 ## Pre-requisites
 
-Before you proceed with the configuration, make sure the following pre-requisites are met&#x20;
+Before you proceed with the configuration, make sure the following prerequisites are met
 
 * Java 17
 * [Encryption](../encryption-service/) and [MDMS](../mdms-v2-master-data-management-service/mdms-master-data-management-service/) services are running
-* PostgreSQL server is running&#x20;
+* PostgreSQL server is running
 * Redis is running
 
 ## Key Functionalities
 
 * Store, update and search user data
 * Provide Authentication
-* Provide login and logout functionality into the DIGIT platform
-* Store user data PIIs in encrypted form
+* Provide login and logout functionality on the DIGIT platform
+* Store user data PIIs in an encrypted form
 
-## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+## DB Diagram
+
+<div align="left"><figure><img src="../../../.gitbook/assets/image (454).png" alt=""><figcaption></figcaption></figure></div>
+
+## Play around with the APIs: [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)
 
 ## Interaction Diagram
 
 <figure><img src="../../../.gitbook/assets/f4b12b30-af64-4407-9c87-a2abb1ca7fb0.png" alt=""><figcaption></figcaption></figure>
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/70851aa5-78c8-4c49-9326-082d03e2c9ac.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/70851aa5-78c8-4c49-9326-082d03e2c9ac.png" alt=""><figcaption></figcaption></figure></div>
 
 ## Deployment Details
 
-1. Setup the latest version of [egov-enc-service](../encryption-service/) and [egov-mdms- service](../mdms-v2-master-data-management-service/mdms-master-data-management-service/)&#x20;
+1. Set up the latest version of [egov-enc-service](../encryption-service/) and [egov-mdms- service](../mdms-v2-master-data-management-service/mdms-master-data-management-service/)
 2.  [Deploy](../../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md) the latest version of egov-user service
 
-    &#x20;**Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates/) here.
+    **Note**: This video will give you an idea of how to deploy any Digit-service. Further, you can find the latest builds for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates/) here.
 3.  Add [role-action mapping](https://github.com/egovernments/playground-mdms-data/blob/master/data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json) for APIs
 
-    **Note** : This is a sample JSON file containing role-action mapping , If you don't have any of the master data setup yet you can you this to create on for you and then add all these files and start making changed in your repo.
+    **Note**: This is a sample JSON file containing role-action mapping. If you don't have any of the master data setup yet, you can you this to create one for you and then add all these files and start making changes in your repo.
 
 ## Configuration Details
 
-The following application properties file in user service are configurable.
+The following application properties file in the user service is configurable.
 
 | Property                                    | Value  | Remarks                                            |
 | ------------------------------------------- | ------ | -------------------------------------------------- |
@@ -70,7 +70,7 @@ The following application properties file in user service are configurable.
 
 ### Integration Scope
 
-User data management and functionality to log in and log out into the DIGIT system using OTP and password.
+User data management and functionality to log in and log out of the DIGIT system using OTP and password.
 
 ### Integration Benefits
 
@@ -84,7 +84,7 @@ Employee:
 * Forgot password
 * Change password
 * User role mapping(Single ULB to multiple roles)
-* Enable employees to login into the DIGIT system based on a password.
+* Enable employees to log in to the DIGIT system based on a password.
 
 Citizen:
 
@@ -97,14 +97,14 @@ Citizen:
 ### Integration Steps
 
 * To integrate, the host of egov-user should be overwritten in the helm chart.
-* Use `/citizen/_create` endpoint for creating users into the system. This endpoint requires the user to validate his mobile number using OTP. First, the OTP is sent to the user's mobile number and then the OTP is sent as `otpReference` in the request body.
+* Use `/citizen/_create` endpoint for creating users in the system. This endpoint requires the user to validate their mobile number using OTP. First, the OTP is sent to the user's mobile number, and then the OTP is sent as `otpReference` in the request body.
 * Use `/v1/_search` and `/_search` endpoints to search users in the system depending on various search parameters.
 * Use `/profile/_update` for updating the user profile. The user is validated (either through OTP-based validation or password validation) when this API is called.
-* `/users/_createnovalidate` and `/users/_updatenovalidate` are endpoints to create user data into the system without any validations (no OTP or password required). They should be strictly used only for creating/updating users internally and should not be exposed outside.
-* **Forgot password:** In case the user forgets the password it can be reset by first calling `/user-otp/v1/_send` which generates and sends OTP to the employee’s mobile number. The password is then updated using this OTP by calling the API `/password/nologin/_update` in which a new password along with the OTP is sent.
-* Use `/password/_update` to update the existing password by logging in. Both old and new passwords are sent to the request body. Details of the API can be found in the attached swagger documentation.
+* `/users/_createnovalidate` and `/users/_updatenovalidate` are endpoints to create user data in the system without any validations (no OTP or password required). They should be strictly used only for creating/updating users internally and should not be exposed outside.
+* **Forgot password:** In case the user forgets the password it can be reset by first calling `/user-otp/v1/_send` , which generates and sends OTP to the employee’s mobile number. The password is then updated using this OTP by calling the API `/password/nologin/_update` in which a new password along with the OTP is sent.
+* Use `/password/_update` to update the existing password by logging in. Both old and new passwords are sent to the request body. Details of the API can be found in the attached Swagger documentation.
 * Use `/user/oauth/token` for generating tokens, `/_logout`for logout and `/_details` for getting user information from the token.
-* **Multi-Tenant User**: The multi-tenant user functionality allows users to perform actions across multiple ULBs. For example, employees belonging to Amritsar can perform the role of say Trade License Approver for Jalandhar by assigning them the tenant-level role of tenantId pb.jalandhar.&#x20;
+* **Multi-Tenant User**: The multi-tenant user functionality allows users to perform actions across multiple ULBs. For example, employees belonging to Amritsar can perform the role of say Trade License Approver for Jalandhar by assigning them the tenant-level role of tenantId pb.jalandhar.
 * Following is an example of the user:
 
 {% code lineNumbers="true" %}
@@ -136,15 +136,15 @@ Citizen:
 ```
 {% endcode %}
 
-If an employee has a role with statelevel `tenantId` they can perform actions corresponding to that role across all tenants.
+If an employee has a role at the state level `tenantId` they can perform actions corresponding to that role across all tenants.
 
-* **Refresh Token:** Whenever the `/user/oauth/token` is called to generate the `access_token` along with `access_token,` one more token is generated called `refresh_token` . The refresh token is used to generate a new `access_token` whenever the existing one expires. Till the time the refresh token is valid, users will not have to log in even if their `access_token`  expires since this is generated using `refresh_token`. The validity time of the refresh token is configurable and can be configured using the property: `refresh.token.validity.in.minutes`&#x20;
+* **Refresh Token:** Whenever the `/user/oauth/token` is called to generate the `access_token` along with `access_token,` one more token is generated called `refresh_token` . The refresh token is used to generate a new `access_token` whenever the existing one expires. Till the time the refresh token is valid, users will not have to log in even if the `access_token` expires, since this is generated using `refresh_token`. The validity time of the refresh token is configurable and can be configured using the property: `refresh.token.validity.in.minutes`
 
 ### User Data Privacy <a href="#user-data-privacy" id="user-data-privacy"></a>
 
-Since User service handles PII (Personal Identifiable information) encrypting the data before saving in DB becomes crucial.
+Since User service handles PII (Personal Identifiable Information), encrypting the data before saving it in the database becomes crucial.
 
-&#x20;DIGIT manages these as security policy in Master Data which is then referred by encryption service to encrypt the data before persisting it to DB.&#x20;
+DIGIT manages these as a security policy in Master Data, which is then referred to by the encryption service to encrypt the data before persisting it to the database.
 
 #### MDMS Configuration For Security Policy <a href="#mdms-configuration-for-security-policy" id="mdms-configuration-for-security-policy"></a>
 
@@ -152,13 +152,13 @@ There are two security policy models for user data - **User** and **UserSelf**.
 
 **User model**
 
-* &#x20;`attributes` contains a list of fields from the user object that needs to be secured and the field &#x20;
-* `roleBasedDecryptionPolicy` is an attribute-level role-based policy. It defines visibility for each attribute.&#x20;
-* User security model is used for Search API response
+* `attributes` contains a list of fields from the user object that need to be secured, and the field
+* `roleBasedDecryptionPolicy` is an attribute-level role-based policy. It defines visibility for each attribute.
+* The user security model is used for the Search API response
 
 **UserSelf**
 
-* &#x20;**It** contains the same structure of security policy but the UserSelf is used for Create/Update API response.
+* **It** contains the same structure of security policy, but the UserSelf is used for the Create/Update API response.
 
 <pre class="language-json" data-line-numbers><code class="lang-json">{
   "tenantId": "pb",
@@ -379,8 +379,6 @@ There are two security policy models for user data - **User** and **UserSelf**.
 }
 </code></pre>
 
-
-
 The visibility of the PII data is based on the above MDMS configuration. There are three types of visibility mentioned in the config.
 
 1. **PLAIN** - Show text in plain form.
@@ -403,7 +401,7 @@ The visibility of the PII data is based on the above MDMS configuration. There a
 ```
 {% endcode %}
 
-Any user can get plain access to the secured data (citizen’s PII) by requesting through the `plainAccessRequest` parameter. It takes the following parameters:
+Any user can get plain access to the secured data (citizen’s PII) by requesting it through the `plainAccessRequest` parameter. It takes the following parameters:
 
 1. `recordId` - It is the unique identifier of the record that is requested for plain access.
 2. `fields` - It defines a list of attributes that are requested for plain access.
@@ -437,4 +435,3 @@ User data encryption promotion document
 | [/password/nologin/\_update](https://www.getpostman.com/collections/15443fcb25c8aacd8897) |
 | [/\_logout](https://www.getpostman.com/collections/15443fcb25c8aacd8897)                  |
 | [/user/oauth/token](https://www.getpostman.com/collections/15443fcb25c8aacd8897)          |
-
