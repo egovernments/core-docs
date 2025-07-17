@@ -16,9 +16,11 @@ There are 3 new use cases added to the FormComposer in addition to the default o
 * Cards with navigation menu
 * Multiple cards with navigation menu on a single card
 
-The following use cases are covered in the [DIGIT-WORKS repo](https://github.com/egovernments/DIGIT-Works).&#x20;
+The following use cases are covered in the [DIGIT-WORKS repo](https://github.com/egovernments/DIGIT-Works).
 
 URL to access:/works-ui/employee/works/sampleForm
+
+{% embed url="https://docs.google.com/presentation/d/e/2PACX-1vTWwARxuFdSZ3eotsrA8kiAqF8qaPCc4y13Iu8L0Q8NVDIyz08kOGIP9MR7c20KGB3kRS1f7VgaDqm1/pubembed?delayms=3000&loop=true&start=true" %}
 
 ### Multiple Cards <a href="#multiple-cards" id="multiple-cards"></a>
 

@@ -19,11 +19,11 @@ This page offers details of the DIGIT UI configuration required to enable it in 
 ### **Build Configuration**
 
 {% hint style="info" %}
-eGov recommends [CD/CI be set up](https://urban.digit.org/installation/jenkins-setup) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Please run the [CI installer to setup DIGIT CD/CI](https://urban.digit.org/installation/jenkins-setup) before developing on DIGIT.&#x20;
+eGov recommends [CD/CI be set up](https://urban.digit.org/installation/jenkins-setup) before developing on top of DIGIT. This ensures that new modules can be developed and deployed in a streamlined way. DIGIT ships with CI as code as part of the DevOps repository. Please run the [CI installer to setup DIGIT CD/CI](https://urban.digit.org/installation/jenkins-setup) before developing on DIGIT.
 {% endhint %}
 
 **Step 1:** Add entry in build-config.yaml file in the **master** branch of the forked repository. This will set up the job pipeline in Jenkins. Make sure to add the same config to the feature branch you are working on.\
-Refer  [build-config.yaml](https://github.com/egovernments/DIGIT-OSS/blob/6faf040bfecdc9b023e5578adf1e8c3480c8458b/build/build-config.yml#L734)
+Refer [build-config.yaml](https://github.com/egovernments/DIGIT-OSS/blob/6faf040bfecdc9b023e5578adf1e8c3480c8458b/build/build-config.yml#L734)
 
 Add the below content for digit-ui.
 
@@ -35,15 +35,13 @@ Add the below content for digit-ui.
         image-name: digit-ui
 ```
 
-**Step 2:** Go to the Jenkins build page, select "Job Builder" and click on "Build now". This will pull the config from build\_config.yaml and identify all modules that need to be built.&#x20;
+**Step 2:** Go to the Jenkins build page, select "Job Builder" and click on "Build now". This will pull the config from build\_config.yaml and identify all modules that need to be built.
 
 **Step 3**: Once the build is done, go to your Jenkins build page. The service will appear under the repository path in which it has been added, i.e. if the service is added under frontend, it will show up in the frontend section as below,
 
-
-
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-06-13 at 12.10.44 PM.png" alt=""><figcaption><p>build ui docker image from jenkins</p></figcaption></figure>
 
-&#x20;**To learn more about the** [**Build**](https://core.digit.org/guides/developer-guide/ui-developer-guide/build-and-deploy#build) **and** [**deployment**](https://core.digit.org/guides/developer-guide/ui-developer-guide/build-and-deploy#deploy) **process visit**&#x20;
+**To learn more about the** [**Build**](https://core.digit.org/guides/developer-guide/ui-developer-guide/build-and-deploy#build) **and** [**deployment**](https://core.digit.org/guides/developer-guide/ui-developer-guide/build-and-deploy#deploy) **process visit**
 
 {% content-ref url="build-and-deploy.md" %}
 [build-and-deploy.md](build-and-deploy.md)
@@ -51,7 +49,7 @@ Add the below content for digit-ui.
 
 ### **Helmchart Configuration**
 
-**Step 1:** Add an entry in the helm chart of the frontend directory in the **master** branch of the forked [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps) repository.&#x20;
+**Step 1:** Add an entry in the helm chart of the frontend directory in the **master** branch of the forked [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps) repository.
 
 **Step 2:** Deploy-as-code/helm/charts/frontend/digit-ui
 
@@ -59,9 +57,9 @@ Add the below content for digit-ui.
 
 ### **Environment Configuration**
 
-**Step 1:** Locate the following `"deploy-as-code/helm/environments/works-dev.yaml" i`n the DevOps repository of your organization.&#x20;
+**Step 1:** Locate the following `"deploy-as-code/helm/environments/works-dev.yaml" i`n the DevOps repository of your organization.
 
-**Step 2:** Add the below code block within the environment YAML file used to deploy the Works platform -    &#x20;
+**Step 2:** Add the below code block within the environment YAML file used to deploy the Works platform -
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>digit-ui:
 </strong>  custom-js-injection: |
@@ -70,9 +68,9 @@ Add the below content for digit-ui.
       &#x3C;script src={{INSERT_YOUR_AWS_BUCKET_NAME}}/globalConfigs.js type=text/javascript>&#x3C;/script>';"
 </code></pre>
 
-**Step 3:** Modify the development environment [sample file ](https://github.com/egovernments/DIGIT-DevOps/blob/efaf8d4335995d2c46c136d06a04e4ea2c2ef581/deploy-as-code/helm/environments/uat.yaml#L430)as per requirements.&#x20;
+**Step 3:** Modify the development environment [sample file ](https://github.com/egovernments/DIGIT-DevOps/blob/efaf8d4335995d2c46c136d06a04e4ea2c2ef581/deploy-as-code/helm/environments/uat.yaml#L430)as per requirements.
 
-### **Global Configuration**&#x20;
+### **Global Configuration**
 
 This section contains the configuration that applies globally to all UI modules. These need to be configured before the configuration of service-specific UI.
 
@@ -83,7 +81,7 @@ This section contains the configuration that applies globally to all UI modules.
 3. Mention the state tenant ID as stateTenantId.
 4. If any User roles have to be made invalid add as invalidEmployeeRoles.
 5. Then push this global config file into your S3 bucket as globalconfigs.js
-6. Mention the globalconfig file URL in your [`Environment config`](ui-configuration-devops.md#environment-configuration)`.`&#x20;
+6. Mention the globalconfig file URL in your [`Environment config`](ui-configuration-devops.md#environment-configuration)`.`
 
 {% code lineNumbers="true" %}
 ```
@@ -96,7 +94,12 @@ var globalConfigs = (function () {
   var digitHomeURL = 'https://www.digit.org/'
   var assetS3Bucket = '{{INSERT_YOUR_AWS_BUCKET_NAME}}';
   var invalidEmployeeRoles = ["CBO_ADMIN","STADMIN","ORG_ADMIN","ORG_STAFF"] 
-  var configModuleName = 'commonMuktaUiConfig'; 
+  var configModuleName = 'commonMuktaUiConfig'; // helps to override modulename of core modules
+  var mdmsFeatures={
+    bulkDownload:true,
+    bulkUpload:true,
+    JSONEdit:true
+  }
 
    var getConfig = function (key) {
      if (key === 'STATE_LEVEL_TENANT_ID') {
@@ -121,7 +124,13 @@ var globalConfigs = (function () {
 	return configModuleName;
      } else if (key === 'INVALIDROLES'){
 	return invalidEmployeeRoles;
-     }
+     } else if (key === "ENABLE_JSON_EDIT") {
+      return mdmsFeatures?.JSONEdit;
+    } else if (key === "ENABLE_MDMS_BULK_UPLOAD") {
+      return mdmsFeatures?.bulkUpload;
+    } else if (key === "ENABLE_MDMS_BULK_DOWNLOAD") {
+      return mdmsFeatures?.bulkDownload;
+    } 
    };
  
  
@@ -139,8 +148,8 @@ The S3 bucket has to be configured by the DevOps team, to store all the assets b
 
 **Steps to create a new AWS Bucket -**
 
-1. Create a new AWS S3 Bucket&#x20;
-2. Update the Bucket Policy with the following content, to make the bucket public&#x20;
+1. Create a new AWS S3 Bucket
+2. Update the Bucket Policy with the following content, to make the bucket public
 
 ```json
 {
