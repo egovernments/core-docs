@@ -438,6 +438,7 @@
 ## Community
 
 * [DIGIT Support Solutions](https://docs.digit.org/digit-solutions-support)
+* [DIGIT LTS - Terms Of Service](community/digit-lts-terms-of-service.md)
 * [Contribute](community/contribute.md)
 * [Discussion Board](https://github.com/egovernments/TechCouncil/discussions)
 * [Academy](https://academy.digit.org)
