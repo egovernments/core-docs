@@ -24,7 +24,7 @@ Before you proceed with the configuration, make sure the following prerequisites
 * Provide login and logout functionality on the DIGIT platform
 * Store user data PIIs in an encrypted form
 
-## DB Diagram
+## Database Diagram
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (454).png" alt=""><figcaption></figcaption></figure></div>
 

@@ -6,7 +6,7 @@ description: Configure workflows as per requirements
 
 ## Overview
 
-Workflows are a series of steps that moves a process from one state to another state by actions performed by different kind of Actors - Humans, Machines, Time based events etc. to achieve a goal like onboarding an employee, or approve an application or granting a resource etc. The _egov-workflow-v2_ is a workflow engine which helps in performing these operations seamlessly using a predefined configuration.
+Workflows consist of a series of steps that transition a process from one state to another through actions performed by various actors — including humans, machines, and time-based events — to achieve goals such as onboarding an employee, approving an application, or granting a resource. The egov-workflow-v2 is a workflow engine that facilitates these operations seamlessly using a predefined configuration.
 
 ## Pre-requisites
 
@@ -14,38 +14,56 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 * Java 17
 * Kafka server is up and running
-* [egov-persister](../persister-service/) service is running and has a [workflow](https://github.com/egovernments/configs/blob/UNIFIED-DEV/egov-persister/egov-workflow-v2-persister.yml) yml added yo  [persister config path](https://github.com/egovernments/Digit-Core/blob/1022a4beec120df1be0f3f20065f13b698be2ecc/core-services/egov-persister/src/main/resources/application.properties#L45).
-* PostgreSQL server is running and a database is created to store workflow configuration and data
+* [egov-persister](../persister-service/) service is running and has a [workflow](https://github.com/egovernments/configs/blob/UNIFIED-DEV/egov-persister/egov-workflow-v2-persister.yml) yml added to the [persister config path](https://github.com/egovernments/Digit-Core/blob/1022a4beec120df1be0f3f20065f13b698be2ecc/core-services/egov-persister/src/main/resources/application.properties#L45).
+* PostgreSQL server is running, and a database is created to store workflow configuration and data
 
 ## Key Functionalities
 
-* Always allow anyone with a role in the workflow state machine to view the workflow instances and comment on it
-* On the creation of workflow, it will appear in the inbox of all employees that have roles that can perform any state transitioning actions in this state.
-* Once an instance is marked to an individual employee it will appear only in that employee's inbox although point 1 will still hold true and all others participating in the workflow can still search it and act if they have the necessary action available to them
+* Always allow anyone with a role in the workflow state machine to view the workflow instances and comment on them
+* On the creation of the workflow, it will appear in the inbox of all employees who have roles that can perform any state-transitioning actions in this state.
+* Once an instance is marked to an individual employee, it will appear only in that employee's inbox, although point 1 will still hold true, and all others participating in the workflow can still search it and act if they have the necessary action available to them
 * If the instance is marked to a person who cannot perform any state transitioning action, they can still comment/upload and mark to anyone else.
 * **Overall SLA:** SLA for the complete processing of the application/Entity
 * **State-level SLA:** SLA for a particular state in the workflow
 
 <table><thead><tr><th width="255">Environment Variables</th><th>Description</th></tr></thead><tbody><tr><td>egov.wf.default.offset</td><td>The default value of offset in search</td></tr><tr><td>egov.wf.default.limit</td><td>The default value of limit in search</td></tr><tr><td>egov.wf.max.limit</td><td>The maximum number of records that are returned in search response</td></tr><tr><td>egov.wf.inbox.assignedonly</td><td>Boolean flag if set to <em>true</em> default search will return records assigned to the user only, if <em>false</em> it will return all the records based on the user’s role. <em>(default search is the search call when no query params are sent and based on the RequestInfo of the call, records are returned, it’s used to show applications in employee inbox)</em></td></tr><tr><td>egov.wf.statelevel</td><td>Boolean flag set to <em>true</em> if a state-level workflow is required</td></tr></tbody></table>
 
+## Database Diagram
+
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+{% column %}
+
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
+
 ## Interaction Diagram
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (227).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (227).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Deployment Details
 
-1. [Deploy](../../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md)  the latest version of eGov-workflow-V2 service
-   1. **Note**: This video will give you an idea of how to deploy any Digit-service. Further you can find the **latest builds** for each service in out latest [release document](../../releases/digit-2.9-lts/service-build-updates/) here.
-2. Add BusinessService Persister YAML path in persister configuration
+1. [Deploy](../../../accelerators/concepts/deployment-key-concepts/deploying-digit-services.md) the latest version of eGov-workflow-V2 service
+   1. **Note**: This video will give you an idea of how to deploy any DIGIT service. Additionally, you can find the latest builds for each service in our [latest release document, available here](../../releases/digit-2.9-lts/service-build-updates/).
+2. Add BusinessService Persister YAML path in the persister configuration
 3. Add Role-Action mapping for BusinessService APIs
 4. Overwrite the egov.wf.statelevel flag ( _true_ for state level and _false_ for tenant level)
-5. Create businessService (workflow configuration) according to product requirements
+5. Create a business service (workflow configuration) according to product requirements
 6. Add Role-Action mapping for _/processInstance/\_search_ API
-7. Add workflow persister yaml path in persister configuration
+7. Add workflow persister yaml path in the persister configuration
 
 ## Configuration Details
 
@@ -55,19 +73,19 @@ For configuration details, refer to the links in [Reference Docs](./#reference-d
 
 ### Integration Scope
 
-The workflow configuration can be used by any module which performs a sequence of operations on an application/Entity. It can be used to simulate and track processes in organisations to make it more efficient too and increase accountability.
+The workflow configuration can be used by any module which performs a sequence of operations on an application/Entity. It can be used to simulate and track processes in organisations to make it more efficient, too and increase accountability.
 
 ### Integration Benefits
 
 * Role-based workflow
-* An easy way of writing rule
+* An easy way of writing a rule
 * File movement within workflow roles
 
 ### Integration Steps
 
 1. To integrate, the host of eGov-workflow-v2 should be overwritten in the helm chart.
 2. /process/\_search should be added as the search endpoint for searching workflow process Instance objects.
-3. /process/\_transition should be added to perform an action on an application. _(It’s for internal use in modules and should not be added in Role-Action mapping)._
+3. /process/\_transition should be added to act on an application. _(It’s for internal use in modules and should not be added in Role-Action mapping)._
 4. The workflow configuration can be fetched by calling _\_search_ API to check if data can be updated or not in the current state.
 
 ## Reference Docs
@@ -83,11 +101,9 @@ The workflow configuration can be used by any module which performs a sequence o
 
 ### API List
 
-
-
 {% embed url="https://digit-api.apidog.io/api-6829047" %}
 
-## Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+## Play around with the APIs: [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)
 
 | Title                                                                                      |
 | ------------------------------------------------------------------------------------------ |
@@ -98,6 +114,5 @@ The workflow configuration can be used by any module which performs a sequence o
 | [_/process/\_search_](https://www.getpostman.com/collections/8552e3de40c819e34190)         |
 
 {% hint style="info" %}
-**Note:** All the APIs are in the same Postman collection therefore the same link is added in each row.
+**Note:** All the APIs are in the same Postman collection; therefore, the same link is added in each row.
 {% endhint %}
-

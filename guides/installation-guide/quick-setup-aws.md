@@ -47,7 +47,7 @@ AWS_REGION=ap-south-1
 
 2. Enable GitHub workflow by clicking on _I understand my workflow, go ahead and enable them._
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Navigate to the repository settings, under the _security_ section, go to _Secrets and Variables_, click on actions and add the following repository secrets one by one by clicking on _New repository secret_:
 
@@ -65,7 +65,7 @@ Once all four secrets are added, it will look like the below:
 
 * Clone the forked DIGIT-DevOps repository (using `git clone` command) and open the repo in the code editor, or you can optionally use the GitHub[ web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) by replicating github.com with github.dev.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Switch the branch from master to release-githubactions using the below command.
 
@@ -177,7 +177,7 @@ Login to the employee dashboard with the username and password provided in [env-
 
 Login to <mark style="color:blue;">https://\<domain\_name>/employee</mark>\
 \
-![](<../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png>)
 
 ## Cleanup & Uninstallation Of DIGIT Infrastructure
 

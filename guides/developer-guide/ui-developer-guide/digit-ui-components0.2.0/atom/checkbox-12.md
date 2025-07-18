@@ -6,7 +6,7 @@ description: Design System - Divider component
 
 The Divider component is a minimal visual element used to create a clear separation between content blocks, sections, or UI elements. Designed with simplicity and clarity in mind, dividers help maintain a clean layout structure, enhance visual hierarchy, and improve content readability without drawing unnecessary attention.
 
-<figure><img src="../../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,13 +43,13 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Small</strong></p><p>The Small variant is the most minimal, offering a subtle line ideal for closely related content or where minimal visual interruption is needed.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Medium</strong></p><p>The Medium variant provides a slightly more prominent separation and is commonly used between groups of information or components within a section.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Large</strong></p><p>The Large variant offers the strongest emphasis, ideal for separating major sections or modules, especially in dense interfaces or dashboards.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Small</strong></p><p>The Small variant is the most minimal, offering a subtle line ideal for closely related content or where minimal visual interruption is needed.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Medium</strong></p><p>The Medium variant provides a slightly more prominent separation and is commonly used between groups of information or components within a section.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Large</strong></p><p>The Large variant offers the strongest emphasis, ideal for separating major sections or modules, especially in dense interfaces or dashboards.</p></td></tr></tbody></table>
 
 ***
 

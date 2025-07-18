@@ -43,13 +43,13 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This represents the standard chip style, which has a neutral background, commonly used for user choices, tags, or options, and this is also non-dismissable by default.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Error</strong></p><p>This highlights the invalid or incorrect selections and is also styled with a red border and background to indicate a problem or error state.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Close</strong></p><p>This includes a dismiss (close) icon that allows users to remove a selection or input dynamically and is useful for multi-select filters, form tags, or user-generated inputs.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This represents the standard chip style, which has a neutral background, commonly used for user choices, tags, or options, and this is also non-dismissable by default.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Error</strong></p><p>This highlights the invalid or incorrect selections and is also styled with a red border and background to indicate a problem or error state.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Close</strong></p><p>This includes a dismiss (close) icon that allows users to remove a selection or input dynamically and is useful for multi-select filters, form tags, or user-generated inputs.</p></td></tr></tbody></table>
 
 ***
 
