@@ -28,7 +28,7 @@ Users are requested to use the [Guides available here](../get-started/installati
 
 As the main contributor and maintainer of DIGIT, eGov strives to ensure the bugs/ issues/ enhancements reported by the community are attended to on a best effort basis. All users are requested to contribute to the discussion board as per their capacity.&#x20;
 
-Process for Issue Reporting:&#x20;
+### Issue Reporting Process&#x20;
 
 * First, the user/ partner should check the GitHub core repo for the same/ similar issue already reported and the fixes/workarounds provided.
 * If the above is not available, the user/ partner shall provide details of investigations carried out by their teams, along with logs and inferences leading them to believe that the issue lies with the core services of the DIGIT LTS. https://github.com/egovernments/Digit-Core/discussions is the single point for all discussions which require support. Please ensure the use of appropriate tags ( if any) before submitting a new issue.&#x20;
@@ -52,11 +52,13 @@ Wherever feasible, the eGov support team shall provide a resolution to the issue
 3. If this is found to be a genuine bug in the core services, which is already on the platform roadmap, eGov will plan to fix it in a newer release, and the user/Partner will get the fix once upgraded by eGov.
 4. Support will be limited to the core services of the platform. Refer to the [list of services here](../platform/core-services/). Elements like UI Frameworks are available for users, but are not supported. In case of any changes to the core services by the user/partner, then those services and their dependent services will no longer be supported. However, users are encouraged to report any issues on the discussion board for potential resolution by the DIGIT community.
 
+{% hint style="info" %}
 Please note that all issues will be responded to, but not attended to by eGov Foundation alone and will be resolved on a best effort basis. We aim to anchor a community around DIGIT, which over time will enable resolution by different members of the community. We request that users from organisations signed up on the Partner Program please mention the same for priority response.
+{% endhint %}
 
 ## Maintenance & Updates
 
-Any Known issues in the LTS would be documented on GitHub in the core platform repo so that users can check for fixes/workarounds.&#x20;
+Any known issues in the LTS would be documented on GitHub in the core platform repo so that users can check for fixes/workarounds.&#x20;
 
 eGov will share the DIGIT roadmap with users every quarter.. The roadmap will provide enough detail that allow the Partner to plan for changes at their end. All issues on the discussion board will be taken into consideration while finalising the platform roadmap. The platform roadmap will be published on Gitbook with a discussion board for any Q\&A. &#x20;
 
@@ -117,4 +119,3 @@ Third-Party Software: DIGIT core services are developed using the following tech
 {% hint style="info" %}
 More information about these open-source tools and API gateways used in DIGIT is [available here](../platform/architecture/technology-architecture/). DIGIT support will be subject to the support terms and conditions of these underlying technologies, and some issues arising out of underlying issues in any of these technologies cannot be covered as part of this support document.&#x20;
 {% endhint %}
-
