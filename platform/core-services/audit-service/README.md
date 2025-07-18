@@ -13,6 +13,10 @@ The objective of the audit service is listed below -
 3. Prior knowledge of PostgreSQL
 4. Prior knowledge of REST APIs and related concepts like path parameters, headers, JSON etc.
 
+## Database Diagram <a href="#setup-and-key-functionalities" id="setup-and-key-functionalities"></a>
+
+<div align="left"><figure><img src="../../../.gitbook/assets/image (458).png" alt=""><figcaption></figcaption></figure></div>
+
 ## Setup & Key Functionalities <a href="#setup-and-key-functionalities" id="setup-and-key-functionalities"></a>
 
 The audit service will be parsing all the persister configs so that it can process data received by the persister and create audit logs out of it.
@@ -46,31 +50,31 @@ audit.log.signing.algorithm=HMAC
 
 **Definitions**
 
-1. Config file - A YAML (xyz.yml) file which contains persister configuration for running audit service.
-2. API - A REST endpoint to post audit logs data.
+1. Config file - A YAML (xyz.yml) file which contains the persister configuration for running the audit service.
+2. API - A REST endpoint to post audit log data.
 
 ### **Functionalities**
 
-1. When audit-service create API is hit, it will validate request size, keyValueMap and operationType.
-2. Upon successful validation, it will choose the configured signer and sign entity data.
-3. Once audit logs are signed and ready, it will send it to `audit-create` topic.
-4. Persister will listen on this topic and persist the audit logs.
+1. When the audit-service create API is hit, it will validate request size, keyValueMap and operationType.
+2. Upon successful validation, it will choose the configured signer and sign the entity data.
+3. Once audit logs are signed and ready, it will send them to `audit-create` topic.
+4. Persister will listen to this topic and persist the audit logs.
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
-1. Add the required keys for enabling audit service in persister configs.
-2. Deploy the latest version of the Audit service and Persister service.
+1. Add the required keys for enabling audit service in the persister configs.
+2. Deploy the latest version of the Audit service and the Persister service.
 3. Add Role-Action mapping for APIs.
 
 ## Integration Details <a href="#integration" id="integration"></a>
 
 ### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
 
-The audit service is used to push signed data for tracking each and every create/modify/delete operation done on database entities.
+The audit service is used to push signed data for tracking every create/modify/delete operation done on database entities.
 
 ### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
 
-* Can be used to have tamper-proof audit logs for all database transactions.
+* It can be used to have tamper-proof audit logs for all database transactions.
 * Replaying events in chronological order will lead to the current state of the entity in the database.
 
 ### Integration Steps <a href="#steps-to-integration" id="steps-to-integration"></a>
@@ -81,7 +85,7 @@ The audit service is used to push signed data for tracking each and every create
 
 ## API Details <a href="#api-details" id="api-details"></a>
 
-**1. URI**: The format of the API to be used to create audit logs using the audit service is as follows:  `audit-service/log/v1/_create`
+**1. URI**: The format of the API to be used to create audit logs using the audit service is as follows: `audit-service/log/v1/_create`
 
 **Body**: The body consists of 2 parts: RequestInfo and AuditLogs.
 
@@ -158,11 +162,9 @@ Sample Request Body -
 ```
 {% endcode %}
 
+**2.** **URI**: The format of the API to be used to search audit logs using audit-service is as follows: `audit-service/log/v1/_search`
 
-
-**2.** **URI**: The format of the API to be used to search audit logs using audit-service is as follows:  `audit-service/log/v1/_search`
-
-**Body**: The body consists RequestInfo and search criteria is passed as query params.
+**Body**: The body consists RequestInfo and search criteria are passed as query params.
 
 Sample curl for search -
 
@@ -187,4 +189,4 @@ curl --location --request POST 'https://dev.digit.org/audit-service/log/v1/_sear
 
 Postman Collection - [Audit Service Postman Collection](https://www.getpostman.com/collections/27d92894fa32f72b83f5)
 
-Play around with the API's : [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)&#x20;
+Play around with the APIs: [DIGIT-Playground](https://digit-api.apidog.io/doc-507201)
