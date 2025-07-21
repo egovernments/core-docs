@@ -1,18 +1,15 @@
----
-description: >-
-  This document provides a comprehensive guide on how to install PostgreSQL on
-  an EC2 instance, set up replication for high availability, and perform version
-  upgrades.
----
-
 # Postgresql HA
 
-### Pre-requisites
+## Overview
+
+This document provides a comprehensive guide on how to install PostgreSQL on an EC2 instance, set up replication for high availability, and perform version upgrades.
+
+## Pre-requisites
 
 * AWS Account&#x20;
 * Two Ubuntu EC2 Instances&#x20;
 
-### Installing Postgresql in EC2 Instances
+## Install PostgreSQL
 
 1.  **Set Up EC2 Instances**
 
@@ -68,7 +65,7 @@ To set up replication between the primary and standby PostgreSQL servers, follow
 
 #### **Primary Server Configuration:**
 
-1. Edit the postgresql.conf in primary server
+1. Edit the postgresql.conf in the primary server
 
 ```
 ubuntu@10.0.35.93:~$ sudo systemctl stop postgresql
@@ -79,7 +76,7 @@ listen_addresses = '<master-ip>'
 synchronous_commit = on
 ```
 
-2. Create replication user to enable replication in standby server
+2. Create a replication user to enable replication in the standby server
 
 ```
 ubuntu@10.0.45.78:~$ sudo su - postgres
@@ -89,7 +86,7 @@ postgres=# \q
 postgres@10.0.45.78:~$ exit
 ```
 
-3. Edit the pg\_hba.conf file in primary server
+3. Edit the pg\_hba.conf file in the primary server
 
 ```
 ubuntu@10.0.45.78:~$ sudo nano /etc/postgresql/14/main/pg_hba.conf
@@ -98,7 +95,7 @@ ubuntu@10.0.45.78:~$ sudo nano /etc/postgresql/14/main/pg_hba.conf
   host  replication     replication_user   172.31.6.22/32          md5
 ```
 
-4. Restart the postgresql service
+4. Restart the PostgreSQL service
 
 ```
 ubuntu@10.0.45.78:~$ sudo systemctl restart postgresql
@@ -106,7 +103,7 @@ ubuntu@10.0.45.78:~$ sudo systemctl restart postgresql
 
 #### **Standby Server Configuration:**
 
-5. Edit the postgresql.conf file in standby server.
+5. Edit the postgresql.conf file in the standby server.
 
 ```
 ubuntu@10.0.35.93:~$ sudo nano /etc/postgresql/14/main/postgresql.conf
@@ -114,7 +111,7 @@ cluster_name = '<name of the slave>'
 listen_addresses = '<slave-ip>'
 ```
 
-6. Edit the pg\_hba.conf in standby server
+6. Edit the pg\_hba.conf on the standby server
 
 ```
 ubuntu@10.0.35.93:~$ sudo nano /etc/postgresql/14/main/pg_hba.conf
@@ -122,7 +119,7 @@ ubuntu@10.0.35.93:~$ sudo nano /etc/postgresql/14/main/pg_hba.conf
   host  replication     replication_user   172.31.6.22/32          md5
 ```
 
-7. Now, we are setting upthe replication and taking a pg\_basebackup of master server in slave server.
+7. Now, we are setting up the replication and taking a pg\_basebackup of the master server on the slave server.
 
 ```
 ubuntu@10.0.35.93:~$ sudo su - postgres
@@ -135,7 +132,7 @@ postgres@10.0.35.93:~$ exit
 ubuntu@10.0.35.93:~$ sudo systemctl start postgresql
 ```
 
-8. Check the replication using below commands
+8. Check the replication using the commands below:
 
 ```
 # On Primary Server
@@ -150,7 +147,9 @@ postgres=# SELECT * FROM pg_stat_wal_receiver;
 
 ```
 
-### Upgrading the Postgresql in Primary and Standby server using pg\_upgrade and rsync from v14 to v15
+## Upgrade PostgreSQL&#x20;
+
+Below are the steps to upgrade PostgreSQL on the primary and standby servers using pg\_upgrade and rsync from version 14 to version 15.
 
 Install postgresql-15 in both primary and standby servers
 
@@ -218,7 +217,7 @@ ubuntu@10.0.35.93:~$ sudo systemctl stop postgresql@15-main
 ubuntu@10.0.35.93:~$ sudo systemctl stop postgresql@14-main
 ```
 
-2. Now  run the rsync command on master server.
+2. Now run the rsync command on the master server.
 
 ```
 postgres@10.0.45.78:~$ rsync -a --delete /var/lib/postgresql/15/main/ postgres@<standby_server_ip>:/var/lib/postgresql/15/main/
