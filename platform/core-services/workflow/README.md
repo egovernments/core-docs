@@ -36,7 +36,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 

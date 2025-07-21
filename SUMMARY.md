@@ -344,6 +344,7 @@
   * [Moving Docker Images](get-started/operations-guide/moving-docker-images.md)
   * [Pre and post deployment checklist](get-started/operations-guide/pre-and-post-deployment-checklist.md)
   * [Multi-tenancy Setup](get-started/operations-guide/multi-tenancy-setup.md)
+  * [Postgresql HA](guides/operations-guide/postgresql-ha.md)
   * [Availability](get-started/operations-guide/availability/README.md)
     * [Infrastructure](get-started/operations-guide/availability/infrastructure.md)
     * [Backbone services](get-started/operations-guide/availability/backbone-services/README.md)
