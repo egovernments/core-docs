@@ -1,5 +1,5 @@
 ---
-description: Design System - Switch component
+description: Design System - tooltip component
 ---
 
 # Tooltip
@@ -49,15 +49,15 @@ DigitAccordion(
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This is a clean toggle without any accompanying label or icon. It's compact and ideal for minimal layouts where the switch’s meaning is already clear from context.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Symbol</strong></p><p>This variant includes a symbol (like "|" for On and "◯" for Off) inside the switch thumb. It enhances visual clarity and is useful when colour alone isn't enough to indicate the switch's state.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This is a clean toggle without any accompanying label or icon. It's compact and ideal for minimal layouts where the switch’s meaning is already clear from context.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Symbol</strong></p><p>This variant includes a symbol (like "|" for On and "◯" for Off) inside the switch thumb. It enhances visual clarity and is useful when colour alone isn't enough to indicate the switch's state.</p></td></tr></tbody></table>
 
 ***
 
 ## Properties
 
-|                                                                                                                                                                                                                               |                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                                                                                                                               |                                                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -77,10 +77,10 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                       |                                                                                                                                                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label</strong></p><p>Use switches to represent binary on/off states. They are ideal for toggling settings or features that require immediate activation or deactivation.</p><p>Avoid using switches to indicate errors. Switches are not designed for error states.</p> |
-| <div><figure><img src="../../../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label Alignment</strong></p><p>The placement of the label can be customised to appear left or right of the switch. This helps maintain visual balance depending on layout needs and reading flow.</p>                                                                   |
+|                                                                                                                           |                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label</strong></p><p>Use switches to represent binary on/off states. They are ideal for toggling settings or features that require immediate activation or deactivation.</p><p>Avoid using switches to indicate errors. Switches are not designed for error states.</p> |
+| <div><figure><img src="../../../../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label Alignment</strong></p><p>The placement of the label can be customised to appear left or right of the switch. This helps maintain visual balance depending on layout needs and reading flow.</p>                                                                   |
 
 ***
 
@@ -88,9 +88,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use dividers for activation states</strong></p><p>Use switches to represent binary on/off states. They are ideal for toggling settings or features that require immediate activation or deactivation.</p><p>Avoid using switches to indicate errors. Switches are not designed for error states.</p> |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                 |
+| <div><figure><img src="../../../../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use dividers for activation states</strong></p><p>Use switches to represent binary on/off states. They are ideal for toggling settings or features that require immediate activation or deactivation.</p><p>Avoid using switches to indicate errors. Switches are not designed for error states.</p> |
+| ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                 |
 
 ## Changelog
 

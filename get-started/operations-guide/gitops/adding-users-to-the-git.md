@@ -13,7 +13,7 @@ description: >-
 
 * Click the name of your organization
 
-<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (32) (1).png" alt=""><figcaption></figcaption></figure>
 
 * After that click on **People**
 
@@ -21,7 +21,7 @@ description: >-
 
 * Next, Click on **Invite member**
 
-<figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Type the username, full name, or email address of the person you want to invite and click **Invite**.
 

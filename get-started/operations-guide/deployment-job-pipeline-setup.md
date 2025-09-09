@@ -12,9 +12,9 @@ description: >-
 
 ### What are deployment jobs?
 
-* Once we build a pipeline using jenkins we need to deploy(to set out) into  a environment. For that we nee deployment jobs. Here, deployment jobs are nothing but the clusters(group of nodes or VM's)which are created using different environments. some of the environments that are present in **DIGIT-DevOps:**
+* Once we build a pipeline using jenkins we need to deploy(to set out) into a environment. For that we nee deployment jobs. Here, deployment jobs are nothing but the clusters(group of nodes or VM's)which are created using different environments. some of the environments that are present in **DIGIT-DevOps:**
 
-<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (37) (1).png" alt=""><figcaption></figcaption></figure>
 
 * In DIGIT there are so many deployment jobs are there. Go to the following repo to see all the deployment jobs.
 
@@ -64,7 +64,7 @@ deploymentJobs:
 
 #### To deploy new job:
 
-*   [x] Add your **Job name** and **acl** in below path under **deployment jobs:**    in **ci.yaml file.**\
+*   [x] Add your **Job name** and **acl** in below path under **deployment jobs:** in **ci.yaml file.**\
     \
     egovernments/DIGIT-DevOps/blob/release/config-as-code/environments/ci-demo.yaml
 
@@ -77,7 +77,7 @@ https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/environ
 
 <figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
-* [x] If you are using the DIGIT-DevOps repo's **release** branch for deployment, this step is optional.  Other branches require job-name-specific conditions in seed-deployment-jobs helm/charts/jenkins/values.yam&#x6C;**.** Add your respective **repo, branch** names
+* [x] If you are using the DIGIT-DevOps repo's **release** branch for deployment, this step is optional. Other branches require job-name-specific conditions in seed-deployment-jobs helm/charts/jenkins/values.yam&#x6C;**.** Add your respective **repo, branch** names
 
 1. **Repo**: To which repository the deployment job be added.
 2. **Branch**: Usually master branch.

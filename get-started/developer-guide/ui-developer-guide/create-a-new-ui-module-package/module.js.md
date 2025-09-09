@@ -116,7 +116,7 @@ Hurray! Now, the screen is displayed below on visiting the given URL:
 http://localhost:3000/digit-ui/employee/sample
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Refer to the below sections for a deeper understanding
 

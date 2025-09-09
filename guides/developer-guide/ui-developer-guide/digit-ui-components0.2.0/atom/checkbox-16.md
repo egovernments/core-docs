@@ -1,0 +1,114 @@
+---
+description: Design System - Selection Tags component
+---
+
+# Selection Tags
+
+Selection Tags are compact, button-like elements that allow users to make single or multiple selections from a set of options. They offer a clean and intuitive interaction pattern, ensuring a smooth and responsive user experience across form elements, filters, and grouped choices.
+
+<figure><img src="../../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
+{% tabs %}
+{% tab title="Component React" %}
+```
+// Sample code
+
+  <CheckBox
+    label="Label"
+    onChange={(e)=>{console.log(e.target.checked}}
+  />
+```
+{% endtab %}
+
+{% tab title="Component Flutter" %}
+```
+// Sample code
+
+DigitAccordion(
+              header: Text('Accordion'),
+              content: Text('This is the content of Accordion'),
+              initiallyExpanded: false,
+              divider: true,
+              showBorder: true,
+            ),
+```
+{% endtab %}
+
+{% tab title="Component Design" %}
+
+{% endtab %}
+{% endtabs %}
+
+## Anatomy
+
+<figure><img src="../../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+## Variants
+
+***
+
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Single Select</strong></p><p>Allows the user to choose only one option from the group. Once a selection is made, the previously selected option is deselected automatically. This variant is ideal for use cases like survey forms or filter selections.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Multi Select</strong></p><p>Enables users to select multiple options simultaneously. Commonly used where more than one input or category applies, such as skill filters, tag selectors, or custom checklists.</p></td></tr></tbody></table>
+
+***
+
+## Interaction States
+
+<table><thead><tr><th width="334.98046875"></th><th></th></tr></thead><tbody><tr><td><p><strong>Active State</strong> </p><p>When a tag is selected, the background colour changes to primary. This state clearly communicates which options are currently selected.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><p><strong>Dismiss on Mouse Out</strong></p><p>Tooltips disappear when the user moves away or loses focus, maintaining a clean and distraction-free interface.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+
+## Properties
+
+|                                                                                                                                                                                                                                                     |                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>Error</strong></p><p>It displays a red border around the tag container and shows a supporting error message below.<br>This is also used for validation states to indicate missing or incorrect selection(s).</p>                         | <div><figure><img src="../../../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Prefix Icon</strong> </p><p>An icon placed to the left of the label text that helps convey additional context or function visually (e.g., an edit or status indicator).</p>                                                              | <div><figure><img src="../../../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Suffix Icon</strong></p><p>An icon placed to the right of the label text that is typically used for actions like removal, more options, or tagging.</p>                                                                                  | <div><figure><img src="../../../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Container Disabled</strong></p><p>Disables interaction with the entire selection group, and tags appear visually muted and do not respond to hover or click states. This is useful in forms where selection is conditionally locked.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure></div> |
+
+## Property Configuration Table
+
+Each design component offers a range of configurable options. These options are intentionally platform-agnostic, allowing implementations to adapt and tailor them to align with the specific requirements of the chosen framework.
+
+{% tabs %}
+{% tab title="React" %}
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>width</td><td>text</td><td></td></tr><tr><td>errorMessage</td><td>text</td><td></td></tr><tr><td>options</td><td>yes/no</td><td>no</td></tr><tr><td>onSelectionChanged</td><td>yes/no</td><td>no</td></tr><tr><td>allowMultipleSelection</td><td>number</td><td></td></tr><tr><td>selected</td><td>yes/no</td><td></td></tr><tr><td>withContainer</td><td>yes/no</td><td>no</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Flutter" %}
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+{% endtab %}
+{% endtabs %}
+
+***
+
+## Behaviours
+
+|                                                                                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for exclusive choices</strong></p><p>Use selection tags when you need users to make clear, mutually exclusive choices or multiple selections. This ensures optimal visual hierarchy and helps users quickly understand their available options while maintaining a clean and organised interface layout.</p><p></p><p>Don't overcrowd the selection tag group with more than 4 options. Overwhelming users with too many choices makes it difficult for users to scan and compare options effectively.</p> |
+| <div><figure><img src="../../../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+
+***
+
+## Usage Guide
+
+***
+
+| <div><figure><img src="../../../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for compact information display</strong></p><p>Keep tooltips concise and clear, limiting the text to one or two short sentences for quick readability.</p><p>Avoid adding actions or links in tooltips, as they should only provide passive information and appear on hover or keyboard focus.</p> |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                   |
+
+## Changelog
+
+***
+
+| Date         | Number  | Notes                                                                                           |
+| ------------ | ------- | ----------------------------------------------------------------------------------------------- |
+| Dec 15, 2024 | v-0.0.2 | <p>This component is added to the website.<br>This component is now individually versioned.</p> |
+
+## Design Checklist
+
+***
+
+<table data-header-hidden><thead><tr><th width="129" data-type="checkbox"></th><th></th></tr></thead><tbody><tr><td>true</td><td><strong>All interactive states</strong> - Includes all interactive states that are applicable (hover, down, focus, keyboard focus, disabled).</td></tr><tr><td>true</td><td><strong>Accessible use of colours</strong> - Colour is not used as the only visual means of conveying information (WCAG 2.1 1.4.1)</td></tr><tr><td>true</td><td><strong>Accessible contrast for text</strong> - Text has a contrast ratio of at least 4.5:1 for small text and at least 3:1 for large text (WCAG 2.0 1.4.3).</td></tr><tr><td>true</td><td><strong>Accessible contrast for UI components</strong> - Visual information required to identify components and states (except inactive components) has a contrast ratio of at least 3:1 (WCAG 2.1 1.4.11).</td></tr><tr><td>true</td><td><strong>Keyboard interactions</strong> - Includes all interactive states that are applicable (hover, down, focus, keyboard focus, disabled).</td></tr><tr><td>false</td><td><strong>Screen reader accessible</strong> - All content, including headings, labels, and descriptions, is meaningful, concise, contextual and accessible by screen readers.</td></tr><tr><td>true</td><td><strong>Responsive for all breakpoints</strong> - Responsiveness for 3 breakpoints - Mobile, Tablet and Desktop</td></tr><tr><td>true</td><td><strong>Usage guidelines</strong> - Includes a list of dos and don'ts that highlight best practices and common mistakes.</td></tr><tr><td>false</td><td><strong>Writing guidelines</strong> - Content standards and usage guidelines for writing and formatting in-product content for the component.</td></tr><tr><td>true</td><td><strong>Defined variants and properties</strong> - Includes relevant variants and properties (style, size, orientation, optional iconography, decorative elements, selection states, error states, etc.)</td></tr><tr><td>true</td><td><strong>Defined behaviours</strong> - Guidelines for keyboard navigation and focus, layout management (including wrapping, truncation, and overflow), animations, and user interactions.</td></tr><tr><td>true</td><td><strong>Design Kit</strong> - Access to the design file for the component in Figma, multiple options, states, colour themes, and platform scales.</td></tr></tbody></table>

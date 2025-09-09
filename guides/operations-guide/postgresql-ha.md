@@ -22,11 +22,11 @@ This document provides a comprehensive guide on how to install PostgreSQL on an 
 
     a. **Edit Security Group for Primary Server:** - Go to the EC2 dashboard, select the Primary Server instance, and click on the "Security" tab. - Edit the inbound and outbound rules of the security group associated with the Primary Server to allow traffic from the Standby Server. This includes: - Allowing PostgreSQL traffic (default port 5432). - Adding custom TCP rules to allow connections from the IP address of the Standby Server.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 &#x20;b. **Edit Security Group for Standby Server:** - Similarly, go to the EC2 dashboard, select the Standby                 Server instance, and click on the "Security" tab. - Edit the security group to allow the necessary traffic from the Primary Server. - Ensure the Standby Server can receive data from the Primary Server by setting up appropriate inbound and outbound rules.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. After creating the EC2 instances, follow these steps to log in to both the primary and standby servers using the provided PEM key.
 

@@ -2,11 +2,11 @@
 
 ## **Overview**
 
-Once PostgreSQL (v10) has been installed and the basic setup is done, we use Flyway to create the tables.&#x20;
+Once PostgreSQL (v10) has been installed and the basic setup is done, we use Flyway to create the tables.
 
 ## **Steps**
 
-### **Enable Flyway Migration**&#x20;
+### **Enable Flyway Migration**
 
 1. Configure the below properties in the application.properties file to enable flyway migration:
 
@@ -23,7 +23,7 @@ spring.flyway.enabled=true
 
 2. Add the Flyway SQL scripts in the following structure under `resources/db/migration/main`:
 
-![](<../../../../.gitbook/assets/image (43).png>)
+![](<../../../../.gitbook/assets/image (43) (1).png>)
 
 3. Add the migration files to the _main_ folder. Follow the specified nomenclature while naming the file. The file name should be in the following format:
 
@@ -75,4 +75,3 @@ CREATE TABLE eg_bt_address(
 );
 ```
 {% endcode %}
-
