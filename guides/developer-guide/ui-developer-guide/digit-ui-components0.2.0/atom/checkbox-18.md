@@ -6,7 +6,7 @@ description: Design System - Multi Select component
 
 The Multi Select dropdown component enables users to select multiple options from a structured list. It is designed to enhance efficiency in scenarios where bulk selection is necessary, such as filtering results, assigning categories, or selecting roles. This component supports flexible content types, hierarchical grouping, and contextual help to guide user interaction.
 
-<figure><img src="../../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -41,7 +41,7 @@ DigitAccordion(
 
 ## Anatomy
 
-<figure><img src="../../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -49,13 +49,13 @@ DigitAccordion(
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Basic Dropdown</strong></p><p>A standard list of multiple checkboxes allowing users to select one or more options. Each selected option appears in the input field as a chip.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Categorical Dropdown</strong></p><p>Organises options under headings or categories, improving readability and helping users quickly locate desired items.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Nested Text Dropdown</strong></p><p>Presents each option with supporting secondary text or descriptions, ideal for selections that require additional context.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Profile Dropdown</strong></p><p>Options are displayed as user profiles (with avatar, name, etc.), allowing users to select multiple people or roles.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Profile with Nested Text Dropdown</strong></p><p>Combines profile visuals with supporting subtext.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Tree Dropdown</strong></p><p>Allows parent-child groupings with collapsible nodes, helpful in scenarios like selecting locations, organizational units, or tags with hierarchy.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Basic Dropdown</strong></p><p>A standard list of multiple checkboxes allowing users to select one or more options. Each selected option appears in the input field as a chip.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Categorical Dropdown</strong></p><p>Organises options under headings or categories, improving readability and helping users quickly locate desired items.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Nested Text Dropdown</strong></p><p>Presents each option with supporting secondary text or descriptions, ideal for selections that require additional context.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Profile Dropdown</strong></p><p>Options are displayed as user profiles (with avatar, name, etc.), allowing users to select multiple people or roles.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Profile with Nested Text Dropdown</strong></p><p>Combines profile visuals with supporting subtext.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Tree Dropdown</strong></p><p>Allows parent-child groupings with collapsible nodes, helpful in scenarios like selecting locations, organizational units, or tags with hierarchy.</p></td></tr></tbody></table>
 
 ***
 
 ## Interaction States
 
-<table><thead><tr><th width="334.98046875"></th><th></th></tr></thead><tbody><tr><td><p><strong>Hover State</strong> </p><p>When the user hovers over the field or an item, it highlights to indicate interactivity and help the user discover selectable areas.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><p><strong>Selected State</strong></p><p>Selected items are visually highlighted as rows inside the dropdown and as removable chips in the input field.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+<table><thead><tr><th width="334.98046875"></th><th></th></tr></thead><tbody><tr><td><p><strong>Hover State</strong> </p><p>When the user hovers over the field or an item, it highlights to indicate interactivity and help the user discover selectable areas.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><p><strong>Selected State</strong></p><p>Selected items are visually highlighted as rows inside the dropdown and as removable chips in the input field.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Properties
 

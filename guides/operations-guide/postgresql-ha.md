@@ -26,7 +26,7 @@ This document provides a comprehensive guide on how to install PostgreSQL on an 
 
 &#x20;b. **Edit Security Group for Standby Server:** - Similarly, go to the EC2 dashboard, select the Standby                 Server instance, and click on the "Security" tab. - Edit the security group to allow the necessary traffic from the Primary Server. - Ensure the Standby Server can receive data from the Primary Server by setting up appropriate inbound and outbound rules.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. After creating the EC2 instances, follow these steps to log in to both the primary and standby servers using the provided PEM key.
 

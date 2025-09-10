@@ -231,6 +231,7 @@
         * [Dropdown - Multi Select](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-18.md)
         * [File Uploader](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-19.md)
         * [Timeline](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-20.md)
+        * [Tabs](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/checkbox-21.md)
         * [Chip](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/chip.md)
         * [Divider](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/divider.md)
         * [Dropdown](guides/developer-guide/ui-developer-guide/digit-ui-components0.2.0/atom/dropdown.md)

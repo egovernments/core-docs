@@ -6,7 +6,7 @@ description: Design System - Switch component
 
 The Switch component is used to toggle between two binary states, such as On/Off, Enable/Disable, or Active/Inactive. It offers a direct, easy-to-understand interaction and provides instant feedback. The design ensures accessibility, responsiveness, and consistency across applications.
 
-<figure><img src="../../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,21 +43,21 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This is a clean toggle without any accompanying label or icon. It's compact and ideal for minimal layouts where the switch’s meaning is already clear from context.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Symbol</strong></p><p>This variant includes a symbol (like "|" for On and "◯" for Off) inside the switch thumb. It enhances visual clarity and is useful when colour alone isn't enough to indicate the switch's state.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This is a clean toggle without any accompanying label or icon. It's compact and ideal for minimal layouts where the switch’s meaning is already clear from context.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Symbol</strong></p><p>This variant includes a symbol (like "|" for On and "◯" for Off) inside the switch thumb. It enhances visual clarity and is useful when colour alone isn't enough to indicate the switch's state.</p></td></tr></tbody></table>
 
 ***
 
 ## Properties
 
-|                                                                                                                                                                                                                               |                                                                                                                                  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                                                                                                                               |                                                                                                                                      |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 

@@ -6,7 +6,7 @@ description: Design System - Alert card component
 
 The Alert Card component is a visual communication element used to inform users about critical messages like errors, warnings, success confirmations, or informative updates. It ensures users are guided with appropriate visual cues and messaging hierarchy at every touchpoint of their interaction.
 
-<figure><img src="../../../../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
