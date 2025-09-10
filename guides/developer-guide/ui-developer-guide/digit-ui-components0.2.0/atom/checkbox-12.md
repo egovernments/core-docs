@@ -6,7 +6,7 @@ description: Design System - Divider component
 
 The Divider component is a minimal visual element used to create a clear separation between content blocks, sections, or UI elements. Designed with simplicity and clarity in mind, dividers help maintain a clean layout structure, enhance visual hierarchy, and improve content readability without drawing unnecessary attention.
 
-<figure><img src="../../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,21 +43,21 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Small</strong></p><p>The Small variant is the most minimal, offering a subtle line ideal for closely related content or where minimal visual interruption is needed.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Medium</strong></p><p>The Medium variant provides a slightly more prominent separation and is commonly used between groups of information or components within a section.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Large</strong></p><p>The Large variant offers the strongest emphasis, ideal for separating major sections or modules, especially in dense interfaces or dashboards.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Small</strong></p><p>The Small variant is the most minimal, offering a subtle line ideal for closely related content or where minimal visual interruption is needed.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Medium</strong></p><p>The Medium variant provides a slightly more prominent separation and is commonly used between groups of information or components within a section.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Large</strong></p><p>The Large variant offers the strongest emphasis, ideal for separating major sections or modules, especially in dense interfaces or dashboards.</p></td></tr></tbody></table>
 
 ***
 
 ## Properties
 
-|                                                                                                                                                                                                                               |                                                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                                                                                                                               |                                                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -77,9 +77,9 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                          |                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsiveness</strong></p><p>Dividers adapt fluidly to their container width and scale across screen sizes while preserving consistency in thickness and spacing.</p> |
+|                                                                                                                              |                                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsiveness</strong></p><p>Dividers adapt fluidly to their container width and scale across screen sizes while preserving consistency in thickness and spacing.</p> |
 
 ***
 
@@ -87,9 +87,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use Dividers with Headers for Clear Sectioning</strong></p><p>Place dividers below the header text to create distinct sections or page titles. This helps organise content and improves visual hierarchy.  </p><p>Avoid using dividers excessively, as they can create unnecessary visual noise and clutter. Use them sparingly to maintain a clean and focused layout</p> |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                       |
+| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use Dividers with Headers for Clear Sectioning</strong></p><p>Place dividers below the header text to create distinct sections or page titles. This helps organise content and improves visual hierarchy.  </p><p>Avoid using dividers excessively, as they can create unnecessary visual noise and clutter. Use them sparingly to maintain a clean and focused layout</p> |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Changelog
 

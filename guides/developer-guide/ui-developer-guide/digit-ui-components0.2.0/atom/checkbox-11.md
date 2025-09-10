@@ -6,7 +6,7 @@ description: Design System - Chips component
 
 The Chips component is a compact, interactive UI element used to display discrete pieces of information, user selections, filters, tags, or statuses. This chip's component enhances the interface by providing quick insights or actions in a visually organised way without overwhelming the user.
 
-<figure><img src="../../../../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (21) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,21 +43,21 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This represents the standard chip style, which has a neutral background, commonly used for user choices, tags, or options, and this is also non-dismissable by default.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Error</strong></p><p>This highlights the invalid or incorrect selections and is also styled with a red border and background to indicate a problem or error state.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Close</strong></p><p>This includes a dismiss (close) icon that allows users to remove a selection or input dynamically and is useful for multi-select filters, form tags, or user-generated inputs.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This represents the standard chip style, which has a neutral background, commonly used for user choices, tags, or options, and this is also non-dismissable by default.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Error</strong></p><p>This highlights the invalid or incorrect selections and is also styled with a red border and background to indicate a problem or error state.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Close</strong></p><p>This includes a dismiss (close) icon that allows users to remove a selection or input dynamically and is useful for multi-select filters, form tags, or user-generated inputs.</p></td></tr></tbody></table>
 
 ***
 
 ## Properties
 
-|                                                                                                                                                                                                                               |                                                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                                                                                                                               |                                                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -77,9 +77,9 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                              |                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Compact &#x26; Responsive</strong></p><p>This Chips component is designed to occupy minimal space, and it also auto-resizes based on content and adapts to containers across screen sizes.</p> |
+|                                                                                                                                  |                                                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Compact &#x26; Responsive</strong></p><p>This Chips component is designed to occupy minimal space, and it also auto-resizes based on content and adapts to containers across screen sizes.</p> |
 
 ***
 
@@ -87,9 +87,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use Chips to show selected options</strong></p><p>Use chips to display selected options in a multi-select dropdown, making it easy for users to review and remove selections if needed.  </p><p></p><p>Avoid using chips that don’t clearly show how to remove or edit them, and don’t display error states without simple instructions on how to fix the issue.  </p> |
-| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                   |
+| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use Chips to show selected options</strong></p><p>Use chips to display selected options in a multi-select dropdown, making it easy for users to review and remove selections if needed.  </p><p></p><p>Avoid using chips that don’t clearly show how to remove or edit them, and don’t display error states without simple instructions on how to fix the issue.  </p> |
+| -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## Changelog
 

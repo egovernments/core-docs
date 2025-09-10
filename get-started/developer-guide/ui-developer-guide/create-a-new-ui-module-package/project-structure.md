@@ -24,7 +24,7 @@ Follow the steps given below to create the project structure.
 4. Create a folder called **src** and add the **components** , **configs**, **hooks** and **pages** inside that.
 5. The project structure should be as in the image below:
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt="" width="351"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="351"><figcaption></figcaption></figure></div>
 
 6. After creating the new `Sample` module, we need to create a `package.json` file for the module, specifying the module name, version, scripts, and required dependencies.
 

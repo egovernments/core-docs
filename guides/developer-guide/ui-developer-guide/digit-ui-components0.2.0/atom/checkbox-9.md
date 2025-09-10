@@ -6,7 +6,7 @@ description: Design System - Breadcrumbs component
 
 The Breadcrumbs component is a navigation aid that helps users understand their current position within a product’s hierarchy. It improves user orientation and facilitates smooth backwards navigation, particularly in multi-level interfaces.
 
-<figure><img src="../../../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,13 +43,13 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (16) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Basic</strong></p><p>Displays the full navigation path linearly, and it's best used when the number of breadcrumb items is limited and space is sufficient.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Collapsed</strong></p><p>Compresses middle items into an ellipsis (...) for better scalability, and it's ideal for complex or deeply nested paths to maintain a clean layout.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Custom Separators</strong></p><p>Uses stylised or alternate separators like arrows (→) instead of slashes, and it enhances visual hierarchy and readability based on context or brand style.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Icons</strong></p><p>Includes relevant icons alongside each breadcrumb label.<br>Helps with quicker recognition and improves usability, especially for users with lower literacy or cognitive load.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Basic</strong></p><p>Displays the full navigation path linearly, and it's best used when the number of breadcrumb items is limited and space is sufficient.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Collapsed</strong></p><p>Compresses middle items into an ellipsis (...) for better scalability, and it's ideal for complex or deeply nested paths to maintain a clean layout.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Custom Separators</strong></p><p>Uses stylised or alternate separators like arrows (→) instead of slashes, and it enhances visual hierarchy and readability based on context or brand style.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Icons</strong></p><p>Includes relevant icons alongside each breadcrumb label.<br>Helps with quicker recognition and improves usability, especially for users with lower literacy or cognitive load.</p></td></tr></tbody></table>
 
 ***
 
@@ -71,10 +71,10 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                                  |                                                                                                                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Clickable Navigation</strong></p><p>All breadcrumb items (except the current page) are clickable, enabling users to quickly jump to previous steps or levels in their journey.</p>                                          |
-| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsive Collapsing</strong></p><p>Breadcrumbs automatically adjust and collapse middle items when the screen width is limited, ensuring the component remains compact and accessible on mobile or smaller viewports.</p> |
+|                                                                                                                                      |                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Clickable Navigation</strong></p><p>All breadcrumb items (except the current page) are clickable, enabling users to quickly jump to previous steps or levels in their journey.</p>                                          |
+| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsive Collapsing</strong></p><p>Breadcrumbs automatically adjust and collapse middle items when the screen width is limited, ensuring the component remains compact and accessible on mobile or smaller viewports.</p> |
 
 
 
@@ -84,9 +84,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use breadcrumbs to show hierarchy</strong></p><p>Maintain a consistent hierarchical structure for breadcrumbs, as they provide users with a clear path for navigation and context about their current location.  </p><p>Use breadcrumbs for anything other than navigating a linear hierarchy. They should not serve as interactive elements for actions like filtering or other functionalities.</p> |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use breadcrumbs to show hierarchy</strong></p><p>Maintain a consistent hierarchical structure for breadcrumbs, as they provide users with a clear path for navigation and context about their current location.  </p><p>Use breadcrumbs for anything other than navigating a linear hierarchy. They should not serve as interactive elements for actions like filtering or other functionalities.</p> |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## Changelog
 

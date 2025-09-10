@@ -22,7 +22,7 @@ Broadly, the DIGIT UI frontend components are categorised as follows:
 4. [UI Modules](./#modules)
 5. [Templates](./#templates)
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>DIGIT UI</p></figcaption></figure></div>
 
 ### CSS Library
 
@@ -114,7 +114,7 @@ We have two main React Apps:
      * Dockerfile & nginx.conf
      * build-config.yaml
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Employee / Citizen App <a href="#employee-citizen-app" id="employee-citizen-app"></a>
 
