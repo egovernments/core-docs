@@ -12,7 +12,7 @@ Instructions here are provided assuming CD/CI has been set up using the DIGIT ci
 
 <details>
 
-<summary>Build</summary>
+<summary>Build<br><br>Method - 1 :</summary>
 
 Go to the Jenkins build page. Click on digit-ui under the folder path mentioned below. The entire UI module is built as a monolith. Since this module is also part of the same monolith, the entire UI module has to be built and redeployed.\
 `frontend/micro-ui/digit-ui/`
@@ -26,6 +26,21 @@ Click on `Build with parameter`. Select the feature branch name by searching for
 Once the build is successful, open the console output and find the docker image that has been built. Copy the docker image ID.
 
 <img src="../../../.gitbook/assets/image (28) (1) (1).png" alt="" data-size="original">
+
+
+
+**Method - 2(Recommended) :**&#x20;
+
+* Navigate to github actions\
+  ![](<../../../.gitbook/assets/image (556).png>)
+* Click on build pipeline\
+  ![](<../../../.gitbook/assets/image (557).png>)
+* Click on run workflow dropdown\
+  ![](<../../../.gitbook/assets/image (558).png>)
+* Select the branch name and module from the dropdown and hit Run workflow button
+* Once build is sucessful, copy the build image name from summary.
+
+_Note : Please make sure "build.yaml" file is available under .github/workflows folder._
 
 </details>
 

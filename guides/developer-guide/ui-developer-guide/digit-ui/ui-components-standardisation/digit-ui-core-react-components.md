@@ -97,9 +97,9 @@ Refer to the [https://github.com/egovernments/DIGIT-UI-LIBRARIES/blob/develop/re
 We have integrated this new component library with our core module module, so use the below version for latest core module with upgraded components
 
 ```
-"@egovernments/digit-ui-react-components" : "1.8.19"
-"@egovernments/digit-ui-libraries": "1.8.11"
-"@egovernments/digit-ui-module-core": "1.8.32"
+"@egovernments/digit-ui-react-components" : "1.8.24"
+"@egovernments/digit-ui-libraries": "1.8.23"
+"@egovernments/digit-ui-module-core": "1.8.55"
 ```
 
 ## **CSS Versions**  <a href="#a49vgx5zo9hx" id="a49vgx5zo9hx"></a>

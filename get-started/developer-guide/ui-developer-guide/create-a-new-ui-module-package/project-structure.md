@@ -4,6 +4,8 @@ description: Front-end module project structure
 
 # Project Structure
 
+##
+
 ## Overview
 
 Before starting with the Module code, ensure your local development environment is set up. You can refer to the local development setup guide link given below for detailed instructions.

@@ -11,7 +11,7 @@ Once the local setup is completed, the next step is to run the application local
 **Step 1:** To run the application in the local environment, add the `.env` file in the `example` folder -
 
 ```
-frontend/micro-ui/web/micro-ui-internals/example
+micro-ui/web/micro-ui-internals/example
 ```
 
 **Step 2:** Copy the following content and add it to the .env file. If the user is a citizen, configure the .env file as shown below:
@@ -23,7 +23,7 @@ REACT_APP_EMPLOYEE_TOKEN=c835932f-2ad4-4d05-83d6-49e0b8c59f8a
 REACT_APP_CITIZEN_TOKEN=7cd58aae-30b3-41ed-a1b3-3417107a993c
 REACT_APP_PROXY_API=https://unified-dev.digit.org
 REACT_APP_PROXY_ASSETS=https://unified-dev.digit.org
-REACT_APP_GLOBAL=https://s3.ap-south-1.amazonaws.com/works-dev-asset/globalConfigsWorks.js
+REACT_APP_GLOBAL=https://egov-dev-assets.s3.ap-south-1.amazonaws.com/globalConfigsWorkbenchDev.js
 ```
 
 **Step 3:** To run the application as an employee, update the value of the param to - `REACT_APP_USER_TYPE=EMPLOYEE.`
@@ -39,7 +39,7 @@ Update both `REACT_APP_PROXY_API` and `REACT_APP_PROXY_ASSETS` to the environmen
 Before initializing the frontend app locally, ensure that you are in the specified directory.
 
 ```
-frontend/micro-ui/web/micro-ui-internals
+micro-ui/web/micro-ui-internals
 ```
 
 **Step 1:** To initialise the Yarn execute the below command -
@@ -74,7 +74,7 @@ On the home page, users can see the cards mCollect, HRMS, NOC, Property Tax, etc
 
 <figure><img src="../../../.gitbook/assets/96fe0433-39bb-4ae9-8a0c-54b21c295ace.png" alt=""><figcaption></figcaption></figure>
 
-#### &#x20;HomePage Citizen
+#### HomePage Citizen
 
 <figure><img src="../../../.gitbook/assets/5d4cd419-bb70-47fb-976b-c797415d618c.png" alt=""><figcaption></figcaption></figure>
 
@@ -84,51 +84,76 @@ Click on the [link here](run-application.md#configure-environment-file-citizen) 
 
 Refer to [this](ui-configuration-devops.md#global-configuration) section to learn about globalConfig file.
 
-if you do not have a global config and AWS credentials  are not present, then create a temporary local config under the path:
+if you do not have a global config and AWS credentials are not present, then create a temporary local config under the path:
 
 ```
-frontend/micro-ui/web/micro-ui-internals/example/public/index.html
+micro-ui/web/micro-ui-internals/example/public/index.html
 ```
 
 Include this between the head tags
 
 ```
  <script>
-      var globalConfigs = (function () {
-      var stateTenantId = 'od'
-      var gmaps_api_key = 'AIzaSyAQOd09-vjmk1sXFb_ZQYDz2nlfhXq7Wf8'
-      var finEnv = 'uat'
-      var centralInstanceEnabled = false;
-      var footerBWLogoURL = 'https://s3.ap-south-1.amazonaws.com/egov-uat-assets/digit-footer-bw.png'
-      var footerLogoURL = 'https://s3.ap-south-1.amazonaws.com/egov-uat-assets/digit-footer.png'
-      var digitHomeURL = 'https://www.digit.org/'
-      var assetS3Bucket = 'pg-egov-assets';
-      var getConfig = function (key) {
-        if (key === 'STATE_LEVEL_TENANT_ID') {
-          return stateTenantId;
-        }
-        else if (key === 'GMAPS_API_KEY') {
-          return gmaps_api_key;
-        }
-        else if (key === 'FIN_ENV') {
-          return finEnv;
-        } else if (key === 'ENABLE_SINGLEINSTANCE') {
-          return centralInstanceEnabled;
-        } else if (key === 'DIGIT_FOOTER_BW') {
-          return footerBWLogoURL;
-        } else if (key === 'DIGIT_FOOTER') {
-          return footerLogoURL;
-        } else if (key === 'DIGIT_HOME_URL') {
-          return digitHomeURL;
-        } else if (key === 'S3BUCKET') {
-          return assetS3Bucket;
-        } else if (key === "JWT_TOKEN"){
-          return "ZWdvdi11c2VyLWNsaWVudDplZ292LXVzZXItc2VjcmV0";
-        }
-      };
-      return {
-        getConfig
-      };
+  var globalConfigs = (function () {
+  var stateTenantId = 'dev'
+  var gmaps_api_key = 'AIzaSyCslxyiD1nuQuoshbu_E3WkIV8J2SUA6KI';
+  var contextPath = 'workbench-ui';
+  var configModuleName = 'commonHCMUiConfig';
+  var centralInstanceEnabled = false;
+  var localeRegion = "IN";
+  var localeDefault = "en";
+  var mdmsContext = "egov-mdms-service";
+  var footerBWLogoURL =
+  "https://egov-uat-assets.s3.ap-south-1.amazonaws.com/digit-footer-bw.png";
+var footerLogoURL =
+  "https://egov-uat-assets.s3.ap-south-1.amazonaws.com/digit-footer.png";
+  var digitHomeURL = 'https://www.digit.org/';
+  var assetS3Bucket = 'egov-uat-asset';
+  var hrmsContext = "health-hrms";
+  var projectContext= "health-project";
+  var invalidEmployeeRoles = ["CBO_ADMIN", "ORG_ADMIN", "ORG_STAFF", "SYSTEM"]
+  var getConfig = function (key) {
+    if (key === 'STATE_LEVEL_TENANT_ID') {
+      return stateTenantId;
+    }
+    else if (key === 'GMAPS_API_KEY') {
+      return gmaps_api_key;
+    }
+    else if (key === 'ENABLE_SINGLEINSTANCE') {
+      return centralInstanceEnabled;
+    } else if (key === 'DIGIT_FOOTER_BW') {
+      return footerBWLogoURL;
+    } else if (key === 'DIGIT_FOOTER') {
+      return footerLogoURL;
+    } else if (key === 'DIGIT_HOME_URL') {
+      return digitHomeURL;
+    } else if (key === 'S3BUCKET') {
+      return assetS3Bucket;
+    } else if (key === 'CONTEXT_PATH') {
+      return contextPath;
+    } else if (key === 'UICONFIG_MODULENAME') {
+      return configModuleName;
+    } else if (key === "LOCALE_REGION") {
+      return localeRegion;
+    } else if (key === "LOCALE_DEFAULT") {
+      return localeDefault;
+    } else if (key === "MDMS_CONTEXT_PATH") {
+      return mdmsContext;
+    } else if (key === "PROJECT_SERVICE_PATH") {
+      return projectContext;
+    } else if (key === "HRMS_CONTEXT_PATH") {
+      return hrmsContext;
+    } else if (key === "MDMS_V2_CONTEXT_PATH") {
+      return mdmsContext;
+    } else if (key === "MDMS_V1_CONTEXT_PATH") {
+      return mdmsContext;
+    } if (key === 'INVALIDROLES') {
+      return invalidEmployeeRoles;
+    }
+  };
+  return {
+    getConfig
+  };
 }());
     </script>
 ```
