@@ -6,7 +6,7 @@ description: Design System - Callout component
 
 The Callout component is a contextual overlay that guides users through tasks, highlights features, or delivers important information. Callouts help users navigate complex flows by offering step-by-step cues or informative prompts in a visually distinct yet non-intrusive manner.
 
-<figure><img src="../../../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (25) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -41,7 +41,7 @@ DigitAccordion(
 
 ## Anatomy
 
-<figure><img src="../../../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (26) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -49,15 +49,15 @@ DigitAccordion(
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>The default Callout features a concise message, supportive action buttons, and is commonly used in walkthroughs, onboarding flows, or form guidance.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (27) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>The default Callout features a concise message, supportive action buttons, and is commonly used in walkthroughs, onboarding flows, or form guidance.</p></td></tr></tbody></table>
 
 ***
 
 ## Properties
 
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>Arrows with various positionings</strong></p><p>The arrow is a key visual indicator that links the Callout to the UI element it refers to.<br>Supported placements include:</p><ul><li>Bottom Left / Bottom Centre / Bottom Right</li><li>Left Centre / Right Centre</li><li>Top Left / Top Centre / Top Right</li></ul><p>This flexibility ensures the Callout can adapt to various layouts and screen constraints while maintaining a clear association with the target element.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>Arrows with various positionings</strong></p><p>The arrow is a key visual indicator that links the Callout to the UI element it refers to.<br>Supported placements include:</p><ul><li>Bottom Left / Bottom Centre / Bottom Right</li><li>Left Centre / Right Centre</li><li>Top Left / Top Centre / Top Right</li></ul><p>This flexibility ensures the Callout can adapt to various layouts and screen constraints while maintaining a clear association with the target element.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (28) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -77,9 +77,9 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                       |                                                                                                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Step-based navigation</strong></p><p>Users can navigate through multi-step messages using the Next, Previous, or Skip buttons, which also support the progressive disclosure of information.</p> |
+|                                                                                                                           |                                                                                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (29) (2).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Step-based navigation</strong></p><p>Users can navigate through multi-step messages using the Next, Previous, or Skip buttons, which also support the progressive disclosure of information.</p> |
 
 ***
 
@@ -87,9 +87,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for exclusive choices</strong></p><p>Use callouts to highlight new features, changes, or temporary announcements that require immediate user attention. This helps users stay informed about important updates while maintaining their current workflow.</p><p>Don't use callouts for permanent content that is part of the regular interface, as this reduces the impact of truly important announcements and creates unnecessary visual noise.</p> |
-| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <div><figure><img src="../../../../../.gitbook/assets/image (30) (2).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for exclusive choices</strong></p><p>Use callouts to highlight new features, changes, or temporary announcements that require immediate user attention. This helps users stay informed about important updates while maintaining their current workflow.</p><p>Don't use callouts for permanent content that is part of the regular interface, as this reduces the impact of truly important announcements and creates unnecessary visual noise.</p> |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (31) (2).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 ## Changelog
 

@@ -4,9 +4,9 @@ description: Design System - Filter Card component
 
 # Filter Card
 
-The Checkbox is a simple selection control that allows users to make binary choices, such as selecting or deselecting options. It is commonly used in forms, preference settings, and multi-select scenarios, providing clear visual feedback for user actions.
+The Filter Card component is a layout container designed to offer users an intuitive and accessible way to narrow down data or results based on specified parameters.
 
-<figure><img src="../../../../../../../.gitbook/assets/Image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -41,19 +41,17 @@ DigitAccordion(
 
 ## Anatomy
 
-***
-
-<figure><img src="../../../../../../../.gitbook/assets/Imagea.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><img src="../../../../../../../.gitbook/assets/Imagev1.png" alt=""></td><td><p>Checked</p><p>The checked state indicates that the user has actively selected the option. It provides clear visual feedback with a filled checkbox, often accompanied by a checkmark. This state should be used when an option is explicitly chosen or enabled by default.</p></td></tr><tr><td><img src="../../../../../../../.gitbook/assets/Imagev2.png" alt="" data-size="original"></td><td><strong>Intermediate</strong><br>The indeterminate state represents a mixed selection, typically used for parent checkboxes in multi-select scenarios. It visually signals that only some child options are selected, rather than all. This state does not appear by direct user interaction but is controlled programmatically to reflect partial selections.</td></tr><tr><td><img src="../../../../../../../.gitbook/assets/Imagev3.png" alt=""></td><td><p><strong>Unchecked</strong></p><p>The unchecked state indicates that the option is not selected. It appears as an empty checkbox, providing a clear visual cue that no action has been taken. This is the default state unless specified otherwise.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Horizontal</strong></p><p>Ideal for wider layouts or desktop/tablet views where filters are applied inline at the top of a table or section. Promotes quick scanning and efficient space usage.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure></div></td><td><strong>Vertical</strong><br>This layout presents filters in a stacked format, enabling a more comfortable interaction on narrow viewports or where field variety is high.</td></tr></tbody></table>
 
 ## Properties
 
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Label</strong><br>This property represents the text displayed inside the button. It is a required field and helps users understand the action that the button will trigger. The label should be concise and clear to communicate the button’s purpose effectively.<br></td><td><img src="../../../../../../../.gitbook/assets/Imagep1.png" alt=""></td></tr><tr><td><strong>Disabled</strong><br>The “isDisabled” property disables the button, preventing any user interaction. It also applies a disabled visual style (like graying out the button) to indicate that the button is not active.</td><td><img src="../../../../../../../.gitbook/assets/Imagep2.png" alt=""></td></tr><tr><td><strong>Icon</strong><br>The icon property specifies the name of the icon to be rendered inside the button. This helps provide a visual cue along with the button text. The icon placement can be either before or after the label based on the how the “Prefix” and “Suffix” properties are defined.</td><td><img src="../../../../../../../.gitbook/assets/Imagep3.png" alt=""></td></tr><tr><td><strong>Size</strong><br>The size property specifies the size of the button. You can choose between "large", "medium", and "small" to adjust the button's height and font size.</td><td><img src="../../../../../../../.gitbook/assets/Imagep4.png" alt=""></td></tr><tr><td><strong>Type</strong><br>The type property determines the HTML type attribute for the button, such as "submit", "button", or "actionButton". This is useful for form submission or defining button behavior in HTML forms.</td><td><img src="../../../../../../../.gitbook/assets/Imagep5.png" alt=""></td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Header Icon</strong><br>A visual cue precedes the heading for easy recognition and visual alignment with DIGIT’s iconography standards..<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Close Button</strong><br>Offers the ability to optionally include a close/dismiss icon for the card, especially useful when it’s implemented as an overlay or drawer.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Property Configuration Table
 
@@ -61,7 +59,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>label</td><td>string</td><td>-</td></tr><tr><td>onChange</td><td>function</td><td>-</td></tr><tr><td>value</td><td>string</td><td>-</td></tr><tr><td>disabled</td><td>boolean</td><td>-</td></tr><tr><td>inputRef</td><td>reference to a DOM element</td><td>-</td></tr><tr><td>checked</td><td>boolean</td><td>false</td></tr><tr><td>pageType</td><td>string</td><td>-</td></tr><tr><td>style</td><td>object</td><td>-</td></tr><tr><td>index</td><td>number</td><td>0</td></tr><tr><td>isLabelFirst</td><td>boolean</td><td>false</td></tr><tr><td>hideLabel</td><td>boolean</td><td>-</td></tr><tr><td>isIntermediate</td><td>boolean</td><td>false</td></tr><tr><td>mainClassName</td><td>string</td><td>-</td></tr><tr><td>id</td><td></td><td>-</td></tr><tr><td>labelClassName</td><td>string</td><td>-</td></tr><tr><td>onLabelClick</td><td>function</td><td>-</td></tr><tr><td>inputWrapperClassName</td><td>string</td><td>-</td></tr><tr><td>inputClassName</td><td>string</td><td>-</td></tr><tr><td>inputIconClassname</td><td>string</td><td>-</td></tr><tr><td>iconFill</td><td>string</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>wrapperClassName</td><td>text</td><td>-</td></tr><tr><td>headerContentClassName</td><td>text</td><td>-</td></tr><tr><td>caption</td><td>yes/no</td><td>no</td></tr><tr><td>captionClassName</td><td>yes/no</td><td>no</td></tr><tr><td>header</td><td>number</td><td>-</td></tr><tr><td>headerClasName</td><td>yes/no</td><td>no</td></tr><tr><td>subHeader</td><td>yes/no</td><td>no</td></tr><tr><td>subHeaderClasName</td><td>yes/no</td><td>no</td></tr><tr><td>body</td><td>yes/no</td><td>no</td></tr><tr><td>bodyClasName</td><td>number</td><td>no</td></tr><tr><td>style</td><td>yes/no</td><td>-no</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -69,22 +67,14 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 {% endtabs %}
 
-## Interaction State
-
-***
-
-| ![](../../../../../../../.gitbook/assets/Imageb1.png) | <p><strong>Hover State</strong></p><p>When a user hovers over the button, a visual cue is added to emphasize interactivity. This is achieved by introducing a subtle line below the button. The line appears as a clean, horizontal underline that complements the button's style, without overwhelming the design. The hover state enhances the button's affordance, guiding users and improving interactivity without altering the button’s primary layout or design.</p> |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../../../../../../../.gitbook/assets/Imageb2.png) | <p><strong>Mousedown State</strong></p><p>The Mouse Down state of the button represents the moment when the user clicks and holds the button. This state provides immediate feedback to the user, confirming that their interaction has been registered. The text label becomes bolder, emphasizing the active interaction</p>                                                                                                                                              |
-
 ## Usage Guide
 
 ***
 
-| ![](<../../../../../../../.gitbook/assets/4AA18190-F8A7-4D78-A1B7-9D226F44C477_4_5005_c (1).jpeg>) | <p><strong>Use for compact information display</strong></p><p>Organise dense or hierarchical content like FAQs, step-by-step instructions</p> |
-| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                    |                                                                                                                                               |
-|                                                                                                    |                                                                                                                                               |
+| <div><figure><img src="../../../../../.gitbook/assets/image (540).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Match layout to context</strong></p><p>Use the horizontal variant for desktop/table views and vertical for mobile or sidebar layouts.  Avoid forcing a vertical layout into a constrained width or a horizontal one in mobile viewports.</p> |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (541).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                         |
+|                                                                                                                        |                                                                                                                                                                                                                                                         |
 
 ## Change log
 

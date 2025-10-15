@@ -234,9 +234,6 @@ These are some additional parameters:
 selectionType                   nested Selected(type is required inside DropdownItem)
 ```
 
-| selectedOptions List of DropdownItem, which will be selected by default |
-| ----------------------------------------------------------------------- |
-
 ```
 selectedOptions                  List of DropdownItem, which will be selected by 
                                  default
