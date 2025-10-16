@@ -1,7 +1,5 @@
 # FAQs
 
-
-
 <details>
 
 <summary><strong>Q1. What are the pre-requisites for setting up DIGIT?</strong></summary>
@@ -35,7 +33,7 @@ iii) Install Postman - Postman is the tool we use to hit and test the APIs expos
 
 Install Yarn -
 
-[Yarn For Linux](https://linuxhint.com/install\_yarn\_ubuntu/)
+[Yarn For Linux](https://linuxhint.com/install_yarn_ubuntu/)
 
 ```
 npm install --global yarn
@@ -46,9 +44,9 @@ yarn --version
 
 <details>
 
-<summary>Q3. How do we add Globalconfig in DIGIT UI environment?</summary>
+<summary>Q3. How do we add Globalconfig in the DIGIT UI environment?</summary>
 
-Local Environment: To enable it into local development we need to add the javascript code block of globalconfig.js into the index.html
+Local Environment: To enable it in local development, we need to add the JavaScript code block of globalconfig.js into the index.html
 
 Path:- `micro-ui/web/public/index.html`
 
@@ -95,7 +93,7 @@ Script:-
 Dev Environment: To enable it in the dev environment we need to add the javascript code block of telemetry into the\
 Path:- DIGIT-DevOps/deploy-as-code/helm/environments/dev.yam
 
-Link:-[ https://github.com/egovernments/DIGIT-Dev/blob/master/frontend/micro-ui/web/public/index.html  ](https://github.com/egovernments/DIGIT-Dev/blob/master/frontend/micro-ui/web/public/index.html)
+Link:-[ https://github.com/egovernments/DIGIT-Dev/blob/master/frontend/micro-ui/web/public/index.html](https://github.com/egovernments/DIGIT-Dev/blob/master/frontend/micro-ui/web/public/index.html)
 
 ```
 <script src=https://path/to/public/s3/bucket/globalConfigs.js type=text/javascript></script>
@@ -126,47 +124,17 @@ digit-ui:
 
 ```
 
-**4) How to Register New Module in Digit UI?**
-
 </details>
 
-**4) How to Register New Module in Digit UI?**\
-Creating config into mdms:-
+<details>
 
-If you are creating a new module then, first we need to enable that module as true in citymodule.json\
-and [update the Module in citymodule.json](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/tenant/citymodule.json).
-
-```
- {
-      "module": "BR",
-      "code": "BR",
-      "active": true,
-      "order": 1,
-      "tenants": [
-        {
-          "code": "pb.jalandhar"
-        },
-        {
-          "code": "pb.nawanshahr"
-        },
-        {
-          "code": "pb.amritsar"
-        }
-      ]
-    },
+<summary><strong>5) In DIGIT UI, where do we need to add the .env file?</strong></summary>
 
 
-```
 
-&#x20;Suppose your module name is BR(Birth-Registration) then change the module and code as BR. and update the citymodule.json file.\
-or
+Add the .env file in the example folder -
 
-[Install Dependency](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2206990337)\
-\
-**5) In Digit UI Where do we need to add the .env file?**\
-Add the .env file in the example folder -&#x20;
-
-If the User is a citizen then we will configure the .env file as follow:-
+If the User is a citizen, then we will configure the .env file as follows:-
 
 ```
 SKIP_PREFLIGHT_CHECK=true
@@ -183,7 +151,7 @@ REACT_APP_STATEB_GLOBAL=https://path/to/public/s3/bucket/statebglobalConfigs.js
 staging=https://staging.companyname.org
 ```
 
-If the User is an Employee then we configure the .env as follows:-
+If the User is an Employee, then we configure the .env as follows:-
 
 ```
 SKIP_PREFLIGHT_CHECK=true
@@ -200,17 +168,17 @@ REACT_APP_STATEB_GLOBAL=https://path/to/public/s3/bucket/statebglobalConfigs.js
 staging=https://staging.companyname.org
 ```
 
-**6) In Digit UI Where do we need to add the .env file when we run the react app from micro-ui/web?**
+</details>
 
-&#x20; Add the .env file in the micro-ui/web/src/
+\
+\
+
+
+**6) In DIGIT UI, where do we need to add the .env file when we run the React app from micro-ui/web?**
+
+Add the .env file in the micro-ui/web/src/
 
 ```
 REACT_APP_STATE_LEVEL_TENANT_ID=pb
 REACT_APP_PROXY_URL=https://dev.companyname.org
 ```
-
-
-
-
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)\_\_](http://creativecommons.org/licenses/by/4.0/)_All content on this website by_ [_eGov Foundation_ ](https://egov.org.in/)_is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._

@@ -2,6 +2,7 @@
 description: >-
   Migration guide to aid users in shifting from the "react-components" package
   to the "ui-components" package
+hidden: true
 ---
 
 # DIGIT UI Core React Components

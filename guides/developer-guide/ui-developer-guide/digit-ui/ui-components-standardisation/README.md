@@ -5,11 +5,11 @@
 This page outlines methods to reduce UI/UX audit bugs post-development by enhancing a UI library. Key improvements include:
 
 * [Integration of new components](./#id-3aqkabis4f9a)
-* [Standardization of design principles](./#a-ds3u4tuhemc)
+* [Standardisation of design principles](./#a-ds3u4tuhemc)
 * [Stability enhancements](./#axrg4lhtt9hj)
 * [Conversion of px to em units for scalability and accessibility](./#tfi9ikybdhq4)
 * [Introduction of Storybook for Component Validation](./#mg554ko71sbr)
-* [Implementation of color and text size constants](./#n19lwfyl25ke)
+* [Implementation of colour and text size constants](./#n19lwfyl25ke)
 * [Addition of new component variants](./#id-20groophu08q)
 * [Creation of Flutter widgets for cross-platform support](./#naxi948y7b02)
 
@@ -29,9 +29,9 @@ Standardising design principles ensures consistency across the UI library, reduc
 
 ### Enhance Stability <a href="#axrg4lhtt9hj" id="axrg4lhtt9hj"></a>
 
-Enhancing the stability of the UI library is crucial for reducing UI/UX audit bugs. This includes optimizing code quality, implementing robust testing strategies, and monitoring performance to identify and address potential issues.
+Enhancing the stability of the UI library is crucial for reducing UI/UX audit bugs. This includes optimising code quality, implementing robust testing strategies, and monitoring performance to identify and address potential issues.
 
-### Convert px To em Units <a href="#tfi9ikybdhq4" id="tfi9ikybdhq4"></a>
+### Convert px to em Units <a href="#tfi9ikybdhq4" id="tfi9ikybdhq4"></a>
 
 Transitioning from px to em units improves scalability and accessibility, reducing UI/UX audit bugs related to inconsistent text sizes and layouts across different devices and screen resolutions.
 
@@ -39,7 +39,7 @@ Transitioning from px to em units improves scalability and accessibility, reduci
 
 Storybook provides a development environment for testing and documenting components, helping to identify and address UI/UX audit bugs early in the development process.
 
-### Implement Color & Text Size Constants <a href="#n19lwfyl25ke" id="n19lwfyl25ke"></a>
+### Implement Colour & Text Size Constants <a href="#n19lwfyl25ke" id="n19lwfyl25ke"></a>
 
 Implementing colour and text size constants ensures consistency in styling across the UI library, reducing UI/UX audit bugs related to colour contrast, readability, and visual hierarchy.
 
@@ -50,11 +50,6 @@ Introducing newer component variants enhances flexibility and caters to diverse 
 ### Create Flutter Widgets <a href="#naxi948y7b02" id="naxi948y7b02"></a>
 
 Creating Flutter widgets extends the UI library's reach to mobile platforms, reducing UI/UX audit bugs related to inconsistent user experiences across different devices and operating systems.
-
-#### Refer to the below docs to learn more about react and flutter components - <a href="#id-9wbii1syfx61" id="id-9wbii1syfx61"></a>
-
-* [React Component](digit-ui-core-react-components.md)
-* [Flutter Component](digit-ui-core-flutter-components/)
 
 ## Conclusion <a href="#id-1t75ngdm8hzh" id="id-1t75ngdm8hzh"></a>
 
