@@ -2,13 +2,13 @@
 
 ## **Overview**
 
-The birth registration module follows a simple workflow derived from the swimlane diagrams. Please check the [design inputs](../section-0-prep/design-inputs/high-level-design.md#process-workflow-diagram) section for correlation as well as the [design guide](../../../design-guide/design-services.md#extract-the-workflow) for info on how the workflow configuration is derived.&#x20;
+The birth registration module follows a simple workflow derived from the swimlane diagrams. Please check the [design inputs](../section-0-prep/design-inputs/high-level-design.md#process-workflow-diagram) section for correlation as well as the [design guide](../../../design-guide/design-services.md#extract-the-workflow) for info on how the workflow configuration is derived.
 
 ## Steps
 
 Integration with workflow service requires the following steps -
 
-1. Create Workflow service - Create a class to transition the workflow object across its states. For this, create a class by the name of WorkflowService.java under the service directory and annotate it with @Service annotation.&#x20;
+1. Create Workflow service - Create a class to transition the workflow object across its states. For this, create a class by the name of WorkflowService.java under the service directory and annotate it with @Service annotation.
 2. Add the below content to this class -
 
 ```java
@@ -165,15 +165,15 @@ public class WorkflowService {
 }
 ```
 
-5. Add workflow to BirthRegistrationService.
-6. Add the below field to BirthRegistrationService.java
+3. Add workflow to BirthRegistrationService.
+4. Add the below field to BirthRegistrationService.java
 
 ```java
  @Autowired
  private WorkflowService workflowService;
 ```
 
-6. Transition the workflow - Modify the following methods in BirthRegistrationService.java as follows. Note that we are adding calls into the workflow service in each of these methods.
+5. Transition the workflow - Modify the following methods in BirthRegistrationService.java as follows. Note that we are adding calls into the workflow service in each of these methods.
 
 <details>
 
@@ -200,8 +200,6 @@ public class WorkflowService {
         return birthRegistrationRequest.getBirthRegistrationApplications();
     }
 ```
-
-
 
 </details>
 
@@ -231,8 +229,6 @@ public class WorkflowService {
     }
 ```
 
-
-
 </details>
 
 <details>
@@ -259,11 +255,9 @@ public class WorkflowService {
     }
 ```
 
-
-
 </details>
 
-7. Configure application.properties - Add the following properties to application.properties file of the birth registration module. Depending on whether you are port forwarding or using the service directly on the host, please update the host name.
+6. Configure application.properties - Add the following properties to application.properties file of the birth registration module. Depending on whether you are port forwarding or using the service directly on the host, please update the host name.
 
 ```properties
 #Workflow config
@@ -274,4 +268,4 @@ egov.workflow.businessservice.search.path=/egov-workflow-v2/egov-wf/businessserv
 egov.workflow.processinstance.search.path=/egov-workflow-v2/egov-wf/process/_search
 ```
 
-8. Run the workflow service locally - the application will call into it to create the necessary tables in the DB and effect the workflow transitions.&#x20;
+7. Run the workflow service locally - the application will call into it to create the necessary tables in the DB and effect the workflow transitions.

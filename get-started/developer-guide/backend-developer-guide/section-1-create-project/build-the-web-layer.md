@@ -8,7 +8,7 @@ description: Implementing the controller layer in Spring
 
 The web/controller layer handles all the incoming REST requests to a service.
 
-### **Setup Request Handler In The Controller Layer**
+## **Steps**
 
 Follow the steps below to set up the request handler in the controller layer.
 
@@ -18,7 +18,7 @@ Follow the steps below to set up the request handler in the controller layer.
 
 ![Sample request handler in controller layer](<../../../../.gitbook/assets/image (122).png>)
 
-The controller class reflects the below content -
+The controller class reflects the following content -
 
 {% code lineNumbers="true" %}
 ```java
@@ -102,7 +102,7 @@ import jakarta.servlet.http.HttpServletRequest;
 {% endcode %}
 
 {% hint style="info" %}
-**NOTE:** At this point, your IDE must be showing a lot of errors but do not worry we will add all dependent layers as we progress through this guide and the errors will go away.
+**NOTE:** At this point, your IDE must be showing a lot of errors, but do not worry, we will add all dependent layers as we progress through this guide, and the errors will go away.
 {% endhint %}
 
-The web layer is now setup.
+The web layer is now set up.

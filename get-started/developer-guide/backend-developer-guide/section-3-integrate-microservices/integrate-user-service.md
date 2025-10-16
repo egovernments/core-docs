@@ -1,8 +1,8 @@
 # Integrate User Service
 
-**Overview**&#x20;
+## **Overview**
 
-The [User Service](../../../../platform/core-services/user/) provides the capabilities of creating a user, searching for a user and retrieving the details of a user. This module will search for a user and if not found, create that user with the user service.
+The [User Service](../../../../platform/core-services/user/) provides the capabilities of creating a user, searching for a user and retrieving the details of a user. This module will search for a user and, if not found, create that user with the user service.
 
 {% hint style="info" %}
 DIGIT's user service masks PII that gets stored in the database using the [Encryption Service](../../../../platform/core-services/encryption-service/).
@@ -10,7 +10,7 @@ DIGIT's user service masks PII that gets stored in the database using the [Encry
 
 ## Steps
 
-1. Create a class by the name of UserService under service folder and add the following content to it:
+1. Create a class by the name of UserService under the service folder and add the following content to it:
 
 <details>
 
@@ -255,11 +255,9 @@ public class UserService {
 ```
 {% endcode %}
 
-
-
 </details>
 
-#### 2.   Update the code in userUtil
+#### 2. Update the code in userUtil
 
 <details>
 
@@ -406,7 +404,7 @@ public class UserUtil {
 
 #### Changes to BirthApplicationEnrichment.java
 
-Add the below methods to the enrichment class we created. When we search for an application, the code below will search for the users associated with the application and add in their details to the response object.
+Add the methods below to the enrichment class we created. When we search for an application, the code below will search for the users associated with the application and add their details to the response object.
 
 <details>
 
@@ -443,8 +441,6 @@ public void enrichFatherApplicantOnSearch(BirthRegistrationApplication applicati
         application.setMother(motherApplicant);
     }
 ```
-
-
 
 </details>
 
@@ -513,7 +509,7 @@ And enhance the following two methods in BirthRegistrationService.java:
 
 </details>
 
-3. Add the following properties in application.properties file:
+3. Add the following properties in the application.properties file:
 
 {% hint style="info" %}
 **Note:** If you're port-forwarding using k8s, use "localhost". Otherwise, if you have a valid auth token, provide the hostname here.
@@ -527,4 +523,3 @@ egov.user.create.path=/_createnovalidate
 egov.user.search.path=/user/_search
 egov.user.update.path=/_updatenovalidate
 ```
-

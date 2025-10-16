@@ -6,7 +6,7 @@ description: Design System - Menu Card component
 
 The Menu Card component serves as a navigational tile, guiding users through various modules, processes, or tasks. Built with accessibility, responsiveness, and clarity in mind, this molecule uses strong visual hierarchy with clear icons, descriptions, and optional labels. It supports interaction cues such as hover states and is optimised for multiple device sizes.
 
-<figure><img src="../../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (12) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}

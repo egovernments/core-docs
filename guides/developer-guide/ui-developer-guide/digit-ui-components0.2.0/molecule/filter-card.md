@@ -1,12 +1,12 @@
 ---
-description: Design System - Filter Card component
+description: Design System - Bottom Sheet component
 ---
 
-# Filter Card
+# Bottom Sheet
 
-The Filter Card component is a layout container designed to offer users an intuitive and accessible way to narrow down data or results based on specified parameters.
+The Bottom Sheet is a flexible, slide-up container designed to provide supplementary content or actions without disrupting the main screen. It supports modular interactions like previews, confirmations, or micro-tasks, enhancing task efficiency and reducing navigational depth.
 
-<figure><img src="../../../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -41,17 +41,17 @@ DigitAccordion(
 
 ## Anatomy
 
-<figure><img src="../../../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Horizontal</strong></p><p>Ideal for wider layouts or desktop/tablet views where filters are applied inline at the top of a table or section. Promotes quick scanning and efficient space usage.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure></div></td><td><strong>Vertical</strong><br>This layout presents filters in a stacked format, enabling a more comfortable interaction on narrow viewports or where field variety is high.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>A simple bottom sheet layout with a header, short description, and optional content. Best used for lightweight contextual information.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure></div></td><td><strong>With Actions</strong><br>Includes one or more action buttons at the bottom of the sheet, useful for tasks like confirming selections, saving changes, or proceeding to next steps.</td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Custom</strong></p><p>Fully customizable content area with additional elements like images, forms, or dynamic content blocks. Ideal for detailed workflows or input-heavy interactions.</p></td></tr></tbody></table>
 
 ## Properties
 
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Header Icon</strong><br>A visual cue precedes the heading for easy recognition and visual alignment with DIGIT’s iconography standards..<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Close Button</strong><br>Offers the ability to optionally include a close/dismiss icon for the card, especially useful when it’s implemented as an overlay or drawer.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Drag Enabled</strong><br>A draggable indicator allows users to pull the bottom sheet up or down, enabling smooth expand/collapse interactions on touch or mobile interfaces.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Additional Widgets</strong><br>Supports the inclusion of elements like icons, images, forms, toggles, or dropdowns, depending on context and user need.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><p><strong>Custom Height</strong></p><p>Allows for variable height adjustments based on content needs, either fixed height or auto-adjusting to fit dynamic content gracefully.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Property Configuration Table
 
@@ -59,7 +59,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>wrapperClassName</td><td>text</td><td>-</td></tr><tr><td>headerContentClassName</td><td>text</td><td>-</td></tr><tr><td>caption</td><td>yes/no</td><td>no</td></tr><tr><td>captionClassName</td><td>yes/no</td><td>no</td></tr><tr><td>header</td><td>number</td><td>-</td></tr><tr><td>headerClasName</td><td>yes/no</td><td>no</td></tr><tr><td>subHeader</td><td>yes/no</td><td>no</td></tr><tr><td>subHeaderClasName</td><td>yes/no</td><td>no</td></tr><tr><td>body</td><td>yes/no</td><td>no</td></tr><tr><td>bodyClasName</td><td>number</td><td>no</td></tr><tr><td>style</td><td>yes/no</td><td>-no</td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>children</td><td>text</td><td>-</td></tr><tr><td>initialState</td><td>text</td><td>-</td></tr><tr><td>enableActions</td><td>yes/no</td><td>no</td></tr><tr><td>actions</td><td>yes/no</td><td>no</td></tr><tr><td>equalWidthButtons</td><td>number</td><td>-</td></tr><tr><td>className</td><td>yes/no</td><td>no</td></tr><tr><td>style</td><td>yes/no</td><td>no</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -71,10 +71,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (540).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Match layout to context</strong></p><p>Use the horizontal variant for desktop/table views and vertical for mobile or sidebar layouts.  Avoid forcing a vertical layout into a constrained width or a horizontal one in mobile viewports.</p> |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (541).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                         |
-|                                                                                                                        |                                                                                                                                                                                                                                                         |
+| <div><figure><img src="../../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for Mobile-Friendly Overlays</strong></p><p>Use the Bottom Sheet for short interactions like selecting options, viewing summaries, or executing simple actions.  Don’t use it for full-length forms or detailed multi-step tasks—use a full modal or side panel instead.</p> |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                             |
 
 ## Change log
 
