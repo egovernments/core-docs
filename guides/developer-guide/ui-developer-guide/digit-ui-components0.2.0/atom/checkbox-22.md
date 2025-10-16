@@ -1,12 +1,12 @@
 ---
-description: Design System - Loader component
+description: Design System - Tabs component
 ---
 
-# Loader
+# Tabs
 
-The Loader component is a fundamental UI element. It visually communicates ongoing processes such as data fetching, form submission, or navigation transitions. The loader helps set user expectations by indicating that a background action is in progress, reducing uncertainty and improving perceived performance.
+Tabs are used to organise content into meaningful sections within the same view. They help reduce cognitive overload by presenting information progressively.
 
-<figure><img src="../../../../../.gitbook/assets/image (491).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -41,7 +41,7 @@ DigitAccordion(
 
 ## Anatomy
 
-<figure><img src="../../../../../.gitbook/assets/image (493).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -49,15 +49,21 @@ DigitAccordion(
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (494).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>A simple spinner with optional loading text. Typically used for inline or section-based loading indicators.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (495).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Page Loader</strong></p><p>A fullscreen loader that appears during full-page transitions or major data loads, ensuring users are aware of system-level activity.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (496).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Overlay Loader</strong></p><p>Appears over existing content with a dimmed background. Ideal for actions like uploading media or submitting forms, preventing user interaction during processing.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>The Basic tab variant presents a straightforward horizontal layout of labelled tabs. It is ideal for dividing related content within the same page or module, allowing users to switch between sections without navigating away.</p></td></tr></tbody></table>
 
 ***
 
+## Interaction States
+
+<table><thead><tr><th width="334.98046875"></th><th></th></tr></thead><tbody><tr><td><p><strong>Active</strong></p><p>The active tab is highlighted with a bold label and a strong border to visually indicate selection. It improves user orientation by showing which section is currently visible.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+
 ## Properties
 
-|                                                                                                                                                                  |                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>Loader Text</strong></p><p>Optional text (e.g., "Loading...") can be displayed alongside the spinner to clarify the ongoing process for the user.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (497).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                               |                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| <p><strong>Label</strong></p><p>Each tab is defined by a clearly readable label that communicates its purpose</p>             | <div><figure><img src="../../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>With Icon</strong></p><p>Useful for visual reinforcement, especially in data-heavy or mobile-first interfaces.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Without Icon</strong></p><p>A cleaner variant that emphasises text.</p>                                            | <div><figure><img src="../../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -65,7 +71,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>variant</td><td>text</td><td></td></tr><tr><td>className</td><td>text</td><td></td></tr><tr><td>style</td><td>yes/no</td><td>no</td></tr><tr><td>loaderText</td><td>yes/no</td><td>no</td></tr><tr><td>animationStyles</td><td>number</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>configNavItems</td><td>text</td><td></td></tr><tr><td>configItemKey</td><td>text</td><td></td></tr><tr><td>activeLink</td><td>yes/no</td><td>no</td></tr><tr><td>setActiveLink</td><td>yes/no</td><td>no</td></tr><tr><td>showNav</td><td>number</td><td></td></tr><tr><td>style</td><td>yes/no</td><td></td></tr><tr><td>navStyles</td><td>yes/no</td><td>no</td></tr><tr><td>itemStyle</td><td>yes/no</td><td>no</td></tr><tr><td>className</td><td>yes/no</td><td>no</td></tr><tr><td>navClassName</td><td>number</td><td>no</td></tr><tr><td>onTabClick</td><td>yes/no</td><td>no</td></tr><tr><td>children</td><td>text</td><td>no</td></tr><tr><td>configDisplayKey</td><td>yes/no</td><td>no</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -77,10 +83,10 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                        |                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (498).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Blocks Interaction</strong></p><p>While the loader is active, especially in page or overlay mode, user interaction is restricted to avoid conflicting inputs during processing.</p> |
-| <div><figure><img src="../../../../../.gitbook/assets/image (499).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Auto Dismiss</strong></p><p>Loaders are dismissed automatically upon completion of the associated process, ensuring smooth transitions and minimising wait perception.</p>          |
+|                                                                                                                          |                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsive Layout</strong></p><p>Tabs automatically adjust their width and layout based on the number of items and screen size to ensure optimal usability across devices.</p>        |
+| <div><figure><img src="../../../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Instant Content Update</strong></p><p>When switching between tabs, the corresponding content updates instantly without needing to reload the page, enhancing the user experience.</p> |
 
 ***
 
@@ -88,9 +94,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <p><strong>Use loaders for content that is loading</strong></p><p>Use medium or large loaders for content that is loading in large areas, without space constraints, such as web pages, panels, or dashboards.  </p><p></p><p>Avoid using small loaders for full-page or overlay loading, as they may not be noticeable or may seem visually unbalanced.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (500).png" alt=""><figcaption></figcaption></figure></div> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                                                                                                                                                                              | <div><figure><img src="../../../../../.gitbook/assets/image (501).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Highlight the active tab clearly</strong></p><p>Ensure the active tab stands out from inactive ones. This can be done through bold text, colour changes, and a border to help users easily identify which section is currently selected. A well-defined active tab enhances navigation clarity and improves the user experience.  </p><p></p><p>Don’t mix the use of icons in tabs. Consistent icon usage maintains clear spatial relationships and visual balance, ensuring a cohesive navigation experience.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure></div> |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | <div><figure><img src="../../../../../.gitbook/assets/image (490).png" alt=""><figcaption></figcaption></figure></div>   |
 
 ## Changelog
 

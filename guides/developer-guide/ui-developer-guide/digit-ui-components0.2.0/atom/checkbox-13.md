@@ -1,12 +1,12 @@
 ---
-description: Design System - Switch component
+description: Design System - Radio component
 ---
 
-# Switch
+# Radio
 
-The Switch component is used to toggle between two binary states, such as On/Off, Enable/Disable, or Active/Inactive. It offers a direct, easy-to-understand interaction and provides instant feedback. The design ensures accessibility, responsiveness, and consistency across applications.
+The Radio component allows users to select a single option from a set of mutually exclusive choices. It promotes clarity, ease of decision-making, and accessibility through consistent styling and intuitive interaction patterns.
 
-<figure><img src="../../../../../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (349).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,21 +43,17 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (351).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This is a clean toggle without any accompanying label or icon. It's compact and ideal for minimal layouts where the switch’s meaning is already clear from context.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (11) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Symbol</strong></p><p>This variant includes a symbol (like "|" for On and "◯" for Off) inside the switch thumb. It enhances visual clarity and is useful when colour alone isn't enough to indicate the switch's state.</p></td></tr></tbody></table>
-
-***
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (353).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Active</strong></p><p>The active or "on" state of a radio button indicates that the option has been selected by the user. Unlike checkboxes, only one radio button within a group can be in the active state at any given time.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (352).png" alt=""><figcaption></figcaption></figure></div></td><td><strong>Inactive</strong><br>The inactive or "off" state of a radio button indicates that the option is available but not currently selected. This state is distinct from both the selected state and the disabled state. When a radio button is in the inactive state, it remains fully interactive. Users can click or tap on the radio button to select it, which will automatically deselect any previously selected option in the same group.</td></tr></tbody></table>
 
 ## Properties
 
-|                                                                                                                                                                                                                               |                                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Filled State</strong><br>A radio button that shows it is selected by filling the inner circle. This state indicates the user’s current choice.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (363).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Default State</strong><br>The standard appearance of a radio button before any selection is made. It appears with an empty circle and is ready for interaction.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (362).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Disabled State</strong><br>A radio button that appears greyed out and cannot be selected. This state is used when an option is not available for user interaction.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Disabled Filled</strong><br>A selected radio button that is also disabled. It indicates a pre-selected option that users cannot change.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (357).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Read Only</strong><br>A radio button that is selected but not interactive. This state is used when users can view the selected option but are not allowed to modify it.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (356).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Property Configuration Table
 
@@ -65,7 +61,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>isLabelFirst</td><td>text</td><td></td></tr><tr><td>label</td><td>text</td><td></td></tr><tr><td>shapeOnOff</td><td>yes/no</td><td>no</td></tr><tr><td>isCheckedInitially</td><td>yes/no</td><td>no</td></tr><tr><td>onToggle</td><td>number</td><td></td></tr><tr><td>className</td><td>yes/no</td><td></td></tr><tr><td>style</td><td>yes/no</td><td>no</td></tr><tr><td>disable</td><td>yes/no</td><td>no</td></tr><tr><td>switchStyle</td><td>yes/no</td><td>no</td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>selectedOption</td><td>text</td><td>-</td></tr><tr><td>onSelect</td><td>text</td><td>no</td></tr><tr><td>options</td><td>yes/no</td><td>no</td></tr><tr><td>optionsKey</td><td>yes/no</td><td>-</td></tr><tr><td>innerStyles</td><td>number</td><td>-</td></tr><tr><td>style</td><td>yes/no</td><td>-</td></tr><tr><td>alignVertical</td><td>yes/no</td><td>no</td></tr><tr><td>additionalWrapperClass</td><td>yes/no</td><td>no</td></tr><tr><td>disabled</td><td>yes/no</td><td>no</td></tr><tr><td>name</td><td>number</td><td>no</td></tr><tr><td>inputRef</td><td>yes/no</td><td>no</td></tr><tr><td>inputStyle</td><td>text</td><td>no</td></tr><tr><td>isDependent</td><td>yes/no</td><td>no</td></tr><tr><td>labelKey</td><td>yes/no</td><td>-</td></tr><tr><td>value</td><td>yes/no</td><td>-</td></tr><tr><td>isLabelFirst</td><td>yes/no</td><td>-</td></tr><tr><td>inputStyle</td><td>yes/no</td><td>-</td></tr><tr><td>labelKey</td><td>yes/no</td><td>-</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -73,14 +69,20 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 {% endtabs %}
 
+## Interaction State
+
 ***
+
+| <div><figure><img src="../../../../../.gitbook/assets/image (354).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Hover State</strong></p><p>When users hover over an inactive radio button, it transitions to display our Primary orange colour. This distinct colour change serves as a clear visual cue that differentiates the hover state from both the default inactive state and the non-interactive disabled state. The orange highlight indicates to users that the radio button is interactive and can be selected, encouraging engagement while reinforcing the component's actionable nature.</p> |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <div><figure><img src="../../../../../.gitbook/assets/image (355).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Mousedown State</strong></p><p>When a user hovers over the button, a visual cue is added to emphasise interactivity. This is achieved by introducing a subtle outline around the button. The subtle halo outline complements the button's style, without overwhelming the design.</p>                                                                                                                                                                                                       |
 
 ## Behaviours
 
-|                                                                                                                                   |                                                                                                                                                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (15) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label</strong></p><p>Use switches to represent binary on/off states. They are ideal for toggling settings or features that require immediate activation or deactivation.</p><p>Avoid using switches to indicate errors. Switches are not designed for error states.</p> |
-| <div><figure><img src="../../../../../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label Alignment</strong></p><p>The placement of the label can be customised to appear left or right of the switch. This helps maintain visual balance depending on layout needs and reading flow.</p>                                                                   |
+|                                                                                                                        |                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <div><figure><img src="../../../../../.gitbook/assets/image (364).png" alt=""><figcaption></figcaption></figure></div> | When the radio label exceeds the width of the parent container, the text wraps to the next line to maintain readability. Character count can be limited if required based on layout constraints. |
+|                                                                                                                        |                                                                                                                                                                                                  |
 
 ***
 
@@ -88,9 +90,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (19) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use dividers for activation states</strong></p><p>Use switches to represent binary on/off states. They are ideal for toggling settings or features that require immediate activation or deactivation.</p><p>Avoid using switches to indicate errors. Switches are not designed for error states.</p> |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (20) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                 |
+| <div><figure><img src="../../../../../.gitbook/assets/image (368).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Single Selection Only</strong></p><p>Use radio buttons when the user needs to select only one option from a list. They are not intended for multi-selection; use checkboxes if multiple selections are required.</p> |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                        |                                                                                                                                                                                                                                 |
 
 ## Changelog
 

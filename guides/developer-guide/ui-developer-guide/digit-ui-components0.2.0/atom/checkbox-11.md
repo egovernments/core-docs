@@ -1,12 +1,12 @@
 ---
-description: Design System - Chips component
+description: Design System - OTP input component
 ---
 
-# Chips
+# OTP Input
 
-The Chips component is a compact, interactive UI element used to display discrete pieces of information, user selections, filters, tags, or statuses. This chip's component enhances the interface by providing quick insights or actions in a visually organised way without overwhelming the user.
+The OTP Input component is designed to collect secure, time-sensitive verification codes from users in a clear and accessible way. It emphasises clarity, accuracy, and ease of use across different devices, ensuring a smooth authentication process.
 
-<figure><img src="../../../../../.gitbook/assets/image (21) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,21 +43,17 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This represents the standard chip style, which has a neutral background, commonly used for user choices, tags, or options, and this is also non-dismissable by default.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Error</strong></p><p>This highlights the invalid or incorrect selections and is also styled with a red border and background to indicate a problem or error state.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Close</strong></p><p>This includes a dismiss (close) icon that allows users to remove a selection or input dynamically and is useful for multi-select filters, form tags, or user-generated inputs.</p></td></tr></tbody></table>
-
-***
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>4-characters</strong></p><p>Used when the OTP is limited to four digits, offering a compact layout ideal for simpler authentication flows.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>6-characters</strong></p><p>Common in more secure flows, this variant provides six input boxes for enhanced verification.</p></td></tr></tbody></table>
 
 ## Properties
 
-|                                                                                                                                                                                                                               |                                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Label</strong><br>Positioned above the input fields (e.g., "Enter OTP"), it provides clear instructions to the user.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (23) (1) (1) (2).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Error</strong><br>Displays an error message (e.g., “Invalid OTP”) with a red border and icon to indicate incorrect input.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (22) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><p><strong>Masking</strong></p><p>Optionally replaces typed characters with dots (●) for added security, particularly useful in shared or public environments.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (21) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td></td><td></td></tr></tbody></table>
 
 ## Property Configuration Table
 
@@ -65,7 +61,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>className</td><td>text</td><td>-</td></tr><tr><td>text</td><td>text</td><td>no</td></tr><tr><td>onTagClick</td><td>yes/no</td><td>no</td></tr><tr><td>onClick</td><td>yes/no</td><td>-</td></tr><tr><td>extraStyles</td><td>number</td><td>-</td></tr><tr><td>disabled</td><td>yes/no</td><td>-</td></tr><tr><td>isErrorTag</td><td>yes/no</td><td>no</td></tr><tr><td>error</td><td>yes/no</td><td>no</td></tr><tr><td>hideClose</td><td>yes/no</td><td>no</td></tr><tr><td>onErrorClick</td><td>number</td><td>no</td></tr><tr><td>iconReq</td><td>yes/no</td><td>no</td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>length</td><td>text</td><td>-</td></tr><tr><td>type</td><td>text</td><td>no</td></tr><tr><td>onChange</td><td>yes/no</td><td>no</td></tr><tr><td>placeholder</td><td>yes/no</td><td>-</td></tr><tr><td>className</td><td>number</td><td>-</td></tr><tr><td>style</td><td>yes/no</td><td>-</td></tr><tr><td>label</td><td>yes/no</td><td>no</td></tr><tr><td>inline</td><td>yes/no</td><td>no</td></tr><tr><td>masking</td><td>yes/no</td><td>no</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -73,13 +69,21 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 {% endtabs %}
 
+## Interaction State
+
 ***
+
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Single Focus</strong><br>In Single Focus mode, only one input box is actively focused at a time. As the user types, the focus automatically moves to the next box, improving usability and reducing the need for manual navigation between fields.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (20) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Behaviours
 
-|                                                                                                                                          |                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Compact &#x26; Responsive</strong></p><p>This Chips component is designed to occupy minimal space, and it also auto-resizes based on content and adapts to containers across screen sizes.</p> |
+|                                                                                                                                   |                                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <div><figure><img src="../../../../../.gitbook/assets/image (26) (1) (2).png" alt=""><figcaption></figcaption></figure></div>     | <p><strong>Auto Tabbing</strong></p><p>The cursor automatically jumps to the next field as each digit is entered.</p>                                  |
+| <div><figure><img src="../../../../../.gitbook/assets/image (25) (1) (2).png" alt=""><figcaption></figcaption></figure></div>     | <p><strong>Backspace Navigation</strong></p><p>Pressing backspace in an empty field moves the focus to the previous box, allowing easy correction.</p> |
+| <div><figure><img src="../../../../../.gitbook/assets/image (24) (1) (1) (2).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Paste Handling</strong></p><p>Supports pasting a full OTP string, automatically distributing characters across input fields.</p>            |
+
+
 
 ***
 
@@ -87,9 +91,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use Chips to show selected options</strong></p><p>Use chips to display selected options in a multi-select dropdown, making it easy for users to review and remove selections if needed.  </p><p></p><p>Avoid using chips that don’t clearly show how to remove or edit them, and don’t display error states without simple instructions on how to fix the issue.  </p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                   |
+| <div><figure><img src="../../../../../.gitbook/assets/image (27) (1) (2).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use Clear Focus State for Better User Guidance</strong></p><p>Ensure that the currently active OTP input field is visually distinct so users can immediately recognise where they need to type next. A proper focus state improves accessibility and enhances the user experience by providing clear feedback on input interactions.  Users should not struggle to identify which input box is currently active. Lack of clear focus indication can result in hesitation or mistakes, causing frustration.</p> |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (28) (1) (2).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 ## Changelog
 

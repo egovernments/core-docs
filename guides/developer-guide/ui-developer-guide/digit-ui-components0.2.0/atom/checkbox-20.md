@@ -1,12 +1,12 @@
 ---
-description: Design System - Timeline component
+description: Design System - Tags component
 ---
 
-# Timeline
+# Tags
 
-The Timeline component visually represents a sequence of events or stages in a linear, chronological order. Designed with clarity and accessibility in mind, it helps users understand the progress, status, and associated actions within a workflow.
+Tags are compact elements used to represent status, categorise content, or highlight metadata. Tags deliver quick visual cues without disrupting the user experience. They are lightweight, informative, and scalable for various use cases across web and mobile interfaces.
 
-<figure><img src="../../../../../.gitbook/assets/image (476).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (32) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -41,7 +41,7 @@ DigitAccordion(
 
 ## Anatomy
 
-<figure><img src="../../../../../.gitbook/assets/image (477).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (33) (2).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -49,19 +49,20 @@ DigitAccordion(
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (478).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Upcoming</strong></p><p>Displays future events or steps in the process. The visual indicator is muted to reflect inactivity, and it can include relevant date/time info.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (479).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>In Progress</strong></p><p>Represents tasks or stages currently underway. It uses an active visual indicator to denote ongoing status and may include interactive elements like “View Details”.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Completed</strong></p><p>Marks finished tasks using a filled, completed icon. This variant reinforces a sense of progression and task completion.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (24) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>Neutral in appearance, the Default tag is used for generic labelling without implying any state or action.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Success</strong></p><p>Represents positive states such as completion, confirmation, or availability. Shown in green.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Error</strong></p><p>Indicates issues, failures, or blocked statuses. Visually emphasised with red to alert users.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Warning</strong></p><p>Used to caution users about potentially risky or incomplete actions. Typically styled in amber or yellow.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Custom</strong></p><p>Allows the use of personalized icons and color schemes for specialized use cases that fall outside standard categories.</p></td></tr></tbody></table>
 
 ***
 
+## Interaction States
+
+<table><thead><tr><th width="334.98046875"></th><th></th></tr></thead><tbody><tr><td><p><strong>Hover State</strong> </p><p>On hover, tags visually respond with Slight elevation or shadow. This state helps communicate affordance and improves overall interactivity, especially in filter chips or action tags.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+
 ## Properties
 
-|                                                                                                                                                                                              |                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>Default</strong></p><p>Shows only the stage name without additional data, keeping the interface clean.</p>                                                                        | <div><figure><img src="../../../../../.gitbook/assets/image (481).png" alt=""><figcaption></figcaption></figure></div> |
-| <p><strong>Date</strong></p><p>Includes the date beneath the stage to inform users of timing for events or steps.</p>                                                                        | <div><figure><img src="../../../../../.gitbook/assets/image (482).png" alt=""><figcaption></figcaption></figure></div> |
-| <p><strong>Additional Elements</strong></p><p>Enhances the component with date/time details and a collapsible “View Details” element, which opens further content.</p>                       | <div><figure><img src="../../../../../.gitbook/assets/image (483).png" alt=""><figcaption></figcaption></figure></div> |
-| <p><strong>Expanded</strong></p><p>Displays rich content such as text blocks, image/document previews, and action buttons to support user interaction.</p>                                   | <div><figure><img src="../../../../../.gitbook/assets/image (485).png" alt=""><figcaption></figcaption></figure></div> |
-| <p><strong>Error Timeline</strong></p><p>Highlights failed or incomplete steps with red indicators and messaging like “Failed”, drawing attention to issues that require user attention.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (486).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                                                                                                                |                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>Icon</strong></p><p>Tags can include a leading icon to visually reinforce the tag’s context, improving scannability and recognition. Icons change based on tag type.</p>                            | <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Stroke</strong></p><p>Tags may have a stroked border for emphasis or differentiation. Stroke enhances visual hierarchy without adding bulk, especially useful in outlined or minimal UI themes.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -69,7 +70,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>label</td><td>text</td><td></td></tr><tr><td>subElements</td><td>text</td><td></td></tr><tr><td>variant</td><td>yes/no</td><td>no</td></tr><tr><td>viewDetailsLabel</td><td>yes/no</td><td>no</td></tr><tr><td>hideDetailsLabel</td><td>number</td><td></td></tr><tr><td>additionalElements</td><td>yes/no</td><td></td></tr><tr><td>inline</td><td>yes/no</td><td>no</td></tr><tr><td>individualElementStyles</td><td>yes/no</td><td>no</td></tr><tr><td>showConnector</td><td>yes/no</td><td>no</td></tr><tr><td>className</td><td>number</td><td>no</td></tr><tr><td>isLabelFirst</td><td>yes/no</td><td>no</td></tr><tr><td>isNextActiveStep</td><td>text</td><td>no</td></tr><tr><td>showDefaultValueForDate</td><td>yes/no</td><td>no</td></tr><tr><td>isError</td><td>yes/no</td><td></td></tr><tr><td>initialVisibleAdditionalElementsCount</td><td>yes/no</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>className</td><td>text</td><td></td></tr><tr><td>iconClassName</td><td>text</td><td></td></tr><tr><td>iconColor</td><td>yes/no</td><td>no</td></tr><tr><td>label</td><td>yes/no</td><td>no</td></tr><tr><td>style</td><td>number</td><td></td></tr><tr><td>stroke</td><td>yes/no</td><td></td></tr><tr><td>type</td><td>yes/no</td><td>no</td></tr><tr><td>showIcon</td><td>yes/no</td><td>no</td></tr><tr><td>labelStyle</td><td>yes/no</td><td>no</td></tr><tr><td>onClick</td><td>number</td><td>no</td></tr><tr><td>alignment</td><td>yes/no</td><td>no</td></tr><tr><td>icon</td><td>text</td><td>no</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -81,9 +82,9 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                        |                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <div><figure><img src="../../../../../.gitbook/assets/image (487).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Progressive Expansion</strong></p><p>Sections expand to reveal additional information, files, and actions only when the user chooses to explore, preventing visual clutter.</p> |
+|                                                                                                                                  |                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsiveness</strong></p><p>Tags adapt to different screen sizes, containers, and content lengths without breaking layout consistency.</p> |
 
 ***
 
@@ -91,9 +92,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <p><strong>Ensure Clear Status Representation</strong></p><p>Each timeline status should be visually distinct using clear colours, icons, and typography so that users can easily understand the progression and current state.</p><p></p><p>Icons should clearly match their status. Avoid using similar icons for different statuses, which can lead to misinterpretation.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (488).png" alt=""><figcaption></figcaption></figure></div> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                                                                                                                                                                                                  | <div><figure><img src="../../../../../.gitbook/assets/image (489).png" alt=""><figcaption></figcaption></figure></div> |
+| <div><figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>  | <p><strong>Use tags to highlight important</strong></p><p>Use tags to highlight important labels that help users quickly identify key information at a glance. Tags should be concise yet meaningful, making it easier for users to navigate and understand context.</p><p></p><p>Avoid using long or complex tags. Tags should be short, clear, and to the point so users can quickly understand their meaning at a glance.</p> |
+| --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## Changelog
 

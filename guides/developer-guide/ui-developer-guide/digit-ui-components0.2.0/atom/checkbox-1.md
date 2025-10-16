@@ -1,12 +1,12 @@
 ---
-description: Design System - Radio component
+description: Design System - Breadcrumbs component
 ---
 
-# Radio
+# Breadcrumbs
 
-The Radio component allows users to select a single option from a set of mutually exclusive choices. It promotes clarity, ease of decision-making, and accessibility through consistent styling and intuitive interaction patterns.
+The Breadcrumbs component is a navigation aid that helps users understand their current position within a product’s hierarchy. It improves user orientation and facilitates smooth backwards navigation, particularly in multi-level interfaces.
 
-<figure><img src="../../../../../.gitbook/assets/image (349).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,17 +43,15 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (351).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (16) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (353).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Active</strong></p><p>The active or "on" state of a radio button indicates that the option has been selected by the user. Unlike checkboxes, only one radio button within a group can be in the active state at any given time.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (352).png" alt=""><figcaption></figcaption></figure></div></td><td><strong>Inactive</strong><br>The inactive or "off" state of a radio button indicates that the option is available but not currently selected. This state is distinct from both the selected state and the disabled state. When a radio button is in the inactive state, it remains fully interactive. Users can click or tap on the radio button to select it, which will automatically deselect any previously selected option in the same group.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Basic</strong></p><p>Displays the full navigation path linearly, and it's best used when the number of breadcrumb items is limited and space is sufficient.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Collapsed</strong></p><p>Compresses middle items into an ellipsis (...) for better scalability, and it's ideal for complex or deeply nested paths to maintain a clean layout.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Custom Separators</strong></p><p>Uses stylised or alternate separators like arrows (→) instead of slashes, and it enhances visual hierarchy and readability based on context or brand style.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Icons</strong></p><p>Includes relevant icons alongside each breadcrumb label.<br>Helps with quicker recognition and improves usability, especially for users with lower literacy or cognitive load.</p></td></tr></tbody></table>
 
-## Properties
-
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Filled State</strong><br>A radio button that shows it is selected by filling the inner circle. This state indicates the user’s current choice.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (363).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Default State</strong><br>The standard appearance of a radio button before any selection is made. It appears with an empty circle and is ready for interaction.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (362).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Disabled State</strong><br>A radio button that appears greyed out and cannot be selected. This state is used when an option is not available for user interaction.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Disabled Filled</strong><br>A selected radio button that is also disabled. It indicates a pre-selected option that users cannot change.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (357).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Read Only</strong><br>A radio button that is selected but not interactive. This state is used when users can view the selected option but are not allowed to modify it.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (356).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+***
 
 ## Property Configuration Table
 
@@ -61,7 +59,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>selectedOption</td><td>text</td><td>-</td></tr><tr><td>onSelect</td><td>text</td><td>no</td></tr><tr><td>options</td><td>yes/no</td><td>no</td></tr><tr><td>optionsKey</td><td>yes/no</td><td>-</td></tr><tr><td>innerStyles</td><td>number</td><td>-</td></tr><tr><td>style</td><td>yes/no</td><td>-</td></tr><tr><td>alignVertical</td><td>yes/no</td><td>no</td></tr><tr><td>additionalWrapperClass</td><td>yes/no</td><td>no</td></tr><tr><td>disabled</td><td>yes/no</td><td>no</td></tr><tr><td>name</td><td>number</td><td>no</td></tr><tr><td>inputRef</td><td>yes/no</td><td>no</td></tr><tr><td>inputStyle</td><td>text</td><td>no</td></tr><tr><td>isDependent</td><td>yes/no</td><td>no</td></tr><tr><td>labelKey</td><td>yes/no</td><td>-</td></tr><tr><td>value</td><td>yes/no</td><td>-</td></tr><tr><td>isLabelFirst</td><td>yes/no</td><td>-</td></tr><tr><td>inputStyle</td><td>yes/no</td><td>-</td></tr><tr><td>labelKey</td><td>yes/no</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>crumbs</td><td>text</td><td>-</td></tr><tr><td>className</td><td>text</td><td>no</td></tr><tr><td>style</td><td>yes/no</td><td>no</td></tr><tr><td>spanStyle</td><td>yes/no</td><td>-</td></tr><tr><td>customSeperator</td><td>number</td><td>-</td></tr><tr><td>maxItems</td><td>yes/no</td><td>-</td></tr><tr><td>itemsBeforeCollapse</td><td>yes/no</td><td>no</td></tr><tr><td>itemsAfterCollapse</td><td>yes/no</td><td>no</td></tr><tr><td>expandText</td><td>yes/no</td><td>no</td></tr><tr><td>itemStyle</td><td>number</td><td>no</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -69,20 +67,16 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 {% endtabs %}
 
-## Interaction State
-
 ***
-
-| <div><figure><img src="../../../../../.gitbook/assets/image (354).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Hover State</strong></p><p>When users hover over an inactive radio button, it transitions to display our Primary orange colour. This distinct colour change serves as a clear visual cue that differentiates the hover state from both the default inactive state and the non-interactive disabled state. The orange highlight indicates to users that the radio button is interactive and can be selected, encouraging engagement while reinforcing the component's actionable nature.</p> |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <div><figure><img src="../../../../../.gitbook/assets/image (355).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Mousedown State</strong></p><p>When a user hovers over the button, a visual cue is added to emphasise interactivity. This is achieved by introducing a subtle outline around the button. The subtle halo outline complements the button's style, without overwhelming the design.</p>                                                                                                                                                                                                       |
 
 ## Behaviours
 
-|                                                                                                                        |                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <div><figure><img src="../../../../../.gitbook/assets/image (364).png" alt=""><figcaption></figcaption></figure></div> | When the radio label exceeds the width of the parent container, the text wraps to the next line to maintain readability. Character count can be limited if required based on layout constraints. |
-|                                                                                                                        |                                                                                                                                                                                                  |
+|                                                                                                                                              |                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Clickable Navigation</strong></p><p>All breadcrumb items (except the current page) are clickable, enabling users to quickly jump to previous steps or levels in their journey.</p>                                          |
+| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsive Collapsing</strong></p><p>Breadcrumbs automatically adjust and collapse middle items when the screen width is limited, ensuring the component remains compact and accessible on mobile or smaller viewports.</p> |
+
+
 
 ***
 
@@ -90,9 +84,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (368).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Single Selection Only</strong></p><p>Use radio buttons when the user needs to select only one option from a list. They are not intended for multi-selection; use checkboxes if multiple selections are required.</p> |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                        |                                                                                                                                                                                                                                 |
+| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use breadcrumbs to show hierarchy</strong></p><p>Maintain a consistent hierarchical structure for breadcrumbs, as they provide users with a clear path for navigation and context about their current location.  </p><p>Use breadcrumbs for anything other than navigating a linear hierarchy. They should not serve as interactive elements for actions like filtering or other functionalities.</p> |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## Changelog
 

@@ -1,12 +1,12 @@
 ---
-description: Design System - Callout component
+description: Design System - Selection Tags component
 ---
 
-# Callout
+# Selection Tags
 
-The Callout component is a contextual overlay that guides users through tasks, highlights features, or delivers important information. Callouts help users navigate complex flows by offering step-by-step cues or informative prompts in a visually distinct yet non-intrusive manner.
+Selection Tags are compact, button-like elements that allow users to make single or multiple selections from a set of options. They offer a clean and intuitive interaction pattern, ensuring a smooth and responsive user experience across form elements, filters, and grouped choices.
 
-<figure><img src="../../../../../.gitbook/assets/image (25) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -41,7 +41,7 @@ DigitAccordion(
 
 ## Anatomy
 
-<figure><img src="../../../../../.gitbook/assets/image (26) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -49,15 +49,22 @@ DigitAccordion(
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (27) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>The default Callout features a concise message, supportive action buttons, and is commonly used in walkthroughs, onboarding flows, or form guidance.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Single Select</strong></p><p>Allows the user to choose only one option from the group. Once a selection is made, the previously selected option is deselected automatically. This variant is ideal for use cases like survey forms or filter selections.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Multi Select</strong></p><p>Enables users to select multiple options simultaneously. Commonly used where more than one input or category applies, such as skill filters, tag selectors, or custom checklists.</p></td></tr></tbody></table>
 
 ***
 
+## Interaction States
+
+<table><thead><tr><th width="334.98046875"></th><th></th></tr></thead><tbody><tr><td><p><strong>Active State</strong> </p><p>When a tag is selected, the background colour changes to primary. This state clearly communicates which options are currently selected.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><p><strong>Dismiss on Mouse Out</strong></p><p>Tooltips disappear when the user moves away or loses focus, maintaining a clean and distraction-free interface.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+
 ## Properties
 
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>Arrows with various positionings</strong></p><p>The arrow is a key visual indicator that links the Callout to the UI element it refers to.<br>Supported placements include:</p><ul><li>Bottom Left / Bottom Centre / Bottom Right</li><li>Left Centre / Right Centre</li><li>Top Left / Top Centre / Top Right</li></ul><p>This flexibility ensures the Callout can adapt to various layouts and screen constraints while maintaining a clear association with the target element.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (28) (1).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                                                                                                                                                     |                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>Error</strong></p><p>It displays a red border around the tag container and shows a supporting error message below.<br>This is also used for validation states to indicate missing or incorrect selection(s).</p>                         | <div><figure><img src="../../../../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Prefix Icon</strong> </p><p>An icon placed to the left of the label text that helps convey additional context or function visually (e.g., an edit or status indicator).</p>                                                              | <div><figure><img src="../../../../../.gitbook/assets/image (19) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Suffix Icon</strong></p><p>An icon placed to the right of the label text that is typically used for actions like removal, more options, or tagging.</p>                                                                                  | <div><figure><img src="../../../../../.gitbook/assets/image (18) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Container Disabled</strong></p><p>Disables interaction with the entire selection group, and tags appear visually muted and do not respond to hover or click states. This is useful in forms where selection is conditionally locked.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (21) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -65,7 +72,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>label</td><td>text</td><td></td></tr><tr><td>onChange</td><td>text</td><td></td></tr><tr><td>value</td><td>yes/no</td><td>no</td></tr><tr><td>disabled</td><td>yes/no</td><td>no</td></tr><tr><td>ref</td><td>number</td><td></td></tr><tr><td>checked</td><td>yes/no</td><td></td></tr><tr><td>inputRef</td><td>yes/no</td><td>no</td></tr><tr><td>pageType</td><td>yes/no</td><td>no</td></tr><tr><td>style</td><td>yes/no</td><td>no</td></tr><tr><td>index</td><td>number</td><td>no</td></tr><tr><td>isLabelFirst</td><td>yes/no</td><td>no</td></tr><tr><td>customLabelMarkup</td><td>text</td><td>no</td></tr><tr><td>hideLabel</td><td>yes/no</td><td>no</td></tr><tr><td>isIntermediate</td><td>yes/no</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>width</td><td>text</td><td></td></tr><tr><td>errorMessage</td><td>text</td><td></td></tr><tr><td>options</td><td>yes/no</td><td>no</td></tr><tr><td>onSelectionChanged</td><td>yes/no</td><td>no</td></tr><tr><td>allowMultipleSelection</td><td>number</td><td></td></tr><tr><td>selected</td><td>yes/no</td><td></td></tr><tr><td>withContainer</td><td>yes/no</td><td>no</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -77,9 +84,10 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                           |                                                                                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (29) (2).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Step-based navigation</strong></p><p>Users can navigate through multi-step messages using the Next, Previous, or Skip buttons, which also support the progressive disclosure of information.</p> |
+|                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (23) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for exclusive choices</strong></p><p>Use selection tags when you need users to make clear, mutually exclusive choices or multiple selections. This ensures optimal visual hierarchy and helps users quickly understand their available options while maintaining a clean and organised interface layout.</p><p></p><p>Don't overcrowd the selection tag group with more than 4 options. Overwhelming users with too many choices makes it difficult for users to scan and compare options effectively.</p> |
+| <div><figure><img src="../../../../../.gitbook/assets/image (24) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 ***
 
@@ -87,9 +95,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (30) (2).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for exclusive choices</strong></p><p>Use callouts to highlight new features, changes, or temporary announcements that require immediate user attention. This helps users stay informed about important updates while maintaining their current workflow.</p><p>Don't use callouts for permanent content that is part of the regular interface, as this reduces the impact of truly important announcements and creates unnecessary visual noise.</p> |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (31) (2).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <div><figure><img src="../../../../../.gitbook/assets/image (42) (2).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for compact information display</strong></p><p>Keep tooltips concise and clear, limiting the text to one or two short sentences for quick readability.</p><p>Avoid adding actions or links in tooltips, as they should only provide passive information and appear on hover or keyboard focus.</p> |
+| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (43) (2).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                   |
 
 ## Changelog
 

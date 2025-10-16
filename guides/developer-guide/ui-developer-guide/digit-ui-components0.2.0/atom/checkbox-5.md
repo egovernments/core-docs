@@ -1,12 +1,12 @@
 ---
-description: Design System - Panel component
+description: Design System - Divider component
 ---
 
-# Panel
+# Divider
 
-The Panel component is a responsive and accessible UI element used to convey important system feedback to users. Aligned with principles of clarity, consistency, and user-first communication, it ensures users receive timely success or error notifications in an unobtrusive yet prominent manner.
+The Divider component is a minimal visual element used to create a clear separation between content blocks, sections, or UI elements. Designed with simplicity and clarity in mind, dividers help maintain a clean layout structure, enhance visual hierarchy, and improve content readability without drawing unnecessary attention.
 
-<figure><img src="../../../../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,17 +43,21 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (431).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (435).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Success Panel</strong></p><p>Displays a positive outcome using a green background and a check icon. Used to confirm actions such as form submissions or successful operations.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (434).png" alt=""><figcaption></figcaption></figure></div></td><td><strong>Error Panel</strong><br>Indicates failure with a red background and alert icon. Helps users identify and resolve problems quickly.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Small</strong></p><p>The Small variant is the most minimal, offering a subtle line ideal for closely related content or where minimal visual interruption is needed.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Medium</strong></p><p>The Medium variant provides a slightly more prominent separation and is commonly used between groups of information or components within a section.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Large</strong></p><p>The Large variant offers the strongest emphasis, ideal for separating major sections or modules, especially in dense interfaces or dashboards.</p></td></tr></tbody></table>
+
+***
 
 ## Properties
 
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Animation</strong><br>The panel’s success or failure animation plays smoothly.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (432).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Description</strong><br>Each panel contains a clear description with optional supporting information (e.g., reference ID or code).</td><td><div><figure><img src="../../../../../.gitbook/assets/image (433).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
+|                                                                                                                                                                                                                               |                                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -61,7 +65,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>className</td><td>text</td><td>-</td></tr><tr><td>message</td><td>text</td><td>no</td></tr><tr><td>type</td><td>yes/no</td><td>no</td></tr><tr><td>info</td><td>yes/no</td><td>-</td></tr><tr><td>response</td><td>number</td><td>-</td></tr><tr><td>customIcon</td><td>yes/no</td><td>-</td></tr><tr><td>iconFill</td><td>yes/no</td><td>no</td></tr><tr><td>style</td><td>yes/no</td><td>no</td></tr><tr><td>multipleResponses</td><td>yes/no</td><td>no</td></tr><tr><td>animationProps</td><td>number</td><td>no</td></tr><tr><td>showAsSvg</td><td>yes/no</td><td>no</td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>className</td><td>text</td><td>no</td></tr><tr><td>style</td><td>yes/no</td><td>no</td></tr><tr><td>variant</td><td>yes/no</td><td>-</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -69,17 +73,13 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 {% endtabs %}
 
-## Interaction State
-
 ***
-
-<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Mousedown State</strong><br>When a user presses down on the input field to begin entering text, the field responds by slightly darkening its background colour. This immediate visual feedback reinforces the interactivity of the component, signalling to the user that the input field is active and ready to receive input.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (429).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Behaviours
 
-|                                                                                                                        |                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <div><figure><img src="../../../../../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Dynamic Positioning</strong></p><p>The Panel can adapt its position dynamically based on the device or screen size, ensuring visibility without obstructing critical UI elements.</p> |
+|                                                                                                                                      |                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsiveness</strong></p><p>Dividers adapt fluidly to their container width and scale across screen sizes while preserving consistency in thickness and spacing.</p> |
 
 ***
 
@@ -87,9 +87,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (437).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use clear text and an icon to show the state</strong></p><p>Use clear, concise text with relevant icons to indicate success or error states, ensuring users quickly understand the message.  Avoid using excessive or unnecessary information that clutters the panel, making it harder to read at a glance.</p> |
-| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (438).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                             |
+| <div><figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use Dividers with Headers for Clear Sectioning</strong></p><p>Place dividers below the header text to create distinct sections or page titles. This helps organise content and improves visual hierarchy.  </p><p>Avoid using dividers excessively, as they can create unnecessary visual noise and clutter. Use them sparingly to maintain a clean and focused layout</p> |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Changelog
 

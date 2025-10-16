@@ -1,12 +1,12 @@
 ---
-description: Design System - Tabs component
+description: Design System - Timeline component
 ---
 
-# Tabs
+# Timeline
 
-Tabs are used to organise content into meaningful sections within the same view. They help reduce cognitive overload by presenting information progressively.
+The Timeline component visually represents a sequence of events or stages in a linear, chronological order. Designed with clarity and accessibility in mind, it helps users understand the progress, status, and associated actions within a workflow.
 
-<figure><img src="../../../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (476).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -41,7 +41,7 @@ DigitAccordion(
 
 ## Anatomy
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (477).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -49,21 +49,19 @@ DigitAccordion(
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>The Basic tab variant presents a straightforward horizontal layout of labelled tabs. It is ideal for dividing related content within the same page or module, allowing users to switch between sections without navigating away.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (478).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Upcoming</strong></p><p>Displays future events or steps in the process. The visual indicator is muted to reflect inactivity, and it can include relevant date/time info.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (479).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>In Progress</strong></p><p>Represents tasks or stages currently underway. It uses an active visual indicator to denote ongoing status and may include interactive elements like “View Details”.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Completed</strong></p><p>Marks finished tasks using a filled, completed icon. This variant reinforces a sense of progression and task completion.</p></td></tr></tbody></table>
 
 ***
 
-## Interaction States
-
-<table><thead><tr><th width="334.98046875"></th><th></th></tr></thead><tbody><tr><td><p><strong>Active</strong></p><p>The active tab is highlighted with a bold label and a strong border to visually indicate selection. It improves user orientation by showing which section is currently visible.</p></td><td><div><figure><img src="../../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
-
 ## Properties
 
-|                                                                                                                               |                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| <p><strong>Label</strong></p><p>Each tab is defined by a clearly readable label that communicates its purpose</p>             | <div><figure><img src="../../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure></div> |
-| <p><strong>With Icon</strong></p><p>Useful for visual reinforcement, especially in data-heavy or mobile-first interfaces.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure></div> |
-| <p><strong>Without Icon</strong></p><p>A cleaner variant that emphasises text.</p>                                            | <div><figure><img src="../../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure></div> |
+|                                                                                                                                                                                              |                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>Default</strong></p><p>Shows only the stage name without additional data, keeping the interface clean.</p>                                                                        | <div><figure><img src="../../../../../.gitbook/assets/image (481).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Date</strong></p><p>Includes the date beneath the stage to inform users of timing for events or steps.</p>                                                                        | <div><figure><img src="../../../../../.gitbook/assets/image (482).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Additional Elements</strong></p><p>Enhances the component with date/time details and a collapsible “View Details” element, which opens further content.</p>                       | <div><figure><img src="../../../../../.gitbook/assets/image (483).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Expanded</strong></p><p>Displays rich content such as text blocks, image/document previews, and action buttons to support user interaction.</p>                                   | <div><figure><img src="../../../../../.gitbook/assets/image (485).png" alt=""><figcaption></figcaption></figure></div> |
+| <p><strong>Error Timeline</strong></p><p>Highlights failed or incomplete steps with red indicators and messaging like “Failed”, drawing attention to issues that require user attention.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (486).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Property Configuration Table
 
@@ -71,7 +69,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>configNavItems</td><td>text</td><td></td></tr><tr><td>configItemKey</td><td>text</td><td></td></tr><tr><td>activeLink</td><td>yes/no</td><td>no</td></tr><tr><td>setActiveLink</td><td>yes/no</td><td>no</td></tr><tr><td>showNav</td><td>number</td><td></td></tr><tr><td>style</td><td>yes/no</td><td></td></tr><tr><td>navStyles</td><td>yes/no</td><td>no</td></tr><tr><td>itemStyle</td><td>yes/no</td><td>no</td></tr><tr><td>className</td><td>yes/no</td><td>no</td></tr><tr><td>navClassName</td><td>number</td><td>no</td></tr><tr><td>onTabClick</td><td>yes/no</td><td>no</td></tr><tr><td>children</td><td>text</td><td>no</td></tr><tr><td>configDisplayKey</td><td>yes/no</td><td>no</td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>label</td><td>text</td><td></td></tr><tr><td>subElements</td><td>text</td><td></td></tr><tr><td>variant</td><td>yes/no</td><td>no</td></tr><tr><td>viewDetailsLabel</td><td>yes/no</td><td>no</td></tr><tr><td>hideDetailsLabel</td><td>number</td><td></td></tr><tr><td>additionalElements</td><td>yes/no</td><td></td></tr><tr><td>inline</td><td>yes/no</td><td>no</td></tr><tr><td>individualElementStyles</td><td>yes/no</td><td>no</td></tr><tr><td>showConnector</td><td>yes/no</td><td>no</td></tr><tr><td>className</td><td>number</td><td>no</td></tr><tr><td>isLabelFirst</td><td>yes/no</td><td>no</td></tr><tr><td>isNextActiveStep</td><td>text</td><td>no</td></tr><tr><td>showDefaultValueForDate</td><td>yes/no</td><td>no</td></tr><tr><td>isError</td><td>yes/no</td><td></td></tr><tr><td>initialVisibleAdditionalElementsCount</td><td>yes/no</td><td></td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -83,10 +81,9 @@ Each design component offers a range of configurable options. These options are 
 
 ## Behaviours
 
-|                                                                                                                          |                                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <div><figure><img src="../../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Responsive Layout</strong></p><p>Tabs automatically adjust their width and layout based on the number of items and screen size to ensure optimal usability across devices.</p>        |
-| <div><figure><img src="../../../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Instant Content Update</strong></p><p>When switching between tabs, the corresponding content updates instantly without needing to reload the page, enhancing the user experience.</p> |
+|                                                                                                                        |                                                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <div><figure><img src="../../../../../.gitbook/assets/image (487).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Progressive Expansion</strong></p><p>Sections expand to reveal additional information, files, and actions only when the user chooses to explore, preventing visual clutter.</p> |
 
 ***
 
@@ -94,9 +91,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <p><strong>Highlight the active tab clearly</strong></p><p>Ensure the active tab stands out from inactive ones. This can be done through bold text, colour changes, and a border to help users easily identify which section is currently selected. A well-defined active tab enhances navigation clarity and improves the user experience.  </p><p></p><p>Don’t mix the use of icons in tabs. Consistent icon usage maintains clear spatial relationships and visual balance, ensuring a cohesive navigation experience.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure></div> |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | <div><figure><img src="../../../../../.gitbook/assets/image (490).png" alt=""><figcaption></figcaption></figure></div>   |
+| <p><strong>Ensure Clear Status Representation</strong></p><p>Each timeline status should be visually distinct using clear colours, icons, and typography so that users can easily understand the progression and current state.</p><p></p><p>Icons should clearly match their status. Avoid using similar icons for different statuses, which can lead to misinterpretation.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (488).png" alt=""><figcaption></figcaption></figure></div> |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                                                                                                                                                                                  | <div><figure><img src="../../../../../.gitbook/assets/image (489).png" alt=""><figcaption></figcaption></figure></div> |
 
 ## Changelog
 

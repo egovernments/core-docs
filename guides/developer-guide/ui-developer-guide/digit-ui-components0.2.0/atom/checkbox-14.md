@@ -1,12 +1,12 @@
 ---
-description: Design System - tooltip component
+description: Design System - Stepper component
 ---
 
-# Tooltip
+# Stepper
 
-The Tooltip component offers extra contextual information on hover, focus, or tap, without cluttering the UI. It ensures accessibility and clarity, helping users easily understand functionality or data.
+The Stepper is a navigation component that guides users through a multi-step process in a structured and sequential manner. It is commonly used in forms, onboarding flows, and checkout processes, providing clear progress indicators and step-by-step guidance to enhance the user experience.
 
-<figure><img src="../../../../../.gitbook/assets/image (452).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (370).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Component React" %}
@@ -43,21 +43,17 @@ DigitAccordion(
 
 ***
 
-<figure><img src="../../../../../.gitbook/assets/image (453).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (371).png" alt=""><figcaption></figcaption></figure>
 
 ## Variants
 
 ***
 
-<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>Default</strong></p><p>This is a clean toggle without any accompanying label or icon. It's compact and ideal for minimal layouts where the switch’s meaning is already clear from context.</p></td></tr><tr><td><div><figure><img src="../../../../../.gitbook/assets/image (11) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td><p><strong>With Symbol</strong></p><p>This variant includes a symbol (like "|" for On and "◯" for Off) inside the switch thumb. It enhances visual clarity and is useful when colour alone isn't enough to indicate the switch's state.</p></td></tr></tbody></table>
-
-***
+<table data-header-hidden><thead><tr><th width="321"></th><th></th></tr></thead><tbody><tr><td><img src="../../../../../.gitbook/assets/image (373).png" alt=""></td><td><p><strong>Horizontal Stepper</strong></p><p>Displays steps in a single row, guiding users through a linear process from left to right. Ideal for checkouts, onboarding, and multi-step forms with clear progress indicators.</p></td></tr><tr><td><img src="../../../../../.gitbook/assets/image (372).png" alt=""></td><td><strong>Vertical Stepper</strong><br>The Vertical Stepper displays steps in a column, ideal for mobile screens or detailed content. It improves readability and offers clear top-to-bottom navigation, making it great for forms or lengthy descriptions.</td></tr></tbody></table>
 
 ## Properties
 
-|                                                                                                                                                                                                                               |                                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>With Icon</strong></p><p>An optional icon can be added to the left or right (dismiss/close icon). This enhances usability and improves scanability, especially for chips used in status indicators or filters.</p> | <div><figure><img src="../../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Divider</strong><br>Determines whether a visual separator (divider) is displayed between steps. Helps in distinguishing each step clearly.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (379).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Number of Steps</strong><br>Defines the total steps in the stepper. Helps in setting the length of the process.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (380).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Property Configuration Table
 
@@ -65,7 +61,7 @@ Each design component offers a range of configurable options. These options are 
 
 {% tabs %}
 {% tab title="React" %}
-<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>isLabelFirst</td><td>text</td><td></td></tr><tr><td>label</td><td>text</td><td></td></tr><tr><td>shapeOnOff</td><td>yes/no</td><td>no</td></tr><tr><td>isCheckedInitially</td><td>yes/no</td><td>no</td></tr><tr><td>onToggle</td><td>number</td><td></td></tr><tr><td>className</td><td>yes/no</td><td></td></tr><tr><td>style</td><td>yes/no</td><td>no</td></tr><tr><td>disable</td><td>yes/no</td><td>no</td></tr><tr><td>switchStyle</td><td>yes/no</td><td>no</td></tr></tbody></table>
+<table><thead><tr><th width="257">Property</th><th>Value</th><th>Default</th></tr></thead><tbody><tr><td>currentStep</td><td>text</td><td>-</td></tr><tr><td>onStepClick</td><td>text</td><td>no</td></tr><tr><td>totalSteps</td><td>yes/no</td><td>no</td></tr><tr><td>customSteps</td><td>yes/no</td><td>-</td></tr><tr><td>direction</td><td>number</td><td>-</td></tr><tr><td>style</td><td>yes/no</td><td>-</td></tr><tr><td>className</td><td>yes/no</td><td>no</td></tr><tr><td>activeSteps</td><td>yes/no</td><td>no</td></tr><tr><td>hideDivider</td><td>yes/no</td><td>no</td></tr><tr><td>props</td><td>number</td><td>no</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Flutter" %}
@@ -73,14 +69,20 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 {% endtabs %}
 
+## Interaction State
+
 ***
+
+<table data-header-hidden data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Active State</strong><br>The current step is visually highlighted to indicate progress.<br></td><td><div><figure><img src="../../../../../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Completed State</strong><br>Steps that users have finished are marked as completed, often with a checkmark or different styling.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (376).png" alt=""><figcaption></figcaption></figure></div></td></tr><tr><td><strong>Hover State</strong><br>On hover, inactive steps highlight to indicate they are clickable and part of the navigation flow.</td><td><div><figure><img src="../../../../../.gitbook/assets/image (377).png" alt=""><figcaption></figcaption></figure></div></td></tr></tbody></table>
 
 ## Behaviours
 
-|                                                                                                                                   |                                                                                                                                                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (15) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label</strong></p><p>Use switches to represent binary on/off states. They are ideal for toggling settings or features that require immediate activation or deactivation.</p><p>Avoid using switches to indicate errors. Switches are not designed for error states.</p> |
-| <div><figure><img src="../../../../../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label Alignment</strong></p><p>The placement of the label can be customised to appear left or right of the switch. This helps maintain visual balance depending on layout needs and reading flow.</p>                                                                   |
+|                                                                                                                        |                                                                                                                                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (381).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Horizontal Scrolling</strong></p><p>When using a horizontal stepper in a narrow container, steps can scroll sideways to accommodate all steps within view.</p>                                                                                 |
+| <div><figure><img src="../../../../../.gitbook/assets/image (382).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Vertical Scrolling</strong></p><p>In vertical layouts with limited height, steps scroll vertically to ensure users can access each step sequentially without content being cut off.</p>                                                        |
+| <div><figure><img src="../../../../../.gitbook/assets/image (383).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Label Overflow</strong></p><p>If step labels exceed the available space, they are truncated with ellipsis (...) or wrapped to the next line based on layout and design requirements. Tooltips can be used to show the full label on hover.</p> |
+| <div><figure><img src="../../../../../.gitbook/assets/image (384).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Flexible Dimensions</strong></p><p>Steppers adapt to custom width and height defined by their parent containers using flex layouts. They maintain usability and alignment across different screen sizes and orientations.</p>                  |
 
 ***
 
@@ -88,9 +90,9 @@ Each design component offers a range of configurable options. These options are 
 
 ***
 
-| <div><figure><img src="../../../../../.gitbook/assets/image (19) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use dividers for activation states</strong></p><p>Use switches to represent binary on/off states. They are ideal for toggling settings or features that require immediate activation or deactivation.</p><p>Avoid using switches to indicate errors. Switches are not designed for error states.</p> |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div><figure><img src="../../../../../.gitbook/assets/image (20) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div> |                                                                                                                                                                                                                                                                                                                 |
+| <div><figure><img src="../../../../../.gitbook/assets/image (386).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Use for a process that involves multiple steps</strong></p><p>Use a stepper only when a process involves multiple steps, ensuring clear progression and user guidance.</p> |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <div><figure><img src="../../../../../.gitbook/assets/image (385).png" alt=""><figcaption></figcaption></figure></div> | <p><strong>Avoid using it for just one or two steps</strong></p><p>Avoid using a stepper for processes with just one or two steps, as it adds unnecessary complexity.</p>             |
 
 ## Changelog
 
