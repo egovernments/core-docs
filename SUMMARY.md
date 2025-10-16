@@ -185,7 +185,7 @@
       * [Payment Back Update](get-started/developer-guide/backend-developer-guide/section-4-integrate-billing-and-payment/payment-back-update.md)
     * [Section 5: Other Advanced Integrations](get-started/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/README.md)
       * [Add Indexer Configuration](get-started/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/add-indexer-configuration.md)
-      * [Certificate Generation](get-started/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/certificate-generation.md)
+      * [Generate Certificate](get-started/developer-guide/backend-developer-guide/section-5-other-advanced-integrations/certificate-generation.md)
     * [Section 6: Run Final Application](get-started/developer-guide/backend-developer-guide/section-6-run-final-application.md)
     * [Section 7: Build & Deploy Instructions](get-started/developer-guide/backend-developer-guide/section-7-build-and-deploy-instructions.md)
     * [FAQs](get-started/developer-guide/backend-developer-guide/faqs.md)
