@@ -1,21 +1,14 @@
 # Deploy DIGIT
 
-#### Topics covered:
-
-* [DIGIT platform service deployment basics](./#overview)
-* [Pre-requisites for deployment](./#pre-requisites)
-* [Steps to run the deployer](./#run-deployer)
-* [Adding security group](./#adding-security-group-id-of-instance-ec2-to-rds)
-
 ## Overview
 
-This page details the steps to deploy the core platform services and reference applications.&#x20;
+This page details the steps to deploy the core platform services and reference applications.
 
 The steps here can be used to deploy:
 
 * DIGIT core platform services
-* Public Grievance & Redressal module&#x20;
-* Trade Licence module&#x20;
+* Public Grievance & Redressal module
+* Trade Licence module
 * Property Tax module
 * Water & Sewerage module etc.
 
@@ -52,12 +45,12 @@ All Done.
 
 All done, wait and watch for 10 min. The DIGIT setup is complete, and the application will run on the URL.
 
-<mark style="color:red;">**Note:**</mark>&#x20;
+<mark style="color:red;">**Note:**</mark>
 
-* <mark style="color:red;">**If you do not have your domain yet, you can edit the host file entries and map the nginx-ingress-service load balancer id like below**</mark>&#x20;
+* <mark style="color:red;">**If you do not have your domain yet, you can edit the host file entries and map the nginx-ingress-service load balancer id like below**</mark>
   * <mark style="color:red;">**When you find it, add the following lines to the host file, save and close it.**</mark>
   * <mark style="color:red;">**`aws-load-balancer-id digit.try.com`**</mark>
-* <mark style="color:red;">**If you have a GoDaddy account or similar and a DNS records edit access you can map the load balancer id to desired DNS.  Create a**</mark> [<mark style="color:red;">**cname**</mark>](https://in.godaddy.com/help/add-a-cname-record-19236) <mark style="color:red;">**record with the load balancer ID and domain.**</mark>
+* <mark style="color:red;">**If you have a GoDaddy account or similar and a DNS records edit access you can map the load balancer id to desired DNS. Create a**</mark> [<mark style="color:red;">**cname**</mark>](https://in.godaddy.com/help/add-a-cname-record-19236) <mark style="color:red;">**record with the load balancer ID and domain.**</mark>
 
 You can now test the DIGIT application status in the command prompt/terminal using the command below.
 
@@ -67,4 +60,3 @@ curl -Is https://digit.try.com/employee/login |  head -n 1
 OutPut:
 HTTP/2 200
 ```
-

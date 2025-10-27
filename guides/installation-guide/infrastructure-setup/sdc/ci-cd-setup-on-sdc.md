@@ -4,12 +4,6 @@ description: Steps to setup CI/CD on SDC
 
 # CI/CD Setup On SDC
 
-#### Topics covered: <a href="#prerequisites" id="prerequisites"></a>
-
-* [Pre-requisites for setting up CI/CD on SDC](ci-cd-setup-on-sdc.md#prerequisites-2)
-* [Preparing the nodes](ci-cd-setup-on-sdc.md#preparing-the-nodes)
-* [CI/CD Build Job Pipeline Setup](ci-cd-setup-on-sdc.md#ci-cd-build-job-pipeline-setup)
-
 ## Overview <a href="#prerequisites" id="prerequisites"></a>
 
 Kubespray is a composition of [Ansible](https://docs.ansible.com/) playbooks, [inventory](https://github.com/kubernetes-sigs/kubespray/blob/master/docs/ansible.md), provisioning tools, and domain knowledge for generic OS/Kubernetes cluster configuration management tasks. Kubespray provides:
@@ -22,8 +16,8 @@ Kubespray is a composition of [Ansible](https://docs.ansible.com/) playbooks, [i
 ## Pre-requisites <a href="#prerequisites" id="prerequisites"></a>
 
 1. [GitHub Organization account](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
-2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repos below to your GitHub Organization account&#x20;
-   * &#x20;[https://github.com/egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps)
+2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repos below to your GitHub Organization account
+   * [https://github.com/egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps)
    * [https://github.com/egovernments/CIOps](https://github.com/egovernments/CIOps)
 3. [Go lang](https://golang.org/doc/install) (version 1.13.X)
 4. [SOPS](https://github.com/mozilla/sops#updatekeys-command)
@@ -35,21 +29,21 @@ Kubespray is a composition of [Ansible](https://docs.ansible.com/) playbooks, [i
 ### Hardware <a href="#hardware" id="hardware"></a>
 
 * One Bastion machine to run Kubespray
-* HA-PROXY machine which acts as a load balancer with Public IP. (CPU: 2Core , Memory: 4Gb)&#x20;
-* one machine which acts as a master node. (CPU: 2Core , Memory: 4Gb)&#x20;
+* HA-PROXY machine which acts as a load balancer with Public IP. (CPU: 2Core , Memory: 4Gb)
+* one machine which acts as a master node. (CPU: 2Core , Memory: 4Gb)
 * one machine which acts as a worker node. (CPU: 8Core , Memory: 16Gb)
 * ISCSI volumes for persistence volume. (number of quantity: 2 )
   * kaniko-cache-claim:- 10Gb
   * Jenkins home:- 100Gb
 
-### **Software**&#x20;
+### **Software**
 
 1. **Kubernetes nodes**
    1. Ubuntu 18.04
-   2. SSH&#x20;
+   2. SSH
    3. Privileged user
    4. Python
-2. #### Bastion machine
+2. **Bastion machine**
    1. Ansible
    2. git
    3. Python
@@ -73,7 +67,7 @@ sudo sed -i '/ swap /d' /etc/fstab
 
 ### Setup SSH using key-based authentication
 
-&#x20;**All the machines should be in the same network with ubuntu or centos installed.**
+**All the machines should be in the same network with ubuntu or centos installed.**
 
 ssh key should be generated from the Bastion machine and must be copied to all the servers part of your inventory.
 

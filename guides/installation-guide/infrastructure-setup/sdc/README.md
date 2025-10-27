@@ -4,12 +4,6 @@ description: Deployment on SDC
 
 # SDC
 
-#### Topics covered:
-
-* [Introduction to SDC](./#overview)
-* [Automating the deployment process](./#automating-the-deployment-process)
-* [Installation steps](./#installation-steps)
-
 ## Overview
 
 Running Kubernetes on-premise gives a cloud-native experience on SDC when it comes to deploying DIGIT.
@@ -57,6 +51,3 @@ If you already using Ansible, Kubespray is a great option, otherwise, we recomme
 {% content-ref url="../../../data-setup-guide/bootstrap-digit.md" %}
 [bootstrap-digit.md](../../../data-setup-guide/bootstrap-digit.md)
 {% endcontent-ref %}
-
-
-
