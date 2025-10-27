@@ -1,0 +1,145 @@
+# Package Publishing Process
+
+## Version Updates
+
+Once all changes were completed, the packages were assigned new versions and published. Below is a list of updated versions:
+
+| Package Name                            | Version       |
+| --------------------------------------- | ------------- |
+| @egovernments/digit-ui-libraries        | 2.0.0-rc19-04 |
+| @egovernments/digit-ui-components       | 2.0.0-rc19-04 |
+| @egovernments/digit-ui-react-components | 2.0.0-rc19-04 |
+| @egovernments/digit-ui-svg-components   | 2.0.0-rc19-04 |
+
+## Github actions workflow
+
+Since there were modifications in the build process, the GitHub Actions workflow was updated accordingly. Below is the modified GitHub Actions file handling the package publishing process:
+
+```
+name: Node.js Publish UI Packages
+
+on:
+  push:
+    branches: [ 'develop-webpack' ]
+    paths:
+      - 'webpack/react-components/**'
+      - 'webpack/svg-components/**'
+      - 'webpack/ui-components/**'
+      - 'webpack/libraries/**'
+      - 'react/modules/core/**'
+
+
+jobs:
+  setup-python-and-build-tools:
+    name: Set up Python and Build Tools
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update apt and install Python 3 and build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-pip python3-setuptools build-essential
+          sudo apt-get install -y python3-distutils || sudo apt-get install -y python3-dev
+
+
+  publish-webpack-ui-components: 
+    name: Publish Webpack UI Components
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies for SVG Components
+        run: |
+          cd webpack/ui-components/
+          rm -rf node_modules yarn.lock
+          yarn install --frozen-lockfile
+          npm publish --tag core-webpack-v0.1
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+
+
+  publish-webpack-react-components:
+    name: Publish Webpack React Components
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies for Webpack React Components
+        run: |
+          cd webpack/react-components/
+          rm -rf node_modules yarn.lock
+          yarn install --frozen-lockfile
+          npm publish --tag core-webpack-v0.1
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+
+
+  publish-webpack-svg-components:
+    name: Publish Webpack SVG Components
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies for Webpack SVG Components
+        run: |
+          cd webpack/svg-components/
+          rm -rf node_modules yarn.lock
+          yarn install --frozen-lockfile
+          npm publish --tag core-webpack-v0.1
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+
+
+  publish-react-module-libraries:
+    name: Publish React Module Libraries
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies for React Libraries
+        run: |
+          cd webpack/libraries/
+          rm -rf node_modules yarn.lock
+          yarn install --frozen-lockfile
+          npm publish --tag libraries-v0.1
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+
+
+  publish-react-module-core:
+    name: Publish React Module Core
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies for React Core
+        run: |
+          cd react/modules/core/
+          rm -rf node_modules yarn.lock
+          yarn install --frozen-lockfile
+          npm publish --tag core-module-v0.1
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+```
+
+## Publishing Issues & Fixes
+
+#### Issue: 404 Package Not Found Error
+
+* During the publishing process, we encountered an error where the package was not found (404 error).
+
+Solution: The issue was resolved by upgrading the package versions to ensure no conflicts with existing published versions.
