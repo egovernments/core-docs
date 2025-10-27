@@ -267,6 +267,7 @@
       * [Login Page](guides/developer-guide/ui-developer-guide/customisation/login-page.md)
     * [Setup Monitoring Tools](get-started/developer-guide/ui-developer-guide/setup-monitoring-tools.md)
     * [Android Web View & How To Generate APK](get-started/developer-guide/ui-developer-guide/android-web-view-and-how-to-generate-apk.md)
+    * [Migration Guide](guides/developer-guide/ui-developer-guide/migration-guide.md)
     * [FAQs](get-started/developer-guide/ui-developer-guide/faqs/README.md)
       * [Troubleshoot Using Browser Network Tab](get-started/developer-guide/ui-developer-guide/faqs/troubleshoot-using-browser-network-tab.md)
       * [Debug Android App Using Chrome Browser](get-started/developer-guide/ui-developer-guide/faqs/debug-android-app-using-chrome-browser.md)

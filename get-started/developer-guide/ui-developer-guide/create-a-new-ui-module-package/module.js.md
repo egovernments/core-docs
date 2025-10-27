@@ -1,5 +1,7 @@
 # Module.js
 
+{% tabs %}
+{% tab title="React17" %}
 ## Overview
 
 The next step is to register `SampleModule` in `module.js`, the module's entry file. To demonstrate rendering, display "**Sample Module**" using a simple `<div>` element within the `SampleModule` component. This creates a basic screen setup for the module, which can be customized or expanded as needed.
@@ -121,3 +123,142 @@ http://localhost:3000/digit-ui/employee/sample
 Refer to the below sections for a deeper understanding
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Reusable Components</td><td></td><td><a href="import-required-components.md">import-required-components.md</a></td></tr><tr><td></td><td>Reusable Hooks</td><td></td><td><a href="common-hooks.md">common-hooks.md</a></td></tr><tr><td></td><td>Employee Module Setup</td><td></td><td><a href="../employee-module-setup/">employee-module-setup</a></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="React19" %}
+## Overview
+
+The next step is to register `SampleModule` in `module.js`, the module's entry file. To demonstrate rendering, display "**Sample Module**" using a simple `<div>` element within the `SampleModule` component. This creates a basic screen setup for the module, which can be customized or expanded as needed.
+
+## Steps
+
+Add the below code in the Module.js file which is already created.
+
+```
+import { Loader } from "@egovernments/digit-ui-components";
+import React from "react";
+import { default as EmployeeApp } from "./pages/employee";
+import SampleCard from "./components/SampleCard";
+import HRMSCard from "./components/HRMSCard";
+import ViewEstimateComponent from "./components/ViewEstimateComponent";
+import { overrideHooks, updateCustomConfigs } from "./utils";
+import AdditionalComponentWrapper from "./components/AdditionalComponent";
+import SampleMultiComponent from "./components/SampleMultiComponent";
+
+export const SampleModule = ({ stateCode, userType, tenants }) => {
+  const tenantId = Digit.ULBService.getCurrentTenantId();
+  const moduleCode = ["sample", "common", "workflow"];
+  const language = Digit.StoreData.getCurrentLanguage();
+
+  const { isLoading, data: store } = Digit.Services.useStore({
+    stateCode,
+    moduleCode,
+    language,
+  });
+
+  if (isLoading) {
+    return <Loader page={true} variant={"PageLoader"} />;
+  }
+
+  return <div>Sample Module</div>;
+};
+
+const componentsToRegister = {
+  UtilitiesModule: SampleModule,
+  UtilitiesCard: SampleCard,
+  HRMSCard,
+  ViewEstimatePage: ViewEstimateComponent,
+  SampleAdditionalComponent: AdditionalComponentWrapper,
+  SampleMultiComponent: SampleMultiComponent,
+};
+
+export const initSampleComponents = () => {
+  overrideHooks();
+  updateCustomConfigs();
+
+  Object.entries(componentsToRegister).forEach(([key, value]) => {
+    Digit.ComponentRegistryService.setComponent(key, value);
+  });
+};
+
+
+```
+
+* Initialize the module's custom hooks, configurations, and register components using `initSampleComponents()` here.
+* Since the **sample** module is not yet defined at the MDMS level, we are temporarily using another already-registered module as an alias to enable its execution.
+
+<details>
+
+<summary>Linking the newly created module in Main App</summary>
+
+* After creating the module code we need to enable it in two places:
+
+1. **For Deployment**\
+   In app.js we import the SampleModule, initSampleComponents, and enable the Sample module.\
+   Add the App.js file in the following path:\
+   `micro-ui/web/src/App.js`
+
+```jsx
+const enabledModules = [
+  "sample"
+];
+
+const moduleReducers = (initData) => ({
+  initData,
+});
+
+const initDigitUI = () => {
+  window.Digit.ComponentRegistryService.setupRegistry({});
+  window.Digit.Customizations = {
+    PGR: {},
+    commonUiConfig: UICustomizations,
+  };
+  initSampleComponents();
+};
+
+initLibraries().then(() => {
+  initDigitUI();
+});
+```
+
+\
+Reference for the App.js file: [App.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/src/App.js)
+
+2. **For Local development**\
+   In index.js, import the SampleModule, initSampleComponents, and enable the Sample module.\
+   Create the index.js file under the following path:\
+   `micro-ui-internals/example/src/index.js`
+
+```jsx
+ const enabledModules = [
+  "Sample"
+];
+
+const initDigitUI = () => {
+  window.contextPath = window?.globalConfigs?.getConfig("CONTEXT_PATH") || "digit-ui";
+  window.Digit.Customizations = {
+    commonUiConfig: UICustomizations
+  };
+  initSampleComponents();
+```
+
+Reference for the Index.js file: [Index.js](https://github.com/egovernments/DIGIT-Frontend/blob/sample/micro-ui/web/micro-ui-internals/example/src/index.js)
+
+</details>
+
+* If there is a local server running, make sure to stop it. Restart by running `yarn install` followed by `yarn start` at the `micro-ui-internals` level.
+
+Hurray! Now, the screen is displayed below on visiting the given URL:
+
+```
+http://localhost:3000/digit-ui/employee/sample
+```
+
+<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+\
+Refer to the below sections for a deeper understanding
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Reusable Components</td><td></td><td><a href="import-required-components.md">import-required-components.md</a></td></tr><tr><td></td><td>Reusable Hooks</td><td></td><td><a href="common-hooks.md">common-hooks.md</a></td></tr><tr><td></td><td>Employee Module Setup</td><td></td><td><a href="../employee-module-setup/">employee-module-setup</a></td></tr></tbody></table>
+{% endtab %}
+{% endtabs %}

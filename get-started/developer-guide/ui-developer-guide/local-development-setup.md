@@ -12,7 +12,7 @@ This page outlines the steps to set up the UI development environment locally.
    * [GitLense](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
    * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
    * [Tailwind CSS](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-2. Install NodeJS **14.20.0**
+2. Install NodeJS **14.20.0** (**20.0.0** for React19 setup)
 3. [Install Yarn ](https://code.visualstudio.com/download)version **1.22.19**
 4. **Install Python version** 2.7
 5. Clone the[ DIGIT-Frontend](https://github.com/egovernments/DIGIT-Frontend/tree/sample) repository locally from your organization's umbrella. This contains the frontend code under the frontend folder.
