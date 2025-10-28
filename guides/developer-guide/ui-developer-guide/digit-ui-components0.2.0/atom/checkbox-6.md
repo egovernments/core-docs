@@ -13,10 +13,18 @@ The Dropdown - Single Select lets users pick one option from a predefined list. 
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+    <Dropdown
+                  style={}
+                  variant={error ? "error" : ""}
+                  t={t}
+                  option={projectType?.["HCM-PROJECT-TYPES"]?.projectTypes}
+                  optionKey={"code"}
+                  selected={type}
+                  select={(value) => {
+                    handleChange(value);
+                  }}
+                  disabled = {false}
+                />
 ```
 {% endtab %}
 

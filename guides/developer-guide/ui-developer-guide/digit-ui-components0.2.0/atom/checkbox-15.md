@@ -13,10 +13,38 @@ The Toggle component enables users to switch easily between two or more options.
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Toggle
+  additionalWrapperClass=""
+  errorStyle={null}
+  innerStyles={{}}
+  inputRef={null}
+  label=""
+  name="toggleOptions"
+  numberOfToggleItems={3}
+  onChange={function noRefCheck(){}}
+  onSelect={function noRefCheck(){}}
+  options={[
+    {
+      code: 'Toggle1',
+      name: 'Toggle 1'
+    },
+    {
+      code: 'Toggle2',
+      name: 'Toggle 2'
+    },
+    {
+      code: 'Toggle3',
+      name: 'Toggle 3'
+    }
+  ]}
+  optionsKey="name"
+  selectedOption=""
+  style={{}}
+  t={()=>{}}
+  type="toggle"
+  value=""
+/>
+
 ```
 {% endtab %}
 

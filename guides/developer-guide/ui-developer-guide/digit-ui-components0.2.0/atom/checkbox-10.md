@@ -13,10 +13,9 @@ The Loader component is a fundamental UI element. It visually communicates ongoi
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Loader variant={"PageLoader"}/>
+
+<Loader variant={"OverlayLoader"}/>
 ```
 {% endtab %}
 

@@ -13,10 +13,17 @@ The Chips component is a compact, interactive UI element used to display discret
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+<div className="digit-tag-container">
+  <Chip
+    className=""
+    error=""
+    extraStyles={{}}
+    onClick={() => {}}
+    onTagClick={()=>{}}
+    text="Chips"
+    iconReq = “Edit”
   />
+</div>
 ```
 {% endtab %}
 

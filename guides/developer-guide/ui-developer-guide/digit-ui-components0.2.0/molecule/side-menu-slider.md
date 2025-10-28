@@ -13,10 +13,7 @@ The Side Panel component serves as a supplementary container to present contextu
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<SidePanel type="dynamic" position="right" defaultOpenWidth={300} defaultClosedWidth={64} header={<h3>Menu Header</h3>} footer={<p>Footer Content</p>} sections={[<p>Section 1</p>, <p>Section 2</p>]} closedContents={<p>Compact View</p>} isDraggable={true} > <p>Main Content Here</p> </SidePanel>
 ```
 {% endtab %}
 

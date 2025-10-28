@@ -12,11 +12,7 @@ The Text Block component provides a structured typographic layout, combining var
 {% tab title="Component React" %}
 ```
 // Sample code
-
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<TextBlock caption="Note" header="Important Information" subHeader="Please read carefully" body="Make sure to follow the guidelines." wrapperClassName="custom-wrapper" captionClassName="custom-caption" headerClasName="custom-header" subHeaderClasName="custom-subheader" bodyClasName="custom-body" />
 ```
 {% endtab %}
 

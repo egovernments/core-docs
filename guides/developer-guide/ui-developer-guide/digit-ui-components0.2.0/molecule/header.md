@@ -13,10 +13,54 @@ The Header component establishes a clear and consistent identity. Designed with 
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+ <Header
+      actionFields={[
+        <ChangeCity dropdown={true} t={t} />,
+        showLanguageChange && <ChangeLanguage dropdown={true} />,
+        userDetails?.access_token && (
+          <Dropdown
+            option={userOptions}
+            optionKey="name"
+            profilePic={profilePic ? profilePic : userDetails?.info?.name || userDetails?.info?.userInfo?.name || "Employee"}
+            select={handleUserDropdownSelection}
+            showArrow={true}
+            menuStyles={{ marginTop: "1rem" }}
+            theme="light"
+          />
+        ),
+      ]}
+      onHamburgerClick={() => {
+        toggleSidebar();
+      }}
+      className="digit-employee-header"
+      img={logoUrl}
+      logoWidth={"64px"}
+      logoHeight={"48px"}
+      logo={(loggedin ? cityDetails?.logoId : stateInfo?.statelogo)||DEFAULT_EGOV_LOGO}
+      onImageClick={() => {}}
+      onLogoClick={() => {}}
+      props={{}}
+      showDeafultImg
+      style={{}}
+      theme="light"
+      ulb={
+        loggedin ? (
+          cityDetails?.city?.ulbGrade ? (
+            <>
+              {t(cityDetails?.i18nKey).toUpperCase()}{" "}
+              {t(`ULBGRADE_${cityDetails?.city?.ulbGrade.toUpperCase().replace(" ", "_").replace(".", "_")}`).toUpperCase()}
+            </>
+          ) : (
+            <ImageComponent className="state" src={logoUrlWhite} alt="State Logo" />
+          )
+        ) : (
+          <>
+            {t(`MYCITY_${stateInfo?.code?.toUpperCase()}_LABEL`)} {t(`MYCITY_STATECODE_LABEL`)}
+          </>
+        )
+      }
+    />
+
 ```
 {% endtab %}
 

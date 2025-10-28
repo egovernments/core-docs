@@ -13,9 +13,13 @@ The Tooltip component offers extra contextual information on hover, focus, or ta
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+  <Tooltip
+    arrow={true}
+    className=""
+    content={<>And here's some amazing content It's very engaging. Right?<hr /><img alt="here is your logo" src="https://egov-dev-assets.s3.ap-south-1.amazonaws.com/digit.png"/></>}
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
+    header="Header"
+    style={{}}
   />
 ```
 {% endtab %}

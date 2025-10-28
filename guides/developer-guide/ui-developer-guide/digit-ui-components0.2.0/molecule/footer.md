@@ -13,10 +13,16 @@ The Footer component provides navigational actions or supplementary content at t
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Footer
+  actionFields={[
+    <Button icon="ArrowBack" label="Back" onClick={()=>{}} type="button" variation="secondary"/>,
+    <Button icon="ArrowForward" isSuffix label="Next" onClick={()=>{}} type="button"/>
+  ]}
+  className=""
+  maxActionFieldsAllowed={5}
+  sortActionFields
+  style={{}}
+/>
 ```
 {% endtab %}
 

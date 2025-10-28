@@ -13,10 +13,14 @@ Tags are compact elements used to represent status, categorise content, or highl
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Tag
+  icon=""
+  label="Tag With icon & stroke"
+  labelStyle={{}}
+  stroke
+  style={{}}
+  type="success"
+/>
 ```
 {% endtab %}
 

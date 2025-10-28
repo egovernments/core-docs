@@ -13,10 +13,23 @@ The Alert Card component is a visual communication element used to inform users 
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<AlertCard
+  additionalElements={[
+    <p key="1">Additional Element 1</p>,
+    <img key="2" alt="Additional Element 2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGMLufj86aep95KwMzr3U0QShg7oxdAG8gBPJ9ALIFQ&s"/>,
+    <img key="3" alt="Additional Element 3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGMLufj86aep95KwMzr3U0QShg7oxdAG8gBPJ9ALIFQ&s"/>,
+    <img key="4" alt="Additional Element 4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGMLufj86aep95KwMzr3U0QShg7oxdAG8gBPJ9ALIFQ&s"/>,
+    <img key="5" alt="Additional Element 5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGMLufj86aep95KwMzr3U0QShg7oxdAG8gBPJ9ALIFQ&s"/>,
+    <img key="6" alt="Additional Element 6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGMLufj86aep95KwMzr3U0QShg7oxdAG8gBPJ9ALIFQ&s"/>,
+    <img key="7" alt="Additional Element 7" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGMLufj86aep95KwMzr3U0QShg7oxdAG8gBPJ9ALIFQ&s"/>,
+    <img key="8" alt="Additional Element 8" src="https://digit.org/wp-content/uploads/2023/06/Digit-Logo-1.png"/>,
+    <TextArea populators={{resizeSmart: true}} type="textarea"/>,
+    <InfoButton label="Button" size="large"/>
+  ]}
+  label="Info"
+  text="Application process will take a minute to complete. It might cost around Rs.500/- to Rs.1000/- to clean your septic tank and you can expect theservice to get completed in 24 hrs from the time of payment."
+  variant="default"
+/>
 ```
 {% endtab %}
 

@@ -13,9 +13,10 @@ The Divider component is a minimal visual element used to create a clear separat
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+  <Divider
+    className=""
+    style={{}}
+    variant="small"
   />
 ```
 {% endtab %}

@@ -13,10 +13,38 @@ The Panel Card component is a composite component designed to communicate clear,
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+<PanelCard
+  animationProps={{
+    loop: false,
+    noAutoplay: false
+  }}
+  cardClassName=""
+  cardStyles={{}}
+  className=""
+  customIcon=""
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  footerChildren={[
+    <Button label="Button" onClick={()=>{}} type="button" variation="secondary"/>,
+    <Button label="Button" onClick={()=>{}}  type="button"/>
+  ]}
+  footerStyles={{}}
+  iconFill=""
+  info="Ref ID "
+  maxFooterButtonsAllowed={5}
+  message="Success Message!"
+  multipleResponses={[]}
+  props={{}}
+  response="949749795479"
+  sortFooterButtons
+  style={{}}
+  type="success"
+>
+  <AlertCard
+    className="panelcard-alert-card"
+    text="This is success"
+    variant="success"
   />
+</PanelCard>
 ```
 {% endtab %}
 

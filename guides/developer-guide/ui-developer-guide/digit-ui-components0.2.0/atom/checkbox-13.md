@@ -13,10 +13,16 @@ The Radio component allows users to select a single option from a set of mutuall
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+        <RadioButtons
+          onSelect={(selected) => {
+            setSelectedOption(selected.code);
+          }}
+          disabled = {true}
+          options={options}
+          optionsKey="name"
+          selectedOption={options.find((opt) => opt.code === selectedOption)}
+          value={selectedOption}
+        />
 ```
 {% endtab %}
 

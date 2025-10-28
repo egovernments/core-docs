@@ -13,10 +13,13 @@ The Menu Card component serves as a navigational tile, guiding users through var
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<MenuCard
+  description="Use this checklist to supervise the team formation for Registration & Distribution"
+  icon="Article"
+  menuName="Menu"
+  onClick={()=>{}}
+  styles={{}}
+/>
 ```
 {% endtab %}
 

@@ -12,11 +12,6 @@ The Callout component is a contextual overlay that guides users through tasks, h
 {% tab title="Component React" %}
 ```
 // Sample code
-
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
 ```
 {% endtab %}
 

@@ -13,10 +13,53 @@ The Filter Card component is a layout container designed to offer users an intui
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<FilterCard
+  addClose
+  equalWidthButtons
+  layoutType="vertical"
+  onClose={function noRefCheck(){}}
+  onPrimaryPressed={function noRefCheck(){}}
+  onSecondaryPressed={function noRefCheck(){}}
+  primaryActionLabel="ApplyFilters"
+  secondaryActionLabel="Clear Filters"
+  title="Filter"
+>
+  <LabelFieldPair vertical>
+    <TextBlock body="Name" />
+    <TextInput type="text" />
+  </LabelFieldPair>
+  <LabelFieldPair vertical>
+    <TextBlock body="Value" />
+    <TextInput type="text" />
+  </LabelFieldPair>
+  <LabelFieldPair vertical>
+    <TextBlock body="Gender" />
+    <RadioButtons
+      alignVertical
+      name="gender"
+      onSelect={function noRefCheck(){}}
+      options={[
+        {
+          code: 'M',
+          name: 'Male'
+        },
+        {
+          code: 'F',
+          name: 'Female'
+        },
+        {
+          code: 'O',
+          name: 'Others'
+        }
+      ]}
+      optionsKey="name"
+      style={{
+        width: '100%'
+      }}
+    />
+  </LabelFieldPair>
+</FilterCard>
+
 ```
 {% endtab %}
 

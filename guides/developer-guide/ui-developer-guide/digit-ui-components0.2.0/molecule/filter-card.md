@@ -13,10 +13,37 @@ The Bottom Sheet is a flexible, slide-up container designed to provide supplemen
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+<BottomSheet
+  actions={[
+    <Button key="1" label="Cancel" variation="secondary"/>,
+    <Button key="2" label="Submit"/>
+  ]}
+  className=""
+  enableActions
+  initialState="closed"
+  style={{}}
+>
+  <AlertCard
+    label="Info"
+    populators={{
+      name: 'alertcard'
+    }}
+    text="Application process will take a minute to complete. It might cost around Rs.500/- to Rs.1000/- to clean your septic tank and you can expect the service to get completed in 24 hrs from the time of payment."
+    variant="default"
   />
+  <img
+    alt="Additional Element 2"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGMLufj86aep95KwMzr3U0QShg7oxdAG8gBPJ9ALIFQ&s"
+  />
+  <AlertCard
+    label="Info"
+    populators={{
+      name: 'alertcard'
+    }}
+    text="Application process will take a minute to complete. It might cost around Rs.500/- to Rs.1000/- to clean your septic tank and you can expect the service to get completed in 24 hrs from the time of payment."
+    variant="default"
+  />
+</BottomSheet>
 ```
 {% endtab %}
 

@@ -13,10 +13,54 @@ The Landing Page Card component serves as a navigational entry point, combining 
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<LandingPageCard
+  buttonSize="medium"
+  centreChildren={[
+    <div>Here you can add any text content between metrics and links</div>
+  ]}
+  endChildren={[
+    <div>Here you can add any text content below links</div>
+  ]}
+  icon="SupervisorAccount"
+  links={[
+    {
+      icon: 'Person',
+      label: 'Create User',
+      link: 'https://unified-dev.digit.org/storybook/?path=/story/atoms-backlink--primary'
+    },
+    {
+      icon: 'Edit',
+      label: 'Edit User',
+      link: 'https://unified-dev.digit.org/storybook/?path=/story/atoms-backlink--primary'
+    },
+    {
+      icon: 'Preview',
+      label: 'View User',
+      link: 'https://unified-dev.digit.org/storybook/?path=/story/atoms-backlink--primary'
+    },
+    {
+      icon: 'Delete',
+      label: 'Delete User',
+      link: 'https://unified-dev.digit.org/storybook/?path=/story/atoms-backlink--primary'
+    }
+  ]}
+  metrics={[
+    {
+      count: 40,
+      label: 'Lorem Ipsum',
+      link: 'https://unified-dev.digit.org/storybook/?path=/story/atoms-backlink--primary'
+    },
+    {
+      count: 40,
+      label: 'Lorem Ipsum',
+      link: 'https://unified-dev.digit.org/storybook/?path=/story/atoms-backlink--primary'
+    }
+  ]}
+  moduleName="Dashboards"
+  onMetricClick={function noRefCheck(){}}
+  style={{}}
+  variation="one"
+/>
 ```
 {% endtab %}
 

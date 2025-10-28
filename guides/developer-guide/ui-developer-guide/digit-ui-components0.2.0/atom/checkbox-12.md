@@ -13,10 +13,22 @@ The Panel component is a responsive and accessible UI element used to convey imp
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Panels
+  animationProps={{
+    height: 100,
+    loop: true,
+    noAutoplay: false,
+    width: 100
+  }}
+  className=""
+  customIcon=""
+  iconFill=""
+  info="Ref ID "
+  message="Success Message!"
+  multipleResponses={[]}
+  response="949749795479"
+  style={{}}
+/>
 ```
 {% endtab %}
 

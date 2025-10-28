@@ -13,10 +13,35 @@ Selection Tags are compact, button-like elements that allow users to make single
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<SelectionTag
+  allowMultipleSelection
+  errorMessage=""
+  onSelectionChanged={function noRefCheck(){}}
+  options={[
+    {
+      code: 'option1',
+      name: 'Option 1',
+      prefixIcon: 'Edit',
+      suffixIcon: 'Edit'
+    },
+    {
+      code: 'option2',
+      name: 'Option 2',
+      prefixIcon: 'Edit',
+      suffixIcon: 'Edit'
+    },
+    {
+      code: 'option3',
+      name: 'Option 3',
+      prefixIcon: 'Edit',
+      suffixIcon: 'Edit'
+    }
+  ]}
+  selected={[]}
+  width=""
+/>
+
+
 ```
 {% endtab %}
 

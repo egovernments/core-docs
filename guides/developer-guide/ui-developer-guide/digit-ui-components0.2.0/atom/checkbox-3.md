@@ -12,11 +12,11 @@ The Checkbox is a simple selection control that allows users to make binary choi
 {% tab title="Component React" %}
 ```
 // Sample code
-
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<CheckBox
+      label={"Label"}
+      checked={isChecked}
+      onChange={(e)=>{console.log(e.target.checked}}
+></CheckBox>
 ```
 {% endtab %}
 

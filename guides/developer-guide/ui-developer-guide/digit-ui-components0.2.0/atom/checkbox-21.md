@@ -13,10 +13,12 @@ The Timeline component visually represents a sequence of events or stages in a l
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Timeline
+      label="Upcoming Timeline Step3"
+      subElements={subElements}
+      variant="upcoming"
+      showConnector={true}
+    />
 ```
 {% endtab %}
 

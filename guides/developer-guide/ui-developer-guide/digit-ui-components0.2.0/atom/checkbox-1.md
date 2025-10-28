@@ -13,10 +13,25 @@ The Breadcrumbs component is a navigation aid that helps users understand their 
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+ <BreadCrumb
+    crumbs={[
+      {
+        content: 'Home',
+        show: true,
+        icon: <SVG.Home fill={"#C84C0E"} />,
+      },
+      {
+        content: 'Previous',
+        show: true,
+        icon: <SVG.Person fill={"#C84C0E"} />,
+      },
+      {
+        content: 'Current',
+        show: true,
+        icon: <SVG.Edit fill={"#787878"} />,
+      }
+    ]}
+   />
 ```
 {% endtab %}
 

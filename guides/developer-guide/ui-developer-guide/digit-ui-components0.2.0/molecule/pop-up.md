@@ -13,10 +13,43 @@ The Popups Card component is a focused, interruptive component used to convey cr
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+<PopUp
+  alertHeading=""
+  alertMessage=""
+  className=""
+  customIcon=""
+  description="Please contact the administrator if you have forgotten your password."
+  equalWidthButtons
+  footerChildren={[
+    <Button label="Cancel" onClick={() => {}} type="button"/>,
+    <Button icon="FileDownload" label="Download Template" onClick={function noRefCheck() {}} type="submit"/>
+  ]}
+  footerStyles={{}}
+  footerclassName=""
+  headerMaxLength=""
+  headerclassName=""
+  heading="Heading"
+  iconFill=""
+  maxFooterButtonsAllowed={5}
+  onClose={function noRefCheck() {}}
+  onOverlayClick={function noRefCheck() {}}
+  overlayClassName=""
+  props={{}}
+  showIcon
+  sortFooterButtons
+  style={{}}
+  subHeaderMaxLength=""
+  subheading="Subheading"
+  type="default"
+>
+  <div>
+    This is the content of the Popup
+  </div>
+  <AlertCard
+    className="popup-alert-card"
+    text="This is an alert card"
   />
+</PopUp>
 ```
 {% endtab %}
 

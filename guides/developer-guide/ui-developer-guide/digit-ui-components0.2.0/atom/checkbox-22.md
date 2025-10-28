@@ -13,10 +13,36 @@ Tabs are used to organise content into meaningful sections within the same view.
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Tab
+  activeLink="Tab one"
+  configItemKey="name"
+  configNavItems={[
+    {
+      code: '1',
+      name: 'Tab one'
+    },
+    {
+      code: '2',
+      name: 'Tab two'
+    },
+    {
+      code: '3',
+      name: 'Tab three'
+    },
+    {
+      code: '4',
+      name: 'Tab four'
+    }
+  ]}
+  itemStyle={{}}
+  navStyles={{}}
+  onTabClick={() => {}}
+  setActiveLink={()=>{}}
+  showNav
+  style={{}}
+/>
+
+
 ```
 {% endtab %}
 

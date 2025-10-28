@@ -13,9 +13,102 @@ The Side Nav component acts as the primary navigation pattern, helping users acc
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+ <SideNav
+    items={[
+      {
+        icon: {
+          icon: 'Home'
+        },
+        label: 'Home'
+      },
+      {
+        children: [
+          {
+            icon: {
+              icon: 'Work'
+            },
+            label: 'SubModule 1',
+            path: '/'
+          },
+          {
+            icon: {
+              icon: 'Person'
+            },
+            label: 'SubModule 2',
+            path: '/'
+          }
+        ],
+        icon: {
+          icon: 'ChatBubble'
+        },
+        label: 'Module 1'
+      },
+      {
+        children: [
+          {
+            children: [
+              {
+                icon: {
+                  icon: 'LabelImportant'
+                },
+                label: 'InnerModule 1',
+                path: '/'
+              },
+              {
+                icon: {
+                  icon: 'Lock'
+                },
+                label: 'InnerModule 2',
+                path: '/'
+              }
+            ],
+            icon: {
+              icon: 'Info'
+            },
+            label: 'SubModule 1',
+            path: '/'
+          },
+          {
+            icon: {
+              icon: 'Accessibility'
+            },
+            label: 'SubModule 2',
+            path: '/'
+          }
+        ],
+        icon: {
+          icon: 'CheckCircle'
+        },
+        label: 'Module 2'
+      },
+      {
+        icon: {
+          icon: 'Delete'
+        },
+        label: 'Module 3'
+      },
+      {
+        icon: {
+          icon: 'DriveFileMove'
+        },
+        label: 'Module 4'
+      },
+      {
+        icon: {
+          icon: 'Label'
+        },
+        label: 'Module 5'
+      },
+      {
+        icon: {
+          icon: 'Lightbulb'
+        },
+        label: 'Module 6'
+      }
+    ]}
+    onBottomItemClick={function noRefCheck(){}}
+    onSelect={function noRefCheck(){}}
+    transitionDuration={0.5}
   />
 ```
 {% endtab %}

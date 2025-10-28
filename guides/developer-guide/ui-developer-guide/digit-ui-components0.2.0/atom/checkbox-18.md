@@ -12,11 +12,16 @@ The Switch component is used to toggle between two binary states, such as On/Off
 {% tab title="Component React" %}
 ```
 // Sample code
-
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Switch
+  isLabelFirst={true}
+  label="Enable notifications"
+  shapeOnOff={true}
+  isCheckedInitially={false}
+  onToggle={(state) => console.log("Switch is now:", state)}
+  className=""
+  style={}
+  disable={false}
+/>
 ```
 {% endtab %}
 

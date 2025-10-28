@@ -13,10 +13,95 @@ The Multi Select dropdown component enables users to select multiple options fro
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<MultiSelectDropdown
+              onClose={(values) => {
+                setSlectedOptions(values);
+              }}
+              defaultLabel="" // Default label for selected
+              defaultUnit="" // Default unit for selected
+              props={{
+                className:'', // custom class name for digit-multiselectdropdown-wrap
+                style:{} // custom styles for digit-multiselectdropdown-wrap
+              }}
+              isPropsNeeded={false}
+              ServerStyle={{}} // custom styles for digit-multiselectdropdown-server
+              config={{
+                clearLabel: "", // label for clear all chip , default label is "Clear All"
+                isDropdownWithChip: true, // flag to show chips
+                showIcon: true, // flag to add icons for each options
+                numberOfChips: 4, // count of the chips to be shown , if more selected adds + chip
+              }}
+              disabled={false} // disable multiselect dropdown
+              selectAllLabel="" // label for select all
+              categorySelectAllLabel="" // label for category level select all
+              restrictSelection={false} // restricts to select any option
+              isSearchable={true} // flag to make multiselect dropdown selectable
+              chipsKey="" // what to be shown as label for chips
+              frozenData={[
+                {
+                  code: "Category A.Option A",
+                  name: "Option A",
+                  icon: "Article",
+                },
+              ]}
+              // can add frozen data
+              handleViewMore={(e) => {
+                setShowPopup(true);
+              }} // when clicked on + chip this is called
+              showTooltip={true} // flag to show the tooltip for labels and options on hover
+              variant={"nestedmultiselect"} // varinat ("treemultiselect","nestedmultiselect","nestedtextmultiselect")
+              onSelect={() => {}} // mandatory prop
+              selected={[]} // selected array
+              addSelectAllCheck={true} // flag to add select all check
+              addCategorySelectAllCheck={true} // flag to add category select all check
+              options={[
+                {
+                  name: "Category A",
+                  options: [
+                    {
+                      code: "Category A.Option A",
+                      name: "Option A",
+                      icon: "Article",
+                    },
+                    {
+                      code: "Category A.Option B",
+                      name: "Option B",
+                      icon: "Article",
+                    },
+                    {
+                      code: "Category A.Option C",
+                      name: "Option C",
+                      icon: "Article",
+                    },
+                  ],
+                  code: "Category A",
+                },
+                {
+                  name: "Category B",
+                  options: [
+                    {
+                      code: "Category B.Option 1",
+                      name: "Option 1",
+                      icon: "Article",
+                    },
+                    {
+                      code: "Category B.Option 2",
+                      name: "Option 2",
+                      icon: "Article",
+                    },
+                    {
+                      code: "Category B.Option 3",
+                      name: "Option 3",
+                      icon: "Article",
+                    },
+                  ],
+                  code: "Category B",
+                },
+              ]} // options to be shown
+              optionsKey={"code"} // key for the options
+            ></MultiSelectDropdown>
+
+
 ```
 {% endtab %}
 

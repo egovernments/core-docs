@@ -13,10 +13,22 @@ The Stepper is a navigation component that guides users through a multi-step pro
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<Stepper
+  activeSteps=""
+  currentStep={1}
+  customSteps={{}}
+  direction="horizontal"
+  onChange={()=>{}}
+  onStepClick={()=>{}}
+  populators={{
+    name: 'stepper'
+  }}
+  props={{
+    labelStyles: {}
+  }}
+  style={{}}
+  totalSteps={5}
+/>
 ```
 {% endtab %}
 

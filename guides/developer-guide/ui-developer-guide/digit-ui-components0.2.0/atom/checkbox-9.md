@@ -13,10 +13,13 @@ The Input Field is built to collect user-provided data in a structured and acces
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<TextInput
+  name="username"
+  type="text"
+  placeholder="Enter your username"
+  value={username}
+  onChange={(e) => setUsername(e.target.value)}
+/>
 ```
 {% endtab %}
 

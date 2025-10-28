@@ -13,9 +13,82 @@ The Hamburger component serves as a collapsible vertical navigation panel, enabl
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+ <Hamburger
+    items={[
+      {
+        children: [
+          {
+            icon: '',
+            label: 'City 1',
+            path: '/'
+          },
+          {
+            icon: '',
+            label: 'City 2',
+            path: '/'
+          }
+        ],
+        icon: 'Home',
+        isSearchable: true,
+        label: 'City'
+      },
+      {
+        children: [
+          {
+            icon: '',
+            label: 'Language 1',
+            path: '/'
+          },
+          {
+            icon: '',
+            label: 'Language 2',
+            path: '/'
+          }
+        ],
+        icon: 'DriveFileMove',
+        isSearchable: true,
+        label: 'Language'
+      },
+      {
+        children: [
+          {
+            children: [
+              {
+                icon: '',
+                label: 'InnerModule 1',
+                path: '/'
+              },
+              {
+                icon: '',
+                label: 'InnerModule 2',
+                path: '/'
+              }
+            ],
+            icon: '',
+            label: 'SubModule 1',
+            path: '/'
+          },
+          {
+            icon: '',
+            label: 'SubModule 2',
+            path: '/'
+          }
+        ],
+        icon: 'Accessibility',
+        isSearchable: true,
+        label: 'SideNav'
+      }
+    ]}
+    onLogout={()=>{}}
+    onOutsideClick={()=>{}}
+    onSelect={()=>{}}
+    profile=""
+    profileName="ProfileName"
+    profileNumber="+258 6387387"
+    theme="dark"
+    transitionDuration={0.3}
+    userManualLabel="UserManual"
+    usermanuals={[]}
   />
 ```
 {% endtab %}

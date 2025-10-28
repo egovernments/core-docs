@@ -13,10 +13,26 @@ The OTP Input component is designed to collect secure, time-sensitive verificati
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+const Component = () => {
+const [otp, setOtp] = useState("");
+
+//Example onChange logic
+const handleOtpChange = (value) => {
+setOtp(value);
+if (value.length === args.length) {
+const isValid = value.includes(1);
+if (isValid) {
+console.log("OTP is correct");
+return null;
+} else {
+console.log("Invalid OTP");
+return "Invalid OTP";
+}
+}
+return null;
+};
+return <OTPInput length={6} type="numeric" onChange={handleOtpChange} placeholder={"123456"} label="Enter OTP" inline={false} className="" style={{ }} />;
+};
 ```
 {% endtab %}
 

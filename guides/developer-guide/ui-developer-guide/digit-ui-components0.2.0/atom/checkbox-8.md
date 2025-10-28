@@ -13,10 +13,17 @@ The File Uploader component allows users to easily upload documents and images t
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
-  />
+<FileUpload
+  multiple
+  showDownloadButton
+  showReUploadButton
+  uploadedFiles={[]}
+  validations={{
+    maxSizeAllowedInMB: 5,
+    minSizeRequiredInMB: 1
+  }}
+  variant="uploadWidget"
+/>
 ```
 {% endtab %}
 

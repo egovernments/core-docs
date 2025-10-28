@@ -13,9 +13,14 @@ The Toast component delivers brief, unobtrusive feedback messages to inform user
 ```
 // Sample code
 
-  <CheckBox
-    label="Label"
-    onChange={(e)=>{console.log(e.target.checked}}
+ <Toast
+    label="Success Toast Message"
+    populators={{
+      name: 'toast'
+    }}
+    style={{}}
+    transitionTime={600000}
+    type="success"
   />
 ```
 {% endtab %}
