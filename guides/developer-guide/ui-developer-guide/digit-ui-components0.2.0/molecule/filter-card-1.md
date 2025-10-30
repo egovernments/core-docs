@@ -67,13 +67,34 @@ The Filter Card component is a layout container designed to offer users an intui
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
+FilterCard.buildFilterCard(
+        context: context,
+        title: 'Filter Options',
+        contentList: [
+          LabeledField(
+              label: 'Text Field',
+              labelInline: false,
+              child: DigitTextFormInput(
+                controller: TextEditingController(),
+              )),
+          LabeledField(
+            label: 'Search Field',
+            labelInline: false,
+            child: DigitSearchFormInput(
+              controller: TextEditingController(),
             ),
+          ),
+        ],
+        secondaryActionLabel: 'clear filters',
+        onSecondaryPressed: (){},
+        primaryActionLabel: 'Apply Filters',
+        onPrimaryPressed: () {
+          // Handle the button press
+          // For example, you might want to save the selected filters
+          print('Filters applied!');
+        },
+        layoutType: FilterCardLayout.vertical,
+      ),
 ```
 {% endtab %}
 
@@ -106,7 +127,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>context</td><td>BuildContext</td><td>required</td></tr><tr><td>title</td><td>String</td><td>-</td></tr><tr><td>layoutType</td><td>FilterCardLayout</td><td>FilterCardLayout.horizontal</td></tr><tr><td>titleIcon</td><td>IconData</td><td>-</td></tr><tr><td>contentList</td><td>List&#x3C;Widget></td><td>-</td></tr><tr><td>primaryActionLabel</td><td>String</td><td>-</td></tr><tr><td>secondaryActionLabel</td><td>String</td><td>-</td></tr><tr><td>onPrimaryPressed</td><td>VoidCallback</td><td>-</td></tr><tr><td>onSecondaryPressed</td><td>VoidCallback</td><td>-</td></tr><tr><td>barrierDismissible</td><td>bool</td><td>true</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

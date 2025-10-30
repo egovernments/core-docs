@@ -29,13 +29,11 @@ The Toast component delivers brief, unobtrusive feedback messages to inform user
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+Toast.showToast(context,
+              message: 'This is a toast!',
+              type: ToastType.info,
+              position: ToastPosition.aboveOneButtonFooter
+          );
 ```
 {% endtab %}
 
@@ -70,7 +68,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>message</td><td>String</td><td>required</td></tr><tr><td>type</td><td>ToastType</td><td>required</td></tr><tr><td>duration</td><td>Duration</td><td>-</td></tr><tr><td>animationDuration</td><td>Duration</td><td>-</td></tr><tr><td>position</td><td>ToastPosition</td><td>-</td></tr><tr><td>customPosition</td><td>StyledToastPosition</td><td>-</td></tr><tr><td>digitToastThemeData</td><td>DigitToastThemeData</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

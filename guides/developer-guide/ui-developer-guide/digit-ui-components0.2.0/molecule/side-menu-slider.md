@@ -21,13 +21,43 @@ The Side Panel component serves as a supplementary container to present contextu
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
+SlideOverMenu(
+          isLeft: false,
+          skipCollapsedState: true,
+          expandedContentAlignment: MainAxisAlignment.spaceBetween,
+          expandedFooter: Column(
+            children: [
+              DigitButton(
+              label: 'Action', onPressed: (){}, 
+              type: DigitButtonType.secondary, 
+              size: DigitButtonSize.large, 
+              mainAxisSize: MainAxisSize.max,
+              )
+            ],
+          ),
+          sections: [
+            Section(
+              expandedContent: [
+                Text('Item 1.1'),
+                Text('Item 1.2'),
+                Text('Item 1.3'),
+              ],
             ),
+            Section(
+              expandedContent: [
+                Text('Item 2.1'),
+                Text('Item 2.2'),
+              ],
+            ),
+            Section(
+              expandedContent: [
+                Text('Item 3.1'),
+                Text('Item 3.2'),
+                Text('Item 3.3'),
+              ],
+            ),
+          ],
+        );
 ```
 {% endtab %}
 
@@ -60,7 +90,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>isLeft</td><td>bool</td><td>false</td></tr><tr><td>collapsedFooter</td><td>Widget</td><td>-</td></tr><tr><td>expandedFooter</td><td>Widget</td><td>-</td></tr><tr><td>collapsedHeader</td><td>Widget</td><td>-</td></tr><tr><td>expandedHeader</td><td>Widget</td><td>-</td></tr><tr><td>sections</td><td>List&#x3C;Section></td><td>-</td></tr><tr><td>collapsedWidth</td><td>double</td><td>-</td></tr><tr><td>expandedWidth</td><td>double</td><td>-</td></tr><tr><td>animationDuration</td><td>Duration</td><td>-</td></tr><tr><td>onToggle</td><td>VoidCallback</td><td>-</td></tr><tr><td>skipCollapsedState</td><td>bool</td><td>false</td></tr><tr><td>onCrossTap</td><td>VoidCallback</td><td>-</td></tr><tr><td>height</td><td>double</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

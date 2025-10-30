@@ -109,13 +109,17 @@ The Multi Select dropdown component enables users to select multiple options fro
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+MultiSelectDropDown<int>(
+        isDisabled: false,
+        onOptionSelected: (List<DropdownItem> selectedOptions) {},
+        options: const [
+          DropdownItem(code: '1', name: 'one', textIcon: Icons.article),
+          DropdownItem(code: '2', name: 'two', textIcon: Icons.article),
+          DropdownItem(code: '3', name: 'three', textIcon: Icons.article),
+          DropdownItem(code: '4', name: 'four', textIcon: Icons.article),
+          DropdownItem(code: '5', name: 'five', textIcon: Icons.article),
+        ],
+      ),
 ```
 {% endtab %}
 
@@ -165,7 +169,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>options</td><td>List&#x3C;DropdownItem></td><td>required</td></tr><tr><td>initialOptions</td><td>List&#x3C;DropdownItem></td><td>-</td></tr><tr><td>onOptionSelected</td><td>OnOptionSelect&#x3C;T></td><td>-</td></tr><tr><td>selectionType</td><td>SelectionType</td><td>-</td></tr><tr><td>suffixIcon</td><td>IconData</td><td>-</td></tr><tr><td>isDisabled</td><td>bool</td><td>false</td></tr><tr><td>readOnly</td><td>bool</td><td>false</td></tr><tr><td>isSearchable</td><td>bool</td><td>false</td></tr><tr><td>showSelectAll</td><td>bool</td><td>-</td></tr><tr><td>helpText</td><td>String</td><td>-</td></tr><tr><td>emptyItemText</td><td>String</td><td>-</td></tr><tr><td>selectAllText</td><td>String</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

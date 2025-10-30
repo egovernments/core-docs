@@ -26,13 +26,29 @@ The Timeline component visually represents a sequence of events or stages in a l
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+DigitTimeline(
+          currentStep: TimelineStepState.present,
+          label: 'Ongoing state',
+          description: const ['18 / 02 / 2023'],
+          additionalWidgets: [
+                TimelineFileWidget(
+                  file: TimelineFiles(
+                    url: 'https://example.com/sample.pdf',
+                    name: 'Document',
+                    fileType: 'pdf',
+                  ),
+                  openFile: true,
+                ),
+                TimelineFileWidget(
+                  file: TimelineFiles(
+                    url: 'https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg',
+                    name: 'Image',
+                    fileType: 'jpg',
+                  ),
+                  openFile: true,
+                )
+          ],
+        );
 ```
 {% endtab %}
 
@@ -75,7 +91,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>label</td><td>String</td><td>required</td></tr><tr><td>description</td><td>List&#x3C;String></td><td>-</td></tr><tr><td>currentStep</td><td>TimelineStepState</td><td>required</td></tr><tr><td>additionalWidgets</td><td>List&#x3C;Widget></td><td>-</td></tr><tr><td>additionalHideWidgets</td><td>List&#x3C;Widget></td><td>-</td></tr><tr><td>viewDetailText</td><td>String</td><td>-</td></tr><tr><td>hideDetailText</td><td>String</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

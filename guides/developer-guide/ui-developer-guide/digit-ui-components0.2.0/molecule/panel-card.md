@@ -52,13 +52,31 @@ The Panel Card component is a composite component designed to communicate clear,
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+PanelCard(
+            type: PanelType.success,
+            title: 'Success Message',
+            actions:[
+              DigitButton(
+                label: 'Cancel',
+                onPressed: () {},
+                type: DigitButtonType.secondary,
+                size: DigitButtonSize.large,
+              ),
+              DigitButton(
+                label: 'Submit',
+                onPressed: () {},
+                type: DigitButtonType.primary,
+                size: DigitButtonSize.large,
+              ),
+            ],
+            additionWidgets: const [
+              InfoCard(
+                title: 'Additional Info',
+                type: InfoType.success,
+                description: 'This is an example of additional widget content that can be toggled.',
+              ),
+            ],
+          ),
 ```
 {% endtab %}
 
@@ -91,7 +109,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>type</td><td>PanelType</td><td>required</td></tr><tr><td>title</td><td>String</td><td>required</td></tr><tr><td>description</td><td>String</td><td>-</td></tr><tr><td>additionalDetails</td><td>List&#x3C;String></td><td>-</td></tr><tr><td>additionWidgets</td><td>List&#x3C;Widget></td><td>-</td></tr><tr><td>actions</td><td>List&#x3C;DigitButton></td><td>-</td></tr><tr><td>actionSpacing</td><td>double</td><td>-</td></tr><tr><td>inlineActions</td><td>bool</td><td>false</td></tr><tr><td>animate</td><td>bool</td><td>true</td></tr><tr><td>repeat</td><td>bool</td><td>false</td></tr><tr><td>sortButtons</td><td>bool</td><td>true</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

@@ -31,13 +31,18 @@ The File Uploader component allows users to easily upload documents and images t
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+FileUpload(
+        allowMultiples: true,
+        label: 'Upload', 
+        onFilesSelected: (List<PlatformFile> files) {
+            Map<PlatformFile, String?> fileErrors = {};
+
+            return fileErrors;
+        },
+        openFile: true,
+        showPreview: true,
+        errorMessage: 'Error Message',
+      ),
 ```
 {% endtab %}
 
@@ -84,7 +89,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>onFilesSelected</td><td>OnFilesSelectedCallback</td><td>required</td></tr><tr><td>label</td><td>String</td><td>required</td></tr><tr><td>errorMessage</td><td>String</td><td>-</td></tr><tr><td>downloadText</td><td>String</td><td>-</td></tr><tr><td>isErrorChip</td><td>bool</td><td>-</td></tr><tr><td>reUploadText</td><td>String</td><td>-</td></tr><tr><td>showPreview</td><td>bool</td><td>false</td></tr><tr><td>allowMultiples</td><td>bool</td><td>false</td></tr><tr><td>cameraTitle</td><td>String</td><td>-</td></tr><tr><td>galleryTitle</td><td>String</td><td>-</td></tr><tr><td>cancelText</td><td>String</td><td>-</td></tr><tr><td>captureText</td><td>String</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

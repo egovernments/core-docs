@@ -28,13 +28,19 @@ The Tooltip component offers extra contextual information on hover, focus, or ta
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+DigitTooltip(
+        tooltipContent:  Text(
+          'Hello, Tooltip!',
+          style: Theme.of(context).digitTextTheme(context).bodyS.copyWith(color: Theme.of(context).colorTheme.paper.primary),
+        ),
+        trigger: TooltipTrigger.onHover,
+        tooltipPosition: TooltipPosition.topStart,
+        child: Container(
+          color: Colors.blue,
+          padding: const EdgeInsets.all(16),
+          child: const Text('Tap me'),
+        ),
+      ),
 ```
 {% endtab %}
 
@@ -73,7 +79,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>child</td><td>Widget</td><td>required</td></tr><tr><td>contentHeading</td><td>String</td><td>-</td></tr><tr><td>contentDescription</td><td>String</td><td>-</td></tr><tr><td>tooltipContent</td><td>Widget</td><td>-</td></tr><tr><td>tooltipPosition</td><td>TooltipPosition</td><td>TooltipPosition.topCenter</td></tr><tr><td>distance</td><td>double</td><td>-</td></tr><tr><td>trigger</td><td>TooltipTrigger</td><td>TooltipTrigger.onHover</td></tr><tr><td>timeout</td><td>Duration</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

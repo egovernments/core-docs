@@ -30,13 +30,20 @@ The Radio component allows users to select a single option from a set of mutuall
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+RadioList(
+          onChanged: (value) {
+             // print(value);
+           },
+           isDisabled: false,
+           readOnly: false,
+           groupValue: '1',
+           radioDigitButtons: [
+               RadioButtonModel(
+                 code: '',
+                 name: "Radio",
+              )
+           ],
+  ),
 ```
 {% endtab %}
 
@@ -71,7 +78,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>radioDigitButtons</td><td>List&#x3C;RadioButtonModel></td><td>required</td></tr><tr><td>onChanged</td><td>void Function(RadioButtonModel)</td><td>-</td></tr><tr><td>groupValue</td><td>String</td><td>required</td></tr><tr><td>errorMessage</td><td>String</td><td>-</td></tr><tr><td>isDisabled</td><td>bool</td><td>false</td></tr><tr><td>readOnly</td><td>bool</td><td>false</td></tr><tr><td>radioWidth</td><td>double</td><td>-</td></tr><tr><td>radioHeight</td><td>double</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

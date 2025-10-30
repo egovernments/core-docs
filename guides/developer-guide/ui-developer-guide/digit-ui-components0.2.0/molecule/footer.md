@@ -30,13 +30,34 @@ The Footer component provides navigational actions or supplementary content at t
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
+FooterAction(
+            buttons: DigitButton(
+              label: 'back',
+              onPressed: () {
+                print('back pressed');
+              },
+              type: DigitButtonType.primary,
+              size: DigitButtonSize.large,
+              prefixIcon: Icons.arrow_back,
             ),
+          ),
+          FooterAction(
+            buttons: DigitButton(
+              label: 'Actions   ',
+              onPressed: () {
+                print('next button pressed');
+              },
+              type: DigitButtonType.primary,
+              size: DigitButtonSize.large,
+              suffixIcon: Icons.arrow_forward,
+            ),
+          ),
+        ],
+        footerContent: Text(
+              'This is extra content for the footer',
+              style: TextStyle(color: Colors.grey, fontSize: 12),
+            ),
+      ),
 ```
 {% endtab %}
 
@@ -71,7 +92,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>actions</td><td>List&#x3C;FooterAction></td><td>required</td></tr><tr><td>actionSpacing</td><td>double</td><td>-</td></tr><tr><td>actionAlignment</td><td>MainAxisAlignment</td><td>-</td></tr><tr><td>inlineAction</td><td>bool</td><td>true</td></tr><tr><td>footerContent</td><td>Widget</td><td>required</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

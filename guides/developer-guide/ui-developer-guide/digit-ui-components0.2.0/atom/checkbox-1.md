@@ -39,13 +39,28 @@ The Breadcrumbs component is a navigation aid that helps users understand their 
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
+DigitBreadCrumb(
+          crumbs: [
+            DigitBreadCrumbItem(
+              content: 'Home',
+              icon: Icons.home,
             ),
+            DigitBreadCrumbItem(
+              content: 'Category',
+              icon: Icons.category,
+            ),
+            DigitBreadCrumbItem(
+              content: 'Product',
+              icon: Icons.production_quantity_limits,
+            ),
+            DigitBreadCrumbItem(
+              content: 'Details',
+              icon: Icons.details,
+            ),
+          ],
+          onClick: (item) {},
+          customSeparator: Icon(Icons.chevron_right),
+        );
 ```
 {% endtab %}
 
@@ -78,7 +93,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>crumbs</td><td>List&#x3C;DigitBreadCrumbItem></td><td>required</td></tr><tr><td>maxItems</td><td>int</td><td>-</td></tr><tr><td>itemsBeforeCollapse</td><td>int</td><td>-</td></tr><tr><td>itemsAfterCollapse</td><td>int</td><td>-</td></tr><tr><td>expandText</td><td>String</td><td>-</td></tr><tr><td>customSeparator</td><td>Widget</td><td>-</td></tr><tr><td>themeData</td><td>DigitBreadCrumbThemeData</td><td>-</td></tr><tr><td>onClick</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

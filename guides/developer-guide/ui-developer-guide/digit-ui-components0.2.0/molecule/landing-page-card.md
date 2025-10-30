@@ -68,13 +68,28 @@ The Landing Page Card component serves as a navigational entry point, combining 
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
+MatrixListComponent(
+            alignCenterMatrixList: true,
+            icon: Icons.supervisor_account,
+            filledIcon: true,
+            showIconOnRight: true,
+            heading: 'Heading',
+            matrixList: [
+              MatrixModel(
+                  title: '30', description: 'Description of Matrix 1'),
+              MatrixModel(
+                  title: '30', description: 'Description of Matrix 2'),
+            ] ,
+            actions: [
+              ActionItem(label: 'Action 1', icon: Icons.edit, onPressed: () {}),
+              ActionItem(label: 'Action 2', icon: Icons.edit, onPressed: () {}),
+            ],
+            additionalWidget: const InfoCard(
+              title: 'this is a custom widget',
+              type: InfoType.info,
+              description: 'which provide details about the card',
             ),
+          ),
 ```
 {% endtab %}
 
@@ -109,7 +124,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>heading</td><td>String</td><td>required</td></tr><tr><td>matrixList</td><td>List&#x3C;MatrixModel></td><td>-</td></tr><tr><td>Icon</td><td>IconData</td><td>-</td></tr><tr><td>actions</td><td>List&#x3C;ActionItem></td><td>-</td></tr><tr><td>centerWidget</td><td>Widget</td><td>required</td></tr><tr><td>additionalWidget</td><td>Widget</td><td>-</td></tr><tr><td>filledIcon</td><td>bool</td><td>true</td></tr><tr><td>alignCenterMatrixList</td><td>bool</td><td>false</td></tr><tr><td>showIconOnRight</td><td>bool</td><td>false</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

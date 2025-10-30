@@ -49,13 +49,49 @@ Selection Tags are compact, button-like elements that allow users to make single
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+SelectionCard<String>(
+                showParentContainer: withParentContainer,
+                valueMapper: (item) => item,
+                options: [
+                  'Start',
+                  'Middle',
+                  'End',
+                ],
+                initialSelection: ['Start'],
+                readOnly: true,
+                onSelectionChanged: (newSelectedOptions) {
+                  setState(() {
+                    selectedOptions = List.from(newSelectedOptions);
+                  });
+                },
+                equalWidthOptions: context.knobs
+                    .boolean(label: 'Equal Width Options', initial: false),
+                prefixIconBuilder: iconState != null
+                    ? (value) {
+                        if (iconState == 'iconAfterSelection') {
+                          // Show icons only after selection
+                          if (selectedOptions.contains(value)) {
+                            if (value == 'Start') {
+                              return Icons.star;
+                            } else if (value == 'Middle') {
+                              return Icons.favorite;
+                            }
+                            return Icons.thumb_down;
+                          }
+                          return null; // No icon if not selected
+                        } else {
+                          // Always show icons for each option
+                          if (value == 'Start') {
+                            return Icons.star;
+                          } else if (value == 'Middle') {
+                            return Icons.favorite;
+                          }
+                          return Icons.thumb_down;
+                        }
+                      }
+                    : null,
+                errorMessage: errorMessage.isNotEmpty ? errorMessage : null,
+              );
 ```
 {% endtab %}
 
@@ -101,7 +137,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>width</td><td>double</td><td>-</td></tr><tr><td>options</td><td>List&#x3C;T></td><td>required</td></tr><tr><td>title</td><td>String</td><td>-</td></tr><tr><td>onSelectionChanged</td><td>Function(List&#x3C;T>)</td><td>-</td></tr><tr><td>initialSelection</td><td>List&#x3C;T></td><td>-</td></tr><tr><td>allowMultipleSelection</td><td>bool</td><td>false</td></tr><tr><td>readOnly</td><td>bool</td><td>false</td></tr><tr><td>equalWidthOptions</td><td>bool</td><td>false</td></tr><tr><td>valueMapper</td><td>String Function(T)</td><td>-</td></tr><tr><td>prefixIconBuilder</td><td>IconData? Function(T)</td><td></td></tr><tr><td>suffixIconBuilder</td><td>IconData? Function(T)</td><td></td></tr><tr><td>showParentContainer</td><td>bool</td><td>true</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

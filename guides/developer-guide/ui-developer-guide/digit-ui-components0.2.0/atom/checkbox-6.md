@@ -32,13 +32,27 @@ The Dropdown - Single Select lets users pick one option from a predefined list. 
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+DigitDropdown<int>(
+            isDisabled: false,
+            onSelect: (item) => {},
+            dropdownController: TextEditingController(),
+            isSearchable: false,
+            items: [
+              'one',
+              'two',
+              'three',
+              'four',
+            ]
+                .asMap()
+                .entries
+                .map(
+                  (item) => DropdownItem(
+                    name: item.value,
+                    code: item.key.toString(),
+                  ),
+                )
+                .toList(),
+          ),
 ```
 {% endtab %}
 
@@ -73,7 +87,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>dropdownController</td><td>TextEditingController</td><td>-</td></tr><tr><td>onSelect</td><td>void Function(DropdownItem)</td><td>-</td></tr><tr><td>onTap</td><td>void Function()</td><td>-</td></tr><tr><td>onChange</td><td>void Function(String)</td><td>-</td></tr><tr><td>items</td><td>List</td><td>required</td></tr><tr><td>suffixIcon</td><td>IconData</td><td>-</td></tr><tr><td>selectionType</td><td>SelectionType</td><td></td></tr><tr><td>emptyItemText</td><td>String</td><td>-</td></tr><tr><td>isSearchable</td><td>bool</td><td>-</td></tr><tr><td>selectedOption</td><td>DropdownItem</td><td>-</td></tr><tr><td>readOnly</td><td>bool</td><td>false</td></tr><tr><td>isDisabled</td><td>bool</td><td>false</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

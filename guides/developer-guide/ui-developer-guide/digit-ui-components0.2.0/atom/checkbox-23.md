@@ -19,14 +19,12 @@ The Text Block component provides a structured typographic layout, combining var
 {% tab title="Component Flutter" %}
 ```
 // Sample code
-
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+DigitTextBlock(
+          caption: 'Caption Text',
+          heading: 'Heading',
+          subHeading: 'Sub heading',
+          description: 'This is the description of the TextBlock component.',
+        ),
 ```
 {% endtab %}
 
@@ -68,7 +66,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>caption</td><td>String</td><td>-</td></tr><tr><td>captionStyle</td><td>TextStyle</td><td>-</td></tr><tr><td>heading</td><td>String</td><td>-</td></tr><tr><td>headingStyle</td><td>TextStyle</td><td>-</td></tr><tr><td>subHeading</td><td>String</td><td>-</td></tr><tr><td>subHeadingStyle</td><td>TextStyle</td><td>-</td></tr><tr><td>description</td><td>String</td><td>-</td></tr><tr><td>descriptionStyle</td><td>TextStyle</td><td>-</td></tr><tr><td>padding</td><td>EdgeInsets</td><td>-</td></tr><tr><td>spacing</td><td>double</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

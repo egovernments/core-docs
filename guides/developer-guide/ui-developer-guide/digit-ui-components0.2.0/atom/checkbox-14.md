@@ -36,13 +36,30 @@ The Stepper is a navigation component that guides users through a multi-step pro
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
+DigitStepper(
+          activeIndex: 1,
+          stepperList:  [
+            StepperData(
+              title: 'vendor details',
+              onStepTap: (){},
             ),
+            const StepperData(
+              title: 'contact details',
+            ),
+            const StepperData(
+              title: 'service details',
+            ),
+            const StepperData(
+              title: 'worker details',
+            ),
+            const StepperData(
+              title: 'Summary',
+            ),
+
+          ],
+          stepperDirection: Axis.horizontal,
+          inverted: true,
+        ),
 ```
 {% endtab %}
 
@@ -77,7 +94,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>stepperList</td><td>List&#x3C;StepperData></td><td>required</td></tr><tr><td>activeIndex</td><td>int</td><td>-</td></tr><tr><td>stepperDirection</td><td>Axis</td><td>Axis.horizontal</td></tr><tr><td>inverted</td><td>bool</td><td>false</td></tr><tr><td>currentProgressedIndex</td><td>int</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

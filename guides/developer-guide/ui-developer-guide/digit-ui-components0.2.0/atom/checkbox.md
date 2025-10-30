@@ -37,13 +37,11 @@ The Alert Card component is a visual communication element used to inform users 
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+AlertCard(
+    title: 'Information',
+    description: 'This is an informational card',
+    type: InfoType.info,
+  )
 ```
 {% endtab %}
 
@@ -83,7 +81,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>title</td><td>String</td><td>required</td></tr><tr><td>description</td><td>String</td><td>required</td></tr><tr><td>type</td><td>Alert Card type</td><td>info</td></tr><tr><td>additionalWidget</td><td>List&#x3C;Widget></td><td>-</td></tr><tr><td>inline</td><td>bool</td><td>false</td></tr><tr><td>infoCardThemeData</td><td>DigitInfoCardThemeData</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

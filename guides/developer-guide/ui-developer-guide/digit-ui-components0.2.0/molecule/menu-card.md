@@ -28,8 +28,9 @@ The Menu Card component serves as a navigational tile, guiding users through var
 // Sample code
 
 MenuCard(
-            heading: 'Heading',
-            description: 'Lorem Ipsum',
+            icon: Icons.home,
+            heading: 'Label',
+            description: 'Description',
             onTap: () {
               // Handle tap
             },

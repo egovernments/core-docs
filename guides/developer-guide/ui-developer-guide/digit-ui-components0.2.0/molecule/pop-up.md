@@ -57,13 +57,30 @@ The Popups Card component is a focused, interruptive component used to convey cr
 ```
 // Sample code
 
-DigitAccordion(
-              header: Text('Accordion'),
-              content: Text('This is the content of Accordion'),
-              initiallyExpanded: false,
-              divider: true,
-              showBorder: true,
-            ),
+Popup(
+                title: "Simple Popup",
+                onOutsideTap: () {
+                  Navigator.of(popupContext).pop();
+                },
+                titleIcon: Icon(Icons.article, size: 32,),
+                onCrossTap: (){
+                  Navigator.of(popupContext).pop();
+                },
+                subHeading: "This is a subheading",
+                description: "This popup demonstrates a simple popup with a title and description.",
+                type: PopUpType.simple,
+                actions: [
+                  DigitButton(
+                    label: 'Submit',
+                    onPressed: () {
+                      Navigator.of(popupContext)
+                          .pop(); // Use popupContext to close the popup
+                    },
+                    type: DigitButtonType.primary,
+                    size: DigitButtonSize.large,
+                  ),
+                ],
+              ),
 ```
 {% endtab %}
 
@@ -96,7 +113,7 @@ Each design component offers a range of configurable options. These options are 
 {% endtab %}
 
 {% tab title="Flutter" %}
-<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>Title</td><td>String</td><td>required(if header is not passed)</td></tr><tr><td>Number</td><td>double</td><td>-</td></tr><tr><td>Icon</td><td>Icon widget</td><td>-</td></tr><tr><td>header</td><td>Widget</td><td>-</td></tr><tr><td>content</td><td>Widget</td><td>required</td></tr><tr><td>divider</td><td>bool</td><td>false</td></tr><tr><td>initiallyExpanded</td><td>bool</td><td>false</td></tr><tr><td>showBorder</td><td>bool</td><td>false</td></tr><tr><td>onToggle</td><td>VoidCallBack Function</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th width="209">Value</th><th>Default</th></tr></thead><tbody><tr><td>title</td><td>String</td><td>required</td></tr><tr><td>type</td><td>PopUpType</td><td>required</td></tr><tr><td>width</td><td>double</td><td>-</td></tr><tr><td>height</td><td>double</td><td>-</td></tr><tr><td>titleIcon</td><td>Icon</td><td>-</td></tr><tr><td>subHeading</td><td>String</td><td>-</td></tr><tr><td>description</td><td>String</td><td>-</td></tr><tr><td>additionalWidgets</td><td>List&#x3C;Widget></td><td>-</td></tr><tr><td>actions</td><td>List&#x3C;DigitButton></td><td>-</td></tr><tr><td>onCrossTap</td><td>void Function()</td><td>-</td></tr><tr><td>onOutsideTap</td><td>void Function()</td><td>-</td></tr><tr><td>popupTheme</td><td>DigitPopupTheme</td><td>-</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 
