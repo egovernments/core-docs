@@ -24,7 +24,7 @@ Once you get the API access keys, follow the step-by-step[ Developer Guide](../g
 
 ## Sandbox Access
 
-[Click here to access Sandbox.](https://sandbox.digit.org/sandbox-ui/user/sign-up)
+[Click here to access Sandbox.](https://sandbox.digit.org)
 
 {% hint style="info" %}
 Note that the current Sandbox environment only supports access to the Complaints and Employee Management modules.
