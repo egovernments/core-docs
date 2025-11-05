@@ -392,6 +392,7 @@
   * [Verification](accelerators/integrations/verification.md)
   * [View](accelerators/integrations/view.md)
   * [Calculation](accelerators/integrations/calculation.md)
+  * [Web Analytics Tools](accelerators/integrations/web-analytics-tools.md)
 * [Concepts](accelerators/concepts/README.md)
   * [Deployment - Key Concepts](accelerators/concepts/deployment-key-concepts/README.md)
     * [Security Practices](accelerators/concepts/deployment-key-concepts/security-practices.md)
