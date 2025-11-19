@@ -2,10 +2,10 @@
 description: >-
   We followed a structured testing process by first validating each upgraded
   package in a simple React app, then integrating them into the DIGIT core
-  module to ensure compatibility and stability.
+  module to ensure compatibility and stability
 ---
 
-# Testing the Upgraded Packages
+# Testing Upgraded Packages
 
 ### 1. Testing Upgraded Packages in a Simple React Application
 
@@ -191,7 +191,7 @@ Below is the updated package.json file:
 7. A new build script using Webpack has been added to the scripts section.
 8. Webpack Integration
 9. To support this transition, Webpack and its necessary dependencies have been added under devDependencies.
-10. This shift improves build performance, allows better optimizations, and reduces unnecessary dependencies.
+10. This shift improves build performance, allows better optimisations, and reduces unnecessary dependencies.
 
 In the next section, we will discuss the specific changes made for Webpack integration and the new configuration files added.
 
@@ -360,10 +360,10 @@ module.exports = {
 
 1. Replacing react-scripts with Webpack
 2. CRA previously handled bundling and compilation internally via react-scripts.
-3. Now, Webpack explicitly manages the entire build process, allowing greater customization and optimizations.
+3. Now, Webpack explicitly manages the entire build process, allowing greater customisation and optimisations.
 4. Handling Proxy Configuration Inside Webpack
 5. One critical change is the migration of proxy settings from the separate setupProxy.js file to inside the Webpack config itself.
-6. This change was necessary because Webpack does not recognize setupProxy.js, which was previously utilized by react-scripts.
+6. This change was necessary because Webpack does not recognise setupProxy.js, which was previously utilised by react-scripts.
 7. Integrating proxies directly within webpack.config.js ensures smooth API request handling and local development without additional configurations.
 
 #### 2.4 Adding the Core Module Locally for Testing
@@ -376,7 +376,7 @@ Since the Core Module was not upgraded along with the other packages, we added i
 
 **(a) Migration to Webpack**
 
-Similar to other packages, we migrated the Core Module from Microbundle to Webpack for better compatibility and optimization. Below is the updated Webpack configuration file:
+Similar to other packages, we migrated the Core Module from Microbundle to Webpack for better compatibility and optimisation. Below is the updated Webpack configuration file:
 
 ```
 const path = require("path");

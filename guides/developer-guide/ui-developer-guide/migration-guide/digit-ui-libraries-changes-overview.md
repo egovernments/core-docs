@@ -37,6 +37,35 @@ Several major dependency updates required code modifications, particularly in th
 * react-i18next
 * @tanstack/react-query
 
+Here're few examples of syntax changes
+
+react-router-dom@5 to react-router-dom@6
+
+#### React Router v5 → v6
+
+| Concept                     | React Router v5                                                                                               | React Router v6                                                                                            |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Import**                  | `import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";`                                  | `import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";`                               |
+| **Route Definition**        | `<Switch> <Route path="/home" component={Home} /> <Route path="/about" render={() => <About />} /> </Switch>` | `<Routes> <Route path="/home" element={<Home />} /> <Route path="/about" element={<About />} /> </Routes>` |
+| **Redirect → Navigate**     | `<Redirect to="/login" />`                                                                                    | `<Navigate to="/login" replace />`                                                                         |
+| **Access route params**     | `const { id } = props.match.params;`                                                                          | `const { id } = useParams();`                                                                              |
+| **Programmatic navigation** | `props.history.push("/dashboard");`                                                                           | `const navigate = useNavigate(); navigate("/dashboard");`                                                  |
+| **Nested Routes**           | `<Route path="/users" component={Users} />`                                                                   | `<Route path="/users" element={<Users />}> <Route path=":id" element={<UserDetail />} /> </Route>`         |
+| **404 Fallback**            | `<Route component={NotFound} />`                                                                              | `<Route path="*" element={<NotFound />} />`                                                                |
+
+#### React Query → TanStack Query (v5+)
+
+| Concept                        | React Query (v3/v4)                                                         | TanStack Query (v5)                                                                   |
+| ------------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Import**                     | `import { useQuery, QueryClient, QueryClientProvider } from "react-query";` | `import { useQuery, QueryClient, QueryClientProvider } from "@tanstack/react-query";` |
+| **QueryClient Initialization** | `const queryClient = new QueryClient();`                                    | `const queryClient = new QueryClient();`                                              |
+| **Provider Setup**             | `<QueryClientProvider client={queryClient}><App /></QueryClientProvider>`   | `<QueryClientProvider client={queryClient}><App /></QueryClientProvider>`             |
+| **useQuery**                   | `useQuery("employeeData", Digit.Hooks.useEmployeeSearch);`                  | `useQuery({ queryKey: ["employeeData"], queryFn: Digit.Hooks.useEmployeeSearch });`   |
+| **useMutation**                | `useMutation(Digit.Hooks.useCreateApplication);`                            | `useMutation({ mutationFn: Digit.Hooks.useCreateApplication });`                      |
+| **Invalidate Queries**         | `queryClient.invalidateQueries("applicationSearch");`                       | `queryClient.invalidateQueries({ queryKey: ["applicationSearch"] });`                 |
+| **setQueryData**               | `queryClient.setQueryData("employeeData", data);`                           | `queryClient.setQueryData(["employeeData"], data);`                                   |
+| **Devtools Import**            | `import { ReactQueryDevtools } from "react-query/devtools";`                | `import { ReactQueryDevtools } from "@tanstack/react-query-devtools";`                |
+
 These changes ensure smooth integration with React 19 while leveraging the latest features and best practices.
 
 ***

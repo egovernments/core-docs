@@ -4,7 +4,7 @@ description: Deployment on SDC
 
 # SDC
 
-## Overview
+{% include "../../../../.gitbook/includes/sdc-setup (1).md" %}
 
 Running Kubernetes on-premise gives a cloud-native experience on SDC when it comes to deploying DIGIT.
 

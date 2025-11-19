@@ -12,8 +12,9 @@ Instructions here are provided assuming CD/CI has been set up using the DIGIT ci
 
 <details>
 
-<summary>Build<br><br>Method - 1:</summary>
+<summary>Build </summary>
 
+Method - 1 (Through Jenkins):\
 Go to the Jenkins build page. Click on digit-ui under the folder path mentioned below. The entire UI module is built as a monolith. Since this module is also part of the same monolith, the entire UI module has to be built and redeployed.\
 `frontend/micro-ui/digit-ui/`
 
@@ -29,7 +30,7 @@ Once the build is successful, open the console output and find the Docker image 
 
 
 
-**Method - 2(Recommended) :**&#x20;
+**Method - 2(Recommended through Github actions) :**&#x20;
 
 * Navigate to GitHub Actions\
   ![](<../../../.gitbook/assets/image (556).png>)

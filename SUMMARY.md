@@ -270,7 +270,7 @@
     * [Migration Guide](guides/developer-guide/ui-developer-guide/migration-guide/README.md)
       * [DIGIT-UI-LIBRARIES Changes Overview](guides/developer-guide/ui-developer-guide/migration-guide/digit-ui-libraries-changes-overview.md)
       * [Package Publishing Process](guides/developer-guide/ui-developer-guide/migration-guide/package-publishing-process.md)
-      * [Testing the Upgraded Packages](guides/developer-guide/ui-developer-guide/migration-guide/testing-the-upgraded-packages.md)
+      * [Testing Upgraded Packages](guides/developer-guide/ui-developer-guide/migration-guide/testing-upgraded-packages.md)
       * [Frequent issues, errors and their fixes](guides/developer-guide/ui-developer-guide/migration-guide/frequent-issues-errors-and-their-fixes.md)
     * [FAQs](get-started/developer-guide/ui-developer-guide/faqs/README.md)
       * [Troubleshoot Using Browser Network Tab](get-started/developer-guide/ui-developer-guide/faqs/troubleshoot-using-browser-network-tab.md)

@@ -12,10 +12,6 @@ title: Azure setup
 [1.-azure-pre-requisites.md](../../guides/installation-guide/infrastructure-setup/azure/1.-azure-pre-requisites.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 {% content-ref url="../../guides/installation-guide/infrastructure-setup/azure/3.-infra-as-code-terraform.md" %}
 [3.-infra-as-code-terraform.md](../../guides/installation-guide/infrastructure-setup/azure/3.-infra-as-code-terraform.md)
 {% endcontent-ref %}
