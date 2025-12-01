@@ -1,14 +1,14 @@
 # Web Analytics Tools
 
-#### Overview
+## Overview
 
-This comprehensive guide compares user analytics platforms covering features, privacy, usability, and insights to help you choose the right tool for marketing, product, or UX needs.
+This comprehensive guide compares user analytics platforms, covering features, privacy, usability, and insights to help you choose the right tool for marketing, product, or UX needs.
 
 ***
 
-### Analytics Tools Overview
+## Analytics Tools Overview
 
-#### Google Analytics 4
+### Google Analytics 4
 
 **Industry standard with Google ecosystem integration, predictive metrics, and cross-platform tracking.**
 
@@ -35,7 +35,7 @@ This comprehensive guide compares user analytics platforms covering features, pr
 
 ***
 
-#### PostHog
+### PostHog
 
 **Product analytics and experimentation platform with session replay, feature flags, and A/B testing.**
 
@@ -52,14 +52,14 @@ This comprehensive guide compares user analytics platforms covering features, pr
 **Weaknesses**
 
 * Complex initial setup
-* Resource intensive for self-hosting
+* Resource-intensive for self-hosting
 * Usage-based pricing scales quickly
 * Technical learning curve
 * Can get expensive at high volumes
 
 ***
 
-#### Plausible
+### Plausible
 
 **Lightweight, privacy-focused analytics with minimal overhead and simple dashboards.**
 
@@ -83,16 +83,16 @@ This comprehensive guide compares user analytics platforms covering features, pr
 
 ***
 
-#### Microsoft Clarity
+### Microsoft Clarity
 
-**Free behavior visualization tool with heatmaps, session recordings, and frustration signals.**
+**Free behaviour visualisation tool with heatmaps, session recordings, and frustration signals.**
 
 **Key Link:** [Analytics Platform](https://clarity.microsoft.com/)
 
 **Strengths**
 
 * Completely free forever (no limits)
-* MIT licensed core library
+* MIT-licensed core library
 * Excellent UX insights
 * Automatic heatmaps and recordings
 * No traffic or feature limits
@@ -107,7 +107,7 @@ This comprehensive guide compares user analytics platforms covering features, pr
 
 ***
 
-#### Matomo
+### Matomo
 
 **Open-source, full-featured analytics with strong data ownership. Self-hosted or cloud options.**
 
@@ -129,11 +129,11 @@ This comprehensive guide compares user analytics platforms covering features, pr
 
 ***
 
-### Key Capabilities Comparison
+## Key Capabilities Comparison
 
 <table><thead><tr><th width="222.14453125">Capability</th><th>Best Tool(s)</th><th>Key Advantage</th></tr></thead><tbody><tr><td><strong>Data Ownership</strong></td><td>Matomo, PostHog, Plausible</td><td>Self-hosting option with full control</td></tr><tr><td><strong>Privacy Compliance</strong></td><td>Plausible, Matomo</td><td>GDPR-ready, cookieless tracking</td></tr><tr><td><strong>Product Analytics</strong></td><td>PostHog, GA4</td><td>Funnels, cohorts, experiments</td></tr><tr><td><strong>Session Recording</strong></td><td>MS Clarity, PostHog</td><td>Full session replay capabilities</td></tr><tr><td><strong>Heatmaps</strong></td><td>MS Clarity, Matomo</td><td>Visual behavior insights</td></tr><tr><td><strong>Cost Efficiency</strong></td><td>MS Clarity, Plausible, PostHog</td><td>Free or very affordable</td></tr><tr><td><strong>Enterprise Scale</strong></td><td>GA4, Matomo</td><td>Handles high volume traffic</td></tr><tr><td><strong>Simplicity</strong></td><td>Plausible, MS Clarity</td><td>Minimal setup, easy dashboards</td></tr></tbody></table>
 
-### Feature Comparison Matrix
+## Feature Comparison Matrix
 
 | Privacy & Compliance | 5 | 3 | 4 | 5 | 3    |
 | -------------------- | - | - | - | - | ---- |
@@ -147,13 +147,13 @@ _Rating Scale: 1 (Poor) to 5 (Excellent)_
 
 ***
 
-### Use Case Recommendations
+## Use Case Recommendations
 
 #### Blogs & Content Sites
 
 **Recommended:** Plausible
 
-Simple metrics, lightweight, privacy-friendly approach perfect for content-focused websites.
+Simple metrics, a lightweight, privacy-friendly approach perfect for content-focused websites.
 
 ***
 
@@ -197,7 +197,7 @@ Free UX insights combined with affordable traffic analytics provide comprehensiv
 
 ***
 
-### Decision Framework
+## Decision Framework
 
 #### Key Questions to Ask
 
@@ -222,7 +222,7 @@ Before choosing your analytics stack, consider these critical questions:
 
 ***
 
-### Combination Strategies by Budget
+## Combination Strategies by Budget
 
 #### $0/month
 
@@ -256,18 +256,13 @@ Before choosing your analytics stack, consider these critical questions:
 
 ***
 
-### Final Recommendations by Scenario
+## Final Recommendations by Scenario
 
-| Scenario       | Recommended Stack      |
-| -------------- | ---------------------- |
-| Small Business | Plausible + MS Clarity |
-| E-commerce     | GA4 + MS Clarity       |
-| SaaS Startup   | PostHog only           |
-| Enterprise     | Matomo + Custom Tools  |
+<table><thead><tr><th width="212.79296875">Scenario</th><th>Recommended Stack</th></tr></thead><tbody><tr><td>Small Business</td><td>Plausible + MS Clarity</td></tr><tr><td>E-commerce</td><td>GA4 + MS Clarity</td></tr><tr><td>SaaS Startup</td><td>PostHog only</td></tr><tr><td>Enterprise</td><td>Matomo + Custom Tools</td></tr></tbody></table>
 
 ***
 
-### Getting Started Checklist
+## Getting Started Checklist
 
 Ready to choose your analytics stack? Follow these steps:
 
@@ -278,8 +273,8 @@ Ready to choose your analytics stack? Follow these steps:
 
 ***
 
-### Conclusion
+## Conclusion
 
 Choosing the right web analytics tool depends on your specific needs, technical capabilities, and budget. There's no one-size-fits-all solution, but this guide should help you make an informed decision based on your priorities.
 
-Remember that you can always start with a simple, free solution and expand your analytics stack as your needs grow. Many organisations successfully use combinations of tools to get the best of multiple platforms.
+Remember that you can always start with a simple, free solution and expand your analytics stack as your needs grow. Many organisations successfully use combinations of tools to leverage multiple platforms.
