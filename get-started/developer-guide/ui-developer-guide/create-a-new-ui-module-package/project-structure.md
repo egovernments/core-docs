@@ -130,8 +130,7 @@ Follow the steps given below to create the project structure.
 }
 ```
 
-7.  We'd also require a webpack config file, so create a webpack.config.js file. Initial configuration should look something like this : \
-
+7.  We'd also require a webpack config file, so create a webpack.config.js file. Initial configuration should look something like this : <br>
 
     ```json
     const path = require("path");

@@ -12,8 +12,7 @@ The primary focus of these updates includes the following core libraries and com
 * @egovernmentdigit-ui-react-components
 * @egovernment/digit-ui-components
 * @egovernment/digit-ui-svg-components
-* @egovernment/digit-ui-libraries\
-
+* @egovernment/digit-ui-libraries<br>
 
 Additionally, these updates extend to **core and workbench** modules, ensuring that all aspects of the DIGIT platform remain up-to-date and function as expected.
 

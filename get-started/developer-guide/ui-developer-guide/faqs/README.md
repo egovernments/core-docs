@@ -171,8 +171,7 @@ staging=https://staging.companyname.org
 </details>
 
 \
-\
-
+<br>
 
 **6) In DIGIT UI, where do we need to add the .env file when we run the React app from micro-ui/web?**
 
