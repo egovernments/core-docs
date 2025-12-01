@@ -20,7 +20,7 @@ git clone https://github.com/egovernments/DIGIT-DevOps.git
 
 ```bash
 cd DIGIT-DevOps 
-git checkout kubernetes-1.31
+git checkout kubernetes-1.32
 ```
 
 3. Check if the correct credentials are configured using the command below. Refer to the attached doc to [setup AWS Account](https://core.digit.org/v/2.9-lts/guides/installation-guide/production-setup/aws/3.-setup-aws-account) on the local machine.
