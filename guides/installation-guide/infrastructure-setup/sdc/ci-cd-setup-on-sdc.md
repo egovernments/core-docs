@@ -1,8 +1,8 @@
 ---
-description: Steps to setup CI/CD on SDC
+description: Steps to setup CI/CD on-premise
 ---
 
-# CI/CD Setup On SDC
+# CI/CD Setup On-Premise
 
 ## Overview <a href="#prerequisites" id="prerequisites"></a>
 

@@ -1,8 +1,8 @@
 ---
-description: Deployment on SDC
+description: Deployment steps on-premise
 ---
 
-# SDC
+# On Premise
 
 {% include "../../../../.gitbook/includes/sdc-setup (1).md" %}
 
