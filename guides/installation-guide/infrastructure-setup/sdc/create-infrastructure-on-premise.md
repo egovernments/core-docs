@@ -380,7 +380,7 @@ Execute the commands below in the order mentioned -
 
 `sudo systemctl status postgresql`
 
-<figure><img src="../../../../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/unknown (3).png" alt=""><figcaption></figcaption></figure>
 
 Connect to PostgreSQL
 
@@ -390,7 +390,7 @@ Connect to PostgreSQL
 
 `\q`
 
-<figure><img src="../../../../.gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/unknown (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

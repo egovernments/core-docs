@@ -394,7 +394,7 @@
   * [View](accelerators/integrations/view.md)
   * [Calculation](accelerators/integrations/calculation.md)
   * [Web Analytics Tools](accelerators/integrations/web-analytics-tools/README.md)
-    * [Google Analytics 4 & Google Tag Manager Installation Guide](accelerators/integrations/web-analytics-tools/google-analytics-4-and-google-tag-manager-installation-guide.md)
+    * [Google Analytics 4 & Google Tag Manager Installation Guide & Looker Studio](accelerators/integrations/web-analytics-tools/google-analytics-4-and-google-tag-manager-installation-guide-and-looker-studio.md)
 * [Concepts](accelerators/concepts/README.md)
   * [Deployment - Key Concepts](accelerators/concepts/deployment-key-concepts/README.md)
     * [Security Practices](accelerators/concepts/deployment-key-concepts/security-practices.md)
