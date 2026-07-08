@@ -20,7 +20,7 @@ git clone https://github.com/egovernments/DIGIT-DevOps.git
 
 ```bash
 cd DIGIT-DevOps 
-git checkout kubernetes-1.33
+git checkout kubernetes-1.34
 ```
 
 3. Check if the correct credentials are configured using the command below. Refer to the attached doc to [setup AWS Account](https://core.digit.org/v/2.9-lts/guides/installation-guide/production-setup/aws/3.-setup-aws-account) on the local machine.
@@ -42,14 +42,14 @@ openssl genpkey -algorithm RSA -out private_key.pem openssl rsa -pubout -in priv
 5. Add the public key to your [GitHub account](https://www.youtube.com/watch?v=9C7_jBn9XJ0).
 6.  Open input.yaml file in vscode. Use the below code to open it in VS code:
 
-    `code infra-as-code/terraform/sample-aws/input.yaml`
+    `code infra-as-code/terraform/aws/input.yaml`
 
     _If the command does not work, open the file in VS code manually. Once the file is open, fill in the inputs. (If you are not using vscode, open it in any editor of your choice)._
 7. Fill in the inputs as per the regex mentioned in the comments.
-8. Go to _infra-as-code/terraform/sample-aws_ and run _init.go_ script to enrich different files based on _input.yaml_.
+8. Go to _infra-as-code/terraform/aws_ and run _init.go_ script to enrich different files based on _input.yaml_.
 
 ```
-cd infra-as-code/terraform/sample-aws 
+cd infra-as-code/terraform/aws 
 go run ../scripts/init.go
 ```
 

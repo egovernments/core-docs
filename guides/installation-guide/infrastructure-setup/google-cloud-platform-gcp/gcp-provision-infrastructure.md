@@ -29,13 +29,13 @@ Before we provision the cloud resources, we need to understand and be sure about
 ```
 git clone https://github.com/egovernments/DIGIT-DevOps.git
 cd DIGIT-DevOps
-git checkout kubernetes-1.31
+git checkout kubernetes-1.34
 code .
-cd infra-as-code/terraform/sample-gcp
+cd infra-as-code/terraform/gcp
 
 ### You'll see the following file structure 
 
-├── sample-gcp
+├── gcp
 │       ├── remote-state
 │       │      ├── main.tf
 │       │      └── variables.tf
@@ -58,116 +58,10 @@ cd infra-as-code/terraform/sample-gcp
      │         ├── main.tf
      │         ├── outputs.tf
      |         └── variables.tf
-     └── storage
-    	  └── gcp
-               ├── main.tf
-     	       ├── outputs.tf
-     	       └── variables.tf
 ```
 {% endcode %}
 
-2. Declare the variables in [remote-state/variables.tf](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.31/infra-as-code/terraform/sample-gcp/remote-state/variables.tf) for GCP storage to maintain assets & terraform remote state.
-
-{% code lineNumbers="true" %}
-```
-variable "project_id" {
-  default     = "<GCP_PROJECT_ID>"
-  description = "GCP project to create the bucket in"
-}
-
-variable "region" {
-  default     = "<GCP_REGION>"
-  description = "GCP region for the bucket"
-}
-
-variable "bucket_name" {
-  default     = "<terraform_state_bucket_name>"
-  description = "Name of the GCS bucket to store Terraform state"
-}
-
-```
-{% endcode %}
-
-3. Update bucket-name in [main.tf](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.31/infra-as-code/terraform/sample-gcp/main.tf), to initialize backend.
-
-{% code lineNumbers="true" %}
-```
-terraform {
-  backend "gcs" {
-    bucket = "<terraform_state_bucket_name>"  # Replace with the name after creating remote state bucket
-    prefix  = "terraform/state"
-  }
-```
-{% endcode %}
-
-4. Declare the variables in [variables.tf](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.31/infra-as-code/terraform/sample-gcp/variables.tf)
-
-{% code lineNumbers="true" %}
-```
-variable "project_id" {
-  default     = "<GCP_PROJECT_ID>"
-  description = "Name of the GCp Project"
-}
-variable "region" {
-  default     = "<GCP_REGION>"
-}
-variable "zone" {
-  default = "<GCP_AVAILABILITY_ZONE>"
-}
-variable "env_name" {
-  default     = "<ENVIRONMENT_NAME>"
-  description = "Name of the env"
-}
-variable "private_subnet_cidr" {
-  default     = "10.10.0.0/24"
-  description = "cidr_range for private subnet"
-}
-variable "public_subnet_cidr" {
-  default     = "10.10.64.0/19"
-  description = "cidr_range for public subnet"
-}
-variable "gke_version" {
-  default = "1.31.7-gke.1265000"
-}
-variable "node_machine_type" {
-  default = "n2d-highmem-2"            # Allocate as per quota available
-}
-variable "desired_node_count" {
-  default = "3"                        # Allocate as per quota available
-}
-variable "min_node_count" {
-  default = "3"                        # Allocate as per quota available
-}
-variable "max_node_count" {
-  default = "4"                        # Allocate as per quota available
-}
-variable "node_disk_size_gb" {
-  default = "50"
-}
-variable "db_name" {
-  default = "<DATABASE_NAME>"          # avoid using hypen 
-}                                      # or any speacial characters
-variable "db_username" {
-  default = "<DATABASE_USERNAME>"
-}
-variable "db_password" {}
-variable "db_cpu" {
-  default = 2
-}
-variable "db_memory_mb" {
-  default = 4096                       # must be a multiple of 256MiB
-}
-variable "db_disk_size_gb" {
-  default = "25"
-}
-variable "db_max_connections" {
-  default = "100"
-}
-variable "force_peering_cleanup" {
-  default = false
-}
-```
-{% endcode %}
+2. Update the [input.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.34/infra-as-code/terraform/gcp/input.yaml) file according to your specifications.
 
 Save the files and exit the editor.
 
@@ -189,7 +83,11 @@ Use the CD command to move into the following directory, run the following comma
 
 {% code lineNumbers="true" %}
 ```
-cd DIGIT-DevOps/infra-as-code/terraform/sample-gcp/remote-state
+cd DIGIT-DevOps/infra-as-code/terraform/gcp
+
+go run ../scripts/init.go
+
+cd remote-state
 
 terraform init
 
@@ -242,7 +140,7 @@ sops_key                      # .sops.yaml (for encryption/decryption of secrets
 ```
 {% endcode %}
 
-4. Sample [sops](https://github.com/egovernments/DIGIT-DevOps/blob/gcp-support/deploy-as-code/charts/.sops.yaml) configuration
+4. Sample [sops](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.34/deploy-as-code/helm/environments/.sops.yaml) configuration
 
 {% code lineNumbers="true" %}
 ```
