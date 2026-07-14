@@ -30,7 +30,7 @@ sudo bash install.sh
 Refer to [tfswitch documentation](https://tfswitch.warrensbox.com/Quick-Start/) for different platforms. Terraform version 0.14.10 can be installed directly as well.
 {% endhint %}
 
-5\. Run tfswitch, and it will show a list of Terraform versions. Scroll down and select the [**terraform**](https://releases.hashicorp.com/terraform/0.14.10/) version (0.14.10) for the [Infra-as-code](../../guides/installation-guide/infrastructure-setup/sdc/2.-infra-as-code-kubespray.md) (IaC) to provision cloud resources as code. This provides the desired resource graph and helps destroy the cluster in one go.​
+5\. Run tfswitch, and it will show a list of Terraform versions. Scroll down and select the [**terraform**](https://releases.hashicorp.com/terraform/0.14.10/) version (0.14.10) for the [Infra-as-code](/broken/pages/cD6TRwZUKoPRrJ5g5Q3u) (IaC) to provision cloud resources as code. This provides the desired resource graph and helps destroy the cluster in one go.​
 
 ```bash
 // On Linux

@@ -2,8 +2,8 @@
 
 ## Pre-reads
 
-{% content-ref url="broken-reference/" %}
-[broken-reference](broken-reference/)
+{% content-ref url="https://github.com/egovernments/core-docs/blob/2.9-LTS/get-started/operations-guide/observability/broken-reference/README.md" %}
+[https://github.com/egovernments/core-docs/blob/2.9-LTS/get-started/operations-guide/observability/broken-reference/README.md](https://github.com/egovernments/core-docs/blob/2.9-LTS/get-started/operations-guide/observability/broken-reference/README.md)
 {% endcontent-ref %}
 
 This doc covers the steps on how to deploy an **OpenTelemetry** collector on Kubernetes. We will then use an OTEL instrumented (Go) **application** provided by OpenTelemetry to send traces to the **Collector**. From there, we will bring the trace data to a **Jaeger** **collector**. Finally, the traces will be visualised using the **Jaeger** **UI**.

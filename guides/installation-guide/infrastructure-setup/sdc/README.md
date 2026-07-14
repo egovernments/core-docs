@@ -6,42 +6,24 @@ description: Deployment steps on-premise
 
 {% include "../../../../.gitbook/includes/sdc-setup (1).md" %}
 
-Running Kubernetes on-premise gives a cloud-native experience on SDC when it comes to deploying DIGIT.
+Running Kubernetes on a State Data Centre (SDC) gives a cloud-native experience for deploying DIGIT on infrastructure you own and operate. This page describes the recommended SDC reference architecture: a Rancher-managed RKE2 Kubernetes cluster backed by PostgreSQL 15.12, NFS-backed persistent storage, and a MinIO S3-compatible object store.
 
 Whether States have their own on-premise data centre or have decided to forego the various managed cloud solutions, there are a few things one should know when getting started with on-premise K8s.
 
-One should be familiar with Kubernetes and the [control plane](https://kubernetes.io/docs/concepts/overview/components/#master-components) consists of the Kube-apiserver, Kube-scheduler, Kube-controller-manager and an ETCD datastore. For managed cloud solutions like [Google’s Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) or [Azure’s Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/), it also includes the cloud-controller-manager. This is the component that connects the cluster to external cloud services to provide networking, storage, authentication, and other support features.
+All virtual machines run on Ubuntu 24.04 LTS and are connected exclusively through private networking. A bastion server, equipped with HAProxy, serves as the single public entry point for accessing the cluster.
 
-To successfully deploy a bespoke Kubernetes cluster and achieve a cloud-like experience on SDC, one needs to replicate all the same features you get with a managed solution. At a high level, this means that we probably want to:
+Compared with a hand-rolled Kubernetes install, RKE2 + Rancher gives you a hardened, highly available control plane, a management UI/API for cluster lifecycle operations, and a repeatable path to reproduce the same setup across environments - closing much of the gap between a managed cloud service and a self-operated SDC.
 
-* Automate the deployment process
-* Choose a networking solution
-* Choose a right storage solution
-* Handle security and authentication
+## Infrastructure Architecture
 
-The subsequent sections look at each of these challenges individually, and provide enough of a context required to help in getting started.
+The diagram below shows how the components fit together within the SDC private network. Users reach the platform through a public DNS/domain that resolves to the Bastion + HAProxy node - the only node with a public IP. It forwards application (HTTP/HTTPS) traffic to the ingress controller on the RKE2 cluster and provides SSH access to the private network. Rancher Manager handles cluster lifecycle (provisioning, upgrades, monitoring, access). Worker nodes run the DIGIT workloads and consume the dedicated PostgreSQL 15.12 VM for application data, the NFS server (via the NFS CSI driver) for persistent volumes, and MinIO for S3-compatible object storage - with NFS and MinIO co-located on a single storage node.
 
-## Automating The Deployment Process
-
-Using a tool like Ansible can make deploying Kubernetes clusters on-premise trivial.
-
-When deciding to manage your own Kubernetes clusters, we need to set up a few proofs-of-concept (PoC) clusters to learn how everything works, perform performance and conformance tests, and try out different configuration options.
-
-After this phase, automating the deployment process is an important if not necessary step to ensure consistency across any clusters you build. For this, you have a few options, but the most popular are:
-
-* [**kubeadm**](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/): a low-level tool that helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices
-* [**kubespray**](https://github.com/kubernetes-sigs/kubespray): an Ansible playbook that helps deploy production-ready clusters
-
-If you already using Ansible, Kubespray is a great option, otherwise, we recommend writing automation around Kubeadm using your preferred playbook tool after using it a few times. This will also increase your confidence and knowledge of Kubernetes.
+<figure><img src="../../../../.gitbook/assets/sdc-rancher-architecture.png" alt=""><figcaption></figcaption></figure>
 
 ## Installation Steps
 
-{% content-ref url="1.-sdc-pre-requisites.md" %}
-[1.-sdc-pre-requisites.md](1.-sdc-pre-requisites.md)
-{% endcontent-ref %}
-
-{% content-ref url="2.-infra-as-code-kubespray.md" %}
-[2.-infra-as-code-kubespray.md](2.-infra-as-code-kubespray.md)
+{% content-ref url="create-infrastructure-on-premise.md" %}
+[create-infrastructure-on-premise.md](create-infrastructure-on-premise.md)
 {% endcontent-ref %}
 
 {% content-ref url="../../../../get-started/installation-guide/digit-deployment/" %}
