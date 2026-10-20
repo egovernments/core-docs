@@ -29,7 +29,7 @@ Before we provision the cloud resources, we need to understand and be sure about
 ```
 git clone https://github.com/egovernments/DIGIT-DevOps.git
 cd DIGIT-DevOps
-git checkout kubernetes-1.34
+git checkout kubernetes-1.35
 code .
 cd infra-as-code/terraform/azure
 
@@ -60,7 +60,7 @@ cd infra-as-code/terraform/azure
 ```
 {% endcode %}
 
-2\. Change the [input.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.34/infra-as-code/terraform/azure/input.yaml) according to your specifications.
+2\. Change the [input.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.35/infra-as-code/terraform/azure/input.yaml) according to your specifications.
 
 Save the file and exit the editor.
 

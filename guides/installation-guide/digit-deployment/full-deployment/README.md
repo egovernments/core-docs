@@ -7,10 +7,10 @@ description: >-
 
 # Full Deployment
 
-{% content-ref url="deploy-digit/prepare-deployment-configuration.md" %}
-[prepare-deployment-configuration.md](deploy-digit/prepare-deployment-configuration.md)
+{% content-ref url="prepare-deployment-configuration.md" %}
+[prepare-deployment-configuration.md](prepare-deployment-configuration.md)
 {% endcontent-ref %}
 
-{% content-ref url="deploy-digit/" %}
-[deploy-digit](deploy-digit/)
+{% content-ref url="deploy-digit.md" %}
+[deploy-digit.md](deploy-digit.md)
 {% endcontent-ref %}

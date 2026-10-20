@@ -28,20 +28,19 @@ Once all the deployments configs are ready, run the command given below. Input t
 Run the egov-deployer golang script from the [DIGIT-Devops repo](https://github.com/egovernments/DIGIT-DevOps).
 
 ```
-root@ip:# cd DIGIT-DevOps/deploy-as-code/deployer
+root@ip:# cd DIGIT-DevOps/deploy-as-code/egov-deployer
 
-root@ip:# go run standalone_installer.go
-
-#Be prepared for the following questions
-1. Do you have the Kubernetes Setup?
-2. Provide the path of the intented env kubeconfig file
-3. Which version of the DIGIT that you want to install
-4. What DIGIT Modules that you choose to install (Choose PGR)
-5. All, done, Now do you want to preview the deployment manifests 
-6. Are you good to proceed with the DIGIT Installation
-
-All Done.
+root@ip:# go run digit_setup.go
 ```
+
+The interactive installer will prompt you for:
+
+1. Whether the Kubernetes cluster is already set up
+2. The path to the target environment's kubeconfig file
+3. The DIGIT version to install
+4. The DIGIT modules to install (for example, PGR)
+5. Whether to preview the rendered manifests before deploying
+6. Whether to proceed with the installation
 
 All done, wait and watch for 10 min. The DIGIT setup is complete, and the application will run on the URL.
 

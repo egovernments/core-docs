@@ -29,7 +29,7 @@ Before we provision the cloud resources, we need to understand and be sure about
 ```
 git clone https://github.com/egovernments/DIGIT-DevOps.git
 cd DIGIT-DevOps
-git checkout kubernetes-1.34
+git checkout kubernetes-1.35
 code .
 cd infra-as-code/terraform/gcp
 
@@ -61,7 +61,7 @@ cd infra-as-code/terraform/gcp
 ```
 {% endcode %}
 
-2. Update the [input.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.34/infra-as-code/terraform/gcp/input.yaml) file according to your specifications.
+2. Update the [input.yaml](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.35/infra-as-code/terraform/gcp/input.yaml) file according to your specifications.
 
 Save the files and exit the editor.
 
@@ -120,7 +120,7 @@ gcloud container clusters get-credentials <ENVIRONMENT_NAME> --region <GCP_REGIO
 {% endcode %}
 
 2. Verify the health of the cluster.\
-   &#xNAN;_**Note:**_ The details of the worker nodes should reflect the status as Ready for All.
+   _**Note:**_ The details of the worker nodes should reflect the status as Ready for All.
 
 {% code lineNumbers="true" %}
 ```
@@ -140,7 +140,7 @@ sops_key                      # .sops.yaml (for encryption/decryption of secrets
 ```
 {% endcode %}
 
-4. Sample [sops](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.34/deploy-as-code/helm/environments/.sops.yaml) configuration
+4. Sample [sops](https://github.com/egovernments/DIGIT-DevOps/blob/kubernetes-1.35/deploy-as-code/helm/environments/.sops.yaml) configuration
 
 {% code lineNumbers="true" %}
 ```

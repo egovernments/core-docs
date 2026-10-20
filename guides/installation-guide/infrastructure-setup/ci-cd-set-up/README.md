@@ -19,21 +19,21 @@ description: This tutorial will walk you through on how to setup CI/CD
 ## Pre-requisites <a href="#prerequisites" id="prerequisites"></a>
 
 1. [GitHub Organization account](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
-2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repos below to your GitHub Organization account&#x20;
-   * &#x20;[https://github.com/egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps)
+2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repos below to your GitHub Organization account
+   * [https://github.com/egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps)
    * [https://github.com/egovernments/CIOps](https://github.com/egovernments/CIOps)
 3. [AWS KMS](https://docs.aws.amazon.com/kms/index.html)
 4. [Go lang](https://golang.org/doc/install) (version 1.13.X)
 5. [SOPS](https://github.com/mozilla/sops#updatekeys-command)
 6. [GitHub user](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 7. [Docker Hub account](https://hub.docker.com/signup)
-8. ​[**AWS account**](https://portal.aws.amazon.com/billing/signup?nc2=h\_ct\&src=default\&redirect\_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) with admin access to provision EKS Service. Try subscribing to a free AWS account to learn the basics. There is a limit on [**what is offered as free**](https://aws.amazon.com/free/)**.** This demo requires a commercial subscription to the EKS service. The cost for a one or two days trial might range between Rs 500-1000. **(Note: Post the demo, for the internal folks, eGov will provide a 2-3 hrs time-bound access to eGov's AWS account based on the request and the available number of slots per day).**
+8. ​[**AWS account**](https://portal.aws.amazon.com/billing/signup?nc2=h_ct\&src=default\&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) with admin access to provision EKS Service. Try subscribing to a free AWS account to learn the basics. There is a limit on [**what is offered as free**](https://aws.amazon.com/free/)**.** This demo requires a commercial subscription to the EKS service. The cost for a one or two days trial might range between Rs 500-1000. **(Note: Post the demo, for the internal folks, eGov will provide a 2-3 hrs time-bound access to eGov's AWS account based on the request and the available number of slots per day).**
 9. Install [**kubectl**](https://kubernetes.io/docs/tasks/tools/) on your local machine to interact with the Kubernetes cluster.
 10. Install [**Helm**](https://helm.sh/docs/intro/install/) to help package the services along with the configurations, environment, secrets, etc into a [**Kubernetes manifests**](https://devspace.cloud/docs/cli/deployment/kubernetes-manifests/what-are-manifests)**.**
 11. Install [**terraform**](https://releases.hashicorp.com/terraform/0.14.10/) version (0.14.10) for the Infra-as-code (IaC) to provision cloud resources as code and with desired resource graph. It also helps destroy the cluster in one go.
 12. **​**[**Install AWS CLI**](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) on your local machine so that you can use AWS CLI commands to provision and manage the cloud resources on your account.
 13. Install [**AWS IAM Authenticator**](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) to help authenticate your connection from your local machine and deploy DIGIT services.
-14. Use the [**AWS IAM User**](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_users\_create.html) **credentials provided** for the Terraform ([**Infra-as-code**](https://devops.digit.org/devops-general/infra-as-code)) to connect to the AWS account and provision the cloud resources.
+14. Use the [**AWS IAM User**](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) **credentials provided** for the Terraform ([**Infra-as-code**](https://devops.digit.org/devops-general/infra-as-code)) to connect to the AWS account and provision the cloud resources.
 
     ​
 
@@ -106,7 +106,7 @@ Here, you will find the **main.tf** under each of the modules that have the prov
 
 **Example:**
 
-1. **VPC Resources -**&#x20;
+1. **VPC Resources -**
    * VPC
    * Subnets
    * Internet Gateway
@@ -313,7 +313,7 @@ variable "ssh_key_name" {
 
 We have covered what the terraform script does, the resources graph that it provisions and what custom values should be given with respect to the selected environment.
 
-Now, run the terraform scripts to provision the infra required to [Deploy DIGIT on AWS](../../digit-deployment/full-deployment/deploy-digit/).
+Now, run the terraform scripts to provision the infra required to [Deploy DIGIT on AWS](../../digit-deployment/full-deployment/deploy-digit.md).
 
 Use the 'cd' command to change to the following directory and run the following commands. Check the output.
 
@@ -338,7 +338,7 @@ After successful execution, the following resources get created and can be verif
 
 Use the URL [https://keybase.io/](https://keybase.io/) to [create your own PGP key](https://pgpkeygen.com/). This creates both public and private keys on the machine, upload the public key into the [keybase](https://keybase.io/) account that you have just created, give a name to it and ensure that you mention that in your terraform. This allows you to encrypt sensitive information.
 
-* Example: Create a user keybase. This is "_egovterraform_" in the case of eGov. Upload the public key here - [https://keybase.io/egovterraform/pgp\_keys.asc](https://keybase.io/egovterraform/pgp\_keys.asc)
+* Example: Create a user keybase. This is "_egovterraform_" in the case of eGov. Upload the public key here - [https://keybase.io/egovterraform/pgp\_keys.asc](https://keybase.io/egovterraform/pgp_keys.asc)
 * Use this [portal](https://8gwifi.org/pgpencdec.jsp) to Decrypt the secret key. To decrypt the PGP message, upload the PGP Message, PGP Private Key and Passphrase.
 * **EKS cluster:** with master(s) & worker node(s).
 * **Storage(s):** for es-master, es-data-v1, es-master-infra, es-data-infra-v1, zookeeper, kafka, kafka-infra.
@@ -374,10 +374,10 @@ Post infra setup (Kubernetes Cluster), we start with deploying the Jenkins and k
 * Sub domain to expose CI/CD URL
 * GitHub [Oauth App](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) (this provides you with the [clientId](https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/environments/ci-demo-secrets.yaml#L4), [clientSecret](https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/environments/ci-demo-secrets.yaml#L5))
   * Under `Authorization callback URL` enter the below url ie (Replace \<domain\_name> with your domain) https://\<domain\_name>/securityRealm/finishLogin
-* [Github User ](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
+* [Github User](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 * [Generate a new ssh key for the above user](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (this provides the ssh public and private keys)
 * Add the earlier created ssh public key to GitHub user [account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-* Add  ssh private key to the [gitReadSshPrivateKey](https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/environments/ci-demo-secrets.yaml#L6)
+* Add ssh private key to the [gitReadSshPrivateKey](https://github.com/egovernments/DIGIT-DevOps/blob/release/config-as-code/environments/ci-demo-secrets.yaml#L6)
 * With previously created [GitHub users generate a personal read-only access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 * [Docker hub account details](https://hub.docker.com/signup) (username and password)
 * SSL certificate for the sub-domain
